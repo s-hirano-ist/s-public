@@ -1,4 +1,16 @@
-# AstroPaper 📄
+# Blog
+
+## TODO:
+
+```bash
+yarn preview
+yarn sync
+yarn astro
+yarn cz
+yarn prepare
+```
+
+## AstroPaper 📄
 
 ![AstroPaper](public/astropaper-og.jpg)
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
