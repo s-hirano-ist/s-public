@@ -4,8 +4,6 @@ pubDatetime: 2022-09-26T12:13:24Z
 title: Predefined color schemes
 postSlug: predefined-color-schemes
 draft: true
-tags:
-  - color-schemes
 ogImage: ""
 description:
   Some of the well-crafted, predefined color schemes for AstroPaper blog

@@ -4,11 +4,6 @@ author: Sat Naing
 pubDatetime: 2022-03-25T16:55:12.000+00:00
 postSlug: how-do-i-develop-my-portfolio-and-blog
 draft: true
-tags:
-  - NextJS
-  - TailwindCSS
-  - HeadlessCMS
-  - Blog
 ogImage: ""
 description:
   "EXAMPLE POST: My experience about developing my first portfolio website and a blog
