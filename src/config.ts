@@ -34,13 +34,13 @@ export const SOCIALS: SocialObjects = [
     name: "Twitter",
     href: "https://twitter.com/s_hirano_ist",
     linkTitle: `${SITE.title} on Twitter`,
-    active: true,
+    active: false,
   },
   {
     name: "GitLab",
     href: "https://gitlab.com/sorakihirano2",
     linkTitle: `${SITE.title} on GitLab`,
-    active: false,
+    active: true,
   },
 ];
 
