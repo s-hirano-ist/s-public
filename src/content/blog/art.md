@@ -3,8 +3,6 @@ title: art
 description: What is art?
 pubDatetime: 2023-07-01T00:00:00Z
 draft: false
-tags:
-  - art
 ---
 
 ## Table of contents
