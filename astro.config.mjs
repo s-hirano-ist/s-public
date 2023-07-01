@@ -24,7 +24,7 @@ export default defineConfig({
       [
         remarkCollapse,
         {
-          test: "Table of contents",
+          test: "Table of contents", //TODO: to sidebar
         },
       ],
     ],
