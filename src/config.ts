@@ -11,13 +11,6 @@ export const SITE: Site = {
 
 export const LOCALE = ["ja"];
 
-export const LOGO_IMAGE = {
-  enable: false, // if true then specify logo as "logo.svg" or "logo.png" under "/public/assets" directory
-  svg: true,
-  width: 216,
-  height: 46,
-};
-
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
@@ -41,13 +34,13 @@ export const SOCIALS: SocialObjects = [
     name: "Twitter",
     href: "https://twitter.com/s_hirano_ist",
     linkTitle: `${SITE.title} on Twitter`,
-    active: true,
+    active: false,
   },
   {
     name: "GitLab",
     href: "https://gitlab.com/sorakihirano2",
     linkTitle: `${SITE.title} on GitLab`,
-    active: false,
+    active: true,
   },
 ];
 
