@@ -19,18 +19,6 @@ const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
 
 <Layout title={title} description={description} ogImage={ogUrl}>
   <Header />
-  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
-    <button
-      class="focus-outline mb-2 mt-8 flex hover:opacity-75"
-      onclick="history.back()"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg"
-        ><path
-          d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-        ></path>
-      </svg><span>Go back</span>
-    </button>
-  </div>
   <main id="main-content">
     <h1 class="post-title">{title}</h1>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
@@ -42,7 +30,7 @@ const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
 
 <style>
   main {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
+    @apply mx-auto mt-4 w-full max-w-3xl px-4 pb-12;
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
