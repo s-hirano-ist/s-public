@@ -1,7 +1,6 @@
 ---
 author: Sat Naing
 title: Dynamic OG image generation in AstroPaper blog posts
-postSlug: dynamic-og-image-generation-in-astropaper-blog-posts
 draft: true
 ogImage: ""
 description: New feature in AstroPaper v1.4.0, introducing dynamic OG image generation for blog posts.

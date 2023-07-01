@@ -1,7 +1,6 @@
 ---
 author: Sat Naing
 title: Customizing AstroPaper theme color schemes
-postSlug: ""
 draft: true
 ogImage: ""
 description:

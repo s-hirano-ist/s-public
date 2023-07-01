@@ -1,7 +1,6 @@
 ---
 title: How Do I Develop My Portfolio Website & Blog
 author: Sat Naing
-postSlug: how-do-i-develop-my-portfolio-and-blog
 draft: true
 ogImage: ""
 description:
