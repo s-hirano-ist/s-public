@@ -6,13 +6,13 @@ export const SITE: Site = {
   desc: "Thoughts by Soraki Hirano.",
   title: "思考の備忘録",
   ogImage: "default-og.jpg",
-  postPerPage: 3,
+  postPerPage: 10,
 };
 
 export const LOCALE = ["ja"];
 
 export const LOGO_IMAGE = {
-  enable: false,
+  enable: false, // if true then specify logo as "logo.svg" or "logo.png" under "/public/assets" directory
   svg: true,
   width: 216,
   height: 46,
@@ -50,3 +50,11 @@ export const SOCIALS: SocialObjects = [
     active: false,
   },
 ];
+
+//TODO: The recommended size for OG image is **_1200 X 640_** px.
+
+//TODO: [for more customization](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/)
+
+//TODO: image compressions
+// - [TinyPng](https://tinypng.com/)
+// - [TinyJPG](https://tinyjpg.com/)
