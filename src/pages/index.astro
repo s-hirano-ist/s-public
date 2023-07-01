@@ -14,7 +14,6 @@ import { SOCIALS } from "@config";
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -51,26 +50,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     </section>
 
     <Hr />
-
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data }) => (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          <Hr />
-        </>
-      )
-    }
 
     <section id="recent-posts">
       <h2>Recent Posts</h2>
@@ -128,12 +107,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
   }
 
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
+  /* ===== Recent Posts Sections ===== */
   #recent-posts {
     @apply pb-6 pt-12;
   }
-  #featured h2,
   #recent-posts h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
