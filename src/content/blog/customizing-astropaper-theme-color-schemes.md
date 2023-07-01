@@ -1,5 +1,4 @@
 ---
-author: Sat Naing
 title: Customizing AstroPaper theme color schemes
 draft: true
 description:

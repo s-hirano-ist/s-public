@@ -1,6 +1,5 @@
 ---
 title: Tailwind Typography Plugin
-author: Sat Naing
 draft: true
 description: "EXAMPLE POST: About Tailwind Typography Plugin and how you can use it effectively."
 ---

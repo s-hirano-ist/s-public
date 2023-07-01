@@ -1,6 +1,5 @@
 ---
 title: How Do I Develop My Portfolio Website & Blog
-author: Sat Naing
 draft: true
 description:
   "EXAMPLE POST: My experience about developing my first portfolio website and a blog

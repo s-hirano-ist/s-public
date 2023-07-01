@@ -1,6 +1,5 @@
 ---
 title: How Do I Develop My Terminal Portfolio Website with React
-author: Sat Naing
 draft: true
 description:
   "EXAMPLE POST: Developing a terminal-like website using ReactJS, TypeScript and Styled-Components.

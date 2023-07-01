@@ -1,5 +1,4 @@
 ---
-author: Sat Naing
 title: Predefined color schemes
 draft: true
 description:
