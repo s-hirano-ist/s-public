@@ -2,7 +2,6 @@
 author: Sat Naing
 title: Predefined color schemes
 draft: true
-ogImage: ""
 description:
   Some of the well-crafted, predefined color schemes for AstroPaper blog
   theme.

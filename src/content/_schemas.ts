@@ -5,7 +5,6 @@ export const blogSchema = z
     author: z.string().optional(),
     title: z.string(),
     draft: z.boolean().optional(),
-    ogImage: z.string().optional(),
     description: z.string(),
   })
   .strict();

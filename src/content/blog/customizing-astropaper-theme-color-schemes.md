@@ -2,7 +2,6 @@
 author: Sat Naing
 title: Customizing AstroPaper theme color schemes
 draft: true
-ogImage: ""
 description:
   How you can enable/disable light & dark mode; and customize color schemes
   of AstroPaper theme.

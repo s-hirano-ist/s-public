@@ -2,7 +2,6 @@
 title: How Do I Develop My Portfolio Website & Blog
 author: Sat Naing
 draft: true
-ogImage: ""
 description:
   "EXAMPLE POST: My experience about developing my first portfolio website and a blog
   using NextJS and a headless CMS."
