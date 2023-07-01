@@ -11,13 +11,6 @@ export const SITE: Site = {
 
 export const LOCALE = ["ja"];
 
-export const LOGO_IMAGE = {
-  enable: false, // if true then specify logo as "logo.svg" or "logo.png" under "/public/assets" directory
-  svg: true,
-  width: 216,
-  height: 46,
-};
-
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
