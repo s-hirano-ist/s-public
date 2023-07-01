@@ -3,8 +3,7 @@ author: Sat Naing
 pubDatetime: 2022-12-28T04:59:04.866Z
 title: Dynamic OG image generation in AstroPaper blog posts
 postSlug: dynamic-og-image-generation-in-astropaper-blog-posts
-featured: false
-draft: false
+draft: true
 tags:
   - docs
   - release
@@ -45,6 +44,8 @@ Dynamic OG image of AstroPaper includes _the blog post title_, _author name_ and
 ## Limitations
 
 At the time of writing this, [Satori](https://github.com/vercel/satori) is fairly new and has not reached major release yet. So, there are still some limitations to this dynamic OG image feature.
+
+TODO: this has to be configured
 
 - If you have Blog posts with non-English titles, you have to set `embedFonts` option to `false` (file: `src/utils/generateOgImage.tsx`). Even after this, the OG image might not be displayed very well.
 - Besides, RTL languages are not supported yet.
