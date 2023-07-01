@@ -3,6 +3,7 @@ import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import { Resvg } from "@resvg/resvg-js";
 
+//TODO: edit config for generate OG image japanese words do not work
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
@@ -118,7 +119,7 @@ const ogImage = (text: string) => {
 const options: SatoriOptions = {
   width: 1200,
   height: 630,
-  embedFont: true,
+  embedFont: false,
   fonts: [
     {
       name: "IBM Plex Mono",
