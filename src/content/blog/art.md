@@ -1,6 +1,6 @@
 ---
 title: art
-description: What is art?
+description: 現代アートとは?
 draft: false
 ---
 
