@@ -10,8 +10,6 @@ yarn cz
 yarn prepare
 ```
 
-## AstroPaper 📄
-
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![GitHub](https://img.shields.io/github/license/satnaing/astro-paper?color=%232F3741&style=for-the-badge)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white&style=for-the-badge)](https://conventionalcommits.org)
@@ -45,17 +43,17 @@ PUBLIC_GOOGLE_SITE_VERIFICATION=your-google-site-verification-value
 
 All commands are run from the root of the project, from a terminal:
 
-| Command             | Action                                                                                                                           |
-| :------------------ | :------------------------------------------------------------------------------------------------------------------------------- |
-| `yarn`              | Installs dependencies                                                                                                            |
-| `yarn dev`          | Starts local dev server at `localhost:3000`                                                                                      |
-| `yarn build`        | Build your production site to `./dist/`                                                                                          |
-| `yarn preview`      | Preview your build locally, before deploying                                                                                     |
-| `yarn format:check` | Check code format with Prettier                                                                                                  |
-| `yarn format`       | Format codes with Prettier                                                                                                       |
-| `yarn sync`         | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `yarn cz`           | Commit code changes with commitizen                                                                                              |
-| `yarn lint`         | Lint with ESLint                                                                                                                 |
+| Command        | Action                                                                                                                           |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| `yarn`         | Installs dependencies                                                                                                            |
+| `yarn dev`     | Starts local dev server at `localhost:3000`                                                                                      |
+| `yarn build`   | Build your production site to `./dist/`                                                                                          |
+| `yarn preview` | Preview your build locally, before deploying                                                                                     |
+| `yarn fmt`     | Check code format with Prettier                                                                                                  |
+| `yarn fmt:fix` | Format codes with Prettier                                                                                                       |
+| `yarn sync`    | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
+| `yarn cz`      | Commit code changes with commitizen                                                                                              |
+| `yarn lint`    | Lint with ESLint                                                                                                                 |
 
 ## 📜 License
 
