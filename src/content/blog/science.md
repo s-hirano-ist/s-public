@@ -4,7 +4,7 @@ description: 科学とは?
 draft: true
 ---
 
-## Table of contents
+## 目次
 
 ## Science
 

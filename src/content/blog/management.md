@@ -4,7 +4,7 @@ description: マネジメントについて
 draft: true
 ---
 
-## Table of contents
+## 目次
 
 ## 決定力
 

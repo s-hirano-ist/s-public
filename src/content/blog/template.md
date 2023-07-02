@@ -4,7 +4,7 @@ description: template
 draft: true
 ---
 
-## Table of contents
+## 目次
 
 ## Title
 

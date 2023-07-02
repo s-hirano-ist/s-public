@@ -4,7 +4,7 @@ description: 美容
 draft: true
 ---
 
-## Table of contents
+## 目次
 
 ## 目を大きくする方法
 

@@ -20,11 +20,11 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [
-      remarkToc,
+      [remarkToc, { heading: "目次", tight: true, ordered: false }],
       [
         remarkCollapse,
         {
-          test: "Table of contents", //TODO: to sidebar
+          test: "目次", //TODO: to sidebar
         },
       ],
     ],

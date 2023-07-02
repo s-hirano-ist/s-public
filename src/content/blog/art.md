@@ -4,7 +4,7 @@ description: 現代アートとは?
 draft: false
 ---
 
-## Table of contents
+## 目次
 
 ## 現代アートの楽しみ方
 
