@@ -5,15 +5,15 @@
 @layer base {
   :root,
   html[data-theme="light"] {
-    --color-fill: 251, 254, 251; /*background color of light theme*/
-    --color-text-base: 40, 39, 40;
-    --color-accent: 0, 108, 172;
-    --color-card: 230, 230, 230;
-    --color-card-muted: 205, 205, 205;
-    --color-border: 236, 233, 233;
+    --color-fill: 251, 254, 251; /*background color*/
+    --color-text-base: 40, 39, 40; /*text color*/
+    --color-accent: 0, 108, 172; /*link, hover color*/
+    --color-card: 230, 230, 230; /*Card, scrollbar, code background color*/
+    --color-card-muted: 205, 205, 205; /*Card, scrollbar background color for hover*/
+    --color-border: 236, 233, 233; /*border color for horizontal row (hr)*/
   }
   html[data-theme="dark"] {
-    --color-fill: 0, 0, 0; /*background color of dark theme*/
+    --color-fill: 0, 0, 0;
     --color-text-base: 234, 237, 243;
     --color-accent: 119, 162, 192;
     --color-card: 52, 63, 96;
@@ -29,12 +29,12 @@
     display: block;
   }
   body {
-    @apply flex min-h-screen flex-col bg-skin-fill font-mono text-skin-base 
+    @apply flex min-h-screen flex-col bg-skin-fill font-custom text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
   section,
   footer {
-    @apply mx-auto max-w-3xl px-4;
+    @apply mx-auto max-w-5xl px-4;
   }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill 

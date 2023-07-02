@@ -1,6 +1,8 @@
 const primaryColorScheme = ""; // "light" | "dark"
 
 // Get theme data from local storage
+// This code must run faster as possible to avoid flickering on page load
+// We cannot use ESM imports for trade-off
 const currentTheme = localStorage.getItem("theme");
 
 function getPreferTheme() {
