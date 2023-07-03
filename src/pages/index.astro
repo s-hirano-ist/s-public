@@ -2,16 +2,15 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import Main from "@layouts/Main.astro";
 ---
 
 <Layout>
   <Header />
-  <main id="main-content">
+  <Main>
     <section id="hero">
-      <img src="/assets/profile.png" alt="" />
-      <!-- TODO: add alt -->
+      <img src="/assets/profile.png" width="100%" alt="top-image" />
       <h1>Soraki Hirano</h1>
-      <!-- TODO: text-center -->
       <p>Hello. This is a portfolio of Soraki Hirano.</p>
       <p>
         He received my B.S. degree from Osaka University, Osaka, Japan, in 2022.
@@ -29,7 +28,7 @@ import Footer from "@components/Footer.astro";
         </LinkButton>
       </p> -->
     </section>
-  </main>
+  </Main>
   <Footer />
 </Layout>
 
