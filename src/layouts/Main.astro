@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  pageTitle: string;
+  pageTitle?: string;
 }
 
 const { pageTitle } = Astro.props;
@@ -13,9 +13,9 @@ const { pageTitle } = Astro.props;
 
 <style>
   #main-content {
-    @apply mx-auto mt-4 w-full max-w-5xl px-4 pb-12;
+    @apply mx-auto mt-8 w-full max-w-5xl px-4 pb-12;
   }
   #main-content h1 {
-    @apply text-2xl font-semibold sm:text-3xl;
+    @apply text-2xl font-semibold text-skin-accent;
   }
 </style>

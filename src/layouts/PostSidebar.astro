@@ -1,0 +1,13 @@
+---
+import markdownToHtml from "@utils/markdownToHtml";
+
+export interface Props {
+  post: string;
+}
+
+const { post } = Astro.props;
+
+const content = await markdownToHtml(post);
+---
+
+<div set:html={content} />
