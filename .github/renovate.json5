@@ -7,8 +7,8 @@
     enabled: true,
   },
   dependencyDashboard: false,
-  schedule: ["before 3am on Monday"],
-  automergeSchedule: ["before 3am on Monday"],
+  schedule: ["before 9pm on Monday"],
+  automergeSchedule: ["before 9pm on Monday"],
   labels: ["dependencies"],
   rangeStrategy: "bump",
   packageRules: [
