@@ -9,9 +9,8 @@ export default defineConfig({
   site: SITE.website,
   integrations: [
     tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
+      configFile: "...",
+      applyBaseStyles: false,
     }),
     react(),
     sitemap(),
