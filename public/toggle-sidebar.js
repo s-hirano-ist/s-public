@@ -4,7 +4,7 @@ function openNav() {
 }
 function closeNav() {
   // set the width of the closed navigation bar
-  document.getElementById("post-side-nav").style.width = "0px";
+  document.getElementById("post-side-nav").style.width = "0";
 }
 
 window.onload = () => {
