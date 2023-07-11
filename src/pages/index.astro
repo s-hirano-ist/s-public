@@ -9,7 +9,11 @@ import Main from "@layouts/Main.astro";
   <Header isPortfolioPage />
   <Main>
     <section id="hero">
-      <img src="/assets/profile.png" width="100%" alt="top-image" />
+      <img
+        src="/assets/portfolio.png"
+        alt="top-image"
+        class="portfolio-image"
+      />
       <h1>Soraki Hirano</h1>
       <p>Hello. This is a portfolio of Soraki Hirano.</p>
       <p>
@@ -25,6 +29,9 @@ import Main from "@layouts/Main.astro";
 </Layout>
 
 <style>
+  .portfolio-image {
+    @apply w-full;
+  }
   #hero {
     @apply pb-6 pt-8;
   }
