@@ -4,8 +4,6 @@ description: 科学とは?
 draft: true
 ---
 
-## 目次
-
 ## Science
 
 ### 仮説と定義

@@ -15,7 +15,7 @@ export default async function markdownToHtml(markdown: string) {
   const result = await unified()
     .use(remarkParse)
     .use(getToc, {
-      heading: "目次",
+      heading: "",
       tight: true,
     })
     .use(remarkRehype)
