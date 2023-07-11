@@ -3,16 +3,12 @@ export interface Props {
   pageTitle?: string;
 }
 
-const { pageTitle } = Astro.props;
+const { pageTitle = "" } = Astro.props;
 ---
 
 <main id="main-content">
-  <h1>
-    {
-      pageTitle
-        ? pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1).toLowerCase()
-        : ""
-    }
+  <h1 id="sidebar-button" class="open-sidebar-button">
+    {pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1).toLowerCase()}
   </h1>
   <slot />
 </main>
