@@ -33,19 +33,25 @@ const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
       class="prose mx-auto flex max-w-5xl flex-row"
     >
       <div id="post-side-nav" class="sidenav">
-        <span class="close-sidebar-button">&times;</span>
+        <span class="close-sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="scale-100">
+            <path
+              d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+            ></path>
+          </svg>
+        </span>
         <PostSidebar post={post.body} />
       </div>
-      <span class="open-sidebar-button">
-        <svg xmlns="http://www.w3.org/2000/svg" class="scale-100">
-          <path
-            d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V7h6v12H4zm8 0V7h8V5l.002 14H12z"
-          >
-          </path>
-          <path d="M6 10h2v2H6zm0 4h2v2H6z"></path>
-        </svg>
-      </span>
       <div>
+        <span class="open-sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="scale-100">
+            <path
+              d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V7h6v12H4zm8 0V7h8V5l.002 14H12z"
+            >
+            </path>
+            <path d="M6 10h2v2H6zm0 4h2v2H6z"></path>
+          </svg>
+        </span>
         <Content />
       </div>
     </article>
@@ -55,30 +61,13 @@ const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
 </Layout>
 
 <style>
-  /* TODO: use tailwind */
   .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    @apply fixed left-0 top-0 z-10 h-full w-0 overflow-x-hidden bg-skin-card pt-16 duration-500;
   }
   .open-sidebar-button {
-    position: absolute;
-    top: 64px; /* TODO: do not use px (layout to margin left incorrrect)*/
-    right: 16px;
-    font-size: 32px;
+    @apply fixed;
   }
   .close-sidebar-button {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    @apply absolute right-0 top-0 m-8 text-2xl;
   }
 </style>
