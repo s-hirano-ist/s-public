@@ -5,9 +5,10 @@ import LinkButton from "./LinkButton.astro";
 
 export interface Props {
   activeNav?: "posts" | "search";
+  isPortfolioPage?: boolean;
 }
 
-const { activeNav } = Astro.props;
+const { activeNav, isPortfolioPage = false } = Astro.props;
 ---
 
 <header>
@@ -15,7 +16,7 @@ const { activeNav } = Astro.props;
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a href="/" class="logo">
-        {SITE.title}
+        {isPortfolioPage ? "Portfolio" : SITE.title}
       </a>
       <nav id="nav-menu">
         <ul id="menu-items" class="flex">
