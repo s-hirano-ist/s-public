@@ -43,11 +43,3 @@ export const SOCIALS: SocialObjects = [
     active: true,
   },
 ];
-
-//TODO: The recommended size for OG image is **_1200 X 640_** px.
-
-//TODO: [for more customization](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/)
-
-//TODO: image compressions
-// - [TinyPng](https://tinypng.com/)
-// - [TinyJPG](https://tinyjpg.com/)
