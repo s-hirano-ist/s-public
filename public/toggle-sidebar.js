@@ -18,8 +18,7 @@ function closeNav() {
 }
 
 const closeWithClickOutSide = e => {
-  if (e.target.id === "open-sidebar-icon" || e.target.id === "open-sidebar-svg")
-    return;
+  if (e.target.id === "sidebar-button") return;
 
   // if outside of menu
   if (e.target === e.currentTarget) {
@@ -37,7 +36,7 @@ mainClickArea.addEventListener("click", e => {
   closeWithClickOutSide(e);
 });
 
-const openButton = document.querySelector("span.open-sidebar-button");
+const openButton = document.querySelector("h1.open-sidebar-button");
 openButton.addEventListener("click", () => {
   openNav();
 });
