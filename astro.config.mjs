@@ -24,7 +24,7 @@ export default defineConfig({
       [
         remarkCollapse,
         {
-          test: "目次", //TODO: to sidebar
+          test: "目次", //TODO: delete from main contents
         },
       ],
     ],
