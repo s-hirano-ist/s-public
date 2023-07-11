@@ -8,8 +8,8 @@
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
-    "fmt": "prettier --plugin-search-dir=. --check .",
-    "fmt:fix": "prettier --plugin-search-dir=. --write .",
+    "fmt": "prettier --check .",
+    "fmt:fix": "prettier --write .",
     "prepare": "husky install",
     "lint": "eslint ."
   },
