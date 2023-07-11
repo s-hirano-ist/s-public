@@ -1,5 +1,6 @@
 const SIDEBAR_WIDTH = "300px";
 const SLIDE_MAIN_CONTENTS = false;
+
 function openNav() {
   // set the width of the opened navigation bar
   document.getElementById("post-side-nav").style.width = SIDEBAR_WIDTH;
@@ -16,7 +17,9 @@ function closeNav() {
   localStorage.setItem("sidebarOpen", "false");
 }
 
-const closeWithClickOutSideMethod = e => {
+const closeWithClickOutSide = e => {
+  if (e.target.id === "open-sidebar-icon") return;
+
   // if outside of menu
   if (e.target === e.currentTarget) {
     if (localStorage.getItem("sidebarOpen") === "true") closeNav();
@@ -26,21 +29,19 @@ const closeWithClickOutSideMethod = e => {
   }
 };
 
-window.onload = () => {
-  localStorage.setItem("sidebarOpen", "false");
+localStorage.setItem("sidebarOpen", "false");
 
-  const openButton = document.querySelector("span.open-sidebar-button");
-  openButton.addEventListener("click", () => {
-    openNav();
-  });
+const mainClickArea = document.querySelector("div.main-click-area");
+mainClickArea.addEventListener("click", e => {
+  closeWithClickOutSide(e);
+});
 
-  const closeButton = document.querySelector("span.close-sidebar-button");
-  closeButton.addEventListener("click", () => {
-    closeNav();
-  });
+const openButton = document.querySelector("span.open-sidebar-button");
+openButton.addEventListener("click", () => {
+  openNav();
+});
 
-  const mainClickArea = document.querySelector("div.main-click-area");
-  mainClickArea.addEventListener("click", e => {
-    closeWithClickOutSideMethod(e);
-  });
-};
+const closeButton = document.querySelector("span.close-sidebar-button");
+closeButton.addEventListener("click", () => {
+  closeNav();
+});
