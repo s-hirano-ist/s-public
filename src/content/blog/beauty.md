@@ -1,6 +1,6 @@
 ---
 title: beauty
-description: 美容
+description: 美容について
 draft: true
 ---
 
