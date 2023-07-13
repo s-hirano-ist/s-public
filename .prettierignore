@@ -8,6 +8,6 @@
 !tsconfig.json
 !astro.config.mjs
 !package.json
-!.prettierrc
+!.prettier.config.cjs
 !.eslintrc.js
 !README.md
