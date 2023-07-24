@@ -7,17 +7,17 @@ const config = {
   printWidth: 80,
   singleQuote: false,
   jsxSingleQuote: false,
-  trailingComma: "es5",
+  trailingComma: "all",
   bracketSpacing: true,
   endOfLine: "lf",
-  plugins: [require.resolve('prettier-plugin-astro'), require('prettier-plugin-tailwindcss')],
-  tailwindConfig: "./tailwind.config.cjs",
+  plugins: ['prettier-plugin-tailwindcss','prettier-plugin-astro'],
+  tailwindConfig: "./tailwind.config.mjs",
   overrides: [
     {
-      files: '**/*.astro',
+      files: '*.astro',
       options: { parser: 'astro' },
     },
   ],
 };
 
-module.exports = config;
+export default config;
