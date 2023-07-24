@@ -1,6 +1,7 @@
 {
   "name": "blog",
   "version": "2.3.0",
+  "type": "module",
   "scripts": {
     "dev": "astro check --watch & astro dev",
     "start": "astro dev",
@@ -8,8 +9,8 @@
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
-    "fmt": "prettier --check .",
-    "fmt:fix": "prettier --write .",
+    "fmt": "prettier --check **/*.astro .",
+    "fmt:fix": "prettier --write **/*.astro .",
     "prepare": "husky install",
     "lint": "eslint ."
   },
