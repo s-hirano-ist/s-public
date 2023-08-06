@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@resvg/resvg-js": "^2.4.1",
-    "astro": "^2.9.6",
+    "astro": "^2.10.1",
     "fuse.js": "^6.6.2",
     "github-slugger": "^2.0.0",
     "remark-toc": "^8.0.1",
