@@ -5,6 +5,7 @@
   enabledManagers: ["npm"],
   lockFileMaintenance: {
     enabled: true,
+    autoMerge: true,
   },
   dependencyDashboard: false,
   schedule: ["before 9pm on Monday"],
@@ -18,6 +19,7 @@
       matchPackagePatterns: ["*"],
       matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
       groupName: "patch",
+      autoMerge: true,
     },
     {
       matchManagers: ["npm"],
@@ -25,6 +27,7 @@
       matchPackagePatterns: ["*"],
       matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
       groupName: "minor",
+      autoMerge: true,
     },
   ],
 }
