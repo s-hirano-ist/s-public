@@ -1,6 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
-import PostDetails from "@layouts/PostDetails.astro";
+import PostDetail from "@layouts/PostDetail.astro";
 import slugify from "@utils/slugify";
 
 export interface Props {
@@ -21,4 +21,4 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 ---
 
-<PostDetails post={post} />
+<PostDetail post={post} />
