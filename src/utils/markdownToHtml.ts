@@ -24,13 +24,3 @@ export async function markdownToToc(markdown: string) {
 
   return result.toString();
 }
-
-export async function markdownToLink(markdown: string) {
-  const result = await unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(markdown);
-
-  return result.toString();
-}

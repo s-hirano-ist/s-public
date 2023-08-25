@@ -1,0 +1,16 @@
+{
+  "title": "Artificial Intelligence",
+  "description": "AIについて",
+  "body": [
+    {
+      "title": "誤差逆伝播法の問題点と組織課題の問題点の類似",
+      "quote": "深層学習によって解消された誤差逆伝播法の問題点とのアナロジーから、組織課題に対する改善策を提案してください。",
+      "url": "https://note.com/amachino/n/n956f804a37a9"
+    },
+    {
+      "title": "AIに生成できないもの",
+      "quote": "AIは「決定的な意外性」を演出することができるか",
+      "url": "https://somethingorange.jp/entry/ainoyume"
+    }
+  ]
+}

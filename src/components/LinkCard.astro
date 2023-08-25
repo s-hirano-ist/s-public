@@ -15,18 +15,16 @@ const ogDescription = ogp
 ---
 
 <a href={url} target="_blank">
-  <div class="flex w-full rounded overflow-hidden shadow-lg">
+  <div class="flex justify-start w-full">
     <img
       src={ogImage}
       loading="lazy"
       class="hidden object-cover w-32 h-32 sm:block"
       alt=""
     />
-    <div class="px-6 py-4">
+    <div class="px-6 py-4 w-full">
       <div class="font-bold text-xl mb-2">{ogTitle}</div>
-      <p class="">
-        {ogDescription}
-      </p>
+      <p>{ogDescription}</p>
     </div>
   </div>
 </a>

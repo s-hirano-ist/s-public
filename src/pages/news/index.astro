@@ -1,13 +1,8 @@
 ---
-import Posts from "@layouts/Posts.astro";
-import getSortedPosts from "@utils/getSortedPosts";
+import Links from "@layouts/Links.astro";
 import { getCollection } from "astro:content";
 
-const sortedPosts = getSortedPosts(await getCollection("news"));
+const posts = await getCollection("news");
 ---
 
-<Posts
-  posts={sortedPosts}
-  activeNav="news"
-  pageTitle="興味深いニュースまとめ"
-/>
+<Links posts={posts} activeNav="news" pageTitle="興味深いニュースまとめ" />

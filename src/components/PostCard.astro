@@ -1,12 +1,10 @@
 ---
-import type { BlogFrontmatter } from "@content/_schemas";
-
 export interface Props {
   href: string;
-  frontmatter: BlogFrontmatter;
+  title: string;
+  description: string;
 }
-const { href, frontmatter } = Astro.props;
-const { title, description } = frontmatter;
+const { href, title, description } = Astro.props;
 ---
 
 <li class="my-6">

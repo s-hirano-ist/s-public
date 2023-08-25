@@ -49,7 +49,7 @@
   },
   "lint-staged": {
     "!(*.{png,jpg,jpeg,webp,ico})": [
-      "prettier --write ."
+      "prettier --write **/*.astro ."
     ]
   }
 }
