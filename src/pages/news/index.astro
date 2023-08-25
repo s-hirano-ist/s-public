@@ -1,0 +1,13 @@
+---
+import Posts from "@layouts/Posts.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import { getCollection } from "astro:content";
+
+const sortedPosts = getSortedPosts(await getCollection("news"));
+---
+
+<Posts
+  posts={sortedPosts}
+  activeNav="news"
+  pageTitle="興味深いニュースまとめ"
+/>

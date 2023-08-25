@@ -6,4 +6,4 @@ import { getCollection } from "astro:content";
 const sortedPosts = getSortedPosts(await getCollection("summary"));
 ---
 
-<Posts posts={sortedPosts} />
+<Posts posts={sortedPosts} activeNav="summary" pageTitle="分野別まとめ記事" />
