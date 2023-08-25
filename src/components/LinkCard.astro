@@ -1,0 +1,30 @@
+---
+import { getOgpData } from "@utils/getOgpData";
+
+export interface Props {
+  url: string;
+}
+const { url } = Astro.props;
+
+const ogp = await getOgpData(url);
+const ogImage = ogp ? ogp["og:image"] : "default-og.jpg";
+const ogTitle = ogp ? ogp["og:title"] : url;
+const ogDescription = ogp
+  ? ogp["og:description"]
+  : "No description fot this page.";
+---
+
+<a href={url} target="_blank">
+  <div class="flex justify-start w-full">
+    <img
+      src={ogImage}
+      loading="lazy"
+      class="hidden object-cover w-32 h-32 sm:block"
+      alt=""
+    />
+    <div class="px-6 py-4 w-full">
+      <div class="font-bold text-xl mb-2">{ogTitle}</div>
+      <p>{ogDescription}</p>
+    </div>
+  </div>
+</a>

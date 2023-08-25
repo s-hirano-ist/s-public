@@ -11,7 +11,7 @@ const getToc: any = (options: any) => {
   };
 };
 
-export default async function markdownToHtml(markdown: string) {
+export async function markdownToToc(markdown: string) {
   const result = await unified()
     .use(remarkParse)
     .use(getToc, {

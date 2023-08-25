@@ -7,7 +7,7 @@ import PostSidebar from "./PostSidebar.astro";
 import Main from "@layouts/Main.astro";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"summary">;
 }
 
 const { post } = Astro.props;
@@ -37,7 +37,7 @@ const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
         </span>
         <PostSidebar post={post.body} />
       </div>
-      <div id="post-main-contents" class="main-contents">
+      <div id="post-main-contents">
         <Content />
       </div>
     </article>
@@ -52,8 +52,5 @@ const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
   }
   .close-sidebar-button {
     @apply absolute right-0 top-0 m-4 text-2xl;
-  }
-  .main-contents {
-    @apply duration-500;
   }
 </style>
