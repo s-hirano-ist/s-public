@@ -3,7 +3,7 @@ import Posts from "@layouts/Posts.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getCollection } from "astro:content";
 
-const sortedPosts = getSortedPosts(await getCollection("blog"));
+const sortedPosts = getSortedPosts(await getCollection("summary"));
 ---
 
 <Posts posts={sortedPosts} />

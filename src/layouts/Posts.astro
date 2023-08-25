@@ -9,7 +9,7 @@ import slugify from "@utils/slugify";
 import type { CollectionEntry } from "astro:content";
 
 export interface Props {
-  posts: CollectionEntry<"blog">[];
+  posts: CollectionEntry<"summary">[];
 }
 
 const { posts } = Astro.props;
@@ -21,7 +21,7 @@ const { posts } = Astro.props;
     <ul>
       {
         posts.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+          <Card href={`/summary/${slugify(data)}`} frontmatter={data} />
         ))
       }
     </ul>
