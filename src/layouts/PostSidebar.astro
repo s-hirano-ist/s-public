@@ -1,5 +1,5 @@
 ---
-import markdownToHtml from "@utils/markdownToHtml";
+import { markdownToToc } from "@utils/markdownToHtml";
 
 export interface Props {
   post: string;
@@ -7,7 +7,7 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const content = await markdownToHtml(post);
+const content = await markdownToToc(post);
 ---
 
 <div set:html={content} />

@@ -7,3 +7,5 @@ draft: false
 ## サンプル記事
 
 準備中。
+
+- "https://zenn.dev/"

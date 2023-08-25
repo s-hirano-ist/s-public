@@ -1,0 +1,55 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import type { CollectionEntry } from "astro:content";
+import Main from "@layouts/Main.astro";
+import LinkCard from "@components/LinkCard.astro";
+import { markdownToLink } from "@utils/markdownToHtml";
+
+export interface Props {
+  post: CollectionEntry<"news" | "summary">;
+}
+
+const { post } = Astro.props;
+
+const { title, description } = post.data;
+
+const { Content } = await post.render();
+
+const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
+
+const urlList = ["https://zenn.dev/", "https://zenn.dev/"];
+
+const content = await markdownToLink(post.body);
+console.log(content);
+---
+
+<Layout title={title} description={description} ogImage={ogUrl}>
+  <Header />
+  <Main pageTitle={title}>
+    <article
+      id="article"
+      role="article"
+      class="prose mx-auto flex max-w-5xl flex-row"
+    >
+      <div id="post-main-contents" class="main-contents">
+        <Content />
+      </div>
+    </article>
+    <article id="article" role="article" class="prose mx-auto max-w-5xl">
+      <div set:html={content} />
+    </article>
+    <article id="article" role="article" class="prose mx-auto max-w-5xl">
+      {urlList.map(url => <LinkCard url={url} />)}
+    </article>
+  </Main>
+  <script is:inline src="/toggle-sidebar.js"></script>
+  <Footer />
+</Layout>
+
+<style>
+  .main-contents {
+    @apply duration-500;
+  }
+</style>

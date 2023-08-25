@@ -11,13 +11,23 @@ const getToc: any = (options: any) => {
   };
 };
 
-export default async function markdownToHtml(markdown: string) {
+export async function markdownToToc(markdown: string) {
   const result = await unified()
     .use(remarkParse)
     .use(getToc, {
       heading: "",
       tight: true,
     })
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .process(markdown);
+
+  return result.toString();
+}
+
+export async function markdownToLink(markdown: string) {
+  const result = await unified()
+    .use(remarkParse)
     .use(remarkRehype)
     .use(rehypeStringify)
     .process(markdown);

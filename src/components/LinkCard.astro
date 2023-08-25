@@ -7,7 +7,6 @@ export interface Props {
 const { url } = Astro.props;
 
 const ogp = await getOgpData(url);
-console.log(ogp);
 const ogImage = ogp ? ogp["og:image"] : "default-og.jpg";
 const ogTitle = ogp ? ogp["og:title"] : url;
 const ogDescription = ogp
