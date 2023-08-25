@@ -1,0 +1,22 @@
+---
+import type { BlogFrontmatter } from "@content/_schemas";
+
+export interface Props {
+  href: string;
+  frontmatter: BlogFrontmatter;
+}
+const { href, frontmatter } = Astro.props;
+const { title, description } = frontmatter;
+---
+
+<li class="my-6">
+  <a
+    href={href}
+    class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+  >
+    <h2 class="text-lg font-medium decoration-dashed hover:underline">
+      {title.charAt(0).toUpperCase() + title.slice(1).toLowerCase()}
+    </h2>
+  </a>
+  <p>{description}</p>
+</li>
