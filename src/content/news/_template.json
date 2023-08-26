@@ -1,0 +1,11 @@
+{
+  "title": "template",
+  "description": "template description",
+  "body": [
+    {
+      "title": "sample title",
+      "quote": "sample quote",
+      "url": "https://www.yahoo.co.jp/"
+    }
+  ]
+}

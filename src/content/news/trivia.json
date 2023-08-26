@@ -1,0 +1,43 @@
+{
+  "title": "Trivia",
+  "description": "エンジニア視点の雑学",
+  "body": [
+    {
+      "title": "しょうもないGithub実績バッジ",
+      "url": "https://gigazine.net/news/20230711-github-rejected-achievements/"
+    },
+    {
+      "title": "負の剰余は言語によって異なる",
+      "url": "https://shunirr.hatenablog.jp/entry/20120409/1333993409"
+    },
+    {
+      "title": "業務委託時給単価",
+      "url": "https://www.itmedia.co.jp/news/articles/2212/07/news088.html"
+    },
+    {
+      "title": "絵文字ができるまで",
+      "url": "https://zenn.dev/cybozu_frontend/articles/how_to_propose_a_new_emoji"
+    },
+    {
+      "title": "オープンソースってオープンな開発を意味しないよ",
+      "quote": "ソースコードはオープン、ただし、コミット権限を持てるか否かは別問題。",
+      "url": "https://zenn.dev/satoru_takeuchi/articles/23ce113620b2b9"
+    },
+    {
+      "title": "商用利用できないオープンソースって、矛盾してない?",
+      "url": "https://yamdas.hatenablog.com/entry/20230821/open-source-licensing-war"
+    },
+    {
+      "title": ".new ドメインの活用方法",
+      "url": "https://paiza.hatenablog.com/entry/2023/03/29/160000"
+    },
+    {
+      "title": "エンジニア界隈の業界用語",
+      "url": "https://qiita.com/t_nakayama0714/items/478a8ed3a9ae143ad854"
+    },
+    {
+      "title": "うんこはpush型 or pull型",
+      "url": "https://anond.hatelabo.jp/20230415222432"
+    }
+  ]
+}

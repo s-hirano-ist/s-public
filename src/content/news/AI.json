@@ -11,6 +11,10 @@
       "title": "AIに生成できないもの",
       "quote": "AIは「決定的な意外性」を演出することができるか",
       "url": "https://somethingorange.jp/entry/ainoyume"
+    },
+    {
+      "title": "GPT-4にfrontendは奪われるか",
+      "url": "https://www.joshwcomeau.com/blog/the-end-of-frontend-development/"
     }
   ]
 }

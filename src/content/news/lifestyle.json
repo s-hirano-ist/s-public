@@ -1,0 +1,37 @@
+{
+  "title": "Lifestyle",
+  "description": "生活について",
+  "body": [
+    {
+      "title": "セックス＆オーガズムで眠りの質が上がる",
+      "quote": "https://onlinelibrary.wiley.com/doi/10.1111/jsr.13814",
+      "url": "https://www.gizmodo.jp/2023/06/sex-improves-sleep-quality.html"
+    },
+    {
+      "title": "宇宙セックス",
+      "quote": "本当にできるの? リスクについて議論した研究ってないよね?",
+      "url": "https://www.gizmodo.jp/2023/05/sex-in-outer-space.html"
+    },
+    {
+      "title": "抗HIV薬でウイルス量が下がった人は性行為でエイズを広める可能性がほぼゼロ",
+      "url": "https://gigazine.net/news/20230724-hiv-spread-risk/"
+    },
+    {
+      "title": "男性ではなく女性が唯一の稼ぎ手になっているカップルは幸福度が低い",
+      "url": "https://gigazine.net/news/20230723-woman-only-earner-couples-lower-satisfaction/"
+    },
+    {
+      "title": "辛い食べ物を好む人はリスクのある行動を好む傾向",
+      "url": "https://gigazine.net/news/20230715-why-do-people-like-spicy-food/"
+    },
+    {
+      "title": "食中毒菌の有無を匂いで判別不能",
+      "url": "https://gigazine.net/news/20230824-food-safety-sniff-test/"
+    },
+    {
+      "title": "マイクロプラスチック",
+      "quote": "プラスチック製まな板の危険性",
+      "url": "https://gigazine.net/news/20230702-boards-microparticles/"
+    }
+  ]
+}

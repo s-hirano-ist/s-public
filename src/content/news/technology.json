@@ -1,0 +1,20 @@
+{
+  "title": "Technology",
+  "description": "新技術について",
+  "body": [
+    {
+      "title": "LiFi",
+      "quote": "WiFiより100倍早いけど、直線距離が開放されてないといけない通信規格。",
+      "url": "https://pc.watch.impress.co.jp/docs/news/1516499.html"
+    },
+    {
+      "title": "JMAP",
+      "quote": "次世代POP・IMAP",
+      "url": "https://gigazine.net/news/20230617-jmap/"
+    },
+    {
+      "title": "PayPayのオフラインQRコード決済",
+      "url": "https://www.itmedia.co.jp/news/articles/2307/20/news122.html"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Management",
+  "description": "マネジメントについて",
+  "body": [
+    {
+      "title": "心理的安全性が高い組織",
+      "quote": "対人関係においてリスクのある行動を取っても、『このチームならばかにされたり罰せられたりしない』と信じられる状態。メンバーがネガティブなプレッシャーを受けずに自分らしくいられる状態。お互いに高め合える関係を持って、建設的な意見の対立が推奨されること。",
+      "url": "https://type.jp/et/feature/22419/"
+    },
+    {
+      "title": "コード品質はビジネスに影響を与える",
+      "url": "https://mtx2s.hatenablog.com/entry/2023/04/26/230917"
+    },
+    {
+      "title": "面白い就活生向け応募フォーム",
+      "quote": "はてなのインターンシップで、応募フォームにクイズを出題。",
+      "url": "https://developer.hatenastaff.com/entry/2023/05/18/080000"
+    },
+    {
+      "title": "本当に起業すべき?",
+      "url": "https://signal.diamond.jp/articles/-/1212"
+    },
+    {
+      "title": "顧客が離れない値上げ術",
+      "url": "https://business.nikkei.com/atcl/gen/19/00495/082900001/"
+    },
+    {
+      "title": "ヒカキン成功の理由",
+      "url": "https://business.nikkei.com/atcl/gen/19/00461/090600028/"
+    },
+    {
+      "title": "Apple が負債を返済しない理由",
+      "url": "https://www.appbank.net/2022/12/14/technology/2352628.php"
+    },
+    {
+      "title": "システム内製理由がくそ",
+      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/07674/"
+    },
+    {
+      "title": "税金が必要な理由",
+      "url": "https://gigazine.net/news/20221223-super-rich/"
+    },
+    {
+      "title": "世論をひっくり返すパーセンテージ",
+      "url": "https://gigazine.net/news/20220217-minorities-overturn-social-conventions/"
+    }
+  ]
+}
