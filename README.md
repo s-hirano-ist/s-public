@@ -1,5 +1,11 @@
 # Blog
 
+## Known issues
+
+- [ ] X (Twitter) links in `src/content/news` will not render due to auto redirect feature on X.
+- [ ] IT media NEWS links in `src/content/news` will be garbled characters.
+- [ ] Search feature may not work properly.
+
 ## ✅ Lighthouse Score
 
 https://pagespeed.web.dev/analysis/https-www-s-hirano-com/3ppgzcnip3?form_factor=desktop
