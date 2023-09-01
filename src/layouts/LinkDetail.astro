@@ -20,11 +20,11 @@ const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
   <Main pageTitle={title}>
     <article id="article" role="article" class="prose mx-auto max-w-5xl">
       {
-        body.map((d: any) => {
+        body.map(d => {
           return (
             <div class="shadow-lg py-1 px-4 rounded overflow-hidden">
               <h2 class="text-xl">{d.title}</h2>
-              <p>{d.quote}</p>
+              <div set:html={d.quote} />
               <LinkCard url={d.url} />
             </div>
           );

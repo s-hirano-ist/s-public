@@ -17,7 +17,7 @@ export const jsonSchema = z
     body: z.array(
       z.object({
         title: z.string(),
-        query: z.string().optional(),
+        quote: z.string().optional(),
         url: z.string().url(),
       }),
     ),
