@@ -3,6 +3,18 @@
   "description": "AIについて",
   "body": [
     {
+      "title": "曲作り with ChatGPT",
+      "url": "https://www.techno-edge.net/article/2023/01/30/779.html"
+    },
+    {
+      "title": "3 次元 Stable Diffusion",
+      "url": "https://twitter.com/master_k1805/status/1641318414311653378"
+    },
+    {
+      "title": "Stable Diffusionでのポーズ",
+      "url": "https://blogcake.net/controlnet/"
+    },
+    {
       "title": "誤差逆伝播法の問題点と組織課題の問題点の類似",
       "quote": "深層学習によって解消された誤差逆伝播法の問題点とのアナロジーから、組織課題に対する改善策を提案してください。",
       "url": "https://note.com/amachino/n/n956f804a37a9"

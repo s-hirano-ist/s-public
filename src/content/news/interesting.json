@@ -1,0 +1,26 @@
+{
+  "title": "interesting",
+  "description": "興味深い記事",
+  "body": [
+    {
+      "title": "サハラ砂漠をソーラーパネルで覆うとどうなるのか",
+      "url": "https://gigazine.net/news/20210713-sahara-solar-panel/"
+    },
+    {
+      "title": "Better than average",
+      "url": "https://gigazine.net/news/20210525-than-average/"
+    },
+    {
+      "title": "USB-PDでACアダプタなくそう",
+      "url": "https://speakerdeck.com/puhitaku/usb-pd-deying-eru-ac-adaputada-tong-shi-dai"
+    },
+    {
+      "title": "木材ワークブース",
+      "url": "https://internet.watch.impress.co.jp/docs/news/1487435.html"
+    },
+    {
+      "title": "Handle name finder",
+      "url": "https://gigazine.net/news/20230102-handlefinder/"
+    }
+  ]
+}

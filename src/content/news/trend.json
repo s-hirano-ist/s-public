@@ -3,12 +3,42 @@
   "description": "流行について",
   "body": [
     {
+      "title": "検索避け",
+      "url": "https://japan.cnet.com/article/35188597/"
+    },
+    {
+      "title": "推し活は個を最大限にするツール",
+      "url": "https://business.nikkei.com/atcl/gen/19/00382/053000006/"
+    },
+    {
+      "title": "ネット広告嫌い",
+      "url": "https://techable.jp/archives/188854"
+    },
+    {
+      "title": "SNSヒット論 by YOASOBIを作った人",
+      "url": "https://signal.diamond.jp/articles/-/1193"
+    },
+    {
+      "title": "文章をちゃんと読めなくても良いと思っている人たち",
+      "quote": "読めないことへのペナルティがないと意識はかわらない???",
+      "url": "https://blog.tinect.jp/?p=80521"
+    },
+    {
       "title": "ウッドショック",
       "url": "https://www.meti.go.jp/statistics/toppage/report/minikaisetsu/hitokoto_kako/20211022hitokoto.html"
     },
     {
       "title": "コンサルの未来",
       "url": "https://www.orangeitems.com/entry/2023/04/10/120000"
+    },
+    {
+      "title": "ITコンサルの内製化",
+      "quote": "自社で内製化すると、IT コンサルの花形業界のバブル崩れるのでは?",
+      "url": "https://togetter.com/li/2121991"
+    },
+    {
+      "title": "楽天離れと若者に支持される通販サイトの違い",
+      "url": "https://nikkan-spa.jp/1935483"
     }
   ]
 }

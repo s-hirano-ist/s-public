@@ -1,0 +1,22 @@
+{
+  "title": "security",
+  "description": "現代の脅威について",
+  "body": [
+    {
+      "title": "AIの赤信号錯覚",
+      "url": "https://www.itmedia.co.jp/news/articles/2205/09/news021.html"
+    },
+    {
+      "title": "AIに見えないものをみせる",
+      "url": "https://www.itmedia.co.jp/news/articles/2210/03/news036.html"
+    },
+    {
+      "title": "ネットにつながってないPCのハッキング",
+      "url": "https://www.itmedia.co.jp/news/articles/2209/01/news040.html"
+    },
+    {
+      "title": "偽装QRコードbyレーザー",
+      "url": "https://www.itmedia.co.jp/news/articles/2303/27/news045.html"
+    }
+  ]
+}

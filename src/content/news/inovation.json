@@ -3,6 +3,10 @@
   "description": "イノベーションについて",
   "body": [
     {
+      "title": "鉄とコンクリートの守り人: みんなでインフラを監視しよう",
+      "url": "https://www.itmedia.co.jp/news/articles/2204/06/news158.html"
+    },
+    {
       "title": "ヤマトと日本郵政の連携 of ネコポス and ゆうパケット",
       "url": "https://www.itmedia.co.jp/news/articles/2306/19/news134.html"
     },
@@ -14,6 +18,28 @@
     {
       "title": "国産クラウドをあえて選ぶ",
       "url": "https://www.itmedia.co.jp/news/articles/2307/21/news102.html"
+    },
+    {
+      "title": "日本酒NFTでクラファンのような機能を",
+      "url": "https://techable.jp/archives/217903"
+    },
+    {
+      "title": "ペットボトルラベルに直接印刷",
+      "quote": "従来手法では、リサイクルできないため禁止されていた",
+      "url": "https://www.watch.impress.co.jp/docs/news/1527375.html"
+    },
+    {
+      "title": "画像埋め込みQRコード",
+      "quote": "https://onqnu.github.io/qrcode-app-frontend/",
+      "url": "https://www.orefolder.net/2023/03/design-qrcode-generator/"
+    },
+    {
+      "title": "フェイク画像に対するアドビとCAIの取り組みとして、来歴情報の付与",
+      "url": "https://www.watch.impress.co.jp/docs/news/1517039.html"
+    },
+    {
+      "title": "Worldcoin: 虹彩スキャンをIDとする仮想通貨",
+      "url": "https://www.gizmodo.jp/2023/08/worldcoin-plunge.html"
     }
   ]
 }

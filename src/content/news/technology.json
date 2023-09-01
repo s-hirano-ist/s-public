@@ -3,6 +3,10 @@
   "description": "新技術について",
   "body": [
     {
+      "title": "すごい現代技術の3D映像",
+      "url": "https://twitter.com/roaneatan/status/1624394853353394176"
+    },
+    {
       "title": "LiFi",
       "quote": "WiFiより100倍早いけど、直線距離が開放されてないといけない通信規格。",
       "url": "https://pc.watch.impress.co.jp/docs/news/1516499.html"
@@ -15,6 +19,10 @@
     {
       "title": "PayPayのオフラインQRコード決済",
       "url": "https://www.itmedia.co.jp/news/articles/2307/20/news122.html"
+    },
+    {
+      "title": "赤外線カメラでしか見えないQRコード",
+      "url": "https://www.gizmodo.jp/2023/08/bright-marker.html"
     }
   ]
 }
