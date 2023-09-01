@@ -11,8 +11,7 @@ export interface Props {
 }
 
 const { post } = Astro.props;
-
-const { title, description, body } = await post.data;
+const { title, description, body } = post.data;
 const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
 ---
 

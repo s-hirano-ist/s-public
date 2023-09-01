@@ -2,12 +2,12 @@ import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 import PostCard from "@components/PostCard.astro";
 import slugify from "@utils/slugify";
-import type { BlogFrontmatter } from "@content/_schemas";
+import type { MarkdownFrontmatter } from "@content/_schemas";
 
 export type SearchItem = {
   title: string;
   description: string;
-  data: BlogFrontmatter;
+  data: MarkdownFrontmatter;
 };
 
 interface Props {

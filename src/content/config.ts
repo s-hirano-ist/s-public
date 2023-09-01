@@ -1,10 +1,14 @@
 import { defineCollection } from "astro:content";
-import { blogSchema } from "./_schemas";
+import { jsonSchema, markdownSchema } from "./_schemas";
 
-// TODO: このファイルの意味を理解
-
-const summary = defineCollection({
-  schema: blogSchema,
+const summaryCollection = defineCollection({
+  type: "content",
+  schema: markdownSchema,
 });
 
-export const collections = { summary };
+const newsCollection = defineCollection({
+  type: "data",
+  schema: jsonSchema,
+});
+
+export const collections = { summary: summaryCollection, news: newsCollection };
