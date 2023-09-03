@@ -15,8 +15,19 @@
   packageRules: [
     {
       matchManagers: ["npm"],
-      matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
-      matchPackagePatterns: ["*"],
+      matchDepTypes: ["devDependencies"],
+      matchPackagePatterns: ["lint", "prettier"],
+      automerge: true,
+    },
+    {
+      matchManagers: ["npm"],
+      matchUpdateTypes: ["minor", "patch"],
+      matchCurrentVersion: "!/^0/",
+      automerge: true,
+    },
+    {
+      extends: ["monorepo:ionic-native"],
+      matchUpdateTypes: ["patch", "minor"],
       automerge: true,
     },
   ],
