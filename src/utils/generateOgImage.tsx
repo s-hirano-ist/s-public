@@ -2,6 +2,7 @@ import satori, { SatoriOptions } from "satori";
 import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import sharp from "sharp";
+import { capitalizeFirstLetterOnly } from "./convertString";
 
 const fetchFonts = async () => {
   // Regular Font
@@ -21,7 +22,7 @@ const fetchFonts = async () => {
 
 const { fontRegular, fontBold } = await fetchFonts();
 
-const ogImage = (text: string) => {
+const ogImage = (title: string, description: string) => {
   return (
     <div
       style={{
@@ -80,7 +81,8 @@ const ogImage = (text: string) => {
               overflow: "hidden",
             }}
           >
-            {text}
+            {capitalizeFirstLetterOnly(title)}
+            {description}
           </p>
           <div
             style={{
@@ -135,16 +137,16 @@ const options: SatoriOptions = {
   ],
 };
 
-const generateOgImage = async (ogTitle = SITE.title) => {
-  const svg = await satori(ogImage(ogTitle), options);
+const generateOgImage = async (title = SITE.title, description = "") => {
+  const svg = await satori(ogImage(title, description), options);
 
   // render png in production mode
   if (import.meta.env.MODE === "production") {
     const pngBuffer = await sharp(Buffer.from(svg)).png().toBuffer();
 
-    console.info("Output PNG Image  :", `${ogTitle}.png`);
+    console.info("Output PNG Image  :", `${title}.png`);
 
-    await writeFile(`./dist/${ogTitle}.png`, pngBuffer);
+    await writeFile(`./dist/${title}.png`, pngBuffer);
   }
 
   return svg;
