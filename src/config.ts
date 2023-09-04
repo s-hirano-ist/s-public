@@ -2,8 +2,8 @@ import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
   website: "https://s-hirano.com/",
-  author: "Soraki Hirano",
-  desc: "Thoughts by Soraki Hirano.",
+  author: "s-hirano-ist",
+  description: "Thoughts by s-hirano-ist.",
   title: "思考の備忘録",
   ogImage: "default-og.jpg",
   postPerPage: 10,
