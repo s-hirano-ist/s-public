@@ -59,6 +59,11 @@
       "title": "ITとデジタルの違いは何?",
       "quote": "ITは失敗が許されない守り、デジタルは失敗もあり得る攻め",
       "url": "https://www.baycurrent.co.jp/insights/blogs/220218"
+    },
+    {
+      "title": "脱OSSが増えている",
+      "quote": "メガクラウドベンダーによるマネージドサービスの台頭により、従来通りのOSSの収益化ができなくなったため",
+      "url": "https://zenn.dev/koduki/articles/45f65a5318f019"
     }
   ]
 }

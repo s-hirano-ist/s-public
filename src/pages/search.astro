@@ -10,7 +10,7 @@ import SearchBar from "@components/SearchBar";
 // Retrieve all articles
 const posts = await getCollection("summary", ({ data }) => !data.draft);
 
-//TODO: serach may not be working propery
+//FIXME: serach not be working propery
 
 // List of items to search in
 const searchList = posts.map(({ data }) => ({
