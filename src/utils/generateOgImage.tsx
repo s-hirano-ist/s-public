@@ -1,9 +1,8 @@
 import satori, { SatoriOptions } from "satori";
 import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
-import { Resvg } from "@resvg/resvg-js";
+import sharp from "sharp";
 
-//TODO: edit config for generate OG image japanese words do not work
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
@@ -119,7 +118,7 @@ const ogImage = (text: string) => {
 const options: SatoriOptions = {
   width: 1200,
   height: 630,
-  embedFont: false,
+  embedFont: false, // FIXME: ここがおかしいらしい
   fonts: [
     {
       name: "IBM Plex Mono",
@@ -136,18 +135,16 @@ const options: SatoriOptions = {
   ],
 };
 
-const generateOgImage = async (mytext = SITE.title) => {
-  const svg = await satori(ogImage(mytext), options);
+const generateOgImage = async (ogTitle = SITE.title) => {
+  const svg = await satori(ogImage(ogTitle), options);
 
   // render png in production mode
   if (import.meta.env.MODE === "production") {
-    const resvg = new Resvg(svg);
-    const pngData = resvg.render();
-    const pngBuffer = pngData.asPng();
+    const pngBuffer = await sharp(Buffer.from(svg)).png().toBuffer();
 
-    console.info("Output PNG Image  :", `${mytext}.png`);
+    console.info("Output PNG Image  :", `${ogTitle}.png`);
 
-    await writeFile(`./dist/${mytext}.png`, pngBuffer);
+    await writeFile(`./dist/${ogTitle}.png`, pngBuffer);
   }
 
   return svg;
