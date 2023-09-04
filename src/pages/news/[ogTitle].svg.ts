@@ -1,11 +1,12 @@
 import { getCollection } from "astro:content";
 import generateOgImage from "@utils/generateOgImage";
 import type { APIRoute } from "astro";
+import slugify from "@utils/slugify";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("summary", ({ data }) => !data.draft);
+  const posts = await getCollection("news");
   return posts.map(post => ({
-    params: { ogTitle: post.slug },
+    params: { ogTitle: slugify(post.data) },
     props: { description: post.data.description },
   }));
 }
