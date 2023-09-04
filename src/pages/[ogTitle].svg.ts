@@ -6,10 +6,10 @@ export async function getStaticPaths() {
   const posts = await getCollection("summary", ({ data }) => !data.draft);
   return posts.map(post => ({
     params: { ogTitle: post.slug },
-    props: { title: post.data.title, description: post.data.description },
+    props: { description: post.data.description },
   }));
 }
 
 export const get: APIRoute = async ({ params, props }) => ({
-  body: await generateOgImage(props.title, props.description),
+  body: await generateOgImage(params.ogTitle, props.description),
 });
