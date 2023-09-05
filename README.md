@@ -24,6 +24,8 @@ https://pagespeed.web.dev/analysis/https-www-s-hirano-com/3ppgzcnip3?form_factor
 
 ## 💲 Google Site Verification (optional)
 
+TODO:
+
 You can easily add your [Google Site Verification HTML tag](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag) in AstroPaper using environment variable. This step is optional. If you don't add the following env variable, the google-site-verification tag won't appear in the html `<head>` section.
 
 ```bash
