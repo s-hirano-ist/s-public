@@ -9,7 +9,7 @@
 
 ## ✅ Lighthouse Score
 
-https://pagespeed.web.dev/analysis/https-www-s-hirano-com/3ppgzcnip3?form_factor=desktop
+https://pagespeed.web.dev/
 
 ## 💻 Tech Stack
 
@@ -20,18 +20,16 @@ https://pagespeed.web.dev/analysis/https-www-s-hirano-com/3ppgzcnip3?form_factor
 **Fuzzy Search** - [FuseJS](https://fusejs.io/)  
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
 **Code Formatting** - [Prettier](https://prettier.io/)  
-**Linting** - [ESLint](https://eslint.org)
+**Linting** - [ESLint](https://eslint.org)  
+**Auto commit rejection** - [Husky](https://typicode.github.io/husky/)  
+**Package updates** - [Renovate](https://www.mend.io/renovate/)
 
-## 💲 Google Site Verification (optional)
+### My infrastructure stack
 
-TODO:
-
-You can easily add your [Google Site Verification HTML tag](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag) in AstroPaper using environment variable. This step is optional. If you don't add the following env variable, the google-site-verification tag won't appear in the html `<head>` section.
-
-```bash
-# in your environment variable file (.env)
-PUBLIC_GOOGLE_SITE_VERIFICATION=your-google-site-verification-value
-```
+**Version Management** - [Github](https://github.com/)  
+**Deployment** - [Vercel Edge Networks](https://vercel.com/)  
+**Analytics** - [Vercel Analytics](https://vercel.com/analytics)  
+**Domain** - [Onamae.com](https://www.onamae.com/)
 
 ## 🍾 Initial setups
 
@@ -40,6 +38,15 @@ git clone https://github.com/s-hirano-ist/blog.git
 echo IS_DEV=true > .env
 yarn
 ```
+
+### Vercel deployment
+
+Add github integration for auto-deployment on vercel.
+
+### Google Site Verification (optional)
+
+Access [Google Search Console](https://search.google.com/search-console) and publish "google-site-verification" tag.
+Access [Onamae.com](https://www.onamae.com/) to add DNS TXT record.
 
 ## 🧞 Commands
 
