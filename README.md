@@ -33,6 +33,14 @@ You can easily add your [Google Site Verification HTML tag](https://support.goog
 PUBLIC_GOOGLE_SITE_VERIFICATION=your-google-site-verification-value
 ```
 
+## 🍾 Initial setups
+
+```bash
+git clone https://github.com/s-hirano-ist/blog.git
+echo IS_DEV=true > .env
+yarn
+```
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
