@@ -4,6 +4,8 @@ import "@styles/base.css";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
+const IS_DEV = import.meta.env.IS_DEV;
+
 export interface Props {
   title?: string;
   author?: string;
@@ -82,8 +84,7 @@ const socialImageURL = new URL(
           (window.vaq = window.vaq || []).push(arguments);
         };
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-
+    {!IS_DEV && <script defer src="/_vercel/insights/script.js" />}
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
