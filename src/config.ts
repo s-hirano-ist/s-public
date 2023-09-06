@@ -40,6 +40,6 @@ export const SOCIALS: SocialObjects = [
     name: "GitLab",
     href: "https://gitlab.com/sorakihirano2",
     linkTitle: `${SITE.title} on GitLab`,
-    active: true,
+    active: false,
   },
 ];
