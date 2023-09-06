@@ -27,6 +27,19 @@
     {
       "title": "GPT-4にfrontendは奪われるか",
       "url": "https://www.joshwcomeau.com/blog/the-end-of-frontend-development/"
+    },
+    {
+      "title": "AI生成コードは脆弱性の巣窟になりがち",
+      "quote": "チュートリアルのコードは脆弱性満載",
+      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00682/012500111/"
+    },
+    {
+      "title": "人間とAIの違いは、AIは80点を量産できる。100点にできるのは人間だけ",
+      "url": "https://bunshun.jp/articles/-/62698"
+    },
+    {
+      "title": "解釈可能性",
+      "url": "https://hacarus.github.io/interpretable-ml-book-ja/index.html"
     }
   ]
 }
