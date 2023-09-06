@@ -63,6 +63,13 @@ All commands are run from the root of the project, from a terminal:
 | `yarn sync`    | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
 | `yarn lint`    | Lint with ESLint                                                                                                                 |
 
+### 🪝 Tags
+
+```bash
+git tag vx.x.x
+git push origin vx.x.x
+```
+
 ## 📜 License
 
 Licensed under the MIT License, Copyright © 2023
