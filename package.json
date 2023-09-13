@@ -2,6 +2,7 @@
   "name": "blog",
   "version": "2.3.0",
   "type": "module",
+  "private": true,
   "scripts": {
     "dev": "astro check --watch & astro dev",
     "start": "astro dev",

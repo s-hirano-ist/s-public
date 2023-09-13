@@ -7,6 +7,7 @@ function withOpacity(variableName) {
   };
 }
 
+//TODO: ここがおかしい説 File is a CommonJS module; it may be converted to an ES module.
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
