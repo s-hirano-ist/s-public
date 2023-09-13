@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.2.0",
-    "astro": "^3.0.12",
+    "astro": "^3.0.13",
     "fuse.js": "^6.6.2",
     "github-slugger": "^2.0.0",
     "jsdom": "^22.1.0",
