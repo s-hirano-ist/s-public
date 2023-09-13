@@ -1,30 +1,40 @@
 ---
-import { SITE } from "@config";
 import { getOgpData } from "@utils/getOgpData";
-
+import { Image } from "astro:assets";
+import defaultOgImage from "@assets/defaultOgImage.jpg";
 export type Props = {
   url: string;
 };
 const { url } = Astro.props;
 
 const ogp = await getOgpData(url);
-const ogImage = ogp ? ogp["og:image"] : SITE.ogImage;
+const ogImage = ogp?.["og:image"];
 const ogTitle = ogp ? ogp["og:title"] : url;
 const ogDescription = ogp
   ? ogp["og:description"]
   : "No description on this page.";
-
-// TODO: CHANGE TO ASTRO IMAGE and MOVE PUBLIC IMG TO SRC
 ---
 
 <a href={url} target="_blank">
   <div class="flex justify-start w-full">
-    <img
-      src={ogImage}
-      loading="lazy"
-      class="hidden object-cover w-32 h-32 sm:block"
-      alt=""
-    />
+    {
+      ogImage === undefined ? (
+        <Image
+          src={defaultOgImage}
+          class="hidden object-cover w-32 h-32 sm:block"
+          alt=""
+        />
+      ) : (
+        // MEMO: width and height is overwritten by tailwind class
+        <Image
+          src={ogImage}
+          width="128"
+          height="128"
+          class="hidden object-cover w-32 h-32 sm:block"
+          alt=""
+        />
+      )
+    }
     <div class="sm:px-6 py-4 w-full">
       <div class="font-bold text-xl mb-2">{ogTitle}</div>
       <p>{ogDescription}</p>
