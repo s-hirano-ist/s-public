@@ -72,6 +72,18 @@ const socialImageURL = new URL(
     </script>
     {!IS_DEV && <script defer src="/_vercel/insights/script.js" />}
     <script is:inline src="/toggle-theme.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E84VM45L0L"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args) {
+        window.dataLayer.push(args);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-E84VM45L0L");
+    </script>
   </head>
   <body>
     <div class="main-click-area">
