@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -7,9 +9,8 @@ function withOpacity(variableName) {
   };
 }
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+export default {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   theme: {
     screens: {
       sm: "640px",
@@ -51,13 +52,13 @@ module.exports = {
     },
     fontFamily: {
       custom: [
-        'Hiragino Sans',
-        'ヒラギノ角ゴシック',
-        'メイリオ',
-        'Meiryo',
-        'sans-serif',
-        'YuGothic',
-        'Yu Gothic',
+        "Hiragino Sans",
+        "ヒラギノ角ゴシック",
+        "メイリオ",
+        "Meiryo",
+        "sans-serif",
+        "YuGothic",
+        "Yu Gothic",
       ],
     },
   },

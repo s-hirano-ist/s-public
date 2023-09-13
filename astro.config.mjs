@@ -13,7 +13,9 @@ export default defineConfig({
         applyBaseStyles: false,
       },
     }),
-    react(),
+    react({
+      include: ["**/react/*"],
+    }),
     sitemap(),
   ],
   markdown: {

@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "s-hirano-ist",
   description: "Thoughts by s-hirano-ist.",
   title: "思考の備忘録",
-  ogImage: "default-og.jpg",
+  ogImage: "/default-og.jpg",
   postPerPage: 10,
 };
 

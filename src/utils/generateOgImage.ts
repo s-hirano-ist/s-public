@@ -1,9 +1,9 @@
-import satori, { SatoriOptions } from "satori";
+import satori, { type SatoriOptions } from "satori";
 import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import sharp from "sharp";
 import { fetchFont } from "./fetchFont";
-import { OgImage } from "../components/OgImage";
+import { OgImage } from "../components/react/OgImage";
 
 const regularFontData = await fetchFont(
   "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400",
