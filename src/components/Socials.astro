@@ -3,9 +3,9 @@ import { SOCIALS } from "@config";
 import LinkButton from "./LinkButton.astro";
 import socialIcons from "@assets/socialIcons";
 
-export interface Props {
+export type Props = {
   centered?: boolean;
-}
+};
 
 const { centered = false } = Astro.props;
 ---
