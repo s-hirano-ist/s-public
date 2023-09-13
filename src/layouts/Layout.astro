@@ -74,12 +74,13 @@ const socialImageURL = new URL(
     <script is:inline src="/toggle-theme.js"></script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWGKYCS8K8"
-    ></script>
-    <script>
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZWGKYCS8K8"></script>
+    <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
-        window.dataLayer.push(arguments);
+        dataLayer.push(arguments);
       }
       gtag("js", new Date());
       gtag("config", "G-ZWGKYCS8K8");

@@ -3,8 +3,6 @@
 ## Known issues
 
 - [ ] X (Twitter) links in `src/content/news` will not render due to auto redirect feature on X.
-- [ ] yarn build will return a lot of logs on note.com.
-- [ ] IT media NEWS links in `src/content/news` will be garbled characters.
 - [ ] Search feature may not work properly.
 
 ## ✅ Lighthouse Score
