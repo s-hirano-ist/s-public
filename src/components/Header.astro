@@ -4,10 +4,10 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 export type ContentsType = "summary" | "news" | "search";
 
-export interface Props {
+export type Props = {
   activeNav?: ContentsType;
   isPortfolioPage?: boolean;
-}
+};
 
 const { activeNav, isPortfolioPage = false } = Astro.props;
 ---

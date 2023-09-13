@@ -10,14 +10,14 @@ export type SearchItem = {
   data: MarkdownFrontmatter;
 };
 
-interface Props {
+type Props = {
   searchList: SearchItem[];
-}
+};
 
-interface SearchResult {
+type SearchResult = {
   item: SearchItem;
   refIndex: number;
-}
+};
 
 export default function SearchBar({ searchList }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);

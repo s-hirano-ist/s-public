@@ -6,9 +6,9 @@ import type { CollectionEntry } from "astro:content";
 import Main from "@layouts/Main.astro";
 import LinkCard from "@components/LinkCard.astro";
 
-export interface Props {
+export type Props = {
   post: CollectionEntry<"news">;
-}
+};
 
 const { post } = Astro.props;
 const { title, description, body } = post.data;

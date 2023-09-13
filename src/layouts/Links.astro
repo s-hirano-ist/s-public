@@ -8,11 +8,11 @@ import PostCard from "@components/PostCard.astro";
 import slugify from "@utils/slugify";
 import type { CollectionEntry } from "astro:content";
 
-export interface Props {
+export type Props = {
   posts: CollectionEntry<"news">[];
   activeNav: ContentsType;
   pageTitle: string;
-}
+};
 
 const { posts, activeNav, pageTitle } = Astro.props;
 ---

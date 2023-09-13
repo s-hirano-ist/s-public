@@ -1,9 +1,9 @@
 ---
 import { getOgpData } from "@utils/getOgpData";
 
-export interface Props {
+export type Props = {
   url: string;
-}
+};
 const { url } = Astro.props;
 
 const ogp = await getOgpData(url);
