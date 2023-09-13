@@ -3,13 +3,15 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Main from "@layouts/Main.astro";
+import { Image } from "astro:assets";
+import portfolioImage from "@assets/portfolio.webp";
 ---
 
 <Layout>
   <Header isPortfolioPage />
   <Main>
     <section id="hero">
-      <img src="/assets/portfolio.webp" alt="" class="portfolio-image" />
+      <Image src={portfolioImage} alt="" class="portfolio-image" />
       <h1>s-hirano-ist</h1>
       <p>Hello. This is a portfolio of s-hirano-ist.</p>
       <p>

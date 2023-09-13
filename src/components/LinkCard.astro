@@ -1,4 +1,5 @@
 ---
+import { SITE } from "@config";
 import { getOgpData } from "@utils/getOgpData";
 
 export type Props = {
@@ -7,11 +8,13 @@ export type Props = {
 const { url } = Astro.props;
 
 const ogp = await getOgpData(url);
-const ogImage = ogp ? ogp["og:image"] : "/default-og.jpg";
+const ogImage = ogp ? ogp["og:image"] : SITE.ogImage;
 const ogTitle = ogp ? ogp["og:title"] : url;
 const ogDescription = ogp
   ? ogp["og:description"]
-  : "No description fot this page.";
+  : "No description on this page.";
+
+// TODO: CHANGE TO ASTRO IMAGE and MOVE PUBLIC IMG TO SRC
 ---
 
 <a href={url} target="_blank">
