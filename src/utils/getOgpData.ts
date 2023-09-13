@@ -1,4 +1,3 @@
-import axios from "axios";
 import { JSDOM } from "jsdom";
 
 // REF: https://zenn.dev/littleforest/articles/scrape-og-tags
@@ -18,8 +17,7 @@ function extractOgpData(metaElements: HTMLMetaElement[]): {
 
 export async function getOgpData(url: string) {
   try {
-    const response = await axios.get(url);
-    const dom = new JSDOM(response?.data);
+    const dom = await JSDOM.fromURL(url);
     const meta = dom.window.document.head.querySelectorAll("meta");
     return extractOgpData([...meta]);
   } catch (e) {

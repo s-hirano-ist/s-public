@@ -10,12 +10,12 @@ const config = {
   trailingComma: "all",
   bracketSpacing: true,
   endOfLine: "lf",
-  plugins: ['prettier-plugin-tailwindcss','prettier-plugin-astro'],
+  plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
   tailwindConfig: "./tailwind.config.mjs",
   overrides: [
     {
-      files: '*.astro',
-      options: { parser: 'astro' },
+      files: "*.astro",
+      options: { parser: "astro" },
     },
   ],
 };

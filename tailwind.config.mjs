@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -7,9 +9,7 @@ function withOpacity(variableName) {
   };
 }
 
-//TODO: ここがおかしい説 File is a CommonJS module; it may be converted to an ES module.
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     screens: {
@@ -52,13 +52,13 @@ module.exports = {
     },
     fontFamily: {
       custom: [
-        'Hiragino Sans',
-        'ヒラギノ角ゴシック',
-        'メイリオ',
-        'Meiryo',
-        'sans-serif',
-        'YuGothic',
-        'Yu Gothic',
+        "Hiragino Sans",
+        "ヒラギノ角ゴシック",
+        "メイリオ",
+        "Meiryo",
+        "sans-serif",
+        "YuGothic",
+        "Yu Gothic",
       ],
     },
   },
