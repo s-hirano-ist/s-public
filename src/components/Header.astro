@@ -25,7 +25,7 @@ const { activeNav, isPortfolioPage = false } = Astro.props;
             <LinkButton
               href="/news"
               className={`focus-outline p-1 ${
-                activeNav === "news" ? "active" : ""
+                activeNav === "news" ? "fill-skin-accent" : "fill-skin-accent"
               }`}
               ariaLabel="posts"
               title="Posts"
@@ -41,7 +41,9 @@ const { activeNav, isPortfolioPage = false } = Astro.props;
             <LinkButton
               href="/summary"
               className={`focus-outline p-1 ${
-                activeNav === "summary" ? "active" : ""
+                activeNav === "summary"
+                  ? "fill-skin-accent"
+                  : "fill-skin-accent"
               }`}
               ariaLabel="posts"
               title="Posts"
@@ -57,7 +59,7 @@ const { activeNav, isPortfolioPage = false } = Astro.props;
             <LinkButton
               href="/search"
               className={`focus-outline p-1 ${
-                activeNav === "search" ? "active" : ""
+                activeNav === "search" ? "fill-skin-accent" : "fill-skin-accent"
               }`}
               ariaLabel="search"
               title="Search"
@@ -97,19 +99,11 @@ const { activeNav, isPortfolioPage = false } = Astro.props;
 </header>
 
 <style>
-  /* news, summary, search icon button */
-  nav a.active svg {
-    @apply fill-skin-accent;
-  }
-
   /* dark, light mode toggle switch */
-  nav button svg {
-    @apply h-6 w-6 fill-skin-base hover:fill-skin-accent;
-  }
   #theme-btn {
     @apply p-1;
   }
   #theme-btn svg {
-    @apply hover:rotate-12;
+    @apply h-6  w-6 fill-skin-base hover:rotate-45 hover:fill-skin-accent;
   }
 </style>
