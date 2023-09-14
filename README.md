@@ -19,21 +19,20 @@ https://pagespeed.web.dev/
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
 **Code Formatting** - [Prettier](https://prettier.io/)  
 **Linting** - [ESLint](https://eslint.org)  
-**Auto commit rejection** - [Husky](https://typicode.github.io/husky/)  
+**Auto Commit Rejection** - [Husky](https://typicode.github.io/husky/)  
 **Package updates** - [Renovate](https://www.mend.io/renovate/)
 
 ### My infrastructure stack
 
 **Version Management** - [Github](https://github.com/)  
 **Deployment** - [Vercel Edge Networks](https://vercel.com/)  
-**Analytics** - [Vercel Analytics](https://vercel.com/analytics)  
+**Analytics** - [Google Analytics](https://analytics.google.com/analytics/web/)  
 **Domain** - [Onamae.com](https://www.onamae.com/)
 
 ## 🍾 Initial setups
 
 ```bash
 git clone https://github.com/s-hirano-ist/blog.git
-echo IS_DEV=true > .env
 yarn
 ```
 
