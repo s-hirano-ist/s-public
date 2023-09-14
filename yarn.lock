@@ -394,10 +394,10 @@
     undici "^5.22.1"
     whatwg-mimetype "^3.0.0"
 
-"@divriots/jampack@^0.20.1":
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/@divriots/jampack/-/jampack-0.20.1.tgz#90d2ae09b98202d366f48814a16948a5fda23315"
-  integrity sha512-ryao4kLWf5x2pmj/rCCeftlFVtR+wteGd07JB0aYW6gez/rHqqVhafQcKMEEcMXQYVbKNhtWzi4NrNAUzk4dBA==
+"@divriots/jampack@^0.20.2":
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/@divriots/jampack/-/jampack-0.20.2.tgz#a89b07f4c7d7224bebf809d2f3025d93a2b65124"
+  integrity sha512-6ovo+NQ7W+jeESbedMkquHJbNYcnTM9qS+kjLxUdeM+Qwcaz99UlXH0qoBCIng3Kb6ruVOGhM6/J2Ak+gBO/Ow==
   dependencies:
     "@divriots/cheerio" "1.0.0-rc.12"
     "@proload/core" "^0.3.3"
