@@ -4,10 +4,24 @@ module.exports = {
     es2022: true,
     browser: true,
   },
-  extends: ["eslint:recommended", "plugin:astro/recommended"],
+  root: true,
+  settings: {
+    "import/resolver": {
+      typescript: { project: "./" },
+    },
+  },
+  extends: [
+    "eslint:recommended",
+    // "plugin:@typescript-eslint/recommended",
+    // "plugin:import/recommended",
+    // "plugin:import/typescript",
+    "plugin:astro/recommended",
+    // "prettier",
+  ],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
+    project: ["./tsconfig.json"],
   },
   overrides: [
     {
