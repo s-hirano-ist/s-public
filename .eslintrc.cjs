@@ -17,6 +17,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/stylistic",
     "prettier",
     "plugin:import/typescript",
     "plugin:astro/recommended",
@@ -55,6 +56,7 @@ module.exports = {
         caughtErrorsIgnorePattern: "^_",
       },
     ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
   },
   overrides: [
     {

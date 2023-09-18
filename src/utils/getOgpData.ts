@@ -1,9 +1,9 @@
 import { JSDOM } from "jsdom";
 
 // REF: https://zenn.dev/littleforest/articles/scrape-og-tags
-function extractOgpData(metaElements: HTMLMetaElement[]): {
-  [name: string]: string;
-} {
+function extractOgpData(
+  metaElements: HTMLMetaElement[],
+): Record<string, string> {
   return (
     metaElements
       .filter((element: Element) => element.hasAttribute("property"))
