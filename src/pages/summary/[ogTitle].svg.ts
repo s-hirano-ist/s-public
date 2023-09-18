@@ -1,6 +1,5 @@
 import generateOgImage from "@utils/generateOgImage";
 import slugify from "@utils/slugify";
-import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -11,5 +10,10 @@ export async function getStaticPaths() {
   }));
 }
 
-export const GET: APIRoute = async ({ params, props }) =>
-  new Response(await generateOgImage(params.ogTitle, props.description));
+export const GET = async ({
+  params,
+  props,
+}: {
+  params: Record<string, string>;
+  props: { description: string };
+}) => new Response(await generateOgImage(params.ogTitle, props.description));

@@ -56,8 +56,8 @@ module.exports = {
         caughtErrorsIgnorePattern: "^_",
       },
     ],
-    // "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug with astro files
+    // "@typescript-eslint/no-unsafe-argument": "off", // FIXME: any to string convert unsafe
   },
   overrides: [
     {
