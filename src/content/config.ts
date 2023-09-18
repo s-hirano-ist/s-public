@@ -1,5 +1,5 @@
 import { defineCollection } from "astro:content";
-import { jsonSchema, markdownSchema } from "./_schemas";
+import { jsonSchema, markdownSchema } from "@content/_schemas";
 
 const summaryCollection = defineCollection({
   type: "content",

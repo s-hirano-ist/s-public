@@ -22,5 +22,6 @@ export async function getOgpData(url: string) {
     return extractOgpData([...meta]);
   } catch (e) {
     console.error(e);
+    return;
   }
 }
