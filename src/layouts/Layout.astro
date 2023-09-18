@@ -4,12 +4,12 @@ import "@styles/base.css";
 
 const IS_DEV = import.meta.env.MODE === "development";
 
-export type Props = {
+export interface Props {
   title?: string;
   author?: string;
   description?: string;
   ogImage?: string;
-};
+}
 
 const {
   title = SITE.title,

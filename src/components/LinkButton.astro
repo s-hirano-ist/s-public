@@ -1,11 +1,11 @@
 ---
-export type Props = {
+export interface Props {
   href: string;
   className?: string;
   ariaLabel?: string;
   title?: string;
   disabled?: boolean;
-};
+}
 
 const { href, className, ariaLabel, title, disabled = false } = Astro.props;
 ---

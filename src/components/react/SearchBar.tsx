@@ -4,20 +4,20 @@ import slugify from "@utils/slugify";
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 
-export type SearchItem = {
+export interface SearchItem {
   title: string;
   description: string;
   data: MarkdownFrontmatter;
-};
+}
 
-type Props = {
+interface Props {
   searchList: SearchItem[];
-};
+}
 
-type SearchResult = {
+interface SearchResult {
   item: SearchItem;
   refIndex: number;
-};
+}
 
 export default function SearchBar({ searchList }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
