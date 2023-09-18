@@ -13,8 +13,8 @@
     "fmt": "prettier --check **/*.astro .",
     "fmt:fix": "prettier --write **/*.astro .",
     "prepare": "husky install",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "astro check && eslint .",
+    "lint:fix": "astro check && eslint . --fix"
   },
   "dependencies": {
     "@astrojs/check": "^0.2.0",
