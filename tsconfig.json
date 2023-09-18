@@ -1,9 +1,16 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "baseUrl": "src",
     "jsx": "react-jsx",
     "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "alwaysStrict": true,
+    "isolatedModules": true,
     "paths": {
       "@assets/*": ["assets/*"],
       "@config": ["config.ts"],
