@@ -53,7 +53,7 @@ All commands are run from the root of the project, from a terminal:
 | :------------- | :------------------------------------------------------------------------------------------------------------------------------- |
 | `yarn`         | Installs dependencies                                                                                                            |
 | `yarn dev`     | Starts local dev server at `localhost:4321`                                                                                      |
-| `yarn build`   | Build your production site to `./dist/`                                                                                          |
+| `yarn build`   | Build your production site to `./.vercel/output/static`                                                                          |
 | `yarn preview` | Preview your build locally, before deploying                                                                                     |
 | `yarn fmt`     | Check code format with Prettier                                                                                                  |
 | `yarn fmt:fix` | Format codes with Prettier                                                                                                       |
