@@ -6,18 +6,21 @@ module.exports = {
   },
   ignorePatterns: ["*.d.ts"],
   root: true,
-  // settings: {
-  //   "import/resolver": {
-  //     typescript: { project: "./" },
-  //   },
-  // },
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".astro"],
+        moduleDirectory: ["node_modules", "src/"],
+      },
+    },
+  },
   extends: [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    // "plugin:import/recommended",
+    "prettier",
     "plugin:import/typescript",
     "plugin:astro/recommended",
-    // "plugin:@typescript-eslint/recommended",
-    // "plugin:import/recommended",
-    // "prettier",
   ],
   parserOptions: {
     ecmaVersion: "latest",
@@ -35,9 +38,24 @@ module.exports = {
         prefer: "type-imports",
       },
     ],
-    "import/order": [2, { alphabetize: { order: "asc" } }],
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error"],
+    "import/order": [
+      "error",
+      {
+        groups: ["builtin", "external", "parent", "sibling", "index"],
+        pathGroupsExcludedImportTypes: [],
+        alphabetize: { order: "asc" },
+        "newlines-between": "never",
+      },
+    ],
+    // "no-console": ["warn", { allow: ["error"] }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        caughtErrorsIgnorePattern: "^_",
+      },
+    ],
   },
   overrides: [
     {

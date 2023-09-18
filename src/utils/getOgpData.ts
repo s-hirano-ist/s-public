@@ -4,15 +4,18 @@ import { JSDOM } from "jsdom";
 function extractOgpData(metaElements: HTMLMetaElement[]): {
   [name: string]: string;
 } {
-  return metaElements
-    .filter((element: Element) => element.hasAttribute("property"))
-    .reduce((previous: any, current: Element) => {
-      const property = current.getAttribute("property")?.trim();
-      if (!property) return;
-      const content = current.getAttribute("content");
-      previous[property] = content;
-      return previous;
-    }, {});
+  return (
+    metaElements
+      .filter((element: Element) => element.hasAttribute("property"))
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .reduce((previous: any, current: Element) => {
+        const property = current.getAttribute("property")?.trim();
+        if (!property) return;
+        const content = current.getAttribute("content");
+        previous[property] = content;
+        return previous;
+      }, {})
+  );
 }
 
 export async function getOgpData(url: string) {
