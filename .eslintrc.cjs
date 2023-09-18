@@ -57,7 +57,6 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug with astro files
-    // "@typescript-eslint/no-unsafe-argument": "off", // FIXME: any to string convert unsafe
   },
   overrides: [
     {
