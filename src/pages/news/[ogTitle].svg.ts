@@ -1,7 +1,7 @@
-import { getCollection } from "astro:content";
 import generateOgImage from "@utils/generateOgImage";
-import type { APIRoute } from "astro";
 import slugify from "@utils/slugify";
+import type { APIRoute } from "astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("news");

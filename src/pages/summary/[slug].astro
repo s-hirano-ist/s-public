@@ -1,7 +1,7 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
 import PostDetail from "@layouts/PostDetail.astro";
 import slugify from "@utils/slugify";
+import { type CollectionEntry, getCollection } from "astro:content";
 
 export type Props = {
   post: CollectionEntry<"summary">;

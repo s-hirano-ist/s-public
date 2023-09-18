@@ -1,8 +1,8 @@
+import { toc } from "mdast-util-toc";
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
-import { toc } from "mdast-util-toc";
 
 const getToc: any = (options: any) => {
   return (node: any) => {

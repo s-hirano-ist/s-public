@@ -10,4 +10,4 @@ const { post } = Astro.props;
 const content = await markdownToToc(post);
 ---
 
-<div set:html={content} />
+<Fragment set:html={content} />
