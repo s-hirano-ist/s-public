@@ -18,13 +18,13 @@ const options: SatoriOptions = {
   fonts: [
     {
       name: "Noto Sans JP",
-      data: regularFontData as ArrayBuffer,
+      data: regularFontData!,
       weight: 400,
       style: "normal",
     },
     {
       name: "Noto Sans JP",
-      data: boldFontData as ArrayBuffer,
+      data: boldFontData!,
       weight: 700,
       style: "normal",
     },

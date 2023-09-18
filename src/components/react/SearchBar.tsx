@@ -4,20 +4,20 @@ import slugify from "@utils/slugify";
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 
-export type SearchItem = {
+export interface SearchItem {
   title: string;
   description: string;
   data: MarkdownFrontmatter;
-};
+}
 
-type Props = {
+interface Props {
   searchList: SearchItem[];
-};
+}
 
-type SearchResult = {
+interface SearchResult {
   item: SearchItem;
   refIndex: number;
-};
+}
 
 export default function SearchBar({ searchList }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -51,7 +51,7 @@ export default function SearchBar({ searchList }: Props) {
     // put focus cursor at the end of the string
     setTimeout(function () {
       inputRef.current!.selectionStart = inputRef.current!.selectionEnd =
-        searchStr?.length || 0;
+        searchStr?.length ?? 0;
     }, 50);
   }, []);
 
@@ -108,15 +108,14 @@ export default function SearchBar({ searchList }: Props) {
       )}
 
       <ul>
-        {searchResults &&
-          searchResults.map(({ item, refIndex }) => (
-            <PostCard
-              href={`/summary/${slugify(item.data)}`}
-              title={item.data.title}
-              description={item.data.description}
-              key={`${refIndex}-${slugify(item.data)}`}
-            />
-          ))}
+        {searchResults?.map(({ item, refIndex }) => (
+          <PostCard
+            href={`/summary/${slugify(item.data)}`}
+            title={item.data.title}
+            description={item.data.description}
+            key={`${refIndex}-${slugify(item.data)}`}
+          />
+        ))}
       </ul>
     </>
   );

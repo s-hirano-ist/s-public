@@ -1,15 +1,15 @@
+import type { Root, RootContent } from "mdast";
 import { toc } from "mdast-util-toc";
+import type { Options } from "mdast-util-toc";
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const getToc: any = (options: any) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (node: any) => {
+const getToc = (options: Options) => {
+  return (node: Root) => {
     const result = toc(node, options);
-    node.children = [result.map];
+    node.children = [result.map as RootContent];
   };
 };
 

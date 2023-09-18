@@ -16,8 +16,8 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/stylistic",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
     "prettier",
     "plugin:import/typescript",
     "plugin:astro/recommended",
@@ -25,7 +25,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    project: ["./tsconfig.json"],
+    project: true,
   },
   globals: {
     astroHTML: true,
@@ -56,7 +56,8 @@ module.exports = {
         caughtErrorsIgnorePattern: "^_",
       },
     ],
-    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug with astro files
+    // "@typescript-eslint/no-unsafe-argument": "off", // FIXME: any to string convert unsafe
   },
   overrides: [
     {

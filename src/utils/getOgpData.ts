@@ -1,21 +1,16 @@
 import { JSDOM } from "jsdom";
 
 // REF: https://zenn.dev/littleforest/articles/scrape-og-tags
-function extractOgpData(
-  metaElements: HTMLMetaElement[],
-): Record<string, string> {
-  return (
-    metaElements
-      .filter((element: Element) => element.hasAttribute("property"))
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .reduce((previous: any, current: Element) => {
-        const property = current.getAttribute("property")?.trim();
-        if (!property) return;
-        const content = current.getAttribute("content");
-        previous[property] = content;
-        return previous;
-      }, {})
-  );
+function extractOgpData(metaElements: HTMLMetaElement[]) {
+  return metaElements
+    .filter((element: Element) => element.hasAttribute("property"))
+    .reduce((previous: Record<string, string>, current: Element) => {
+      const property = current.getAttribute("property")?.trim();
+      const content = current.getAttribute("content");
+      if (!property || !content) return previous;
+      previous[property] = content;
+      return previous;
+    }, {});
 }
 
 export async function getOgpData(url: string) {

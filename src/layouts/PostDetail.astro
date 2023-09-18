@@ -6,9 +6,9 @@ import Main from "@layouts/Main.astro";
 import PostSidebar from "@layouts/PostSidebar.astro";
 import type { CollectionEntry } from "astro:content";
 
-export type Props = {
+export interface Props {
   post: CollectionEntry<"summary">;
-};
+}
 
 const { post } = Astro.props;
 

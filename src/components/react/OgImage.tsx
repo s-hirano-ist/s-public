@@ -1,8 +1,8 @@
 import { SITE } from "@config";
 
-type Props = {
+interface Props {
   description: string;
-};
+}
 export const OgImage = ({ description }: Props) => {
   return (
     <div

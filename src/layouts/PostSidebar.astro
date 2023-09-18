@@ -1,9 +1,9 @@
 ---
 import { markdownToToc } from "@utils/markdownToHtml";
 
-export type Props = {
+export interface Props {
   post: string;
-};
+}
 
 const { post } = Astro.props;
 

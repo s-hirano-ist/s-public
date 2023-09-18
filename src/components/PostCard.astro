@@ -1,11 +1,11 @@
 ---
 import { capitalizeFirstLetterOnly } from "@utils/convertString";
 
-export type Props = {
+export interface Props {
   href: string;
   title: string;
   description: string;
-};
+}
 const { href, title, description } = Astro.props;
 ---
 

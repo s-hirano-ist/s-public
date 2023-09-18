@@ -1,5 +1,5 @@
 export const fetchFont = async (api: string) => {
-  const css = await (
+  const css: string = await (
     await fetch(api, {
       headers: {
         "User-Agent":
@@ -10,6 +10,6 @@ export const fetchFont = async (api: string) => {
   const resource = css.match(
     /src: url\((.+)\) format\('(opentype|truetype)'\)/,
   );
-  if (!resource) return;
+  if (!resource?.[1]) return;
   return await fetch(resource[1]).then(res => res.arrayBuffer());
 };
