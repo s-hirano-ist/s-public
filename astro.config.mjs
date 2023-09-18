@@ -33,6 +33,7 @@ export default defineConfig({
     },
     extendDefaultPlugins: true,
   },
+  // MEMO: not necessary for static sites. Only for SSR.
   output: "static",
   adapter: vercel({
     webAnalytics: {
