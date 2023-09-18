@@ -15,6 +15,3 @@ yarn-error.log*
 
 # ignore .astro directory
 .astro
-
-# ignore Jampack cache files
-.jampack/
