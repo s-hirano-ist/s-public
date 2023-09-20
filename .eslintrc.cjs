@@ -18,6 +18,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:tailwindcss/recommended",
     "prettier",
     "plugin:import/typescript",
     "plugin:astro/recommended",
@@ -30,7 +31,7 @@ module.exports = {
   globals: {
     astroHTML: true,
   },
-  plugins: ["@typescript-eslint", "import"],
+  plugins: ["@typescript-eslint", "import", "tailwindcss"],
   rules: {
     "@typescript-eslint/consistent-type-imports": [
       2,
@@ -57,6 +58,7 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug with astro files
+    "tailwindcss/no-custom-classname": "off",
   },
   overrides: [
     {

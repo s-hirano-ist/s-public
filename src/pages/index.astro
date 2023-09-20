@@ -11,7 +11,7 @@ import { Image } from "astro:assets";
   <Header isPortfolioPage />
   <Main>
     <section id="hero">
-      <Image src={portfolioImage} alt="" class="portfolio-image" />
+      <Image src={portfolioImage} alt="" class="w-full" />
       <h1>s-hirano-ist</h1>
       <p>Hello. This is a portfolio of s-hirano-ist.</p>
       <p>
@@ -27,9 +27,6 @@ import { Image } from "astro:assets";
 </Layout>
 
 <style>
-  .portfolio-image {
-    @apply w-full;
-  }
   #hero {
     @apply pb-6 pt-8;
   }
