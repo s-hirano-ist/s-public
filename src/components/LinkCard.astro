@@ -16,12 +16,12 @@ const ogDescription = ogp
 ---
 
 <a href={url} target="_blank">
-  <div class="flex justify-start w-full">
+  <div class="flex w-full justify-start">
     {
       ogImage === undefined ? (
         <Image
           src={defaultOgImage}
-          class="hidden object-cover w-32 h-32 sm:block"
+          class="hidden h-32 w-32 object-cover sm:block"
           alt=""
         />
       ) : (
@@ -30,13 +30,13 @@ const ogDescription = ogp
           src={ogImage}
           width="128"
           height="128"
-          class="hidden object-cover w-32 h-32 sm:block"
+          class="hidden h-32 w-32 object-cover sm:block"
           alt=""
         />
       )
     }
-    <div class="sm:px-6 py-4 w-full">
-      <div class="font-bold text-xl mb-2">{ogTitle}</div>
+    <div class="w-full py-4 sm:px-6">
+      <div class="mb-2 text-xl font-bold">{ogTitle}</div>
       <p>{ogDescription}</p>
     </div>
   </div>
