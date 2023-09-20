@@ -101,6 +101,15 @@
     {
       "title": "ムーアの法則ではなく、モーアの法則だった",
       "url": "https://pc.watch.impress.co.jp/docs/news/1532289.html"
+    },
+    {
+      "title": "Github-Guessr: Githubのプロフィールから国を当てるゲーム",
+      "url": "https://www.publickey1.jp/blog/23/_github-guessr.html"
+    },
+    {
+      "title": "アプリがだんだん使いづらくなる理由",
+      "quote": "下記のような限界ユーザ（少しのことですぐに離れて戻ってこなくなるユーザ）を重要視するから。 <br /> 酸欠状態の金魚みたいな注意力 <br /> アプリを開いたら1.3秒以内に「キラキラした画像」や「目を引く見出し」を求めだす <br /> アプリの設定をいじろうなどとは思わない <br /> インターフェースの複雑さへの耐性はゼロ、親指1本しか動かさない <br /> 動かしても、何度も上方向にフリックするだけのゾンビのような動き",
+      "url": "https://gigazine.net/news/20230919-tyranny-of-the-marginal-user/"
     }
   ]
 }
