@@ -27,6 +27,7 @@ https://pagespeed.web.dev/
 **Version Management** - [Github](https://github.com/)  
 **Deployment** - [Vercel Edge Networks](https://vercel.com/)  
 **Analytics** - [Google Analytics](https://analytics.google.com/analytics/web/)  
+**Search Console** - [Google Search Console](https://search.google.com/search-console)  
 **Domain** - [Onamae.com](https://www.onamae.com/)
 
 ## 🍾 Initial setups
