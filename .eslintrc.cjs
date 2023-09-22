@@ -59,6 +59,7 @@ module.exports = {
     ],
     "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug with astro files
     "tailwindcss/no-custom-classname": "off",
+    "no-restricted-imports": ["error", { patterns: ["./", "../"] }],
   },
   overrides: [
     {
