@@ -1,10 +1,5 @@
 # Blog
 
-## Known issues
-
-- [ ] X (Twitter) links in `src/content/news` will not render due to auto redirect feature on X.
-- [ ] Search feature may not work properly.
-
 ## ✅ Lighthouse Score
 
 https://pagespeed.web.dev/
