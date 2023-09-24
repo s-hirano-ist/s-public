@@ -1,5 +1,5 @@
 ---
-title: morality
+heading: morality
 description: 道徳について
 draft: false
 ---

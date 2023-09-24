@@ -1,5 +1,5 @@
 ---
-title: thoughts
+heading: thoughts
 description: 思考について
 draft: true
 ---

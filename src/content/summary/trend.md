@@ -1,5 +1,5 @@
 ---
-title: trend
+heading: trend
 description: 流行について
 draft: true
 ---

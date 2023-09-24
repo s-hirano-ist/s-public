@@ -1,5 +1,5 @@
 ---
-title: art
+heading: art
 description: 現代アートとは?
 draft: false
 ---

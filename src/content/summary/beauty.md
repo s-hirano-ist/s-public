@@ -1,5 +1,5 @@
 ---
-title: beauty
+heading: beauty
 description: 美容について
 draft: true
 ---

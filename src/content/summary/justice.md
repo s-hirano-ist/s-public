@@ -1,5 +1,5 @@
 ---
-title: justice
+heading: justice
 description: 正義とは?
 draft: false
 ---

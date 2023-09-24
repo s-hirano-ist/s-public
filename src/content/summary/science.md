@@ -1,5 +1,5 @@
 ---
-title: science
+heading: science
 description: 科学とは?
 draft: true
 ---

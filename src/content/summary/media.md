@@ -1,5 +1,5 @@
 ---
-title: media
+heading: media
 description: メディアについて
 draft: true
 ---

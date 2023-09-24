@@ -1,5 +1,5 @@
 ---
-title: trivia
+heading: trivia
 description: 雑学
 draft: true
 ---

@@ -1,5 +1,5 @@
 ---
-title: technology
+heading: technology
 description: 今後の技術
 draft: true
 ---

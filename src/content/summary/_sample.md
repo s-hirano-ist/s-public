@@ -1,5 +1,5 @@
 ---
-title: sample
+heading: sample
 description: sample
 draft: true
 ---
