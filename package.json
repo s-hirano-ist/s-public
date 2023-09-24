@@ -4,17 +4,16 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "astro check --watch & astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "dev": "astro check --watch && tsc --noEmit && astro dev",
+    "build": "astro check && tsc --noEmit && astro build",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
     "fmt": "prettier --check **/*.astro .",
     "fmt:fix": "prettier --write **/*.astro .",
     "prepare": "husky install",
-    "lint": "astro check && eslint .",
-    "lint:fix": "astro check && eslint . --fix"
+    "lint": "astro check && tsc --noEmit && eslint .",
+    "lint:fix": "astro check && tsc --noEmit && eslint . --fix"
   },
   "dependencies": {
     "@astrojs/check": "^0.2.0",

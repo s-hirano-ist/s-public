@@ -1,4 +1,4 @@
-import PostCard from "@components/PostCard.astro";
+import SearchCard from "@components/react/SearchCard";
 import type { MarkdownFrontmatter } from "@content/_schemas";
 import slugify from "@utils/slugify";
 import Fuse from "fuse.js";
@@ -109,7 +109,7 @@ export default function SearchBar({ searchList }: Props) {
 
       <ul>
         {searchResults?.map(({ item, refIndex }) => (
-          <PostCard
+          <SearchCard
             href={`/summary/${slugify(item.data)}`}
             title={item.data.heading}
             description={item.data.description}
