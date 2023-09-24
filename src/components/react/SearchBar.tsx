@@ -1,50 +1,78 @@
 import SearchCard from "@components/react/SearchCard";
-import type { MarkdownFrontmatter } from "@content/_schemas";
+import type { JsonFrontmatter, MarkdownFrontmatter } from "@content/_schemas";
 import slugify from "@utils/slugify";
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 
-export interface SearchItem {
-  heading: string;
-  description: string;
+export interface SummarySearchItem {
+  body: string;
   data: MarkdownFrontmatter;
+}
+export interface NewsSearchItem {
+  data: JsonFrontmatter;
 }
 
 interface Props {
-  searchList: SearchItem[];
+  summarySearchList: SummarySearchItem[];
+  newsSearchList: NewsSearchItem[];
 }
 
-interface SearchResult {
-  item: SearchItem;
+interface SummarySearchResult {
+  item: SummarySearchItem;
+  refIndex: number;
+}
+interface NewsSearchResult {
+  item: NewsSearchItem;
   refIndex: number;
 }
 
-export default function SearchBar({ searchList }: Props) {
+export default function SearchBar({
+  summarySearchList,
+  newsSearchList,
+}: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputVal, setInputVal] = useState("");
-  const [searchResults, setSearchResults] = useState<SearchResult[] | null>(
-    null,
-  );
+
+  const [summarySearchResult, setSummarySearchResults] = useState<
+    SummarySearchResult[] | null
+  >(null);
+  const [newsSearchResult, setNewsSearchResults] = useState<
+    NewsSearchResult[] | null
+  >(null);
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     setInputVal(e.currentTarget.value);
   };
 
-  const fuse = useMemo(
+  const summaryFuse = useMemo(
     () =>
-      // TODO: here
-      new Fuse(searchList, {
-        keys: ["heading", "description"],
+      new Fuse(summarySearchList, {
+        keys: ["data.heading", "data.description", "body"],
         includeMatches: true,
         minMatchCharLength: 2,
         threshold: 0.5,
       }),
-    [searchList],
+    [summarySearchList],
+  );
+  const newsFuse = useMemo(
+    () =>
+      new Fuse(newsSearchList, {
+        keys: [
+          "data.heading",
+          "data.description",
+          "data.body.title",
+          "data.body.quote",
+          "data.body.url",
+        ],
+        includeMatches: true,
+        minMatchCharLength: 2,
+        threshold: 0.5,
+      }),
+    [newsSearchList],
   );
 
   useEffect(() => {
-    // if URL has search query,
-    // insert that search query in input field
+    // if URL has search query, insert that search query in input field
     const searchUrl = new URLSearchParams(window.location.search);
     const searchStr = searchUrl.get("q");
     if (searchStr) setInputVal(searchStr);
@@ -57,10 +85,14 @@ export default function SearchBar({ searchList }: Props) {
   }, []);
 
   useEffect(() => {
-    // Add search result only if
-    // input value is more than one character
-    const inputResult = inputVal.length > 1 ? fuse.search(inputVal) : [];
-    setSearchResults(inputResult);
+    // Add search result only if input value is more than one character
+    const summaryInputResult =
+      inputVal.length > 1 ? summaryFuse.search(inputVal) : [];
+    setSummarySearchResults(summaryInputResult);
+
+    const newsInputResult =
+      inputVal.length > 1 ? newsFuse.search(inputVal) : [];
+    setNewsSearchResults(newsInputResult);
 
     // Update search string in URL
     if (inputVal.length > 0) {
@@ -98,20 +130,18 @@ export default function SearchBar({ searchList }: Props) {
         />
       </label>
 
-      {inputVal.length > 1 && (
-        <div className="mt-8">
-          Found {searchResults?.length}
-          {searchResults?.length && searchResults?.length === 1
-            ? " result"
-            : " results"}{" "}
-          for '{inputVal}'
-        </div>
-      )}
-
       <ul>
-        {searchResults?.map(({ item, refIndex }) => (
+        {summarySearchResult?.map(({ item, refIndex }) => (
           <SearchCard
             href={`/summary/${slugify(item.data)}`}
+            title={item.data.heading}
+            description={item.data.description}
+            key={`${refIndex}-${slugify(item.data)}`}
+          />
+        ))}
+        {newsSearchResult?.map(({ item, refIndex }) => (
+          <SearchCard
+            href={`/news/${slugify(item.data)}`}
             title={item.data.heading}
             description={item.data.description}
             key={`${refIndex}-${slugify(item.data)}`}
