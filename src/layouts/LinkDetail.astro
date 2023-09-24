@@ -7,9 +7,9 @@ import Main from "@layouts/Main.astro";
 import type { CollectionEntry } from "astro:content";
 import sanitizeHtml from "sanitize-html";
 
-export interface Props {
+export type Props = {
   post: CollectionEntry<"news">;
-}
+};
 
 const { post } = Astro.props;
 const { heading, description, body } = post.data;

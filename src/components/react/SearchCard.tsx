@@ -1,10 +1,10 @@
 import { capitalizeFirstLetterOnly } from "@utils/convertString";
 
-interface Props {
+type Props = {
   href: string;
   title: string;
   description: string;
-}
+};
 
 export default function SearchCard({ href, title, description }: Props) {
   return (

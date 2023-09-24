@@ -4,27 +4,27 @@ import slugify from "@utils/slugify";
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 
-export interface SummarySearchItem {
+export type SummarySearchItem = {
   body: string;
   data: MarkdownFrontmatter;
-}
-export interface NewsSearchItem {
+};
+export type NewsSearchItem = {
   data: JsonFrontmatter;
-}
+};
 
-interface Props {
+type Props = {
   summarySearchList: SummarySearchItem[];
   newsSearchList: NewsSearchItem[];
-}
+};
 
-interface SummarySearchResult {
+type SummarySearchResult = {
   item: SummarySearchItem;
   refIndex: number;
-}
-interface NewsSearchResult {
+};
+type NewsSearchResult = {
   item: NewsSearchItem;
   refIndex: number;
-}
+};
 
 export default function SearchBar({
   summarySearchList,
