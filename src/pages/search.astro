@@ -1,36 +1,40 @@
 ---
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import SearchBar from "@components/react/SearchBar";
+import SearchBar, {
+  type SummarySearchItem,
+  type NewsSearchItem,
+} from "@components/react/SearchBar";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import { getCollection } from "astro:content";
 
-// Retrieve all articles
-const posts = await getCollection("summary", ({ data }) => !data.draft);
+const summaryList = await getCollection("summary", ({ data }) => !data.draft);
+const newsList = await getCollection("news");
 
-//FIXME: serach not be working propery
-
-// List of items to search in
-const searchList = posts.map(({ data }) => ({
-  heading: data.heading,
-  description: data.description,
-  data,
-}));
+const summarySearchList = summaryList.map(
+  (summary): SummarySearchItem => ({
+    body: summary.body,
+    data: summary.data,
+  }),
+);
+const newsSearchList = newsList.map(
+  (news): NewsSearchItem => ({
+    data: news.data,
+  }),
+);
 ---
 
 <Layout title={`Search | ${SITE.title}`}>
   <Header activeNav="search" />
   <Main pageTitle="Search">
-    <div id="space"></div>
-    <SearchBar client:load searchList={searchList} />
+    <div class="mb-12"></div>
+    <SearchBar
+      client:load
+      summarySearchList={summarySearchList}
+      newsSearchList={newsSearchList}
+    />
   </Main>
   <Footer />
 </Layout>
-
-<style>
-  #space {
-    @apply mb-6;
-  }
-</style>
