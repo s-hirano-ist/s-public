@@ -5,4 +5,8 @@ import { getCollection } from "astro:content";
 const posts = await getCollection("news");
 ---
 
-<Links posts={posts} activeNav="news" pageTitle="興味深いニュースまとめ" />
+<Links
+  posts={posts}
+  activeNav="news"
+  pageTitle="注目している・面白いニュースまとめ"
+/>
