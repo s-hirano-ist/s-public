@@ -6,6 +6,8 @@ import vercel from "@astrojs/vercel/static";
 import { defineConfig } from "astro/config";
 import { SITE } from "./src/config";
 
+const IS_DEV = import.meta.env.MODE === "development";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -37,7 +39,7 @@ export default defineConfig({
   output: "static",
   adapter: vercel({
     webAnalytics: {
-      enabled: true,
+      enabled: !IS_DEV,
     },
     speedInsights: {
       enabled: true,
