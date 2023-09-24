@@ -1,5 +1,5 @@
 ---
-title: human
+heading: human
 description: 人体について
 draft: false
 ---

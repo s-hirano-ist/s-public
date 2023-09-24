@@ -1,5 +1,5 @@
 ---
-title: life
+heading: lifestyle
 description: 生活について
 draft: true
 ---

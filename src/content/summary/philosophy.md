@@ -1,5 +1,5 @@
 ---
-title: philosophy
+heading: philosophy
 description: 哲学について
 draft: false
 ---

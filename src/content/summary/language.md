@@ -1,5 +1,5 @@
 ---
-title: language
+heading: language
 description: 言語について
 draft: true
 ---

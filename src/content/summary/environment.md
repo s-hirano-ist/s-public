@@ -1,5 +1,5 @@
 ---
-title: environment
+heading: environment
 description: 環境について
 draft: true
 ---

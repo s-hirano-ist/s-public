@@ -2,7 +2,7 @@ import { z } from "astro:content";
 
 export const markdownSchema = z
   .object({
-    title: z.string(),
+    heading: z.string(),
     draft: z.boolean(),
     description: z.string(),
   })
@@ -12,7 +12,7 @@ export type MarkdownFrontmatter = z.infer<typeof markdownSchema>;
 
 export const jsonSchema = z
   .object({
-    title: z.string(),
+    heading: z.string(),
     description: z.string(),
     body: z.array(
       z.object({

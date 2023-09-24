@@ -25,7 +25,7 @@ const { posts, activeNav, pageTitle } = Astro.props;
         posts.map(({ data }) => (
           <PostCard
             href={`/${activeNav}/${slugify(data)}`}
-            title={data.title}
+            title={data.heading}
             description={data.description}
           />
         ))

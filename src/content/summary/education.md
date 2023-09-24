@@ -1,5 +1,5 @@
 ---
-title: education
+heading: education
 description: 教育について
 draft: false
 ---

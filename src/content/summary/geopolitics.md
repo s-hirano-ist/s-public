@@ -1,5 +1,5 @@
 ---
-title: geopolitics
+heading: geopolitics
 description: 地政学について
 draft: false
 ---

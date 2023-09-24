@@ -5,7 +5,7 @@ import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 
 export interface SearchItem {
-  title: string;
+  heading: string;
   description: string;
   data: MarkdownFrontmatter;
 }
@@ -111,7 +111,7 @@ export default function SearchBar({ searchList }: Props) {
         {searchResults?.map(({ item, refIndex }) => (
           <PostCard
             href={`/summary/${slugify(item.data)}`}
-            title={item.data.title}
+            title={item.data.heading}
             description={item.data.description}
             key={`${refIndex}-${slugify(item.data)}`}
           />

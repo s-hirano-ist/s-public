@@ -1,5 +1,5 @@
 ---
-title: management
+heading: management
 description: マネジメントについて
 draft: true
 ---

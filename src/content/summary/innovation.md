@@ -1,5 +1,5 @@
 ---
-title: innovation
+heading: innovation
 description: イノベーションについて
 draft: true
 ---
