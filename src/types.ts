@@ -1,11 +1,11 @@
-export interface Site {
+export type Site = {
   website: string;
   author: string;
   description: string;
   title: string;
   ogImage: string;
   postPerPage: number;
-}
+};
 
 export type SocialObjects = {
   name: SocialMedia;

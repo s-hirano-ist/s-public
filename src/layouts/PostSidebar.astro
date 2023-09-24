@@ -2,9 +2,9 @@
 import { markdownToToc } from "@utils/markdownToHtml";
 import sanitizeHtml from "sanitize-html";
 
-export interface Props {
+export type Props = {
   post: string;
-}
+};
 
 const { post } = Astro.props;
 

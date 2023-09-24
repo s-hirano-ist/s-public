@@ -5,10 +5,10 @@ import { SITE } from "@config";
 
 export type ContentsType = "summary" | "news" | "search";
 
-export interface Props {
+export type Props = {
   activeNav?: ContentsType;
   isPortfolioPage?: boolean;
-}
+};
 
 const { activeNav, isPortfolioPage = false } = Astro.props;
 ---

@@ -2,9 +2,9 @@
 import defaultOgImage from "@assets/defaultOgImage.jpg";
 import { getOgpData } from "@utils/getOgpData";
 import { Image } from "astro:assets";
-export interface Props {
+export type Props = {
   url: string;
-}
+};
 const { url } = Astro.props;
 
 const ogp = await getOgpData(url);

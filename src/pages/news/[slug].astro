@@ -3,9 +3,9 @@ import LinkDetail from "@layouts/LinkDetail.astro";
 import slugify from "@utils/slugify";
 import { type CollectionEntry, getCollection } from "astro:content";
 
-export interface Props {
+export type Props = {
   post: CollectionEntry<"news">;
-}
+};
 
 export async function getStaticPaths() {
   const posts = await getCollection("news");
