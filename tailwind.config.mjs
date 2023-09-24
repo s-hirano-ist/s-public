@@ -24,6 +24,7 @@ export default {
         fill: withOpacity("--color-fill"),
         accent: withOpacity("--color-accent"),
         inverted: withOpacity("--color-text-base"),
+        gray: withOpacity("--color-border"),
       },
     },
     outlineColor: {
