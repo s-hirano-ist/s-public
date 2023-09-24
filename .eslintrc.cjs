@@ -70,7 +70,7 @@ module.exports = {
         extraFileExtensions: [".astro"],
       },
       rules: {
-        // "astro/no-set-html-directive": "error", // MEMO: do not use `<Fragment set:html={html} />` due to XSS
+        // "astro/no-set-html-directive": "error", // do not use `<Fragment set:html={html} />` due to XSS
       },
     },
     {

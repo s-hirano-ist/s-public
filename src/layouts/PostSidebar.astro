@@ -1,5 +1,6 @@
 ---
 import { markdownToToc } from "@utils/markdownToHtml";
+import sanitizeHtml from "sanitize-html";
 
 export interface Props {
   post: string;
@@ -10,4 +11,4 @@ const { post } = Astro.props;
 const content = await markdownToToc(post);
 ---
 
-<Fragment set:html={content} />
+<Fragment set:html={sanitizeHtml(content)} />

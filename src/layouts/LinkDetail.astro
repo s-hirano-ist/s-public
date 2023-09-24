@@ -5,6 +5,7 @@ import LinkCard from "@components/LinkCard.astro";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import type { CollectionEntry } from "astro:content";
+import sanitizeHtml from "sanitize-html";
 
 export interface Props {
   post: CollectionEntry<"news">;
@@ -24,7 +25,7 @@ const ogUrl = new URL(`${title}.png`, Astro.url.origin).href;
           return (
             <div class="overflow-hidden rounded py-1 shadow-lg sm:px-4">
               <h2 class="text-xl">{d.title}</h2>
-              <Fragment set:html={d.quote} />
+              <Fragment set:html={sanitizeHtml(d.quote ?? "")} />
               <LinkCard url={d.url} />
             </div>
           );
