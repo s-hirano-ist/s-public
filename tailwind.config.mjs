@@ -12,9 +12,6 @@ function withOpacity(variableName) {
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   theme: {
-    screens: {
-      sm: "640px",
-    },
     textColor: {
       skin: {
         base: withOpacity("--color-text-base"),
@@ -27,8 +24,6 @@ export default {
         fill: withOpacity("--color-fill"),
         accent: withOpacity("--color-accent"),
         inverted: withOpacity("--color-text-base"),
-        card: withOpacity("--color-card"),
-        "card-muted": withOpacity("--color-card-muted"),
       },
     },
     outlineColor: {

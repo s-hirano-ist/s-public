@@ -12,10 +12,16 @@ const { href, className, ariaLabel, title } = Astro.props;
 <a
   href={href}
   tabindex={"0"}
-  class={`group inline-block ${className}`}
+  class={`focus-outline group inline-block p-1 hover:fill-skin-accent ${className}`}
   aria-label={ariaLabel}
   title={title}
   aria-disabled={false}
 >
   <slot />
 </a>
+
+<style>
+  svg {
+    @apply h-6 w-6;
+  }
+</style>
