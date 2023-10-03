@@ -115,6 +115,15 @@
       "title": "空の配列に対する Max は何を返すのか?",
       "quote": "int の初期値は`0`、string の初期値は`[]`, bool の初期値は`true`。<br /> どれも、その値をかけても値がかわらないという共通点がある。",
       "url": "https://nowokay.hatenablog.com/entry/2023/06/05/175851"
+    },
+    {
+      "title": "Atama Input機構",
+      "url": "https://k-tai.watch.impress.co.jp/docs/news/1535747.html"
+    },
+    {
+      "title": "新サービスはドメインを取得してからにしよう",
+      "quote": "ドメイン名が社名だと売却とかしたときにカオスになるからそこも注意!",
+      "url": "https://www.itmedia.co.jp/news/articles/2310/02/news142.html"
     }
   ]
 }
