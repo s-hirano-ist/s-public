@@ -14,8 +14,7 @@ export const OgImage = ({ description }: Props) => {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-      }}
-    >
+      }}>
       <div
         style={{
           border: "4px solid #000",
@@ -26,8 +25,7 @@ export const OgImage = ({ description }: Props) => {
           margin: "2rem",
           width: "90%",
           height: "80%",
-        }}
-      >
+        }}>
         <div
           style={{
             display: "flex",
@@ -35,16 +33,14 @@ export const OgImage = ({ description }: Props) => {
             justifyContent: "space-between",
             margin: "16px",
             width: "100%",
-          }}
-        >
+          }}>
           <p
             style={{
               marginTop: "100px",
               fontSize: 64,
               fontWeight: "bold",
               overflow: "hidden",
-            }}
-          >
+            }}>
             {description}
           </p>
           <div
@@ -55,8 +51,7 @@ export const OgImage = ({ description }: Props) => {
               marginRight: "32px",
               marginLeft: "32px",
               fontSize: 24,
-            }}
-          >
+            }}>
             <span style={{ overflow: "hidden" }}>{`@ ${SITE.author}`}</span>
             <span style={{ overflow: "hidden" }}>{SITE.title}</span>
           </div>
