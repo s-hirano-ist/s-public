@@ -124,6 +124,11 @@
       "title": "新サービスはドメインを取得してからにしよう",
       "quote": "ドメイン名が社名だと売却とかしたときにカオスになるからそこも注意!",
       "url": "https://www.itmedia.co.jp/news/articles/2310/02/news142.html"
+    },
+    {
+      "title": "ヒューマンエラーが単なる人間による誤りではなく、不適切なデザインに起因",
+      "quote": "フィッツの法則によって、操作しやすいUXをつくることができる",
+      "url": "https://u-site.jp/alertbox/fitts-law"
     }
   ]
 }
