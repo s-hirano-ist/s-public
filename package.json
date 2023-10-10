@@ -19,7 +19,7 @@
     "@astrojs/check": "^0.2.0",
     "@astrojs/partytown": "^2.0.1",
     "@astrojs/vercel": "^5.0.2",
-    "astro": "^3.2.3",
+    "astro": "^3.2.4",
     "fuse.js": "^6.6.2",
     "github-slugger": "^2.0.0",
     "jsdom": "^22.1.0",
