@@ -129,6 +129,18 @@
       "title": "ヒューマンエラーが単なる人間による誤りではなく、不適切なデザインに起因",
       "quote": "フィッツの法則によって、操作しやすいUXをつくることができる",
       "url": "https://u-site.jp/alertbox/fitts-law"
+    },
+    {
+      "title": "PATCHだけfetchの仕様が違う問題",
+      "url": "https://zenn.dev/neet/articles/de54e08de01c22"
+    },
+    {
+      "title": "アダルト動画とYoutubeとの戦い",
+      "url": "https://www.gizmodo.jp/2023/10/youtube-porn.html"
+    },
+    {
+      "title": "AI Emojis",
+      "url": "https://emojis.sh/"
     }
   ]
 }
