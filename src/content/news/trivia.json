@@ -139,8 +139,20 @@
       "url": "https://www.gizmodo.jp/2023/10/youtube-porn.html"
     },
     {
-      "title": "AI Emojis",
-      "url": "https://emojis.sh/"
+      "title": "このご時世に新鉱石の発見",
+      "url": "https://www.itmedia.co.jp/news/articles/2310/13/news085.html"
+    },
+    {
+      "title": "GoogleからAppleへの賄賂 for デフォルト検索エンジン",
+      "url": "https://gigazine.net/news/20231012-google-pays-apple-betweeen-18billion-to-20billion-a-year/"
+    },
+    {
+      "title": "MD5等の暗号はGPUの進化ですぐに解読される",
+      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00989/101100129/"
+    },
+    {
+      "title": "GoogleへのDDoS攻撃のすごさ",
+      "url": "https://cloud.google.com/blog/products/identity-security/google-cloud-mitigated-largest-ddos-attack-peaking-above-398-million-rps/?hl=en"
     }
   ]
 }
