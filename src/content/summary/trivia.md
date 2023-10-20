@@ -4,6 +4,12 @@ description: 雑学
 draft: true
 ---
 
+## おもしろネーミング
+
+- YAML: Yaml ain't markup language
+- BING: Bing is not Google
+- GNU: GNU's not Unix
+
 ## 決断
 
 情報が少なすぎるのは問題であるが、情報が多かったり、検討を重ねすぎても良い決断ができるとは限らない。
