@@ -66,6 +66,13 @@ const socialImageURL = new URL(
       rel="stylesheet"
     />
     <script>
+      declare global {
+        interface Window {
+          va: () => void;
+          vaq: Array<unknown>;
+        }
+      }
+
       window.va =
         window.va ||
         function () {
@@ -93,7 +100,7 @@ const socialImageURL = new URL(
       }
 
       function reflectPreference() {
-        document.firstElementChild.setAttribute("data-theme", themeValue);
+        document.firstElementChild?.setAttribute("data-theme", themeValue);
 
         document
           .querySelector("#theme-btn")

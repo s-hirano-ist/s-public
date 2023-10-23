@@ -49,21 +49,31 @@ const ogUrl = new URL(`${heading}.png`, Astro.url.origin).href;
 
     function openNav() {
       // set the width of the opened navigation bar
-      document.getElementById("post-side-nav").style.width = SIDEBAR_WIDTH;
-      if (SLIDE_MAIN_CONTENTS)
-        document.getElementById("post-main-contents").style.marginLeft =
-          SIDEBAR_WIDTH;
+      const postSideNav = document.getElementById("post-side-nav");
+      if (!postSideNav) throw new Error("post-side-nav not found");
+      postSideNav.style.width = SIDEBAR_WIDTH;
+      if (SLIDE_MAIN_CONTENTS) {
+        const postMainContents = document.getElementById("post-main-contents");
+        if (!postMainContents) throw new Error("post-main-contents not found");
+        postMainContents.style.marginLeft = SIDEBAR_WIDTH;
+      }
       localStorage.setItem("sidebarOpen", "true");
     }
     function closeNav() {
       // set the width of the closed navigation bar
-      document.getElementById("post-side-nav").style.width = "0";
-      if (SLIDE_MAIN_CONTENTS)
-        document.getElementById("post-main-contents").style.marginLeft = "0";
+      const postSideNav = document.getElementById("post-side-nav");
+      if (!postSideNav) throw new Error("post-side-nav not found");
+      postSideNav.style.width = "0";
+
+      if (SLIDE_MAIN_CONTENTS) {
+        const postMainContents = document.getElementById("post-main-contents");
+        if (!postMainContents) throw new Error("post-main-contents not found");
+        postMainContents.style.marginLeft = "0";
+      }
       localStorage.setItem("sidebarOpen", "false");
     }
 
-    const closeWithClickOutSide = e => {
+    const closeWithClickOutSide = (e: any) => {
       if (e.target.id === "sidebar-button") return;
 
       // if outside of menu
@@ -78,17 +88,17 @@ const ogUrl = new URL(`${heading}.png`, Astro.url.origin).href;
     localStorage.setItem("sidebarOpen", "false");
 
     const mainClickArea = document.querySelector("div.main-click-area");
-    mainClickArea.addEventListener("click", e => {
+    mainClickArea?.addEventListener("click", e => {
       closeWithClickOutSide(e);
     });
 
     const openButton = document.querySelector("h1.open-sidebar-button");
-    openButton.addEventListener("click", () => {
+    openButton?.addEventListener("click", () => {
       openNav();
     });
 
     const closeButton = document.querySelector("span.close-sidebar-button");
-    closeButton.addEventListener("click", () => {
+    closeButton?.addEventListener("click", () => {
       closeNav();
     });
   </script>

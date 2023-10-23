@@ -29,7 +29,7 @@ https://pagespeed.web.dev/
 
 ```bash
 git clone https://github.com/s-hirano-ist/blog.git
-yarn
+pnpm i
 ```
 
 ### Vercel deployment
@@ -47,14 +47,14 @@ All commands are run from the root of the project, from a terminal:
 
 | Command        | Action                                                                                                                           |
 | :------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `yarn`         | Installs dependencies                                                                                                            |
-| `yarn dev`     | Starts local dev server at `localhost:4321`                                                                                      |
-| `yarn build`   | Build your production site to `./.vercel/output/static`                                                                          |
-| `yarn preview` | Preview your build locally, before deploying                                                                                     |
-| `yarn fmt`     | Check code format with Prettier                                                                                                  |
-| `yarn fmt:fix` | Format codes with Prettier                                                                                                       |
-| `yarn sync`    | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `yarn lint`    | Lint with ESLint                                                                                                                 |
+| `pnpm i`       | Installs dependencies                                                                                                            |
+| `pnpm dev`     | Starts local dev server at `localhost:4321`                                                                                      |
+| `pnpm build`   | Build your production site to `./.vercel/output/static`                                                                          |
+| `pnpm preview` | Preview your build locally, before deploying                                                                                     |
+| `pnpm fmt`     | Check code format with Prettier                                                                                                  |
+| `pnpm fmt:fix` | Format codes with Prettier                                                                                                       |
+| `pnpm sync`    | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
+| `pnpm lint`    | Lint with ESLint                                                                                                                 |
 
 ### 🪝 Tags
 

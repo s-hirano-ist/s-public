@@ -33,7 +33,8 @@
     "Rehype",
     "shiki",
     "tabler",
-    "Tablers"
+    "Tablers",
+    "webp"
   ],
   "eslint.validate": [
     "javascript",
