@@ -5,10 +5,6 @@
 # dependencies
 node_modules/
 
-# logs
-yarn-debug.log*
-yarn-error.log*
-
 # macOS-specific files
 .DS_Store
 
