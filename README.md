@@ -41,6 +41,17 @@ Add github integration for auto-deployment on vercel.
 Access [Google Search Console](https://search.google.com/search-console) and publish "google-site-verification" tag.
 Access [Onamae.com](https://www.onamae.com/) to add DNS TXT record.
 
+## Favicon
+
+- Text: S
+- Background: Circle
+- Font Family: Babylonica
+- Font Variant: Regular 400 Normal
+- Font Size: 110
+- Font Color: #77A2C0
+
+> https://favicon.io/favicon-generator/
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
