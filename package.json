@@ -2,7 +2,9 @@
   "name": "blog",
   "version": "2.3.0",
   "type": "module",
-  "private": true,
+  "description": "blog",
+  "author": "Soraki Hirano",
+  "packageManager": "pnpm@8.9.2",
   "scripts": {
     "dev": "astro check --watch & astro dev",
     "build": "astro check & astro build",
@@ -19,7 +21,6 @@
     "*": "pnpm fmt",
     "src/**/*.{js, jsx, ts, tsx}": "pnpm lint"
   },
-  "packageManager": "pnpm@8.9.2",
   "dependencies": {
     "@astrojs/check": "^0.2.1",
     "@astrojs/partytown": "^2.0.1",
