@@ -42,7 +42,7 @@
     "unified": "^11.0.3"
   },
   "devDependencies": {
-    "@astrojs/react": "^3.0.3",
+    "@astrojs/react": "^3.0.4",
     "@astrojs/sitemap": "^3.0.2",
     "@astrojs/tailwind": "^5.0.2",
     "@tailwindcss/typography": "^0.5.10",
