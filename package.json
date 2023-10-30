@@ -24,7 +24,7 @@
   "dependencies": {
     "@astrojs/check": "^0.2.1",
     "@astrojs/partytown": "^2.0.1",
-    "@astrojs/vercel": "^5.0.2",
+    "@astrojs/vercel": "^5.1.0",
     "astro": "^3.3.2",
     "fuse.js": "^6.6.2",
     "github-slugger": "^2.0.0",
