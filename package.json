@@ -20,7 +20,7 @@
   "lint-staged": {
     "*": "pnpm fmt",
     "src/**/*.{js, jsx, ts, tsx}": "pnpm lint",
-    "src/assets/photo/**/*.jpg": "python3 script/generate_photo_path.py"
+    "src/**/*": "python3 script/generate_photo_path.py"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.0",
