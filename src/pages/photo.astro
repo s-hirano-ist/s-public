@@ -1,0 +1,19 @@
+---
+import { CONTENTS } from "@content/_photo/data";
+import PortfolioLayout from "@layouts/PortfolioLayout.astro";
+import { Image } from "astro:assets";
+---
+
+<PortfolioLayout title="sola-apochromat-lens" subTitle="撮影の議事録">
+  <div class="grid w-full grid-cols-3 gap-4">
+    {
+      CONTENTS.map(src => {
+        return (
+          <div class="aspect-square">
+            <Image class="aspect-square object-contain" src={src} alt={""} />
+          </div>
+        );
+      })
+    }
+  </div>
+</PortfolioLayout>

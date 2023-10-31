@@ -1,49 +1,27 @@
 ---
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
-import { CONTENTS } from "@content/diy/data";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
+import { CONTENTS } from "@content/_diy/data";
+import PortfolioLayout from "@layouts/PortfolioLayout.astro";
 import SwiperContainer from "@layouts/SwiperContainer.astro";
 ---
 
-<Layout>
-  <Header isPortfolioPage />
-  <Main>
-    <section id="hero">
-      <h1>sola-tannnin-diy</h1>
-      <p>お金をだせば「いいもの」が手に入るのが当たり前の時代</p>
-      <p>#DIY #レザークラフト #木工大工 #電子工作</p>
-    </section>
-    <section>
-      <div class="grid w-full grid-cols-3 gap-4">
-        {
-          CONTENTS.map(content => {
-            return (
-              <div class="aspect-square">
-                <p>{content.name}</p>
-                <SwiperContainer content={content} />
-              </div>
-            );
-          })
-        }
-      </div>
-    </section>
-  </Main>
-  <Footer />
-</Layout>
+<PortfolioLayout
+  title="sola-tannnin-diy"
+  subTitle="お金をだせば「いいもの」が手に入るのが当たり前の時代"
+  subSubTitle="#DIY #レザークラフト #木工大工 #電子工作">
+  <div class="grid w-full grid-cols-3 gap-4">
+    {
+      CONTENTS.map(content => {
+        return (
+          <div class="aspect-square">
+            <p>{content.name}</p>
+            <SwiperContainer content={content} />
+          </div>
+        );
+      })
+    }
+  </div>
+</PortfolioLayout>
 
-<style>
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero p {
-    @apply my-2;
-  }
-</style>
 <script
   src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
 ></script>

@@ -32,6 +32,14 @@ git clone https://github.com/s-hirano-ist/blog.git
 pnpm i
 ```
 
+### Adding photos
+
+Run the following command if you added photos to `./src/assets/photo`.
+
+```bash
+python3 script/generate_photo_path.py
+```
+
 ### Vercel deployment
 
 Add github integration for auto-deployment on vercel.
