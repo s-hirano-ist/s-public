@@ -1,4 +1,3 @@
-import partytown from "@astrojs/partytown";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
@@ -21,12 +20,6 @@ export default defineConfig({
       include: ["**/react/*"],
     }),
     sitemap(),
-    partytown({
-      // Adds dataLayer.push as a forwarding-event.
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
   ],
   markdown: {
     shikiConfig: {
