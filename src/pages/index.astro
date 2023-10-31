@@ -7,7 +7,6 @@ import Main from "@layouts/Main.astro";
 import { Image } from "astro:assets";
 ---
 
-<!-- TODO: link to DIY page -->
 <Layout>
   <Header title="Portfolio" />
   <Main>
@@ -22,6 +21,72 @@ import { Image } from "astro:assets";
         He is currently working toward an M.E. degree at the Graduate School of
         Information Science and Technology at Osaka University.
       </p>
+      <a
+        href="/portfolio"
+        aria-label=""
+        class="font-bold hover:text-skin-accent">
+        click here for more...
+      </a>
+    </section>
+    <section class="mx-auto max-w-screen-xl px-4 py-8">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <a href="/photo" class="hover:text-skin-accent">
+          <div
+            class="flex flex-col justify-between rounded border p-4 shadow-sm">
+            <div
+              class="flex h-16 w-16 items-center justify-center rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-camera"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2"
+                ></path>
+                <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+              </svg>
+            </div>
+            <h2 class="mb-2 font-bold">sola-apochromat-lens</h2>
+            <p>撮影の議事録 from 2020年</p>
+          </div>
+        </a>
+        <a href="/diy" class="hover:text-skin-accent">
+          <div
+            class="flex flex-col justify-between rounded border p-4 shadow-sm">
+            <div
+              class="flex h-16 w-16 items-center justify-center rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-axe"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M13 9l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385"
+                ></path>
+                <path
+                  d="M6.66 15.66l-3.32 -3.32a1.25 1.25 0 0 1 .42 -2.044l3.24 -1.296l6 -6l3 3l-6 6l-1.296 3.24a1.25 1.25 0 0 1 -2.044 .42z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="mb-2 font-bold">sola-tannnin-diy</h2>
+            <p>DIYの議事録 from 2020年</p>
+          </div>
+        </a>
+      </div>
     </section>
   </Main>
   <Footer />
