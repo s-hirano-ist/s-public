@@ -129,14 +129,20 @@ const socialImageURL = new URL(
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=G-E84VM45L0L"></script>
-    <script type="text/partytown">
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-E84VM45L0L"
+    ></script>
+    <script>
+      declare global {
+        interface Window {
+          va: () => void;
+          vaq: Array<unknown>;
+          dataLayer: Array<unknown>;
+        }
+      }
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
+      function gtag(...args: any[]) {
         // eslint-disable-next-line no-undef
-        dataLayer.push(arguments);
+        window.dataLayer.push(args);
       }
       gtag("js", new Date());
       gtag("config", "G-E84VM45L0L");

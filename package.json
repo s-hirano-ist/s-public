@@ -24,7 +24,6 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.0",
-    "@astrojs/partytown": "^2.0.1",
     "@astrojs/vercel": "^5.1.0",
     "astro": "^3.4.0",
     "fuse.js": "^6.6.2",
