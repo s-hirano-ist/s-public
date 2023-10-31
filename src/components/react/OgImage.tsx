@@ -7,7 +7,7 @@ export const OgImage = ({ description }: Props) => {
   return (
     <div
       style={{
-        background: "#fefbfb",
+        background: "#77a2c0",
         width: "100%",
         height: "100%",
         display: "flex",
@@ -39,6 +39,7 @@ export const OgImage = ({ description }: Props) => {
               marginTop: "100px",
               fontSize: 64,
               fontWeight: "bold",
+              marginLeft: "32px",
               overflow: "hidden",
             }}>
             {description}
