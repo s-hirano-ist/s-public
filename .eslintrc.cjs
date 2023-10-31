@@ -57,7 +57,7 @@ module.exports = {
         caughtErrorsIgnorePattern: "^_",
       },
     ],
-    "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug with astro files
+    "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug with <Fragment />
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "tailwindcss/no-custom-classname": "off",
     "no-restricted-imports": ["error", { patterns: ["./", "../"] }],

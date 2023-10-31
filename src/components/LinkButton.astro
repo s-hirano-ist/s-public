@@ -1,12 +1,13 @@
 ---
 export type Props = {
   href: string;
+  target?: astroHTML.JSX.HTMLAttributeAnchorTarget;
   className?: string;
   ariaLabel?: string;
   title?: string;
 };
 
-const { href, className, ariaLabel, title } = Astro.props;
+const { href, target = "_self", className, ariaLabel, title } = Astro.props;
 ---
 
 <a
@@ -15,7 +16,8 @@ const { href, className, ariaLabel, title } = Astro.props;
   class={`focus-outline group inline-block p-1 hover:fill-skin-accent ${className}`}
   aria-label={ariaLabel}
   title={title}
-  aria-disabled={false}>
+  aria-disabled={false}
+  target={target}>
   <slot />
 </a>
 

@@ -5,18 +5,19 @@ import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 
 export type Props = {
-  title: string;
+  headerTitle: string;
+  title?: string;
   subTitle?: string;
   subSubTitle?: string;
 };
-const { title, subTitle, subSubTitle } = Astro.props;
+const { headerTitle, title, subTitle, subSubTitle } = Astro.props;
 ---
 
 <Layout>
-  <Header isPortfolioPage />
+  <Header title={headerTitle} />
   <Main>
     <section id="hero">
-      <h1>{title}</h1>
+      {title && <h1>{title}</h1>}
       {subTitle && <p>{subTitle}</p>}
       {subSubTitle && <p>{subSubTitle}</p>}
     </section>
@@ -29,7 +30,7 @@ const { title, subTitle, subSubTitle } = Astro.props;
 
 <style>
   #hero {
-    @apply pb-6 pt-8;
+    @apply pb-8;
   }
   #hero h1 {
     @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;

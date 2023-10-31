@@ -7,17 +7,17 @@ export type ContentsType = "summary" | "news" | "search";
 
 export type Props = {
   activeNav?: ContentsType;
-  isPortfolioPage?: boolean;
+  title?: string;
 };
 
-const { activeNav, isPortfolioPage = false } = Astro.props;
+const { activeNav, title = SITE.title } = Astro.props;
 ---
 
 <header>
   <div class="mx-auto flex h-16 max-w-5xl items-center">
     <div class="relative flex w-full justify-between p-4">
       <a href="/" class="static mt-2 w-48 text-2xl font-semibold">
-        {isPortfolioPage ? "Portfolio" : SITE.title}
+        {title}
       </a>
       <nav id="nav-menu">
         <ul id="menu-items" class="mt-2 flex space-x-2">
