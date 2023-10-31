@@ -3,8 +3,7 @@ import os
 DIR_PATH = "@assets/photo"
 
 
-# TODO: add types for python 3.10++
-def generate_row(file_name, file_name_no_ext):
+def generate_row(file_name: str, file_name_no_ext: str) -> str:
     return f'import {file_name_no_ext} from "{DIR_PATH}/{file_name}";\n'
 
 
