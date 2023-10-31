@@ -1,0 +1,40 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+
+export type Props = {
+  title: string;
+  subTitle?: string;
+  subSubTitle?: string;
+};
+const { title, subTitle, subSubTitle } = Astro.props;
+---
+
+<Layout>
+  <Header isPortfolioPage />
+  <Main>
+    <section id="hero">
+      <h1>{title}</h1>
+      {subTitle && <p>{subTitle}</p>}
+      {subSubTitle && <p>{subSubTitle}</p>}
+    </section>
+    <section>
+      <slot />
+    </section>
+  </Main>
+  <Footer />
+</Layout>
+
+<style>
+  #hero {
+    @apply pb-6 pt-8;
+  }
+  #hero h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+  #hero p {
+    @apply my-2;
+  }
+</style>

@@ -1,52 +1,19 @@
 ---
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import { CONTENTS } from "@content/_photo/data";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
+import PortfolioLayout from "@layouts/PortfolioLayout.astro";
 import { Image } from "astro:assets";
 ---
 
-<Layout>
-  <Header isPortfolioPage />
-  <Main>
-    <section id="hero">
-      <h1>sola-TODO:</h1>
-      <p>TODO:</p>
-      <p>TODO:</p>
-    </section>
-    <section>
-      <div class="grid w-full grid-cols-3 gap-4">
-        {
-          CONTENTS.map(src => {
-            return (
-              <div class="aspect-square">
-                <Image
-                  class="aspect-square object-contain"
-                  src={src}
-                  alt={""}
-                />
-              </div>
-            );
-          })
-        }
-      </div>
-    </section>
-  </Main>
-  <Footer />
-</Layout>
-
-<style>
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero p {
-    @apply my-2;
-  }
-</style>
-<script
-  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
-></script>
+<PortfolioLayout title="sola-apochromat-lens" subTitle="撮影の議事録">
+  <div class="grid w-full grid-cols-3 gap-4">
+    {
+      CONTENTS.map(src => {
+        return (
+          <div class="aspect-square">
+            <Image class="aspect-square object-contain" src={src} alt={""} />
+          </div>
+        );
+      })
+    }
+  </div>
+</PortfolioLayout>
