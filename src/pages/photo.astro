@@ -4,7 +4,10 @@ import PortfolioLayout from "@layouts/PortfolioLayout.astro";
 import { Image } from "astro:assets";
 ---
 
-<PortfolioLayout title="sola-apochromat-lens" subTitle="撮影の議事録">
+<PortfolioLayout
+  headerTitle="PHOTOGRAPH"
+  title="sola-apochromat-lens"
+  subTitle="撮影の議事録">
   <div class="grid w-full grid-cols-3 gap-4">
     {
       CONTENTS.map(src => {
