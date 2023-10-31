@@ -1,28 +1,31 @@
 ---
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import { CONTENTS } from "@content/_diy/data";
+import { CONTENTS } from "@content/_photo/data";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
-import SwiperContainer from "@layouts/SwiperContainer.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
   <Header isPortfolioPage />
   <Main>
     <section id="hero">
-      <h1>sola-tannnin-diy</h1>
-      <p>お金をだせば「いいもの」が手に入るのが当たり前の時代</p>
-      <p>#DIY #レザークラフト #木工大工 #電子工作</p>
+      <h1>sola-TODO:</h1>
+      <p>TODO:</p>
+      <p>TODO:</p>
     </section>
     <section>
       <div class="grid w-full grid-cols-3 gap-4">
         {
-          CONTENTS.map(content => {
+          CONTENTS.map(src => {
             return (
               <div class="aspect-square">
-                <p>{content.name}</p>
-                <SwiperContainer content={content} />
+                <Image
+                  class="aspect-square object-contain"
+                  src={src}
+                  alt={""}
+                />
               </div>
             );
           })

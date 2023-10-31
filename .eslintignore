@@ -3,3 +3,4 @@
 node_modules
 public
 env.d.ts
+src/content/photo/data.ts
