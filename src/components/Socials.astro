@@ -56,7 +56,7 @@ export const socialLinks: SocialObjects = [
   {
     socialLinks.map(social => {
       return (
-        <LinkButton href={social.href} title={social.linkTitle}>
+        <LinkButton href={social.href} target="_blank" title={social.linkTitle}>
           <Image src={social.linkIcon} alt="" />
         </LinkButton>
       );
