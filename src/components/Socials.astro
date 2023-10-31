@@ -1,27 +1,65 @@
 ---
-import socialIcons from "@assets/socialIcons";
+import GithubIcon from "@assets/icons/github.svg";
+// import MailIcon from "@assets/icons/mail.svg";
 import LinkButton from "@components/LinkButton.astro";
-import { SOCIALS } from "@config";
+import { SITE } from "@config";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
-export type Props = {
-  centered?: boolean;
-};
+export const LOCALE = ["ja"];
 
-const { centered = false } = Astro.props;
+type SocialMedia = "Github" /*| "GitLab" | "Mail" | "Instagram" | "Twitter"*/;
+
+type SocialObjects = {
+  name: SocialMedia;
+  href: string;
+  linkTitle: string;
+  linkIcon: ImageMetadata;
+}[];
+
+export const socialLinks: SocialObjects = [
+  {
+    name: "Github",
+    href: "https://github.com/s-hirano-ist",
+    linkTitle: ` ${SITE.title} on Github`,
+    linkIcon: GithubIcon,
+  },
+  // {
+  //   name: "GitLab",
+  //   href: "TODO: ",
+  //   linkTitle: ` ${SITE.title} on Gitlab`,
+  //   linkIcon: GitlabIcon,
+  // },
+  // {
+  //   name: "Twitter",
+  //   href: "TODO: ",
+  //   linkTitle: ` ${SITE.title} on Twitter (X)`,
+  //   linkIcon: TwitterIcon,
+  // },
+  // {
+  //   name: "Instagram",
+  //   href: "TODO: ",
+  //   linkTitle: ` ${SITE.title} on Instagram`,
+  //   linkIcon: InstagramIcon,
+  // },
+  // {
+  //   name: "Mail",
+  //   href: "TODO: use GMO e-mail address",
+  //   linkTitle: `Send an email to ${SITE.title}`,
+  //   linkIcon: MailIcon,
+  // },
+];
 ---
 
-<div class={`social-icons ${centered ? "flex" : ""}`}>
+<div
+  class="mx-1 mt-2 flex flex-wrap justify-center gap-1 hover:rotate-12 hover:fill-skin-accent sm:m-1">
   {
-    SOCIALS.filter(social => social.active).map(social => (
-      <LinkButton href={social.href} title={social.linkTitle}>
-        <Fragment set:html={socialIcons[social.name]} />
-      </LinkButton>
-    ))
+    socialLinks.map(social => {
+      return (
+        <LinkButton href={social.href} title={social.linkTitle}>
+          <Image src={social.linkIcon} alt="" />
+        </LinkButton>
+      );
+    })
   }
 </div>
-
-<style>
-  .social-icons {
-    @apply mx-1 mt-2 flex-wrap justify-center gap-1 hover:rotate-12 hover:fill-skin-accent sm:m-1;
-  }
-</style>
