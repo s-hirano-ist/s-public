@@ -1,0 +1,58 @@
+---
+import PortfolioLayout from "@layouts/PortfolioLayout.astro";
+import { Image } from "astro:assets";
+import appStoreImage from "@assets/dplan/app_store.png";
+import promotionImage from "@assets/dplan/promotion.png";
+import appReviewImage1 from "@assets/dplan/app_review_1.jpeg";
+import appReviewImage2 from "@assets/dplan/app_review_2.jpeg";
+import appReviewImage3 from "@assets/dplan/app_review_3.jpeg";
+import appReviewImage4 from "@assets/dplan/app_review_4.jpeg";
+import appReviewImage5 from "@assets/dplan/app_review_5.jpeg";
+import howToImage1 from "@assets/dplan/how_to_1.png";
+import howToImage2 from "@assets/dplan/how_to_2.png";
+import howToImage3 from "@assets/dplan/how_to_3.png";
+import howToImage4 from "@assets/dplan/how_to_4.png";
+---
+
+<PortfolioLayout
+  headerTitle="D-PLAN"
+  title="d-plan"
+  subTitle="2018年頃にリリースしたiOSアプリの記録">
+  <div class="content">
+    <p>独学で個人開発した旅行計画アプリとなります。</p>
+    <p>
+      2019年ごろまで実際にiOSアプリストアにリリースしていたものの、収益化に失敗したため、現在は取り下げているアプリとなります。
+    </p>
+    <p>
+      プログラミング初心者の時に製作したものであるため、技術スタックの選定やコードは初心者ライクなところが多々あります。あらかじめご了承ください。
+    </p>
+    <p>
+      今後、必要に応じてリファクタリング、ライブラリのアップデート、技術スタックの再選定等を行い、リエンジニアリングします。
+    </p>
+    <Image src={appStoreImage} alt="" />
+    <Image src={promotionImage} alt="" />
+
+    <Image src={howToImage1} alt="" />
+    <Image src={howToImage2} alt="" />
+    <Image src={howToImage3} alt="" />
+    <Image src={howToImage4} alt="" />
+
+    <Image src={appReviewImage1} alt="" />
+    <Image src={appReviewImage2} alt="" />
+    <Image src={appReviewImage3} alt="" />
+    <Image src={appReviewImage4} alt="" />
+    <Image src={appReviewImage5} alt="" />
+  </div>
+</PortfolioLayout>
+
+<style>
+  .content {
+    @apply pb-6 pt-8;
+  }
+  .content h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+  .content p {
+    @apply my-2;
+  }
+</style>
