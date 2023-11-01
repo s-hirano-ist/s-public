@@ -7,11 +7,15 @@ import PortfolioLayout from "@layouts/PortfolioLayout.astro";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
-const IMAGE_DATA: { title: string; image: ImageMetadata }[] = [
-  { title: "Personal deployment", image: personalImage },
-  { title: "App deployment", image: appImage },
-  { title: "AWS deployment", image: awsImage },
-  { title: "Infra deployment", image: infraImage },
+const IMAGE_DATA: { title: string; image: ImageMetadata; alt: string }[] = [
+  {
+    title: "Personal deployment",
+    image: personalImage,
+    alt: "personal deployment tech stack",
+  },
+  { title: "Application", image: appImage, alt: "app tech stack" },
+  { title: "Amazon Web Service", image: awsImage, alt: "aws tech stack" },
+  { title: "Infrastructure", image: infraImage, alt: "infra tech stack" },
 ];
 ---
 
