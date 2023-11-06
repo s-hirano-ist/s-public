@@ -4,7 +4,7 @@
   "type": "module",
   "description": "blog",
   "author": "Soraki Hirano",
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@8.10.2",
   "scripts": {
     "dev": "astro check --watch & astro dev",
     "build": "astro check & astro build",
