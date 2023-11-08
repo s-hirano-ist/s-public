@@ -4,13 +4,12 @@ import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import PageLinkCard from "@components/PageLinkCard.astro";
 import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
 import { Image } from "astro:assets";
 ---
 
 <Layout>
-  <Header title="Portfolio" />
-  <Main>
+  <main class="background">
+    <Header title="Portfolio" />
     <section id="hero">
       <Image src={portfolioImage} alt="" class="w-full" />
       <h1>s-hirano-ist</h1>
@@ -22,14 +21,8 @@ import { Image } from "astro:assets";
         He is currently working toward an M.E. degree at the Graduate School of
         Information Science and Technology at Osaka University.
       </p>
-      <a
-        href="/portfolio"
-        aria-label=""
-        class="font-bold hover:text-skin-accent">
-        click here for more...
-      </a>
     </section>
-    <section class="mx-auto max-w-screen-xl px-4 py-8">
+    <section class="mx-auto px-4 py-8">
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <PageLinkCard
           href="/tech-stack"
@@ -126,18 +119,22 @@ import { Image } from "astro:assets";
         </PageLinkCard>
       </div>
     </section>
-  </Main>
-  <Footer />
+    <Footer />
+  </main>
 </Layout>
 
 <style>
+  .background {
+    @apply px-4;
+    background: url(/portfolioBgImage.webp);
+  }
   #hero {
     @apply pb-6 pt-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+    @apply my-4 inline-block text-xl font-bold text-skin-accent sm:my-8 sm:text-2xl;
   }
   #hero p {
-    @apply my-2;
+    @apply mb-2;
   }
 </style>
