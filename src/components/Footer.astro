@@ -3,9 +3,14 @@ import Hr from "@components/Hr.astro";
 import Socials from "@components/Socials.astro";
 
 const currentYear = new Date().getFullYear();
+
+export type Props = {
+  darkModeDisabled?: boolean;
+};
+const { darkModeDisabled = false } = Astro.props;
 ---
 
-<footer class="mt-auto">
+<footer class={`mt-auto ${darkModeDisabled && "text-skin-white"}`}>
   <Hr noPadding />
   <div class="footer-wrapper">
     <Socials />
