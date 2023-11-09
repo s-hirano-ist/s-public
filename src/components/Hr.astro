@@ -2,11 +2,19 @@
 export type Props = {
   noPadding?: boolean;
   ariaHidden?: boolean;
+  darkModeDisabled?: boolean;
 };
 
-const { noPadding = false, ariaHidden = true } = Astro.props;
+const {
+  noPadding = false,
+  ariaHidden = true,
+  darkModeDisabled = false,
+} = Astro.props;
 ---
 
 <div class={`mx-auto max-w-5xl ${noPadding ? "px-0" : "px-4"}`}>
-  <hr class="border-skin-line" aria-hidden={ariaHidden} />
+  <hr
+    class={`${darkModeDisabled ? "border-skin-white" : "border-skin-line"}`}
+    aria-hidden={ariaHidden}
+  />
 </div>

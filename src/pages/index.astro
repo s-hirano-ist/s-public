@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 
 <Layout>
   <main class="background">
-    <Header title="Portfolio" />
+    <Header title="Portfolio" darkModeDisabled />
     <section id="hero">
       <Image src={portfolioImage} alt="" class="w-full" />
       <h1>s-hirano-ist</h1>
@@ -119,7 +119,7 @@ import { Image } from "astro:assets";
         </PageLinkCard>
       </div>
     </section>
-    <Footer />
+    <Footer darkModeDisabled />
   </main>
 </Layout>
 
@@ -132,9 +132,9 @@ import { Image } from "astro:assets";
     @apply pb-6 pt-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-xl font-bold text-skin-accent sm:my-8 sm:text-2xl;
+    @apply my-4 inline-block text-xl font-bold text-skin-lightBlue sm:my-8 sm:text-2xl;
   }
   #hero p {
-    @apply mb-2;
+    @apply mb-2 text-skin-white;
   }
 </style>

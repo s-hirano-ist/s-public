@@ -17,6 +17,8 @@ export default {
         base: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
         inverted: withOpacity("--color-fill"),
+        white: "#FFFFFF",
+        lightBlue: "#77A2C0",
       },
     },
     backgroundColor: {
@@ -37,12 +39,14 @@ export default {
         line: withOpacity("--color-border"),
         fill: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
+        white: "#FFFFFF",
       },
     },
     fill: {
       skin: {
         base: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
+        white: "#FFFFFF",
       },
       transparent: "transparent",
     },
