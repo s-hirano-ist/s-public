@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^18.2.37
     version: 18.2.37
   '@types/sanitize-html':
-    specifier: ^2.9.3
-    version: 2.9.3
+    specifier: ^2.9.4
+    version: 2.9.4
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.9.1
     version: 6.9.1(@typescript-eslint/parser@6.9.1)(eslint@8.53.0)(typescript@5.2.2)
@@ -1200,8 +1200,8 @@ packages:
       csstype: 3.1.2
     dev: true
 
-  /@types/sanitize-html@2.9.3:
-    resolution: {integrity: sha512-1rsSdEJLV7utAG+Fms2uP+nSmmYmOhUUSSZvUz4wF2wlA0M5/A/gVgnpWZ7EKaPWsrrxWiSuNJqSBW8dh2isBA==}
+  /@types/sanitize-html@2.9.4:
+    resolution: {integrity: sha512-Ym4hjmAFxF/eux7nW2yDPAj2o9RYh0vP/9V5ECoHtgJ/O9nPGslUd20CMn6WatRMlFVfjMTg3lMcWq8YyO6QnA==}
     dependencies:
       htmlparser2: 8.0.2
     dev: true
