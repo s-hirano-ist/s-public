@@ -1,0 +1,38 @@
+---
+export type Props = {
+  data: { date: string; title: string; description: string }[];
+};
+const { data } = Astro.props;
+---
+
+<div class="timeline">
+  <ol class="border-gray-200 dark:border-gray-700 relative border-s">
+    {
+      data.map(d => (
+        <li class="mb-8 ms-4">
+          <div class="bg-gray-200 border-white dark:border-gray-900 dark:bg-gray-700 absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border" />
+          <time class="text-gray-400 dark:text-gray-500 mb-1 text-sm font-normal leading-none">
+            {d.date}
+          </time>
+          <h3 class="text-gray-900 dark:text-white text-lg font-semibold">
+            {d.title}
+          </h3>
+          <p class="text-gray-500 dark:text-gray-400 mb-4 text-base font-normal">
+            {d.description}
+          </p>
+        </li>
+      ))
+    }
+  </ol>
+</div>
+<style>
+  .timeline li {
+    @apply text-skin-lightBlue;
+  }
+  .timeline p {
+    @apply mb-2 text-skin-white;
+  }
+  .timeline time {
+    @apply text-skin-white;
+  }
+</style>
