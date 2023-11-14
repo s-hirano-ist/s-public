@@ -1,4 +1,4 @@
-import { JSDOM } from "jsdom";
+import { JSDOM, VirtualConsole } from "jsdom";
 
 // REF: https://zenn.dev/littleforest/articles/scrape-og-tags
 function extractOgpData(metaElements: HTMLMetaElement[]) {
@@ -15,7 +15,17 @@ function extractOgpData(metaElements: HTMLMetaElement[]) {
 
 export async function getOgpData(url: string) {
   try {
-    const dom = await JSDOM.fromURL(url);
+    // REF: https://github.com/jsdom/jsdom#virtual-consoles
+    const virtualConsole = new VirtualConsole();
+    const dom = await JSDOM.fromURL(url, { virtualConsole });
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    virtualConsole.on("error", () => {});
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    virtualConsole.on("warn", () => {});
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    virtualConsole.on("info", () => {});
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    virtualConsole.on("dir", () => {});
     const meta = dom.window.document.head.querySelectorAll("meta");
     return extractOgpData([...meta]);
   } catch (e) {

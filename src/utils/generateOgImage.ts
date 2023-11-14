@@ -41,7 +41,7 @@ const generateOgImage = async (
   if (import.meta.env.MODE === "production") {
     const pngBuffer = await sharp(Buffer.from(svg)).png().toBuffer();
 
-    console.info("Output PNG Image  :", `${ogTitle}.png`);
+    // console.info("Output PNG Image  :", `${ogTitle}.png`);
 
     await writeFile(`./.vercel/output/static/${ogTitle}.png`, pngBuffer);
   }
