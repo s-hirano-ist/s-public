@@ -4,3 +4,5 @@ node_modules/*
 .eslintignore
 pnpm-lock.yaml
 src/content/_photo/data.ts
+
+script/vnu-runtime-image/*
