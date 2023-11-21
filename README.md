@@ -34,7 +34,9 @@ pnpm i
 
 ### Adding photos
 
-Run the following command if you added photos to `./src/assets/photo`.
+Run task.json to add photos to `./src/assets/photo`.
+
+Instead, run the following command if you added photos to `./src/assets/photo`.
 
 - if python installed
 
