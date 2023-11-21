@@ -5,13 +5,46 @@
       "type": "shell",
       "command": "docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app python:3.11 python3 script/generate_photo_path.py",
       "label": "docker generate path",
-      "detail": "run generate_photo_path.py from docker"
+      "detail": "run generate_photo_path.py from docker."
     },
     {
       "type": "shell",
       "command": "python script/generate_photo_path.py",
       "label": "python generate path",
-      "detail": "run generate_photo_path.py from python"
+      "detail": "run generate_photo_path.py from python."
+    },
+    {
+      "type": "shell",
+      "command": "pnpm run build",
+      "label": "build",
+      "detail": "build website."
+    },
+    {
+      "type": "shell",
+      "command": "sh script/vnu-runtime-image/bin/vnu --skip-non-html --Werror .vercel/",
+      "label": "nu html checker",
+      "detail": "nu html checker errors, warnings, and infos.",
+      "dependsOn": ["build"]
+    },
+    {
+      "type": "shell",
+      "command": "sh script/vnu-runtime-image/bin/vnu --errors-only --skip-non-html .vercel/",
+      "label": "nu html checker errors only without build",
+      "detail": "nu html checker errors only without build."
+    },
+    {
+      "type": "shell",
+      "command": "sh script/vnu-runtime-image/bin/vnu --errors-only --skip-non-html .vercel/",
+      "label": "nu html checker errors only",
+      "detail": "nu html checker errors only.",
+      "dependsOn": ["build"]
+    },
+    {
+      "type": "shell",
+      "command": "java -jar ./node_modules/.pnpm/vnu-jar@23.4.11/node_modules/vnu-jar/build/dist/vnu.jar --skip-non-html --Werror .vercel/",
+      "label": "nu html npm package version",
+      "detail": "nu html checker with npm package (version not updated yet, therefore not working).",
+      "dependsOn": ["build"]
     }
   ]
 }

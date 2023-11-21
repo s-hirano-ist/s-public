@@ -15,7 +15,9 @@ https://pagespeed.web.dev/
 **Code Formatting** - [Prettier](https://prettier.io/)  
 **Linting** - [ESLint](https://eslint.org)  
 **Auto Commit Rejection** - [Husky](https://typicode.github.io/husky/)  
-**Package updates** - [Renovate](https://www.mend.io/renovate/)
+**Package updates** - [Renovate](https://www.mend.io/renovate/)  
+**HTML checker** - [nu html checker](https://github.com/validator/validator)  
+**Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)
 
 ### My infrastructure stack
 

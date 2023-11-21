@@ -142,6 +142,9 @@ devDependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  vnu-jar:
+    specifier: ^23.4.11
+    version: 23.4.11
 
 packages:
 
@@ -6615,6 +6618,11 @@ packages:
         optional: true
     dependencies:
       vite: 4.5.0
+
+  /vnu-jar@23.4.11:
+    resolution: {integrity: sha512-lI5dzBYXtxhilNI7EeQ5iUduYnNBq7YWx4UjfBVLXfBQHnXYZSf3y3bpM0bSyDU6jy/+OyKV7nw4tzpR5lXSZg==}
+    engines: {node: '>=0.10'}
+    dev: true
 
   /volar-service-css@0.0.16(@volar/language-service@1.10.10):
     resolution: {integrity: sha512-gK/XD35t/P3SQrUuS8LMlCnE2ItIk+kXI6gPvBYl1NZ7O+tLH8rUWXA32YgpwNoITxYrm/G1seaq08zs4aiPvg==}
