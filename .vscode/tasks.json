@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app python:3.11 python3 script/generate_photo_path.py",
+      "label": "docker generate path",
+      "detail": "run generate_photo_path.py from docker"
+    },
+    {
+      "type": "shell",
+      "command": "python script/generate_photo_path.py",
+      "label": "python generate path",
+      "detail": "run generate_photo_path.py from python"
+    }
+  ]
+}

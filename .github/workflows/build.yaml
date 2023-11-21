@@ -36,4 +36,5 @@ jobs:
       - run: pnpm i --frozen-lockfile
       - run: pnpm fmt
       - run: pnpm lint
+      - run: pnpm lint:mark
       - run: pnpm build

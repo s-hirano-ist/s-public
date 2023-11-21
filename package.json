@@ -15,11 +15,14 @@
     "fmt:fix": "prettier --write **/*.astro .",
     "prepare": "husky install",
     "lint": "astro check && tsc --noEmit && eslint .",
-    "lint:fix": "astro check & tsc --noEmit & eslint . --fix"
+    "lint:fix": "astro check & tsc --noEmit & eslint . --fix",
+    "lint:mark": "markdownlint-cli2 src/content/summary/*",
+    "lint:mark:fix": "markdownlint-cli2-fix src/content/summary/*"
   },
   "lint-staged": {
     "*": "pnpm fmt",
     "src/**/*.{js, jsx, ts, tsx, astro}": "pnpm lint",
+    "_markdown/**/*.md": "pnpm lint:mark",
     "src/**/*": "python3 script/generate_photo_path.py"
   },
   "dependencies": {

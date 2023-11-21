@@ -34,10 +34,20 @@ pnpm i
 
 ### Adding photos
 
-Run the following command if you added photos to `./src/assets/photo`.
+Run task.json to add photos to `./src/assets/photo`.
+
+Instead, run the following command if you added photos to `./src/assets/photo`.
+
+- if python installed
 
 ```bash
-python3 script/generate_photo_path.py
+python script/generate_photo_path.py
+```
+
+- if docker installed
+
+```bash
+docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app python:3.11 python3 script/generate_photo_path.py
 ```
 
 ### Vercel deployment
