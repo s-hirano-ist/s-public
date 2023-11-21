@@ -2,7 +2,7 @@
   "config": {
     "line-length": false, // MD013  行の長さ
     "no-bare-urls": false, // MD034 URLのリンク化条件
-    "no-duplicate-header": false,
+    "no-duplicate-heading": false,
     "no-inline-html": false,
     "first-line-heading": false
   },
