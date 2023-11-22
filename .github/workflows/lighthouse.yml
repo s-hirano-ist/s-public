@@ -1,0 +1,16 @@
+name: measure lighthouse score
+on:
+  push:
+  # schedule:
+  # - cron: "0 10 * * 1"
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Audit URL using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: https://s-hirano.com
+          configPath: ./.github/workflows/lighthouserc.json
+          uploadArtifacts: true
