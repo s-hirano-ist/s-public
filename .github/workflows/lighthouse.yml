@@ -1,8 +1,8 @@
 name: measure lighthouse score
 on:
-  push:
-  # schedule:
-  # - cron: "0 9 * * 1"
+  # push:
+  schedule:
+    - cron: "0 9 * * 1"
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
