@@ -1,7 +1,12 @@
 ---
-import LinkDetail from "@layouts/LinkDetail.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import LinkCard from "@components/LinkCard.astro";
+import Main from "@components/Main.astro";
+import Layout from "@layouts/Layout.astro";
 import slugify from "@utils/slugify";
 import { type CollectionEntry, getCollection } from "astro:content";
+import sanitizeHtml from "sanitize-html";
 
 export type Props = {
   post: CollectionEntry<"news">;
@@ -18,6 +23,27 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+
+const { heading, description, body } = post.data;
+const ogUrl = new URL(`${heading}.png`, Astro.url.origin).href;
 ---
 
-<LinkDetail post={post} />
+<Layout title={heading} description={description} ogImage={ogUrl}>
+  <Header />
+  <Main pageTitle={heading}>
+    <article id="article" role="article" class="prose mx-auto max-w-5xl">
+      {
+        body.map(d => {
+          return (
+            <div class="overflow-hidden rounded py-1 shadow-lg sm:px-4">
+              <h2 class="text-xl">{d.title}</h2>
+              <Fragment set:html={sanitizeHtml(d.quote ?? "")} />
+              <LinkCard url={d.url} />
+            </div>
+          );
+        })
+      }
+    </article>
+  </Main>
+  <Footer />
+</Layout>
