@@ -1,13 +1,13 @@
 ---
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
+import Main from "@components/Main.astro";
 import SearchBar, {
   type SummarySearchItem,
   type NewsSearchItem,
 } from "@components/react/SearchBar";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
 import { getCollection } from "astro:content";
 
 const summaryList = await getCollection("summary", ({ data }) => !data.draft);

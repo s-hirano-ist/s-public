@@ -2,14 +2,14 @@
 import portfolioImage from "@assets/portfolio.webp";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import AboutMe from "@layouts/AboutMe.astro";
+import AboutMe from "@content/portfolio/AboutMe.astro";
 // import Achievements from "@layouts/Achivements.astro";
-import Education from "@layouts/Education.astro";
+import Education from "@content/portfolio/Education.astro";
+import Notes from "@content/portfolio/Notes.astro";
+import PortfolioLinks from "@content/portfolio/PortfolioLinks.astro";
+import Qualification from "@content/portfolio/Qualification.astro";
+import WorkExperience from "@content/portfolio/WorkExperience.astro";
 import Layout from "@layouts/Layout.astro";
-import Notes from "@layouts/Notes.astro";
-import PortfolioLinks from "@layouts/PortfolioLinks.astro";
-import Qualification from "@layouts/Qualification.astro";
-import WorkExperience from "@layouts/WorkExperience.astro";
 import { Image } from "astro:assets";
 ---
 
@@ -19,7 +19,7 @@ import { Image } from "astro:assets";
     <section class="pt-8">
       <Image src={portfolioImage} alt="" class="w-full" />
       <div class="pt-4">
-        <a id="scroll-button" class="font-bold">
+        <a id="scroll-button">
           <div class="flex justify-evenly">
             {
               [0, 0].map(_ => (
@@ -33,7 +33,7 @@ import { Image } from "astro:assets";
                 </svg>
               ))
             }
-            <span>Scroll</span>
+            <p class="font-bold text-skin-white">Scroll</p>
             {
               [0, 0].map(_ => (
                 <svg
