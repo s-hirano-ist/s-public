@@ -38,3 +38,4 @@ jobs:
       - run: pnpm lint
       - run: pnpm lint:mark
       - run: pnpm build
+      - run: lhci autorun
