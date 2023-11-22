@@ -3,14 +3,14 @@ import { SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
 
-const IS_DEV = import.meta.env.MODE === "development";
-
 export type Props = {
   title?: string;
   author?: string;
   description?: string;
   ogImage?: string;
 };
+
+const IS_DEV = import.meta.env.MODE === "development";
 
 const {
   title = SITE.title,
@@ -65,6 +65,26 @@ const socialImageURL = new URL(
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Smooth Scroll -->
+    <script>
+      import Lenis from "@studio-freight/lenis";
+      const lenis = new Lenis();
+      function raf(time: any) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
+      const anchor = document.getElementById("scroll-button");
+      anchor?.addEventListener("click", e => {
+        e.preventDefault(); // prevent changing URL
+        lenis.scrollTo("#about-me");
+      });
+    </script>
+
+    <!-- Vercel Insights -->
     <script>
       declare global {
         interface Window {
@@ -80,6 +100,8 @@ const socialImageURL = new URL(
         };
     </script>
     {!IS_DEV && <script defer src="/_vercel/insights/script.js" />}
+
+    <!-- Color Scheme -->
     <script>
       const themeValue = window.matchMedia("(prefers-color-scheme: dark)")
         .matches

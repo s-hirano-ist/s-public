@@ -18,8 +18,39 @@ import { Image } from "astro:assets";
     <Header title="Portfolio" darkModeDisabled />
     <section class="pt-8">
       <Image src={portfolioImage} alt="" class="w-full" />
+      <div class="pt-4">
+        <a id="scroll-button" class="font-bold">
+          <div class="flex justify-evenly">
+            {
+              [0, 0].map(_ => (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: #fff;">
+                  <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z" />
+                </svg>
+              ))
+            }
+            <span>Scroll</span>
+            {
+              [0, 0].map(_ => (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: #fff;">
+                  <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z" />
+                </svg>
+              ))
+            }
+          </div>
+        </a>
+      </div>
     </section>
-    <section class="pb-4">
+    <section class="pb-4" id="about-me">
       <h2>About me</h2>
       <AboutMe />
     </section>
