@@ -91,7 +91,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm sync`    | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
 | `pnpm lint`    | Lint with ESLint                                                                                                                 |
 
-### 🪝 Tags & Realease
+## 🪝 Tags & Realease
 
 ```bash
 gh release create --generate-notes
