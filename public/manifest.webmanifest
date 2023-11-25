@@ -1,0 +1,16 @@
+{
+  "name": "Blog of s-hirano-ist",
+  "short_name": "Blog",
+  "description": "Blog of s-hirano-ist",
+  "lang": "ja",
+  "start_url": "/",
+  "theme_color": "#77a2c0",
+  "background_color": "#000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any"
+    }
+  ],
+  "display": "fullscreen"
+}
