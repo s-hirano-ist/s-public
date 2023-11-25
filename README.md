@@ -38,6 +38,14 @@ git clone https://github.com/s-hirano-ist/blog.git
 pnpm i
 ```
 
+### Updating Github stars file
+
+````bash
+cd gh-export-stars
+rye sync
+rye run python src/main.py --user s-hirano-ist --output ../src/content/portfolio/gh-stars.json
+```
+
 ### Adding photos
 
 Run task.json to add photos to `./src/assets/photo`.
@@ -48,7 +56,7 @@ Instead, run the following command if you added photos to `./src/assets/photo`.
 
 ```bash
 python script/generate_photo_path.py
-```
+````
 
 - if docker installed
 

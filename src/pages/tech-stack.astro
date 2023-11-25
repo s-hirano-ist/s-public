@@ -3,6 +3,7 @@ import appImage from "@assets/tech-stack/app.drawio.png";
 import awsImage from "@assets/tech-stack/aws.drawio.png";
 import infraImage from "@assets/tech-stack/infra.drawio.png";
 import personalImage from "@assets/tech-stack/personal.drawio.png";
+import githubStarsData from "@content/portfolio/gh-stars.json";
 import PortfolioLayout from "@layouts/PortfolioLayout.astro";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
@@ -20,6 +21,16 @@ const IMAGE_DATA: { title: string; image: ImageMetadata; alt: string }[] = [
 ---
 
 <PortfolioLayout headerTitle="TECH-STACK" title="tech-stack">
+  {
+    IMAGE_DATA.map(image => (
+      <div class="mb-8 text-xl font-bold">
+        <p>{image.title}</p>
+        <div class="mt-4 flex justify-center">
+          <Image src={image.image} alt="personal deployment tech stack" />
+        </div>
+      </div>
+    ))
+  }
   <div class="mb-8 rounded border px-4 py-2 text-xl font-bold">
     <a href="https://github.com/s-hirano-ist/tech-stack/blob/main/package.json">
       tech stack of JavaScript
@@ -31,14 +42,19 @@ const IMAGE_DATA: { title: string; image: ImageMetadata; alt: string }[] = [
       tech stack of Python
     </a>
   </div>
+  <div class="py-4 text-xl font-bold">
+    Github stars (most frequently used tools)
+  </div>
   {
-    IMAGE_DATA.map(image => (
-      <div class="mb-8 text-xl font-bold">
-        <p>{image.title}</p>
-        <div class="mt-4 flex justify-center">
-          <Image src={image.image} alt="personal deployment tech stack" />
+    githubStarsData.map(d => {
+      return (
+        <div class="pb-4">
+          <a href={d.url} class="font-bold">
+            {d.url.split("/").pop()}
+          </a>
+          <p class="text-sm">{d.description}</p>
         </div>
-      </div>
-    ))
+      );
+    })
   }
 </PortfolioLayout>

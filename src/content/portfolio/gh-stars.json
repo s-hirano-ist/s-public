@@ -1,0 +1,266 @@
+[
+  {
+    "url": "https://github.com/ardatan/feTS",
+    "description": "TypeScript HTTP Framework focusing on e2e type-safety, easy setup, performance & great developer experience"
+  },
+  {
+    "url": "https://github.com/PyGithub/PyGithub",
+    "description": "Typed interactions with the GitHub API v3"
+  },
+  {
+    "url": "https://github.com/JeffCarpenter/export-stars",
+    "description": "Export (your) GitHub stars to a CSV file"
+  },
+  {
+    "url": "https://github.com/weseek/growi",
+    "description": ":anchor: GROWI - Team collaboration software using markdown"
+  },
+  {
+    "url": "https://github.com/studio-freight/lenis",
+    "description": "How smooth scroll should be"
+  },
+  {
+    "url": "https://github.com/GoogleChrome/lighthouse-ci",
+    "description": "Automate running Lighthouse for every commit, viewing the changes, and preventing regressions"
+  },
+  {
+    "url": "https://github.com/treosh/lighthouse-ci-action",
+    "description": "Audit URLs using Lighthouse and test performance with Lighthouse CI."
+  },
+  {
+    "url": "https://github.com/n05-frontend/shuwa-frontend-book-app",
+    "description": "\u79c0\u548c\u30b7\u30b9\u30c6\u30e0\u300c\u30d5\u30ed\u30f3\u30c8\u30a8\u30f3\u30c9\u958b\u767a\u5165\u9580 \u30d7\u30ed\u30d5\u30a7\u30c3\u30b7\u30e7\u30ca\u30eb\u306a\u958b\u767a\u30c4\u30fc\u30eb\u3068\u8a2d\u8a08\u30fb\u5b9f\u88c5 \u300d\u66f8\u7c4d\u5185\u3067\u5229\u7528\u3059\u308b\u30b5\u30f3\u30d7\u30eb\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u3067\u3059\u3002"
+  },
+  {
+    "url": "https://github.com/nishanths/license",
+    "description": "Command line license text generator."
+  },
+  {
+    "url": "https://github.com/simonwhitaker/gibo",
+    "description": "Easy access to gitignore boilerplates"
+  },
+  {
+    "url": "https://github.com/ota-meshi/astro-eslint-parser",
+    "description": "Astro component parser for ESLint"
+  },
+  {
+    "url": "https://github.com/dimsemenov/PhotoSwipe",
+    "description": "JavaScript image gallery for mobile and desktop, modular, framework independent"
+  },
+  {
+    "url": "https://github.com/MichalLytek/type-graphql",
+    "description": "Create GraphQL schema and resolvers with TypeScript, using classes and decorators!"
+  },
+  {
+    "url": "https://github.com/dotansimha/graphql-yoga",
+    "description": "\ud83e\uddd8 Rewrite of a fully-featured GraphQL Server with focus on easy setup, performance & great developer experience.  The core of Yoga implements WHATWG Fetch API and can run/deploy on any JS environment."
+  },
+  {
+    "url": "https://github.com/apollo-server-integrations/apollo-server-integration-next",
+    "description": "An Apollo Server integration for use with Next.js"
+  },
+  {
+    "url": "https://github.com/trpc/examples-next-prisma-starter",
+    "description": "\ud83d\ude80 tRPC starter repo with E2E-testing"
+  },
+  {
+    "url": "https://github.com/github/innovationgraph",
+    "description": "GitHub Innovation Graph"
+  },
+  {
+    "url": "https://github.com/pnpm/action-setup",
+    "description": "Install pnpm package manager"
+  },
+  {
+    "url": "https://github.com/t3-oss/create-t3-app",
+    "description": "The best way to start a full-stack, typesafe Next.js app "
+  },
+  {
+    "url": "https://github.com/ts-rest/ts-rest",
+    "description": "RPC-like client, contract, and server implementation for a pure REST API"
+  },
+  {
+    "url": "https://github.com/jlalmes/trpc-openapi",
+    "description": "OpenAPI support for tRPC \ud83e\udde9"
+  },
+  {
+    "url": "https://github.com/aspida/aspida",
+    "description": "TypeScript friendly HTTP client wrapper for the browser and node.js."
+  },
+  {
+    "url": "https://github.com/lukeautry/tsoa",
+    "description": "Build OpenAPI-compliant REST APIs using TypeScript and Node"
+  },
+  {
+    "url": "https://github.com/google/budoux",
+    "description": null
+  },
+  {
+    "url": "https://github.com/nextauthjs/next-auth",
+    "description": "Authentication for the Web."
+  },
+  {
+    "url": "https://github.com/krisk/Fuse",
+    "description": "Lightweight fuzzy-search, in JavaScript"
+  },
+  {
+    "url": "https://github.com/apostrophecms/sanitize-html",
+    "description": "Clean up user-submitted HTML, preserving whitelisted elements and whitelisted attributes on a per-element basis. Built on htmlparser2 for speed and tolerance"
+  },
+  {
+    "url": "https://github.com/SoftwareBrothers/adminjs",
+    "description": "AdminJS is an admin panel for apps written in node.js"
+  },
+  {
+    "url": "https://github.com/express-validator/express-validator",
+    "description": "An express.js middleware for validator.js."
+  },
+  {
+    "url": "https://github.com/nuta/operating-system-in-1000-lines",
+    "description": "Writing an OS in 1,000 lines."
+  },
+  {
+    "url": "https://github.com/jsdom/jsdom",
+    "description": "A JavaScript implementation of various web standards, for use with Node.js"
+  },
+  {
+    "url": "https://github.com/ardatan/graphql-mesh",
+    "description": "Fully functional GraphQL gateway framework"
+  },
+  {
+    "url": "https://github.com/hagopj13/node-express-boilerplate",
+    "description": "A boilerplate for building production-ready RESTful APIs using Node.js, Express, and Mongoose"
+  },
+  {
+    "url": "https://github.com/danielfsousa/express-rest-boilerplate",
+    "description": "\u231b\ufe0f Express starter for building RESTful APIs"
+  },
+  {
+    "url": "https://github.com/prisma/prisma-examples",
+    "description": " \ud83d\ude80 Ready-to-run Prisma example projects"
+  },
+  {
+    "url": "https://github.com/linuxserver/docker-dokuwiki",
+    "description": null
+  },
+  {
+    "url": "https://github.com/lovell/sharp",
+    "description": "High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library."
+  },
+  {
+    "url": "https://github.com/yisibl/resvg-js",
+    "description": "A high-performance SVG renderer and toolkit, powered by Rust based resvg and napi-rs."
+  },
+  {
+    "url": "https://github.com/polygonplanet/encoding.js",
+    "description": "Convert and detect character encoding in JavaScript"
+  },
+  {
+    "url": "https://github.com/axios/axios",
+    "description": "Promise based HTTP client for the browser and node.js"
+  },
+  {
+    "url": "https://github.com/pyrustic/jesth",
+    "description": "Next-level human-readable data serialization format "
+  },
+  {
+    "url": "https://github.com/vlucas/phpdotenv",
+    "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically."
+  },
+  {
+    "url": "https://github.com/prettier/plugin-php",
+    "description": "Prettier PHP Plugin"
+  },
+  {
+    "url": "https://github.com/chakra-ui/panda",
+    "description": "\ud83d\udc3c Universal, Type-Safe, CSS-in-JS Framework for Product Teams \u26a1\ufe0f"
+  },
+  {
+    "url": "https://github.com/being24/latex-docker",
+    "description": "Docker image for build tex source"
+  },
+  {
+    "url": "https://github.com/uhyo/nitrogql",
+    "description": "GraphQL + TypeScript toolchain"
+  },
+  {
+    "url": "https://github.com/validator/validator",
+    "description": "Nu Html Checker \u2013 Helps you catch problems in your HTML/CSS/SVG"
+  },
+  {
+    "url": "https://github.com/mui/mui-x",
+    "description": "MUI X: Build data-rich applications using a growing list of advanced React components."
+  },
+  {
+    "url": "https://github.com/ot07/prettier-plugin-astro-organize-imports",
+    "description": "A Prettier plugin for formatting imports in Astro files"
+  },
+  {
+    "url": "https://github.com/mug-jp/maplibregljs-turf-starter",
+    "description": "Start Turf.js easily.[Turf.js, MapLibre GL JS, Vite]"
+  },
+  {
+    "url": "https://github.com/donnemartin/system-design-primer",
+    "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards."
+  },
+  {
+    "url": "https://github.com/blackholeearth/Win10_BrightnessSlider",
+    "description": "this app puts a Monitor Brightness icon on Taskbar Tray.  for win 7, 8, 10"
+  },
+  {
+    "url": "https://github.com/satnaing/astro-paper",
+    "description": "A minimal, accessible and SEO-friendly Astro blog theme"
+  },
+  {
+    "url": "https://github.com/jmtornetta/extract-bookmarks",
+    "description": "Exports and extracts bookmarks from Windows browsers into a folder that can be easily archived by launchers like Windows Search, Cortana, Launchy, Wox, Everything and PowerToys Run."
+  },
+  {
+    "url": "https://github.com/microsoft/PowerToys",
+    "description": "Windows system utilities to maximize productivity"
+  },
+  {
+    "url": "https://github.com/honojs/hono",
+    "description": "Fast, Lightweight, Web-standards"
+  },
+  {
+    "url": "https://github.com/vanjs-org/van",
+    "description": "\ud83c\udf66 VanJS: World's smallest reactive UI framework. Incredibly Powerful, Insanely Small - Everyone can build a useful UI app in an hour."
+  },
+  {
+    "url": "https://github.com/talengu/Wox.Plugin.WindowSwitcher",
+    "description": "switch window in windows and a wox python plugin"
+  },
+  {
+    "url": "https://github.com/hadolint/hadolint",
+    "description": "Dockerfile linter, validate inline bash, written in Haskell"
+  },
+  {
+    "url": "https://github.com/Wox-launcher/Wox",
+    "description": "A cross-platform launcher that simply works"
+  },
+  {
+    "url": "https://github.com/mdreizin/chrome-bookmarks-alfred-workflow",
+    "description": "Chrome/Canary/Chromium/Microsoft Edge bookmarks search workflow for Alfred"
+  },
+  {
+    "url": "https://github.com/watalabo/WiPiCap",
+    "description": "WiPiCap: Caputuring Wi-Fi CSI Frames Using RaspberryPi"
+  },
+  {
+    "url": "https://github.com/sub-t/blog-template",
+    "description": "Next.js + markdown Blog Template"
+  },
+  {
+    "url": "https://github.com/realm/SwiftLint",
+    "description": "A tool to enforce Swift style and conventions."
+  },
+  {
+    "url": "https://github.com/docker-mailserver/docker-mailserver",
+    "description": "Production-ready fullstack but simple mail server (SMTP, IMAP, LDAP, Antispam, Antivirus, etc.) running inside a container."
+  },
+  {
+    "url": "https://github.com/beeftornado/homebrew-rmtree",
+    "description": "Remove a formula and its unused dependencies"
+  }
+]

@@ -12,3 +12,4 @@ script/vnu-runtime-image/*
 **/*.webp
 
 gh-export-stars/*
+gh-stars.json
