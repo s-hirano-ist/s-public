@@ -14,28 +14,6 @@ draft: true
 
 > https://qiita.com/lazy-kz/items/727299cae893ab3442a0
 
-### プログラマの三大美徳
-
-- 怠惰
-- 短気
-- 傲慢
-
-> https://qiita.com/yokarikeri/items/cbdef66fca460253cc7f
-
-### 公式ドキュメントのすゝめ
-
-なぜ推奨されるのか? 一人前になるためには必須事項。適切な実装（セキュリティ、実行速度等）や迅速なディバッグを行うためには必須事項。
-
-> https://qiita.com/hiraike32/items/f0a211cceb0ecc516b6c
->
-> https://zenn.dev/nameless_sn/articles/how_to_read_official_documents
-
-### 質問 フォーマット
-
-- 今発生していること
-- 解決したいこと
-- 調べたこと・考えてた仮説
-
 ### 尋ねるな、命じろ
 
 呼び出し側はメソッドを通じて処理を命ずるのみで、オブジェクトの内部状態やその状態に応じて呼び出し側の判断を行ってはならない。
@@ -62,7 +40,7 @@ README やテンプレートについて
 
 > https://zenn.dev/suzuki_hoge/books/2022-12-colored-code-e73c0f9c56464c
 
-GitHub の PR の作成とその後の議論方法
+GitHubのPRの作成とその後の議論方法
 
 > https://zenn.dev/keitakn/articles/github-code-review-reviewee
 
@@ -101,23 +79,8 @@ GitHub の PR の作成とその後の議論方法
 
 > https://qiita.com/ouauai/items/d38eeef9f0af5a4a87da
 
-### コミットメッセージの指針
+### 略語
 
-conventional commits
-
-> https://www.conventionalcommits.org/ja/v1.0.0/
-
-我流な流行的なもの
-
-> https://zenn.dev/mi0256/articles/1332e1d041cab4
-
-### レビュー単語
-
-- must: 修正必須
-- want: 修正推奨
-- nits: 修正必須。本筋とは関係ない nitpick
-- imo: 修正しない場合、説明必要。in my opinion
-- ask: 詳細説明願う
 - LGTM
 - FYI
 - PTAL
