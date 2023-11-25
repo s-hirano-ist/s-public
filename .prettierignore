@@ -10,3 +10,5 @@ script/vnu-runtime-image/*
 **/*.jpg
 **/*.png
 **/*.webp
+
+gh-export-stars/*

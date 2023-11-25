@@ -1,0 +1,3 @@
+[submodule "gh-export-stars"]
+	path = gh-export-stars
+	url = https://github.com/s-hirano-ist/gh-export-stars.git
