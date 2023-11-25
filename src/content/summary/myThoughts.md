@@ -86,15 +86,11 @@ Github/GitlabのMainブランチへのマージや、タグの付与をトリガ
 - imo: 自分はこう思うが、いかがでしょうか?
 - ask: 単純にわからないので教えてください。
 
-### コミットメッセージの書き方
+### コミットメッセージの書き方で参考にできるもの
 
-conventional commits
+[Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/)
 
-> https://www.conventionalcommits.org/ja/v1.0.0/
-
-我流な流行的なもの
-
-> https://zenn.dev/mi0256/articles/1332e1d041cab4
+[ロジカルなコミットメッセージの書き方](https://zenn.dev/mi0256/articles/1332e1d041cab4)
 
 ## 質問/学習時重視していること
 
@@ -108,9 +104,9 @@ conventional commits
 
 なぜ推奨されるのか? 一人前になるためには必須事項。適切な実装（セキュリティ、実行速度等）や迅速なディバッグを行うためには必須事項。
 
-> https://qiita.com/hiraike32/items/f0a211cceb0ecc516b6c
->
-> https://zenn.dev/nameless_sn/articles/how_to_read_official_documents
+[私たちはどうして公式ドキュメントが読めないのか？](https://qiita.com/hiraike32/items/f0a211cceb0ecc516b6c)
+
+[公式ドキュメントを攻略するための手引き](https://zenn.dev/nameless_sn/articles/how_to_read_official_documents)
 
 ### プログラマの三大美徳
 
@@ -118,4 +114,4 @@ conventional commits
 - 短気
 - 傲慢
 
-> https://qiita.com/yokarikeri/items/cbdef66fca460253cc7f
+[プログラマーのための原則](https://qiita.com/yokarikeri/items/cbdef66fca460253cc7f)

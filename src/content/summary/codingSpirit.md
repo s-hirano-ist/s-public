@@ -12,7 +12,7 @@ draft: true
 4. CI/CD pipelineが初期から整備されている。
 5. テストコードが（高確率で）存在する。
 
-> https://qiita.com/lazy-kz/items/727299cae893ab3442a0
+[つよつよエンジニアの成果物にある5つの特徴](https://qiita.com/lazy-kz/items/727299cae893ab3442a0)
 
 ### 尋ねるな、命じろ
 
@@ -20,37 +20,37 @@ draft: true
 
 ### 読みやすいコード
 
-> https://zenn.dev/arsaga/articles/ba9ec8c004511c
+[読みやすいコードを書くためのガイドライン](https://zenn.dev/arsaga/articles/ba9ec8c004511c)
 
 ## チーム開発のノウハウ
 
 GitHub通知: 適切に設定しないと、自分に Assign されたコードレビュー等を見逃してしまうよ
 
-> https://zenn.dev/siketyan/articles/you-are-not-using-github-correctly
+[GitHub を使うなら通知くらいまともに設定してくれ](https://zenn.dev/siketyan/articles/you-are-not-using-github-correctly)
 
 README やテンプレートについて
 
-> https://zenn.dev/sutamac/articles/5a262f0096176a
+[エンジニアが開発しやすい環境作りをする](https://zenn.dev/sutamac/articles/5a262f0096176a)
 
-コードレビューで気をつけること google-eng-practices-ja
+コードレビューで気をつけること
 
-> https://fujiharuka.github.io/google-eng-practices-ja/ja/review/reviewer/standard.html
+[google-eng-practices-ja](https://fujiharuka.github.io/google-eng-practices-ja/ja/review/reviewer/standard.html)
 
 コードを色分けして、良いコード、悪いコードの分析
 
-> https://zenn.dev/suzuki_hoge/books/2022-12-colored-code-e73c0f9c56464c
+[実践 よくないコードに立ち向かう整理術](https://zenn.dev/suzuki_hoge/books/2022-12-colored-code-e73c0f9c56464c)
 
 GitHubのPRの作成とその後の議論方法
 
-> https://zenn.dev/keitakn/articles/github-code-review-reviewee
+[GitHubのコードレビューを受ける際に気をつける事](https://zenn.dev/keitakn/articles/github-code-review-reviewee)
 
 コードレビューで嫌われる人
 
-> https://qiita.com/emjo1804/items/48f6e78237a04684ab38
+[コードレビューで嫌われる人の特徴7選](https://qiita.com/emjo1804/items/48f6e78237a04684ab38)
 
 新人プログラマをコードレビューで殺さない方法
 
-> https://qiita.com/hiraike32/items/32840b11536fa1b78621
+[新人プログラマをレビューで殺さない方法](https://qiita.com/hiraike32/items/32840b11536fa1b78621)
 
 気をつけるべきところ
 
@@ -77,7 +77,7 @@ GitHubのPRの作成とその後の議論方法
 13. ミュータブル or 位ミュータブル
 14. 整合性の撮れてない並行、並列処理
 
-> https://qiita.com/ouauai/items/d38eeef9f0af5a4a87da
+[知らないと恥ずかしいコードレビューで指摘されがちなポイント14選](https://qiita.com/ouauai/items/d38eeef9f0af5a4a87da)
 
 ### 略語
 

@@ -16,16 +16,16 @@ SSR という用語が、
 
 の側面で利用されており、混乱の元になっている。
 
-> https://zenn.dev/sumiren/articles/349c60f19c505f
+[SSRみたいなフロント用語の使い方改めませんか運動](https://zenn.dev/sumiren/articles/349c60f19c505f)
 
 ## 脱オブジェクト指向
 
-> https://qiita.com/saitofjp/items/b3508fcd755d0d5cc090
->
-> https://yujisoftware.hatenablog.com/entry/20110115/1295106825
->
-> https://qiita.com/saitofjp/items/7ab7b7fec9da0ca363fa
+[オブジェクト指向プログラミングは終わった](https://qiita.com/saitofjp/items/b3508fcd755d0d5cc090)
+
+[オブジェクト指向を否定する理由（ミイラ取りがミイラになった）](https://yujisoftware.hatenablog.com/entry/20110115/1295106825)
+
+[オブジェクト指向プログラミングは終わった カプセル化が悪い(感想戦)](https://qiita.com/saitofjp/items/7ab7b7fec9da0ca363fa)
 
 ## Github の Public レポジトリにはライセンスを付与しよう
 
-> https://qiita.com/Tatamo/items/ae7bf4878abcf0584291
+[ライセンスをつけないとどうなるの？](https://qiita.com/Tatamo/items/ae7bf4878abcf0584291)
