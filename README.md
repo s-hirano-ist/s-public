@@ -1,8 +1,12 @@
 # Blog
 
+This is a blog site of [s-hirano.com](https://s-hirano.com/).
+
+It consists of a portfolio and a blog which summarizes the knowledge I gained and the recent news.
+
 ## ✅ Lighthouse Score
 
-https://pagespeed.web.dev/
+<https://pagespeed.web.dev/analysis/https-s-hirano-com/iwo6u6jfy4?form_factor=desktop>
 
 ## 💻 Tech Stack
 
@@ -70,7 +74,7 @@ Access [Onamae.com](https://www.onamae.com/) to add DNS TXT record.
 - Font Size: 110
 - Font Color: #77A2C0
 
-> https://favicon.io/favicon-generator/
+> <https://favicon.io/favicon-generator/>
 
 ## 🧞 Commands
 
@@ -90,8 +94,6 @@ All commands are run from the root of the project, from a terminal:
 ### 🪝 Tags & Realease
 
 ```bash
-git tag vx.x.x
-git push origin vx.x.x
 gh release create --generate-notes
 ```
 
