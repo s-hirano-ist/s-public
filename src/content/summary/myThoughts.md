@@ -42,10 +42,15 @@ GraphQL
 
 ### CI
 
+コードの体裁を守ることによって品質管理がしやすくなる。
+
+また、パッケージのアップデートに伴う不具合をある程度未然に防ぐことができる。
+
 - formatter
   - [prettier](https://prettier.io/)
 - linter
   - [ESLint](https://eslint.org/)
+  - [stylelint](https://stylelint.io/)
   - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
 - test
   - [Playwright Test](https://playwright.dev/docs/test-intro)
@@ -63,6 +68,8 @@ Github/GitlabのMainブランチへのマージや、タグの付与をトリガ
 ### Container service
 
 開発環境にdocker composeを利用することで、開発環境を即時に作成できる。
+
+また、フルマネージなコンテナサービス（AWS Elastic Container Service等）を利用することで、容易にk8sのようにコンテナの管理を自動化できる。
 
 ### Update and Security alerts
 
