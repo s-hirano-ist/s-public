@@ -1,0 +1,8 @@
+script/vnu-runtime-image/*
+node_modules
+.vercel
+
+*.*
+!*.css
+!*.astro
+LICENSE

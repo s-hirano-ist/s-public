@@ -5,46 +5,44 @@
 @layer base {
   :root,
   html[data-theme="light"] {
-    --color-fill: 251, 254, 251; /*background color WHITE*/
-    --color-text-base: 40, 39, 40; /*text color BLACK*/
-    --color-accent: 0, 108, 172; /*link, hover color LIGHTBLUE*/
-    --color-border: 236, 233, 233; /*border color for horizontal row (hr) GRAY*/
+    --color-fill: 251, 254, 251; /* background color WHITE */
+    --color-text-base: 40, 39, 40; /* text color BLACK */
+    --color-accent: 0, 108, 172; /* link, hover color LIGHTBLUE */
+    --color-border: 236, 233, 233; /* border color for horizontal row (hr) GRAY */
   }
+
   html[data-theme="dark"] {
     --color-fill: 0, 0, 0;
     --color-text-base: 234, 237, 243;
     --color-accent: 119, 162, 192;
     --color-border: 119, 162, 192;
   }
-  #sun-svg,
-  html[data-theme="dark"] #moon-svg {
-    display: none;
-  }
-  #moon-svg,
-  html[data-theme="dark"] #sun-svg {
-    display: block;
-  }
+
   body {
     @apply flex min-h-screen flex-col bg-skin-fill font-custom text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
+
   section,
   footer {
     @apply mx-auto max-w-5xl px-4;
   }
+
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill 
     focus-visible:no-underline focus-visible:outline-dashed;
   }
 
-  /* svg icons*/
+  /* svg icons */
   svg {
     @apply h-6 w-6 scale-100;
   }
+
   /* svg social icons */
   svg.icon-tabler {
     @apply inline-block h-6 w-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 sm:scale-110;
   }
+
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
     prose-h3:italic prose-p:!text-skin-base 
@@ -65,23 +63,29 @@
     prose-img:!mt-2 prose-img:border-2 
     prose-img:border-skin-line prose-hr:!border-skin-line;
   }
+
   .prose a {
     @apply hover:!text-skin-accent;
   }
+
   .prose thead th:first-child,
   tbody td:first-child,
   tfoot td:first-child {
-    padding-left: 0.5714286em;
+    padding-left: 0.5714em;
   }
+
   .prose h2#table-of-contents {
     @apply mb-2;
   }
+
   .prose details {
     @apply inline-block cursor-pointer select-none text-skin-base;
   }
+
   .prose summary {
     @apply focus-outline;
   }
+
   .prose h2#table-of-contents + p {
     @apply hidden;
   }

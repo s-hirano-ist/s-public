@@ -37,6 +37,7 @@ jobs:
       - run: pnpm fmt
       - run: pnpm lint
       - run: pnpm lint:mark
+      - run: pnpm lint:css
       - run: pnpm build
       - run: lhci autorun
         env:
