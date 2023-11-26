@@ -1,14 +1,15 @@
 ---
 import portfolioImage from "@assets/portfolio.webp";
+import AboutMe from "@components/AboutMe.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import AboutMe from "@content/portfolio/AboutMe.astro";
-// import Achievements from "@layouts/Achivements.astro";
-import Education from "@content/portfolio/Education.astro";
-import Notes from "@content/portfolio/Notes.astro";
-import PortfolioLinks from "@content/portfolio/PortfolioLinks.astro";
-import Qualification from "@content/portfolio/Qualification.astro";
-import WorkExperience from "@content/portfolio/WorkExperience.astro";
+import Notes from "@components/Notes.astro";
+import PortfolioLinks from "@components/PortfolioLinks.astro";
+import Timeline from "@components/Timeline.astro";
+// import achievementsData from "@layouts/Achivements.json";
+import educationData from "@content/portfolio/Education.json";
+import qualificationData from "@content/portfolio/Qualification.json";
+import workExperienceData from "@content/portfolio/WorkExperience.json";
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 ---
@@ -56,11 +57,11 @@ import { Image } from "astro:assets";
     </section>
     <section class="pb-4">
       <h2>Education</h2>
-      <Education />
+      <Timeline data={educationData} />
     </section>
     <section class="pb-4">
       <h2>Work Experience</h2>
-      <WorkExperience />
+      <Timeline data={workExperienceData} />
     </section>
     <!-- <section class="pb-4">
       <h2>Achievements</h2>
@@ -68,7 +69,7 @@ import { Image } from "astro:assets";
     </section> -->
     <section class="pb-4">
       <h2>Qualification</h2>
-      <Qualification />
+      <Timeline data={qualificationData} />
     </section>
     <section class="px-4 pb-4">
       <h2>Links</h2>
