@@ -10,13 +10,13 @@ dependencies:
     version: 0.3.1(prettier-plugin-astro@0.12.2)(prettier@3.1.0)(typescript@5.3.2)
   '@astrojs/vercel':
     specifier: ^5.2.0
-    version: 5.2.0(astro@3.5.7)
+    version: 5.2.0(astro@3.6.0)
   '@studio-freight/lenis':
     specifier: ^1.0.28
     version: 1.0.28
   astro:
-    specifier: ^3.5.7
-    version: 3.5.7(typescript@5.3.2)
+    specifier: ^3.6.0
+    version: 3.6.0(typescript@5.3.2)
   fuse.js:
     specifier: ^7.0.0
     version: 7.0.0
@@ -72,7 +72,7 @@ devDependencies:
     version: 3.0.3
   '@astrojs/tailwind':
     specifier: ^5.0.2
-    version: 5.0.2(astro@3.5.7)(tailwindcss@3.3.5)
+    version: 5.0.2(astro@3.6.0)(tailwindcss@3.3.5)
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.5)
@@ -149,7 +149,7 @@ devDependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   stylelint:
-    specifier: ^15.10.0
+    specifier: ^15.11.0
     version: 15.11.0(typescript@5.3.2)
   stylelint-config-html:
     specifier: ^1.1.0
@@ -250,13 +250,13 @@ packages:
       - typescript
     dev: false
 
-  /@astrojs/markdown-remark@3.5.0(astro@3.5.7):
+  /@astrojs/markdown-remark@3.5.0(astro@3.6.0):
     resolution: {integrity: sha512-q7vdIqzYhxpsfghg2YmkmSXCfp4w7lBTYP+SSHw89wVhC5Riltr3u8w2otBRxNLSByNi+ht/gGkFC23Shetytw==}
     peerDependencies:
       astro: ^3.0.0
     dependencies:
       '@astrojs/prism': 3.0.0
-      astro: 3.5.7(typescript@5.3.2)
+      astro: 3.6.0(typescript@5.3.2)
       github-slugger: 2.0.0
       import-meta-resolve: 3.1.1
       mdast-util-definitions: 6.0.0
@@ -306,13 +306,13 @@ packages:
       zod: 3.22.4
     dev: true
 
-  /@astrojs/tailwind@5.0.2(astro@3.5.7)(tailwindcss@3.3.5):
+  /@astrojs/tailwind@5.0.2(astro@3.6.0)(tailwindcss@3.3.5):
     resolution: {integrity: sha512-oXqeqmBlkQmsltrsU9nEWeXOtrZIAHW8dcmX7BCdrjzPnU6dPwWzAwhddNQ9ihKiWwsLnlbwQZIo2CDigcZlIA==}
     peerDependencies:
       astro: ^3.2.4
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 3.5.7(typescript@5.3.2)
+      astro: 3.6.0(typescript@5.3.2)
       autoprefixer: 10.4.16(postcss@8.4.31)
       postcss: 8.4.31
       postcss-load-config: 4.0.2(postcss@8.4.31)
@@ -335,7 +335,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/vercel@5.2.0(astro@3.5.7):
+  /@astrojs/vercel@5.2.0(astro@3.6.0):
     resolution: {integrity: sha512-WUMgiVLbDsh2uRaMcjqx3Br7lWNvKSvDqbLwDeR21lJ4UIBB+1PYbQ3cLYLXl6GiksxPx8rg9dry9CDsPcA0nA==}
     peerDependencies:
       astro: ^3.0.0
@@ -343,7 +343,7 @@ packages:
       '@astrojs/internal-helpers': 0.2.1
       '@vercel/analytics': 1.1.1
       '@vercel/nft': 0.23.1
-      astro: 3.5.7(typescript@5.3.2)
+      astro: 3.6.0(typescript@5.3.2)
       esbuild: 0.19.7
       fast-glob: 3.3.2
       set-cookie-parser: 2.6.0
@@ -1895,14 +1895,14 @@ packages:
       - supports-color
     dev: true
 
-  /astro@3.5.7(typescript@5.3.2):
-    resolution: {integrity: sha512-sQiblxFOzWuqo6qdpw15AxGyvQfWa6DMlEazp2+6Ra1pK7uiuK/zxf5LZKiOeZ01Wtv4dveXOwPPwf2eN+5Wew==}
+  /astro@3.6.0(typescript@5.3.2):
+    resolution: {integrity: sha512-mRDzWXsaSBaN+juvunO4Ukq8HQ1WqrULlcZfKzaKEZEXvxiWmMKN9tH0onQH0EaQ7+f4nNR4VN9kYTM26uMrXQ==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 2.3.2
       '@astrojs/internal-helpers': 0.2.1
-      '@astrojs/markdown-remark': 3.5.0(astro@3.5.7)
+      '@astrojs/markdown-remark': 3.5.0(astro@3.6.0)
       '@astrojs/telemetry': 3.0.4
       '@babel/core': 7.23.3
       '@babel/generator': 7.23.4
