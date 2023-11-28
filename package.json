@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "blog",
-  "author": "Soraki Hirano",
+  "author": "s-hirano-ist",
   "packageManager": "pnpm@8.11.0",
   "scripts": {
     "dev": "astro check --watch & astro dev",
