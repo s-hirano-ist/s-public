@@ -18,6 +18,16 @@ const pageTitle = "分野別まとめ記事";
 <Layout title={`${activeNav} | ${SITE.title}`}>
   <Header activeNav={activeNav} />
   <Main pageTitle={pageTitle}>
+    <p class="pt-4">
+      {SITE.author}
+       が読んだ本や思考を可能な限り短くまとめた記事です。
+      読んでもらうことよりも、要点をまとめて自分の中で整理することを目的としています。
+      掲載を取りやめてほしい、あるいは著作権侵害があると思われるリンクやコメントがあれば、
+
+
+      <span class="font-bold">{SITE.email}</span>
+       宛にご連絡ください。
+    </p>
     <ul>
       {
         posts.map(({ data }) => (

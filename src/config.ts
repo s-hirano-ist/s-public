@@ -5,6 +5,7 @@ type Site = {
   title: string;
   ogImage: string;
   postPerPage: number;
+  email: string;
 };
 
 export const SITE: Site = {
@@ -14,4 +15,5 @@ export const SITE: Site = {
   title: "思考の備忘録",
   ogImage: "/defaultOgImage.jpg",
   postPerPage: 10,
+  email: "s-hirano-ist@outlook.com",
 };
