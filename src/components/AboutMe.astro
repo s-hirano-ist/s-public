@@ -1,22 +1,23 @@
 ---
 import githubContribution from "@assets/contribution/github_contribution.png";
 import gitlabContribution from "@assets/contribution/gitlab_contribution.png";
+import { SITE } from "@config";
 import { Image } from "astro:assets";
 ---
 
 <div class="about-me">
-  <p>Hello. This is a portfolio of s-hirano-ist.</p>
+  <p>Hello. This is a portfolio of {SITE.author}.</p>
 </div>
 <br />
 <div class="pb-4">
-  <p>
+  <p class="pb-2">
     Github contributions (mainly on private repositories. Last updated on 26th
     of November 2023.)
   </p>
   <Image src={githubContribution} class="w-full" alt="github contributions" />
 </div>
 <div>
-  <p>
+  <p class="pb-2">
     Gitlab contributions (mainly on private repositories. Last updated on 26th
     of November 2023.)
   </p>

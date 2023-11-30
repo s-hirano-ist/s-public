@@ -26,28 +26,34 @@ import { Image } from "astro:assets";
     <p>
       プログラミング初心者の時に製作したものであるため、技術スタックの選定やコードは初心者ライクなところが多々あります。あらかじめご了承ください。
     </p>
-    <p>
-      今後、必要に応じてリファクタリング、ライブラリのアップデート、技術スタックの再選定等を行い、リエンジニアリングします。
+    <p class="pb-4">
+      ソースコードは
+      <a href="https://github.com/s-hirano-ist/d-plan" target="_blank">
+        github.com/s-hirano-ist/d-plan
+      </a>
+       をクリック
     </p>
-    <Image src={appStoreImage} alt="" />
     <Image src={promotionImage} alt="" />
+    <Image src={appStoreImage} alt="" />
 
-    <Image src={howToImage1} alt="" />
-    <Image src={howToImage2} alt="" />
-    <Image src={howToImage3} alt="" />
-    <Image src={howToImage4} alt="" />
+    <div class="grid grid-cols-2">
+      <Image src={howToImage1} alt="" />
+      <Image src={howToImage2} alt="" />
+      <Image src={howToImage3} alt="" />
+      <Image src={howToImage4} alt="" />
+    </div>
 
-    <Image src={appReviewImage1} alt="" />
-    <Image src={appReviewImage2} alt="" />
-    <Image src={appReviewImage3} alt="" />
-    <Image src={appReviewImage4} alt="" />
-    <Image src={appReviewImage5} alt="" />
+    <Image src={appReviewImage1} alt="" class="w-full" />
+    <Image src={appReviewImage2} alt="" class="w-full" />
+    <Image src={appReviewImage3} alt="" class="w-full" />
+    <Image src={appReviewImage4} alt="" class="w-full" />
+    <Image src={appReviewImage5} alt="" class="w-full" />
   </div>
 </PortfolioLayout>
 
 <style>
   .content {
-    @apply pb-6 pt-8;
+    @apply pb-6;
   }
 
   .content h1 {

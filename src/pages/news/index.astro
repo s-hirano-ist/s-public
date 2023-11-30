@@ -17,6 +17,15 @@ const pageTitle = "注目している・面白いニュースまとめ";
 <Layout title={`${activeNav} | ${SITE.title}`}>
   <Header activeNav={activeNav} />
   <Main pageTitle={pageTitle}>
+    <p class="pt-4">
+      {SITE.author}
+       が注目している、面白いと思ったニュースをまとめたリンク集です。
+      掲載を取りやめてほしい、あるいは著作権侵害があると思われるリンクやコメントがあれば、
+
+
+      <span class="font-bold">{SITE.email}</span>
+       宛にご連絡ください。
+    </p>
     <ul>
       {
         posts.map(({ data }) => (
