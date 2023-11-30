@@ -6,6 +6,7 @@ import Header from "@components/Header.astro";
 import Notes from "@components/Notes.astro";
 import PortfolioLinks from "@components/PortfolioLinks.astro";
 import Timeline from "@components/Timeline.astro";
+import { SITE } from "@config";
 // import achievementsData from "@layouts/Achivements.json";
 import educationData from "@content/portfolio/Education.json";
 import qualificationData from "@content/portfolio/Qualification.json";
@@ -14,7 +15,7 @@ import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 ---
 
-<Layout>
+<Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
   <main class="background main-contents">
     <Header title="Portfolio" darkModeDisabled />
     <section class="pt-8">
