@@ -28,61 +28,20 @@ const color = (targetActiveNav: ContentsType | undefined) => {
         class=`static mt-2 w-48 text-2xl font-semibold ${darkModeDisabled && "text-skin-white"}`>
         {title}
       </a>
-      <nav id="nav-menu">
-        <ul id="menu-items" class="mt-2 flex space-x-2">
-          <li>
-            <LinkButton
-              href="/news"
-              className={color("news")}
-              ariaLabel="posts"
-              title="Posts">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M19 10.132v-6c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2V22l7-4.666L19 22V10.132z"
-                ></path>
-              </svg>
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              href="/summary"
-              className={color("summary")}
-              ariaLabel="posts"
-              title="Posts">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M19 3a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h14zm-2 12h-10l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h10l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm0 -4h-10l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h10l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm0 -4h-10l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h10l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z"
-                ></path>
-              </svg>
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              href="https://private.s-hirano.com"
-              className={color(undefined)}
-              ariaLabel="private"
-              title="Private">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -20 0c0 -5.523 4.477 -10 10 -10zm2 5a3 3 0 0 0 -2.98 2.65l-.015 .174l-.005 .176l.005 .176c.019 .319 .087 .624 .197 .908l.09 .209l-3.5 3.5l-.082 .094a1 1 0 0 0 0 1.226l.083 .094l1.5 1.5l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l.083 -.094a1 1 0 0 0 0 -1.226l-.083 -.094l-.792 -.793l.585 -.585l.793 .792l.094 .083a1 1 0 0 0 1.403 -1.403l-.083 -.094l-.792 -.793l.792 -.792a3 3 0 1 0 1.293 -5.708zm0 2a1 1 0 1 1 0 2a1 1 0 0 1 0 -2z"
-                  stroke-width="0"></path>
-              </svg>
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              href="/search"
-              className={color("search")}
-              ariaLabel="search"
-              title="Search">
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
-                ></path>
-              </svg>
-            </LinkButton>
-          </li>
-        </ul>
+      <nav>
+        <div class="mt-2 flex">
+          <LinkButton
+            href="/search"
+            className={color("search")}
+            ariaLabel="search"
+            title="Search">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
+              ></path>
+            </svg>
+          </LinkButton>
+        </div>
       </nav>
     </div>
   </div>
