@@ -20,7 +20,7 @@ import { Image } from "astro:assets";
     <Header title="Portfolio" darkModeDisabled />
     <section class="pt-8">
       <Image src={portfolioImage} alt="" class="w-full" />
-      <div class="pt-4">
+      <div class="pt-4 sm:pt-8">
         <a id="scroll-button">
           <div class="flex justify-evenly">
             {
@@ -35,7 +35,7 @@ import { Image } from "astro:assets";
                 </svg>
               ))
             }
-            <p class="font-bold text-skin-white">Scroll</p>
+            <p class="font-bold text-skin-white">Scroll to portfolio</p>
             {
               [0, 0].map(_ => (
                 <svg
@@ -51,6 +51,10 @@ import { Image } from "astro:assets";
           </div>
         </a>
       </div>
+    </section>
+    <section class="px-4 pb-4">
+      <h2>Links</h2>
+      <PortfolioLinks />
     </section>
     <section class="pb-4" id="about-me">
       <h2>About me</h2>
@@ -71,10 +75,6 @@ import { Image } from "astro:assets";
     <section class="pb-4">
       <h2>Qualification</h2>
       <Timeline data={qualificationData} />
-    </section>
-    <section class="px-4 pb-4">
-      <h2>Links</h2>
-      <PortfolioLinks />
     </section>
     <section class="px-4 pb-4">
       <h2>Notes</h2>
