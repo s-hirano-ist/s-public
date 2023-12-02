@@ -8,8 +8,7 @@ const { href, title, description } = Astro.props;
 ---
 
 <a href={href} class="hover:text-skin-accent">
-  <div
-    class="flex flex-col justify-between rounded border p-4 text-skin-white shadow-sm">
+  <div class="flex flex-col justify-between rounded border p-4 shadow-sm">
     <div class="flex h-16 w-16 items-center justify-center rounded-full">
       <slot />
     </div>
