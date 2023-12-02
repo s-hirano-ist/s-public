@@ -35,7 +35,7 @@ import { Image } from "astro:assets";
                 </svg>
               ))
             }
-            <p class="font-bold text-skin-white">Scroll to portfolio</p>
+            <p class="font-bold">Scroll to portfolio</p>
             {
               [0, 0].map(_ => (
                 <svg
@@ -76,7 +76,7 @@ import { Image } from "astro:assets";
       <h2>Qualification</h2>
       <Timeline data={qualificationData} />
     </section>
-    <section class="px-4 pb-4">
+    <section class="px-4 pb-8">
       <h2>Notes</h2>
       <Notes />
     </section>
@@ -86,6 +86,8 @@ import { Image } from "astro:assets";
 
 <style>
   .background {
+    @apply text-skin-white;
+
     background: url("/portfolioBgImage.webp");
   }
 

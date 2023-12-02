@@ -24,6 +24,7 @@
   "lint-staged": {
     "*": "pnpm fmt",
     "src/**/*.{js, jsx, ts, tsx, astro}": "pnpm lint",
+    "src/**/*.{css, astro}": "pnpm lint:css",
     "_markdown/**/*.md": "pnpm lint:mark",
     "src/**/*": "python3 script/generate_photo_path.py"
   },
