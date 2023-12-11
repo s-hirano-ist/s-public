@@ -1,7 +1,7 @@
 ---
 heading: morality
 description: 道徳について
-draft: false
+draft: true
 ---
 
 ## 安楽死

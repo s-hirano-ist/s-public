@@ -1,7 +1,7 @@
 ---
 heading: education
 description: 教育について
-draft: false
+draft: true
 ---
 
 ## 教育予算

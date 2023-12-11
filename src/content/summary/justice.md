@@ -1,7 +1,7 @@
 ---
 heading: justice
 description: 正義とは?
-draft: false
+draft: true
 ---
 
 ## 正義の種類

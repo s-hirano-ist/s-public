@@ -1,7 +1,7 @@
 ---
 heading: human
 description: 人体について
-draft: false
+draft: true
 ---
 
 ## 意識

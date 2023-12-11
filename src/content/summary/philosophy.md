@@ -1,7 +1,7 @@
 ---
 heading: philosophy
 description: 哲学について
-draft: false
+draft: true
 ---
 
 ## 史上最強の哲学入門
