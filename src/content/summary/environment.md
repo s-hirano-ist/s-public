@@ -1,7 +1,7 @@
 ---
 heading: environment
 description: 環境について
-draft: true
+draft: false
 ---
 
 ## EV化
