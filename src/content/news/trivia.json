@@ -194,6 +194,14 @@
       "title": "紛らわしいSSRという用語",
       "quote": "SSR という用語が、 <br /> - データフェッチが発生するサイド <br /> - データフェッチが発生するタイミング <br /> - レンダリングが発生するサイド <br /> - レンダリングが発生するタイミング <br /> - ナビゲーションの仕組みの側面で利用されており、混乱の元になっている。",
       "url": "https://zenn.dev/sumiren/articles/349c60f19c505f"
+    },
+    {
+      "title": "変なサイトにアクセスしていなくても、ブラウザでプッシュ通知を許可してしまうと変なサイトからトラヒックが生じる。",
+      "url": "https://www.itmedia.co.jp/news/articles/2312/06/news163.html"
+    },
+    {
+      "title": "Shift_JISのクソさ",
+      "url": "https://qiita.com/shirokuma89dev/items/1e3a01aa8071507850cd"
     }
   ]
 }
