@@ -28,6 +28,8 @@ draft: false
 ![suggestion](https://img.shields.io/badge/review-suggestion-blue.svg)
 ```
 
+[プルリクエストへのコメントでは Text Blaze でラベルバッジをつけよう！](https://qiita.com/iganin/items/aee297eade84849cc9cd)
+
 ### コミットメッセージの書き方で参考にできるもの
 
 [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/)

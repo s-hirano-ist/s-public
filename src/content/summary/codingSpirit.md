@@ -40,6 +40,12 @@ GraphQL
 
 - [Apollo Sandbox](https://www.apollographql.com/docs/graphos/explorer/sandbox/): 動いているGraphQLサーバにpost可能なQuery/Mutationのドキュメントを確認可能。
 
+### スキーマ駆動開発
+
+スキーマの定義ファイルからフロントエンドもバックエンドも実装を行う開発方針。
+
+[スキーマ駆動開発ってなに？便利なの？って方へ。](https://zenn.dev/manabu/articles/35ea2ddfe2df3a)
+
 ### CI
 
 コードの体裁を守ることによって品質管理がしやすくなる。
