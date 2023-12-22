@@ -18,6 +18,7 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
 **Code Formatting** - [Prettier](https://prettier.io/)  
 **Linting** - [ESLint](https://eslint.org)  
+**CSS Linting** - [Stylelint](https://stylelint.io/)  
 **Auto Commit Rejection** - [Husky](https://typicode.github.io/husky/)  
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
 **HTML checker** - [nu html checker](https://github.com/validator/validator)  

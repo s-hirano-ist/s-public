@@ -37,7 +37,9 @@ const ogUrl = new URL(`${heading}.png`, Astro.url.origin).href;
           return (
             <div class="overflow-hidden rounded py-1 shadow-lg sm:px-4">
               <h2 class="text-xl">{d.title}</h2>
-              <Fragment set:html={sanitizeHtml(d.quote ?? "")} />
+              <div class="text-skin-lightBlue">
+                <Fragment set:html={sanitizeHtml(d.quote ?? "")} />
+              </div>
               <LinkCard url={d.url} />
             </div>
           );

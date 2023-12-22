@@ -1,29 +1,29 @@
-{
-  "extends": ["stylelint-config-standard", "stylelint-config-html"],
-  "plugins": [
+export default {
+  extends: ["stylelint-config-standard", "stylelint-config-html"],
+  plugins: [
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-no-unsupported-browser-features",
-    "stylelint-order"
+    "stylelint-order",
   ],
-  "rules": {
+  rules: {
     "order/order": ["custom-properties", "declarations"],
     "order/properties-order": ["width", "height"],
     "plugin/declaration-block-no-ignored-properties": true,
     "plugin/no-unsupported-browser-features": [
       true,
       {
-        "browsers": [
+        browsers: [
           "last 2 Chrome versions",
           "last 2 Safari versions",
-          "last 2 Firefox versions"
+          "last 2 Firefox versions",
         ],
-        "ignorePartialSupport": true
-      }
+        ignorePartialSupport: true,
+      },
     ],
     "at-rule-no-unknown": [
       true,
-      { "ignoreAtRules": ["tailwind", "layer", "apply"] }
+      { ignoreAtRules: ["tailwind", "layer", "apply"] },
     ],
-    "function-no-unknown": [true, { "ignoreFunctions": ["theme", "screen"] }]
-  }
-}
+    "function-no-unknown": [true, { ignoreFunctions: ["theme", "screen"] }],
+  },
+};
