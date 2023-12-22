@@ -1,0 +1,14 @@
+{
+  "heading": "website",
+  "description": "面白いツールやウェブサイト",
+  "body": [
+    {
+      "title": "Githubでの活躍を可視化",
+      "url": "https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file"
+    },
+    {
+      "title": "技術系アイコン作成",
+      "url": "https://shields.io/"
+    }
+  ]
+}
