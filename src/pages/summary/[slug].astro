@@ -40,14 +40,7 @@ export async function getStaticPaths() {
       class="prose mx-auto flex max-w-5xl flex-row">
       <div
         id="post-side-nav"
-        class="fixed left-0 z-10 h-full w-0 overflow-y-auto overflow-x-hidden rounded-lg bg-skin-gray pt-8 duration-500">
-        <span class="close-sidebar-button absolute right-0 top-0 m-4 text-2xl">
-          <svg xmlns="http://www.w3.org/2000/svg" class="scale-100">
-            <path
-              d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
-            ></path>
-          </svg>
-        </span>
+        class="fixed left-0 z-10 h-full w-0 overflow-y-auto overflow-x-hidden rounded-lg bg-skin-darkBlue pt-2 duration-500">
         <div class="pr-8">
           <PostSidebar post={post.body} />
         </div>
@@ -111,10 +104,5 @@ export async function getStaticPaths() {
   const openButton = document.querySelector("h1.open-sidebar-button");
   openButton?.addEventListener("click", () => {
     openNav();
-  });
-
-  const closeButton = document.querySelector("span.close-sidebar-button");
-  closeButton?.addEventListener("click", () => {
-    closeNav();
   });
 </script>
