@@ -27,19 +27,8 @@
     @apply mx-auto max-w-5xl px-4;
   }
 
-  a {
-    @apply outline-2 outline-offset-1 outline-skin-fill 
-    focus-visible:no-underline focus-visible:outline-dashed;
-  }
-
-  /* svg icons */
   svg {
     @apply h-6 w-6 scale-100;
-  }
-
-  /* svg social icons */
-  svg.icon-tabler {
-    @apply inline-block h-6 w-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 sm:scale-110;
   }
 
   .prose {
@@ -50,8 +39,6 @@
     prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
     prose-strong:!text-skin-base
-
-    
     prose-code:bg-opacity-75 prose-code:p-1 prose-code:!text-skin-base 
     prose-code:before:!content-[''] prose-code:after:!content-['']
     prose-pre:!text-skin-base prose-ol:!text-skin-base 
@@ -65,33 +52,5 @@
 
   .prose a {
     @apply hover:!text-skin-accent;
-  }
-
-  .prose thead th:first-child,
-  tbody td:first-child,
-  tfoot td:first-child {
-    padding-left: 0.5714em;
-  }
-
-  .prose h2#table-of-contents {
-    @apply mb-2;
-  }
-
-  .prose details {
-    @apply inline-block cursor-pointer select-none text-skin-base;
-  }
-
-  .prose summary {
-    @apply focus-outline;
-  }
-
-  .prose h2#table-of-contents + p {
-    @apply hidden;
-  }
-}
-
-@layer components {
-  .focus-outline {
-    @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
 }
