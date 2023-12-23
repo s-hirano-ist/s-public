@@ -111,3 +111,7 @@ GitHubのPRの作成とその後の議論方法
 新人プログラマをコードレビューで殺さない方法
 
 [新人プログラマをレビューで殺さない方法](https://qiita.com/hiraike32/items/32840b11536fa1b78621)
+
+円滑なコミュニケーションを育むための聴く技術
+
+[話を聴く技術](https://speakerdeck.com/kaminashi/listening-skills)
