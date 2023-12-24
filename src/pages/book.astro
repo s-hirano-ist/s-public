@@ -1,0 +1,54 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Main from "@components/Main.astro";
+import Rating from "@components/Rating.astro";
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const pathname = Astro.url.pathname;
+const books = (await getCollection("book"))[0]?.data.body;
+if (!books) throw new Error("No book data found");
+
+const pageTitle = "読書記録";
+---
+
+<Layout title={`${SITE.title}${pathname}`}>
+  <Header />
+  <Main pageTitle={pageTitle}>
+    <p class="pt-4">
+      {SITE.author}
+       が印象に残っている本を記録したオンライン本棚です。
+      <a href="https://developers.google.com/books" target="_blank">
+        Google Books APIs
+      </a>
+       から情報を取得しています。
+    </p>
+    <div class="grid grid-cols-2 gap-4 pt-8">
+      {
+        books.map(book => (
+          <div class="card shadow-xl">
+            <figure>
+              <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="XXX"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">{book.title}</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <Rating rating={2} />
+              <div class="card-actions justify-end">
+                {book.tags.map(tag => (
+                  <div class="badge badge-outline">#{tag}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Main>
+  <Footer />
+</Layout>

@@ -10,7 +10,7 @@ export const markdownSchema = z
 
 export type MarkdownFrontmatter = z.infer<typeof markdownSchema>;
 
-export const jsonSchema = z
+export const newsSchema = z
   .object({
     heading: z.string(),
     description: z.string(),
@@ -24,4 +24,19 @@ export const jsonSchema = z
   })
   .strict();
 
-export type JsonFrontmatter = z.infer<typeof jsonSchema>;
+export type NewsFrontmatter = z.infer<typeof newsSchema>;
+
+export const bookSchema = z
+  .object({
+    body: z.array(
+      z.object({
+        title: z.string(),
+        ISBN: z.string(),
+        rating: z.number().int().min(1).max(5),
+        tags: z.array(z.string()),
+      }),
+    ),
+  })
+  .strict();
+
+export type BookFrontmatter = z.infer<typeof bookSchema>;

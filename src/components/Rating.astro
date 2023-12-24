@@ -1,0 +1,18 @@
+---
+export type Props = {
+  rating: number;
+};
+const { rating } = Astro.props;
+---
+
+<div class="rating">
+  {
+    [...Array(5).keys()].map(int => {
+      return int < rating ? (
+        <input type="radio" name="rating-1" class="mask mask-star" checked />
+      ) : (
+        <input type="radio" name="rating-1" class="mask mask-star" />
+      );
+    })
+  }
+</div>
