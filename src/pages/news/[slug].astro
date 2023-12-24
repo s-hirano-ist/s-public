@@ -35,13 +35,14 @@ const tocLinks = jsonToToc(post);
 <Layout title={heading} description={description} ogImage={ogUrl}>
   <Header />
   <Main pageTitle={heading} dropdownItem={tocLinks}>
-    <article id="article" role="article" class="prose mx-auto max-w-5xl">
+    <article
+      id="article"
+      role="article"
+      class="prose mx-auto max-w-5xl sm:px-4">
       {
         body.map(d => {
           return (
-            <div
-              class="overflow-hidden rounded py-1 shadow-lg sm:px-4"
-              id={d.title}>
+            <div class="overflow-hidden rounded py-1 shadow-lg" id={d.title}>
               <h2 class="text-xl">{d.title}</h2>
               <div class="text-skin-lightBlue">
                 <Fragment set:html={sanitizeHtml(d.quote ?? "")} />
