@@ -13,7 +13,7 @@ const getToc = (options: Options) => {
   };
 };
 
-export async function markdownToToc(markdown: string) {
+export async function markdownToToc(markdownData: string) {
   const result = await unified()
     .use(remarkParse)
     .use(getToc, {
@@ -22,7 +22,7 @@ export async function markdownToToc(markdown: string) {
     })
     .use(remarkRehype)
     .use(rehypeStringify)
-    .process(markdown);
+    .process(markdownData);
 
   return result.toString();
 }
