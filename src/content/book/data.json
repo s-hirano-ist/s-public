@@ -1,16 +1,10 @@
 {
   "body": [
     {
-      "ISBN": "曲作り with ChatGPT",
+      "ISBN": "9784478109182",
       "title": "13歳からのアート思考",
-      "rating": 1,
-      "tags": ["aaa", "bbb"]
-    },
-    {
-      "ISBN": "曲作り with ChatGPT",
-      "title": "35歳の高校生",
-      "rating": 4,
-      "tags": ["ccc", "ddd"]
+      "rating": 5,
+      "tags": ["アート"]
     }
   ]
 }
