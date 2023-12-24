@@ -1,6 +1,7 @@
 ---
 import githubContribution from "@assets/contribution/github_contribution.png";
 import gitlabContribution from "@assets/contribution/gitlab_contribution.png";
+import Socials from "@components/Socials.astro";
 import { SITE } from "@config";
 import { Image } from "astro:assets";
 ---
@@ -9,17 +10,22 @@ import { Image } from "astro:assets";
   <p>Hello. This is a portfolio of {SITE.author}.</p>
 </div>
 <br />
-<div class="pb-4">
+<div class="pb-8">
+  <Socials />
+</div>
+<div class="pb-8">
   <p class="pb-2">
-    Github contributions (mainly on private repositories. Last updated on 26th
-    of November 2023.)
+    <a href="https://github.com/s-hirano-ist" target="_blank">Github</a>
+     contributions (mainly on private repositories. Last updated on 26th of
+    November 2023.)
   </p>
   <Image src={githubContribution} class="w-full" alt="github contributions" />
 </div>
 <div>
   <p class="pb-2">
-    Gitlab contributions (mainly on private repositories. Last updated on 26th
-    of November 2023.)
+    <a href="https://gitlab.com/s-hirano-ist" target="_blank">Gitlab</a>
+     contributions (mainly on private repositories. Last updated on 26th of
+    November 2023.)
   </p>
   <Image src={gitlabContribution} class="w-full" alt="gitlab contributions" />
 </div>
