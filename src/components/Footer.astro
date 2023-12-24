@@ -1,6 +1,5 @@
 ---
 import Hr from "@components/Hr.astro";
-import Socials from "@components/Socials.astro";
 
 const currentYear = new Date().getFullYear();
 
@@ -10,32 +9,13 @@ export type Props = {
 const { darkModeDisabled = false } = Astro.props;
 ---
 
-<footer class={`mt-auto ${darkModeDisabled && "text-skin-white"}`}>
+<footer class={`w-full ${darkModeDisabled && "text-skin-white"}`}>
   <Hr noPadding />
-  <div class="footer-wrapper">
-    <Socials />
-    <div class="copyright-wrapper">
+  <div class="flex justify-between py-2">
+    <div class="my-2 flex items-center whitespace-nowrap">
       <span>Copyright &#169; {currentYear}</span>
-      <span class="separator">&nbsp;|&nbsp;</span>
+      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
       <span>All rights reserved.</span>
     </div>
   </div>
 </footer>
-
-<style>
-  footer {
-    @apply w-full;
-  }
-
-  .footer-wrapper {
-    @apply flex flex-row-reverse justify-between py-2;
-  }
-
-  .copyright-wrapper {
-    @apply my-2 flex flex-col items-center whitespace-nowrap sm:flex-row;
-  }
-
-  .separator {
-    @apply hidden sm:inline;
-  }
-</style>

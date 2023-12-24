@@ -4,6 +4,7 @@ import Header from "@components/Header.astro";
 import LinkCard from "@components/LinkCard.astro";
 import Main from "@components/Main.astro";
 import Layout from "@layouts/Layout.astro";
+import { jsonToToc } from "@utils/jsonToHtml";
 import slugify from "@utils/slugify";
 import { type CollectionEntry, getCollection } from "astro:content";
 import sanitizeHtml from "sanitize-html";
@@ -25,17 +26,23 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 
 const { heading, description, body } = post.data;
+
 const ogUrl = new URL(`${heading}.png`, Astro.url.origin).href;
+
+const tocLinks = jsonToToc(post);
 ---
 
 <Layout title={heading} description={description} ogImage={ogUrl}>
   <Header />
-  <Main pageTitle={heading}>
-    <article id="article" role="article" class="prose mx-auto max-w-5xl">
+  <Main pageTitle={heading} dropdownItem={tocLinks}>
+    <article
+      id="article"
+      role="article"
+      class="prose mx-auto max-w-5xl sm:px-4">
       {
         body.map(d => {
           return (
-            <div class="overflow-hidden rounded py-1 shadow-lg sm:px-4">
+            <div class="overflow-hidden rounded py-1 shadow-lg" id={d.title}>
               <h2 class="text-xl">{d.title}</h2>
               <div class="text-skin-lightBlue">
                 <Fragment set:html={sanitizeHtml(d.quote ?? "")} />
