@@ -25,22 +25,3 @@ export const newsSchema = z
   .strict();
 
 export type NewsFrontmatter = z.infer<typeof newsSchema>;
-
-export const bookSchema = z
-  .object({
-    body: z.array(
-      z.object({
-        title: z.string(),
-        subTitle: z.string(),
-        authors: z.array(z.string()),
-        description: z.string(),
-        tags: z.array(z.string()),
-        imageSrc: z.string().url(),
-        href: z.string().url(),
-        rating: z.number().int().min(0).max(5),
-      }),
-    ),
-  })
-  .strict();
-
-export type BookFrontmatter = z.infer<typeof bookSchema>;

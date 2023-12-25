@@ -2,13 +2,11 @@
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
-import Rating from "@components/Rating.astro";
+import BookList from "@components/react/BookList";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
-import { getCollection } from "astro:content";
 
 const pathname = Astro.url.pathname;
-const books = (await getCollection("book"))[0]?.data.body ?? [];
 const pageTitle = "読書記録";
 ---
 
@@ -23,38 +21,7 @@ const pageTitle = "読書記録";
       </a>
        から情報を取得しています。
     </p>
-    <div class="grid px-4 pt-8 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-      {
-        books.map(book => (
-          <a class="card shadow-xl" href={book.href} target="_blank">
-            <figure>
-              <img src={book.imageSrc} alt={book.title} />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">{book.title}</h2>
-              <p class="card-subtitle">{book.subTitle}</p>
-              <div class="badge badge-primary">{book.authors.toString()}</div>
-              <p class="text2">{book.description}</p>
-              <Rating rating={book.rating} />
-              <div class="card-actions justify-end">
-                {book.tags.map(tag => (
-                  <div class="badge badge-outline">#{tag}</div>
-                ))}
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
+    <BookList />
   </Main>
   <Footer />
 </Layout>
-
-<style>
-  .text2 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 10;
-    overflow: hidden;
-  }
-</style>

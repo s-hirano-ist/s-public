@@ -10,9 +10,20 @@ const api = googleBooksApis({
   version: "v1",
 });
 
+type BookType = {
+  title: string;
+  subTitle: string;
+  authors: string[];
+  description: string;
+  tags: string[];
+  imageSrc: string;
+  href: string;
+  rating: number;
+}[];
+
 console.log("Start fetching book data from Google Books APIs...");
 try {
-  const books = [];
+  const books: BookType = [];
   for (const _book of _books.body) {
     const book = await api.volumes.list({ q: `isbn:${_book.ISBN}` });
     // MEMO: do not run parallelly due to access limit to Google Books APIs
@@ -37,7 +48,7 @@ try {
     console.log("status of", _book.title, ": ", book.status);
   }
 
-  writeFileSync(FILE_PATH, JSON.stringify({ body: books }));
+  writeFileSync(FILE_PATH, JSON.stringify(books));
 } catch (error) {
   console.error(error);
 }
