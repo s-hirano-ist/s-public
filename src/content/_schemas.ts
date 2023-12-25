@@ -31,9 +31,13 @@ export const bookSchema = z
     body: z.array(
       z.object({
         title: z.string(),
-        ISBN: z.string(),
-        rating: z.number().int().min(0).max(5),
+        subTitle: z.string(),
+        authors: z.array(z.string()),
+        description: z.string(),
         tags: z.array(z.string()),
+        imageSrc: z.string().url(),
+        href: z.string().url(),
+        rating: z.number().int().min(0).max(5),
       }),
     ),
   })

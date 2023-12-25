@@ -4,36 +4,12 @@ import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
 import Rating from "@components/Rating.astro";
 import { SITE } from "@config";
-import { books as googleBooksApis } from "@googleapis/books";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const pathname = Astro.url.pathname;
-const _books = (await getCollection("book"))[0]?.data.body ?? [];
+const books = (await getCollection("book"))[0]?.data.body ?? [];
 const pageTitle = "読書記録";
-
-const api = googleBooksApis({
-  version: "v1",
-});
-
-// MEMO: do not run parallelly due to access limit to Google Books APIs
-let books = [];
-for (const _book of _books) {
-  const book = await api.volumes.list({ q: `isbn:${_book.ISBN}` });
-  books.push({
-    title: book.data.items?.[0]?.volumeInfo?.title ?? _book.title,
-    subTitle: book.data.items?.[0]?.volumeInfo?.subtitle ?? "",
-    authors: book.data.items?.[0]?.volumeInfo?.authors?.[0],
-    description:
-      book.data.items?.[0]?.volumeInfo?.description ?? "No description",
-    tags: _book.tags,
-    imageSrc:
-      book.data.items?.[0]?.volumeInfo?.imageLinks?.thumbnail ??
-      "/defaultOgImage.jpg",
-    href: book.data.items?.[0]?.volumeInfo?.infoLink ?? "",
-    rating: _book.rating,
-  });
-}
 ---
 
 <Layout title={`${SITE.title}${pathname}`}>
@@ -57,7 +33,7 @@ for (const _book of _books) {
             <div class="card-body">
               <h2 class="card-title">{book.title}</h2>
               <p class="card-subtitle">{book.subTitle}</p>
-              <div class="badge badge-primary">{book.authors?.toString()}</div>
+              <div class="badge badge-primary">{book.authors.toString()}</div>
               <p>{book.description}</p>
               <Rating rating={book.rating} />
               <div class="card-actions justify-end">
