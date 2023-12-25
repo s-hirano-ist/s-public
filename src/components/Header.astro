@@ -6,18 +6,11 @@ import { SITE } from "@config";
 export type ContentsType = "summary" | "news" | "search";
 
 export type Props = {
-  activeNav?: ContentsType;
   title?: string;
   darkModeDisabled?: boolean;
 };
 
-const { activeNav, title = SITE.title, darkModeDisabled = false } = Astro.props;
-
-const color = (targetActiveNav: ContentsType | undefined) => {
-  if (darkModeDisabled) return "fill-skin-white";
-
-  return activeNav === targetActiveNav ? "fill-skin-accent" : "fill-skin-base";
-};
+const { title = SITE.title, darkModeDisabled = false } = Astro.props;
 ---
 
 <header>
@@ -29,11 +22,7 @@ const color = (targetActiveNav: ContentsType | undefined) => {
     </a>
     <nav class="flex gap-2">
       <div>
-        <LinkButton
-          href="/search"
-          className={color("search")}
-          ariaLabel="search"
-          title="Search">
+        <LinkButton href="/search" ariaLabel="search" title="Search">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-search"
@@ -69,10 +58,11 @@ const color = (targetActiveNav: ContentsType | undefined) => {
             <a href="/news">News</a>
           </li>
           <li><a href="/summary">Summary</a></li>
+          <li><a href="/book">Book</a></li>
           <li><a href="/tech-stack">Tech-stack</a></li>
-          <li><a href="/d-plan">d-plan</a></li>
           <li><a href="/photo">Photo</a></li>
           <li><a href="/diy">DIY</a></li>
+          <li><a href="/d-plan">d-plan</a></li>
           <li>
             <a href="https://private.s-hirano.com" target="_blank"
               >Private page</a

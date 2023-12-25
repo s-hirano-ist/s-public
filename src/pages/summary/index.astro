@@ -9,14 +9,13 @@ import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
 import { getCollection } from "astro:content";
 
+const pathname = Astro.url.pathname;
 const posts = getSortedPosts(await getCollection("summary"));
-
-const activeNav = "summary";
 const pageTitle = "分野別まとめ記事";
 ---
 
-<Layout title={`${activeNav} | ${SITE.title}`}>
-  <Header activeNav={activeNav} />
+<Layout title={`${SITE.title} ${pathname}`}>
+  <Header />
   <Main pageTitle={pageTitle}>
     <p class="pt-4">
       {
@@ -40,7 +39,7 @@ const pageTitle = "分野別まとめ記事";
       {
         posts.map(({ data }) => (
           <PostCard
-            href={`/${activeNav}/${slugify(data)}`}
+            href={`${pathname}/${slugify(data)}`}
             title={data.heading}
             description={data.description}
           />
