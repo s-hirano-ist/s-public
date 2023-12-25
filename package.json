@@ -19,7 +19,9 @@
     "lint:mark": "markdownlint-cli2 src/content/summary/*",
     "lint:mark:fix": "markdownlint-cli2-fix src/content/summary/*",
     "lint:css": "stylelint .",
-    "lint:css:fix": "stylelint . --fix"
+    "lint:css:fix": "stylelint . --fix",
+    "generate:photo": "python script/generate_photo_path.py",
+    "generate:book": "node --loader ts-node/esm script/generateBookData.ts"
   },
   "lint-staged": {
     "*": "pnpm fmt",
@@ -86,6 +88,7 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
     "stylelint-no-unsupported-browser-features": "^7.0.0",
     "stylelint-order": "^6.0.4",
+    "ts-node": "^10.9.2",
     "vnu-jar": "^23.4.11"
   }
 }

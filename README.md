@@ -65,6 +65,12 @@ python script/generate_photo_path.py
 docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app python:3.11 python3 script/generate_photo_path.py
 ```
 
+### Updating books at `src/content/book/original.json`
+
+```bash
+pnpm generate:book
+```
+
 ### Vercel deployment
 
 Add github integration for auto-deployment on vercel.
