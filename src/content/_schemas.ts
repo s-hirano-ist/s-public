@@ -32,7 +32,7 @@ export const bookSchema = z
       z.object({
         title: z.string(),
         ISBN: z.string(),
-        rating: z.number().int().min(1).max(5),
+        rating: z.number().int().min(0).max(5),
         tags: z.array(z.string()),
       }),
     ),
