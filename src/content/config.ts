@@ -1,4 +1,4 @@
-import { bookSchema, newsSchema, markdownSchema } from "@content/_schemas";
+import { newsSchema, markdownSchema } from "@content/_schemas";
 import { defineCollection } from "astro:content";
 
 const summaryCollection = defineCollection({
@@ -11,13 +11,7 @@ const newsCollection = defineCollection({
   schema: newsSchema,
 });
 
-const bookCollection = defineCollection({
-  type: "data",
-  schema: bookSchema,
-});
-
 export const collections = {
   summary: summaryCollection,
   news: newsCollection,
-  book: bookCollection,
 };
