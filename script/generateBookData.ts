@@ -2,6 +2,7 @@ import { writeFileSync } from "fs";
 import { books as googleBooksApis } from "@googleapis/books";
 // eslint-disable-next-line no-restricted-imports
 import { _books } from "../src/content/book/_original.ts";
+import { MAX_RATING } from "../src/config";
 
 const FILE_PATH = "src/content/book/data.gen.json";
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -25,6 +26,12 @@ console.log("Start fetching book data from Google Books APIs...");
 try {
   const books: BookType = [];
   for (const _book of _books.body) {
+    const rating = _book.rating;
+    if (!Number.isInteger(rating) || rating < 0 || rating > MAX_RATING)
+      throw new Error(
+        `Rating must be an integer & between 0 and ${MAX_RATING}`,
+      );
+
     const book = await api.volumes.list({ q: `isbn:${_book.ISBN}` });
     // MEMO: do not run parallelly due to access limit to Google Books APIs
     // only 100 access per one minute is allowed
@@ -42,7 +49,7 @@ try {
       href:
         book.data.items?.[0]?.volumeInfo?.infoLink ??
         "https://s-hirano.com/404",
-      rating: _book.rating,
+      rating: rating,
     });
     if (book.status !== 200) throw new Error("Status code not 200");
     console.log("status of", _book.title, ": ", book.status);
