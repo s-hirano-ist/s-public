@@ -15,3 +15,5 @@ export const SITE: Site = {
   ogImage: "/defaultOgImage.jpg",
   email: "s-hirano-ist@outlook.com",
 };
+
+export const MAX_RATING = 5;

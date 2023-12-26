@@ -4,4 +4,4 @@ node_modules
 public
 env.d.ts
 
-script/generateBookData.ts
+script

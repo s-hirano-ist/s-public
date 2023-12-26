@@ -1,12 +1,12 @@
+import { MAX_RATING } from "@config";
+
 type Props = {
   rating: number;
 };
 
 export default function Rating({ rating }: Props) {
-  const MAX_RATING = 5;
-
-  if (rating > MAX_RATING)
-    throw new Error(`Rating cannot be greater than ${MAX_RATING}`);
+  if (!Number.isInteger(rating) || rating < 0 || MAX_RATING < rating)
+    throw new Error(`Rating must be an integer & between 0 and ${MAX_RATING}`);
 
   return (
     <div className="rating">
@@ -15,11 +15,15 @@ export default function Rating({ rating }: Props) {
           <input
             type="radio"
             name="rating-1"
-            className="mask mask-star"
+            className="mask mask-star bg-skin-starYellow"
             checked
           />
         ) : (
-          <input type="radio" name="rating-1" className="mask mask-star" />
+          <input
+            type="radio"
+            name="rating-1"
+            className="mask mask-star bg-skin-starYellow"
+          />
         );
       })}
     </div>
