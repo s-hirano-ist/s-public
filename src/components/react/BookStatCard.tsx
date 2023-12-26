@@ -1,16 +1,20 @@
 import { MAX_RATING } from "@config";
-import { type ChangeEvent } from "react";
+import type { ChangeEvent, MouseEvent } from "react";
 
 export default function BookStatCard({
   totalBooks,
   tags,
   rating,
+  selectedTag,
   handleFilterRating,
+  handleTagClick,
 }: {
   totalBooks: number;
   tags: string[];
   rating: number;
+  selectedTag: string | undefined;
   handleFilterRating: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleTagClick: (e: MouseEvent<HTMLButtonElement>) => void;
 }) {
   return (
     <div className="stat mt-4 flex flex-col shadow">
@@ -25,8 +29,14 @@ export default function BookStatCard({
         <div className="stat h-48 overflow-y-scroll">
           <div>
             {tags.map(tag => (
-              // TODO: link to filter with tags
-              <button className="btn btn-xs m-1">#{tag}</button>
+              <button
+                className={`btn btn-xs m-1 ${
+                  selectedTag === tag && "btn-primary"
+                }`}
+                onClick={handleTagClick}
+                key={tag}>
+                #{tag}
+              </button>
             ))}
           </div>
         </div>
@@ -42,7 +52,7 @@ export default function BookStatCard({
       />
       <div className="stat flex w-full justify-between px-2 text-xs">
         {[...Array(MAX_RATING + 1).keys()].map(int => (
-          <span>{int}</span>
+          <span key={int}>{int}</span>
         ))}
       </div>
     </div>

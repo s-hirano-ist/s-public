@@ -17,12 +17,16 @@ export default function Rating({ rating }: Props) {
             name="rating-1"
             className="mask mask-star bg-skin-starYellow"
             checked
+            disabled
+            key={int}
           />
         ) : (
           <input
             type="radio"
             name="rating-1"
             className="mask mask-star bg-skin-starYellow"
+            disabled
+            key={int}
           />
         );
       })}
