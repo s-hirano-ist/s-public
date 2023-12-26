@@ -9,7 +9,7 @@ export const _books = {
     {
       ISBN: "9784492444689",
       title: "13歳からの地政学",
-      rating: 0,
+      rating: 4,
       tags: ["地政学"],
     },
     {

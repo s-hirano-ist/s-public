@@ -28,6 +28,7 @@ export default {
         inverted: withOpacity("--color-text-base"),
         gray: withOpacity("--color-border"),
         darkBlue: "#426f8f",
+        starYellow: "#F6C90E",
       },
     },
     outlineColor: {
