@@ -97,7 +97,7 @@ export const _books = {
       tags: ["生物学"],
     },
     {
-      ISBN: "",
+      ISBN: "9784150503765",
       title: "これからの「正義」の話をしよう",
       rating: 0,
       tags: ["正義", "哲学"],
@@ -133,7 +133,7 @@ export const _books = {
       tags: ["社会学", "差別", "貧困"],
     },
     {
-      ISBN: "",
+      ISBN: "9784103526827",
       title: "ぼくはイエローでホワイトで、ちょっとブルー2",
       rating: 0,
       tags: ["社会学", "差別", "貧困"],

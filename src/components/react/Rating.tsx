@@ -15,11 +15,15 @@ export default function Rating({ rating }: Props) {
           <input
             type="radio"
             name="rating-1"
-            className="mask mask-star"
+            className="bg-orange-400 mask mask-star"
             checked
           />
         ) : (
-          <input type="radio" name="rating-1" className="mask mask-star" />
+          <input
+            type="radio"
+            name="rating-1"
+            className="bg-orange-400 mask mask-star"
+          />
         );
       })}
     </div>

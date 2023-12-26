@@ -54,10 +54,3 @@
     @apply hover:!text-skin-accent;
   }
 }
-
-.book-list-p {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 10;
-  overflow: hidden;
-}

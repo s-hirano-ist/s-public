@@ -1,11 +1,17 @@
 import { writeFileSync } from "fs";
 import { books as googleBooksApis } from "@googleapis/books";
-// eslint-disable-next-line no-restricted-imports
 import { _books } from "../src/content/book/_original.ts";
-import { MAX_RATING } from "../src/config";
+import { MAX_RATING } from "../src/config.ts";
+import {
+  appropriateRating,
+  appropriateIsbn,
+  isbnDuplication,
+  sleep,
+} from "./utils.ts";
 
 const FILE_PATH = "src/content/book/data.gen.json";
-const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const NO_IMAGE_SRC = "https://s-hirano.com/defaultOgImage.jpg";
+const NOT_FOUND_HREF = "https://s-hirano.com/404";
 
 const api = googleBooksApis({
   version: "v1",
@@ -25,17 +31,25 @@ type BookType = {
 console.log("Start fetching book data from Google Books APIs...");
 try {
   const books: BookType = [];
+
+  if (isbnDuplication(_books.body.map(_book => _book.ISBN))) {
+    throw new Error("Duplicated book registered");
+  }
+
   for (const _book of _books.body) {
-    const rating = _book.rating;
-    if (!Number.isInteger(rating) || rating < 0 || rating > MAX_RATING)
+    if (!appropriateIsbn(_book.ISBN))
+      throw new Error("ISBN must be a string & length of 13");
+
+    if (!appropriateRating(_book.rating, MAX_RATING))
       throw new Error(
         `Rating must be an integer & between 0 and ${MAX_RATING}`,
       );
-
     const book = await api.volumes.list({ q: `isbn:${_book.ISBN}` });
     // MEMO: do not run parallelly due to access limit to Google Books APIs
     // only 100 access per one minute is allowed
+
     await sleep(600);
+
     books.push({
       title: book.data.items?.[0]?.volumeInfo?.title ?? _book.title,
       subTitle: book.data.items?.[0]?.volumeInfo?.subtitle ?? "",
@@ -44,12 +58,9 @@ try {
         book.data.items?.[0]?.volumeInfo?.description ?? "No description",
       tags: _book.tags,
       imageSrc:
-        book.data.items?.[0]?.volumeInfo?.imageLinks?.thumbnail ??
-        "https://s-hirano.com/defaultOgImage.jpg",
-      href:
-        book.data.items?.[0]?.volumeInfo?.infoLink ??
-        "https://s-hirano.com/404",
-      rating: rating,
+        book.data.items?.[0]?.volumeInfo?.imageLinks?.thumbnail ?? NO_IMAGE_SRC,
+      href: book.data.items?.[0]?.volumeInfo?.infoLink ?? NOT_FOUND_HREF,
+      rating: _book.rating,
     });
     if (book.status !== 200) throw new Error("Status code not 200");
     console.log("status of", _book.title, ": ", book.status);
