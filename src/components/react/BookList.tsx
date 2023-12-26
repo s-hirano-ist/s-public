@@ -1,7 +1,13 @@
 import BookStatCard from "@components/react/BookStatCard.tsx";
 import Rating from "@components/react/Rating.tsx";
 import books from "@content/book/data.gen.json";
-import { useMemo, useState, type ChangeEvent, type MouseEvent } from "react";
+import {
+  useMemo,
+  useState,
+  useEffect,
+  type ChangeEvent,
+  type MouseEvent,
+} from "react";
 
 export default function BookList() {
   const totalBooks = books.length;
@@ -25,10 +31,25 @@ export default function BookList() {
   };
 
   const handleTagClick = (e: MouseEvent<HTMLButtonElement>) => {
+    const searchParams = new URLSearchParams(window.location.search);
     const tag = e.currentTarget.innerHTML.slice(1); // delete "#" from tag button name
-    if (tag === selectedTag) setSelectedTag(undefined);
-    else setSelectedTag(tag);
+    if (tag === selectedTag) {
+      setSelectedTag(undefined);
+      history.replaceState(null, "", window.location.pathname);
+    } else {
+      setSelectedTag(tag);
+      searchParams.set("tag", tag);
+      const newRelativePathQuery =
+        window.location.pathname + "?" + searchParams.toString();
+      history.replaceState(null, "", newRelativePathQuery);
+    }
   };
+
+  useEffect(() => {
+    const searchUrl = new URLSearchParams(window.location.search);
+    const searchStr = searchUrl.get("tag");
+    if (searchStr) setSelectedTag(searchStr);
+  }, []);
 
   return (
     <>
