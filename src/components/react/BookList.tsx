@@ -3,7 +3,7 @@ import books from "@content/book/data.gen.json";
 
 export default function BookList() {
   return (
-    <div className="grid px-4 pt-8 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
+    <div className="grid gap-8 px-4 pt-8 sm:grid-cols-2 lg:grid-cols-3">
       {books.map(book => (
         <a className="card shadow-xl" href={book.href} target="_blank">
           <figure>
