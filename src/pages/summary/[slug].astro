@@ -36,7 +36,10 @@ const tocLinks = await markdownToToc(post.body);
 <Layout title={heading} description={description} ogImage={ogUrl}>
   <Header />
   <Main pageTitle={heading} dropdownItem={tocLinks}>
-    <article id="article" role="article" class="prose mx-auto max-w-5xl">
+    <article
+      id="article"
+      role="article"
+      class="prose prose-sm mx-auto max-w-5xl sm:prose-base">
       <div class="sm:px-4">
         <Content />
       </div>

@@ -9,12 +9,15 @@ export type Props = {
 const { darkModeDisabled = false } = Astro.props;
 ---
 
-<footer class={`w-full ${darkModeDisabled ? "text-accent" : "text-primary"}`}>
+<footer
+  class={`w-full ${
+    darkModeDisabled ? "text-accent" : "text-primary"
+  } mx-auto max-w-5xl px-4`}>
   <Hr noPadding darkModeDisabled={darkModeDisabled} />
   <div class="flex justify-between py-2">
     <div class="my-2 flex items-center whitespace-nowrap">
       <span>Copyright &#169; {currentYear}</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
+      <span>&nbsp;|&nbsp;</span>
       <span>All rights reserved.</span>
     </div>
   </div>

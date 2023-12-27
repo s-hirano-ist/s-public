@@ -1,7 +1,7 @@
 ---
 import { SITE } from "@config";
 import "@styles/base.css";
-import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
 
 export type Props = {
   title?: string;
@@ -37,7 +37,8 @@ const socialImageURL = new URL(
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <ViewTransitions />
+    <!-- FIXME: inableing ViewTransitions will not change themes after moving page -->
+    <!-- <ViewTransitions /> -->
 
     <!-- Manifest -->
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -78,9 +79,7 @@ const socialImageURL = new URL(
         lenis.raf(time);
         requestAnimationFrame(raf);
       }
-
       requestAnimationFrame(raf);
-
       const anchor = document.getElementById("scroll-button");
       anchor?.addEventListener("click", e => {
         e.preventDefault(); // prevent changing URL
@@ -96,7 +95,6 @@ const socialImageURL = new URL(
           vaq: Array<unknown>;
         }
       }
-
       window.va =
         window.va ||
         function () {
@@ -106,20 +104,22 @@ const socialImageURL = new URL(
     {!IS_DEV && <script defer src="/_vercel/insights/script.js" />}
 
     <!-- Color Scheme -->
-    <script>
-      const themeValue = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "myDark"
-        : "myLight";
-
-      function setPreference() {
-        document.firstElementChild?.setAttribute("data-theme", themeValue);
+    <script is:inline>
+      // ☝️ This script prevent the FART effect.
+      if (localStorage.getItem("theme") === null) {
+        document.documentElement.setAttribute("data-theme", "myDark");
+      } else {
+        document.documentElement.setAttribute(
+          "data-theme",
+          localStorage.getItem("theme"),
+        );
       }
-      setPreference();
-
-      window.onload = () => {
-        document.addEventListener("astro:after-swap", () => setPreference());
-      };
+      // "theme" LocalStorage value is set by the package to remember user preference.
+      // The value is checked and applyed before rendering anything.
+    </script>
+    <script>
+      import { themeChange } from "theme-change";
+      themeChange();
     </script>
 
     <!-- Google tag (gtag.js) -->

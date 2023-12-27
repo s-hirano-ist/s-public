@@ -3,25 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  :root,
-  html[data-theme="light"] {
-    --color-fill: 251, 254, 251; /* background color WHITE */
-    --color-text-base: 40, 39, 40; /* text color BLACK */
-    --color-accent: 0, 108, 172; /* link, hover color LIGHTBLUE */
-    --color-border: 236, 233, 233; /* border color for horizontal row (hr) GRAY */
-  }
-
   body {
-    @apply min-h-screen font-custom  selection:bg-primary selection:bg-opacity-70 selection:text-accent;
-  }
-
-  section,
-  footer {
-    @apply mx-auto max-w-5xl px-4;
-  }
-
-  svg {
-    @apply h-6 w-6 scale-100;
+    @apply min-h-screen font-custom selection:bg-primary selection:bg-opacity-70 selection:text-accent;
   }
 
   .prose a {

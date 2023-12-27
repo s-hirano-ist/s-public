@@ -18,7 +18,7 @@ import { Image } from "astro:assets";
 <Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
   <main class="background main-contents" data-theme="noTheme">
     <Header title="Portfolio" darkModeDisabled />
-    <section class="pt-8">
+    <section>
       <Image src={portfolioImage} alt="" class="w-full" />
       <div class="pt-4 sm:pt-8">
         <a id="scroll-button">
@@ -52,31 +52,31 @@ import { Image } from "astro:assets";
         </a>
       </div>
     </section>
-    <section class="px-4 pb-4">
+    <section class="pb-4">
       <h2>Links</h2>
       <PortfolioLinks />
     </section>
-    <section class="pb-4" id="about-me">
+    <section id="about-me">
       <h2>About me</h2>
       <AboutMe />
     </section>
-    <section class="pb-4">
+    <section>
       <h2>Education</h2>
       <Timeline data={educationData} />
     </section>
-    <section class="pb-4">
+    <section>
       <h2>Work Experience</h2>
       <Timeline data={workExperienceData} />
     </section>
-    <!-- <section class="pb-4">
+    <!-- <section>
       <h2>Achievements</h2>
       <Achievements />
     </section> -->
-    <section class="pb-4">
+    <section>
       <h2>Qualification</h2>
       <Timeline data={qualificationData} />
     </section>
-    <section class="px-4 pb-8">
+    <section class="pb-8">
       <h2>Notes</h2>
       <Notes />
     </section>
@@ -90,6 +90,10 @@ import { Image } from "astro:assets";
   }
 
   .main-contents h2 {
-    @apply my-4 inline-block text-xl font-bold text-primary sm:my-8 sm:text-2xl;
+    @apply my-4 inline-block text-xl font-bold text-primary sm:text-2xl;
+  }
+
+  .main-contents section {
+    @apply mx-auto max-w-5xl px-4 pt-8;
   }
 </style>

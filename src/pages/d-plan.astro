@@ -14,11 +14,12 @@ import PortfolioLayout from "@layouts/PortfolioLayout.astro";
 import { Image } from "astro:assets";
 ---
 
+<!-- TODO: change to use markdown -->
 <PortfolioLayout
   headerTitle="D-PLAN"
   title="d-plan"
   subTitle="2018年頃にリリースしたiOSアプリの記録">
-  <div class="content">
+  <article class="prose prose-sm max-w-5xl pb-6 sm:prose-base">
     <p>独学で個人開発した旅行計画アプリとなります。</p>
     <p>
       2019年ごろまで実際にiOSアプリストアにリリースしていたものの、収益化に失敗したため、現在は取り下げているアプリとなります。
@@ -48,19 +49,5 @@ import { Image } from "astro:assets";
     <Image src={appReviewImage3} alt="" class="w-full" />
     <Image src={appReviewImage4} alt="" class="w-full" />
     <Image src={appReviewImage5} alt="" class="w-full" />
-  </div>
+  </article>
 </PortfolioLayout>
-
-<style>
-  .content {
-    @apply pb-6;
-  }
-
-  .content h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-
-  .content p {
-    @apply my-2;
-  }
-</style>
