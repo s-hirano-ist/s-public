@@ -44,7 +44,7 @@ const tocLinks = jsonToToc(post);
           return (
             <div class="overflow-hidden rounded py-1 shadow-lg" id={d.title}>
               <h2 class="text-xl">{d.title}</h2>
-              <div class="text-skin-lightBlue">
+              <div class="text-primary">
                 <Fragment set:html={sanitizeHtml(d.quote ?? "")} />
               </div>
               <LinkCard url={d.url} />

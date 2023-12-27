@@ -15,7 +15,7 @@ export default function Rating({ rating }: Props) {
           <input
             type="radio"
             name="rating-1"
-            className="mask mask-star bg-skin-starYellow"
+            className="mask mask-star bg-warning"
             checked
             disabled
             key={int}
@@ -24,7 +24,7 @@ export default function Rating({ rating }: Props) {
           <input
             type="radio"
             name="rating-1"
-            className="mask mask-star bg-skin-starYellow"
+            className="mask mask-star bg-warning"
             disabled
             key={int}
           />

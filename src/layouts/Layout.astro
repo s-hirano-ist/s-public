@@ -109,8 +109,8 @@ const socialImageURL = new URL(
     <script>
       const themeValue = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
-        ? "dark"
-        : "light";
+        ? "myDark"
+        : "myLight";
 
       function setPreference() {
         document.firstElementChild?.setAttribute("data-theme", themeValue);
