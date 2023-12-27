@@ -17,7 +17,7 @@ const { title = SITE.title, darkModeDisabled = false } = Astro.props;
   <div class="mx-auto flex h-16 w-full max-w-5xl justify-between p-4">
     <a
       href="/"
-      class=`static w-48 text-2xl font-semibold ${darkModeDisabled && "text-skin-white"}`>
+      class=`static w-48 text-2xl font-semibold ${darkModeDisabled ? "text-accent":"text-primary"}`>
       {title}
     </a>
     <nav class="flex gap-2">
@@ -53,7 +53,7 @@ const { title = SITE.title, darkModeDisabled = false } = Astro.props;
         </div>
         <ul
           tabindex="0"
-          class="menu dropdown-content menu-sm z-[1] mt-3 w-36 rounded-box bg-skin-darkBlue p-2 shadow">
+          class="menu dropdown-content menu-sm z-[1] mt-3 w-36 rounded-box bg-success p-2 shadow">
           <li>
             <a href="/news">News</a>
           </li>
@@ -72,5 +72,5 @@ const { title = SITE.title, darkModeDisabled = false } = Astro.props;
       </div>
     </nav>
   </div>
-  <Hr darkModeDisabled />
+  <Hr darkModeDisabled={darkModeDisabled} />
 </header>

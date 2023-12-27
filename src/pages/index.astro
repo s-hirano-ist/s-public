@@ -16,7 +16,7 @@ import { Image } from "astro:assets";
 ---
 
 <Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
-  <main class="background main-contents">
+  <main class="background main-contents" data-theme="noTheme">
     <Header title="Portfolio" darkModeDisabled />
     <section class="pt-8">
       <Image src={portfolioImage} alt="" class="w-full" />
@@ -86,12 +86,10 @@ import { Image } from "astro:assets";
 
 <style>
   .background {
-    @apply text-skin-white;
-
     background: url("/portfolioBgImage.webp");
   }
 
   .main-contents h2 {
-    @apply my-4 inline-block text-xl font-bold text-skin-lightBlue sm:my-8 sm:text-2xl;
+    @apply my-4 inline-block text-xl font-bold text-primary sm:my-8 sm:text-2xl;
   }
 </style>

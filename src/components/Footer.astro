@@ -9,8 +9,8 @@ export type Props = {
 const { darkModeDisabled = false } = Astro.props;
 ---
 
-<footer class={`w-full ${darkModeDisabled && "text-skin-white"}`}>
-  <Hr noPadding />
+<footer class={`w-full ${darkModeDisabled ? "text-accent" : "text-primary"}`}>
+  <Hr noPadding darkModeDisabled={darkModeDisabled} />
   <div class="flex justify-between py-2">
     <div class="my-2 flex items-center whitespace-nowrap">
       <span>Copyright &#169; {currentYear}</span>

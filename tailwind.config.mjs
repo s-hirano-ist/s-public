@@ -1,57 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
-function withOpacity(variableName) {
-  return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return `rgba(var(${variableName}), ${opacityValue})`;
-    }
-    return `rgb(var(${variableName}))`;
-  };
-}
-
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   theme: {
-    textColor: {
-      skin: {
-        base: withOpacity("--color-text-base"),
-        accent: withOpacity("--color-accent"),
-        inverted: withOpacity("--color-fill"),
-        white: "#FFFFFF",
-        lightBlue: "#77A2C0",
-      },
-    },
-    backgroundColor: {
-      skin: {
-        fill: withOpacity("--color-fill"),
-        accent: withOpacity("--color-accent"),
-        inverted: withOpacity("--color-text-base"),
-        gray: withOpacity("--color-border"),
-        darkBlue: "#426f8f",
-        starYellow: "#F6C90E",
-      },
-    },
-    outlineColor: {
-      skin: {
-        fill: withOpacity("--color-accent"),
-      },
-    },
-    borderColor: {
-      skin: {
-        line: withOpacity("--color-border"),
-        fill: withOpacity("--color-text-base"),
-        accent: withOpacity("--color-accent"),
-        white: "#FFFFFF",
-      },
-    },
-    fill: {
-      skin: {
-        base: withOpacity("--color-text-base"),
-        accent: withOpacity("--color-accent"),
-        white: "#FFFFFF",
-      },
-      transparent: "transparent",
-    },
     fontFamily: {
       custom: [
         "Hiragino Sans",
@@ -65,4 +16,48 @@ export default {
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        myDark: {
+          primary: "#77a2c0",
+          secondary: "#885d3f",
+          accent: "#FFF",
+          neutral: "#3F9900",
+          "base-100": "#141314",
+          info: "#778899",
+          success: "#426f8f",
+          warning: "#b0c24a",
+          error: "#ff6347",
+        },
+        myLight: {
+          primary: "#426f8f",
+          secondary: "#885d3f",
+          accent: "#000",
+          neutral: "#3F9900",
+          "base-100": "#fff",
+          info: "#778899",
+          success: "#77a2c0",
+          warning: "#b0c24a",
+          error: "#ff6347",
+        },
+        noTheme: {
+          primary: "#77a2c0",
+          secondary: "#885d3f",
+          accent: "#FFF",
+          neutral: "#3F9900",
+          "base-100": "#141314",
+          info: "#778899",
+          success: "#426f8f",
+          warning: "#b0c24a",
+          error: "#ff6347",
+        },
+      },
+    ],
+    darkTheme: "myDark",
+    base: true,
+    styled: true,
+    utils: true,
+    logs: false,
+  },
 };
