@@ -20,9 +20,8 @@ export default function BookStatCard({
     <div className="stat mt-4 flex flex-col shadow">
       <div className="my-4 flex">
         <div>
-          <div className="stat-title">冊数</div>
+          <div className="stat-title">該当冊数</div>
           <div className=" stat-value pt-2 text-primary">{totalBooks}冊</div>
-          <div className="stat-desc">2019年以降</div>
         </div>
         <div className="stat h-48 overflow-y-scroll">
           <div>
@@ -41,7 +40,7 @@ export default function BookStatCard({
       </div>
       <input
         type="range"
-        min={0}
+        min={1}
         max={5}
         value={rating}
         onChange={handleFilterRating}
@@ -49,8 +48,8 @@ export default function BookStatCard({
         step={1}
       />
       <div className="stat flex w-full justify-between px-2 text-xs">
-        {[...Array(MAX_RATING + 1).keys()].map(int => (
-          <span key={int}>{int}</span>
+        {[...Array(MAX_RATING).keys()].map(int => (
+          <span key={int}>{int + 1}</span>
         ))}
       </div>
     </div>

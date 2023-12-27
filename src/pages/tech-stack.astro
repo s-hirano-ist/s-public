@@ -49,7 +49,7 @@ const IMAGE_DATA: { title: string; image: ImageMetadata; alt: string }[] = [
     githubStarsData.map(d => {
       return (
         <div class="pb-4">
-          <a href={d.url} class="font-bold">
+          <a href={d.url} class="link link-primary font-bold">
             {d.url.split("/").pop()}
           </a>
           <p class="text-sm">{d.description}</p>

@@ -10,7 +10,6 @@ import {
 } from "react";
 
 export default function BookList() {
-  const totalBooks = books.length;
   const tags = [...new Set(books.map(book => book.tags).flat())];
 
   const [rating, setFilterRating] = useState<number>(0);
@@ -25,6 +24,8 @@ export default function BookList() {
 
     return tagRatingFilteredBooks;
   }, [books, rating, selectedTag]);
+
+  const totalBooks = filteredBooks.length;
 
   const handleFilterRating = (e: ChangeEvent<HTMLInputElement>) => {
     setFilterRating(Number(e.target.value));
