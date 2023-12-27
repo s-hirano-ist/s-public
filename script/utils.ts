@@ -2,7 +2,7 @@ export const sleep = (ms: number) =>
   new Promise(resolve => setTimeout(resolve, ms));
 
 export const appropriateRating = (rating: number, MAX_RATING: number) => {
-  return !(!Number.isInteger(rating) || rating < 0 || rating > MAX_RATING);
+  return !(!Number.isInteger(rating) || rating < 1 || rating > MAX_RATING);
 };
 
 export const appropriateIsbn = (isbn: string) => {

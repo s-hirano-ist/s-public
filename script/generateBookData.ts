@@ -42,7 +42,7 @@ try {
 
     if (!appropriateRating(_book.rating, MAX_RATING))
       throw new Error(
-        `Rating must be an integer & between 0 and ${MAX_RATING}`,
+        `Rating must be an integer & between 1 and ${MAX_RATING}`,
       );
     const book = await api.volumes.list({ q: `isbn:${_book.ISBN}` });
     // MEMO: do not run parallelly due to access limit to Google Books APIs
