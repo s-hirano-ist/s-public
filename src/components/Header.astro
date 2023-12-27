@@ -1,6 +1,8 @@
 ---
+import DropdownMenu from "@components/DropdownMenu.astro";
 import Hr from "@components/Hr.astro";
 import LinkButton from "@components/LinkButton.astro";
+import ToggleThemeButton from "@components/ToggleThemeButton.astro";
 import { SITE } from "@config";
 
 export type ContentsType = "summary" | "news" | "search";
@@ -26,8 +28,6 @@ const { title = SITE.title, darkModeDisabled = false } = Astro.props;
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-search"
-            width="24"
-            height="24"
             viewBox="0 0 24 24"
             stroke-width="2"
             stroke="currentColor"
@@ -40,36 +40,8 @@ const { title = SITE.title, darkModeDisabled = false } = Astro.props;
           </svg>
         </LinkButton>
       </div>
-      <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="h-8 w-8 p-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path>
-          </svg>
-        </div>
-        <ul
-          tabindex="0"
-          class="menu dropdown-content menu-sm z-[1] mt-3 w-36 rounded-box bg-success p-2 shadow">
-          <li>
-            <a href="/news">News</a>
-          </li>
-          <li><a href="/summary">Summary</a></li>
-          <li><a href="/book">Book</a></li>
-          <li><a href="/tech-stack">Tech-stack</a></li>
-          <li><a href="/photo">Photo</a></li>
-          <li><a href="/diy">DIY</a></li>
-          <li><a href="/d-plan">d-plan</a></li>
-          <li>
-            <a href="https://private.s-hirano.com" target="_blank"
-              >Private page</a
-            >
-          </li>
-        </ul>
-      </div>
+      <ToggleThemeButton />
+      <DropdownMenu />
     </nav>
   </div>
   <Hr darkModeDisabled={darkModeDisabled} />
