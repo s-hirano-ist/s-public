@@ -42,7 +42,9 @@ const tocLinks = jsonToToc(post);
       {
         body.map(d => {
           return (
-            <div class="overflow-hidden rounded py-1 shadow-lg" id={d.title}>
+            <div
+              class="overflow-hidden rounded px-4 py-1 shadow-lg"
+              id={d.title}>
               <h2 class="text-xl">{d.title}</h2>
               <div class="text-primary">
                 <Fragment set:html={sanitizeHtml(d.quote ?? "")} />
