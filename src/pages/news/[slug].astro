@@ -38,12 +38,12 @@ const tocLinks = jsonToToc(post);
     <article
       id="article"
       role="article"
-      class="prose mx-auto max-w-5xl sm:px-4">
+      class="prose prose-sm mx-auto max-w-5xl sm:prose-base">
       {
         body.map(d => {
           return (
             <div
-              class="overflow-hidden rounded px-4 py-1 shadow-lg"
+              class="overflow-hidden rounded px-2 py-1 shadow-lg sm:px-4"
               id={d.title}>
               <h2 class="text-xl">{d.title}</h2>
               <div class="text-primary">
