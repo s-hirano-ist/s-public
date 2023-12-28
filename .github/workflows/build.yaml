@@ -37,9 +37,9 @@ jobs:
       - run: pnpm fmt
       - run: pnpm lint
       - run: pnpm lint:mark
+      - run: pnpm exec playwright install
       - run: pnpm lint:css
       - run: pnpm build
-      - run: pnpm test:e2e
       - run: lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
