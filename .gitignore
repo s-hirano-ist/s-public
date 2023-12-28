@@ -1,5 +1,4 @@
 # build output
-.output/
 .vercel/
 
 # dependencies
@@ -10,3 +9,8 @@ node_modules/
 
 # ignore .astro directory
 .astro
+
+# playwright test
+playwright-report
+test-results
+e2e/snapshot.test.ts-snapshots
