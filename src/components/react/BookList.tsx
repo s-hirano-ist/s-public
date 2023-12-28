@@ -70,7 +70,12 @@ export default function BookList() {
             target="_blank"
             key={book.title}>
             <figure>
-              <img src={book.imageSrc} alt={book.title} />
+              <img
+                src={book.imageSrc}
+                alt={book.title}
+                decoding="async"
+                loading="lazy"
+              />
             </figure>
             <div className="card-body h-96">
               <h2 className="card-title">{book.title}</h2>
