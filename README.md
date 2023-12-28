@@ -22,7 +22,8 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 **Auto Commit Rejection** - [Husky](https://typicode.github.io/husky/)  
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
 **HTML checker** - [nu html checker](https://github.com/validator/validator)  
-**Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)
+**Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
+**Visual regression** - [Playwright test](https://playwright.dev/docs/test-intro/)
 
 ### My infrastructure stack
 
@@ -95,16 +96,23 @@ Access [Onamae.com](https://www.onamae.com/) to add DNS TXT record.
 
 All commands are run from the root of the project, from a terminal:
 
-| Command        | Action                                                                                                                           |
-| :------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm i`       | Installs dependencies                                                                                                            |
-| `pnpm dev`     | Starts local dev server at `localhost:4321`                                                                                      |
-| `pnpm build`   | Build your production site to `./.vercel/output/static`                                                                          |
-| `pnpm preview` | Preview your build locally, before deploying                                                                                     |
-| `pnpm fmt`     | Check code format with Prettier                                                                                                  |
-| `pnpm fmt:fix` | Format codes with Prettier                                                                                                       |
-| `pnpm sync`    | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `pnpm lint`    | Lint with ESLint                                                                                                                 |
+| Command                 | Action                                             |
+| :---------------------- | :------------------------------------------------- |
+| `pnpm i`                | Installs dependencies                              |
+| `pnpm dev`              | Starts local dev server at `localhost:4321`        |
+| `pnpm build`            | Build production site to `./.vercel/output/static` |
+| `pnpm preview`          | Preview build locally                              |
+| `pnpm sync`             | Generates TypeScript types                         |
+| `pnpm fmt`              | Check code format with Prettier                    |
+| `pnpm fmt:fix`          | Format codes with Prettier                         |
+| `pnpm lint`             | Lint with ESLint                                   |
+| `pnpm lint:fix`         | Fix lint with ESLint                               |
+| `pnpm lint:mark`        | Lint markdown files with markdownlint-cli2         |
+| `pnpm lint:mark:fix`    | Fix lint markdown files with markdownlint-cli2     |
+| `pnpm lint:css`         | Lint css files with StyleLint                      |
+| `pnpm lint:css:fix`     | Fix lint css files with StyleLint                  |
+| `pnpm snapshots`        | Visual regression with existing screenshots        |
+| `pnpm snapshots:update` | Visual regression but update snapshots             |
 
 ## 🪝 Tags & Realease
 
