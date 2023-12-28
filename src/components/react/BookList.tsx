@@ -79,7 +79,7 @@ export default function BookList() {
                 {book.authors.toString()}
               </div>
               <p className="overflow-y-hidden text-xs">{book.description}</p>
-              <Rating rating={book.rating} />
+              <Rating rating={book.rating} index={book.title} />
               <div className="card-actions justify-end">
                 {book.tags.map(tag => (
                   <div className="badge badge-outline" key={tag}>
