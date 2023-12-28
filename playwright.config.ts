@@ -3,8 +3,6 @@ import { devices } from "@playwright/test";
 
 const config: PlaywrightTestConfig = {
   testDir: "./e2e",
-  timeout: 30 * 1000,
-  expect: { timeout: 5000 },
   fullyParallel: true,
   reporter: "html",
   use: {
@@ -17,6 +15,7 @@ const config: PlaywrightTestConfig = {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
     },
+    // FIXME: page crashes on other devices than chromium
     // {
     //   name: "firefox",
     //   use: { ...devices["Desktop Firefox"] },
@@ -24,6 +23,26 @@ const config: PlaywrightTestConfig = {
     // {
     //   name: "webkit",
     //   use: { ...devices["Desktop Safari"] },
+    // },
+    // {
+    //   name: "iPhone 14 Pro",
+    //   use: { ...devices["iPhone 14 Pro"] },
+    // },
+    // {
+    //   name: "iPhone SE",
+    //   use: { ...devices["iPhone SE"] },
+    // },
+    // {
+    //   name: "iPad Mini",
+    //   use: { ...devices["iPad Mini"] },
+    // },
+    // {
+    //   name: "iPad Mini landscape",
+    //   use: { ...devices["iPad Mini landscape"] },
+    // },
+    // {
+    //   name: "Pixel 5",
+    //   use: { ...devices["Pixel 5"] },
     // },
   ],
   webServer: {

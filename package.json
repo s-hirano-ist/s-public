@@ -20,7 +20,8 @@
     "lint:mark:fix": "markdownlint-cli2-fix src/content/summary/*",
     "lint:css": "stylelint .",
     "lint:css:fix": "stylelint . --fix",
-    "test:e2e": "playwright test",
+    "snapshots": "playwright test",
+    "snapshots:update": "playwright test --update-snapshots",
     "generate:photo": "python script/generate_photo_path.py",
     "generate:book": "node --loader ts-node/esm script/generateBookData.ts"
   },

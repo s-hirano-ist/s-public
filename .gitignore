@@ -12,5 +12,5 @@ node_modules/
 
 # playwright test
 playwright-report
-e2e/screenshot.test.ts-snapshots
 test-results
+e2e/snapshot.test.ts-snapshots
