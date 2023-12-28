@@ -3,6 +3,11 @@
   "description": "エンジニア視点の雑学",
   "body": [
     {
+      "title": "パスワードがハッシュ値で保存されていてもSQLインジェクションでログインできる問題について",
+      "quote": "' UNION SELECT 1, 'admin', '$2y$10$xsIlqn/90gAxrlEPzxsaPe3nokPZQtw/.vlsydx6nWUommxA6juia', 4 --",
+      "url": "https://qiita.com/ockeghem/items/787f74801a24e1fc6960"
+    },
+    {
       "title": "しょうもないGitHub実績バッジ",
       "url": "https://gigazine.net/news/20230711-github-rejected-achievements/"
     },
