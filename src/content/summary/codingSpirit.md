@@ -65,7 +65,7 @@ GraphQL
 
 ### CD
 
-Github/GitlabのMainブランチへのマージや、タグの付与をトリガーに自動デプロイを行うことで、コードと環境のコードの不整合を防ぐ。
+GitHub/GitLabのMainブランチへのマージや、タグの付与をトリガーに自動デプロイを行うことで、コードと環境のコードの不整合を防ぐ。
 
 - Vercel bot: Vercelへのデプロイを自動化。
 - Render bot: Renderへのデプロイを自動化。
