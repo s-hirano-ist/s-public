@@ -2,7 +2,6 @@
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "baseUrl": "./src",
-    "rootDir": "./src",
     "jsx": "react-jsx",
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
@@ -23,5 +22,5 @@
       "@utils/*": ["utils/*"]
     }
   },
-  "exclude": ["node_modules", "script"]
+  "exclude": ["node_modules"]
 }
