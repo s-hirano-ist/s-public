@@ -13,7 +13,6 @@
     "astro": "astro",
     "fmt": "prettier --check **/*.astro .",
     "fmt:fix": "prettier --write **/*.astro .",
-    "prepare": "husky install",
     "lint": "astro check && tsc --noEmit && eslint .",
     "lint:fix": "astro check & tsc --noEmit & eslint . --fix",
     "lint:mark": "markdownlint-cli2 src/content/summary/*",
@@ -21,7 +20,8 @@
     "lint:css": "stylelint .",
     "lint:css:fix": "stylelint . --fix",
     "generate:photo": "python script/generate_photo_path.py",
-    "generate:book": "node --loader ts-node/esm script/generateBookData.ts"
+    "generate:book": "node --loader ts-node/esm script/generateBookData.ts",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*": "pnpm fmt",
