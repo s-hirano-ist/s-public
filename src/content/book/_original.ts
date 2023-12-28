@@ -870,5 +870,11 @@ export const _books = {
       rating: 3,
       tags: ["認知科学"],
     },
+    {
+      ISBN: "9784140885260",
+      title: "富裕層のバレない脱税",
+      rating: 4,
+      tags: ["お金"],
+    },
   ],
 };

@@ -59,9 +59,13 @@ GraphQL
   - [stylelint](https://stylelint.io/)
   - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
 - test
-  - [Playwright Test](https://playwright.dev/docs/test-intro)
-  - [Jest](https://jestjs.io/)
-  - [Vitest](https://vitest.dev/)
+  - E2E, Visual Regression
+    - [Playwright Test](https://playwright.dev/docs/test-intro)
+  - Unit, Integration
+    - [Jest](https://jestjs.io/)
+    - [Vitest](https://vitest.dev/)
+- else
+  - [LightHouse CI](https://github.com/GoogleChrome/lighthouse-ci)
 
 ### CD
 
