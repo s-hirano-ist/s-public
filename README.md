@@ -26,7 +26,7 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 
 ### My infrastructure stack
 
-**Version Management** - [Github](https://github.com/)  
+**Version Management** - [GitHub](https://github.com/)  
 **Deployment** - [Vercel Edge Networks](https://vercel.com/)  
 **Analytics** - [Google Analytics](https://analytics.google.com/analytics/web/)  
 **Search Console** - [Google Search Console](https://search.google.com/search-console)  
@@ -39,7 +39,7 @@ git clone https://github.com/s-hirano-ist/blog.git
 pnpm i
 ```
 
-### Updating Github stars file
+### Updating GitHub stars file
 
 ```bash
 cd gh-export-stars
@@ -73,7 +73,7 @@ pnpm generate:book
 
 ### Vercel deployment
 
-Add github integration for auto-deployment on vercel.
+Add GitHub integration for auto-deployment on vercel.
 
 ### Google Site Verification (optional)
 
