@@ -4,9 +4,14 @@ import sanitizeHtml from "sanitize-html";
 export type Props = {
   pageTitle?: string;
   dropdownItem?: string;
+  publishedDate?: string;
 };
 
-const { pageTitle = undefined, dropdownItem } = Astro.props;
+const {
+  pageTitle = undefined,
+  dropdownItem = undefined,
+  publishedDate = undefined,
+} = Astro.props;
 ---
 
 <main id="main-content">
@@ -42,6 +47,11 @@ const { pageTitle = undefined, dropdownItem } = Astro.props;
         <h1 class="text-2xl font-semibold text-primary">
           {pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1).toLowerCase()}
         </h1>
+      )
+    }
+    {
+      publishedDate && (
+        <div class="font-semibold text-primary sm:px-4">{publishedDate}</div>
       )
     }
   </div>

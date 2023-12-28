@@ -1,12 +1,12 @@
 import SearchCard from "@components/react/SearchCard";
-import type { NewsFrontmatter, MarkdownFrontmatter } from "@content/_schemas";
+import type { NewsFrontmatter, SummaryFrontmatter } from "@content/_schemas";
 import slugify from "@utils/slugify";
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 
 export type SummarySearchItem = {
   body: string;
-  data: MarkdownFrontmatter;
+  data: SummaryFrontmatter;
 };
 export type NewsSearchItem = {
   data: NewsFrontmatter;
