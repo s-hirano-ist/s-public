@@ -15,12 +15,10 @@ export type Props = {
 
 export async function getStaticPaths() {
   const posts = await getCollection("news");
-
-  const postResult = posts.map(post => ({
+  return posts.map(post => ({
     params: { slug: slugify(post.data) },
     props: { post },
   }));
-  return postResult;
 }
 
 const { post } = Astro.props;

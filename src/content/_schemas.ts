@@ -1,6 +1,6 @@
 import { z } from "astro:content";
 
-export const markdownSchema = z
+export const summarySchema = z
   .object({
     heading: z.string(),
     draft: z.boolean(),
@@ -8,7 +8,7 @@ export const markdownSchema = z
   })
   .strict();
 
-export type MarkdownFrontmatter = z.infer<typeof markdownSchema>;
+export type SummaryFrontmatter = z.infer<typeof summarySchema>;
 
 export const newsSchema = z
   .object({
@@ -25,3 +25,14 @@ export const newsSchema = z
   .strict();
 
 export type NewsFrontmatter = z.infer<typeof newsSchema>;
+
+export const blogSchema = z
+  .object({
+    heading: z.string(),
+    draft: z.boolean(),
+    description: z.string(),
+    date: z.date(),
+  })
+  .strict();
+
+export type BlogFrontmatter = z.infer<typeof blogSchema>;
