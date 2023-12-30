@@ -11,3 +11,19 @@
     @apply hover:!text-primary;
   }
 }
+
+/* for rehype autolink headings */
+
+.icon-header-link {
+  visibility: hidden;
+  font-size: 1rem;
+  margin-left: 0.3rem;
+}
+
+h2:hover .icon-header-link {
+  visibility: visible;
+}
+
+h3:hover .icon-header-link {
+  visibility: visible;
+}
