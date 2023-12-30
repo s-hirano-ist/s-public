@@ -18,44 +18,51 @@ import { Image } from "astro:assets";
 <Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
   <main class="background main-contents" data-theme="noTheme">
     <Header title="Portfolio" darkModeDisabled />
-    <section>
+    <section
+      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
       <Image src={portfolioImage} alt="" class="w-full" />
-      <div class="pt-4 sm:pt-8">
-        <a id="scroll-button">
-          <div class="flex justify-evenly">
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-            <span class="text">Scroll down</span>
-          </div>
-        </a>
-      </div>
     </section>
-    <section class="pb-4">
+    <section
+      class="taos:scale-[0.6] taos:opacity-0 delay-[600ms] duration-[600ms]">
+      <a id="scroll-button" class="flex justify-center">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <span class="text">Scroll down</span>
+      </a>
+    </section>
+    <section
+      class="taos:scale-[0.6] taos:opacity-0 pb-4 delay-[600ms] duration-[600ms]">
       <h2>Links</h2>
       <PortfolioLinks />
     </section>
-    <section id="about-me">
+    <section
+      id="about-me"
+      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
       <h2>About me</h2>
       <AboutMe />
     </section>
-    <section>
+    <section
+      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
       <h2>Education</h2>
       <Timeline data={educationData} />
     </section>
-    <section>
+    <section
+      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
       <h2>Work Experience</h2>
       <Timeline data={workExperienceData} />
     </section>
-    <!-- <section>
+    <!-- <section class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
       <h2>Achievements</h2>
       <Achievements />
     </section> -->
-    <section>
+    <section
+      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
       <h2>Qualification</h2>
       <Timeline data={qualificationData} />
     </section>
-    <section class="pb-8">
+    <section
+      class="taos:scale-[0.6] taos:opacity-0 pb-8 delay-[300ms] duration-[600ms]">
       <h2>Notes</h2>
       <Notes />
     </section>

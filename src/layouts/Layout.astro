@@ -139,8 +139,15 @@ const socialImageURL = new URL(
       gtag("js", new Date());
       gtag("config", "G-E84VM45L0L");
     </script>
+
+    <!-- Scroll animation (taos) -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
   <body>
     <slot />
+    <!-- Scroll animation (taos) -->
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
   </body>
 </html>

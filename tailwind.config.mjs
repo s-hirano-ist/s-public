@@ -1,7 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
+  content: {
+    relative: true,
+    transform: content => content.replace(/taos:/g, ""),
+    files: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
+  },
+  safelist: [
+    "!duration-[0ms]",
+    "!delay-[0ms]",
+    'html.js :where([class*="taos:"]:not(.taos-init))',
+  ],
   theme: {
     fontFamily: {
       custom: [
@@ -15,7 +24,11 @@ export default {
       ],
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+    require("taos/plugin"),
+  ],
   daisyui: {
     themes: [
       {
