@@ -1,6 +1,4 @@
 ---
-import { capitalizeFirstLetterOnly } from "@utils/convertString";
-
 export type Props = {
   href: string;
   title: string;
@@ -16,7 +14,7 @@ const { href, title, description } = Astro.props;
     <!-- TODO: what those css mean -->
     <h2
       class="text-lg font-medium text-primary decoration-dashed hover:underline">
-      {capitalizeFirstLetterOnly(title)}
+      {title}
     </h2>
   </a>
   <p>{description}</p>
