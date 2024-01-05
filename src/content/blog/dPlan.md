@@ -2,7 +2,7 @@
 heading: d-plan
 description: 2018年頃にリリースしたiOSアプリの記録
 draft: false
-date: 2024-01-01
+date: 2023-12-31
 ---
 
 # 2018年頃にリリースしたiOSアプリの記録
