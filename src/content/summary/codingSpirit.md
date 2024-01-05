@@ -93,6 +93,12 @@ GitHub/GitLabのMainブランチへのマージや、タグの付与をトリガ
 - [Husky](https://typicode.github.io/husky/): コミット前にlinterを実行し、コードの品質を担保する。
 - Squash Commit by default: Pull Requestをマージする際に、コミットをsquashすることで、コミット履歴をきれいに保つ。
 
+### Single source of truth
+
+ドキュメントを唯一の情報ソースとし、色々な箇所にドキュメントを散りばめないようにしよう。
+
+[オフィスなしのオールリモートで成長するGitLab社、世界中の2,000人をつなぐカルチャーとは](https://codezine.jp/article/detail/18281)
+
 ## その他
 
 ### プログラマの三大美徳
