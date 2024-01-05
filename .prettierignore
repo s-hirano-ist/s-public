@@ -13,5 +13,3 @@ script/vnu-runtime-image/*
 
 gh-export-stars/*
 gh-stars.json
-
-src/content/book/data.gen.json
