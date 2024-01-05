@@ -112,3 +112,7 @@ GitHub/GitLabのMainブランチへのマージや、タグの付与をトリガ
 5. テストコードが（高確率で）存在する。
 
 [つよつよエンジニアの成果物にある5つの特徴](https://qiita.com/lazy-kz/items/727299cae893ab3442a0)
+
+### ライブラリを気軽に導入しないほうがいい?
+
+[ライブラリを気軽に導入しないこと](https://sizu.me/ktsn/posts/v3n2rkzcckia)

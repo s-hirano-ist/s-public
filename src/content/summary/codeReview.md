@@ -84,6 +84,10 @@ ChangeLogの記入のみだと、その破壊的変更に気づかない可能�
 
 ## チーム開発のノウハウ
 
+改善デー・やさしさデー
+
+[後回しにされがちな問題を改善するための「改善デー」「やさしさデー」のご紹介](https://tech.layerx.co.jp/entry/2023/12/27/171319)
+
 GitHub通知: 適切に設定しないと、自分にAssignされたコードレビュー等を見逃してしまうよ
 
 [GitHub を使うなら通知くらいまともに設定してくれ](https://zenn.dev/siketyan/articles/you-are-not-using-github-correctly)
@@ -115,3 +119,7 @@ GitHubのPRの作成とその後の議論方法
 円滑なコミュニケーションを育むための聴く技術
 
 [話を聴く技術](https://speakerdeck.com/kaminashi/listening-skills)
+
+プルリクエストを小さくする技術
+
+[Pull Requestを小さくする戦略](https://agilejourney.uzabase.com/entry/2023/07/31/103000)
