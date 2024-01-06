@@ -182,8 +182,8 @@ devDependencies:
     specifier: ^2.8.0
     version: 2.8.0(stylelint@16.1.0)
   stylelint-no-unsupported-browser-features:
-    specifier: ^7.0.0
-    version: 7.0.0(stylelint@16.1.0)
+    specifier: ^8.0.0
+    version: 8.0.0(stylelint@16.1.0)
   stylelint-order:
     specifier: ^6.0.4
     version: 6.0.4(stylelint@16.1.0)
@@ -4493,12 +4493,12 @@ packages:
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
-  /lodash.truncate@4.4.2:
-    resolution: {integrity: sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==}
+  /lodash.pick@4.4.0:
+    resolution: {integrity: sha512-hXt6Ul/5yWjfklSGvLQl8vM//l3FtyHZeuelpzK6mm99pNvN9yTDruNZPEJZD1oWrqo+izBmB7oUfWgcCX7s4Q==}
     dev: true
 
-  /lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  /lodash.truncate@4.4.2:
+    resolution: {integrity: sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==}
     dev: true
 
   /log-symbols@5.1.0:
@@ -6526,14 +6526,14 @@ packages:
       stylelint: 16.1.0(typescript@5.3.3)
     dev: true
 
-  /stylelint-no-unsupported-browser-features@7.0.0(stylelint@16.1.0):
-    resolution: {integrity: sha512-O5VYlBhr+lpJ6jeTJSy+SMbHJhW5h5EJxsoicYcTi/07m45V/CF1mQidwRQLjv8y9BFQMpioWz60O89IkmbaNw==}
-    engines: {node: '>=16'}
+  /stylelint-no-unsupported-browser-features@8.0.0(stylelint@16.1.0):
+    resolution: {integrity: sha512-XrXaizW90HdswC+2V1XJXsvNrMUt/bk8OJ7ZDn3nKZzE5NAd4rmAIo/igKuGzHA2a6vx5FplhD5VOqSLYDPnYg==}
+    engines: {node: '>=18.12.0'}
     peerDependencies:
-      stylelint: ^14.0.0||^15.0.0
+      stylelint: ^16.0.2
     dependencies:
       doiuse: 6.0.2
-      lodash: 4.17.21
+      lodash.pick: 4.4.0
       postcss: 8.4.32
       stylelint: 16.1.0(typescript@5.3.3)
     dev: true
