@@ -4,7 +4,9 @@ description: 開発を迅速にするためのMyベストプラクティス集
 draft: false
 ---
 
-## 負債をため込まないために重視していること
+## 開発を迅速にするためのMyベストプラクティス集
+
+負債をため込まないために重視していること
 
 ### Auto generate
 
@@ -22,6 +24,12 @@ ORM
 GraphQL codegenerator
 
 - [GraphQL Code Generator](https://graphql-code-generator.com/): GraphQLのQuery/Mutation/Subscriptionの型定義を自動作成。型安全にGraphQLサーバにアクセスできる。
+
+REST API codegenerator
+
+- [openapi2aspida](https://github.com/aspida/openapi2aspida/): OpenAPIからTypeScript型定義を自動作成。型安全にREST APIサーバにアクセスできる。
+
+gRPC tRPC
 
 #### Documentation
 
@@ -45,6 +53,10 @@ GraphQL
 スキーマの定義ファイルからフロントエンドもバックエンドも実装を行う開発方針。
 
 [スキーマ駆動開発ってなに？便利なの？って方へ。](https://zenn.dev/manabu/articles/35ea2ddfe2df3a)
+
+例
+
+- [express-openapi](https://www.npmjs.com/package/express-openapi): OpenAPIからExpressのControllerを自動生成。
 
 ### CI
 
