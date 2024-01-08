@@ -15,14 +15,8 @@ const IS_DEV = import.meta.env.MODE === "development";
 export default defineConfig({
   site: SITE.website,
   integrations: [
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
-    react({
-      include: ["**/react/*"],
-    }),
+    tailwind({ config: { applyBaseStyles: false } }),
+    react({ include: ["**/react/*"] }),
     sitemap(),
   ],
   markdown: {
@@ -51,11 +45,7 @@ export default defineConfig({
   // not necessary for static sites. Only for SSR.
   output: "static",
   adapter: vercel({
-    webAnalytics: {
-      enabled: !IS_DEV,
-    },
-    speedInsights: {
-      enabled: true,
-    },
+    webAnalytics: { enabled: !IS_DEV },
+    speedInsights: { enabled: true },
   }),
 });
