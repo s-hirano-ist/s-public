@@ -41,6 +41,6 @@ jobs:
       - run: pnpm build
       # - run: pnpm exec playwright install
       # - run: pnpm snapshots
-      - run: lhci autorun
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      # - run: lhci autorun
+      #   env:
+      #     LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
