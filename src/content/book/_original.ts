@@ -279,7 +279,7 @@ export const _books = {
     {
       ISBN: "9784479393894",
       title: "フリースタイル言語学",
-      rating: 4,
+      rating: 5,
       tags: ["言語学"],
     },
     {
