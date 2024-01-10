@@ -323,7 +323,7 @@
     "title": "オードリー・タンデジタルとAIの未来を語る",
     "subTitle": "",
     "authors": ["オードリー・タン"],
-    "description": "2020年に全世界を襲った新型コロナウイルス(COVID‐19)の封じ込めに、成功した台湾。その中心的な役割を担い、世界のメディアがいま、最も注目するテクノロジー界の異才が、コロナ対策成功の秘密、デジタルと民主主義、デジタルと教育、AIと社会・イノベーション、そして日本へのメッセージを、自身の言葉で語りつくす!",
+    "description": "2020年に全世界を襲った新型コロナウイルス(COVID-19)の封じ込めに、成功した台湾。その中心的な役割を担い、世界のメディアがいま、最も注目するテクノロジー界の異才が、コロナ対策成功の秘密、デジタルと民主主義、デジタルと教育、AIと社会・イノベーション、そして日本へのメッセージを、自身の言葉で語りつくす!",
     "tags": ["未来", "AI", "自伝"],
     "imageSrc": "http://books.google.com/books/content?id=lgUTzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "href": "http://books.google.co.jp/books?id=lgUTzgEACAAJ&dq=isbn:9784833423991&hl=&source=gbs_api",
@@ -1241,9 +1241,9 @@
   },
   {
     "title": "今さら聞けないお金の超基本",
-    "subTitle": "改訂新版節約・貯蓄・投資の前に",
+    "subTitle": "節約・貯蓄・投資の前にビジュアル版",
     "authors": [],
-    "description": "発行部数60万部の『今さら聞けないお金の超基本』改訂新版。全データを最新版にブラッシュアップしただけでなく、2023年の経済状況に合わせて表現なども全ページ見直した。電子マネー(スマホ決済)、副業、新NISAの解説も加えている。",
+    "description": "本書は2018年に第1版が発行されました。そこから5年が経過し、お金を取り巻く状況はかなり変わりました。例えば金融庁の調査では、一般つみたてNISAの口座数は2018年末に約1253万口座だったのが2023年6月末には約1941万口座。投資への機運が広く一般でも高まっていることがうかがえます。また、全支出のうちキャッシュレス決済額の割合は2018年の24.1%から2022年は36.0%と12%近く伸びました。今回の改訂新版では、様々なデータを更新するだけでなく、こうした“肌感覚での身の回りの経済情報”をスタッフ一同すり合わせ、各所に落とし込みました。ぜひ“新しいお金の常識”を本書で身につけてください。",
     "tags": ["お金"],
     "imageSrc": "http://books.google.com/books/content?id=6o4s0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "href": "http://books.google.co.jp/books?id=6o4s0AEACAAJ&dq=isbn:9784023341449&hl=&source=gbs_api",
@@ -1458,5 +1458,15 @@
     "imageSrc": "http://books.google.com/books/content?id=hp82swEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "href": "http://books.google.co.jp/books?id=hp82swEACAAJ&dq=isbn:9784140885260&hl=&source=gbs_api",
     "rating": 4
+  },
+  {
+    "title": "死は存在しない",
+    "subTitle": "最先端量子科学が示す新たな仮説",
+    "authors": ["田坂広志"],
+    "description": "これまでの「科学」は、「死後の世界」の存在を、否定してきた。それゆえ、「死後の世界」を肯定する「宗教」とは、決して交わることが無かった。しかし、近年、最先端量子科学が、一つの興味深い「仮説」を提示している。その「新たな仮説」は、「死後の世界」が存在する可能性を、示唆している。では、その「仮説」とは、どのようなものか、どのような科学的理論か。もし、その「仮説」が正しければ、「死後の世界」とは、どのようなものか。この「死後の世界」において、「我々の意識」は、どうなっていくのか。もし、その「仮説」が正しければ、それは、この人生を生きる我々に、何を教えるのか。もし、この「仮説」が正しければ、「科学」と「宗教」は、融合していくのか。",
+    "tags": ["科学"],
+    "imageSrc": "http://books.google.com/books/content?id=qk5jzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "http://books.google.co.jp/books?id=qk5jzwEACAAJ&dq=isbn:9784334046309&hl=&source=gbs_api",
+    "rating": 1
   }
 ]

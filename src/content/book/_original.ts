@@ -876,5 +876,11 @@ export const _books = {
       rating: 4,
       tags: ["お金"],
     },
+    {
+      ISBN: "9784334046309",
+      title: "死は存在しない",
+      rating: 1,
+      tags: ["科学"],
+    },
   ],
 };
