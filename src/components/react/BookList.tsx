@@ -75,6 +75,7 @@ export default function BookList() {
                 alt={book.title}
                 decoding="async"
                 loading="lazy"
+                width="50%"
               />
             </figure>
             <div className="card-body h-96">
