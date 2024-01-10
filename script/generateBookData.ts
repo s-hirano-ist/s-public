@@ -28,7 +28,7 @@ type BookType = {
   rating: number;
 }[];
 
-console.log("Start fetching book data from Google Books APIs...");
+console.log("Started fetching book data from Google Books APIs...");
 try {
   const books: BookType = [];
 
@@ -70,4 +70,4 @@ try {
 } catch (error) {
   console.error(error);
 }
-console.log("Finish fetching book data from Google Books APIs!");
+console.log("Finished fetching book data from Google Books APIs!");
