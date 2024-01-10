@@ -10,7 +10,7 @@ import {
 } from "./utils.ts";
 
 const FILE_PATH = "src/content/book/data.gen.json";
-const NO_IMAGE_SRC = "https://s-hirano.com/defaultOgImage.jpg";
+const NO_IMAGE_SRC = "https://s-hirano.com/notFound.png";
 const NOT_FOUND_HREF = "https://s-hirano.com/404";
 
 const api = googleBooksApis({
@@ -50,6 +50,14 @@ try {
 
     await sleep(600);
 
+    const httpsImageSrc = (
+      book.data.items?.[0]?.volumeInfo?.imageLinks?.thumbnail ?? NO_IMAGE_SRC
+    ).replace("http://", "https://");
+
+    const httpsHref = (
+      book.data.items?.[0]?.volumeInfo?.infoLink ?? NOT_FOUND_HREF
+    ).replace("http://", "https://");
+
     books.push({
       title: book.data.items?.[0]?.volumeInfo?.title ?? _book.title,
       subTitle: book.data.items?.[0]?.volumeInfo?.subtitle ?? "",
@@ -57,9 +65,8 @@ try {
       description:
         book.data.items?.[0]?.volumeInfo?.description ?? "No description",
       tags: _book.tags,
-      imageSrc:
-        book.data.items?.[0]?.volumeInfo?.imageLinks?.thumbnail ?? NO_IMAGE_SRC,
-      href: book.data.items?.[0]?.volumeInfo?.infoLink ?? NOT_FOUND_HREF,
+      imageSrc: httpsImageSrc,
+      href: httpsHref,
       rating: _book.rating,
     });
     if (book.status !== 200) throw new Error("Status code not 200");
