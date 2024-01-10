@@ -195,7 +195,7 @@
     "authors": ["橋爪大三郎"],
     "description": "No description",
     "tags": ["構造主義", "哲学"],
-    "imageSrc": "https://s-hirano.com/defaultOgImage.jpg",
+    "imageSrc": "https://s-hirano.com/notFound.png",
     "href": "http://books.google.co.jp/books?id=1nEOYAAACAAJ&dq=isbn:9784061488984&hl=&source=gbs_api",
     "rating": 4
   },
@@ -205,7 +205,7 @@
     "authors": ["小川たまか"],
     "description": "性暴力やジェンダーにまつわる問題を取材し、声をあげ続ける気鋭のライター・小川たまか初の著書。",
     "tags": ["社会学", "差別", "貧困"],
-    "imageSrc": "https://s-hirano.com/defaultOgImage.jpg",
+    "imageSrc": "https://s-hirano.com/notFound.png",
     "href": "http://books.google.co.jp/books?id=JrQ7uwEACAAJ&dq=isbn:9784907053260&hl=&source=gbs_api",
     "rating": 4
   },
@@ -595,7 +595,7 @@
     "authors": ["三島由紀夫"],
     "description": "No description",
     "tags": ["思想"],
-    "imageSrc": "https://s-hirano.com/defaultOgImage.jpg",
+    "imageSrc": "https://s-hirano.com/notFound.png",
     "href": "http://books.google.co.jp/books?id=J8_LPQAACAAJ&dq=isbn:9784048834001&hl=&source=gbs_api",
     "rating": 2
   },
@@ -805,7 +805,7 @@
     "authors": [],
     "description": "No description",
     "tags": ["幸福", "現代"],
-    "imageSrc": "https://s-hirano.com/defaultOgImage.jpg",
+    "imageSrc": "https://s-hirano.com/notFound.png",
     "href": "https://s-hirano.com/404",
     "rating": 3
   },
@@ -845,7 +845,7 @@
     "authors": ["エーリッヒ・フロム"],
     "description": "No description",
     "tags": ["愛", "幸福"],
-    "imageSrc": "https://s-hirano.com/defaultOgImage.jpg",
+    "imageSrc": "https://s-hirano.com/notFound.png",
     "href": "http://books.google.co.jp/books?id=8vAlAAAACAAJ&dq=isbn:9784314005586&hl=&source=gbs_api",
     "rating": 3
   },
@@ -905,7 +905,7 @@
     "authors": ["梶井厚志"],
     "description": "自分の利害が、自分の行動だけでなく、他人の行動によってどう左右されるか、という状態が戦略的環境であり、その分析ツールがゲーム理論である。ビジネス交渉はもちろん、バーゲンでの買い物や合コンの席順といったことまで私たちは他人の行動を織りこみつつ戦略を立て実行しているのだ。本書は身近な話題をふんだんに使い、コミットメント、シグナリングなどゲーム理論のキーワードを解説しながら読者の戦略的思考を磨く。",
     "tags": ["思考", "認知科学"],
-    "imageSrc": "https://s-hirano.com/defaultOgImage.jpg",
+    "imageSrc": "https://s-hirano.com/notFound.png",
     "href": "http://books.google.co.jp/books?id=rm9YAAAACAAJ&dq=isbn:9784121016584&hl=&source=gbs_api",
     "rating": 4
   },
@@ -1195,7 +1195,7 @@
     "authors": ["伊藤亜紗"],
     "description": "私たちは日々、五感―視覚・聴覚・嗅覚・触覚・味覚―からたくさんの情報を得て生きている。なかでも視覚は特権的な位置を占め、人間が外界から得る情報の八~九割は視覚に由来すると言われている。では、私たちが最も頼っている視覚という感覚を取り除いてみると、身体は、そして世界の捉え方はどうなるのか―?美学と現代アートを専門とする著者が、視覚障害者の空間認識、感覚の使い方、体の使い方、コミュニケーションの仕方、生きるための戦略としてのユーモアなどを分析。目の見えない人の「見方」に迫りながら、「見る」ことそのものを問い直す。",
     "tags": ["マイノリティ", "生物学"],
-    "imageSrc": "https://s-hirano.com/defaultOgImage.jpg",
+    "imageSrc": "https://s-hirano.com/notFound.png",
     "href": "http://books.google.co.jp/books?id=MA2OrgEACAAJ&dq=isbn:9784334038540&hl=&source=gbs_api",
     "rating": 2
   },
@@ -1305,7 +1305,7 @@
     "authors": ["中田力"],
     "description": "複雑系から脳の謎へ.21世紀の脳科学入門",
     "tags": ["脳科学"],
-    "imageSrc": "https://s-hirano.com/defaultOgImage.jpg",
+    "imageSrc": "https://s-hirano.com/notFound.png",
     "href": "http://books.google.co.jp/books?id=2hJWAAAACAAJ&dq=isbn:9784314009003&hl=&source=gbs_api",
     "rating": 3
   },
