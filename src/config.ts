@@ -12,7 +12,7 @@ export const SITE: Site = {
   author: "s-hirano-ist",
   description: "Portfolio and blog of s-hirano-ist.",
   title: "思考の備忘録",
-  ogImage: "/defaultOgImage.jpg",
+  ogImage: "/portfolio.webp",
   email: "s-hirano-ist@outlook.com",
 };
 
