@@ -300,6 +300,12 @@ Alex shot a guy with a gun.
   法王を置いた [ooooooi]
   ```
 
+- ローマ字で書くとすごい
+
+  ```plaintext
+  東欧の王を追う鳳凰の王を追おう [Tooono Ooo Ooo Hoooono Ooo Ooo]
+  ```
+
 #### 日本人が苦手な母音子音の組み合わせ
 
 日本語は子音と母音がひとかたまりになっている
