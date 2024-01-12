@@ -116,9 +116,15 @@ All commands are run from the root of the project, from a terminal:
 
 ## 🪝 Tags & Realease
 
+1. Update version in `package.json`
+
+2. Run the following command
+
 ```bash
 gh release create --generate-notes
 ```
+
+We might introduce [standard-version](https://github.com/conventional-changelog/standard-version) and [git-cz](https://github.com/streamich/git-cz) in a future release.
 
 ## 📜 License
 
