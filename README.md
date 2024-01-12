@@ -1,6 +1,10 @@
 # Blog
 
-This is a blog site of [s-hirano.com](https://s-hirano.com/).
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Build status](https://img.shields.io/github/actions/workflow/status/s-hirano-ist/blog/build.yaml?branch=main)
+![GitHub stars](https://img.shields.io/github/stars/s-hirano-ist/blog.svg)
+
+This is the source code of [s-hirano.com](https://s-hirano.com/).
 
 It consists of a portfolio and a blog which summarizes the knowledge I gained and the recent news.
 
@@ -13,6 +17,7 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 **Main Framework** - [Astro](https://astro.build/)  
 **Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
 **Component Framework** - [ReactJS](https://reactjs.org/)  
+**Package Manager** - [pnpm](https://pnpm.io/)  
 **Styling** - [TailwindCSS](https://tailwindcss.com/) | [DaisyUI](https://daisyui.com/)  
 **Fuzzy Search** - [FuseJS](https://fusejs.io/)  
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
