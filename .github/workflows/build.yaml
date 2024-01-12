@@ -38,6 +38,7 @@ jobs:
       - run: pnpm lint
       - run: pnpm lint:mark
       - run: pnpm lint:css
+      - run: pnpm lint:secret
       - run: pnpm build
       # - run: pnpm exec playwright install
       # - run: pnpm snapshots
