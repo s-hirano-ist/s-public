@@ -26,3 +26,14 @@ import PortfolioLayout from "@layouts/PortfolioLayout.astro";
 <script
   src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
 ></script>
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  import "photoswipe/style.css";
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: "#my-gallery",
+    children: "a",
+    pswpModule: () => import("photoswipe"),
+    bgOpacity: 1.0,
+  });
+  lightbox.init();
+</script>

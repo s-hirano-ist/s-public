@@ -8,15 +8,22 @@ export type Props = {
 const { content } = Astro.props;
 ---
 
-<swiper-container space-between="0" pagination={true}>
+<swiper-container id="my-gallery" space-between="0" pagination={true}>
   {
     content.src.map(src => (
       <swiper-slide>
-        <Image
-          class="aspect-square object-contain"
-          src={src}
-          alt={content.name}
-        />
+        <a
+          href={src.src}
+          data-pswp-src={src.src}
+          data-pswp-width={src.width}
+          data-pswp-height={src.height}
+          target="_blank">
+          <Image
+            class="aspect-square object-contain"
+            src={src}
+            alt={content.name}
+          />
+        </a>
       </swiper-slide>
     ))
   }
