@@ -16,16 +16,25 @@ function extractOgpData(metaElements: HTMLMetaElement[]) {
 export async function getOgpData(url: string) {
   try {
     // REF: https://github.com/jsdom/jsdom#virtual-consoles
+    console.log("start JSDOM on URL:", url);
     const virtualConsole = new VirtualConsole();
     const dom = await JSDOM.fromURL(url, { virtualConsole });
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    virtualConsole.on("error", () => {});
+    virtualConsole.on("error", () => {
+      console.log("error", url);
+    });
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    virtualConsole.on("warn", () => {});
+    virtualConsole.on("warn", () => {
+      console.log("warn", url);
+    });
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    virtualConsole.on("info", () => {});
+    virtualConsole.on("info", () => {
+      console.log("info", url);
+    });
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    virtualConsole.on("dir", () => {});
+    virtualConsole.on("dir", () => {
+      console.log("dir", url);
+    });
     const meta = dom.window.document.head.querySelectorAll("meta");
     return extractOgpData([...meta]);
   } catch (e) {
