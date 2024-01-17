@@ -13,15 +13,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      custom: [
-        "Hiragino Sans",
-        "ヒラギノ角ゴシック",
-        "メイリオ",
-        "Meiryo",
-        "sans-serif",
-        "YuGothic",
-        "Yu Gothic",
-      ],
+      custom: ["Noto Sans JP Variable", "sans-serif"],
     },
   },
   plugins: [
