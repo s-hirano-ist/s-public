@@ -66,10 +66,16 @@ GraphQL
 
 - formatter
   - [prettier](https://prettier.io/)
+    - 本ブログで利用している設定は[prettier.config.mjs](https://github.com/s-hirano-ist/blog/blob/main/prettier.config.mjs)を参照。
 - linter
   - [ESLint](https://eslint.org/)
+    - 本ブログで利用している設定は[.eslintrc.cjs](https://github.com/s-hirano-ist/blog/blob/main/.eslintrc.cjs)を参照。
   - [stylelint](https://stylelint.io/)
+    - 本ブログで利用している設定は[.stylelintrc.mjs](https://github.com/s-hirano-ist/blog/blob/main/.stylelintrc.mjs)を参照。
   - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
+    - 本ブログで利用している設定は[.markdownlint-cli2.jsonc](https://github.com/s-hirano-ist/blog/blob/main/.markdownlint-cli2.jsonc)を参照。
+  - [secretlint](https://github.com/secretlint/secretlint)
+    - 本ブログで利用している設定は[.secretlintrc.json](https://github.com/s-hirano-ist/blog/blob/main/.secretlintrc.json)を参照。
 - test
   - E2E, Visual Regression
     - [Playwright Test](https://playwright.dev/docs/test-intro)
