@@ -21,6 +21,7 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 **Styling** - [TailwindCSS](https://tailwindcss.com/) | [DaisyUI](https://daisyui.com/)  
 **Fuzzy Search** - [FuseJS](https://fusejs.io/)  
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
+**Fonts** - [Google Fonts](https://fonts.google.com/)  
 **Code Formatting** - [Prettier](https://prettier.io/)  
 **Linting** - [ESLint](https://eslint.org)  
 **CSS Linting** - [Stylelint](https://stylelint.io/)  
