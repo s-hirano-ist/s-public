@@ -22,6 +22,7 @@ module.exports = {
     "prettier",
     "plugin:import/typescript",
     "plugin:astro/recommended",
+    "plugin:redos/recommended",
   ],
   parserOptions: {
     ecmaVersion: "latest",

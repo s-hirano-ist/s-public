@@ -66,10 +66,16 @@ GraphQL
 
 - formatter
   - [prettier](https://prettier.io/)
+    - 本ブログで利用している設定は[prettier.config.mjs](https://github.com/s-hirano-ist/blog/blob/main/prettier.config.mjs)を参照。
 - linter
   - [ESLint](https://eslint.org/)
+    - 本ブログで利用している設定は[.eslintrc.cjs](https://github.com/s-hirano-ist/blog/blob/main/.eslintrc.cjs)を参照。
   - [stylelint](https://stylelint.io/)
+    - 本ブログで利用している設定は[.stylelintrc.mjs](https://github.com/s-hirano-ist/blog/blob/main/.stylelintrc.mjs)を参照。
   - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
+    - 本ブログで利用している設定は[.markdownlint-cli2.jsonc](https://github.com/s-hirano-ist/blog/blob/main/.markdownlint-cli2.jsonc)を参照。
+  - [secretlint](https://github.com/secretlint/secretlint)
+    - 本ブログで利用している設定は[.secretlintrc.json](https://github.com/s-hirano-ist/blog/blob/main/.secretlintrc.json)を参照。
 - test
   - E2E, Visual Regression
     - [Playwright Test](https://playwright.dev/docs/test-intro)
@@ -106,7 +112,7 @@ GitHub/GitLabのMainブランチへのマージや、タグの付与をトリガ
   - [standard-version](https://github.com/conventional-changelog/standard-version): `CHANGELOG.md`を自動作成 + `package.json`の`version`を自動更新。
   - `gh release create --generate-notes`コマンドによって、GitHubのReleaseのタイトルと本文を自動生成。
 - [git-cz](https://github.com/streamich/git-cz): [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/)に則ったコミットメッセージを自動生成。
-- [Husky](https://typicode.github.io/husky/): コミット前にlinterを実行し、コードの品質を担保する。
+- ~~[Husky](https://typicode.github.io/husky/): コミット前にlinterを実行し、コードの品質を担保する。~~
 - Squash Commit by default: Pull Requestをマージする際に、コミットをsquashすることで、コミット履歴をきれいに保つ。
 
 ### Single source of truth
