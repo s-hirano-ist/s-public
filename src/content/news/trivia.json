@@ -224,6 +224,24 @@
       "title": "AI時代のSaaS生き残りへの道",
       "quote": "AIによって簡易なCRUDアプリはすぐに作成することができるようになってしまう",
       "url": "https://tamuramble.theletter.jp/posts/dc962a40-9ffc-11ee-bcf7-85f798f1597b"
+    },
+    {
+      "title": "AIによる言葉の自動判定は思わぬ不具合を生じさせる",
+      "quote": "Google Analyticsは**anal**を含むためペアレンタルコントロールに引っかかる",
+      "url": "https://gigazine.net/news/20231020-python-pandas-facebook-ban/"
+    },
+    {
+      "title": "どのようにしてインスタグラムは実装されたのか?",
+      "quote": "3人のエンジニアが1400万人が利用するサービスを作るまで",
+      "url": "https://gigazine.net/news/20230925-how-instagram-scaled-to-14-million/"
+    },
+    {
+      "title": "適切なグラフ、不適切なグラフ",
+      "url": "https://gigazine.net/news/20231120-good-graph-bad-graph/"
+    },
+    {
+      "title": "ミッキーマウスがパブリックドメイン化: 何が利用できて何が利用できないのか?",
+      "url": "https://gigazine.net/news/20231219-mickey-triangle/"
     }
   ]
 }

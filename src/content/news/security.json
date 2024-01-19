@@ -73,6 +73,14 @@
     {
       "title": "QRコードを肉眼には見えない形で改変する技術",
       "url": "https://www.itmedia.co.jp/news/articles/2312/04/news030.html"
+    },
+    {
+      "title": "GPUから視覚データを盗んでウェブ上の個人情報を取得する攻撃: GPU.zjp",
+      "url": "https://gigazine.net/news/20230927-gpu-zip/"
+    },
+    {
+      "title": "画像内にマルウェアを埋め込む技術",
+      "url": "https://www.gizmodo.jp/2024/01/malware-images-virus-photos-1.html"
     }
   ]
 }
