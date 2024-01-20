@@ -10,7 +10,7 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 
 ## ✅ Lighthouse Score
 
-<https://pagespeed.web.dev/analysis/https-s-hirano-com/iwo6u6jfy4?form_factor=desktop>
+![Lighthouse score: 100/100](lighthouse_score.png)
 
 ## 💻 Tech Stack
 
