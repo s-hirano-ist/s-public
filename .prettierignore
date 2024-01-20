@@ -5,8 +5,6 @@ node_modules/*
 pnpm-lock.yaml
 src/content/_photo/data.ts
 
-script/vnu-runtime-image/*
-
 **/*.jpg
 **/*.png
 **/*.webp

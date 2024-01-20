@@ -1,4 +1,3 @@
-script/vnu-runtime-image/*
 node_modules
 .vercel
 
