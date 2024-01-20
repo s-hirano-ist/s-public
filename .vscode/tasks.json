@@ -21,29 +21,16 @@
     },
     {
       "type": "shell",
-      "command": "sh script/vnu-runtime-image/bin/vnu --skip-non-html --Werror .vercel/",
-      "label": "nu html checker",
-      "detail": "nu html checker errors, warnings, and infos.",
-      "dependsOn": ["build"]
-    },
-    {
-      "type": "shell",
-      "command": "sh script/vnu-runtime-image/bin/vnu --errors-only --skip-non-html .vercel/",
-      "label": "nu html checker errors only without build",
-      "detail": "nu html checker errors only without build."
-    },
-    {
-      "type": "shell",
-      "command": "sh script/vnu-runtime-image/bin/vnu --errors-only --skip-non-html .vercel/",
-      "label": "nu html checker errors only",
-      "detail": "nu html checker errors only.",
-      "dependsOn": ["build"]
-    },
-    {
-      "type": "shell",
       "command": "java -jar ./node_modules/.pnpm/vnu-jar@23.4.11/node_modules/vnu-jar/build/dist/vnu.jar --skip-non-html --Werror .vercel/",
-      "label": "nu html npm package version",
-      "detail": "nu html checker with npm package (version not updated yet, therefore not working).",
+      "label": "nu html checker (info, warnings, and errors)",
+      "detail": "nu html checker (info, warnings, and errors).",
+      "dependsOn": ["build"]
+    },
+    {
+      "type": "shell",
+      "command": "java -jar ./node_modules/.pnpm/vnu-jar@23.4.11/node_modules/vnu-jar/build/dist/vnu.jar --skip-non-html --errors-only .vercel/",
+      "label": "nu html checker (errors only)",
+      "detail": "nu html checker (errors only).",
       "dependsOn": ["build"]
     }
   ]
