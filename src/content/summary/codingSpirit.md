@@ -83,7 +83,7 @@ GraphQL
     - [Jest](https://jestjs.io/)
     - [Vitest](https://vitest.dev/)
 - else
-  - [LightHouse CI](https://github.com/GoogleChrome/lighthouse-ci) | [LightHouse](https://developers.google.com/web/tools/lighthouse)
+  - [LightHouse CI](https://github.com/GoogleChrome/lighthouse-ci) | [Page Speed Insights](https://pagespeed.web.dev/)
   - [Nu Html Checker](https://github.com/validator/validator)
 
 ### CD

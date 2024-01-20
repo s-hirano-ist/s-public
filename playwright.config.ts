@@ -5,8 +5,8 @@ const config: PlaywrightTestConfig = {
   testDir: "./e2e",
   fullyParallel: true,
   reporter: "html",
+  expect: { timeout: 10000 },
   use: {
-    actionTimeout: 0,
     baseURL: "http://localhost:4321",
     trace: "on-first-retry",
   },
