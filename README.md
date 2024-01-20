@@ -45,7 +45,7 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 
 ```bash
 git clone https://github.com/s-hirano-ist/blog.git
-pnpm i
+pnpm install
 ```
 
 ### Updating GitHub stars file
@@ -106,7 +106,7 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                 | Action                                             |
 | :---------------------- | :------------------------------------------------- |
-| `pnpm i`                | Installs dependencies                              |
+| `pnpm install`          | Installs dependencies                              |
 | `pnpm dev`              | Starts local dev server at `localhost:4321`        |
 | `pnpm build`            | Build production site to `./.vercel/output/static` |
 | `pnpm preview`          | Preview build locally                              |
@@ -119,6 +119,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm lint:mark:fix`    | Fix lint markdown files with markdownlint-cli2     |
 | `pnpm lint:css`         | Lint css files with StyleLint                      |
 | `pnpm lint:css:fix`     | Fix lint css files with StyleLint                  |
+| `pnpm lint:secret`      | Lint secrets files with secretLint                 |
 | `pnpm snapshots`        | Visual regression with existing screenshots        |
 | `pnpm snapshots:update` | Visual regression but update snapshots             |
 
