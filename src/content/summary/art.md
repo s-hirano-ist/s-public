@@ -6,15 +6,6 @@ draft: false
 
 ## 現代アートの楽しみ方
 
-```mermaid
-sequenceDiagram
-
-Next.js (client)->>Next.js (server): JWT
-Next.js (server)->>Apollo Server: JWT + GraphQLのQuery/Mutation
-Apollo Server-->>Next.js (server): GraphQLのQuery/Mutationの結果
-Next.js (server)-->>Next.js (server): レンダリング
-```
-
 現代アートは、「美しさ」や「価値」、「この作品の存在する意味」を一緒に考えてほしいというメッセージが形になったものである。
 
 一方通行に受け取る（知識の再確認）だけでなく、アーティストとアートを通じて対話しないといけない。

@@ -24,10 +24,12 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 **Fonts** - [Google Fonts](https://fonts.google.com/)  
 **Code Formatting** - [Prettier](https://prettier.io/)  
 **Linting** - [ESLint](https://eslint.org)  
+**Markdown Linting** - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)  
 **CSS Linting** - [Stylelint](https://stylelint.io/)  
+**Secret linting** - [secretlint](https://github.com/secretlint/secretlint)  
 **Auto Commit Rejection** - [Husky](https://typicode.github.io/husky/)  
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
-**HTML checker** - [nu html checker](https://github.com/validator/validator)  
+**HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
 **Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
 **Visual regression** - [Playwright test](https://playwright.dev/docs/test-intro/)
 
@@ -35,7 +37,7 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 
 **Version Management** - [GitHub](https://github.com/)  
 **Deployment** - [Vercel Edge Networks](https://vercel.com/)  
-**Analytics** - [Google Analytics](https://analytics.google.com/analytics/web/)  
+**Analytics** - [Google Analytics](https://analytics.google.com/analytics/web/) | [Vercel Speed Insights](https://vercel.com/docs/speed-insights)  
 **Search Console** - [Google Search Console](https://search.google.com/search-console)  
 **Domain** - [Onamae.com](https://www.onamae.com/)
 
