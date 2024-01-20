@@ -81,6 +81,10 @@
     {
       "title": "画像内にマルウェアを埋め込む技術",
       "url": "https://www.gizmodo.jp/2024/01/malware-images-virus-photos-1.html"
+    },
+    {
+      "title": "計算エラーが発生したらSSHの秘密鍵が盗み取られる危険性",
+      "url": "https://gigazine.net/news/20231114-ssh-key-compromise/"
     }
   ]
 }
