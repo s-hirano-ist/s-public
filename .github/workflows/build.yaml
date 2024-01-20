@@ -33,7 +33,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: pnpm i --frozen-lockfile && npm install -g @lhci/cli@0.12.x
+      - run: pnpm i --frozen-lockfile # && npm install -g @lhci/cli@0.12.x
+      - run: pnpm exec playwright install
       - run: pnpm fmt
       - run: pnpm lint
       - run: pnpm lint:mark

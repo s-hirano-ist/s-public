@@ -70,7 +70,7 @@ GraphQL
 - linter
   - [ESLint](https://eslint.org/)
     - 本ブログで利用している設定は[.eslintrc.cjs](https://github.com/s-hirano-ist/blog/blob/main/.eslintrc.cjs)を参照。
-  - [stylelint](https://stylelint.io/)
+  - [Stylelint](https://stylelint.io/)
     - 本ブログで利用している設定は[.stylelintrc.mjs](https://github.com/s-hirano-ist/blog/blob/main/.stylelintrc.mjs)を参照。
   - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
     - 本ブログで利用している設定は[.markdownlint-cli2.jsonc](https://github.com/s-hirano-ist/blog/blob/main/.markdownlint-cli2.jsonc)を参照。
@@ -83,7 +83,8 @@ GraphQL
     - [Jest](https://jestjs.io/)
     - [Vitest](https://vitest.dev/)
 - else
-  - [LightHouse CI](https://github.com/GoogleChrome/lighthouse-ci)
+  - [LightHouse CI](https://github.com/GoogleChrome/lighthouse-ci) | [LightHouse](https://developers.google.com/web/tools/lighthouse)
+  - [Nu Html Checker](https://github.com/validator/validator)
 
 ### CD
 
