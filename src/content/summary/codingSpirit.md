@@ -145,3 +145,7 @@ GitHub/GitLabのMainブランチへのマージや、タグの付与をトリガ
 ### ライブラリを気軽に導入しないほうがいい?
 
 [ライブラリを気軽に導入しないこと](https://sizu.me/ktsn/posts/v3n2rkzcckia)
+
+### スケーラビリティ
+
+[スケールするというのはどうゆうことなのか](https://speakerdeck.com/kurochan/what-does-it-mean-to-scalability)

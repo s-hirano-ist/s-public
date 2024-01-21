@@ -49,6 +49,8 @@ ChangeLogの記入のみだと、その破壊的変更に気づかない可能�
 
 [読みやすいコードを書くためのガイドライン](https://zenn.dev/arsaga/articles/ba9ec8c004511c)
 
+[良い名前付け](https://qiita.com/rokumura7/items/cb6302102f5805996ef9)
+
 ### チェック項目
 
 1. 複数の機能がある関数
