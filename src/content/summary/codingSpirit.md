@@ -149,3 +149,7 @@ GitHub/GitLabのMainブランチへのマージや、タグの付与をトリガ
 ### スケーラビリティ
 
 [スケールするというのはどうゆうことなのか](https://speakerdeck.com/kurochan/what-does-it-mean-to-scalability)
+
+### Test
+
+[Webフロントエンドテスト自動化](https://speakerdeck.com/cybozuinsideout/web_frontend_testing_and_automation-2023)
