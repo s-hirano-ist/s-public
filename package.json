@@ -48,7 +48,7 @@
     "astro": "^4.2.1",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
-    "jsdom": "^23.2.0",
+    "jsdom": "^24.0.0",
     "mdast-util-toc": "^7.0.0",
     "photoswipe": "^5.4.3",
     "rehype-autolink-headings": "^7.1.0",
