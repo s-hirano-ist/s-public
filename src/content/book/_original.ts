@@ -882,5 +882,11 @@ export const _books = {
       rating: 1,
       tags: ["科学"],
     },
+    {
+      ISBN: "9784799108420",
+      title: "人は話し方が9割",
+      rating: 2,
+      tags: ["自己啓発"],
+    },
   ],
 };

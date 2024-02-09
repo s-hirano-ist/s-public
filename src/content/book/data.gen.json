@@ -1468,5 +1468,15 @@
     "imageSrc": "https://books.google.com/books/content?id=qk5jzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "href": "https://books.google.co.jp/books?id=qk5jzwEACAAJ&dq=isbn:9784334046309&hl=&source=gbs_api",
     "rating": 1
+  },
+  {
+    "title": "人は話し方が9割",
+    "subTitle": "",
+    "authors": ["永松 茂久"],
+    "description": "「もう会話で悩まない！疲れない！オロオロしない！」――もっと話し方がうまければ、人生うまくいくのに……。「話すこと」にまつわる悩みを挙げるとキリがありません。本書でお伝えするのは、コミュニケーションの基本である会話がうまくいくようになる、ちょっとした、でも多くの人が気づいていないエッセンス。過去に会話で失敗したトラウマもあっさり消え去ってしまうほど、人と話すことがラクになり、人間関係も、人生も、全部がよりよい方向に動き出します！ 【株式会社すばる舎】",
+    "tags": ["自己啓発"],
+    "imageSrc": "https://books.google.com/books/content?id=3kqrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "href": "https://play.google.com/store/books/details?id=3kqrDwAAQBAJ&source=gbs_api",
+    "rating": 2
   }
 ]
