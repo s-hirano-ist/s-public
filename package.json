@@ -37,7 +37,7 @@
     "src/**/*": "python3 script/generate_photo_path.py"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.1",
+    "@astrojs/check": "^0.5.2",
     "@astrojs/react": "^3.0.10",
     "@astrojs/sitemap": "^3.0.5",
     "@astrojs/tailwind": "^5.1.0",
