@@ -2,12 +2,12 @@
   {
     "date": "June 2018 - June 2020",
     "title": "MSK安心ステーション",
-    "description": "自動車保険会社の事故受付のコールセンター"
+    "description": "自動車保険会社の事故受付のコールセンターで電話応対を担当。"
   },
   {
     "date": "October 2020 - January 2023",
     "title": "プログラボ豊中校",
-    "description": "プログラミング教室"
+    "description": "小中学生向けプログラミング教室で講師やサポートを担当。"
   },
   {
     "date": "August 2022",
@@ -17,11 +17,11 @@
   {
     "date": "March 2023",
     "title": "Giftee インターンシップ",
-    "description": "Line botの開発"
+    "description": "Line botの開発。"
   },
   {
     "date": "June 2022 - March 2024 (expected)",
     "title": "株式会社Next Finance Tech",
-    "description": "フロントエンド開発の業務委託"
+    "description": "フロントエンド・インフラ開発の業務委託。Next.js・Astro・TypeScriptを用いたWebサービスの開発、CI・CDの整備、AWS CDKと各種AWSサービスを用いたインフラ構築と運用に従事。"
   }
 ]
