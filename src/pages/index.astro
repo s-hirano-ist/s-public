@@ -3,8 +3,8 @@ import portfolioImage from "@assets/portfolio.webp";
 import AboutMe from "@components/AboutMe.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import Notes from "@components/Notes.astro";
 import PortfolioLinks from "@components/PortfolioLinks.astro";
+import TechStack from "@components/TechStack.astro";
 import Timeline from "@components/Timeline.astro";
 import { SITE } from "@config";
 // import achievementsData from "@layouts/Achivements.json";
@@ -63,8 +63,8 @@ import { Image } from "astro:assets";
     </section>
     <section
       class="taos:scale-[0.6] taos:opacity-0 pb-8 delay-[300ms] duration-[600ms]">
-      <h2>Notes</h2>
-      <Notes />
+      <h2>Tech stack</h2>
+      <TechStack />
     </section>
     <Footer darkModeDisabled />
   </main>
