@@ -69,22 +69,23 @@ export default function BookList() {
             href={book.href}
             target="_blank"
             key={book.title}>
-            <figure>
+            <figure className="h-48">
               <img
                 src={book.imageSrc}
                 alt={book.title}
                 decoding="async"
                 loading="lazy"
-                width="50%"
               />
             </figure>
             <div className="card-body h-96">
               <h2 className="card-title">{book.title}</h2>
-              <p className="card-subtitle">{book.subTitle}</p>
+              <p className="card-subtitle h-12 grow-0">{book.subTitle}</p>
               <div className="badge badge-primary">
                 {book.authors.toString()}
               </div>
-              <p className="overflow-y-hidden text-xs">{book.description}</p>
+              <p className="card-subtitle overflow-y-hidden text-xs">
+                {book.description}
+              </p>
               <Rating rating={book.rating} index={book.title} />
               <div className="card-actions justify-end">
                 {book.tags.map(tag => (
