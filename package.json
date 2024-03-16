@@ -12,10 +12,11 @@
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
+    "tsc": "tsc --noEmit",
     "fmt": "prettier --cache --check **/*.astro .",
     "fmt:fix": "prettier --cache --write **/*.astro .",
-    "lint": "astro check && tsc --noEmit && eslint .",
-    "lint:fix": "astro check & tsc --noEmit & eslint . --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "lint:mark": "markdownlint-cli2 src/content/summary/*",
     "lint:mark:fix": "markdownlint-cli2-fix src/content/summary/*",
     "lint:css": "stylelint .",
@@ -29,12 +30,16 @@
   },
   "lint-staged": {
     "*": [
+      "pnpm check",
       "pnpm fmt",
       "pnpm lint:secret"
     ],
-    "src/**/*.{js, jsx, ts, tsx, astro}": "pnpm lint",
-    "src/**/*.{css, astro}": "pnpm lint:css",
+    "src/**/*.{js, jsx, ts, tsx, astro}": [
+      "pnpm tsc",
+      "pnpm lint"
+    ],
     "_markdown/**/*.md": "pnpm lint:mark",
+    "src/**/*.{css, astro}": "pnpm lint:css",
     "src/**/*": "python3 script/generate_photo_path.py"
   },
   "dependencies": {
