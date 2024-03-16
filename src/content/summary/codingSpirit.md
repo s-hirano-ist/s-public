@@ -113,7 +113,8 @@ GitHub/GitLabのMainブランチへのマージや、タグの付与をトリガ
   - [standard-version](https://github.com/conventional-changelog/standard-version): `CHANGELOG.md`を自動作成 + `package.json`の`version`を自動更新。
   - `gh release create --generate-notes`コマンドによって、GitHubのReleaseのタイトルと本文を自動生成。
 - [git-cz](https://github.com/streamich/git-cz): [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/)に則ったコミットメッセージを自動生成。
-- ~~[Husky](https://typicode.github.io/husky/): コミット前にlinterを実行し、コードの品質を担保する。~~
+- [commitizen](https://github.com/commitizen/cz-cli): 同上。
+- [Husky](https://typicode.github.io/husky/): コミット前にlinterを実行し、コードの品質を担保する。GitでMarkdownを管理している場合やCI/CDの実行時間を削減したい場合に有効。
 - Squash Commit by default: Pull Requestをマージする際に、コミットをsquashすることで、コミット履歴をきれいに保つ。
 
 ### Single source of truth

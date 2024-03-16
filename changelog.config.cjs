@@ -1,6 +1,16 @@
 module.exports = {
   disableEmoji: true,
-  list: ["chore", "ci", "docs", "feat", "fix", "refactor", "style", "test"],
+  list: [
+    "chore",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "refactor",
+    "style",
+    "test",
+    "contents",
+  ],
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: [
@@ -44,6 +54,10 @@ module.exports = {
     test: {
       description: "Add or update tests",
       value: "test",
+    },
+    contents: {
+      description: "Add blog contents",
+      value: "contents",
     },
   },
 };
