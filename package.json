@@ -6,8 +6,9 @@
   "author": "s-hirano-ist",
   "packageManager": "pnpm@8.15.4",
   "scripts": {
-    "dev": "astro check --watch & astro dev",
-    "build": "astro check & astro build",
+    "check": "astro check",
+    "dev": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
