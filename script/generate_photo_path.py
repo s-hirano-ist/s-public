@@ -21,6 +21,6 @@ if __name__ == "__main__":
     data_list.append("\n export const CONTENTS = [")
     data_list.append(",".join(file_name_list_no_ext))
     data_list.append("\n ]")
-    f = open("./src/content/_photo/data.ts", "w")
+    f = open("./src/content/_photo/data.ts", "w", newline="\n")
     f.writelines(data_list)
     f.close()
