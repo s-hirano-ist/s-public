@@ -51,9 +51,7 @@ pnpm install
 ### Updating GitHub stars file
 
 ```bash
-cd gh-export-stars
-rye sync
-rye run python src/main.py --user s-hirano-ist --output ../src/content/portfolio/gh-stars.json
+pnpm generate:gh-stars
 ```
 
 ### Adding photos
