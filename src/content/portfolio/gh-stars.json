@@ -1,5 +1,177 @@
 [
   {
+    "url": "https://github.com/commitizen/cz-cli",
+    "description": "The commitizen command line utility. #BlackLivesMatter"
+  },
+  {
+    "url": "https://github.com/iacobucci/mermarpid",
+    "description": "Mermaid integration with Marp, with Fontawesome icons!"
+  },
+  {
+    "url": "https://github.com/Songmu/ecschedule",
+    "description": "ecschedule is a tool to manage ECS Scheduled Tasks."
+  },
+  {
+    "url": "https://github.com/auth0/auth0-deploy-cli",
+    "description": "The Auth0 Deploy CLI is a tool that helps you manage your Auth0 tenant configuration. It integrates into your development workflows as a standalone CLI or as a node module."
+  },
+  {
+    "url": "https://github.com/mui/material-ui",
+    "description": "MUI Core: Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google's Material Design."
+  },
+  {
+    "url": "https://github.com/withastro/language-tools",
+    "description": "Language tools for Astro"
+  },
+  {
+    "url": "https://github.com/rehypejs/rehype",
+    "description": "HTML processor powered by plugins part of the @unifiedjs collective"
+  },
+  {
+    "url": "https://github.com/facebook/react",
+    "description": "The library for web and native user interfaces."
+  },
+  {
+    "url": "https://github.com/apollographql/apollo-client",
+    "description": ":rocket: \u00a0A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server."
+  },
+  {
+    "url": "https://github.com/prometheus/alertmanager",
+    "description": "Prometheus Alertmanager"
+  },
+  {
+    "url": "https://github.com/pacocoursey/next-themes",
+    "description": "Perfect Next.js dark mode in 2 lines of code. Support System preference and any other theme with no flashing"
+  },
+  {
+    "url": "https://github.com/DavidAnson/markdownlint-cli2",
+    "description": "A fast, flexible, configuration-based command-line interface for linting Markdown/CommonMark files with the markdownlint library"
+  },
+  {
+    "url": "https://github.com/mermaid-js/mermaid",
+    "description": "Generation of diagrams like flowcharts or sequence diagrams from text in a similar manner as markdown"
+  },
+  {
+    "url": "https://github.com/CloudCannon/pagefind",
+    "description": "Static low-bandwidth search at scale"
+  },
+  {
+    "url": "https://github.com/import-js/eslint-plugin-import",
+    "description": "ESLint plugin with rules that help validate proper imports."
+  },
+  {
+    "url": "https://github.com/makenowjust-labs/recheck",
+    "description": "The trustworthy ReDoS checker"
+  },
+  {
+    "url": "https://github.com/secretlint/secretlint",
+    "description": "Pluggable linting tool to prevent committing credential."
+  },
+  {
+    "url": "https://github.com/prettier/prettier",
+    "description": "Prettier is an opinionated code formatter."
+  },
+  {
+    "url": "https://github.com/uhyo/better-typescript-lib",
+    "description": "Better TypeScript standard library"
+  },
+  {
+    "url": "https://github.com/isaacs/rimraf",
+    "description": "A `rm -rf` util for nodejs"
+  },
+  {
+    "url": "https://github.com/progfay/shields-with-icon",
+    "description": "Enjoy https://shields.io"
+  },
+  {
+    "url": "https://github.com/conventional-changelog/standard-version",
+    "description": ":trophy: Automate versioning and CHANGELOG generation, with semver.org and conventionalcommits.org"
+  },
+  {
+    "url": "https://github.com/streamich/git-cz",
+    "description": "Semantic Git commits"
+  },
+  {
+    "url": "https://github.com/visjs/vis-network",
+    "description": ":dizzy: Display dynamic, automatically organised, customizable network views."
+  },
+  {
+    "url": "https://github.com/OpenAPITools/openapi-generator",
+    "description": "OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3)"
+  },
+  {
+    "url": "https://github.com/cdimascio/express-openapi-validator",
+    "description": "\ud83e\udd8b Auto-validates api requests, responses, and securities using ExpressJS and an OpenAPI 3.x specification"
+  },
+  {
+    "url": "https://github.com/aspida/openapi2aspida",
+    "description": "Convert OpenAPI 3.0 or Swagger 2.0 definitions into aspida"
+  },
+  {
+    "url": "https://github.com/rehypejs/rehype-autolink-headings",
+    "description": "plugin to add links to headings in HTML"
+  },
+  {
+    "url": "https://github.com/gladevise/remark-link-card",
+    "description": null
+  },
+  {
+    "url": "https://github.com/versoly/taos",
+    "description": "A simple and small (600 bytes) library to help animate elements while scrolling using responsive Tailwind CSS JIT utility classes."
+  },
+  {
+    "url": "https://github.com/saadeghi/theme-change",
+    "description": "Change CSS theme with toggle, buttons or select using CSS custom properties and localStorage"
+  },
+  {
+    "url": "https://github.com/anuraghazra/github-readme-stats",
+    "description": ":zap: Dynamically generated stats for your github readmes"
+  },
+  {
+    "url": "https://github.com/saadeghi/daisyui",
+    "description": "\ud83c\udf3c \ud83c\udf3c \ud83c\udf3c \ud83c\udf3c \ud83c\udf3c \u2003The most popular, free and open-source Tailwind CSS component library"
+  },
+  {
+    "url": "https://github.com/open-cli-tools/concurrently",
+    "description": "Run commands concurrently. Like `npm run watch-js & npm run watch-less` but better."
+  },
+  {
+    "url": "https://github.com/adaltas/node-csv",
+    "description": "Full featured CSV parser with simple api and tested against large datasets."
+  },
+  {
+    "url": "https://github.com/DavidAnson/markdownlint",
+    "description": "A Node.js style checker and lint tool for Markdown/CommonMark files."
+  },
+  {
+    "url": "https://github.com/pyenv/pyenv",
+    "description": "Simple Python version management"
+  },
+  {
+    "url": "https://github.com/apollographql/apollo-client-nextjs",
+    "description": "Apollo Client support for the Next.js App Router"
+  },
+  {
+    "url": "https://github.com/apollographql/apollo-server",
+    "description": "\ud83c\udf0d \u00a0Spec-compliant and production ready JavaScript GraphQL server that lets you develop in a schema-first way. Built for Express, Connect, Hapi, Koa, and more."
+  },
+  {
+    "url": "https://github.com/drwpow/openapi-typescript",
+    "description": "Generate TypeScript types from OpenAPI 3 specs"
+  },
+  {
+    "url": "https://github.com/TypeStrong/ts-node",
+    "description": "TypeScript execution and REPL for node.js"
+  },
+  {
+    "url": "https://github.com/github-tools/github",
+    "description": "A higher-level wrapper around the Github API. Intended for the browser."
+  },
+  {
+    "url": "https://github.com/withastro/astro",
+    "description": "The web framework for content-driven websites. \u2b50\ufe0f Star to support our work!"
+  },
+  {
     "url": "https://github.com/ardatan/feTS",
     "description": "TypeScript HTTP Framework focusing on e2e type-safety, easy setup, performance & great developer experience"
   },
@@ -16,7 +188,7 @@
     "description": ":anchor: GROWI - Team collaboration software using markdown"
   },
   {
-    "url": "https://github.com/studio-freight/lenis",
+    "url": "https://github.com/darkroomengineering/lenis",
     "description": "How smooth scroll should be"
   },
   {
@@ -125,7 +297,7 @@
   },
   {
     "url": "https://github.com/ardatan/graphql-mesh",
-    "description": "Fully functional GraphQL gateway framework"
+    "description": "The Graph of Everything - Federated architecture for any API service"
   },
   {
     "url": "https://github.com/hagopj13/node-express-boilerplate",
@@ -161,7 +333,7 @@
   },
   {
     "url": "https://github.com/pyrustic/jesth",
-    "description": "Next-level human-readable data serialization format "
+    "description": "Human-readable versatile data format "
   },
   {
     "url": "https://github.com/vlucas/phpdotenv",
@@ -189,10 +361,10 @@
   },
   {
     "url": "https://github.com/mui/mui-x",
-    "description": "MUI X: Build data-rich applications using a growing list of advanced React components."
+    "description": "MUI X: Build complex and data-rich applications using a growing list of advanced React components, like the Data Grid, Date and Time Pickers, Charts, and more!"
   },
   {
-    "url": "https://github.com/ot07/prettier-plugin-astro-organize-imports",
+    "url": "https://github.com/neokidev/prettier-plugin-astro-organize-imports",
     "description": "A Prettier plugin for formatting imports in Astro files"
   },
   {
@@ -245,7 +417,7 @@
   },
   {
     "url": "https://github.com/watalabo/WiPiCap",
-    "description": "WiPiCap: Caputuring Wi-Fi CSI Frames Using RaspberryPi"
+    "description": "WiPiCap: DIg into Wi-Fi Beamforming Report"
   },
   {
     "url": "https://github.com/sub-t/blog-template",
