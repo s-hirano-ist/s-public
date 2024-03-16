@@ -35,6 +35,7 @@ jobs:
             ${{ runner.os }}-node-
       - run: pnpm i --frozen-lockfile # && npm install -g @lhci/cli@0.12.x
       - run: pnpm exec playwright install
+      - run: pnpm check
       - run: pnpm fmt
       - run: pnpm lint
       - run: pnpm lint:mark
