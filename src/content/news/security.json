@@ -85,6 +85,27 @@
     {
       "title": "計算エラーが発生したらSSHの秘密鍵が盗み取られる危険性",
       "url": "https://gigazine.net/news/20231114-ssh-key-compromise/"
+    },
+    {
+      "title": "AIによる顔交換技術で顔認証突破が現実的に",
+      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00676/022200161/"
+    },
+    {
+      "title": "iOS対応のトロイの木馬",
+      "url": "https://gigazine.net/news/20240216-ios-trojan-goldpickaxe/"
+    },
+    {
+      "title": "RECAPTCHA突破ツール",
+      "url": "https://gigazine.net/news/20240225-buster-captcha-solver/"
+    },
+    {
+      "title": "Twitterカード詐欺",
+      "quote": "Twitterか等のアクセスだけリダイレクトをかけるようにしたら、カード上には正式なURLが貼っているように見えてしまう問題",
+      "url": "https://qiita.com/YusukeSuzuki@github/items/e6f2b65d9310e8fc6e7a"
+    },
+    {
+      "title": "短縮URLサービスのセキュリティリスク",
+      "url": "https://www.itmedia.co.jp/enterprise/articles/2311/21/news042.html"
     }
   ]
 }

@@ -153,3 +153,7 @@ GitHub/GitLabのMainブランチへのマージや、タグの付与をトリガ
 ### Test
 
 [Webフロントエンドテスト自動化](https://speakerdeck.com/cybozuinsideout/web_frontend_testing_and_automation-2023)
+
+### Issue管理
+
+[NotionのチケットとGitHubのPRの連携](https://zenn.dev/hokuto_tech/articles/b143133e8c8366)
