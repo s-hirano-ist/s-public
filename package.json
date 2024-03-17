@@ -4,7 +4,7 @@
   "type": "module",
   "description": "blog",
   "author": "s-hirano-ist",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@8.15.5",
   "scripts": {
     "check": "astro check",
     "dev": "astro dev",
