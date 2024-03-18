@@ -250,6 +250,14 @@
     {
       "title": "rm -rf ~の注意点",
       "url": "https://speakerdeck.com/uhooi/rm-rf-choron?slide=26"
+    },
+    {
+      "title": "落雷は濡れている方がダメージが少ない",
+      "url": "https://nazology.net/archives/145271"
+    },
+    {
+      "title": "2038年問題 by UNIX時間",
+      "url": "https://ja.m.wikipedia.org/wiki/2038%E5%B9%B4%E5%95%8F%E9%A1%8C"
     }
   ]
 }

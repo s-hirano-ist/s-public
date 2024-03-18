@@ -143,6 +143,10 @@ GitHub/GitLabのMainブランチへのマージや、タグの付与をトリガ
 
 [つよつよエンジニアの成果物にある5つの特徴](https://qiita.com/lazy-kz/items/727299cae893ab3442a0)
 
+### 初学者エンジニアの心得
+
+[マネージャーが進捗を管理しやすい部下の仕事の進め方](https://qiita.com/soyanchu/items/d1cb9785fc211941a009)
+
 ### ライブラリを気軽に導入しないほうがいい?
 
 [ライブラリを気軽に導入しないこと](https://sizu.me/ktsn/posts/v3n2rkzcckia)
