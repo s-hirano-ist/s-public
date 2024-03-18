@@ -85,6 +85,7 @@ GraphQL
 - else
   - [LightHouse CI](https://github.com/GoogleChrome/lighthouse-ci) | [Page Speed Insights](https://pagespeed.web.dev/)
   - [Nu Html Checker](https://github.com/validator/validator)
+  - [htmlhint](https://htmlhint.com/)を利用（`npx htmlhint https://example.com`）。
 
 ### CD
 
