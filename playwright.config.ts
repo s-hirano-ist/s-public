@@ -45,11 +45,11 @@ const config: PlaywrightTestConfig = {
     //   use: { ...devices["Pixel 5"] },
     // },
   ],
-  webServer: {
-    command: "pnpm preview",
-    port: 4321,
-    reuseExistingServer: true,
-  },
+  // webServer: {
+  //   command: "pnpm preview",
+  //   port: 4321,
+  //   reuseExistingServer: true,
+  // },
 };
 
 export default config;
