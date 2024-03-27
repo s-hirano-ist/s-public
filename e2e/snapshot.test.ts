@@ -66,11 +66,6 @@ test.describe.parallel("Visual regression testing of page", () => {
         fullPage: item.fullPage,
         animations: "disabled",
       });
-      // if you want to save the screenshot and compare with it.
-      // await expect(page).toHaveScreenshot(`${item.name}.png`, {
-      //   fullPage: item.fullPage,
-      //   animations: "disabled",
-      // });
     });
   });
 });
