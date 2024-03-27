@@ -34,6 +34,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: pnpm i --frozen-lockfile # && npm install -g @lhci/cli@0.12.x
+      - run: pnpm exec playwright install
       - run: pnpm check
       - run: pnpm tsc
       - run: pnpm fmt
@@ -42,9 +43,9 @@ jobs:
       - run: pnpm lint:css
       - run: pnpm lint:secret
       - run: pnpm build
-      # uncomment the following 2 lines to run playwright test manually
-      # - run: pnpm exec playwright install
+      # uncomment the following line to run playwright test manually
       # - run: pnpm snapshots
+      # uncomment the following line to run lighthouse test manually
       # - run: lhci autorun
       #   env:
       #     LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
