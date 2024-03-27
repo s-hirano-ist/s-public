@@ -1,12 +1,14 @@
-name: build
+name: vrt
 on:
-  push:
+  deployment_status:
 jobs:
-  build:
+  screenshots:
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+    permissions:
+      contents: read
+
     steps:
       - uses: actions/checkout@v4
 
@@ -33,19 +35,17 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: pnpm i --frozen-lockfile # && npm install -g @lhci/cli@0.12.x
+      - run: pnpm i --frozen-lockfile
       - run: pnpm exec playwright install
-      - run: pnpm check
-      - run: pnpm tsc
-      - run: pnpm fmt
-      - run: pnpm lint
-      - run: pnpm lint:mark
-      - run: pnpm lint:css
-      - run: pnpm lint:secret
-      - run: pnpm build
-      # uncomment the following line to run playwright test manually
-      # - run: pnpm snapshots
-      # uncomment the following line to run lighthouse test manually
-      # - run: lhci autorun
-      #   env:
-      #     LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      - run: pnpm snapshots:update
+        env:
+          BASE_URL: https://s-hirano.com/
+      - run: pnpm snapshots
+        env:
+          BASE_URL: ${{ github.event.deployment_status.environment_url }}
+      - name: Upload failed screenshots
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: vrt-failed-screenshots-${{ github.sha }}
+          path: test-results

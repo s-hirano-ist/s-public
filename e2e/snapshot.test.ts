@@ -62,7 +62,7 @@ test.describe.parallel("Visual regression testing of page", () => {
   pagePath.map(item => {
     test(`snapshot test ${item.name}`, async ({ page }) => {
       await page.goto(`${item.path}`);
-      await expect(page).toHaveScreenshot(`${item.name}.png`, {
+      await expect(page).toHaveScreenshot({
         fullPage: item.fullPage,
         animations: "disabled",
       });

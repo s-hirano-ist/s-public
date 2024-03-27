@@ -7,9 +7,11 @@ const config: PlaywrightTestConfig = {
   reporter: "html",
   expect: { timeout: 10000 },
   use: {
-    baseURL: "http://localhost:4321",
+    baseURL: process.env.BASE_URL,
     trace: "on-first-retry",
   },
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
   projects: [
     {
       name: "chromium",
@@ -45,11 +47,11 @@ const config: PlaywrightTestConfig = {
     //   use: { ...devices["Pixel 5"] },
     // },
   ],
-  webServer: {
-    command: "pnpm preview",
-    port: 4321,
-    reuseExistingServer: true,
-  },
+  // webServer: {
+  //   command: "pnpm preview",
+  //   port: 4321,
+  //   reuseExistingServer: true,
+  // },
 };
 
 export default config;
