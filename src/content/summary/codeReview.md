@@ -125,3 +125,7 @@ GitHubのPRの作成とその後の議論方法
 プルリクエストを小さくする技術
 
 [Pull Requestを小さくする戦略](https://agilejourney.uzabase.com/entry/2023/07/31/103000)
+
+READMEに記載するべきこと
+
+[エンジニアが開発しやすい環境作り](https://qiita.com/KNR109/items/5e0278e06e6ace5e3fcd)
