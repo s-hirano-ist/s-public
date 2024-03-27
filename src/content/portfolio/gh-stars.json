@@ -1,10 +1,14 @@
 [
   {
+    "url": "https://github.com/coreybutler/nvm-windows",
+    "description": "A node.js version management utility for Windows. Ironically written in Go."
+  },
+  {
     "url": "https://github.com/commitizen/cz-cli",
     "description": "The commitizen command line utility. #BlackLivesMatter"
   },
   {
-    "url": "https://github.com/iacobucci/mermarpid",
+    "url": "https://github.com/iacobucci/mermarpidsome",
     "description": "Mermaid integration with Marp, with Fontawesome icons!"
   },
   {
