@@ -9,9 +9,6 @@ jobs:
     permissions:
       contents: read
 
-    container:
-      image: mcr.microsoft.com/playwright:v1.40.1-focal
-
     steps:
       - uses: actions/checkout@v4
 
@@ -39,6 +36,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: pnpm i --frozen-lockfile
+      - run: pnpm exec playwright install
       - run: pnpm snapshots
         env:
           BASE_URL: https://s-hirano.com/

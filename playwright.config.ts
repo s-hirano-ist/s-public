@@ -10,6 +10,8 @@ const config: PlaywrightTestConfig = {
     baseURL: process.env.BASE_URL,
     trace: "on-first-retry",
   },
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
   projects: [
     {
       name: "chromium",
