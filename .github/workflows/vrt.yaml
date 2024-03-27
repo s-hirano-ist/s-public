@@ -37,11 +37,11 @@ jobs:
             ${{ runner.os }}-node-
       - run: pnpm i --frozen-lockfile
       - run: pnpm exec playwright install
-      - run: pnpm snapshots
+      - run: pnpm snapshots:update
         env:
           BASE_URL: https://s-hirano.com/
 
-      - run: pnpm snapshots:update
+      - run: pnpm snapshots
         env:
           BASE_URL: ${{ github.event.deployment_status.environment_url }}
 
