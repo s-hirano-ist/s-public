@@ -1,10 +1,18 @@
 [
   {
+    "url": "https://github.com/biomejs/biome",
+    "description": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP."
+  },
+  {
+    "url": "https://github.com/coreybutler/nvm-windows",
+    "description": "A node.js version management utility for Windows. Ironically written in Go."
+  },
+  {
     "url": "https://github.com/commitizen/cz-cli",
     "description": "The commitizen command line utility. #BlackLivesMatter"
   },
   {
-    "url": "https://github.com/iacobucci/mermarpid",
+    "url": "https://github.com/iacobucci/mermarpidsome",
     "description": "Mermaid integration with Marp, with Fontawesome icons!"
   },
   {
