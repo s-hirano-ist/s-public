@@ -1,0 +1,33 @@
+name: gh-stars
+on:
+  schedule:
+    - cron: "0 23 * * *"
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: "recursive"
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: pip install PyGithub
+
+      - name: Run Python script
+        run: python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          commit-message: "chore: update gh-stars.json"
+          title: "chore: update gh-stars.json"
+          body: |
+            This is an update PR of gh-stars.json.
