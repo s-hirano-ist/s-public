@@ -18,8 +18,7 @@ import { Image } from "astro:assets";
 <Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
   <main class="background main-contents" data-theme="noTheme">
     <Header title="Portfolio" darkModeDisabled />
-    <section
-      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
+    <section class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
       <Image src={portfolioImage} alt="" class="w-full" />
     </section>
     <section
@@ -32,23 +31,21 @@ import { Image } from "astro:assets";
       </a>
     </section>
     <section
-      class="taos:scale-[0.6] taos:opacity-0 pb-4 delay-[600ms] duration-[600ms]">
-      <h2>Links</h2>
-      <PortfolioLinks />
-    </section>
-    <section
       id="about-me"
-      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
+      class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
       <h2>About me</h2>
       <AboutMe />
     </section>
     <section
-      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
+      class="taos:scale-[0.6] taos:opacity-0 pb-4 delay-[600ms] duration-[600ms]">
+      <h2>Links</h2>
+      <PortfolioLinks />
+    </section>
+    <section class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
       <h2>Education</h2>
       <Timeline data={educationData} />
     </section>
-    <section
-      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
+    <section class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
       <h2>Work Experience</h2>
       <Timeline data={workExperienceData} />
     </section>
@@ -56,13 +53,12 @@ import { Image } from "astro:assets";
       <h2>Achievements</h2>
       <Achievements />
     </section> -->
-    <section
-      class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
+    <section class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
       <h2>Qualification</h2>
       <Timeline data={qualificationData} />
     </section>
     <section
-      class="taos:scale-[0.6] taos:opacity-0 pb-8 delay-[300ms] duration-[600ms]">
+      class="taos:scale-[0.6] taos:opacity-0 pb-8 delay-300 duration-[600ms]">
       <h2>Tech stack</h2>
       <TechStack />
     </section>
