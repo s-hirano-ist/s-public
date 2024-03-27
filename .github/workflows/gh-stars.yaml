@@ -26,10 +26,10 @@ jobs:
         run: python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Automated pull request"
-          title: "Automated Pull Request"
+          # token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update gh-stars.json"
+          title: "chore: update gh-stars.json"
           body: |
-            This is an automated pull request created by GitHub Actions.
+            This is an update PR of gh-stars.json.
