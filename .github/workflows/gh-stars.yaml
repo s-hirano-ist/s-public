@@ -1,9 +1,7 @@
 name: gh-stars
 on:
-  # FIXME:
-  # schedule:
-  #   - cron: "0 23 * * *"
-  push:
+  schedule:
+    - cron: "0 23 * * *"
 jobs:
   create_pull_request:
     runs-on: ubuntu-latest
