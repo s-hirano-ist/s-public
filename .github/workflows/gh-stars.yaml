@@ -1,0 +1,33 @@
+name: gh-stars
+on:
+  # FIXME:
+  # schedule:
+  #   - cron: "0 23 * * *"
+  push:
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12
+
+      # - name: Install dependencies
+      #   run: pip install -r requirements.txt
+
+      - name: Run Python script
+        run: python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Automated pull request"
+          title: "Automated Pull Request"
+          body: |
+            This is an automated pull request created by GitHub Actions.
