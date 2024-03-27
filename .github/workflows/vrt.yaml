@@ -40,11 +40,9 @@ jobs:
       - run: pnpm snapshots:update
         env:
           BASE_URL: https://s-hirano.com/
-
       - run: pnpm snapshots
         env:
           BASE_URL: ${{ github.event.deployment_status.environment_url }}
-
       - name: Upload failed screenshots
         if: failure()
         uses: actions/upload-artifact@v3
