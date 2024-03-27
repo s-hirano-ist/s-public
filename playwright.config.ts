@@ -6,10 +6,10 @@ const config: PlaywrightTestConfig = {
   fullyParallel: true,
   reporter: "html",
   expect: { timeout: 10000 },
-  use: {
-    baseURL: "http://localhost:4321",
-    trace: "on-first-retry",
-  },
+  // use: {
+  // baseURL: "http://localhost:4321",
+  // trace: "on-first-retry",
+  // },
   projects: [
     {
       name: "chromium",
