@@ -1,8 +1,6 @@
 name: vrt
-
 on:
   deployment_status:
-
 jobs:
   screenshots:
     if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
@@ -17,38 +15,38 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 以下はpnpmや依存のセットアップなので説明は省略
-      - uses: actions/setup-node@v3.5.1
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version-file: .node-version
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8.9.2
-          run_install: false
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}-setup-pnpm
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-setup-pnpm
-      - run: pnpm install
-        shell: bash
+          node-version: "20"
 
-      # 本番環境に対してスクリーンショットを撮る。このスクリーンショットが比較元となる
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+
+      - name: Get pnpm directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: pnpm i --frozen-lockfile
       - run: pnpm snapshots
         env:
           BASE_URL: https://s-hirano.com/
 
-      # デプロイが成功した Preview 環境に対してスクリーンショットを撮り、比較する
       - run: pnpm snapshots:update
         env:
           BASE_URL: ${{ github.event.deployment_status.environment_url }}
 
-      # 失敗時に理由がわかるよう、失敗したスクリーンショットをアップロードする
       - name: Upload failed screenshots
         if: failure()
         uses: actions/upload-artifact@v3
