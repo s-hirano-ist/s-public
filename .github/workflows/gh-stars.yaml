@@ -1,7 +1,7 @@
 name: gh-stars
 on:
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "0 23 * * 1"
 jobs:
   create_pull_request:
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
-          commit-message: "chore: update gh-stars.json"
-          title: "chore: update gh-stars.json"
+          commit-message: "contents: update gh-stars.json"
+          title: "contents: update gh-stars.json"
           body: |
             This is an update PR of gh-stars.json.
