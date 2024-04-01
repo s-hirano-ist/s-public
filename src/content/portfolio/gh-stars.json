@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/react-dropzone/react-dropzone",
+    "description": "Simple HTML5 drag-drop zone with React.js."
+  },
+  {
     "url": "https://github.com/biomejs/biome",
     "description": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP."
   },
