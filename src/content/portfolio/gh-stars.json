@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/nektos/act",
+    "description": "Run your GitHub Actions locally \ud83d\ude80"
+  },
+  {
     "url": "https://github.com/react-dropzone/react-dropzone",
     "description": "Simple HTML5 drag-drop zone with React.js."
   },
