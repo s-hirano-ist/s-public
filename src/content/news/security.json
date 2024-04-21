@@ -122,6 +122,22 @@
     {
       "title": "マイナンバーカードの欠点: 本人確認の方法",
       "url": "https://www.itmedia.co.jp/news/articles/2403/25/news115.html"
+    },
+    {
+      "title": "オープンソースの問題点: XZの脆弱性",
+      "url": "https://piyolog.hatenadiary.jp/entry/2024/04/01/035321"
+    },
+    {
+      "title": "URLの自動変換は脆弱性を発生させる",
+      "url": "https://gigazine.net/news/20240411-twitter-x-pivot/"
+    },
+    {
+      "title": "歯ブラシをハッキングしてDDoS攻撃を仕掛けることが可能",
+      "url": "https://gigazine.net/news/20240207-toothbrushes-used-in-ddos-attacks/"
+    },
+    {
+      "title": "指紋認証の摩擦音の録音から指紋を復元",
+      "url": "https://www.itmedia.co.jp/news/articles/2402/19/news041.html"
     }
   ]
 }
