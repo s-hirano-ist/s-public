@@ -10,7 +10,7 @@ dependencies:
     version: 0.5.10(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.4.5)
   '@astrojs/react':
     specifier: ^3.3.1
-    version: 3.3.1(@types/react-dom@18.2.25)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)(vite@5.2.8)
+    version: 3.3.1(@types/react-dom@18.2.25)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)(vite@5.2.10)
   '@astrojs/sitemap':
     specifier: ^3.1.4
     version: 3.1.4
@@ -24,8 +24,8 @@ dependencies:
     specifier: ^5.0.19
     version: 5.0.19
   '@googleapis/books':
-    specifier: ^2.0.0
-    version: 2.0.0
+    specifier: ^3.0.0
+    version: 3.0.0
   '@studio-freight/lenis':
     specifier: ^1.0.42
     version: 1.0.42
@@ -324,7 +324,7 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/react@3.3.1(@types/react-dom@18.2.25)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)(vite@5.2.8):
+  /@astrojs/react@3.3.1(@types/react-dom@18.2.25)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)(vite@5.2.10):
     resolution: {integrity: sha512-dwN6B+C0hQ1jpeQ5EckICpqv76t6RxEslldCP0UQ/ospolNk8GjqL11X/xQSbftiQvGWRMT0Tj5f0Xk17k5qJQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
     peerDependencies:
@@ -335,7 +335,7 @@ packages:
     dependencies:
       '@types/react': 18.3.1
       '@types/react-dom': 18.2.25
-      '@vitejs/plugin-react': 4.2.1(vite@5.2.8)
+      '@vitejs/plugin-react': 4.2.1(vite@5.2.10)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       ultrahtml: 1.5.3
@@ -984,8 +984,8 @@ packages:
     requiresBuild: true
     dev: false
 
-  /@googleapis/books@2.0.0:
-    resolution: {integrity: sha512-23SSRtRiaQQGhyL8aIKsCu+IwaPCn+AmLd3ntN8FawZkKapBeLpykCc+IRZiYvSvPe9DcU4OS6Q7ZUVjUBqyWw==}
+  /@googleapis/books@3.0.0:
+    resolution: {integrity: sha512-IsbJdwKx2DBNeENgzlIx3+9meTeQg6GI/Excix9KM3tjbgj4Mu2Ltmed7FDdOd/e73x9/Bk+w2f9TxCLuITN/w==}
     engines: {node: '>=12.0.0'}
     dependencies:
       googleapis-common: 7.1.0
@@ -1993,7 +1993,7 @@ packages:
       - supports-color
     dev: false
 
-  /@vitejs/plugin-react@4.2.1(vite@5.2.8):
+  /@vitejs/plugin-react@4.2.1(vite@5.2.10):
     resolution: {integrity: sha512-oojO9IDc4nCUUi8qIR11KoQm0XFFLIwsRBwHRR4d/88IWghn1y6ckz/bJ8GHDCsYEJee8mDzqtJxh15/cisJNQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -2004,7 +2004,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.24.1(@babel/core@7.24.4)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.0
-      vite: 5.2.8(@types/node@20.12.7)
+      vite: 5.2.10(@types/node@20.12.7)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -8431,42 +8431,6 @@ packages:
 
   /vite@5.2.10(@types/node@20.12.7):
     resolution: {integrity: sha512-PAzgUZbP7msvQvqdSD+ErD5qGnSFiGOoWmV5yAKUEI0kdhjbH6nMWVyZQC/hSc4aXwc0oJ9aEdIiF9Oje0JFCw==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 20.12.7
-      esbuild: 0.20.2
-      postcss: 8.4.38
-      rollup: 4.14.2
-    optionalDependencies:
-      fsevents: 2.3.3
-    dev: false
-
-  /vite@5.2.8(@types/node@20.12.7):
-    resolution: {integrity: sha512-OyZR+c1CE8yeHw5V5t59aXsUPPVTHMDjEZz8MgguLL/Q7NblxhZUlTu9xSPqlsUO/y+X7dlU05jdhvyycD55DA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
