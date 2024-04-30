@@ -1,5 +1,17 @@
 [
   {
+    "url": "https://github.com/SAWARATSUKI/ServiceLogos",
+    "description": "\u30ed\u30b4\u3092\u53ef\u611b\u304f\u4f5c\u308d\u3046\u3000\u7bc0\u5ea6\u3092\u6301\u3063\u3066\u5229\u7528\u3057\u3066\u304f\u3060\u3055\u3044\u306d\ud83e\udee0 "
+  },
+  {
+    "url": "https://github.com/jdx/mise",
+    "description": "dev tools, env vars, task runner"
+  },
+  {
+    "url": "https://github.com/shuding/next-view-transitions",
+    "description": "Use CSS View Transitions API in Next.js App Router."
+  },
+  {
     "url": "https://github.com/nektos/act",
     "description": "Run your GitHub Actions locally \ud83d\ude80"
   },
@@ -409,7 +421,7 @@
   },
   {
     "url": "https://github.com/honojs/hono",
-    "description": "Fast, Lightweight, Web-standards"
+    "description": "Web Framework built on Web Standards"
   },
   {
     "url": "https://github.com/vanjs-org/van",
