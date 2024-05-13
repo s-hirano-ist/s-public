@@ -1,7 +1,7 @@
 [
   {
-    "url": "https://github.com/SAWARATSUKI/ServiceLogos",
-    "description": "\u30ed\u30b4\u3092\u53ef\u611b\u304f\u4f5c\u308d\u3046\u3000\u7bc0\u5ea6\u3092\u6301\u3063\u3066\u5229\u7528\u3057\u3066\u304f\u3060\u3055\u3044\u306d\ud83e\udee0 "
+    "url": "https://github.com/diodon-dev/diodon",
+    "description": "Aiming to be the best integrated clipboard manager for the Unity desktop"
   },
   {
     "url": "https://github.com/jdx/mise",
@@ -201,7 +201,7 @@
   },
   {
     "url": "https://github.com/ardatan/feTS",
-    "description": "TypeScript HTTP Framework focusing on e2e type-safety, easy setup, performance & great developer experience"
+    "description": "\ud83d\uddf9 TypeScript HTTP Framework focusing on e2e type-safety, easy setup, performance & great developer experience"
   },
   {
     "url": "https://github.com/PyGithub/PyGithub",
@@ -325,7 +325,7 @@
   },
   {
     "url": "https://github.com/ardatan/graphql-mesh",
-    "description": "The Graph of Everything - Federated architecture for any API service"
+    "description": "\ud83d\udd78\ufe0f GraphQL Mesh - The Graph of Everything - Federated architecture for any API service"
   },
   {
     "url": "https://github.com/hagopj13/node-express-boilerplate",
