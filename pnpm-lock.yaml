@@ -24,8 +24,8 @@ dependencies:
     specifier: ^5.0.19
     version: 5.0.19
   '@googleapis/books':
-    specifier: ^3.0.0
-    version: 3.0.1
+    specifier: ^4.0.0
+    version: 4.0.0
   '@studio-freight/lenis':
     specifier: ^1.0.42
     version: 1.0.42
@@ -1207,8 +1207,8 @@ packages:
     requiresBuild: true
     dev: false
 
-  /@googleapis/books@3.0.1:
-    resolution: {integrity: sha512-FVBSXrb900pEOYFSLYtsxVtAkveSTSII13X+7M330t8bFaYQwtBJpZ0rVKm8PnS1yNDTgJiQwPWNCt+EDEc4RQ==}
+  /@googleapis/books@4.0.0:
+    resolution: {integrity: sha512-FJNk4bH4Q3NYl0tZ28Ve42lXmFVzzLcMTYatmOfMAIFkc7bhYAL0lUd7Vm8lPzCJPfnME43qFQ9psPFrL1rjcw==}
     engines: {node: '>=12.0.0'}
     dependencies:
       googleapis-common: 7.2.0
