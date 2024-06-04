@@ -26,6 +26,7 @@ const config = {
   singleAttributePerLine: false,
   plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
   tailwindConfig: "./tailwind.config.mjs",
+  tailwindFunctions: ["clsx"],
   overrides: [
     {
       files: "*.astro",
