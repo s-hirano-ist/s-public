@@ -2,19 +2,17 @@
   timezone: "Asia/Tokyo",
   baseBranches: ["main"],
   extends: ["config:base", ":semanticCommitTypeAll(chore)"],
+  reviewers: ["s-hirano-ist"],
   enabledManagers: ["npm", "github-actions"],
   dependencyDashboard: true,
   schedule: ["before 11am on monday"],
-  automergeSchedule: ["after 1pm on monday"],
   labels: ["dependencies"],
   rangeStrategy: "bump",
   lockFileMaintenance: {
     enabled: true,
-    automerge: true,
   },
   vulnerabilityAlerts: {
     labels: ["security"],
-    automerge: true,
   },
   packageRules: [
     {
@@ -23,7 +21,6 @@
       matchPackagePatterns: ["*"],
       matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
       groupName: "patch-minor",
-      automerge: true,
     },
   ],
 }
