@@ -26,9 +26,6 @@ dependencies:
   '@googleapis/books':
     specifier: ^4.0.0
     version: 4.0.0
-  '@studio-freight/lenis':
-    specifier: ^1.0.42
-    version: 1.0.42
   astro:
     specifier: ^4.11.2
     version: 4.11.2(@types/node@20.14.8)(typescript@5.5.2)
@@ -41,6 +38,9 @@ dependencies:
   jsdom:
     specifier: ^24.1.0
     version: 24.1.0
+  lenis:
+    specifier: ^1.1.4
+    version: 1.1.4(react-dom@18.3.1)(react@18.3.1)
   mdast-util-toc:
     specifier: ^7.1.0
     version: 7.1.0
@@ -103,9 +103,6 @@ devDependencies:
   '@tailwindcss/typography':
     specifier: ^0.5.13
     version: 0.5.13(tailwindcss@3.4.4)
-  '@types/github-slugger':
-    specifier: ^2.0.0
-    version: 2.0.0
   '@types/jsdom':
     specifier: ^21.1.7
     version: 21.1.7
@@ -709,6 +706,10 @@ packages:
     dependencies:
       postcss-selector-parser: 6.1.0
     dev: true
+
+  /@darkroom.engineering/tempus@0.0.46:
+    resolution: {integrity: sha512-s5vav3KMHYezvUCl4ee5epg0oimF6M8C9gAaKxFnFaTvX2q3ywFDryIv6XLd0mRFUt3S1uHDJqKaiEcs2ZVSvw==}
+    dev: false
 
   /@dual-bundle/import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-+nxncfwHM5SgAtrVzgpzJOI1ol0PkumhVo469KCf9lUi21IGcY90G98VuHm9VRrUypmAzawAHO9bs6hqeADaVg==}
@@ -1584,11 +1585,6 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /@studio-freight/lenis@1.0.42:
-    resolution: {integrity: sha512-HJAGf2DeM+BTvKzHv752z6Z7zy6bA643nZM7W88Ft9tnw2GsJSp6iJ+3cekjyMIWH+cloL2U9X82dKXgdU8kPg==}
-    deprecated: '''@studio-freight/lenis'' has been renamed to just ''lenis'', run ''npx @darkroom.engineering/codemods'' to update your dependecies accordingly.'
-    dev: false
-
   /@tailwindcss/typography@0.5.13(tailwindcss@3.4.4):
     resolution: {integrity: sha512-ADGcJ8dX21dVVHIwTRgzrcunY6YY9uSlAHHGVKvkA+vLc5qLwEszvKts40lx7z0qc4clpjclwLeK5rVCV2P/uw==}
     peerDependencies:
@@ -1710,13 +1706,6 @@ packages:
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: false
-
-  /@types/github-slugger@2.0.0:
-    resolution: {integrity: sha512-z/FaJhjFPk5mtrsZWeqyvaJdcZKw6CVCTuynEMrcXtgyozN3yMrtL13xWv8uQV2bWtwSXkdiNM37HEKkEj9x1Q==}
-    deprecated: This is a stub types definition. github-slugger provides its own type definitions, so you do not need this installed.
-    dependencies:
-      github-slugger: 2.0.0
-    dev: true
 
   /@types/hast@3.0.4:
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
@@ -4315,6 +4304,7 @@ packages:
 
   /github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
+    dev: false
 
   /glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -5234,6 +5224,22 @@ packages:
       split2: 0.2.1
       through2: 0.6.5
     dev: true
+
+  /lenis@1.1.4(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-VNbsie0YaP6946QpYw/n5zxyPyLKuqPO28T8FK7YBzIkG3FyfwEZkpPKqt6eQZJ9ofjxkfUM+A8YtPfNlTbSlQ==}
+    peerDependencies:
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@darkroom.engineering/tempus': 0.0.46
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
 
   /levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
