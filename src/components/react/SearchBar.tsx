@@ -118,8 +118,7 @@ export default function SearchBar({
           </svg>
         </span>
         <input
-          className="my-4 block w-full rounded
-        border-2 bg-transparent py-3 pl-10 placeholder:italic placeholder:text-opacity-75 focus:outline-none"
+          className="my-4 block w-full rounded border-2 bg-transparent py-3 pl-10 placeholder:italic placeholder:text-opacity-75 focus:outline-none"
           placeholder="Search for anything..."
           type="text"
           name="search"
