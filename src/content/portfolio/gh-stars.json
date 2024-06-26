@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/emilkowalski/vaul",
+    "description": "An unstyled drawer component for React."
+  },
+  {
     "url": "https://github.com/diodon-dev/diodon",
     "description": "Aiming to be the best integrated clipboard manager for the Unity desktop"
   },
@@ -184,7 +188,7 @@
     "description": "\ud83c\udf0d \u00a0Spec-compliant and production ready JavaScript GraphQL server that lets you develop in a schema-first way. Built for Express, Connect, Hapi, Koa, and more."
   },
   {
-    "url": "https://github.com/drwpow/openapi-typescript",
+    "url": "https://github.com/openapi-ts/openapi-typescript",
     "description": "Generate TypeScript types from OpenAPI 3 specs"
   },
   {
@@ -392,7 +396,7 @@
     "description": "MUI X: Build complex and data-rich applications using a growing list of advanced React components, like the Data Grid, Date and Time Pickers, Charts, and more!"
   },
   {
-    "url": "https://github.com/neokidev/prettier-plugin-astro-organize-imports",
+    "url": "https://github.com/neoki07/prettier-plugin-astro-organize-imports",
     "description": "A Prettier plugin for formatting imports in Astro files"
   },
   {
