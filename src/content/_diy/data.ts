@@ -2,6 +2,7 @@ import bottle_1_1 from "@assets/diy/bottle_1_1.jpg";
 import bottle_1_2 from "@assets/diy/bottle_1_2.jpg";
 import bottle_1_3 from "@assets/diy/bottle_1_3.jpg";
 import coinCase_1 from "@assets/diy/coinCase_1.jpg";
+import coinCase_2 from "@assets/diy/coinCase_2.jpg";
 import earphone_1_1 from "@assets/diy/earphone_1_1.jpg";
 import earphone_1_2 from "@assets/diy/earphone_1_2.jpg";
 import earphone_2_1 from "@assets/diy/earphone_2_1.jpg";
@@ -40,7 +41,8 @@ export type Content = {
 };
 
 export const CONTENTS: Content[] = [
-  { name: "Coin case v1", src: [coinCase_1] },
+  { name: "Coin case v1", src: [coinCase_1, coinCase_2] },
+
   { name: "Leather wallet v4", src: [wallet_4_1, wallet_4_2] },
   { name: "Leather wallet v3", src: [wallet_3_1, wallet_3_2] },
   { name: "Leather wallet v2", src: [wallet_2_1, wallet_2_2] },
