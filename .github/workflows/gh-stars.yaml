@@ -4,7 +4,7 @@ on:
     - cron: "0 23 * * 1"
 jobs:
   create_pull_request:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout repository

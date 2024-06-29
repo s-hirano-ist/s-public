@@ -3,7 +3,7 @@ on:
   push:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 20
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
@@ -43,8 +43,6 @@ jobs:
       - run: pnpm lint:css
       - run: pnpm lint:secret
       - run: pnpm build
-      # uncomment the following line to run playwright test manually
-      # - run: pnpm snapshots
       # uncomment the following line to run lighthouse test manually
       # - run: lhci autorun
       #   env:
