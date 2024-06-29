@@ -2,6 +2,7 @@
 import { SITE } from "@config";
 import "@styles/base.css";
 import "@fontsource-variable/noto-sans-jp";
+import SpeedInsights from "@vercel/speed-insights/astro";
 // import { ViewTransitions } from "astro:transitions";
 
 export type Props = {
@@ -80,21 +81,8 @@ const socialImageURL = new URL(
       });
     </script>
 
-    <!-- Vercel Insights -->
-    <script>
-      declare global {
-        interface Window {
-          va: () => void;
-          vaq: Array<unknown>;
-        }
-      }
-      window.va =
-        window.va ||
-        function () {
-          (window.vaq = window.vaq || []).push(arguments);
-        };
-    </script>
-    {!IS_DEV && <script is:inline defer src="/_vercel/insights/script.js" />}
+    <!-- Vercel Speed Insights -->
+    {!IS_DEV && <SpeedInsights />}
 
     <!-- Color Scheme -->
     <script is:inline>
