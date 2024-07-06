@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
-// import remarkMermaid from "remark-mermaidjs";
+import remarkMermaid from "remark-mermaidjs";
 import remarkToc from "remark-toc";
 
 import { SITE } from "./src/config";
@@ -37,7 +37,7 @@ export default defineConfig({
         },
       ],
     ],
-    remarkPlugins: [[remarkToc, { heading: "目次" }] /*remarkMermaid*/],
+    remarkPlugins: [[remarkToc, { heading: "目次" }], remarkMermaid],
     extendDefaultPlugins: true,
   },
   // not necessary for static sites. Only for SSR.
