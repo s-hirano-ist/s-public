@@ -135,4 +135,4 @@ We might introduce [standard-version](https://github.com/conventional-changelog/
 
 ## 📜 License
 
-Licensed under the MIT License, Copyright © 2023
+Licensed under the MIT License, Copyright © 2024
