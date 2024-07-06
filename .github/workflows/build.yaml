@@ -34,7 +34,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: pnpm i --frozen-lockfile # && npm install -g @lhci/cli@0.12.x
-      - run: pnpm exec playwright install
+      # - run: pnpm exec playwright install
       - run: pnpm check
       - run: pnpm tsc
       - run: pnpm fmt
