@@ -205,7 +205,7 @@
     "authors": ["小川たまか"],
     "description": "性暴力やジェンダーにまつわる問題を取材し、声をあげ続ける気鋭のライター・小川たまか初の著書。",
     "tags": ["社会学", "差別", "貧困"],
-    "imageSrc": "https://s-hirano.com/notFound.png",
+    "imageSrc": "https://books.google.com/books/content?id=JrQ7uwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "href": "https://books.google.co.jp/books?id=JrQ7uwEACAAJ&dq=isbn:9784907053260&hl=&source=gbs_api",
     "rating": 4
   },
@@ -773,7 +773,7 @@
     "title": "客観性の落とし穴",
     "subTitle": "",
     "authors": ["村上靖彦"],
-    "description": "「その意見って、客観的なものですか」。こうした考え方が社会に広がっていった原因を探り、そのせいで失われたものを明らかにする。",
+    "description": "「それはあなたの主観ですか?」。こういった言葉を聞いたことがあるひとは多いだろう。なにかを発信する際、それが主観的な意見なのか、客観的な意見なのか、を明確にすることが求められる。よく作文と論文の違いを説明する際にも、作文は主観的なことを書いていいが、論文では客観的なことを書く必要がある、と言われている。そういった教育のせいか、客観的なことが正しくて、主観的なことは正しくない、もしくは、あなたが思っているだけでしょ、と非難されることが多い。では、そういった客観的なものが優勢になっていくなかで、主観的な感覚は捨てられてしまってよいものだろうか? 著者の村上氏はそうは考えない。それは、数値が優位にたって世界においては、1人ひとりが持つはずの経験のリアリティが失われがちであるからだ。統計を過信し、経験が数値に置き換えられてしまうとそこにはディテールが失われてしまうだろう。その経験のリアリティをみつけることが主観的に考えることだといえるだろう。自分の体をもち、それがなにかと出会い、出来事が体験し、それを語ることでリアリティをつかまえる手段となるのだ。",
     "tags": ["科学", "現代"],
     "imageSrc": "https://books.google.com/books/content?id=uY_ZzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "href": "https://books.google.co.jp/books?id=uY_ZzwEACAAJ&dq=isbn:9784480684523&hl=&source=gbs_api",
@@ -1477,6 +1477,16 @@
     "tags": ["自己啓発"],
     "imageSrc": "https://books.google.com/books/content?id=3kqrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
     "href": "https://play.google.com/store/books/details?id=3kqrDwAAQBAJ&source=gbs_api",
+    "rating": 2
+  },
+  {
+    "title": "欲望の見つけ方",
+    "subTitle": "お金・恋愛・キャリア",
+    "authors": ["ルーク・バージス"],
+    "description": "なぜ私たちは周りの人が欲しがるものを欲してしまうのか。社会学者ルネ・ジラールは欲望の法則を暴き、それを体系化した。複数の企業を経営する著者が、ジラールの理論を解説しながらマーケティングの心得を説くとともに、盲目的な欲求から離れる術を明かす。",
+    "tags": ["自己啓発"],
+    "imageSrc": "https://books.google.com/books/content?id=BVSrzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.co.jp/books?id=BVSrzwEACAAJ&dq=isbn:9784152102157&hl=&source=gbs_api",
     "rating": 2
   }
 ]

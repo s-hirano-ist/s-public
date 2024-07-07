@@ -888,5 +888,11 @@ export const _books = {
       rating: 2,
       tags: ["自己啓発"],
     },
+    {
+      ISBN: "9784152102157",
+      title: "欲望の見つけ方",
+      rating: 2,
+      tags: ["自己啓発"],
+    },
   ],
 };
