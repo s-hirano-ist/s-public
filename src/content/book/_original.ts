@@ -894,5 +894,11 @@ export const _books = {
       rating: 2,
       tags: ["自己啓発"],
     },
+    {
+      ISBN: "9784798155807",
+      title: "カイゼンジャーニー",
+      rating: 4,
+      tags: ["マネジメント"],
+    },
   ],
 };
