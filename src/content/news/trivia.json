@@ -270,6 +270,31 @@
     {
       "title": "雨のときだけWi-Fiがつながる謎現象の真相",
       "url": "https://gigazine.net/news/20240402-wifi-only-works-when-its-raining/"
+    },
+    {
+      "title": "Prettierのバグ",
+      "quote": "TypeScriptに見えるJavaScriptコード ",
+      "url": "https://zenn.dev/sosukesuzuki/articles/fdf64a064a0ce9"
+    },
+    {
+      "title": "CIで検知できない脆弱性",
+      "quote": "",
+      "url": "https://zenn.dev/moozaru/articles/b0ef001e20baaf"
+    },
+    {
+      "title": "コードレビューの本質 ",
+      "quote": "",
+      "url": "https://ennui.hatenablog.com/entry/2024/07/10/013656"
+    },
+    {
+      "title": "tailwindCSSのクラス名の決まり方",
+      "quote": "",
+      "url": "https://zenn.dev/moozaru/articles/ce9e7c0ded0fb2"
+    },
+    {
+      "title": "公開鍵 秘密鍵だと署名で誤解が生まれるのでは",
+      "quote": "",
+      "url": "https://ritou.hatenablog.com/entry/2024/07/13/165518"
     }
   ]
 }
