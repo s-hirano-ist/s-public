@@ -1,7 +1,7 @@
 {
-  "name": "Portfolio and blog of s-hirano-ist",
-  "short_name": "Blog",
-  "description": "Portfolio and blog of s-hirano-ist",
+  "name": "s-public",
+  "short_name": "s-public",
+  "description": "Portfolio and blog pages of s-hirano-ist.",
   "lang": "ja",
   "start_url": "/",
   "theme_color": "#4f697b",

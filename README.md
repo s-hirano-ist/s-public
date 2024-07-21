@@ -1,8 +1,8 @@
-# Blog
+# s-public
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Build status](https://img.shields.io/github/actions/workflow/status/s-hirano-ist/blog/build.yaml?branch=main)
-![GitHub stars](https://img.shields.io/github/stars/s-hirano-ist/blog.svg)
+![Build status](https://img.shields.io/github/actions/workflow/status/s-hirano-ist/s-public/build.yaml?branch=main)
+![GitHub stars](https://img.shields.io/github/stars/s-hirano-ist/s-public.svg)
 
 This is the source code of [s-hirano.com](https://s-hirano.com/).
 
@@ -44,7 +44,7 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 ## 🍾 Initial setups
 
 ```bash
-git clone https://github.com/s-hirano-ist/blog.git
+git clone https://github.com/s-hirano-ist/s-private.git
 pnpm install
 ```
 
