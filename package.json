@@ -1,8 +1,8 @@
 {
-  "name": "blog",
+  "name": "s-public",
   "version": "1.5.0",
   "type": "module",
-  "description": "blog",
+  "description": "Portfolio and blog pages of s-hirano-ist.",
   "author": "s-hirano-ist",
   "packageManager": "pnpm@9.5.0",
   "scripts": {

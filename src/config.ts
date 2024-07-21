@@ -10,7 +10,7 @@ type Site = {
 export const SITE: Site = {
   website: "https://s-hirano.com/",
   author: "s-hirano-ist",
-  description: "Portfolio and blog of s-hirano-ist.",
+  description: "Portfolio and blog pages of s-hirano-ist.",
   title: "思考の備忘録",
   ogImage: "/portfolio.webp",
   email: "s-hirano-ist@outlook.com",
