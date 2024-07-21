@@ -900,5 +900,11 @@ export const _books = {
       rating: 4,
       tags: ["マネジメント"],
     },
+    {
+      ISBN: "9784478107249",
+      title: "1兆ドルコーチ",
+      rating: 1,
+      tags: ["マネジメント"],
+    },
   ],
 };
