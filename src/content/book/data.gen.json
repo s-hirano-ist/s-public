@@ -1498,5 +1498,19 @@
     "imageSrc": "https://books.google.com/books/content?id=Tp5QDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
     "href": "https://play.google.com/store/books/details?id=Tp5QDwAAQBAJ&source=gbs_api",
     "rating": 4
+  },
+  {
+    "title": "1兆ドルコーチ",
+    "subTitle": "シリコンバレーのレジェンドビル・キャンベルの成功の教え",
+    "authors": [
+      "エリック・シュミット",
+      "ジョナサン・ローゼンバーグ",
+      "アラン・イーグル"
+    ],
+    "description": "アメフトのコーチ出身でありながら、優秀なプロ経営者。ジョブズの師であると同時に、グーグル創業者たちをゼロから育て上げたコーチ。アマゾンのベゾスを救い、ツイッター、ユーチューブCEOらを鍛え、たった1人で、シリコンバレー中の企業に空前の成功をもたらした伝説のリーダー、ビル・キャンベル。これまで謎に包まれてきたその驚くべき教えのすべてがいま、初めて明らかに―。",
+    "tags": ["マネジメント"],
+    "imageSrc": "https://books.google.com/books/content?id=h7Y-zAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.co.jp/books?id=h7Y-zAEACAAJ&dq=isbn:9784478107249&hl=&source=gbs_api",
+    "rating": 1
   }
 ]
