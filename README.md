@@ -31,7 +31,8 @@ It consists of a portfolio and a blog which summarizes the knowledge I gained an
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
 **HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
 **Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
-**Visual regression** - [Playwright test](https://playwright.dev/docs/test-intro/)
+**Visual regression** - [Playwright test](https://playwright.dev/docs/test-intro/)  
+**SVG optimization** - [svgo](https://github.com/svg/svgo)
 
 ### My infrastructure stack
 
