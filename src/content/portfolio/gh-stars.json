@@ -1,5 +1,13 @@
 [
   {
+    "url": "https://github.com/codse/animata",
+    "description": "Bring your site to life with easy to use animation & interaction code. Copy. Paste. Animate. "
+  },
+  {
+    "url": "https://github.com/privatenumber/tsx",
+    "description": "\u26a1\ufe0f TypeScript Execute | The easiest way to run TypeScript in Node.js"
+  },
+  {
     "url": "https://github.com/emilkowalski/vaul",
     "description": "An unstyled drawer component for React."
   },
@@ -241,7 +249,7 @@
   },
   {
     "url": "https://github.com/simonwhitaker/gibo",
-    "description": "Easy access to gitignore boilerplates"
+    "description": "\ud83e\udd2b Easy access to gitignore boilerplates"
   },
   {
     "url": "https://github.com/ota-meshi/astro-eslint-parser",
@@ -425,7 +433,7 @@
   },
   {
     "url": "https://github.com/honojs/hono",
-    "description": "Web Framework built on Web Standards"
+    "description": "Web framework built on Web Standards"
   },
   {
     "url": "https://github.com/vanjs-org/van",
