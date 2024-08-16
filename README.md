@@ -4,9 +4,9 @@
 ![Build status](https://img.shields.io/github/actions/workflow/status/s-hirano-ist/s-public/build.yaml?branch=main)
 ![GitHub stars](https://img.shields.io/github/stars/s-hirano-ist/s-public.svg)
 
-This is the source code of [s-hirano.com](https://s-hirano.com/).
-
-It consists of a portfolio and a blog which summarizes the knowledge I gained and the recent news.
+> [!IMPORTANT]
+> This is the source code of [s-hirano.com](https://s-hirano.com/).
+> It consists of a portfolio and a blog which summarizes the knowledge I gained and the recent news.
 
 ## ✅ Lighthouse Score
 
