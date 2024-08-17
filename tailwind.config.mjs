@@ -20,6 +20,7 @@ export default {
     require("@tailwindcss/typography"),
     require("daisyui"),
     require("taos/plugin"),
+    require("tailwindcss-animated"),
   ],
   daisyui: {
     themes: [
