@@ -28,3 +28,13 @@ const { content } = Astro.props;
     ))
   }
 </swiper-container>
+
+<style>
+  swiper-container::part(bullet) {
+    @apply bg-primary;
+  }
+
+  swiper-container::part(bullet-active) {
+    @apply bg-primary;
+  }
+</style>
