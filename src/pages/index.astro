@@ -17,6 +17,30 @@ import { Image } from "astro:assets";
 
 <Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
   <main class="background main-contents" data-theme="noTheme">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Portfolio of s-hirano-ist",
+        "url": "https://s-hirano.com",
+        "description": "Portfolio of s-hirano-ist.",
+        "author": {
+          "@type": "Person",
+          "name": "s-hirnao-ist",
+          "url": "https:/s-hirano.com"
+        },
+        // TODO:
+        // "potentialAction": {
+        //   "@type": "SearchAction",
+        //   "target": "https://yourportfolio.com/search?q={search_term_string}",
+        //   "query-input": "required name=search_term_string"
+        // },
+        "sameAs": [
+          "https://github.com/s-hirano-ist",
+          "https://x.com/s_hirano_ist"
+        ]
+      }
+    </script>
     <Header title="Portfolio" darkModeDisabled />
     <section class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
       <Image src={sIcon} alt="" class="mx-auto w-full max-w-md rounded-full" />
