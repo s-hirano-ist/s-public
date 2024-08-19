@@ -54,7 +54,7 @@ const ContentList = await Promise.all(
     githubStarsData.map(d => {
       return (
         <div class="pb-4">
-          <a href={d.url} class="link link-primary font-bold">
+          <a href={d.url} class="link link-primary font-bold" target="_blank">
             {d.url.split("/").pop()}
           </a>
           <p class="text-sm">{d.description}</p>
