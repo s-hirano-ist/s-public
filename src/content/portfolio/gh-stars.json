@@ -1,5 +1,21 @@
 [
   {
+    "url": "https://github.com/googleapis/release-please",
+    "description": "generate release PRs based on the conventionalcommits.org spec"
+  },
+  {
+    "url": "https://github.com/cli/cli",
+    "description": "GitHub\u2019s official command line tool"
+  },
+  {
+    "url": "https://github.com/new-data-services/tailwindcss-animated",
+    "description": "Extended animation utilities for Tailwind CSS"
+  },
+  {
+    "url": "https://github.com/eclipse-theia/theia",
+    "description": "Eclipse Theia is a cloud & desktop IDE framework implemented in TypeScript."
+  },
+  {
     "url": "https://github.com/codse/animata",
     "description": "Bring your site to life with easy to use animation & interaction code. Copy. Paste. Animate. "
   },
