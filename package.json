@@ -26,7 +26,7 @@
     "snapshots:update": "playwright test --update-snapshots",
     "generate:photo": "python script/generate_photo_path.py",
     "generate:book": "node --loader ts-node/esm script/generateBookData.ts",
-    "generate:license": "license-checker --json >> src/content/license.json",
+    "generate:license": "license-checker --json > src/content/license/data.gen.json",
     "generate:license:summary": "license-checker --summary > library-license.txt",
     "commit": "git cz",
     "generate:gh-stars": "python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json",
@@ -38,8 +38,8 @@
       "pnpm fmt",
       "pnpm lint:secret",
       "bash checkLicense.sh",
-      "pnpm license:generate",
-      "pnpm license:generate:summary"
+      "pnpm generate:license",
+      "pnpm generate:license:summary"
     ],
     "src/**/*.{js, jsx, ts, tsx, astro}": [
       "pnpm tsc",
