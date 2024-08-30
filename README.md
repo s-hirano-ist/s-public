@@ -137,3 +137,27 @@ We might introduce [standard-version](https://github.com/conventional-changelog/
 ## 📜 License
 
 Licensed under the MIT License, Copyright © 2024
+
+### Licenses of used libraries
+
+├─ MIT: 71
+├─ Apache-2.0: 7
+├─ BSD-2-Clause: 3
+├─ ISC: 2
+├─ OFL-1.1: 1
+├─ Unlicense: 1
+├─ BSD-3-Clause: 1
+├─ MIT\*: 1
+└─ MPL-2.0: 1
+
+last updated on 30th of August 2024.
+├─ MIT: 71
+├─ Apache-2.0: 7
+├─ BSD-2-Clause: 3
+├─ ISC: 2
+├─ OFL-1.1: 1
+├─ Unlicense: 1
+├─ BSD-3-Clause: 1
+├─ ISC*: 1
+└─ MPL-2.0: 1
+
