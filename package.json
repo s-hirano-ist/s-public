@@ -44,8 +44,7 @@
       "pnpm lint"
     ],
     "_markdown/**/*.md": "pnpm lint:mark",
-    "src/**/*.{css, astro}": "pnpm lint:css",
-    "src/**/*": "python3 script/generate_photo_path.py"
+    "src/**/*.{css, astro}": "pnpm lint:css"
   },
   "dependencies": {
     "@astrojs/check": "0.9.3",
