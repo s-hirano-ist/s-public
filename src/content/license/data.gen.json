@@ -477,7 +477,7 @@
     "licenseFile": "/home/sola/personal/s-public/node_modules/remark-toc/license"
   },
   "s-public@1.5.0": {
-    "licenses": "MIT*",
+    "licenses": "ISC*",
     "publisher": "s-hirano-ist",
     "path": "/home/sola/personal/s-public",
     "licenseFile": "/home/sola/personal/s-public/LICENSE"
