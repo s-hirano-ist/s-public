@@ -38,8 +38,7 @@
       "pnpm fmt",
       "pnpm lint:secret",
       "bash checkLicense.sh",
-      "pnpm generate:license",
-      "pnpm generate:license:summary"
+      "pnpm generate:license"
     ],
     "src/**/*.{js, jsx, ts, tsx, astro}": [
       "pnpm tsc",
