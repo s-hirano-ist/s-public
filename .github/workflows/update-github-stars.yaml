@@ -1,4 +1,4 @@
-name: gh-stars
+name: update-github-stars
 on:
   schedule:
     - cron: "0 23 * * 1"
