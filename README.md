@@ -42,14 +42,16 @@
 **Search Console** - [Google Search Console](https://search.google.com/search-console)  
 **Domain** - [Onamae.com](https://www.onamae.com/)
 
-## 🍾 Initial setups
+## 🍾 Setups
+
+### Initial setups
 
 ```bash
-git clone https://github.com/s-hirano-ist/s-private.git
+git clone https://github.com/s-hirano-ist/s-public.git
 pnpm install
 ```
 
-### Updating GitHub stars file
+### Update GitHub stars file
 
 ```bash
 pnpm generate:gh-stars
@@ -73,10 +75,23 @@ python script/generate_photo_path.py
 docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app python:3.11 python3 script/generate_photo_path.py
 ```
 
-### Updating books at `src/content/book/original.json`
+### Update books at `src/content/book/original.json`
 
 ```bash
 pnpm generate:book
+```
+
+### Update licenses
+
+```bash
+pnpm generate:license
+pnpm generate:license:summary
+```
+
+### Check for inappropriate licenses
+
+```bash
+bash checkLicense.sh
 ```
 
 ### Vercel deployment
@@ -88,7 +103,7 @@ Add GitHub integration for auto-deployment on vercel.
 Access [Google Search Console](https://search.google.com/search-console) and publish "google-site-verification" tag.
 Access [Onamae.com](https://www.onamae.com/) to add DNS TXT record.
 
-## Favicon
+## ☀ Favicon
 
 - Text: S
 - Background: Circle
@@ -106,10 +121,12 @@ All commands are run from the root of the project, from a terminal:
 | Command                 | Action                                             |
 | :---------------------- | :------------------------------------------------- |
 | `pnpm install`          | Installs dependencies                              |
+| `pnpm check`            | Check types                                        |
 | `pnpm dev`              | Starts local dev server at `localhost:4321`        |
 | `pnpm build`            | Build production site to `./.vercel/output/static` |
 | `pnpm preview`          | Preview build locally                              |
 | `pnpm sync`             | Generates TypeScript types                         |
+| `pnpm tsc`              | Check types                                        |
 | `pnpm fmt`              | Check code format with Prettier                    |
 | `pnpm fmt:fix`          | Format codes with Prettier                         |
 | `pnpm lint`             | Lint with ESLint                                   |
@@ -132,14 +149,13 @@ All commands are run from the root of the project, from a terminal:
 gh release create --generate-notes
 ```
 
-We might introduce [standard-version](https://github.com/conventional-changelog/standard-version) and [git-cz](https://github.com/streamich/git-cz) in a future release.
-
 ## 📜 License
 
 Licensed under the MIT License, Copyright © 2024
 
 ### Licenses of used libraries
 
+```txt
 ├─ MIT: 71
 ├─ Apache-2.0: 7
 ├─ BSD-2-Clause: 3
@@ -149,5 +165,6 @@ Licensed under the MIT License, Copyright © 2024
 ├─ BSD-3-Clause: 1
 ├─ MIT\*: 1
 └─ MPL-2.0: 1
+```
 
 last updated on 30th of August 2024.

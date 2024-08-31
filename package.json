@@ -6,12 +6,12 @@
   "author": "s-hirano-ist",
   "packageManager": "pnpm@9.9.0",
   "scripts": {
+    "astro": "astro",
     "check": "astro check",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "sync": "astro sync",
-    "astro": "astro",
     "tsc": "tsc --noEmit",
     "fmt": "prettier --cache --check **/*.astro .",
     "fmt:fix": "prettier --cache --write **/*.astro .",
