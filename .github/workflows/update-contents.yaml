@@ -39,6 +39,8 @@ jobs:
       - run: pnpm generate:book
       - run: pnpm generate:license
       - run: pnpm generate:license:summary
+      - run: bash checkLicense.sh
+      - run: pnpm fmt:fix
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
