@@ -1542,5 +1542,25 @@
     "imageSrc": "https://books.google.com/books/content?id=7IitoAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "href": "https://books.google.co.jp/books?id=7IitoAEACAAJ&dq=isbn:9784820719052&hl=&source=gbs_api",
     "rating": 3
+  },
+  {
+    "title": "「育ちがいい人」だけが知っていること",
+    "subTitle": "今からでも「育ち」は良くなる!",
+    "authors": ["諏内えみ"],
+    "description": "正しい靴の脱ぎ方ができていますか?「どちらでもいい」は間違った気遣い。「お金を返して」の品のいい切り出し方。必ず「お」をつけたい4つの言葉とは?相手の詮索を上品にかわす方法。ほめられたときは、何と言うのが正解?エレベーターで「育ちがいい」か、そうでないかが分かってしまう。ハプニング時、できる女性は「大丈夫!?」ではなく「大丈夫よ」...テレビで話題のマナー講師が伝授。良家で必ず教えられるふるまいの正解250。",
+    "tags": ["教養"],
+    "imageSrc": "https://books.google.com/books/content?id=zTVkzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.co.jp/books?id=zTVkzQEACAAJ&dq=isbn:9784478110133&hl=&source=gbs_api",
+    "rating": 3
+  },
+  {
+    "title": "なぜ働いていると本が読めなくなるのか",
+    "subTitle": "",
+    "authors": ["三宅香帆"],
+    "description": "労働と読書の歴史をひもとき、日本人の「仕事と読書」のあり方の変遷を辿る。そこから明らかになる日本の労働の問題点とは?",
+    "tags": ["読書"],
+    "imageSrc": "https://books.google.com/books/content?id=_8qn0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.co.jp/books?id=_8qn0AEACAAJ&dq=isbn:9784087213126&hl=&source=gbs_api",
+    "rating": 4
   }
 ]
