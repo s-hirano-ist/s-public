@@ -1562,5 +1562,55 @@
     "imageSrc": "https://books.google.com/books/content?id=_8qn0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "href": "https://books.google.co.jp/books?id=_8qn0AEACAAJ&dq=isbn:9784087213126&hl=&source=gbs_api",
     "rating": 4
+  },
+  {
+    "title": "プロダクトマネジメントのすべて 事業戦略・IT開発・UXデザイン・マーケティングからチーム・組織運営まで",
+    "subTitle": "",
+    "authors": ["及川 卓也", "小城 久美子", "曽根原 春樹"],
+    "description": "世界水準のプロダクトマネージャーの叡智は この1冊で完璧に得られる Google、Microsoft、SmartNewsなどのプロダクト、 BtoCおよびBtoB領域で国内のみならずグローバル展開に 携わってきた百戦錬磨の著者陣が 日本とシリコンバレーのあらゆる知見を詰め込み書き上げた、 プロダクトマネジメントの決定版。 あらゆるモノがIT化する現代では、 プロダクトの成功を抜きに、ビジネスを語ることはできない。 事業戦略、IT開発、UXデザイン、マーケティング、 カスタマーサクセス、セキュリティ、知的財産、組織運営……。 何をどこまでおさえればいいのか？ 本書はその海図となって、ビジネスを成功に導く。 プロダクトマネジメントに欠かせない 知識、スキル、方法論、マインドセットを網羅しているため ●新事業・新サービス開発 ●既存事業テコ入れ ●DX ●起業 ●スタートアップ にかかわるすべてのマネージャー、エンジニア、デザイナーにとっては 必読の完全保存版である。 【目次概要】 PartⅠ プロダクトの成功 PartⅡ プロダクトを育てる PartⅢ ステークホルダーをまとめ、プロダクトチームを率いる PartⅣ プロダクトの置かれた状況を理解する PartⅤ プロダクトマネージャーと組織の成長 PartⅥ プロダクトマネージャーに必要な基礎知識",
+    "tags": ["マネジメント"],
+    "imageSrc": "https://books.google.com/books/content?id=L_ggEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "href": "https://books.google.co.jp/books?id=L_ggEAAAQBAJ&dq=isbn:9784798166391&hl=&source=gbs_api",
+    "rating": 4
+  },
+  {
+    "title": "小さな会社のスクラム実践講座",
+    "subTitle": "",
+    "authors": ["柏岡秀男"],
+    "description": "No description",
+    "tags": ["マネジメント"],
+    "imageSrc": "https://books.google.com/books/content?id=7B1wzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.co.jp/books?id=7B1wzwEACAAJ&dq=isbn:9784295204060&hl=&source=gbs_api",
+    "rating": 2
+  },
+  {
+    "title": "この先生きのこるためのお金とコミュニティ",
+    "subTitle": "13歲からわかる金融・デジタルリテラシー お金の役割、ブロックチェーン、NFT AI、暗号資産、DAO、Web3",
+    "authors": ["久松慎一"],
+    "description": "No description",
+    "tags": ["お金"],
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://books.google.co.jp/books?id=VMpQ0AEACAAJ&dq=isbn:9784910070162&hl=&source=gbs_api",
+    "rating": 2
+  },
+  {
+    "title": "お得な使い方を全然わかっていない投資初心者ですが、NISAって結局どうすればいいのか教えてください！",
+    "subTitle": "",
+    "authors": ["桶井道"],
+    "description": "2024年から始まる新しいNISAでは、2023年末までの従来の制度に比べて非課税保有限度額（総枠）が大幅に引き上げられたほか、非課税期間の無期限化、２つの投資枠の併用可能化、売却時の非課税枠復活など、個人投資家にとってありがたい変更が目白押し！ まさに「老後資金対策の最終決戦兵器」と言えるほどに使い勝手が良くなりました。 少しでも資産運用をする気があるなら、まずは新しいNISAをフル活用すべし！ といった状況ですが、とはいえ投資は投資。これまで挑戦してこなかった方にとっては、怖さや不安もあるものです。 そこで、自らも堅実投資でFIREを達成した個人投資家・桶井道（おけいどん）氏が扮する「キリン先輩」が、新しいNISAの詳しい仕組みや使い方・始め方から、２種類ある非課税枠それぞれのオススメ活用法、具体的な投資先の種類や名称まで、トコトンわかりやすく教えます！ 漫画や図解満載で投資初心者の方でも理解しやすく、それでいて実際の投資の参考にもできる具体的なアドバイスが盛りだくさん！！ 新しいNISA解説書の決定版です！！！！ 【株式会社すばる舎】",
+    "tags": ["お金"],
+    "imageSrc": "https://books.google.com/books/content?id=vLviEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "href": "https://play.google.com/store/books/details?id=vLviEAAAQBAJ&source=gbs_api",
+    "rating": 2
+  },
+  {
+    "title": "〈カラー版〉これ一冊で完ぺき!マナーのすべてがわかる便利手帳",
+    "subTitle": "",
+    "authors": ["岩下宣子"],
+    "description": "プライベートでも仕事でも、これだけ知っていれば大丈夫。社会人の常識と心づかいがわかる。",
+    "tags": ["教養"],
+    "imageSrc": "https://books.google.com/books/content?id=RDIJMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.co.jp/books?id=RDIJMQAACAAJ&dq=isbn:9784816361494&hl=&source=gbs_api",
+    "rating": 2
   }
 ]
