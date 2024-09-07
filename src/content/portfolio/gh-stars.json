@@ -73,7 +73,7 @@
   },
   {
     "url": "https://github.com/mui/material-ui",
-    "description": "Material\u00a0UI: Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google's Material Design."
+    "description": "Material UI: Comprehensive React component library that implements Google's Material Design. Free forever."
   },
   {
     "url": "https://github.com/withastro/language-tools",
@@ -353,7 +353,7 @@
   },
   {
     "url": "https://github.com/ardatan/graphql-mesh",
-    "description": "\ud83d\udd78\ufe0f GraphQL Mesh - The Graph of Everything - Federated architecture for any API service"
+    "description": "\ud83d\udd78\ufe0f GraphQL Federation Framework for any API services such as REST, OpenAPI, Swagger, SOAP, gRPC and more..."
   },
   {
     "url": "https://github.com/hagopj13/node-express-boilerplate",
