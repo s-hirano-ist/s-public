@@ -24,7 +24,7 @@ jobs:
         run: python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
           commit-message: "contents: update gh-stars.json"
