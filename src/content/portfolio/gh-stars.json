@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/shadcn-ui/ui",
+    "description": "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source."
+  },
+  {
     "url": "https://github.com/googleapis/release-please",
     "description": "generate release PRs based on the conventionalcommits.org spec"
   },
