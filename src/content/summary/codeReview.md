@@ -20,7 +20,7 @@ draft: false
 - imo: 自分はこう思うが、いかがでしょうか?
 - ask: 単純にわからないので教えてください。
 
-```md
+```markdown
 ![must](https://img.shields.io/badge/review-must-red.svg)
 ![imo](https://img.shields.io/badge/review-imo-orange.svg)
 ![ask](https://img.shields.io/badge/review-ask-blue.svg)
