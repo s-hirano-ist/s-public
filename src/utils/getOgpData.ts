@@ -28,8 +28,8 @@ export async function getOgpData(url: string) {
     virtualConsole.on("dir", () => {});
     const meta = dom.window.document.head.querySelectorAll("meta");
     return extractOgpData([...meta]);
-  } catch (e) {
-    console.error(e);
+  } catch (error) {
+    console.error(`Error on page: ${url} with error.`, error);
     return;
   }
 }
