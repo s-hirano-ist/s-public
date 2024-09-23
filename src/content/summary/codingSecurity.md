@@ -52,7 +52,18 @@ draft: false
 
 1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 
-## CSRF
+## TODO
+
+- [ ] CSRF (none)
+- [ ] X-Frame-Options (s-private)
+- [ ] Strict-Transport-Security (s-private)
+- [ ] Referrer-Policy (s-private)
+- [ ] サイドチャネル攻撃 site isolation
+- [ ] CORP (s-tools)
+- [ ] COEP (s-tools)
+- [ ] COOP (s-tools)
+- [ ] httpsOnly属性 (s-tools)
+- [ ] https化 (s-tools)
 
 ## 参考文献
 
