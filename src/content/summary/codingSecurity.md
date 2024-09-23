@@ -21,6 +21,16 @@ draft: false
 
 3. [Next.js公式ドキュメント](https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy#reading-the-nonce)を元にContent Security Policy (CSP)の適用。
    - 注意点: `script`タグを利用する場合は`nonce`の設定を忘れずに行う必要がある。
+   - `Trusted Types`はReactの実装内で類似のことがなされるため不要。
+
+<details>
+<summary>用語説明</summary>
+
+- CORP: ヘッダが指定されたリソースの読み込みを同一オリジンまたは同一サイトに制限可能。
+- COEP: すべてのリソースに対して、CORP or CORSヘッダを設定することを強制。
+- COOP: a要素やwindow.open関数で開いたクロスオリジンのページからのアクセスを制限可能。
+
+</details>
 
 ### 根拠
 
@@ -49,6 +59,16 @@ draft: false
 
 2. Mixed Contentのブロック（デフォルトでブラウザに搭載）。
 
+<details>
+<summary>用語説明</summary>
+
+- HSTS: HTTPで初回通信しても、次からはHTTPS通信を強制する。
+  - max-age: HTTPS通信を行う有効期限。
+  - includeSubdomains: サブドメインに対してもHTTPSを強制するか。
+  - preload: HTTPS preloadに登録されているドメインか確認して、初回からHTTPS通信を強制する。
+
+</details>
+
 ### 根拠
 
 1. `HSTS`を利用することで、通信のHTTPS化を強制でき、中間者による改ざんによる悪意あるスクリプトの埋め込みを防止できる。
@@ -56,8 +76,16 @@ draft: false
 ### 仕組み化
 
 1. ヘッダーに記述する内容をテンプレート化して提供。
+2. [hstspreload.org](https://hstspreload.org/)をチェックすることで設定を確認。
 
 ## クリックジャッキング
+
+<details>
+<summary>用語説明</summary>
+
+- クリックジャッキング: iframeで透明なボタンを配置して、ユーザーの操作を促す。
+
+</details>
 
 ### 対策方法
 
@@ -85,7 +113,7 @@ draft: false
 
 ### 対策方法
 
-1. [Prisma](https://www.prisma.io/)等のORMの機能を利用してデータベースにアクセスし、生のSQLや`$queryRaw`、`$executeRaw`を利用しない。どうしても利用する場合は、個別に調査する。
+1. [Prisma](https://www.prisma.io/)等のORMの機能を利用してデータベースにアクセスし、生のSQLや`$queryRaw`、`$executeRaw`を利用しない。どうしても利用する場合は、個別に調査して無害化する。
 
 ### 根拠
 
@@ -151,11 +179,47 @@ draft: false
 
 1. ヘッダーに記述する内容をテンプレート化して提供。
 
+## 認証情報の漏洩
+
+### 対策方法
+
+1. httpOnly属性の付与 or Cookieによる認証をしない（bearer token等の利用）。
+
+### 根拠
+
+1. `httpOnly`属性を付与することで、JavaScriptからCookieにアクセスできないようにできる。ページ遷移時やフォーム送信時等のリクエストにおいて、ブラウザはCookieを自動的にサーバへ送信するため、対策が必要。
+
+### 仕組み化
+
+1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
+
+## その他検討済み項目
+
+1. Sanitize API: 同様のことをDompurifyやReactのデフォルトの機能でできるため不要とする。
+
 ## TODO
 
 - [ ] CSRF (none)
   - [ ] CSRFトークンでフォームの正当性の検証
-- [ ] httpOnly属性 (s-tools)
+- [ ] s-privateのメモ
+- [ ] SameSite Cookie
+
+## バックエンド周りのその他脆弱性
+
+- [ ] OSコマンドインジェクション
+- [ ] パス名パラメータの未チェック・ディレクトリトラバーサル
+- [ ] セッション管理
+- [ ] HTTPヘッダインジェクション
+- [ ] メールヘッダインジェクション
+- [ ] バッファオーバーフロー
+- [ ] アクセス制御・認可制御の欠落
+
+## ライブラリの脆弱性自動検知ツール
+
+- [audit](https://docs.npmjs.com/cli/v10/commands/npm-audit)
+- [Dependabotアラート](https://docs.github.com/ja/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
+- [Snyk](https://go.snyk.io/jp.html)
+- [yamori](https://yamory.io/)
 
 ## 参考文献
 
