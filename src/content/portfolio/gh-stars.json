@@ -1,5 +1,21 @@
 [
   {
+    "url": "https://github.com/nicolargo/glances",
+    "description": "Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems."
+  },
+  {
+    "url": "https://github.com/cure53/DOMPurify",
+    "description": "DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:"
+  },
+  {
+    "url": "https://github.com/kkomelin/isomorphic-dompurify",
+    "description": "Use DOMPurify on server and client in the same way"
+  },
+  {
+    "url": "https://github.com/remarkablemark/html-react-parser",
+    "description": "\ud83d\udcdd HTML to React parser."
+  },
+  {
     "url": "https://github.com/shadcn-ui/ui",
     "description": "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source."
   },
