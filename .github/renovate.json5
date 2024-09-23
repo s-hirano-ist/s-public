@@ -1,7 +1,12 @@
 {
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
   timezone: "Asia/Tokyo",
   baseBranches: ["main"],
-  extends: ["config:base", ":semanticCommitTypeAll(chore)"],
+  extends: [
+    "config:recommended",
+    "config:best-practices",
+    ":semanticCommitTypeAll(chore)",
+  ],
   reviewers: ["s-hirano-ist"],
   enabledManagers: ["npm", "github-actions"],
   dependencyDashboard: true,
@@ -16,11 +21,23 @@
   },
   packageRules: [
     {
+      matchPackageNames: ["node"],
+      matchManagers: ["dockerfile"],
+      allowedVersions: "/^[0-9]*[02468]([.-].*)?$/",
+    },
+    {
       matchManagers: ["npm"],
-      matchUpdateTypes: ["patch", "minor"],
-      matchPackagePatterns: ["*"],
+      matchUpdateTypes: ["patch"],
+      matchPackageNames: ["*"],
       matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
-      groupName: "patch-minor",
+      groupName: "patch",
+    },
+    {
+      matchManagers: ["npm"],
+      matchUpdateTypes: ["minor"],
+      matchPackageNames: ["*"],
+      matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
+      groupName: "minor",
     },
   ],
 }
