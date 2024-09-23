@@ -26,9 +26,47 @@ draft: false
 <details>
 <summary>用語説明</summary>
 
-- CORP: ヘッダが指定されたリソースの読み込みを同一オリジンまたは同一サイトに制限可能。
-- COEP: すべてのリソースに対して、CORP or CORSヘッダを設定することを強制。
-- COOP: a要素やwindow.open関数で開いたクロスオリジンのページからのアクセスを制限可能。
+- XSS: リクエストに含まれる文字列をそのままHTMLへ挿入すると、意図せぬJavaScriptを実行される恐れがある。
+
+  - 反射型XSS: 罠サイト経由でアクセスした際、URLのパラメータ等に悪意あるコードを埋め込まれ、SSRでレンダリングされたHTMLから実行される。
+  - 蓄積型XSS: 攻撃者が投稿したフォームを他のユーザーが閲覧時に実行される。
+  - DOM-based XSS: DOMツリーを書き換える系の操作で悪意あるスクリプトを挿入。クライアントサイドで起こるため、検知が難しい。対策として、DOM操作用の関数を利用する。
+
+    ```JavaScript
+    li.textContent = name;
+    ```
+
+  - ソース（原因）
+
+    - location.hash
+    - location.search
+    - location.href
+    - document.referrer
+    - postMessage
+    - Webストレージ
+    - IndexedDB
+
+  - シンク（実行箇所）
+    - innerHTML
+    - eval
+    - location.href
+    - document.write
+    - jQuery()
+
+- CSP
+
+  - 許可されていないJavaScriptの実行やリソースの読み込みをブロック。
+  - metaタグに埋め込み or レスポンスヘッダーに付与することで適用される。
+
+- base-uri: baseURLを変更されないようにする。
+- object-src: Flash等のプラグインに対する制限を付与。
+- trusted types: 文字列を安全な型として扱う。DOMPurifyで検査可能。
+- Strict CSP
+
+  - CSPを適用させると、HTML内にインラインJavaScriptは禁止される。回避方法として、`unsafe-inline`を使うのではなく、`nonce-source`や`hash-source`を利用すると安全にインライン記述ができる。
+    - nonce-source: script要素に指定したランダムなトークンがCSPヘッダーに指定されたものと同一でないとエラーを吐くもの。
+    - script-source: script要素のhash値を計算し、それをCSPヘッダーに指定して、同一でないとエラーを吐くもの。
+    - strict-dynamic: 上記を指定しても許可されないscript要素の作成が必要な場合に利用。※ innerHTMLやdocument.writeは機能しない。
 
 </details>
 
@@ -47,7 +85,7 @@ draft: false
 2. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 3. ヘッダーに記述する内容をテンプレート化して提供。
 
-## 中間者攻撃・SSLストリッピング・（HTTP通信による）改ざん
+## 中間者攻撃・SSLストリッピング・（HTTP通信起因）改ざん
 
 ### 対策方法
 
@@ -71,7 +109,7 @@ draft: false
 
 ### 根拠
 
-1. `HSTS`を利用することで、通信のHTTPS化を強制でき、中間者による改ざんによる悪意あるスクリプトの埋め込みを防止できる。
+1. `HSTS`を利用することで、通信のHTTPS化を強制でき、中間者による改ざんによって生じる悪意あるスクリプトの埋め込みを防止できる。
 
 ### 仕組み化
 
@@ -131,7 +169,8 @@ draft: false
 
 1. Site isolation（デフォルトでブラウザに搭載）。
 2. Cross-Origin Resource Sharing（CORS）（デフォルトでブラウザに搭載）。
-3. Cross-Origin Isolation（`SharedArrayBuffer`や`performance.measureMemory()`を利用する場合のみ）（不用意に設定するとWebサイトが動かなくなることがあるため注意が必要））。
+3. `SharedArrayBuffer`や`performance.measureMemory()`を利用しない。
+4. Cross-Origin Isolation（`SharedArrayBuffer`や`performance.measureMemory()`を利用する場合のみ）（不用意に設定するとWebサイトが動かなくなることがあるため注意が必要））。
 
    1. Cross-Origin Resource Policy（CORP）
 
@@ -152,6 +191,19 @@ draft: false
       ```
 
       - 注意点: 決済やソーシャルログイン等を利用している場合はブロックされるので`same-origin-allow-popups`を指定する。
+
+<details>
+<summary>用語説明</summary>
+
+- CORS: ブラウザ上で異なるオリジン間の安全なリソース共有を可能にする仕組み。HTTPヘッダにOriginや Access-Control-Allow-Originなどを使用して動作させる。
+  - 注意点: Originヘッダの値をそのままAccess-Control-Allow-Originヘッダに設定するとすべてのオリジンを許可していることと同一なため使用不可。
+- サイドチャネル攻撃: CPU・メモリ等、ハードウェアの特性を悪用した攻撃。
+  - 例: Spectre: 高精度なタイマーを使い、ジョジョにメモリ内の内容を推測するもの。
+- CORP: ヘッダが指定されたリソースの読み込みを同一オリジンまたは同一サイトに制限可能。
+- COEP: すべてのリソースに対して、CORP or CORSヘッダを設定することを強制。
+- COOP: a要素やwindow.open関数で開いたクロスオリジンのページからのアクセスを制限可能。
+
+</details>
 
 ### 根拠
 
@@ -193,18 +245,57 @@ draft: false
 
 1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 
+## クロスサイトリクエストフォージェリ（CSRF）
+
+### 対策方法
+
+1. formのPOST等で`CSRF_TOKEN`を使い、フォームの正当性の検証。
+2. Double submit cookieを利用し、フォームの正当性を検証。
+   - HttpOnly属性のついていないCSRF対策専用のCookieをformを送るときに、headerに入れる。同一のtokenがformにも入れてあればOK。HttpOnly属性がついていなくても、異なるドメインからはCookieにアクセスできないため対策になる。
+3. バックエンドサーバーで`origin`ヘッダーを検証。
+4. SameSite Cookieを設定し、クロスサイトサイトへCookieを付与しない。
+
+   ```bash
+   Set-Cookie: session=123456789abcdef; httpOnly; Secure; SameSite=Lax;
+   ```
+
+5. `X-Requested-With`等の（CORS安全とされるリクエストヘッダー以外の）任意のヘッダーを付与して、そのヘッダーがリクエストに含まれているか検証。
+   - 注意点: プリフライトリクエスト内でチェックするため、リクエスト回数が増える。他の方法がない場合に利用。
+
+<details>
+<summary>用語説明</summary>
+
+- CSRF: 攻撃者の罠によってWebアプリケーションの持っている機能がユーザーの意思と関係なく実行されてしまうこと。formから送信されるリクエストは同一オリジンポリシーで制限されないため生じる。
+
+</details>
+
+### 根拠
+
+### 仕組み化
+
+## オープンリダイレクト
+
+### 対策方法
+
+1. リダイレクト設定を記述する場合は、特定のURLのみリダイレクトが可能なようにバリデーションを行う。
+
+### 根拠
+
+1. リダイレクト先の設定でバリデーションを行うと、悪意あるリダイレクト先は排除できる。
+
+### 仕組み化
+
+1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
+
 ## その他検討済み項目
 
 1. Sanitize API: 同様のことをDompurifyやReactのデフォルトの機能でできるため不要とする。
-
-## TODO
-
-- [ ] CSRF (none)
-  - [ ] CSRFトークンでフォームの正当性の検証
-- [ ] s-privateのメモ
-- [ ] SameSite Cookie
+2. サブリソース完全性: ビルド時に`npm`から読み込み、scriptタグによる読み込みをしなければ問題なし。
+   - 読み込むリソースの内容のハッシュ値のbase64エンコードされたものをintegrity属性に指定することで改ざんを検知する仕組みは不要。ライブラリの脆弱性検知ツールによる対応で十分。
 
 ## バックエンド周りのその他脆弱性
+
+下記はフロントエンドWebアプリケーション開発に関わらない箇所なため、TODOとして残している。
 
 - [ ] OSコマンドインジェクション
 - [ ] パス名パラメータの未チェック・ディレクトリトラバーサル
