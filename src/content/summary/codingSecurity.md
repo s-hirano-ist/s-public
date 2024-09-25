@@ -249,10 +249,9 @@ draft: false
 
 ### 対策方法
 
-1. formのPOST等で`CSRF_TOKEN`を使い、フォームの正当性の検証。
-2. Double submit cookieを利用し、フォームの正当性を検証。
-   - HttpOnly属性のついていないCSRF対策専用のCookieをformを送るときに、headerに入れる。同一のtokenがformにも入れてあればOK。HttpOnly属性がついていなくても、異なるドメインからはCookieにアクセスできないため対策になる。
-3. バックエンドサーバーで`origin`ヘッダーを検証。
+1. ~~formのPOST等で`CSRF_TOKEN`を使い、フォームの正当性の検証。~~
+2. ~~Double submit cookieを利用し、フォームの正当性を検証。~~
+3. バックエンドサーバーで`origin`ヘッダーを検証（Next.js v14以上でデフォルトで搭載）。
 4. SameSite Cookieを設定し、クロスサイトサイトへCookieを付与しない（Chrome等最新のブラウザではデフォルト機能）。
 
    ```bash
@@ -266,6 +265,7 @@ draft: false
 <summary>用語説明</summary>
 
 - CSRF: 攻撃者の罠によってWebアプリケーションの持っている機能がユーザーの意思と関係なく実行されてしまうこと。formから送信されるリクエストは同一オリジンポリシーで制限されないため生じる。
+- Double submit cookie: HttpOnly属性のついていないCSRF対策専用のCookieをformを送るときに、headerに入れる。同一のtokenがformにも入れてあればOK。HttpOnly属性がついていなくても、異なるドメインからはCookieにアクセスできないため対策になる。
 
 </details>
 
