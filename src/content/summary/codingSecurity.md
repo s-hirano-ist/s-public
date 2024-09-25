@@ -4,29 +4,14 @@ description: コードを書くときに意識しているセキュリティ項�
 draft: false
 ---
 
-## Reactの場合
+## Next.js・Reactで行うべきセキュリティの対策
 
 ## クロスサイトスクリプティング（XSS）
-
-### 対策方法
-
-1. `dangerouslySetInnerHTML`の利用を禁止する。どうしても利用する必要がある場合は、[DOMPurify](https://github.com/cure53/DOMPurify)等を用いてサニタイジングして、[html-react-parser](https://github.com/remarkablemark/html-react-parser)等でパースすることで`dangerouslySetInnerHTML`と同様のことを実現可能。
-2. `href`にURLを挿入する場合は、`http(s)`以外受け付けないようサニタイジングを行う。
-
-   ```TypeScript
-    const urlObj = new URL(url);
-    if (urlObj.protocol === "http:" || urlObj.protocol === "https:") return url;
-    throw new Error("Detected url which is not HTTPS");
-   ```
-
-3. [Next.js公式ドキュメント](https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy#reading-the-nonce)を元にContent Security Policy (CSP)の適用。
-   - 注意点: `script`タグを利用する場合は`nonce`の設定を忘れずに行う必要がある。
-   - `Trusted Types`はReactの実装内で類似のことがなされるため不要。
 
 <details>
 <summary>用語説明</summary>
 
-- XSS: リクエストに含まれる文字列をそのままHTMLへ挿入すると、意図せぬJavaScriptを実行される恐れがある。
+- XSS: リクエストに含まれる文字列をそのままHTMLへ挿入すると、意図せぬJavaScriptが実行される恐れがある。
 
   - 反射型XSS: 罠サイト経由でアクセスした際、URLのパラメータ等に悪意あるコードを埋め込まれ、SSRでレンダリングされたHTMLから実行される。
   - 蓄積型XSS: 攻撃者が投稿したフォームを他のユーザーが閲覧時に実行される。
@@ -53,22 +38,32 @@ draft: false
     - document.write
     - jQuery()
 
-- CSP
+- CSP: 許可されていないJavaScriptの実行やリソースの読み込みをブロック。metaタグに埋め込み or レスポンスヘッダーに付与することで適用される。
 
-  - 許可されていないJavaScriptの実行やリソースの読み込みをブロック。
-  - metaタグに埋め込み or レスポンスヘッダーに付与することで適用される。
-
-- base-uri: baseURLを変更されないようにする。
-- object-src: Flash等のプラグインに対する制限を付与。
-- trusted types: 文字列を安全な型として扱う。DOMPurifyで検査可能。
-- Strict CSP
-
-  - CSPを適用させると、HTML内にインラインJavaScriptは禁止される。回避方法として、`unsafe-inline`を使うのではなく、`nonce-source`や`hash-source`を利用すると安全にインライン記述ができる。
-    - nonce-source: script要素に指定したランダムなトークンがCSPヘッダーに指定されたものと同一でないとエラーを吐くもの。
-    - script-source: script要素のhash値を計算し、それをCSPヘッダーに指定して、同一でないとエラーを吐くもの。
-    - strict-dynamic: 上記を指定しても許可されないscript要素の作成が必要な場合に利用。※ innerHTMLやdocument.writeは機能しない。
+  - base-uri: baseURLを変更されないようにする。
+  - object-src: Flash等のプラグインに対する制限を付与。
+  - trusted types: 文字列を安全な型として扱う。DOMPurifyで検査可能。
+  - Strict CSP: CSPを適用させると、HTML内にインラインJavaScriptは禁止される。回避方法として、`unsafe-inline`を使うのではなく、`nonce-source`や`hash-source`を利用すると安全にインライン記述ができる。
+    - `nonce-source`: script要素に指定したランダムなトークンがCSPヘッダーに指定されたものと同一でないとエラーを吐くもの。
+    - `script-source`: script要素のhash値を計算し、それをCSPヘッダーに指定して、同一でないとエラーを吐くもの。
+    - `strict-dynamic`: 上記を指定しても許可されないscript要素の作成が必要な場合に利用。※ `innerHTML`や`document.write`は機能しない。
 
 </details>
+
+### 対策方法
+
+1. `dangerouslySetInnerHTML`の利用を禁止する。どうしても利用する必要がある場合は、[DOMPurify](https://github.com/cure53/DOMPurify)等を用いてサニタイジングして、[html-react-parser](https://github.com/remarkablemark/html-react-parser)等でパースすることで`dangerouslySetInnerHTML`の利用を回避する。
+2. `href`にURLを挿入する場合は、`http(s)`以外受け付けないようサニタイジングを行う。
+
+   ```TypeScript
+    const urlObj = new URL(url);
+    if (urlObj.protocol === "http:" || urlObj.protocol === "https:") return url;
+    throw new Error("Detected an href which is not a http(s) request.");
+   ```
+
+3. [Next.js公式ドキュメント](https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy#reading-the-nonce)を元にContent Security Policy (CSP)の適用。
+   - 注意点: `script`タグを利用する場合は`nonce`の設定を忘れずに行う必要がある（通常パッケージマネージャーによってライブラリの導入を行うため、使う場面は限られる）。
+   - `Trusted Types`はReactの実装内で類似のことがなされるため不要。
 
 ### 根拠
 
@@ -76,8 +71,8 @@ draft: false
 
    > [React公式ドキュメント](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html)
 
-2. `href`に`javascript:脆弱性を生むコード`が指定されることは対策されないため手動でサニタイジングをする必要がある。
-3. CSPを適用し、許可されていないソースからのスクリプトの読み込みをでき、安全性が高まる。
+2. `href`に`javascript:脆弱性を生むコード`が指定されることは対策されないため手動でサニタイジングをする必要がある（2024年9月現在）。
+3. CSPを用いることで許可されていないソースからのスクリプトの読み込みを制限でき、安全性が高まる。
 
 ### 仕組み化
 
@@ -85,7 +80,58 @@ draft: false
 2. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 3. ヘッダーに記述する内容をテンプレート化して提供。
 
-## 中間者攻撃・SSLストリッピング・（HTTP通信起因）改ざん
+## クロスサイトリクエストフォージェリ（CSRF）
+
+<details>
+<summary>用語説明</summary>
+
+- CSRF: 攻撃者の罠によってWebアプリケーションの持っている機能がユーザーの意思と関係なく実行されてしまうこと。formから送信されるリクエストは同一オリジンポリシーで制限されないため生じる。
+- Double submit cookie: HttpOnly属性のついていないCSRF対策専用のCookieをformを送るときに、headerに入れる。同一のtokenがformにも入れてあればOK。HttpOnly属性がついていなくても、異なるドメインからはCookieにアクセスできないため対策になる。
+
+</details>
+
+### 対策方法
+
+1. Next.js v14.0以上を利用することで特筆すべき対策は不要。ただし、Custom Route Handlers（`route.tsx`）を利用する場合は下記対策が必要になる。
+
+<details>
+<summary>基本的に不要な対策</summary>
+
+1. バックエンドサーバーで`origin`ヘッダーを検証。
+2. SameSite Cookieを設定し、クロスサイトサイトへCookieを付与しない。
+3. formのPOST等で`CSRF_TOKEN`を使い、フォームの正当性の検証。
+4. Double submit cookieを利用し、フォームの正当性を検証。
+
+   ```bash
+   Set-Cookie: session=123456789abcdef; httpOnly; Secure; SameSite=Lax;
+   ```
+
+5. `X-Requested-With`等の（CORS安全とされるリクエストヘッダー以外の）任意のヘッダーを付与して、そのヘッダーがリクエストに含まれているか検証。
+   - 注意点: プリフライトリクエスト内でチェックするため、リクエスト回数が増える。他の方法がない場合に利用。
+
+</details>
+
+### 根拠
+
+1. Next.jsのv14.0以上では`Origin`ヘッダーの検証が自動で行われる。
+2. SameSite Cookieは最新版のChrome等のブラウザでデフォルト搭載されている。
+
+### 仕組み化
+
+1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
+
+## 中間者攻撃・SSLストリッピング・（HTTP通信起因の）改ざん
+
+<details>
+<summary>用語説明</summary>
+
+- HSTS: HTTPで初回通信しても、次からはHTTPS通信を強制する。
+  - max-age: HTTPS通信を行う有効期限。
+  - includeSubdomains: サブドメインに対してもHTTPSを強制するか。
+  - preload: HTTPS preloadに登録されているドメインか確認して、初回からHTTPS通信を強制する。
+- サブリソース完全性: 読み込むリソースの内容のハッシュ値のbase64エンコードされたものをintegrity属性に指定することで改ざんを検知する仕組み。
+
+</details>
 
 ### 対策方法
 
@@ -95,21 +141,19 @@ draft: false
    strict-transport-security: max-age=31536000; includeSubdomains; preload
    ```
 
-2. Mixed Contentのブロック（デフォルトでブラウザに搭載）。
-
 <details>
-<summary>用語説明</summary>
+<summary>基本的に不要な対策</summary>
 
-- HSTS: HTTPで初回通信しても、次からはHTTPS通信を強制する。
-  - max-age: HTTPS通信を行う有効期限。
-  - includeSubdomains: サブドメインに対してもHTTPSを強制するか。
-  - preload: HTTPS preloadに登録されているドメインか確認して、初回からHTTPS通信を強制する。
+1. Mixed Contentのブロック。
+2. サブリソース完全性の利用。
 
 </details>
 
 ### 根拠
 
 1. `HSTS`を利用することで、通信のHTTPS化を強制でき、中間者による改ざんによって生じる悪意あるスクリプトの埋め込みを防止できる。
+2. Mixed Contentのブロックはブラウザでデフォルト搭載。
+3. ビルド時に`npm`からパッケージをインポートし、scriptタグによる読み込みをしなければ問題なし。ライブラリの脆弱性検知ツールによる対応で十分。
 
 ### 仕組み化
 
@@ -152,6 +196,7 @@ draft: false
 ### 対策方法
 
 1. [Prisma](https://www.prisma.io/)等のORMの機能を利用してデータベースにアクセスし、生のSQLや`$queryRaw`、`$executeRaw`を利用しない。どうしても利用する場合は、個別に調査して無害化する。
+2. [TypedSQL](https://www.prisma.io/blog/announcing-typedsql-make-your-raw-sql-queries-type-safe-with-prisma-orm)の利用。
 
 ### 根拠
 
@@ -165,12 +210,23 @@ draft: false
 
 ## サイドチャネル攻撃（Spectre）
 
+<details>
+<summary>用語説明</summary>
+
+- CORS: ブラウザ上で異なるオリジン間の安全なリソース共有を可能にする仕組み。HTTPヘッダにOriginや Access-Control-Allow-Originなどを使用して動作させる。
+  - 注意点: Originヘッダの値をそのままAccess-Control-Allow-Originヘッダに設定するとすべてのオリジンを許可していることと同一なため使用不可。
+- サイドチャネル攻撃: CPU・メモリ等、ハードウェアの特性を悪用した攻撃。
+  - 例: Spectre: 高精度なタイマーを使い、ジョジョにメモリ内の内容を推測するもの。
+- CORP: ヘッダが指定されたリソースの読み込みを同一オリジンまたは同一サイトに制限可能。
+- COEP: すべてのリソースに対して、CORP or CORSヘッダを設定することを強制。
+- COOP: a要素やwindow.open関数で開いたクロスオリジンのページからのアクセスを制限可能。
+
+</details>
+
 ### 対策方法
 
-1. Site isolation（デフォルトでブラウザに搭載）。
-2. Cross-Origin Resource Sharing（CORS）（デフォルトでブラウザに搭載）。
-3. `SharedArrayBuffer`や`performance.measureMemory()`を利用しない。
-4. Cross-Origin Isolation（`SharedArrayBuffer`や`performance.measureMemory()`を利用する場合のみ）（不用意に設定するとWebサイトが動かなくなることがあるため注意が必要））。
+1. `SharedArrayBuffer`や`performance.measureMemory()`を利用しない。
+2. Cross-Origin Isolation（`SharedArrayBuffer`や`performance.measureMemory()`を利用する場合のみ）（不用意に設定するとWebサイトが動かなくなることがあるため注意が必要））。
 
    1. Cross-Origin Resource Policy（CORP）
 
@@ -193,27 +249,23 @@ draft: false
       - 注意点: 決済やソーシャルログイン等を利用している場合はブロックされるので`same-origin-allow-popups`を指定する。
 
 <details>
-<summary>用語説明</summary>
+<summary>基本的に不要な対策</summary>
 
-- CORS: ブラウザ上で異なるオリジン間の安全なリソース共有を可能にする仕組み。HTTPヘッダにOriginや Access-Control-Allow-Originなどを使用して動作させる。
-  - 注意点: Originヘッダの値をそのままAccess-Control-Allow-Originヘッダに設定するとすべてのオリジンを許可していることと同一なため使用不可。
-- サイドチャネル攻撃: CPU・メモリ等、ハードウェアの特性を悪用した攻撃。
-  - 例: Spectre: 高精度なタイマーを使い、ジョジョにメモリ内の内容を推測するもの。
-- CORP: ヘッダが指定されたリソースの読み込みを同一オリジンまたは同一サイトに制限可能。
-- COEP: すべてのリソースに対して、CORP or CORSヘッダを設定することを強制。
-- COOP: a要素やwindow.open関数で開いたクロスオリジンのページからのアクセスを制限可能。
+1. Site isolation。
+2. Cross-Origin Resource Sharing（CORS）
 
 </details>
 
 ### 根拠
 
 1. Site isolationでサイト（eTLD+1）単位でプロセスの分離、Cross-Origin Isolationでオリジンごとにプロセスの分離できるため。
+2. Site isolation・CORSの仕組みはデフォルトでブラウザに搭載されている。
 
 ### 仕組み化
 
 1. ヘッダーに記述する内容をテンプレート化して提供。
 
-## Refererの脆弱性
+## Referrerの脆弱性
 
 ### 対策方法
 
@@ -231,47 +283,25 @@ draft: false
 
 1. ヘッダーに記述する内容をテンプレート化して提供。
 
-## 認証情報の漏洩
+## 認証情報・サーバーサイドのロジックの漏洩
 
 ### 対策方法
 
 1. httpOnly属性の付与 or Cookieによる認証をしない（bearer token等の利用）。
+2. `import 'server-only';`の利用によるサーバーサイドのロジックの明示的な分離。
+3. 本番環境では本番モードで起動する。
+4. ブラウザから見えてもいい環境変数以外の名称に`NEXT_PUBLIC_`接頭詞をつけない。
 
 ### 根拠
 
 1. `httpOnly`属性を付与することで、JavaScriptからCookieにアクセスできないようにできる。ページ遷移時やフォーム送信時等のリクエストにおいて、ブラウザはCookieを自動的にサーバへ送信するため、対策が必要。
+2. Client Componentは開発者ツールから内部のコードが見れてしまう。`import 'server-only';`を付与することで、サーバーサイドからしかコードが実行されなくなる。
+3. 本番モードでは、Reactはエラーや拒否されたプロミスをクライアントに送信しないため、エラーハンドルの実装により機密情報が漏洩することは対策済み。
+4. `NEXT_PUBLIC`接頭詞をつけない環境変数をクライアントサイドから読み込むとエラーになるため、機密情報がクライアントサイドに流出することは対策可能。
 
 ### 仕組み化
 
 1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
-
-## クロスサイトリクエストフォージェリ（CSRF）
-
-### 対策方法
-
-1. ~~formのPOST等で`CSRF_TOKEN`を使い、フォームの正当性の検証。~~
-2. ~~Double submit cookieを利用し、フォームの正当性を検証。~~
-3. バックエンドサーバーで`origin`ヘッダーを検証（Next.js v14以上でデフォルトで搭載）。
-4. SameSite Cookieを設定し、クロスサイトサイトへCookieを付与しない（Chrome等最新のブラウザではデフォルト機能）。
-
-   ```bash
-   Set-Cookie: session=123456789abcdef; httpOnly; Secure; SameSite=Lax;
-   ```
-
-5. `X-Requested-With`等の（CORS安全とされるリクエストヘッダー以外の）任意のヘッダーを付与して、そのヘッダーがリクエストに含まれているか検証。
-   - 注意点: プリフライトリクエスト内でチェックするため、リクエスト回数が増える。他の方法がない場合に利用。
-
-<details>
-<summary>用語説明</summary>
-
-- CSRF: 攻撃者の罠によってWebアプリケーションの持っている機能がユーザーの意思と関係なく実行されてしまうこと。formから送信されるリクエストは同一オリジンポリシーで制限されないため生じる。
-- Double submit cookie: HttpOnly属性のついていないCSRF対策専用のCookieをformを送るときに、headerに入れる。同一のtokenがformにも入れてあればOK。HttpOnly属性がついていなくても、異なるドメインからはCookieにアクセスできないため対策になる。
-
-</details>
-
-### 根拠
-
-### 仕組み化
 
 ## オープンリダイレクト
 
@@ -287,17 +317,9 @@ draft: false
 
 1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 
-## 機密情報の漏洩
-
-本番モードでは、Reactはエラーや拒否されたプロミスをクライアントに送信しないため、エラーハンドルの実装により機密情報が漏洩することは対策済み。
-
-`NEXT_PUBLIC`接頭詞をつけない環境変数をクライアントサイドから読み込むとエラーになるため、機密情報がクライアントサイドに流出することは対策可能。
-
-## その他検討済み項目
+## その他基本的に不要な対策や技術
 
 1. Sanitize API: 同様のことをDompurifyやReactのデフォルトの機能でできるため不要とする。
-2. サブリソース完全性: ビルド時に`npm`から読み込み、scriptタグによる読み込みをしなければ問題なし。
-   - 読み込むリソースの内容のハッシュ値のbase64エンコードされたものをintegrity属性に指定することで改ざんを検知する仕組みは不要。ライブラリの脆弱性検知ツールによる対応で十分。
 
 ## チェックリスト
 
@@ -306,10 +328,12 @@ draft: false
 - [ ] "use server"ファイル：アクションの引数がアクション内、またはデータアクセス層内で検証されているか？アクション内でユーザーが再認証されているか？
 - [ ] `/[param]/`：角括弧が付いているフォルダはユーザー入力を表す。パラメータが検証されているか？
 - [ ] `middleware.tsx`および`route.tsx`：従来の技術を使って要追加の監査。定期的にペネトレーションテストや脆弱性スキャンを実施するか、チームのソフトウェア開発ライフサイクルに従って実施。
+- [ ] Server ActionsのPropsにユーザーに操作されたくない引数を入れてないか（userIdはsessionから取得する等の方法を取る必要がある）。
+- [ ] `layout`で認証チェックをしていないか。`middleware`、`page`、`server actions`で行うべきである。
 
-## バックエンド周りのその他脆弱性
+## 残対策集 TODO
 
-下記はフロントエンドWebアプリケーション開発に関わらない箇所なため、TODOとして残している。
+下記はフロントエンドWebアプリケーション開発に直接関わらない箇所なため、TODOとして残している。一部はフロントエンドの高度化により対策が必要なものもあるため、現在執筆中である。
 
 - [ ] OSコマンドインジェクション
 - [ ] パス名パラメータの未チェック・ディレクトリトラバーサル
@@ -330,3 +354,4 @@ draft: false
 
 - フロントエンド開発のためのセキュリティ入門、平野昌士
 - <https://nextjs.org/blog/security-nextjs-server-components-actions>
+- <https://zenn.dev/moozaru/articles/d270bbc476758e>
