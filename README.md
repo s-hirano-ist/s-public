@@ -32,7 +32,8 @@
 **HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
 **Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
 **Visual regression** - [Playwright test](https://playwright.dev/docs/test-intro/)  
-**SVG optimization** - [svgo](https://github.com/svg/svgo)
+**SVG optimization** - [svgo](https://github.com/svg/svgo)  
+**Vulnerabilities Check** - [npm-audit](https://docs.npmjs.com/cli/v10/commands/npm-audit) [Dependabot alert](https://docs.github.com/ja/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
 
 ### My infrastructure stack
 

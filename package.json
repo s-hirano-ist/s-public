@@ -30,7 +30,8 @@
     "generate:license:summary": "license-checker --summary >> README.md",
     "commit": "git cz",
     "generate:gh-stars": "python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json",
-    "prepare": "husky"
+    "prepare": "husky",
+    "security": "pnpm audit"
   },
   "lint-staged": {
     "*": [
