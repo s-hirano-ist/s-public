@@ -153,6 +153,21 @@
       "title": "AWSで国家機密は守れるのか",
       "quote": "",
       "url": "https://gigazine.net/news/20240705-amazon-aws-australian-government/"
+    },
+    {
+      "title": "SSID混乱攻撃",
+      "quote": "悪意ある中継機を設置。暗号化精度の低い通信を行い、攻撃を行いやすくする。SSIDの区別が名称のみかつ、複数の周波数帯が同じSSIDで使われているときに有効。",
+      "url": "https://www.nttdata.com/jp/ja/trends/data-insight/"
+    },
+    {
+      "title": "npm上のESLINTに悪意あるコード挿入",
+      "quote": "npmアカウントの乗っ取りが原因",
+      "url": "https://qiita.com/mysticatea/items/0141657e4478d9cf4614"
+    },
+    {
+      "title": "ニコ動のサイバー攻撃に対してNewsPicksの行動",
+      "quote": "ニコ動のサイバー攻撃に対してNewsPicksの行動は正しかった?",
+      "url": "https://www.itmedia.co.jp/business/articles/2406/26/news042_2.html"
     }
   ]
 }
