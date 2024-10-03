@@ -6,7 +6,9 @@ draft: false
 
 ## Next.js・Reactで行うべきセキュリティの対策
 
-## クロスサイトスクリプティング（XSS）
+フロントエンド開発を行うに当たり最低限行うべき対策。
+
+### クロスサイトスクリプティング（XSS）
 
 <details>
 <summary>用語説明</summary>
@@ -50,7 +52,7 @@ draft: false
 
 </details>
 
-### 対策方法
+#### 対策方法
 
 1. `dangerouslySetInnerHTML`の利用を禁止する。どうしても利用する必要がある場合は、[DOMPurify](https://github.com/cure53/DOMPurify)等を用いてサニタイジングして、[html-react-parser](https://github.com/remarkablemark/html-react-parser)等でパースすることで`dangerouslySetInnerHTML`の利用を回避する。
 2. `href`にURLを挿入する場合は、`http(s)`以外受け付けないようサニタイジングを行う。
@@ -65,7 +67,7 @@ draft: false
    - 注意点: `script`タグを利用する場合は`nonce`の設定を忘れずに行う必要がある（通常パッケージマネージャーによってライブラリの導入を行うため、使う場面は限られる）。
    - `Trusted Types`はReactの実装内で類似のことがなされるため不要。
 
-### 根拠
+#### 根拠
 
 1. `dangerouslySetInnerHTML`を利用しない場合、ReactがHTMLとして解釈されないようにエスケープしてくれるため。
 
@@ -74,13 +76,13 @@ draft: false
 2. `href`に`javascript:脆弱性を生むコード`が指定されることは対策されないため手動でサニタイジングをする必要がある（2024年9月現在）。
 3. CSPを用いることで許可されていないソースからのスクリプトの読み込みを制限でき、安全性が高まる。
 
-### 仕組み化
+#### 仕組み化
 
 1. [Biome](https://biomejs.dev)や[ESLint](https://eslint.org/)で`dangerouslySetInnerHTML`を利用するとCIが失敗するようにする（デフォルトの設定で有効化済）。
 2. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 3. ヘッダーに記述する内容をテンプレート化して提供。
 
-## クロスサイトリクエストフォージェリ（CSRF）
+### クロスサイトリクエストフォージェリ（CSRF）
 
 <details>
 <summary>用語説明</summary>
@@ -90,7 +92,7 @@ draft: false
 
 </details>
 
-### 対策方法
+#### 対策方法
 
 1. Next.js v14.0以上を利用することで特筆すべき対策は不要。ただし、Custom Route Handlers（`route.tsx`）を利用する場合は下記対策が必要になる。
 
@@ -111,16 +113,16 @@ draft: false
 
 </details>
 
-### 根拠
+#### 根拠
 
 1. Next.jsのv14.0以上では`Origin`ヘッダーの検証が自動で行われる。
 2. SameSite Cookieは最新版のChrome等のブラウザでデフォルト搭載されている。
 
-### 仕組み化
+#### 仕組み化
 
 1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 
-## 中間者攻撃・SSLストリッピング・（HTTP通信起因の）改ざん
+### 中間者攻撃・SSLストリッピング・（HTTP通信起因の）改ざん
 
 <details>
 <summary>用語説明</summary>
@@ -133,7 +135,7 @@ draft: false
 
 </details>
 
-### 対策方法
+#### 対策方法
 
 1. `HSTS`を利用 or 443番ポートのみ開放。
 
@@ -149,18 +151,18 @@ draft: false
 
 </details>
 
-### 根拠
+#### 根拠
 
 1. `HSTS`を利用することで、通信のHTTPS化を強制でき、中間者による改ざんによって生じる悪意あるスクリプトの埋め込みを防止できる。
 2. Mixed Contentのブロックはブラウザでデフォルト搭載。
 3. ビルド時に`npm`からパッケージをインポートし、scriptタグによる読み込みをしなければ問題なし。ライブラリの脆弱性検知ツールによる対応で十分。
 
-### 仕組み化
+#### 仕組み化
 
 1. ヘッダーに記述する内容をテンプレート化して提供。
 2. [hstspreload.org](https://hstspreload.org/)をチェックすることで設定を確認。
 
-## クリックジャッキング
+### クリックジャッキング
 
 <details>
 <summary>用語説明</summary>
@@ -169,7 +171,7 @@ draft: false
 
 </details>
 
-### 対策方法
+#### 対策方法
 
 1. `X-Frame-Options`の設定。必要に応じて`DENY`以外に`SAMEORIGIN`等に変更する。
 
@@ -183,32 +185,32 @@ draft: false
    Content-Security-Policy: frame-ancestors 'none'
    ```
 
-### 根拠
+#### 根拠
 
 1. `X-Frame-Options`を設定することで、`iframe`等で埋め込まれることを防止できるため。
 
-### 仕組み化
+#### 仕組み化
 
 1. ヘッダーに記述する内容をテンプレート化して提供。
 
-## SQLインジェクション
+### SQLインジェクション
 
-### 対策方法
+#### 対策方法
 
 1. [Prisma](https://www.prisma.io/)等のORMの機能を利用してデータベースにアクセスし、生のSQLや`$queryRaw`、`$executeRaw`を利用しない。どうしても利用する場合は、個別に調査して無害化する。
 2. [TypedSQL](https://www.prisma.io/blog/announcing-typedsql-make-your-raw-sql-queries-type-safe-with-prisma-orm)の利用。
 
-### 根拠
+#### 根拠
 
 1. ORMのデフォルト機能として、SQLインジェクションの恐れのあるテキストはエスケープされるため（[Prisma](https://www.prisma.io/)以外のORMの場合念の為確認が必要）。
 
    > [Prisma公式ドキュメント](https://www.prisma.io/docs/orm/prisma-client/using-raw-sql/raw-queries#sql-injection-prevention)
 
-### 仕組み化
+#### 仕組み化
 
 1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 
-## サイドチャネル攻撃（Spectre）
+### サイドチャネル攻撃（Spectre）
 
 <details>
 <summary>用語説明</summary>
@@ -223,7 +225,7 @@ draft: false
 
 </details>
 
-### 対策方法
+#### 対策方法
 
 1. `SharedArrayBuffer`や`performance.measureMemory()`を利用しない。
 2. Cross-Origin Isolation（`SharedArrayBuffer`や`performance.measureMemory()`を利用する場合のみ）（不用意に設定するとWebサイトが動かなくなることがあるため注意が必要））。
@@ -256,18 +258,18 @@ draft: false
 
 </details>
 
-### 根拠
+#### 根拠
 
 1. Site isolationでサイト（eTLD+1）単位でプロセスの分離、Cross-Origin Isolationでオリジンごとにプロセスの分離できるため。
 2. Site isolation・CORSの仕組みはデフォルトでブラウザに搭載されている。
 
-### 仕組み化
+#### 仕組み化
 
 1. ヘッダーに記述する内容をテンプレート化して提供。
 
-## Referrerの脆弱性
+### Referrerの脆弱性
 
-### 対策方法
+#### 対策方法
 
 1. `Referrer-Policy`の設定。
 
@@ -275,53 +277,53 @@ draft: false
    Referrer-Policy: strict-origin-when-cross-origin
    ```
 
-### 根拠
+#### 根拠
 
 1. `Referrer-Policy`を適切に設定することで、遷移先が外部サイトの場合に`referrer`を送信しなくなる。
 
-### 仕組み化
+#### 仕組み化
 
 1. ヘッダーに記述する内容をテンプレート化して提供。
 
-## 認証情報・サーバーサイドのロジックの漏洩
+### 認証情報・サーバーサイドのロジックの漏洩
 
-### 対策方法
+#### 対策方法
 
 1. httpOnly属性の付与 or Cookieによる認証をしない（bearer token等の利用）。
 2. `import 'server-only';`の利用によるサーバーサイドのロジックの明示的な分離。
 3. 本番環境では本番モードで起動する。
 4. ブラウザから見えてもいい環境変数以外の名称に`NEXT_PUBLIC_`接頭詞をつけない。
 
-### 根拠
+#### 根拠
 
 1. `httpOnly`属性を付与することで、JavaScriptからCookieにアクセスできないようにできる。ページ遷移時やフォーム送信時等のリクエストにおいて、ブラウザはCookieを自動的にサーバへ送信するため、対策が必要。
 2. Client Componentは開発者ツールから内部のコードが見れてしまう。`import 'server-only';`を付与することで、サーバーサイドからしかコードが実行されなくなる。
 3. 本番モードでは、Reactはエラーや拒否されたプロミスをクライアントに送信しないため、エラーハンドルの実装により機密情報が漏洩することは対策済み。
 4. `NEXT_PUBLIC`接頭詞をつけない環境変数をクライアントサイドから読み込むとエラーになるため、機密情報がクライアントサイドに流出することは対策可能。
 
-### 仕組み化
+#### 仕組み化
 
 1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 
-## オープンリダイレクト
+### オープンリダイレクト
 
-### 対策方法
+#### 対策方法
 
 1. リダイレクト設定を記述する場合は、特定のURLのみリダイレクトが可能なようにバリデーションを行う。
 
-### 根拠
+#### 根拠
 
 1. リダイレクト先の設定でバリデーションを行うと、悪意あるリダイレクト先は排除できる。
 
-### 仕組み化
+#### 仕組み化
 
 1. 利用規約の策定 + [CodeRabbit](https://coderabbit.ai)等のGPTを利用して検知。
 
-## その他基本的に不要な対策や技術
+### その他基本的に不要な対策や技術
 
 1. Sanitize API: 同様のことをDompurifyやReactのデフォルトの機能でできるため不要とする。
 
-## チェックリスト
+### チェックリスト
 
 - [ ] データアクセス層：独立したデータアクセス層の確立された慣行があるかどうか要確認。データベースパッケージや環境変数がデータアクセス層の外でインポートされていないことを要確認。
 - [ ] "use client"ファイル：コンポーネントのpropsにプライベートデータを期待していないか？型のシグネチャが過度に広範ではないか？
@@ -331,7 +333,7 @@ draft: false
 - [ ] Server ActionsのPropsにユーザーに操作されたくない引数を入れてないか（userIdはsessionから取得する等の方法を取る必要がある）。
 - [ ] `layout`で認証チェックをしていないか。`middleware`、`page`、`server actions`で行うべきである。
 
-## 残対策集 TODO
+### 残対策集 TODO
 
 下記はフロントエンドWebアプリケーション開発に直接関わらない箇所なため、TODOとして残している。一部はフロントエンドの高度化により対策が必要なものもあるため、現在執筆中である。
 
@@ -343,7 +345,7 @@ draft: false
 - [ ] バッファオーバーフロー
 - [ ] アクセス制御・認可制御の欠落
 
-## ライブラリの脆弱性自動検知ツール
+### ライブラリの脆弱性自動検知ツール
 
 - [audit](https://docs.npmjs.com/cli/v10/commands/npm-audit)
 - [Dependabotアラート](https://docs.github.com/ja/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
