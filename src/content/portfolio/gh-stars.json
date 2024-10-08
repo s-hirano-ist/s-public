@@ -1,5 +1,21 @@
 [
   {
+    "url": "https://github.com/polemius/recoil-persist",
+    "description": "Package for recoil state manager to persist and rehydrate store"
+  },
+  {
+    "url": "https://github.com/facebookexperimental/Recoil",
+    "description": "Recoil is an experimental state management library for React apps. It provides several capabilities that are difficult to achieve with React alone, while being compatible with the newest features of React."
+  },
+  {
+    "url": "https://github.com/reactjs/react-codemod",
+    "description": "React codemod scripts"
+  },
+  {
+    "url": "https://github.com/ymrl/a11y-visualizer",
+    "description": "A Browser Extension for Enhanced Web Accessibility Checking"
+  },
+  {
     "url": "https://github.com/nicolargo/glances",
     "description": "Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems."
   },
@@ -45,7 +61,7 @@
   },
   {
     "url": "https://github.com/emilkowalski/vaul",
-    "description": "An unstyled drawer component for React."
+    "description": "A drawer component for React."
   },
   {
     "url": "https://github.com/diodon-dev/diodon",
