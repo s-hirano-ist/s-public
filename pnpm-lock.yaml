@@ -18,8 +18,8 @@ importers:
         specifier: 3.1.6
         version: 3.1.6
       '@astrojs/tailwind':
-        specifier: 5.1.1
-        version: 5.1.1(astro@4.15.12(@types/node@22.7.5)(rollup@4.24.0)(typescript@5.5.4))(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4)))(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4))
+        specifier: 5.1.2
+        version: 5.1.2(astro@4.15.12(@types/node@22.7.5)(rollup@4.24.0)(typescript@5.5.4))(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4)))(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4))
       '@astrojs/vercel':
         specifier: 7.8.1
         version: 7.8.1(astro@4.15.12(@types/node@22.7.5)(rollup@4.24.0)(typescript@5.5.4))(react@18.3.1)
@@ -45,8 +45,8 @@ importers:
         specifier: 25.0.1
         version: 25.0.1
       lenis:
-        specifier: 1.1.13
-        version: 1.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 1.1.14
+        version: 1.1.14(react@18.3.1)
       mdast-util-toc:
         specifier: 7.1.0
         version: 7.1.0
@@ -130,8 +130,8 @@ importers:
         specifier: 1.0.3
         version: 1.0.3(typescript@5.5.4)
       daisyui:
-        specifier: 4.12.12
-        version: 4.12.12(postcss@8.4.47)
+        specifier: 4.12.13
+        version: 4.12.13(postcss@8.4.47)
       eslint:
         specifier: 8.57.1
         version: 8.57.1
@@ -154,8 +154,8 @@ importers:
         specifier: 4.4.5
         version: 4.4.5(eslint@8.57.1)
       eslint-plugin-tailwindcss:
-        specifier: 3.17.4
-        version: 3.17.4(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4)))
+        specifier: 3.17.5
+        version: 3.17.5(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4)))
       git-cz:
         specifier: 4.9.0
         version: 4.9.0
@@ -273,8 +273,8 @@ packages:
   '@astrojs/sitemap@3.1.6':
     resolution: {integrity: sha512-1Qp2NvAzVImqA6y+LubKi1DVhve/hXXgFvB0szxiipzh7BvtuKe4oJJ9dXSqaubaTkt4nMa6dv6RCCAYeB6xaQ==}
 
-  '@astrojs/tailwind@5.1.1':
-    resolution: {integrity: sha512-LwurA10uIKcGRxQP2R81RvAnBT0WPKzBntXZBF4hrAefDgM5Uumn0nsGr6tdIjSARgYz4X+Cq/Vh78t3bql3yw==}
+  '@astrojs/tailwind@5.1.2':
+    resolution: {integrity: sha512-IvOF0W/dtHElcXvhrPR35nHmhyV3cfz1EzPitMGtU7sYy9Hci3BNK1To6FWmVuuNKPxza1IgCGetSynJZL7fOg==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0-beta.0
       tailwindcss: ^3.0.24
@@ -1702,8 +1702,8 @@ packages:
     resolution: {integrity: sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  daisyui@4.12.12:
-    resolution: {integrity: sha512-xmCZ4piuWOjhNyB0VDKczB5vKFCipTA7UxaZNOzCz6cT8kvWgv5BDtUo+Hk9gOFufByOlfuBdzLpfhY5GsebTQ==}
+  daisyui@4.12.13:
+    resolution: {integrity: sha512-BnXyQoOByUF/7wSdIKubyhXxbtL8gxwY3u2cNMkxGP39TSVJqMmlItqtpY903fQnLI/NokC+bc+ZV+PEPsppPw==}
     engines: {node: '>=16.9.0'}
 
   data-urls@5.0.0:
@@ -2025,8 +2025,8 @@ packages:
     peerDependencies:
       eslint: '>= 3'
 
-  eslint-plugin-tailwindcss@3.17.4:
-    resolution: {integrity: sha512-gJAEHmCq2XFfUP/+vwEfEJ9igrPeZFg+skeMtsxquSQdxba9XRk5bn0Bp9jxG1VV9/wwPKi1g3ZjItu6MIjhNg==}
+  eslint-plugin-tailwindcss@3.17.5:
+    resolution: {integrity: sha512-8Mi7p7dm+mO1dHgRHHFdPu4RDTBk69Cn4P0B40vRQR+MrguUpwmKwhZy1kqYe3Km8/4nb+cyrCF+5SodOEmaow==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       tailwindcss: ^3.4.0
@@ -2762,15 +2762,15 @@ packages:
   known-css-properties@0.34.0:
     resolution: {integrity: sha512-tBECoUqNFbyAY4RrbqsBQqDFpGXAEbdD5QKr8kACx3+rnArmuuR22nKQWKazvp07N9yjTyDZaw/20UIH8tL9DQ==}
 
-  lenis@1.1.13:
-    resolution: {integrity: sha512-iny+vWwUHcZGbJz+p2I75H1muLBRZqSG7t04jnhA+CWOQDFL1vt9bsZDwPPtYEmYVVvqAdo5MbXVFzNOlbgUkQ==}
+  lenis@1.1.14:
+    resolution: {integrity: sha512-dzIeiOCdBL/7Tjh6jU8iN5j1uu5R3PIQwRYipS4C8POPyTH1pHyux3HDyvcGuLqNNsEztZjkmwfPii2cPLXBbg==}
     peerDependencies:
       react: '>=17.0.0'
-      react-dom: '>=17.0.0'
+      vue: '>=3.0.0'
     peerDependenciesMeta:
       react:
         optional: true
-      react-dom:
+      vue:
         optional: true
 
   levn@0.4.1:
@@ -4783,7 +4783,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.1(astro@4.15.12(@types/node@22.7.5)(rollup@4.24.0)(typescript@5.5.4))(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4)))(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4))':
+  '@astrojs/tailwind@5.1.2(astro@4.15.12(@types/node@22.7.5)(rollup@4.24.0)(typescript@5.5.4))(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4)))(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4))':
     dependencies:
       astro: 4.15.12(@types/node@22.7.5)(rollup@4.24.0)(typescript@5.5.4)
       autoprefixer: 10.4.20(postcss@8.4.47)
@@ -6336,7 +6336,7 @@ snapshots:
 
   culori@3.3.0: {}
 
-  daisyui@4.12.12(postcss@8.4.47):
+  daisyui@4.12.13(postcss@8.4.47):
     dependencies:
       css-selector-tokenizer: 0.8.0
       culori: 3.3.0
@@ -6655,7 +6655,7 @@ snapshots:
       debug: 4.3.7
       enhanced-resolve: 5.17.1
       eslint: 8.57.1
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.5.4))(eslint-plugin-import@2.30.0)(eslint@8.57.1))(eslint@8.57.1)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
@@ -6668,7 +6668,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.5.4))(eslint-plugin-import@2.30.0)(eslint@8.57.1))(eslint@8.57.1):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -6705,7 +6705,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.5.4))(eslint-plugin-import@2.30.0)(eslint@8.57.1))(eslint@8.57.1)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -6736,7 +6736,7 @@ snapshots:
       eslint: 8.57.1
       recheck: 4.4.5
 
-  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4))):
+  eslint-plugin-tailwindcss@3.17.5(tailwindcss@3.4.13(ts-node@10.9.2(@types/node@22.7.5)(typescript@5.5.4))):
     dependencies:
       fast-glob: 3.3.2
       postcss: 8.4.47
@@ -7575,12 +7575,11 @@ snapshots:
 
   known-css-properties@0.34.0: {}
 
-  lenis@1.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  lenis@1.1.14(react@18.3.1):
     dependencies:
       '@darkroom.engineering/tempus': 0.0.46
     optionalDependencies:
       react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
 
   levn@0.4.1:
     dependencies:
