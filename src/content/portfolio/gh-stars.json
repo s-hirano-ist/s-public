@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/github/session-resume",
+    "description": "Annotate fields to be persisted on navigation away from the current page"
+  },
+  {
     "url": "https://github.com/polemius/recoil-persist",
     "description": "Package for recoil state manager to persist and rehydrate store"
   },
