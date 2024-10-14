@@ -55,7 +55,7 @@
     "@fontsource-variable/noto-sans-jp": "5.0.20",
     "@googleapis/books": "4.0.0",
     "@vercel/speed-insights": "1.0.12",
-    "astro": "4.15.12",
+    "astro": "4.16.1",
     "fuse.js": "7.0.0",
     "github-slugger": "2.0.0",
     "jsdom": "25.0.1",
