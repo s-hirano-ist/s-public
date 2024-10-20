@@ -217,8 +217,8 @@ importers:
         specifier: 10.9.2
         version: 10.9.2(@types/node@22.7.5)(typescript@5.5.4)
       vnu-jar:
-        specifier: 23.4.11
-        version: 23.4.11
+        specifier: 24.10.17
+        version: 24.10.17
 
 packages:
 
@@ -4404,8 +4404,8 @@ packages:
       vite:
         optional: true
 
-  vnu-jar@23.4.11:
-    resolution: {integrity: sha512-lI5dzBYXtxhilNI7EeQ5iUduYnNBq7YWx4UjfBVLXfBQHnXYZSf3y3bpM0bSyDU6jy/+OyKV7nw4tzpR5lXSZg==}
+  vnu-jar@24.10.17:
+    resolution: {integrity: sha512-YT7gNrRY5PiJrI1GavlWRHWIwqq2o52COc6J9QeXPfoldKRiZ9BeGP4shNLLaVfi0naA+/LMksdYWkKCr4pnVg==}
     engines: {node: '>=0.10'}
 
   volar-service-css@0.0.61:
@@ -9546,7 +9546,7 @@ snapshots:
     optionalDependencies:
       vite: 5.4.8(@types/node@22.7.5)
 
-  vnu-jar@23.4.11: {}
+  vnu-jar@24.10.17: {}
 
   volar-service-css@0.0.61(@volar/language-service@2.4.6):
     dependencies:
