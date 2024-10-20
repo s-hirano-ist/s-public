@@ -80,7 +80,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.47.2",
-    "@secretlint/secretlint-rule-preset-recommend": "8.2.4",
+    "@secretlint/secretlint-rule-preset-recommend": "9.0.0",
     "@tailwindcss/typography": "0.5.15",
     "@types/jsdom": "21.1.7",
     "@types/mdast": "4.0.4",
@@ -109,7 +109,7 @@
     "prettier-plugin-tailwindcss": "0.6.8",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "secretlint": "8.2.4",
+    "secretlint": "9.0.0",
     "stylelint": "16.9.0",
     "stylelint-config-html": "1.1.0",
     "stylelint-config-standard": "36.0.1",
