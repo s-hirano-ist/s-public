@@ -1,5 +1,13 @@
 [
   {
+    "url": "https://github.com/google/latexify_py",
+    "description": "A library to generate LaTeX expression from Python code."
+  },
+  {
+    "url": "https://github.com/suzuki-shunsuke/ghalint",
+    "description": "GitHub Actions linter"
+  },
+  {
     "url": "https://github.com/github/session-resume",
     "description": "Annotate fields to be persisted on navigation away from the current page"
   },
@@ -473,7 +481,7 @@
   },
   {
     "url": "https://github.com/blackholeearth/Win10_BrightnessSlider",
-    "description": "this app puts a Monitor Brightness icon on Taskbar Tray.  for win 7, 8, 10"
+    "description": "this app puts a Monitor Brightness icon on Taskbar Tray.  for win 7, 8, 10, 11"
   },
   {
     "url": "https://github.com/satnaing/astro-paper",
