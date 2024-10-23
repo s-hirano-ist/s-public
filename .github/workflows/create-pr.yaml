@@ -1,0 +1,58 @@
+name: create-pr
+on:
+  schedule:
+    - cron: "0 23 1 * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v4
+        with:
+          node-version: "20"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9.5.0
+          run_install: false
+
+      - name: Get pnpm directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Cache dependencies
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a # v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: pnpm i --frozen-lockfile # && npm install -g @lhci/cli@0.12.x
+
+      - name: run script
+        run: pnpm fetch-news
+        env:
+          POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+          USERNAME_TO_EXPORT: ${{ secrets.USERNAME_TO_EXPORT }}
+
+      - name: format
+        run: pnpm fmt:fix
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@5e914681df9dc83aa4e4905692ca88beb2f9e91f # v7
+        with:
+          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          commit-message: "contents: update news"
+          title: "contents: update news"
+          body: |
+            https://private.s-hirano.com でDUMPしたコンテンツ一覧。
