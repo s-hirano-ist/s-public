@@ -14,3 +14,6 @@ node_modules/
 playwright-report
 test-results
 e2e/snapshot.test.ts-snapshots
+
+# .env
+.env
