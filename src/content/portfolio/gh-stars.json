@@ -1,5 +1,25 @@
 [
   {
+    "url": "https://github.com/actions/setup-node",
+    "description": "Set up your GitHub Actions workflow with a specific version of node.js"
+  },
+  {
+    "url": "https://github.com/rhysd/actionlint",
+    "description": ":octocat: Static checker for GitHub Actions workflow files"
+  },
+  {
+    "url": "https://github.com/pinojs/pino",
+    "description": "\ud83c\udf32 super fast, all natural json logger"
+  },
+  {
+    "url": "https://github.com/t3-oss/t3-env",
+    "description": null
+  },
+  {
+    "url": "https://github.com/bcomnes/npm-run-all2",
+    "description": "A CLI tool to run multiple npm-scripts in parallel or sequential. (Maintenance fork)"
+  },
+  {
     "url": "https://github.com/google/latexify_py",
     "description": "A library to generate LaTeX expression from Python code."
   },
