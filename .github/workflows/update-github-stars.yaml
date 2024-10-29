@@ -5,6 +5,8 @@ on:
 jobs:
   create_pull_request:
     runs-on: ubuntu-24.04
+    permissions: {}
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
