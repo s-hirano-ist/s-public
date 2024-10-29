@@ -39,5 +39,10 @@
       matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
       groupName: "minor",
     },
+    {
+      matchManagers: ["github-actions"],
+      groupName: "GitHub Actions Updates",
+      groupSlug: "github-actions-updates",
+    },
   ],
 }
