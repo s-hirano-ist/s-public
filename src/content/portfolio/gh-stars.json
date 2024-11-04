@@ -1,5 +1,13 @@
 [
   {
+    "url": "https://github.com/nexe/nexe",
+    "description": "\ud83c\udf89 create a single executable out of your node.js apps"
+  },
+  {
+    "url": "https://github.com/googleapis/release-please-action",
+    "description": "automated releases based on conventional commits"
+  },
+  {
     "url": "https://github.com/actions/setup-node",
     "description": "Set up your GitHub Actions workflow with a specific version of node.js"
   },
@@ -444,7 +452,7 @@
     "description": "High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library."
   },
   {
-    "url": "https://github.com/yisibl/resvg-js",
+    "url": "https://github.com/thx/resvg-js",
     "description": "A high-performance SVG renderer and toolkit, powered by Rust based resvg and napi-rs."
   },
   {
