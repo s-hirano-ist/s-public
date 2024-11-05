@@ -22,7 +22,6 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4
         with:
-          version: 9.5.0
           run_install: false
 
       - name: Get pnpm directory
