@@ -1,5 +1,33 @@
 [
   {
+    "url": "https://github.com/ajrosen/Bitwarden-Accelerator",
+    "description": "Alfred Workflow to make using Bitwarden faster and smoother with all applications"
+  },
+  {
+    "url": "https://github.com/franciscop/legally",
+    "description": ":books: Check the licenses for the NPM packages that you use"
+  },
+  {
+    "url": "https://github.com/lsd-rs/lsd",
+    "description": "The next gen ls command"
+  },
+  {
+    "url": "https://github.com/zenorocha/alfred-workflows",
+    "description": ":metal: A collection of Alfred 3 and 4 workflows that will rock your world"
+  },
+  {
+    "url": "https://github.com/tj/n",
+    "description": "Node version management"
+  },
+  {
+    "url": "https://github.com/minio/minio",
+    "description": "MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license."
+  },
+  {
+    "url": "https://github.com/vercel/ai",
+    "description": "Build AI-powered applications with React, Svelte, Vue, and Solid"
+  },
+  {
     "url": "https://github.com/nexe/nexe",
     "description": "\ud83c\udf89 create a single executable out of your node.js apps"
   },
