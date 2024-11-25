@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/sachinchoolur/lightGallery",
+    "description": "A customizable, modular, responsive, lightbox gallery plugin. "
+  },
+  {
     "url": "https://github.com/ajrosen/Bitwarden-Accelerator",
     "description": "Alfred Workflow to make using Bitwarden faster and smoother with all applications"
   },
@@ -277,7 +281,7 @@
   },
   {
     "url": "https://github.com/versoly/taos",
-    "description": "A simple and small (600 bytes) library to help animate elements while scrolling using responsive Tailwind CSS JIT utility classes."
+    "description": "Tailwind CSS Animation on Scroll - A simple and small (600 bytes) library to help animate elements while scrolling using responsive Tailwind CSS JIT utility classes."
   },
   {
     "url": "https://github.com/saadeghi/theme-change",
