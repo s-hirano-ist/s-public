@@ -3,6 +3,7 @@ import { SITE } from "@config";
 import "@styles/base.css";
 import "@fontsource-variable/noto-sans-jp";
 import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 // import { ViewTransitions } from "astro:transitions";
 
 export type Props = {
@@ -33,6 +34,9 @@ const socialImageURL = new URL(
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+
+    <Analytics />
+
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="192x192" href="touch-icon.png" />
