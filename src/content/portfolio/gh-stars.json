@@ -416,7 +416,7 @@
     "description": "RPC-like client, contract, and server implementation for a pure REST API"
   },
   {
-    "url": "https://github.com/jlalmes/trpc-openapi",
+    "url": "https://github.com/trpc/trpc-openapi",
     "description": "OpenAPI support for tRPC \ud83e\udde9"
   },
   {
