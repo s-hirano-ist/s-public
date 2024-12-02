@@ -1,5 +1,17 @@
 [
   {
+    "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "description": "Stable Diffusion web UI"
+  },
+  {
+    "url": "https://github.com/ai-dock/comfyui",
+    "description": "ComfyUI docker images for use in GPU cloud and local environments. Includes AI-Dock base for authentication and improved user experience. "
+  },
+  {
+    "url": "https://github.com/hashicorp/nomad",
+    "description": "Nomad is an easy-to-use, flexible, and performant workload orchestrator that can deploy a mix of microservice, batch, containerized, and non-containerized applications. Nomad is easy to operate and scale and has native Consul and Vault integrations."
+  },
+  {
     "url": "https://github.com/sachinchoolur/lightGallery",
     "description": "A customizable, modular, responsive, lightbox gallery plugin. "
   },
