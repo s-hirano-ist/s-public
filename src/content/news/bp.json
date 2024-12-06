@@ -1,0 +1,21 @@
+{
+  "heading": "bp",
+  "description": "FIXME",
+  "body": [
+    {
+      "title": "prisma スキーマ変更",
+      "quote": "",
+      "url": "https://speakerdeck.com/ryusaka/prismadesukimabian-geng-woxing-uji-nobesutopurakuteisu"
+    },
+    {
+      "title": "prisma 運用",
+      "quote": "",
+      "url": "https://speakerdeck.com/tockn/prisma-ormwo2nian-yun-yong-sitepei-tutanouhauwogong-you-suru"
+    },
+    {
+      "title": "frontend serverless react",
+      "quote": "with streaming HTML",
+      "url": "https://speakerdeck.com/_kensh/serverless-front-end-strategy"
+    }
+  ]
+}
