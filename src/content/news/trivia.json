@@ -400,6 +400,21 @@
       "title": "中学のせいでpythonに仕様変更",
       "quote": "",
       "url": "https://shmug.hatenablog.com/entry/2024/12/03/000000"
+    },
+    {
+      "title": "セーフティクリティカル",
+      "quote": "",
+      "url": "https://www.publickey1.jp/blog/24/rustsafety-critical_rust_consortium.html"
+    },
+    {
+      "title": "文字コードの世界",
+      "quote": "",
+      "url": "https://zenn.dev/aldagram_tech/articles/79d35b2779e326"
+    },
+    {
+      "title": "コードで0.1 + 0.2 == 0.3 が成立しない理由",
+      "quote": "",
+      "url": "https://qiita.com/mlab/items/647ac3416e2bdcbe3163"
     }
   ]
 }
