@@ -415,6 +415,36 @@
       "title": "コードで0.1 + 0.2 == 0.3 が成立しない理由",
       "quote": "",
       "url": "https://qiita.com/mlab/items/647ac3416e2bdcbe3163"
+    },
+    {
+      "title": "組織としてとプロダクトとしての2側面の4keys",
+      "quote": "",
+      "url": "https://bonotake.hatenablog.com/entry/2024/03/20/144648"
+    },
+    {
+      "title": "デイリースクラムではゴールを達成できそうか聞く",
+      "quote": "タスクの進捗を書くのではよくない",
+      "url": "https://zenn.dev/kyash/articles/34fe6a5e1fca68"
+    },
+    {
+      "title": "おもしろlinuxコマンド",
+      "quote": "",
+      "url": "https://qiita.com/to-fmak/items/ea345839f394db781bd0"
+    },
+    {
+      "title": "アルゴリズムという言葉の由来",
+      "quote": "",
+      "url": "https://gigazine.net/news/20240518-algorithm-history/"
+    },
+    {
+      "title": "にわとりより卵が先",
+      "quote": "",
+      "url": "https://gigazine.net/news/20241108-egg-or-chicken-problem/"
+    },
+    {
+      "title": "linuxのmanコマンドに紛れていた面白要素",
+      "quote": "",
+      "url": "https://gigazine.net/news/20241008-unix-man-db-easter-egg/"
     }
   ]
 }
