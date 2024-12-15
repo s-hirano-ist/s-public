@@ -21,6 +21,31 @@
       "title": "顧客が本当にやりたいこと",
       "quote": "",
       "url": "https://note.com/katsumanarisawa/n/ne79e60b552d0"
+    },
+    {
+      "title": "コードレビューをを最優先業務に",
+      "quote": "",
+      "url": "https://zenn.dev/team_soda/articles/4faec057f57e74"
+    },
+    {
+      "title": "フロントエンドテストの種類",
+      "quote": "",
+      "url": "https://tech.iimon.co.jp/entry/2024/12/05"
+    },
+    {
+      "title": "テストはAAAより given when then",
+      "quote": "",
+      "url": "https://zenn.dev/m10maeda/articles/gwt-might-feel-more-natural-than-3a-for-ui-testing"
+    },
+    {
+      "title": "アジャイル開発とプロトタイプ",
+      "quote": "",
+      "url": "https://www.docswell.com/s/papanda/ZJL3Q1-agile-hajimete"
+    },
+    {
+      "title": "テストのカバレッジは目標よりステータス",
+      "quote": "",
+      "url": "https://qiita.com/t-iino/items/de10db7e1b141404fed9"
     }
   ]
 }
