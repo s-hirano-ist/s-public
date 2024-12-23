@@ -445,6 +445,31 @@
       "title": "linuxのmanコマンドに紛れていた面白要素",
       "quote": "",
       "url": "https://gigazine.net/news/20241008-unix-man-db-easter-egg/"
+    },
+    {
+      "title": "cloudflare wafと学内フィルタリングの相性",
+      "quote": "",
+      "url": "https://zenn.dev/nakasyou/articles/do_not_use_turnstile_for_school"
+    },
+    {
+      "title": "cat as a service",
+      "quote": "",
+      "url": "https://gigazine.net/news/20240616-cat-as-a-service/"
+    },
+    {
+      "title": "過去悪用されていたドメインは危ない",
+      "quote": "",
+      "url": "https://gigazine.net/news/20241028-before-buy-domain-check-haunted/"
+    },
+    {
+      "title": "複数のマッチングアプリを利用した位置情報特定",
+      "quote": "",
+      "url": "https://gigazine.net/news/20240801-dating-app-location/"
+    },
+    {
+      "title": "center a divはappleでも難しい",
+      "quote": "",
+      "url": "https://gigazine.net/news/20240903-apple-mac-calculator-design/"
     }
   ]
 }
