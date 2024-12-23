@@ -1,5 +1,17 @@
 [
   {
+    "url": "https://github.com/microsoft/markitdown",
+    "description": "Python tool for converting files and office documents to Markdown."
+  },
+  {
+    "url": "https://github.com/omar-dulaimi/prisma-zod-generator",
+    "description": "Prisma 2+ generator to emit Zod schemas from your Prisma schema"
+  },
+  {
+    "url": "https://github.com/hraban/tomono",
+    "description": "Multi- To Mono-repository merge"
+  },
+  {
     "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
     "description": "Stable Diffusion web UI"
   },
