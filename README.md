@@ -1,7 +1,7 @@
 # s-public
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Build status](https://img.shields.io/github/actions/workflow/status/s-hirano-ist/s-public/build.yaml?branch=main)
+![Build status](https://img.shields.io/github/actions/workflow/status/s-hirano-ist/s-public/ci.yaml?branch=main)
 ![GitHub stars](https://img.shields.io/github/stars/s-hirano-ist/s-public.svg)
 
 > [!IMPORTANT]
