@@ -107,8 +107,8 @@ Access [Onamae.com](https://www.onamae.com/) to add DNS TXT record.
 ## ☀ Favicon
 
 - Text: S
-- Background: Circle
-- Font Family: Babylonica
+- Background: Rounded
+- Font Family: Geostar Fill
 - Font Variant: Regular 400 Normal
 - Font Size: 110
 - Font Color: #77A2C0
