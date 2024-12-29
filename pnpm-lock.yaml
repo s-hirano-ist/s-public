@@ -24,8 +24,8 @@ importers:
         specifier: 7.8.2
         version: 7.8.2(astro@4.16.18(@types/node@22.10.2)(rollup@4.29.1)(typescript@5.5.4))(react@19.0.0)(rollup@4.29.1)
       '@fontsource-variable/noto-sans-jp':
-        specifier: 5.1.0
-        version: 5.1.0
+        specifier: 5.1.1
+        version: 5.1.1
       '@googleapis/books':
         specifier: 4.0.0
         version: 4.0.0
@@ -136,8 +136,8 @@ importers:
         specifier: 1.0.3
         version: 1.0.3(typescript@5.5.4)
       daisyui:
-        specifier: 4.12.22
-        version: 4.12.22(postcss@8.4.49)
+        specifier: 4.12.23
+        version: 4.12.23(postcss@8.4.49)
       dotenv:
         specifier: 16.4.7
         version: 16.4.7
@@ -764,8 +764,8 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@fontsource-variable/noto-sans-jp@5.1.0':
-    resolution: {integrity: sha512-VmEW0dlHsC0tQOlZlzcrUj+9HL73pANKneMrsZD8X6Jg3XhysOYY6R2VRGO4cTYwp5iVznt1crzGUEWM+/xQuA==}
+  '@fontsource-variable/noto-sans-jp@5.1.1':
+    resolution: {integrity: sha512-fOuEtA3b+3M1nJJycPx8JQyKUTz10nTUOQSusC6gBtq6ff22vl59c3NSg3ZM5/QsO3y5AHhn+KKvhpRcDvgyJg==}
 
   '@googleapis/books@4.0.0':
     resolution: {integrity: sha512-FJNk4bH4Q3NYl0tZ28Ve42lXmFVzzLcMTYatmOfMAIFkc7bhYAL0lUd7Vm8lPzCJPfnME43qFQ9psPFrL1rjcw==}
@@ -1895,8 +1895,8 @@ packages:
     resolution: {integrity: sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  daisyui@4.12.22:
-    resolution: {integrity: sha512-HDLWbmTnXxhE1MrMgSWjVgdRt+bVYHvfNbW3GTsyIokRSqTHonUTrxV3RhpPDjGIWaHt+ELtDCTYCtUFgL2/Nw==}
+  daisyui@4.12.23:
+    resolution: {integrity: sha512-EM38duvxutJ5PD65lO/AFMpcw+9qEy6XAZrTpzp7WyaPeO/l+F/Qiq0ECHHmFNcFXh5aVoALY4MGrrxtCiaQCQ==}
     engines: {node: '>=16.9.0'}
 
   data-urls@5.0.0:
@@ -5516,7 +5516,7 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@fontsource-variable/noto-sans-jp@5.1.0': {}
+  '@fontsource-variable/noto-sans-jp@5.1.1': {}
 
   '@googleapis/books@4.0.0':
     dependencies:
@@ -6741,7 +6741,7 @@ snapshots:
 
   culori@3.3.0: {}
 
-  daisyui@4.12.22(postcss@8.4.49):
+  daisyui@4.12.23(postcss@8.4.49):
     dependencies:
       css-selector-tokenizer: 0.8.0
       culori: 3.3.0
