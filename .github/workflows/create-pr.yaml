@@ -53,7 +53,7 @@ jobs:
       - run: pnpm fmt:fix
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@5e914681df9dc83aa4e4905692ca88beb2f9e91f # v7
+        uses: peter-evans/create-pull-request@67ccf781d68cd99b580ae25a5c18a1cc84ffff1f # v7
         with:
           token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
           branch: "create-pull-request/contents"
@@ -86,7 +86,7 @@ jobs:
         run: python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@5e914681df9dc83aa4e4905692ca88beb2f9e91f # v7
+        uses: peter-evans/create-pull-request@67ccf781d68cd99b580ae25a5c18a1cc84ffff1f # v7
         with:
           token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
           branch: "create-pull-request/gh-stars"
