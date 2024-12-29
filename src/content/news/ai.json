@@ -129,6 +129,21 @@
       "title": "transformerモデル以外もあるよ",
       "quote": "",
       "url": "https://gigazine.net/news/20241001-liquid-non-transformer-ai-models/"
+    },
+    {
+      "title": "労力は外注できるが能力は外注できない",
+      "quote": "",
+      "url": "https://togetter.com/li/2469644"
+    },
+    {
+      "title": "AIによるストレス検知",
+      "quote": "",
+      "url": "https://www.gizmodo.jp/2024/06/ai-to-reduce-stress-for-call-center-staff.html"
+    },
+    {
+      "title": "claudeのシステムプロンプトの中身",
+      "quote": "",
+      "url": "https://gigazine.net/news/20240827-anthropic-claude-system-prompts/"
     }
   ]
 }
