@@ -5,12 +5,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  contents:
     runs-on: ubuntu-24.04
     permissions: {}
     timeout-minutes: 20
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+      group: ${{ github.workflow }}-contents-${{ github.ref }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
@@ -37,7 +37,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: pnpm i --frozen-lockfile # && npm install -g @lhci/cli@0.12.x
+      - run: pnpm i --frozen-lockfile
 
       - name: run script
         run: pnpm fetch-news
@@ -45,15 +45,52 @@ jobs:
           POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
           USERNAME_TO_EXPORT: ${{ secrets.USERNAME_TO_EXPORT }}
 
-      - name: format
-        run: pnpm fmt:fix
+      - run: pnpm generate:photo
+      - run: pnpm generate:book
+      - run: pnpm license:summary
+      - run: bash checkLicense.sh
+
+      - run: pnpm fmt:fix
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@5e914681df9dc83aa4e4905692ca88beb2f9e91f # v7
         with:
           token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
-          branch: "create-pull-request/create-pr"
-          commit-message: "contents: update news"
-          title: "contents: update news"
+          branch: "create-pull-request/contents"
+          commit-message: "contents: update contents"
+          title: "contents: update news, photo, books, and license."
           body: |
-            https://private.s-hirano.com でDUMPしたコンテンツ一覧。
+            This is an update PR of contents.
+
+  gh-stars:
+    runs-on: ubuntu-24.04
+    permissions: {}
+    timeout-minutes: 10
+    concurrency:
+      group: ${{ github.workflow }}-gh-stars-${{ github.ref }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          submodules: "recursive"
+
+      - name: Set up Python
+        uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: pip install PyGithub
+
+      - name: Run Python script
+        run: python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@5e914681df9dc83aa4e4905692ca88beb2f9e91f # v7
+        with:
+          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          branch: "create-pull-request/gh-stars"
+          commit-message: "contents: update gh-stars.json"
+          title: "contents: update gh-stars.json"
+          body: |
+            This is an update PR of gh-stars.json.
