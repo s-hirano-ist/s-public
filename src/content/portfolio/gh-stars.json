@@ -289,7 +289,7 @@
   },
   {
     "url": "https://github.com/cdimascio/express-openapi-validator",
-    "description": "\ud83e\udd8b Auto-validates api requests, responses, and securities using ExpressJS and an OpenAPI 3.x specification"
+    "description": "\ud83e\udd8b Auto-validates api requests, responses, and securities using ExpressJS and an OpenAPI 3.1.x or 3.0.x specification"
   },
   {
     "url": "https://github.com/aspida/openapi2aspida",
