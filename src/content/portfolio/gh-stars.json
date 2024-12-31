@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/cloudflare/next-on-pages",
+    "description": "CLI to build and develop Next.js apps for Cloudflare Pages"
+  },
+  {
     "url": "https://github.com/microsoft/markitdown",
     "description": "Python tool for converting files and office documents to Markdown."
   },
