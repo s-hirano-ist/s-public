@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/mdx-js/mdx",
+    "description": "Markdown for the component era"
+  },
+  {
     "url": "https://github.com/cloudflare/next-on-pages",
     "description": "CLI to build and develop Next.js apps for Cloudflare Pages"
   },
