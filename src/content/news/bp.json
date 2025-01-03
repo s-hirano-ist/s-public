@@ -46,6 +46,36 @@
       "title": "テストのカバレッジは目標よりステータス",
       "quote": "",
       "url": "https://qiita.com/t-iino/items/de10db7e1b141404fed9"
+    },
+    {
+      "title": "button component",
+      "quote": "",
+      "url": "https://zenn.dev/kiyoshiro9446/scraps/46b4e4be23bcde"
+    },
+    {
+      "title": "改行",
+      "quote": "",
+      "url": "https://zenn.dev/kagan/articles/css-control-break"
+    },
+    {
+      "title": "loading component",
+      "quote": "",
+      "url": "https://coliss.com/articles/build-websites/operation/css/css-only-loader-loadership.html"
+    },
+    {
+      "title": "GraphQL N+1問題",
+      "quote": "",
+      "url": "https://zenn.dev/mizchi/articles/can-you-graphql-batch"
+    },
+    {
+      "title": "react useXX",
+      "quote": "",
+      "url": "https://qiita.com/tomada/items/d244ac3e0659b4b7c3f1"
+    },
+    {
+      "title": "aws lambda web adaptor",
+      "quote": "serverless",
+      "url": "https://serverless.co.jp/blog/g30vzpio0ww/"
     }
   ]
 }
