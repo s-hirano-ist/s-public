@@ -1,5 +1,21 @@
 [
   {
+    "url": "https://github.com/awslabs/aws-lambda-web-adapter",
+    "description": "Run web applications on AWS Lambda"
+  },
+  {
+    "url": "https://github.com/aidenybai/react-scan",
+    "description": "Scan for React performance issues and eliminate slow renders in your app"
+  },
+  {
+    "url": "https://github.com/shikijs/shiki",
+    "description": "A beautiful yet powerful syntax highlighter"
+  },
+  {
+    "url": "https://github.com/winstonjs/winston",
+    "description": "A logger for just about everything."
+  },
+  {
     "url": "https://github.com/mdx-js/mdx",
     "description": "Markdown for the component era"
   },
