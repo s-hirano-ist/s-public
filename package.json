@@ -106,7 +106,7 @@
     "husky": "9.1.7",
     "license-checker": "25.0.1",
     "lint-staged": "15.3.0",
-    "markdownlint-cli2": "0.17.0",
+    "markdownlint-cli2": "0.17.1",
     "pg": "8.13.1",
     "postcss-html": "1.7.0",
     "prettier": "3.4.2",
