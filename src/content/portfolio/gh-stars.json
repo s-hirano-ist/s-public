@@ -1,5 +1,17 @@
 [
   {
+    "url": "https://github.com/depcheck/depcheck",
+    "description": "Check your npm module for unused dependencies"
+  },
+  {
+    "url": "https://github.com/bvaughn/react-error-boundary",
+    "description": "Simple reusable React error boundary component"
+  },
+  {
+    "url": "https://github.com/hashicorp/next-mdx-remote",
+    "description": "Load MDX content from anywhere"
+  },
+  {
     "url": "https://github.com/awslabs/aws-lambda-web-adapter",
     "description": "Run web applications on AWS Lambda"
   },
