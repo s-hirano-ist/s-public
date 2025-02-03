@@ -1,22 +1,22 @@
 [
   {
     "title": "13歳からのアート思考",
-    "subTitle": "「自分だけの答え」が見つかる",
-    "authors": ["末永幸歩"],
-    "description": "6つの作品をめぐる知的冒険が「ものの見方」を一変させる!大人たちもいま熱狂的に受けたい授業!!",
-    "tags": ["アート"],
-    "imageSrc": "https://books.google.com/books/content?id=vLNozQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=vLNozQEACAAJ&dq=isbn:9784478109182&hl=&source=gbs_api",
-    "rating": 5
-  },
-  {
-    "title": "13歳からの地政学",
     "subTitle": "",
     "authors": [],
     "description": "No description",
-    "tags": ["地政学"],
+    "tags": ["アート"],
     "imageSrc": "https://s-hirano.com/notFound.png",
     "href": "https://s-hirano.com/404",
+    "rating": 5
+  },
+  {
+    "title": "１３歳からの地政学",
+    "subTitle": "カイゾクとの地球儀航海",
+    "authors": ["田中　孝幸"],
+    "description": "高校生と中学生の兄妹と年齢不詳の男「カイゾク」との会話を通じて、国際情勢やニュースの裏側が楽しくわかりやすく学べる一冊です！",
+    "tags": ["地政学"],
+    "imageSrc": "https://books.google.com/books/content?id=wnJgEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.com/books?id=wnJgEAAAQBAJ&dq=isbn:9784492444689&hl=&source=gbs_api",
     "rating": 3
   },
   {
@@ -30,13 +30,13 @@
     "rating": 4
   },
   {
-    "title": "２０３０年の世界地図帳",
-    "subTitle": "あたらしい経済とSDGs、未来への展望",
-    "authors": ["落合陽一"],
-    "description": "落合陽一がはじめて世界と未来について語る 2030年の世界を見通すSDGs。これから2030年までに何が起こるのだろう。 未来を予測するためのデータには、様々なものがありますが、ひとついえるのは、これからの社会は今までとは全く違ったルールによって営まれるということ。 現在の世界はどうなっているのか、これから世界はどこに向かっていくのか。 SDGsの枠組みを借りながら、世界の問題点を掘り下げると同時に、今起こりつつある変化について語ります。 ●テクノロジー×地政学でみる世界の勢力図 GAFAMによる世界支配を推進するアメリカ、一帯一路で経済圏を拡大しようとする中国、SDGsやパリ協定を通じてイニシアチブを発揮しようとするヨーロッパ、未開拓の市場で独自のイノベーションを生み出すサードウェーブ（インド・アフリカ）。多様化する世界を紐解けば、それぞれの地域に独自の戦略が根づいていることが見えてきます。ニュースをひとつとってみても、まったく違う視点で世界をとらえられるようになるはずです。 ●一目で状況がわかる「地図」 全編を通じて「地図」を多用し、世界の状況が一目でわかるようにしています。 また、池上彰先生、大阪大学の安田洋祐先生の対談を交え、最先端の世界の真相に迫ります。",
+    "title": "2030年の世界地図帳",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["未来"],
-    "imageSrc": "https://books.google.com/books/content?id=2PW9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=2PW9DwAAQBAJ&dq=isbn:9784797399950&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -121,12 +121,12 @@
   },
   {
     "title": "いちまいの絵",
-    "subTitle": "生きているうちに見るべき名画",
-    "authors": ["原田マハ"],
-    "description": "アート小説の旗手として圧倒的人気を誇る原田マハが、自身の作家人生に強い影響を与えた絵画はもちろん、美術史のなかで大きな転換となった絵画や後世の芸術家に影響を与えた革新的な絵画などを厳選。画家の思い、メッセージ、愛や苦脳を、作家ならではの視点で綴る。『楽園のカンヴァス』でモチーフとなったルソー、『ジヴェルニーの食卓』で描かれたモネ、『暗幕のゲルニカ』のピカソといった、原田作品ではおなじみの絵画はもちろん、古典、日本画、現代アートを含む全二六点を掲載。豪華カラー図版収録。",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["アート"],
-    "imageSrc": "https://books.google.com/books/content?id=QOuXtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=QOuXtAEACAAJ&dq=isbn:9784087208887&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -280,13 +280,13 @@
     "rating": 2
   },
   {
-    "title": "アート鑑賞、超入門!",
-    "subTitle": "7つの視点",
-    "authors": ["藤田令伊"],
-    "description": "日本は世界でも有数の美術館への入場者数を誇る国だが、訪れた人々の「鑑賞」実態は、無意識のうちに世評に導かれていて、自分自身の目でアートに向き合っているとは言いがたいのではないだろうか。本書は、アートを「見る」ことに焦点を当て、7つのポイントから芸術作品へのアプローチを説き明かす。モネ、ミレー、ベラスケス、歌川国芳といった歴史上の画家から、スゥ・ドーホ、アントニー・ゴームリーといった現代作家の作品までを幅広く取り上げながら、実践的なアート鑑賞術を提示する。",
+    "title": "アート鑑賞超入門",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["アート"],
-    "imageSrc": "https://books.google.com/books/content?id=W9jvrQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=W9jvrQEACAAJ&dq=isbn:9784087207712&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 2
   },
   {
@@ -400,23 +400,23 @@
     "rating": 4
   },
   {
-    "title": "デザイン入門教室［特別講義］",
-    "subTitle": "確かな力を身に付けられる ～学び、考え、作る授業～",
-    "authors": ["坂本伸二"],
-    "description": "すぐに使えて、ずっと役立つ基本のルール ※この電子書籍は固定レイアウト型で配信されております。固定レイアウト型は文字だけを拡大することや、文字列のハイライト、検索、辞書の参照、引用などの機能が使用できません。 グラフィックワークから企画書、プレゼン資料まで。 デザイン基礎力は、一生役立つ武器になる！ これからはじめる人に読んでほしい、とことん丁寧な本格入門書、遂に発刊！ 現場のプロが教える真剣教室、開講です！ 【センス、経験、一切不要！】 ―――――― デザインは、すべての人が必ず上達できます。 デザインが苦手な人の話を聞くと「私にはセンスがないから」といわれることがあります。しかし、読み手に伝わるデザイン、心に残るデザイン、読みやすいデザインを制作するのにもっとも大切なものはセンスではありません。大切なのは・・・ ―――本文より ●本書の対象読者 ・自分自身で何らかの紙面や資料などを制作する機会がある人 ・紙面や資料で他人に何かを伝える機会がある人 ・これからデザインを勉強しようとしている人 ・デザイナー１年生",
+    "title": "デザイン入門教室",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["デザイン"],
-    "imageSrc": "https://books.google.com/books/content?id=BAf7CQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=BAf7CQAAQBAJ&dq=isbn:9784797351422&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 2
   },
   {
-    "title": "デジタル・ファシズム",
-    "subTitle": "日本の資産と主権が消える",
-    "authors": ["堤未果"],
-    "description": "デジタル庁、スーパーシティ、オンライン教育......コロナ禍の裏でデジタル改革という名のもとに進む「売国ビジネス」を暴く!",
+    "title": "デジタルファシズム",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["未来"],
-    "imageSrc": "https://books.google.com/books/content?id=Lm2KzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=Lm2KzgEACAAJ&dq=isbn:9784140886557&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 2
   },
   {
@@ -490,13 +490,13 @@
     "rating": 4
   },
   {
-    "title": "ホモ・デウス",
-    "subTitle": "テクノロジーとサピエンスの未来",
-    "authors": ["ユヴァル・ノア・ハラリ"],
-    "description": "我々は不死と幸福、神性をめざし、ホモ・デウス(神のヒト)へと自らをアップグレードする。そのとき世界は、あなたはどうなるのか?",
+    "title": "ホモデウス（上・下）",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["未来"],
-    "imageSrc": "https://books.google.com/books/content?id=aNPdvQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=aNPdvQEACAAJ&dq=isbn:9784309227368&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 4
   },
   {
@@ -542,11 +542,11 @@
   {
     "title": "ルネサンス情報革命の時代",
     "subTitle": "",
-    "authors": ["桑木野幸司"],
-    "description": "新大陸やアジア諸国から流入する珍奇な動植物、工芸品、異聞奇譚。発見につぐ発見、揺らぐ伝統的な知。この情報大洪水に挑んだ人々。",
+    "authors": [],
+    "description": "No description",
     "tags": ["思考", "思想"],
-    "imageSrc": "https://books.google.com/books/content?id=_hn5zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=_hn5zgEACAAJ&dq=isbn:9784480074744&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 2
   },
   {
@@ -570,13 +570,13 @@
     "rating": 2
   },
   {
-    "title": "上野先生、フェミニズムについてゼロから教えてください!",
+    "title": "上野先生フェミニズムについてゼロから教えてください",
     "subTitle": "",
-    "authors": ["上野千鶴子", "田房永子"],
-    "description": "日本の何が問題なのか? 母娘問題、セクハラ、結婚・恋愛・子育て、団塊世代と大学闘争、性暴力などについて徹底的に語り合った7時間! ・日本の女が大変なワケ ・世代でくくると見えてくるもの ・結婚、恋愛、ナメんなよ! ・子どもを産むのは親のエゴイズム ・オヤジは再生産される!? ・性暴力は女性ではなく男性の問題 ・私たちは山ほど洗脳されている! 上野千鶴子(うえの・ちづこ) 1948年富山県生まれ。社会学者。東京大学名誉教授。認定NPO法人ウィメンズアクショネットワーク(WAN)理事長。 専門学校、短大、大学、大学院、社会人教育などの高等教育機関で、40年間、教育と研究に従事。 著書に『家父長制と資本制』(岩波現代文庫)、『おひとりさまの老後』(文春文庫)、『女ぎらい』(朝日文庫)、『ケアの社会学』(太田出版)など多数。 田房永子(たぶさ・えいこ) 1978年東京都生まれ。漫画家、ライター。母からの過干渉に悩み、その確執と葛藤を描いたコミックエッセイ 『母がしんどい』(KADOKAWA/中経出版)がベストセラーに。主な著書に『ママだって、人間』(河出書房新社)、 『キレる私をやめたい?夫をグーで殴る妻をやめるまで?』(竹書房)、『「男の子の育て方」を真剣に考えてたら夫とのセックスが週3回になりました』(大和書房)など。",
+    "authors": [],
+    "description": "No description",
     "tags": ["フェミニズム"],
-    "imageSrc": "https://books.google.com/books/content?id=sCA5zQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=sCA5zQEACAAJ&dq=isbn:9784479393320&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -681,22 +681,22 @@
   },
   {
     "title": "写真はわからない",
-    "subTitle": "撮る・読む・伝える――「体験的」写真論",
-    "authors": ["小林紀晴"],
-    "description": "人物を、風景をどう撮るか。自分の「思い」をどう伝えるか。初心者からプロまで―今こそ考えたい。",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["写真", "アート"],
-    "imageSrc": "https://books.google.com/books/content?id=EcH-zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=EcH-zgEACAAJ&dq=isbn:9784334046019&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
-    "title": "「利他」とは何か",
+    "title": "利他とは何か",
     "subTitle": "",
-    "authors": ["中島岳志", "若松英輔", "國分功一郎", "磯崎憲一郎"],
-    "description": "コロナ時代に、他者と共に生きる術とは? 他者を利するという、一筋縄でいかない厄介な問題に5名の論客が根源的に迫る。",
+    "authors": [],
+    "description": "No description",
     "tags": ["正義"],
-    "imageSrc": "https://books.google.com/books/content?id=UhxizgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=UhxizgEACAAJ&dq=isbn:9784087211580&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 2
   },
   {
@@ -840,13 +840,13 @@
     "rating": 3
   },
   {
-    "title": "愛するということ〔新訳版〕",
+    "title": "愛するということ",
     "subTitle": "",
-    "authors": ["エーリッヒ・フロム"],
+    "authors": [],
     "description": "No description",
     "tags": ["愛", "幸福"],
     "imageSrc": "https://s-hirano.com/notFound.png",
-    "href": "https://books.google.com/books?id=8vAlAAAACAAJ&dq=isbn:9784314005586&hl=&source=gbs_api",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -1010,13 +1010,13 @@
     "rating": 5
   },
   {
-    "title": "未来の地図帳",
-    "subTitle": "人口減少日本で各地に起きること",
-    "authors": ["河合雅司"],
-    "description": "2045年、人口8割減の市町村も―。47都道府県はもはや、維持できない!20年後、日本人はどこに暮らしているのか?",
+    "title": "未来の地図帳人口減少日本で各地に起きること",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["未来"],
-    "imageSrc": "https://books.google.com/books/content?id=xSrsxgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=xSrsxgEACAAJ&dq=isbn:9784065160893&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 2
   },
   {
@@ -1072,11 +1072,11 @@
   {
     "title": "炎上CMでよみとくジェンダー論",
     "subTitle": "",
-    "authors": ["瀬地山角"],
+    "authors": [],
     "description": "No description",
     "tags": ["現代", "フェミニズム"],
-    "imageSrc": "https://books.google.com/books/content?id=V5eKzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=V5eKzQEACAAJ&dq=isbn:9784334044695&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -1091,12 +1091,12 @@
   },
   {
     "title": "現代アートをたのしむ",
-    "subTitle": "人生を豊かに変える5つの扉",
-    "authors": ["原田マハ", "高橋瑞木"],
-    "description": "両著者は、東京・森美術館設立準備室で、ともに日々を過ごした旧知の間柄。そんなふたりが、あなたと現代アートとの「距離を縮める」ために、アーティストや各地の美術館、展覧会を案内する。二〇一四年十二月刊行の単行本『すべてのドアは、入り口である。』を大幅に加筆・修正。香港(高橋)とヴェニス(原田)の最新報告も収録した。「わからない」が「面白い」に変わる、現代アートのガイダンス",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["アート"],
-    "imageSrc": "https://books.google.com/books/content?id=_XuIzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=_XuIzQEACAAJ&dq=isbn:9784396115999&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -1112,11 +1112,11 @@
   {
     "title": "現代語裏辞典",
     "subTitle": "",
-    "authors": ["筒井康隆"],
-    "description": "「愛」から「ワンルームマンション」まで。1万2千もの日本語を笑いと毒で翻弄し、蹂躙し、打ちのめす。どんな項目からも読みはじめられる。一度読みはじめたら絶対にやめられない。ベストセラーにして超ロングセラー。取り扱い注意にして驚天動地の辞典。作家という悪魔がここに降臨する!世界でもっとも危険な一冊です。",
+    "authors": [],
+    "description": "No description",
     "tags": ["辞典"],
-    "imageSrc": "https://books.google.com/books/content?id=VCcEkAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=VCcEkAEACAAJ&dq=isbn:9784167906177&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -1192,21 +1192,21 @@
   {
     "title": "目の見えない人は世界をどう見ているのか",
     "subTitle": "",
-    "authors": ["伊藤亜紗"],
-    "description": "私たちは日々、五感―視覚・聴覚・嗅覚・触覚・味覚―からたくさんの情報を得て生きている。なかでも視覚は特権的な位置を占め、人間が外界から得る情報の八~九割は視覚に由来すると言われている。では、私たちが最も頼っている視覚という感覚を取り除いてみると、身体は、そして世界の捉え方はどうなるのか―?美学と現代アートを専門とする著者が、視覚障害者の空間認識、感覚の使い方、体の使い方、コミュニケーションの仕方、生きるための戦略としてのユーモアなどを分析。目の見えない人の「見方」に迫りながら、「見る」ことそのものを問い直す。",
+    "authors": [],
+    "description": "No description",
     "tags": ["マイノリティ", "生物学"],
     "imageSrc": "https://s-hirano.com/notFound.png",
-    "href": "https://books.google.com/books?id=MA2OrgEACAAJ&dq=isbn:9784334038540&hl=&source=gbs_api",
+    "href": "https://s-hirano.com/404",
     "rating": 2
   },
   {
     "title": "目的への抵抗",
-    "subTitle": "シリーズ哲学講話",
-    "authors": ["國分功一郎"],
-    "description": "自由は目的に抵抗する。そこに人間の自由がある――。コロナ危機における違和感の正体に迫り、哲学の魅力と役割を問う革新的論考!",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["思考"],
-    "imageSrc": "https://books.google.com/books/content?id=AFC7zwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=AFC7zwEACAAJ&dq=isbn:9784106109911&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 4
   },
   {
@@ -1361,12 +1361,12 @@
   },
   {
     "title": "言語化力",
-    "subTitle": "言葉にできれば人生は変わる",
-    "authors": ["三浦崇宏"],
-    "description": "もう何度も言われていることかもしれないが、 時代は変わった。いや、変わり続けている。 何を学べばいいのか、 どこにいけばいいのか、 転職か副業か、独立か成長か、自分をどう活かせばいいのか。 何を頼りにするべきか、 迷っている人も多いだろう。 こんな時代に、自分の道を切り拓くための道具がある。 それは分厚いキャリアガイド本でもなければ、海外の大学で取得するMBAでもない。 仮想通貨も、最先端のAIも、5Gも関係ない。 ぼくやあなたが今まさに使っている「言葉」だ。 誰でも簡単に意識せずに日常的に使っている「言葉」こそが、 あなたの価値を明確にし、あなたの願いを叶え、あなたを成長させるたった一つの、 そして最強の武器だ。 今最も注目を浴びる経営者・クリエイターの三浦氏による スキルとしての「言葉」の本。 「想いや考えを伝える」「人を動かす」「自分の道を切り開く・やる気を出す」",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["自己啓発"],
-    "imageSrc": "https://books.google.com/books/content?id=CTPLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=CTPLDwAAQBAJ&dq=isbn:9784815602734&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -1472,11 +1472,11 @@
   {
     "title": "人は話し方が9割",
     "subTitle": "",
-    "authors": [],
-    "description": "No description",
+    "authors": ["永松 茂久"],
+    "description": "「もう会話で悩まない！疲れない！オロオロしない！」――もっと話し方がうまければ、人生うまくいくのに……。「話すこと」にまつわる悩みを挙げるとキリがありません。本書でお伝えするのは、コミュニケーションの基本である会話がうまくいくようになる、ちょっとした、でも多くの人が気づいていないエッセンス。過去に会話で失敗したトラウマもあっさり消え去ってしまうほど、人と話すことがラクになり、人間関係も、人生も、全部がよりよい方向に動き出します！ 【株式会社すばる舎】",
     "tags": ["自己啓発"],
-    "imageSrc": "https://s-hirano.com/notFound.png",
-    "href": "https://s-hirano.com/404",
+    "imageSrc": "https://books.google.com/books/content?id=3kqrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "href": "https://books.google.com/books?id=3kqrDwAAQBAJ&dq=isbn:9784799108420&hl=&source=gbs_api",
     "rating": 2
   },
   {
@@ -1501,16 +1501,12 @@
   },
   {
     "title": "1兆ドルコーチ",
-    "subTitle": "シリコンバレーのレジェンドビル・キャンベルの成功の教え",
-    "authors": [
-      "エリック・シュミット",
-      "ジョナサン・ローゼンバーグ",
-      "アラン・イーグル"
-    ],
-    "description": "アメフトのコーチ出身でありながら、優秀なプロ経営者。ジョブズの師であると同時に、グーグル創業者たちをゼロから育て上げたコーチ。アマゾンのベゾスを救い、ツイッター、ユーチューブCEOらを鍛え、たった1人で、シリコンバレー中の企業に空前の成功をもたらした伝説のリーダー、ビル・キャンベル。これまで謎に包まれてきたその驚くべき教えのすべてがいま、初めて明らかに―。",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["マネジメント"],
-    "imageSrc": "https://books.google.com/books/content?id=h7Y-zAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=h7Y-zAEACAAJ&dq=isbn:9784478107249&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 1
   },
   {
@@ -1564,13 +1560,13 @@
     "rating": 4
   },
   {
-    "title": "プロダクトマネジメントのすべて",
+    "title": "プロダクトマネジメントのすべて 事業戦略・IT開発・UXデザイン・マーケティングからチーム・組織運営まで",
     "subTitle": "",
-    "authors": [],
-    "description": "No description",
+    "authors": ["及川 卓也", "小城 久美子", "曽根原 春樹"],
+    "description": "世界水準のプロダクトマネージャーの叡智は この1冊で完璧に得られる Google、Microsoft、SmartNewsなどのプロダクト、 BtoCおよびBtoB領域で国内のみならずグローバル展開に 携わってきた百戦錬磨の著者陣が 日本とシリコンバレーのあらゆる知見を詰め込み書き上げた、 プロダクトマネジメントの決定版。 あらゆるモノがIT化する現代では、 プロダクトの成功を抜きに、ビジネスを語ることはできない。 事業戦略、IT開発、UXデザイン、マーケティング、 カスタマーサクセス、セキュリティ、知的財産、組織運営……。 何をどこまでおさえればいいのか？ 本書はその海図となって、ビジネスを成功に導く。 プロダクトマネジメントに欠かせない 知識、スキル、方法論、マインドセットを網羅しているため ●新事業・新サービス開発 ●既存事業テコ入れ ●DX ●起業 ●スタートアップ にかかわるすべてのマネージャー、エンジニア、デザイナーにとっては 必読の完全保存版である。 【目次概要】 PartⅠ プロダクトの成功 PartⅡ プロダクトを育てる PartⅢ ステークホルダーをまとめ、プロダクトチームを率いる PartⅣ プロダクトの置かれた状況を理解する PartⅤ プロダクトマネージャーと組織の成長 PartⅥ プロダクトマネージャーに必要な基礎知識",
     "tags": ["マネジメント"],
-    "imageSrc": "https://s-hirano.com/notFound.png",
-    "href": "https://s-hirano.com/404",
+    "imageSrc": "https://books.google.com/books/content?id=L_ggEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "href": "https://books.google.com/books?id=L_ggEAAAQBAJ&dq=isbn:9784798166391&hl=&source=gbs_api",
     "rating": 4
   },
   {
