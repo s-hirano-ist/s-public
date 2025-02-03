@@ -1,5 +1,25 @@
 [
   {
+    "url": "https://github.com/magicuidesign/magicui",
+    "description": "UI Library for Design Engineers. Animated components and effects you can copy and paste into your apps. Free. Open Source."
+  },
+  {
+    "url": "https://github.com/LeEnno/alfred-terminalfinder",
+    "description": "Alfred workflow to open current Finder window in Terminal/iTerm and vice versa."
+  },
+  {
+    "url": "https://github.com/remarkjs/remark-breaks",
+    "description": "plugin to add break support, without needing spaces"
+  },
+  {
+    "url": "https://github.com/contentlayerdev/contentlayer",
+    "description": "Contentlayer turns your content into data - making it super easy to import MD(X) and CMS content in your app"
+  },
+  {
+    "url": "https://github.com/amannn/next-intl",
+    "description": "\ud83c\udf10 Internationalization (i18n) for Next.js "
+  },
+  {
     "url": "https://github.com/docker/build-push-action",
     "description": "GitHub Action to build and push Docker images with Buildx"
   },
