@@ -35,8 +35,6 @@ const socialImageURL = new URL(
   <head>
     <meta charset="UTF-8" />
 
-    <Analytics />
-
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link
@@ -48,7 +46,7 @@ const socialImageURL = new URL(
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- FIXME: inableing ViewTransitions will not change themes after moving page -->
+    <!-- FIXME: enabling ViewTransitions will not change themes after moving page -->
     <!-- <ViewTransitions /> -->
 
     <!-- Manifest -->
@@ -105,7 +103,7 @@ const socialImageURL = new URL(
         );
       }
       // "theme" LocalStorage value is set by the package to remember user preference.
-      // The value is checked and applyed before rendering anything.
+      // The value is checked and applied before rendering anything.
     </script>
     <script>
       import { themeChange } from "theme-change";
@@ -138,6 +136,8 @@ const socialImageURL = new URL(
     <script is:inline>
       document.documentElement.classList.add("js");
     </script>
+
+    <Analytics />
   </head>
   <body>
     <slot />
