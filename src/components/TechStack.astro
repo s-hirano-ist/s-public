@@ -1,3 +1,9 @@
+---
+import gitHubContribution from "@assets/contribution/github_contribution.png";
+import gitLabContribution from "@assets/contribution/gitlab_contribution.png";
+import { Image } from "astro:assets";
+---
+
 <div>
   <div>
     <h3 class="py-2">実務経験</h3>
@@ -23,4 +29,28 @@
     </a>
     をクリック
   </p>
+  <div class="py-8">
+    <p class="pb-2">
+      <a
+        class="link link-primary"
+        href="https://github.com/s-hirano-ist"
+        target="_blank">GitHub</a
+      >
+      contributions (mainly on private repositories. Last updated on 14th of August
+      2024.)
+    </p>
+    <Image src={gitHubContribution} class="w-full" alt="gitHub contributions" />
+  </div>
+  <div>
+    <p class="pb-2">
+      <a
+        class="link link-primary"
+        href="https://gitlab.com/s-hirano-ist"
+        target="_blank">GitLab</a
+      >
+      contributions (Only on private repositories. Last updated on 26th of November
+      2023.)
+    </p>
+    <Image src={gitLabContribution} class="w-full" alt="gitLab contributions" />
+  </div>
 </div>
