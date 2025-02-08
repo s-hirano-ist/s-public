@@ -9,7 +9,6 @@ export const fetchFont = async (api: string) => {
   ).text();
   const resource = css.match(
     // Okay because only run on build
-    // eslint-disable-next-line redos/no-vulnerable
     /src: url\((.+)\) format\('(opentype|truetype)'\)/,
   );
   if (!resource?.[1]) return;
