@@ -45,8 +45,5 @@ export default defineConfig({
   },
   // not necessary for static sites. Only for SSR.
   output: "static",
-  adapter: vercel({
-    webAnalytics: { enabled: !IS_DEV },
-    speedInsights: { enabled: true },
-  }),
+  adapter: vercel({ webAnalytics: { enabled: !IS_DEV } }),
 });

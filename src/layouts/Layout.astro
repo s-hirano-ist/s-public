@@ -88,9 +88,6 @@ const socialImageURL = new URL(
       });
     </script>
 
-    <!-- Vercel Speed Insights -->
-    {!IS_DEV && <SpeedInsights />}
-
     <!-- Color Scheme -->
     <script is:inline>
       // ☝️ This script prevent the FART effect.
@@ -137,6 +134,8 @@ const socialImageURL = new URL(
       document.documentElement.classList.add("js");
     </script>
 
+    <!-- Vercel -->
+    {!IS_DEV && <SpeedInsights />}
     <Analytics />
   </head>
   <body>
