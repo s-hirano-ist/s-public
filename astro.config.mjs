@@ -7,7 +7,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 // import remarkMermaid from "remark-mermaidjs";
 import remarkToc from "remark-toc";
-// eslint-disable-next-line no-restricted-imports
+
 import { SITE } from "./src/config";
 
 const IS_DEV = import.meta.env.MODE === "development";
