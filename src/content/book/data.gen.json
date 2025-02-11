@@ -101,12 +101,12 @@
   },
   {
     "title": "UNIXという考え方",
-    "subTitle": "その設計思想と哲学",
-    "authors": ["Mike Gancarz"],
-    "description": "Linux成功の鍵や哲学を解き明かす",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["思想", "プログラミング"],
-    "imageSrc": "https://books.google.com/books/content?id=5XzfIACY0G8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-    "href": "https://books.google.com/books?id=5XzfIACY0G8C&dq=isbn:9784274064067&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 5
   },
   {
@@ -441,12 +441,12 @@
   },
   {
     "title": "ヒトラー演説",
-    "subTitle": "熱狂の真実",
-    "authors": ["高田博行"],
-    "description": "ナチスが権力を掌握するにあたっては、ヒトラーの演説力が大きな役割を果たした。ヒトラーの演説といえば、声を張り上げ、大きな身振りで聴衆を煽り立てるイメージが強いが、実際はどうだったのか。聴衆は演説にいつも熱狂したのか。本書では、ヒトラーの政界登場からドイツ敗戦までの二五年間、一五〇万語に及ぶ演説データを分析。レトリックや表現などの面から煽動政治家の実像を明らかにする。",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["演説"],
-    "imageSrc": "https://books.google.com/books/content?id=LWjBoAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=LWjBoAEACAAJ&dq=isbn:9784121022721&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -772,11 +772,11 @@
   {
     "title": "客観性の落とし穴",
     "subTitle": "",
-    "authors": [],
-    "description": "No description",
+    "authors": ["村上靖彦"],
+    "description": "「それはあなたの主観ですか?」。こういった言葉を聞いたことがあるひとは多いだろう。なにかを発信する際、それが主観的な意見なのか、客観的な意見なのか、を明確にすることが求められる。よく作文と論文の違いを説明する際にも、作文は主観的なことを書いていいが、論文では客観的なことを書く必要がある、と言われている。そういった教育のせいか、客観的なことが正しくて、主観的なことは正しくない、もしくは、あなたが思っているだけでしょ、と非難されることが多い。では、そういった客観的なものが優勢になっていくなかで、主観的な感覚は捨てられてしまってよいものだろうか? 著者の村上氏はそうは考えない。それは、数値が優位にたって世界においては、1人ひとりが持つはずの経験のリアリティが失われがちであるからだ。統計を過信し、経験が数値に置き換えられてしまうとそこにはディテールが失われてしまうだろう。その経験のリアリティをみつけることが主観的に考えることだといえるだろう。自分の体をもち、それがなにかと出会い、出来事が体験し、それを語ることでリアリティをつかまえる手段となるのだ。",
     "tags": ["科学", "現代"],
-    "imageSrc": "https://s-hirano.com/notFound.png",
-    "href": "https://s-hirano.com/404",
+    "imageSrc": "https://books.google.com/books/content?id=uY_ZzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.com/books?id=uY_ZzwEACAAJ&dq=isbn:9784480684523&hl=&source=gbs_api",
     "rating": 2
   },
   {
@@ -1142,11 +1142,11 @@
   {
     "title": "理科系の作文技術",
     "subTitle": "",
-    "authors": [],
+    "authors": ["木下是雄"],
     "description": "No description",
     "tags": ["作文", "理系"],
-    "imageSrc": "https://s-hirano.com/notFound.png",
-    "href": "https://s-hirano.com/404",
+    "imageSrc": "https://books.google.com/books/content?id=U5E1AAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.com/books?id=U5E1AAAACAAJ&dq=isbn:9784121006240&hl=&source=gbs_api",
     "rating": 2
   },
   {
@@ -1280,13 +1280,13 @@
     "rating": 3
   },
   {
-    "title": "脳・心・人工知能",
-    "subTitle": "数理で脳を解き明かす",
-    "authors": ["甘利俊一"],
-    "description": "私たちの心や脳の仕組みはどこまでわかったのか? 人工知能は「心」を持てるのか? 数理脳科学の第一人者が語る魅惑的な脳の世界。",
+    "title": "脳心人工知能",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["脳科学", "AI"],
-    "imageSrc": "https://books.google.com/books/content?id=ijfojwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=ijfojwEACAAJ&dq=isbn:9784062579681&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 3
   },
   {
@@ -1351,12 +1351,12 @@
   },
   {
     "title": "若き友人たちへ",
-    "subTitle": "筑紫哲也ラスト・メッセージ",
-    "authors": ["筑紫哲也"],
-    "description": "愛国主義は悪党の最後の隠れ家である。本書の中で筑紫さんが語る言葉の一つである。誰もが反対しづらい美辞麗句、思わず振り向いてしまう大きな声には注意が必要だ、という意味である。二〇〇三年から二〇〇八年にかけて、筑紫さんは早稲田大学と立命館大学で主に大学院生に向けた講座をもっていた。その中で再三伝えようとしたのは、情報や情緒に流されることなく自分の頭で考えることの素晴らしさであった。この一連の講義録をもとに、本書は構成された。「若き友人」を「日本人」と置き換えてもいい。筑紫哲也さんからの最後のメッセージである。",
+    "subTitle": "",
+    "authors": [],
+    "description": "No description",
     "tags": ["現代", "思想"],
-    "imageSrc": "https://books.google.com/books/content?id=t3CGQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=t3CGQgAACAAJ&dq=isbn:9784087205152&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 2
   },
   {
@@ -1490,13 +1490,13 @@
     "rating": 2
   },
   {
-    "title": "カイゼンジャーニー",
+    "title": "カイゼン・ジャーニー たった1人からはじめて、「越境」するチームをつくるまで",
     "subTitle": "",
-    "authors": [],
-    "description": "No description",
+    "authors": ["市谷聡啓", "新井剛"],
+    "description": "「日本の現場」に寄り添った、アジャイル開発の実践! 現場のストーリーで、開発の神髄を学ぼう 【本書の特徴】 ・現場のストーリーから、考え方とプラクティスを一緒に学べる ・1人でも始められる業務改善の手法から、チームマネジメントの手法まで解説 ・日本の現場を前提にしているので、実践しやすい ・アジャイルをこれから始める人だけでなく、もっとうまく実践したい人にも最適 【あらすじ】 ITエンジニアとしてSIer企業に勤務する江島は、 問題だらけのプロジェクト、やる気のない社員たちに嫌気が差していた。 そんな中、ある開発者向けイベントに参加したことがきっかけで、 まずは自分の仕事から見直していこうと考える。 タスクボードや「ふりかえり」などを1人で地道に続けていると、 同僚が興味を示したため、今度は2人でカイゼンに取り組んでいく。 ここから、チームやクライアントを巻き込んだ、現場の改革がはじまる。 チーム内の軋轢、クライアントの無理難題、迫りくるローンチ...... さまざまな困難を乗り越え、江島がたどり着いた「越境する開発」とは。 【筆者コメント(「あとがき」より)】 良い問いは人を立ち返らせてくれます。 そのような問いは人によって異なるでしょう。 読者のみなさんにとっての良い問いと出会えるよう、 江島(本書の主人公)同様、自分がいる場所から外に出て、 いろいろと見聞きしてみてください。 もちろんこの本があなたにとっての 良い問いになることを願っています :) ※本電子書籍は同名出版物を底本として作成しました。記載内容は印刷出版当時のものです。 ※印刷出版再現のため電子書籍としては不要な情報を含んでいる場合があります。 ※印刷出版とは異なる表記・表現の場合があります。予めご了承ください。 ※プレビューにてお手持ちの電子端末での表示状態をご確認の上、商品をお買い求めください。 (翔泳社)",
     "tags": ["マネジメント"],
-    "imageSrc": "https://s-hirano.com/notFound.png",
-    "href": "https://s-hirano.com/404",
+    "imageSrc": "https://books.google.com/books/content?id=Tp5QDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.com/books?id=Tp5QDwAAQBAJ&dq=isbn:9784798155807&hl=&source=gbs_api",
     "rating": 4
   },
   {
