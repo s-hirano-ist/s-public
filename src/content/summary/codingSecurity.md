@@ -6,7 +6,9 @@ draft: false
 
 ## Next.js・Reactで行うべきセキュリティの対策
 
-フロントエンド開発を行うに当たり最低限行うべき対策。
+フロントエンド開発を行うに当たり最低限行うべき対策について説明する。
+
+※ 下記を満たすことで脆弱性がなくなるわけではないことには注意せよ。また、以下の対策が難しい場合には、寄り入念な柔軟な対策を検討するべきである。
 
 ### クロスサイトスクリプティング（XSS）
 
@@ -64,8 +66,15 @@ draft: false
    ```
 
 3. [Next.js公式ドキュメント](https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy#reading-the-nonce)を元にContent Security Policy (CSP)の適用。
+
    - 注意点: `script`タグを利用する場合は`nonce`の設定を忘れずに行う必要がある（通常パッケージマネージャーによってライブラリの導入を行うため、使う場面は限られる）。
    - `Trusted Types`はReactの実装内で類似のことがなされるため不要。
+
+4. HTTPのレスポンスヘッダの「Content-Type」フィールドに明示的にcharset=UTF-8を指定。
+
+   - ブラウザに搭載されている文字コード判定を悪用して悪意あるコードの実行が可能なため。
+
+   > 例: UTF-7の悪用 等
 
 #### 根拠
 
@@ -94,7 +103,7 @@ draft: false
 
 #### 対策方法
 
-1. Next.js v14.0以上を利用することで特筆すべき対策は不要。ただし、Custom Route Handlers（`route.tsx`）を利用する場合は下記対策が必要になる。
+1. Next.js v14.0以上を利用することで基本的な対策はされている。ただし、Custom Route Handlers（`route.tsx`）を利用する場合は下記対策が必要になる。
 
 <details>
 <summary>基本的に不要な対策</summary>
@@ -333,17 +342,19 @@ draft: false
 - [ ] Server ActionsのPropsにユーザーに操作されたくない引数を入れてないか（userIdはsessionから取得する等の方法を取る必要がある）。
 - [ ] `layout`で認証チェックをしていないか。`middleware`、`page`、`server actions`で行うべきである。
 
-### 残対策集 TODO
+### その他
 
-下記はフロントエンドWebアプリケーション開発に直接関わらない箇所なため、TODOとして残している。一部はフロントエンドの高度化により対策が必要なものもあるため、現在執筆中である。
+- OSコマンドインジェクション
+- パス名パラメータの未チェック・ディレクトリトラバーサル
+- セッション管理
+- HTTPヘッダインジェクション: 直接ヘッダをいじらず、ヘッダ出力用のAPIを利用することで、意図せぬヘッダの書き換えが行われないようにする。
+- メールヘッダインジェクション: メールヘッダを固定できない場合には、メール送信用のAPIを利用して意図せぬヘッダの書き換えが行われないようにする。
+- バッファオーバーフロー: 直接メモリを操作できるプログラミング言語の利用によって発生しうる。脆弱性のあるライブラリを利用しないことに注意が必要である。
 
-- [ ] OSコマンドインジェクション
-- [ ] パス名パラメータの未チェック・ディレクトリトラバーサル
-- [ ] セッション管理
-- [ ] HTTPヘッダインジェクション
-- [ ] メールヘッダインジェクション
-- [ ] バッファオーバーフロー
-- [ ] アクセス制御・認可制御の欠落
+#### アンチパターン
+
+- セッションIDをURLパラメータに格納しない
+  - Referrer送信機能によりセッションIDが外部サイトに送信させるため。
 
 ### ライブラリの脆弱性自動検知ツール
 
@@ -354,6 +365,7 @@ draft: false
 
 ## 参考文献
 
-- フロントエンド開発のためのセキュリティ入門、平野昌士
-- <https://nextjs.org/blog/security-nextjs-server-components-actions>
-- <https://zenn.dev/moozaru/articles/d270bbc476758e>
+- [フロントエンド開発のためのセキュリティ入門、平野昌士](https://www.shoeisha.co.jp/book/detail/9784798169477)
+- [安全なウェブサイトの作り方](https://www.ipa.go.jp/security/vuln/websecurity/about.html)
+- [How to Think About Security in Next.js](https://nextjs.org/blog/security-nextjs-server-components-actions>)
+- [知らないとあぶない、Next.js セキュリティばなし](https://zenn.dev/moozaru/articles/d270bbc476758e)
