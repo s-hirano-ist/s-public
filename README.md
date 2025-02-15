@@ -38,8 +38,8 @@
 ### My infrastructure stack
 
 **Version Management** - [GitHub](https://github.com/)  
-**Deployment** - [Vercel Edge Networks](https://vercel.com/)  
-**Analytics** - [Google Analytics](https://analytics.google.com/analytics/web/) | [Vercel Speed Insights](https://vercel.com/docs/speed-insights)  
+**Deployment** - [Cloudflare Pages](https://www.cloudflare.com/ja-jp/developer-platform/products/pages/)  
+**Analytics** - [Google Analytics](https://analytics.google.com/analytics/web/)  
 **Search Console** - [Google Search Console](https://search.google.com/search-console)  
 **Domain** - [Onamae.com](https://www.onamae.com/)
 
@@ -95,9 +95,9 @@ pnpm generate:license:summary
 bash checkLicense.sh
 ```
 
-### Vercel deployment
+### Cloudflare deployment
 
-Add GitHub integration for auto-deployment on vercel.
+Add GitHub integration for auto-deployment on Cloudflare.
 
 ### Google Site Verification (optional)
 
@@ -119,26 +119,26 @@ Access [Onamae.com](https://www.onamae.com/) to add DNS TXT record.
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                 | Action                                             |
-| :---------------------- | :------------------------------------------------- |
-| `pnpm install`          | Installs dependencies                              |
-| `pnpm check`            | Check types                                        |
-| `pnpm dev`              | Starts local dev server at `localhost:4321`        |
-| `pnpm build`            | Build production site to `./.vercel/output/static` |
-| `pnpm preview`          | Preview build locally                              |
-| `pnpm sync`             | Generates TypeScript types                         |
-| `pnpm tsc`              | Check types                                        |
-| `pnpm fmt`              | Check code format with Prettier                    |
-| `pnpm fmt:fix`          | Format codes with Prettier                         |
-| `pnpm lint`             | Lint with ESLint                                   |
-| `pnpm lint:fix`         | Fix lint with ESLint                               |
-| `pnpm lint:mark`        | Lint markdown files with markdownlint-cli2         |
-| `pnpm lint:mark:fix`    | Fix lint markdown files with markdownlint-cli2     |
-| `pnpm lint:css`         | Lint css files with StyleLint                      |
-| `pnpm lint:css:fix`     | Fix lint css files with StyleLint                  |
-| `pnpm lint:secret`      | Lint secrets files with secretLint                 |
-| `pnpm snapshots`        | Visual regression with existing screenshots        |
-| `pnpm snapshots:update` | Visual regression but update snapshots             |
+| Command                 | Action                                         |
+| :---------------------- | :--------------------------------------------- |
+| `pnpm install`          | Installs dependencies                          |
+| `pnpm check`            | Check types                                    |
+| `pnpm dev`              | Starts local dev server at `localhost:4321`    |
+| `pnpm build`            | Build production site to `./dist`              |
+| `pnpm preview`          | Preview build locally                          |
+| `pnpm sync`             | Generates TypeScript types                     |
+| `pnpm tsc`              | Check types                                    |
+| `pnpm fmt`              | Check code format with Prettier                |
+| `pnpm fmt:fix`          | Format codes with Prettier                     |
+| `pnpm lint`             | Lint with ESLint                               |
+| `pnpm lint:fix`         | Fix lint with ESLint                           |
+| `pnpm lint:mark`        | Lint markdown files with markdownlint-cli2     |
+| `pnpm lint:mark:fix`    | Fix lint markdown files with markdownlint-cli2 |
+| `pnpm lint:css`         | Lint css files with StyleLint                  |
+| `pnpm lint:css:fix`     | Fix lint css files with StyleLint              |
+| `pnpm lint:secret`      | Lint secrets files with secretLint             |
+| `pnpm snapshots`        | Visual regression with existing screenshots    |
+| `pnpm snapshots:update` | Visual regression but update snapshots         |
 
 ## 🪝 Tags & Realease
 

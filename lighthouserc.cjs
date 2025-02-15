@@ -1,7 +1,7 @@
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: "./.vercel/output/static/",
+      staticDistDir: "./dist/output/static/",
     },
     upload: {
       target: "temporary-public-storage",

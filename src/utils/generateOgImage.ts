@@ -43,7 +43,7 @@ const generateOgImage = async (
 
     // console.info("Output PNG Image  :", `${ogTitle}.png`);
 
-    await writeFile(`./.vercel/output/static/${ogTitle}.png`, pngBuffer);
+    await writeFile(`./dist/${ogTitle}.png`, pngBuffer);
   }
 
   return svg;
