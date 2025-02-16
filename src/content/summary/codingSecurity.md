@@ -21,7 +21,7 @@ draft: false
   - 蓄積型XSS: 攻撃者が投稿したフォームを他のユーザーが閲覧時に実行される。
   - DOM-based XSS: DOMツリーを書き換える系の操作で悪意あるスクリプトを挿入。クライアントサイドで起こるため、検知が難しい。対策として、DOM操作用の関数を利用する。
 
-    ```JavaScript
+    ```javascript
     li.textContent = name;
     ```
 
@@ -59,10 +59,10 @@ draft: false
 1. `dangerouslySetInnerHTML`の利用を禁止する。どうしても利用する必要がある場合は、[DOMPurify](https://github.com/cure53/DOMPurify)等を用いてサニタイジングして、[html-react-parser](https://github.com/remarkablemark/html-react-parser)等でパースすることで`dangerouslySetInnerHTML`の利用を回避する。
 2. `href`にURLを挿入する場合は、`http(s)`以外受け付けないようサニタイジングを行う。
 
-   ```TypeScript
-    const urlObj = new URL(url);
-    if (urlObj.protocol === "http:" || urlObj.protocol === "https:") return url;
-    throw new Error("Detected an href which is not a http(s) request.");
+   ```typescript
+   const urlObj = new URL(url);
+   if (urlObj.protocol === "http:" || urlObj.protocol === "https:") return url;
+   throw new Error("Detected an href which is not a http(s) request.");
    ```
 
 3. [Next.js公式ドキュメント](https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy#reading-the-nonce)を元にContent Security Policy (CSP)の適用。
