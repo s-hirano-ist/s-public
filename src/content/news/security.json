@@ -218,6 +218,11 @@
       "title": "ファームウェア更新ができない弊害",
       "quote": "",
       "url": "https://gigazine.net/news/20240904-yubikeys-vulnerable-cloning-attacks-side-channel/"
+    },
+    {
+      "title": ".sshのファイルを外部に送信するnpmライブラリ",
+      "quote": "",
+      "url": "https://news.mynavi.jp/techplus/article/20240126-2869328/"
     }
   ]
 }

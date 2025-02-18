@@ -31,6 +31,7 @@
     "generate:gh-stars": "python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json",
     "prepare": "husky",
     "security": "pnpm audit",
+    "prisma:generate": "prisma generate --no-hints --no-engine --schema=./s-private/prisma/schema.prisma",
     "fetch-news": "tsx script/fetchNews.ts"
   },
   "lint-staged": {
@@ -80,11 +81,11 @@
   "devDependencies": {
     "@eslint/js": "9.20.0",
     "@playwright/test": "1.49.1",
+    "@prisma/client": "6.3.1",
     "@secretlint/secretlint-rule-preset-recommend": "9.0.0",
     "@tailwindcss/typography": "0.5.16",
     "@types/jsdom": "21.1.7",
     "@types/mdast": "4.0.4",
-    "@types/pg": "8.11.11",
     "@types/react": "19.0.9",
     "@types/sanitize-html": "2.13.0",
     "astro-eslint-parser": "1.1.0",
@@ -104,11 +105,11 @@
     "license-checker": "25.0.1",
     "lint-staged": "15.3.0",
     "markdownlint-cli2": "0.17.2",
-    "pg": "8.13.3",
     "postcss-html": "1.7.0",
     "prettier": "3.4.2",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "0.6.11",
+    "prisma": "6.3.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "secretlint": "9.0.0",

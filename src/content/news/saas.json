@@ -1,0 +1,26 @@
+{
+  "heading": "saas",
+  "description": "FIXME",
+  "body": [
+    {
+      "title": "eraser",
+      "quote": "AI diagram tool",
+      "url": "https://www.eraser.io/?r=0"
+    },
+    {
+      "title": "miro",
+      "quote": "ホワイトボード",
+      "url": "https://miro.com/ja/?&adgroupid=149437278148&matchtype=e&device=m&location=1009280&gbraid=0AAAAACtKBmmqor-4RuALYQ2ovGSS053Mb"
+    },
+    {
+      "title": "monday.com",
+      "quote": "タスク管理等ビジネス周りの万能ツール",
+      "url": "https://monday.com/lang/ja"
+    },
+    {
+      "title": "act",
+      "quote": "github actions locally",
+      "url": "https://github.com/nektos/act"
+    }
+  ]
+}

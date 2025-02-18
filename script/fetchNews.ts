@@ -1,6 +1,8 @@
 import { readFile, writeFile } from "node:fs/promises";
 import dotenv from "dotenv";
-import pkg from "pg";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 type News = {
   id: number;
@@ -28,15 +30,6 @@ const OUTPUT_PATH = "src/content/news";
 const USERNAME_TO_EXPORT = process.env.USERNAME_TO_EXPORT;
 
 if (!USERNAME_TO_EXPORT) throw new Error("ENV not set.");
-
-const { Pool } = pkg;
-
-async function getConnection() {
-  const pool = new Pool({ connectionString: process.env.POSTGRES_URL });
-  const connection = await pool.connect();
-  await connection.query("BEGIN");
-  return { pool, connection };
-}
 
 type OutputType = Record<
   string,
@@ -84,30 +77,20 @@ async function exportData(data: OutputType) {
   }
 }
 
-const { pool, connection } = await getConnection();
 try {
   const news = (
-    await connection.query(
-      'SELECT nd.id, nd.title, nd.url, nd.quote, c.name FROM news nd JOIN categories c ON nd.category_id = c.id JOIN "users" u ON c."user_id" = u."id" WHERE nd.status = $1 AND u."username" = $2;',
-      ["UNEXPORTED", USERNAME_TO_EXPORT],
-    )
-  ).rows as News[];
+    await prisma.news.findMany({
+      where: { userId: USERNAME_TO_EXPORT, status: "UNEXPORTED" },
+      select: { id: true, title: true, quote: true, url: true, Category: true },
+    })
+  ).map(d => {
+    return { ...d, name: d.Category.name };
+  });
   console.log("📊 データを取得しました。");
 
   await exportData(categorizeNews(news));
 
   console.log("💾 データがdata.jsonに書き出されました。");
-
-  await connection.query("COMMIT");
 } catch (error) {
-  await connection.query("ROLLBACK");
   console.error("❌ エラーが発生しました:", error);
-} finally {
-  try {
-    connection.release();
-    await pool.end();
-    console.log("🔚 データベース接続が終了しました。");
-  } catch (endError) {
-    console.error("⚠️ 接続終了時にエラーが発生しました:", endError);
-  }
 }
