@@ -5,3 +5,4 @@ dist
 !*.css
 !*.astro
 LICENSE
+s-private
