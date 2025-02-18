@@ -500,6 +500,21 @@
       "title": "tailwind CSSはjqueryの再来か？",
       "quote": "",
       "url": "https://x.com/mizchi/status/1832776903096467476?s=46"
+    },
+    {
+      "title": "キーボードのエンターキーは2種類ある",
+      "quote": "",
+      "url": "https://zenn.dev/satoshi256kbyte/articles/33485ecebb8e19"
+    },
+    {
+      "title": "小数の足し算は気をつけよう",
+      "quote": "",
+      "url": "https://qiita.com/nirasan/items/1f06809cbc9cc32f9bea"
+    },
+    {
+      "title": "スクリーンリーダーの観点から見るtableとdl",
+      "quote": "",
+      "url": "https://zenn.dev/kagan/articles/html-dl-vs-ul-vs-table"
     }
   ]
 }
