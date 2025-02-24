@@ -42,11 +42,6 @@ const pagePath = [
     fullPage: true,
   },
   {
-    name: "tech-stack",
-    path: "/tech-stack",
-    fullPage: false,
-  },
-  {
     name: "photo",
     path: "/photo",
     fullPage: false,
