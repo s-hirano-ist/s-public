@@ -1,54 +1,12 @@
 ---
-import appImage from "@assets/tech-stack/app.drawio.png";
-import awsImage from "@assets/tech-stack/aws.drawio.png";
-import infraImage from "@assets/tech-stack/infra.drawio.png";
 import githubStarsData from "@content/portfolio/gh-stars.json";
 import PortfolioLayout from "@layouts/PortfolioLayout.astro";
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
-
-const IMAGE_DATA: { title: string; image: ImageMetadata; alt: string }[] = [
-  { title: "Application", image: appImage, alt: "app tech stack" },
-  { title: "Amazon Web Service", image: awsImage, alt: "aws tech stack" },
-  { title: "Infrastructure", image: infraImage, alt: "infra tech stack" },
-];
-
-const posts = await getCollection("tech-stack");
-
-const ContentList = await Promise.all(
-  posts.map(async post => {
-    return (await post.render()).Content;
-  }),
-);
 ---
 
 <PortfolioLayout headerTitle="TECH-STACK" title="tech-stack">
-  <article
-    id="article"
-    role="article"
-    class="prose prose-sm mx-auto max-w-5xl sm:prose-base">
-    {
-      ContentList.map(Content => {
-        return (
-          <div class="sm:px-4">
-            <Content />
-          </div>
-        );
-      })
-    }
-  </article>
-
-  {
-    IMAGE_DATA.map(image => (
-      <div class="mb-8 text-xl font-bold">
-        <p>{image.title}</p>
-        <div class="mt-4 flex justify-center">
-          <Image src={image.image} alt="personal deployment tech stack" />
-        </div>
-      </div>
-    ))
-  }
+  <p>
+    一時期までリストとして保存していたが、あまりにも増えすぎてトラッキングできなくなってしまったため記述を断念する。
+  </p>
   <div class="py-4 text-xl font-bold">Github stars of s-hirano-ist</div>
   {
     githubStarsData.map(d => {

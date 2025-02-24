@@ -1,56 +1,17 @@
----
-import gitHubContribution from "@assets/contribution/github_contribution.png";
-import gitLabContribution from "@assets/contribution/gitlab_contribution.png";
-import { Image } from "astro:assets";
----
-
 <div>
   <div>
-    <h3 class="py-2">実務経験</h3>
+    <h3 class="py-2">新卒入社（2024年4月）までの主な実務経験</h3>
     <ul class="list-[square] px-4">
+      <li><a href="https://nextjs.org/">Next.js</a>: 1年半以上</li>
+      <li><a href="https://astro.build/">Astro</a>: 1年半以上</li>
       <li>
-        <a href="https://aws.amazon.com/">AWS</a>を用いたインフラ構築と運用:
-        1年半以上
+        <a href="https://aws.amazon.com/">AWS</a>
+        を用いたインフラ構築と運用:1年半以上
       </li>
       <li>
         <a href="https://www.docker.com/">Docker</a>を用いたコンテナ構築:
         1年以上
       </li>
-      <li><a href="https://nextjs.org/">Next.js</a>: 2年以上</li>
-      <li><a href="https://astro.build/">Astro</a>: 1年半以上</li>
     </ul>
-  </div>
-  <p class="pt-4">
-    その他の開発経験は
-    <a
-      href="/tech-stack"
-      class="underline decoration-dashed underline-offset-8 hover:link-primary">
-      こちら
-    </a>
-    をクリック
-  </p>
-  <div class="py-8">
-    <p class="pb-2">
-      <a
-        class="link link-primary"
-        href="https://github.com/s-hirano-ist"
-        target="_blank">GitHub</a
-      >
-      contributions (mainly on private repositories. Last updated on 14th of August
-      2024.)
-    </p>
-    <Image src={gitHubContribution} class="w-full" alt="gitHub contributions" />
-  </div>
-  <div>
-    <p class="pb-2">
-      <a
-        class="link link-primary"
-        href="https://gitlab.com/s-hirano-ist"
-        target="_blank">GitLab</a
-      >
-      contributions (Only on private repositories. Last updated on 26th of November
-      2023.)
-    </p>
-    <Image src={gitLabContribution} class="w-full" alt="gitLab contributions" />
   </div>
 </div>
