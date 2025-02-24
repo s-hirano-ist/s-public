@@ -1,6 +1,6 @@
 {
-  "heading": "cheatsheet",
-  "description": "FIXME",
+  "heading": "cheat-sheet",
+  "description": "チートシート",
   "body": [
     {
       "title": "tailwindCSS 小技",
