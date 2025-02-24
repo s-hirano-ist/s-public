@@ -1,5 +1,21 @@
 [
   {
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "description": "LLM inference in C/C++"
+  },
+  {
+    "url": "https://github.com/ollama/ollama",
+    "description": "Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models."
+  },
+  {
+    "url": "https://github.com/langgenius/dify",
+    "description": "Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production."
+  },
+  {
+    "url": "https://github.com/ArchiveBox/ArchiveBox",
+    "description": "\ud83d\uddc3 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more..."
+  },
+  {
     "url": "https://github.com/magicuidesign/magicui",
     "description": "UI Library for Design Engineers. Animated components and effects you can copy and paste into your apps. Free. Open Source."
   },
@@ -461,7 +477,7 @@
   },
   {
     "url": "https://github.com/simonwhitaker/gibo",
-    "description": "\ud83e\udd2b Easy access to gitignore boilerplates"
+    "description": "Easy access to gitignore boilerplates"
   },
   {
     "url": "https://github.com/ota-meshi/astro-eslint-parser",
