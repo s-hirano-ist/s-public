@@ -192,11 +192,11 @@
   {
     "title": "はじめての構造主義",
     "subTitle": "",
-    "authors": [],
+    "authors": ["橋爪大三郎"],
     "description": "No description",
     "tags": ["構造主義", "哲学"],
     "imageSrc": "https://s-hirano.com/notFound.png",
-    "href": "https://s-hirano.com/404",
+    "href": "https://books.google.com/books?id=1nEOYAAACAAJ&dq=isbn:9784061488984&hl=&source=gbs_api",
     "rating": 4
   },
   {
@@ -1150,13 +1150,13 @@
     "rating": 2
   },
   {
-    "title": "理系と文系はなぜ分かれたのか",
+    "title": "文系と理系はなぜ分かれたのか",
     "subTitle": "",
-    "authors": [],
-    "description": "No description",
+    "authors": ["隠岐さや香"],
+    "description": "文系対理系。いつまで経っても終わらない不毛な対立に今、歴史のメスが振り下ろされる。サントリー学芸賞受賞の俊英、待望の初新書。",
     "tags": ["理系", "文系", "教育"],
-    "imageSrc": "https://s-hirano.com/notFound.png",
-    "href": "https://s-hirano.com/404",
+    "imageSrc": "https://books.google.com/books/content?id=AkAkuwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "href": "https://books.google.com/books?id=AkAkuwEACAAJ&dq=isbn:9784065123843&hl=&source=gbs_api",
     "rating": 2
   },
   {
@@ -1420,13 +1420,13 @@
     "rating": 2
   },
   {
-    "title": "フリーランスの超シンプルな節税&申告、教えてもらいました!",
+    "title": "超シンプルな節税と申告教えてもらいました",
     "subTitle": "",
-    "authors": ["中野裕哲", "中山圭子"],
-    "description": "節税はしたいけど、面倒なことは無理...そんな、ずぼフリーランスの方々にうってつけの一冊!超シンプル節税テクをお教えします!",
+    "authors": [],
+    "description": "No description",
     "tags": ["お金"],
-    "imageSrc": "https://books.google.com/books/content?id=UwQk0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "href": "https://books.google.com/books?id=UwQk0AEACAAJ&dq=isbn:9784413114004&hl=&source=gbs_api",
+    "imageSrc": "https://s-hirano.com/notFound.png",
+    "href": "https://s-hirano.com/404",
     "rating": 2
   },
   {
