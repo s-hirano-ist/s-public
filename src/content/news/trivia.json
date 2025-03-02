@@ -560,6 +560,16 @@
       "title": "nullと名付けるな",
       "quote": "",
       "url": "https://gigazine.net/news/20250225-null-last-name-system/"
+    },
+    {
+      "title": "データベースをsqliteとEFSに変えてコスト削減",
+      "quote": "",
+      "url": "https://zenn.dev/beenos_tech/articles/lambda-sqlite-application"
+    },
+    {
+      "title": "lambdaとelasticIPのアタッチによるコスト削減",
+      "quote": "",
+      "url": "https://zenn.dev/nix/articles/7dd29a1e9edc55"
     }
   ]
 }

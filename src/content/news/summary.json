@@ -136,6 +136,21 @@
       "title": "デジタル相続の注意点",
       "quote": "",
       "url": "https://internet.watch.impress.co.jp/docs/column/tengoku/1652678.html"
+    },
+    {
+      "title": "AIエージェント",
+      "quote": "",
+      "url": "https://speakerdeck.com/minorun365/aiezientoru-men"
+    },
+    {
+      "title": "クラウド非機能要件",
+      "quote": "",
+      "url": "https://dev.classmethod.jp/articles/survey-non-functional-requirement/"
+    },
+    {
+      "title": "UI生成AI",
+      "quote": "",
+      "url": "https://speakerdeck.com/gawa/generative-ui-with-serverless"
     }
   ]
 }
