@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/YoshiiRyo1/document-templates-for-aws",
+    "description": null
+  },
+  {
     "url": "https://github.com/ggml-org/llama.cpp",
     "description": "LLM inference in C/C++"
   },
@@ -133,7 +137,7 @@
   },
   {
     "url": "https://github.com/vercel/ai",
-    "description": "Build AI-powered applications with React, Svelte, Vue, and Solid"
+    "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library that gives you the tools you need to build AI-powered products."
   },
   {
     "url": "https://github.com/nexe/nexe",
