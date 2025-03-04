@@ -39,8 +39,8 @@ importers:
         specifier: 26.0.0
         version: 26.0.0
       lenis:
-        specifier: 1.1.20
-        version: 1.1.20(react@19.0.0)
+        specifier: 1.1.22
+        version: 1.1.22(react@19.0.0)
       mdast-util-toc:
         specifier: 7.1.0
         version: 7.1.0
@@ -124,8 +124,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(typescript@5.5.4)
       daisyui:
-        specifier: 4.12.23
-        version: 4.12.23(postcss@8.5.1)
+        specifier: 4.12.24
+        version: 4.12.24(postcss@8.5.1)
       dotenv:
         specifier: 16.4.7
         version: 16.4.7
@@ -133,8 +133,8 @@ importers:
         specifier: 9.20.1
         version: 9.20.1(jiti@1.21.7)
       eslint-config-prettier:
-        specifier: 10.0.1
-        version: 10.0.1(eslint@9.20.1(jiti@1.21.7))
+        specifier: 10.0.2
+        version: 10.0.2(eslint@9.20.1(jiti@1.21.7))
       eslint-import-resolver-typescript:
         specifier: 3.7.0
         version: 3.7.0(eslint-plugin-import-x@4.6.1(eslint@9.20.1(jiti@1.21.7))(typescript@5.5.4))(eslint-plugin-import@2.31.0)(eslint@9.20.1(jiti@1.21.7))
@@ -149,7 +149,7 @@ importers:
         version: 4.6.1(eslint@9.20.1(jiti@1.21.7))(typescript@5.5.4)
       eslint-plugin-prettier:
         specifier: 5.2.3
-        version: 5.2.3(eslint-config-prettier@10.0.1(eslint@9.20.1(jiti@1.21.7)))(eslint@9.20.1(jiti@1.21.7))(prettier@3.4.2)
+        version: 5.2.3(eslint-config-prettier@10.0.2(eslint@9.20.1(jiti@1.21.7)))(eslint@9.20.1(jiti@1.21.7))(prettier@3.4.2)
       eslint-plugin-redos:
         specifier: 4.4.5
         version: 4.4.5(eslint@9.20.1(jiti@1.21.7))
@@ -1887,8 +1887,8 @@ packages:
     resolution: {integrity: sha512-pHJg+jbuFsCjz9iclQBqyL3B2HLCBF71BwVNujUYEvCeQMvV97R59MNK3R2+jgJ3a1fcZgI9B3vYgz8lzr/BFQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  daisyui@4.12.23:
-    resolution: {integrity: sha512-EM38duvxutJ5PD65lO/AFMpcw+9qEy6XAZrTpzp7WyaPeO/l+F/Qiq0ECHHmFNcFXh5aVoALY4MGrrxtCiaQCQ==}
+  daisyui@4.12.24:
+    resolution: {integrity: sha512-JYg9fhQHOfXyLadrBrEqCDM6D5dWCSSiM6eTNCRrBRzx/VlOCrLS8eDfIw9RVvs64v2mJdLooKXY8EwQzoszAA==}
     engines: {node: '>=16.9.0'}
 
   data-urls@5.0.0:
@@ -2144,8 +2144,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-prettier@10.0.1:
-    resolution: {integrity: sha512-lZBts941cyJyeaooiKxAtzoPHTN+GbQTJFAIdQbRhA4/8whaAraEh47Whw/ZFfrjNSnlAxqfm9i0XVAEkULjCw==}
+  eslint-config-prettier@10.0.2:
+    resolution: {integrity: sha512-1105/17ZIMjmCOJOPNfVdbXafLCLj3hPmkmB7dLgt7XsQ/zkxSuDerE/xgO3RxoHysR1N1whmquY0lSn2O0VLg==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -3004,12 +3004,15 @@ packages:
   known-css-properties@0.35.0:
     resolution: {integrity: sha512-a/RAk2BfKk+WFGhhOCAYqSiFLc34k8Mt/6NWRI4joER0EYUzXIcFivjjnoD3+XU1DggLn/tZc3DOAgke7l8a4A==}
 
-  lenis@1.1.20:
-    resolution: {integrity: sha512-UE64mlJEN4W8DWP2tfHzPzygk94Q2BhjzeG/YHWoyeMJ2Fd6XziBCNN+IvHwmB4GkmKIYxgr0+TvRYTSAMTMFA==}
+  lenis@1.1.22:
+    resolution: {integrity: sha512-mHNfRSKixzy/QWfo0viB7qfTOqfm5IRTa0e3A1upcsAYFJdVTqUSqifAJccNx5Vtv0FZ5xgqD2MW0VdCjBuiig==}
     peerDependencies:
+      '@nuxt/kit': '>=3.0.0'
       react: '>=17.0.0'
       vue: '>=3.0.0'
     peerDependenciesMeta:
+      '@nuxt/kit':
+        optional: true
       react:
         optional: true
       vue:
@@ -6687,7 +6690,7 @@ snapshots:
 
   culori@3.3.0: {}
 
-  daisyui@4.12.23(postcss@8.5.1):
+  daisyui@4.12.24(postcss@8.5.1):
     dependencies:
       css-selector-tokenizer: 0.8.0
       culori: 3.3.0
@@ -7028,7 +7031,7 @@ snapshots:
       eslint: 9.20.1(jiti@1.21.7)
       semver: 7.7.1
 
-  eslint-config-prettier@10.0.1(eslint@9.20.1(jiti@1.21.7)):
+  eslint-config-prettier@10.0.2(eslint@9.20.1(jiti@1.21.7)):
     dependencies:
       eslint: 9.20.1(jiti@1.21.7)
 
@@ -7132,14 +7135,14 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.0.1(eslint@9.20.1(jiti@1.21.7)))(eslint@9.20.1(jiti@1.21.7))(prettier@3.4.2):
+  eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.0.2(eslint@9.20.1(jiti@1.21.7)))(eslint@9.20.1(jiti@1.21.7))(prettier@3.4.2):
     dependencies:
       eslint: 9.20.1(jiti@1.21.7)
       prettier: 3.4.2
       prettier-linter-helpers: 1.0.0
       synckit: 0.9.2
     optionalDependencies:
-      eslint-config-prettier: 10.0.1(eslint@9.20.1(jiti@1.21.7))
+      eslint-config-prettier: 10.0.2(eslint@9.20.1(jiti@1.21.7))
 
   eslint-plugin-redos@4.4.5(eslint@9.20.1(jiti@1.21.7)):
     dependencies:
@@ -8021,7 +8024,7 @@ snapshots:
 
   known-css-properties@0.35.0: {}
 
-  lenis@1.1.20(react@19.0.0):
+  lenis@1.1.22(react@19.0.0):
     optionalDependencies:
       react: 19.0.0
 
