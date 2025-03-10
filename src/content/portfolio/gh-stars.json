@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/vllm-project/vllm",
+    "description": "A high-throughput and memory-efficient inference and serving engine for LLMs"
+  },
+  {
     "url": "https://github.com/YoshiiRyo1/document-templates-for-aws",
     "description": null
   },
@@ -137,7 +141,7 @@
   },
   {
     "url": "https://github.com/vercel/ai",
-    "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library that gives you the tools you need to build AI-powered products."
+    "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents "
   },
   {
     "url": "https://github.com/nexe/nexe",
