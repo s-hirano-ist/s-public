@@ -90,7 +90,7 @@
     "@types/react": "19.0.10",
     "@types/sanitize-html": "2.13.0",
     "astro-eslint-parser": "1.1.0",
-    "daisyui": "5.0.0",
+    "daisyui": "4.12.24",
     "dotenv": "16.4.7",
     "eslint": "9.20.1",
     "eslint-config-prettier": "10.0.2",
