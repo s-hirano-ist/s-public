@@ -8,12 +8,12 @@
       "url": "https://qiita.com/sauna1137/items/e93a3e96b994b80dbce6"
     },
     {
-      "title": "NewSQL 分散型DBの時代",
+      "title": "NewSQL分散型DBの時代",
       "quote": "",
       "url": "https://speakerdeck.com/yoshiitaka/serverless-database"
     },
     {
-      "title": "edge runtime ",
+      "title": "edge ",
       "quote": "",
       "url": "https://speakerdeck.com/aiji42/biginaxiang-ke-etuzirantaimunosusume-etuzirantaimuwoyi-shi-sitakai-fa-wohazimeyou"
     },
@@ -33,7 +33,7 @@
       "url": "https://future-architect.github.io/articles/20230427a/"
     },
     {
-      "title": "serverless AI service",
+      "title": "serverless-AI-service",
       "quote": "",
       "url": "https://speakerdeck.com/_kensh/serverless-meets-generative-ai"
     },
@@ -48,17 +48,17 @@
       "url": "https://speakerdeck.com/infiniteloop_inc/xin-zu-xiang-keyan-xiu-zi-liao-tesutowen-zi-lie-ni-unko-toru-reruna-2024nian-ban"
     },
     {
-      "title": "prisma スキーマ変更",
+      "title": "prismaスキーマ変更",
       "quote": "",
       "url": "https://speakerdeck.com/ryusaka/prismadesukimabian-geng-woxing-uji-nobesutopurakuteisu"
     },
     {
-      "title": "prisma 運用",
+      "title": "prisma運用",
       "quote": "",
       "url": "https://speakerdeck.com/tockn/prisma-ormwo2nian-yun-yong-sitepei-tutanouhauwogong-you-suru"
     },
     {
-      "title": "frontend serverless react",
+      "title": "frontend-serverless-react",
       "quote": "with streaming HTML",
       "url": "https://speakerdeck.com/_kensh/serverless-front-end-strategy"
     },
@@ -78,7 +78,7 @@
       "url": "https://tech.iimon.co.jp/entry/2024/12/05"
     },
     {
-      "title": "テストはAAAより given when then",
+      "title": "テストはAAAよりgiven-when-then",
       "quote": "",
       "url": "https://zenn.dev/m10maeda/articles/gwt-might-feel-more-natural-than-3a-for-ui-testing"
     },
@@ -93,7 +93,7 @@
       "url": "https://qiita.com/t-iino/items/de10db7e1b141404fed9"
     },
     {
-      "title": "button component",
+      "title": "button-component",
       "quote": "",
       "url": "https://zenn.dev/kiyoshiro9446/scraps/46b4e4be23bcde"
     },
@@ -103,27 +103,27 @@
       "url": "https://zenn.dev/kagan/articles/css-control-break"
     },
     {
-      "title": "loading component",
+      "title": "loading-component",
       "quote": "",
       "url": "https://coliss.com/articles/build-websites/operation/css/css-only-loader-loadership.html"
     },
     {
-      "title": "GraphQL N+1問題",
+      "title": "GraphQL-N+1問題",
       "quote": "",
       "url": "https://zenn.dev/mizchi/articles/can-you-graphql-batch"
     },
     {
-      "title": "react useXX",
+      "title": "react-useXX",
       "quote": "",
       "url": "https://qiita.com/tomada/items/d244ac3e0659b4b7c3f1"
     },
     {
-      "title": "aws lambda web adaptor",
+      "title": "aws-lambda-web-adaptor",
       "quote": "serverless",
       "url": "https://serverless.co.jp/blog/g30vzpio0ww/"
     },
     {
-      "title": "scroll bar注意点",
+      "title": "scroll-bar注意点",
       "quote": "",
       "url": "https://ics.media/entry/230206/"
     },
@@ -133,14 +133,14 @@
       "url": "https://internet.watch.impress.co.jp/docs/column/tengoku/1652678.html"
     },
     {
-      "title": "デジタル相続の注意点",
-      "quote": "",
-      "url": "https://internet.watch.impress.co.jp/docs/column/tengoku/1652678.html"
-    },
-    {
-      "title": "AIエージェント",
+      "title": "AIエージェント1",
       "quote": "",
       "url": "https://speakerdeck.com/minorun365/aiezientoru-men"
+    },
+    {
+      "title": "AIエージェント2",
+      "quote": "",
+      "url": "https://speakerdeck.com/layerx/ai-agents-practice-202503"
     },
     {
       "title": "クラウド非機能要件",
@@ -151,11 +151,6 @@
       "title": "UI生成AI",
       "quote": "",
       "url": "https://speakerdeck.com/gawa/generative-ui-with-serverless"
-    },
-    {
-      "title": "AIエージェント",
-      "quote": "",
-      "url": "https://speakerdeck.com/layerx/ai-agents-practice-202503"
     },
     {
       "title": "基本設計と詳細設計",
