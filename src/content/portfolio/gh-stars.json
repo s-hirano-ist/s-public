@@ -13,7 +13,7 @@
   },
   {
     "url": "https://github.com/ollama/ollama",
-    "description": "Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 2, and other large language models."
+    "description": "Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, and other large language models."
   },
   {
     "url": "https://github.com/langgenius/dify",
@@ -500,7 +500,7 @@
     "description": "Create GraphQL schema and resolvers with TypeScript, using classes and decorators!"
   },
   {
-    "url": "https://github.com/dotansimha/graphql-yoga",
+    "url": "https://github.com/graphql-hive/graphql-yoga",
     "description": "\ud83e\uddd8 Rewrite of a fully-featured GraphQL Server with focus on easy setup, performance & great developer experience.  The core of Yoga implements WHATWG Fetch API and can run/deploy on any JS environment."
   },
   {
