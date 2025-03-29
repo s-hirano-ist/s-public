@@ -3,14 +3,11 @@ node_modules/*
 .gitignore
 .eslintignore
 pnpm-lock.yaml
-src/content/_photo/data.ts
-s-contents-summary/_photo/data.ts
+src/content/
+s-contents-summary/*
 
 **/*.jpg
 **/*.png
 **/*.webp
-
-gh-export-stars/*
-gh-stars.json
 
 .markdownlint-cli2.jsonc
