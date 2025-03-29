@@ -7,6 +7,7 @@
   "packageManager": "pnpm@9.15.9",
   "scripts": {
     "astro": "astro",
+    "copy": "rm -rf src/content && cp -r s-contents-summary src/content",
     "check": "astro check",
     "dev": "astro dev",
     "build": "astro build",
@@ -32,7 +33,8 @@
     "prepare": "husky",
     "security": "pnpm audit",
     "prisma:generate": "prisma generate --no-hints --no-engine --schema=./s-schema/schema.prisma",
-    "fetch-news": "tsx script/fetchNews.ts"
+    "fetch-news": "tsx script/fetchNews.ts",
+    "postinstall": "pnpm copy"
   },
   "lint-staged": {
     "*": [
