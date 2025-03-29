@@ -4,6 +4,7 @@ node_modules/*
 .eslintignore
 pnpm-lock.yaml
 src/content/_photo/data.ts
+s-contents-summary/_photo/data.ts
 
 **/*.jpg
 **/*.png
