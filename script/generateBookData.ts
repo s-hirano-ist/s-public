@@ -76,5 +76,6 @@ try {
   writeFileSync(FILE_PATH, JSON.stringify(books));
 } catch (error) {
   console.error(error);
+  process.exit(1);
 }
 console.log("Finished fetching book data from Google Books APIs!");
