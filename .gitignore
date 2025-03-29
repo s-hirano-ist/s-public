@@ -15,8 +15,5 @@ playwright-report
 test-results
 e2e/snapshot.test.ts-snapshots
 
-# .env
-.env
-
 # copied contents
 src/content
