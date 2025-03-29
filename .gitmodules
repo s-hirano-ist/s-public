@@ -1,6 +1,3 @@
-[submodule "gh-export-stars"]
-	path = gh-export-stars
-	url = https://github.com/s-hirano-ist/gh-export-stars.git
 [submodule "s-contents-summary"]
 	path = s-contents-summary
 	url = https://github.com/s-hirano-ist/s-contents-summary.git

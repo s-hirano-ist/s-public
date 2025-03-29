@@ -7,7 +7,7 @@
   "packageManager": "pnpm@9.15.9",
   "scripts": {
     "astro": "astro",
-    "copy": "rm -rf src/content && cp -r s-contents-summary src/content",
+    "copy": "rm -rf src/content && cp -r s-contents-summary src/content && rm -rf src/content/package.json src/content/pnpm-lock.yaml src/content/.github src/content/script src/content/s-schema",
     "check": "astro check",
     "dev": "astro dev",
     "build": "astro build",
@@ -27,7 +27,6 @@
     "snapshots:update": "playwright test --update-snapshots",
     "license:summary": "license-checker --summary> license.summary.txt",
     "commit": "git cz",
-    "generate:gh-stars": "python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json",
     "prepare": "husky",
     "security": "pnpm audit",
     "postinstall": "pnpm copy"
@@ -52,7 +51,6 @@
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/tailwind": "5.1.5",
     "@fontsource-variable/noto-sans-jp": "5.1.1",
-    "@googleapis/books": "4.0.0",
     "astro": "4.16.18",
     "fuse.js": "7.0.0",
     "github-slugger": "2.0.0",
@@ -116,8 +114,6 @@
     "stylelint-no-unsupported-browser-features": "8.0.4",
     "stylelint-order": "6.0.4",
     "svgo": "3.3.2",
-    "ts-node": "10.9.2",
-    "tsx": "4.19.3",
     "typescript-eslint": "8.23.0",
     "vnu-jar": "24.10.17"
   }

@@ -12,7 +12,6 @@
     "alwaysStrict": true,
     "isolatedModules": true,
     "paths": {
-      "@assets/*": ["assets/*"],
       "@config": ["config.ts"],
       "@components/*": ["components/*"],
       "@content/*": ["content/*"],
@@ -22,5 +21,5 @@
       "@utils/*": ["utils/*"]
     }
   },
-  "exclude": ["node_modules", "script"]
+  "exclude": ["node_modules", "s-contents-summary"]
 }
