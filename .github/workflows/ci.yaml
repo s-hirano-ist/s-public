@@ -120,6 +120,7 @@ jobs:
       - run: pnpm i --frozen-lockfile
       - run: npm install -g @lhci/cli@0.12.x
       - run: pnpm exec playwright install
+      - run: pnpm copy
       - run: pnpm build
       - run: lhci autorun
         env:
