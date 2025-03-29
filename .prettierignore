@@ -13,4 +13,3 @@ gh-export-stars/*
 gh-stars.json
 
 .markdownlint-cli2.jsonc
-s-private/**

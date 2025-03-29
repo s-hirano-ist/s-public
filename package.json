@@ -31,9 +31,8 @@
     "generate:gh-stars": "python gh-export-stars/src/main.py --user s-hirano-ist --output ./src/content/portfolio/gh-stars.json",
     "prepare": "husky",
     "security": "pnpm audit",
-    "prisma:generate": "prisma generate --no-hints --no-engine --schema=./s-private/prisma/schema.prisma",
-    "fetch-news": "tsx script/fetchNews.ts",
-    "postinstall": "pnpm prisma:generate"
+    "prisma:generate": "prisma generate --no-hints --no-engine --schema=./s-schema/schema.prisma",
+    "fetch-news": "tsx script/fetchNews.ts"
   },
   "lint-staged": {
     "*": [
