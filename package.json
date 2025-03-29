@@ -32,8 +32,7 @@
     "prepare": "husky",
     "security": "pnpm audit",
     "prisma:generate": "prisma generate --no-hints --no-engine --schema=./s-schema/schema.prisma",
-    "fetch-news": "tsx script/fetchNews.ts",
-    "postinstall": "pnpm prisma:generate"
+    "fetch-news": "tsx script/fetchNews.ts"
   },
   "lint-staged": {
     "*": [
