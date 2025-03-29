@@ -1,6 +1,6 @@
 [submodule "gh-export-stars"]
 	path = gh-export-stars
 	url = https://github.com/s-hirano-ist/gh-export-stars.git
-[submodule "s-private"]
-	path = s-private
-	url = https://github.com/s-hirano-ist/s-private.git
+[submodule "s-schema"]
+	path = s-schema
+	url = https://github.com/s-hirano-ist/s-schema.git

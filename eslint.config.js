@@ -8,7 +8,7 @@ import tailwind from "eslint-plugin-tailwindcss";
 // import createTypeScriptImportResolver from "eslint-import-resolver-typescript";
 
 export default [
-  { ignores: [".astro/", "dist/", "script/", "s-private/"] },
+  { ignores: [".astro/", "dist/", "script/"] },
   eslint.configs.recommended,
   // tseslint.configs.recommended,
   eslintPluginImportX.flatConfigs.recommended,
