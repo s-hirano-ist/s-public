@@ -93,4 +93,5 @@ try {
   console.log("💾 データがdata.jsonに書き出されました。");
 } catch (error) {
   console.error("❌ エラーが発生しました:", error);
+  process.exit(1);
 }
