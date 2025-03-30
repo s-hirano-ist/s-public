@@ -7,7 +7,7 @@
   "packageManager": "pnpm@9.15.9",
   "scripts": {
     "astro": "astro",
-    "copy": "rm -rf src/content && cp -r s-contents-summary src/content && rm -rf src/content/package.json src/content/pnpm-lock.yaml src/content/.github src/content/script src/content/s-schema",
+    "copy": "rm -rf src/content && cp -r s-contents-summary src/content && rm -rf src/content/package.json src/content/pnpm-lock.yaml src/content/.github src/content/script src/content/s-schema src/content/biome.json src/content/.gitmodules src/content/.gitignore src/content/.env.sample src/content/.markdownlint-cli2.jsonc",
     "check": "astro check",
     "dev": "astro dev",
     "build": "astro build",

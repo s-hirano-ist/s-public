@@ -3,7 +3,7 @@
 #
 # - actionlint: https://github.com/rhysd/actionlint
 # - ghalint: https://github.com/suzuki-shunsuke/ghalint
-name: GitHub Actions Lint
+name: github-actions-lint
 
 on:
   pull_request:
