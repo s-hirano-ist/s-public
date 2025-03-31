@@ -1,5 +1,5 @@
-├─ MIT: 75
-├─ Apache-2.0: 12
+├─ MIT: 73
+├─ Apache-2.0: 9
 ├─ BSD-2-Clause: 2
 ├─ ISC: 2
 ├─ OFL-1.1: 1
