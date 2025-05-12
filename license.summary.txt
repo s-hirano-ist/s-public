@@ -1,8 +1,8 @@
-├─ MIT: 73
-├─ Apache-2.0: 9
-├─ BSD-2-Clause: 2
+├─ MIT: 58
+├─ Apache-2.0: 4
 ├─ ISC: 2
 ├─ OFL-1.1: 1
+├─ BSD-2-Clause: 1
 ├─ Unlicense: 1
 ├─ BSD-3-Clause: 1
 ├─ MIT*: 1
