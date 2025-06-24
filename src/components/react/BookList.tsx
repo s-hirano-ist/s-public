@@ -66,12 +66,12 @@ export default function BookList() {
         {filteredBooks.map(book => (
           <a
             className="card shadow-xl"
-            href={book.href}
+            href={book.googleHref}
             target="_blank"
             key={book.title}>
             <figure className="h-48">
               <img
-                src={book.imageSrc}
+                src={book.googleImgSrc}
                 alt={book.title}
                 decoding="async"
                 loading="lazy"
@@ -79,12 +79,12 @@ export default function BookList() {
             </figure>
             <div className="card-body h-96">
               <h2 className="card-title">{book.title}</h2>
-              <p className="card-subtitle h-12 grow-0">{book.subTitle}</p>
+              <p className="card-subtitle h-12 grow-0">{book.googleSubtitle}</p>
               <div className="badge badge-primary">
-                {book.authors.toString()}
+                {book.googleAuthors.toString()}
               </div>
               <p className="card-subtitle overflow-y-hidden text-xs">
-                {book.description}
+                {book.googleDescription}
               </p>
               <Rating rating={book.rating} index={book.title} />
               <div className="card-actions justify-end">
