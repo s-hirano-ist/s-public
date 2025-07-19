@@ -1,6 +1,6 @@
 import BookStatCard from "@components/react/BookStatCard.tsx";
 import Rating from "@components/react/Rating.tsx";
-import books from "@content/book/data.gen.json";
+import books from "data/book/data.gen.json";
 import {
   useMemo,
   useState,

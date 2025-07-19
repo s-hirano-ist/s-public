@@ -18,8 +18,9 @@
       "@layouts/*": ["layouts/*"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@data/*": ["data/*"]
     }
   },
-  "exclude": ["node_modules", "scripts"]
+  "exclude": ["node_modules"]
 }
