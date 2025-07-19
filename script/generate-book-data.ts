@@ -9,7 +9,7 @@ import {
 } from "./utils.ts";
 
 const MAX_RATING = 5;
-const FILE_PATH = "book/data.gen.json";
+const FILE_PATH = "src/data/book/data.gen.json";
 const NO_IMG_SRC = "https://s-hirano.com/notFound.png";
 const NOT_FOUND_HREF = "https://s-hirano.com/404";
 
