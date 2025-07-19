@@ -28,11 +28,12 @@
     "commit": "git cz",
     "prepare": "husky",
     "security": "pnpm audit",
-    "generate:photo": "bun script/generate-photo-path.ts",
-    "generate:book": "bun script/generate-book-data.ts"
+    "generate:photo": "tsx script/generate-photo-path.ts",
+    "generate:book": "tsx script/generate-book-data.ts"
   },
   "lint-staged": {
     "*": [
+      "pnpm check",
       "pnpm fmt",
       "pnpm lint:secret",
       "bash checkLicense.sh"
@@ -108,6 +109,7 @@
     "stylelint-no-unsupported-browser-features": "8.0.4",
     "stylelint-order": "7.0.0",
     "svgo": "4.0.0",
+    "tsx": "4.20.3",
     "typescript-eslint": "8.32.1",
     "vnu-jar": "24.10.17"
   }
