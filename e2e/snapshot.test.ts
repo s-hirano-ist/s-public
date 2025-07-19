@@ -7,16 +7,6 @@ const pagePath = [
     fullPage: true,
   },
   {
-    name: "summary",
-    path: "/summary",
-    fullPage: true,
-  },
-  {
-    name: "summary/[slug]",
-    path: "/summary/architecture",
-    fullPage: true,
-  },
-  {
     name: "book",
     path: "/book",
     fullPage: false,
