@@ -1,0 +1,55 @@
+name: ci
+permissions:
+  pull-requests: write
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  biome:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: {}
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}-biome
+    steps:
+      - name: Checkout files
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          submodules: true
+          persist-credentials: false
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2
+        with:
+          bun-version-file: "package.json"
+
+      - name: Install dependencies
+        run: bun install
+
+      - run: bun biome:ci
+
+  markdown:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: {}
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}-markdown
+    steps:
+      - name: Checkout files
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          submodules: true
+          persist-credentials: false
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2
+        with:
+          bun-version-file: "package.json"
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: markdownlint-cli2-action
+        uses: DavidAnson/markdownlint-cli2-action@992badcdf24e3b8eb7e87ff9287fe931bcb00c6e # v20

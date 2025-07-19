@@ -1,0 +1,818 @@
+[
+  {
+    "url": "https://github.com/mhart/mcp-hono-stateless",
+    "description": "An example Hono MCP server using Streamable HTTP"
+  },
+  {
+    "url": "https://github.com/javierbrea/eslint-plugin-boundaries",
+    "description": "Eslint plugin checking architecture boundaries between elements"
+  },
+  {
+    "url": "https://github.com/google-gemini/gemini-cli",
+    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal."
+  },
+  {
+    "url": "https://github.com/gmo-internet/gpu-cloud-examples",
+    "description": "GMO GPU CLOUD Examples"
+  },
+  {
+    "url": "https://github.com/Inoue416/tech-tok",
+    "description": "\u8a18\u8ff0\u30d6\u30ed\u30b0\u3092\u7e26\u30b9\u30ef\u30a4\u30d7\u3067\u898b\u308b\u3053\u3068\u304c\u3067\u304d\u308b\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3"
+  },
+  {
+    "url": "https://github.com/Automattic/_s",
+    "description": "Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+  },
+  {
+    "url": "https://github.com/VoltAgent/voltagent",
+    "description": "Open Source TypeScript AI Agent Framework"
+  },
+  {
+    "url": "https://github.com/mcp-use/mcp-use",
+    "description": "mcp-use is the easiest way to interact with mcp servers with custom agents"
+  },
+  {
+    "url": "https://github.com/WordPress/gutenberg",
+    "description": "The Block Editor project for WordPress and beyond. Plugin is available from the official repository."
+  },
+  {
+    "url": "https://github.com/igordanchenko/yet-another-react-lightbox-lite",
+    "description": "Lightweight React lightbox component"
+  },
+  {
+    "url": "https://github.com/igordanchenko/react-photo-album",
+    "description": "Responsive photo gallery component for React"
+  },
+  {
+    "url": "https://github.com/igordanchenko/yet-another-react-lightbox",
+    "description": "Modern React lightbox component"
+  },
+  {
+    "url": "https://github.com/MinJieLiu/react-photo-view",
+    "description": "An exquisite React photo preview component."
+  },
+  {
+    "url": "https://github.com/eslint/config-inspector",
+    "description": "A visual tool for inspecting and understanding your ESLint flat configs."
+  },
+  {
+    "url": "https://github.com/janwilmake/openapi-mcp-server",
+    "description": "Allow AI to wade through complex OpenAPIs using Simple Language"
+  },
+  {
+    "url": "https://github.com/mastra-ai/mastra",
+    "description": "The TypeScript AI agent framework. \u26a1 Assistants, RAG, observability. Supports any LLM: GPT-4, Claude, Gemini, Llama."
+  },
+  {
+    "url": "https://github.com/DragomirAlin/openstack-mcp-server",
+    "description": "A lightweight and extensible service that enables AI assistants to securely execute OpenStack CLI commands via the Model Context Protocol (MCP)"
+  },
+  {
+    "url": "https://github.com/github/session-resume",
+    "description": "Annotate fields to be persisted on navigation away from the current page"
+  },
+  {
+    "url": "https://github.com/marcoturi/fastify-boilerplate",
+    "description": "Fastify 5 application boilerplate based on clean architecture, domain-driven design, CQRS, functional programming, vertical slice architecture for building production-grade applications \ud83d\ude80"
+  },
+  {
+    "url": "https://github.com/line/tsr",
+    "description": "TypeScript Remove (tsr) is a utility that removes unused code from TypeScript projects \u2013 It's like tree shaking, but for source files"
+  },
+  {
+    "url": "https://github.com/eslint/eslint",
+    "description": "Find and fix problems in your JavaScript code."
+  },
+  {
+    "url": "https://github.com/textlint/textlint-plugin-mdx",
+    "description": "textlint plugin to lint MDX"
+  },
+  {
+    "url": "https://github.com/textlint/textlint",
+    "description": "textlint is the pluggable linter for natural language text."
+  },
+  {
+    "url": "https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing",
+    "description": "\u6280\u8853\u6587\u66f8\u5411\u3051\u306etextlint\u30eb\u30fc\u30eb\u30d7\u30ea\u30bb\u30c3\u30c8"
+  },
+  {
+    "url": "https://github.com/sbintuitions/safety-boundary-test",
+    "description": null
+  },
+  {
+    "url": "https://github.com/webrecorder/pywb",
+    "description": "Core Python Web Archiving Toolkit for replay and recording of web archives"
+  },
+  {
+    "url": "https://github.com/ArchiveTeam/grab-site",
+    "description": "The archivist's web crawler: WARC output, dashboard for all crawls, dynamic ignore patterns"
+  },
+  {
+    "url": "https://github.com/webrecorder/browsertrix-crawler",
+    "description": "Run a high-fidelity browser-based web archiving crawler in a single Docker container"
+  },
+  {
+    "url": "https://github.com/vllm-project/vllm",
+    "description": "A high-throughput and memory-efficient inference and serving engine for LLMs"
+  },
+  {
+    "url": "https://github.com/YoshiiRyo1/document-templates-for-aws",
+    "description": null
+  },
+  {
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "description": "LLM inference in C/C++"
+  },
+  {
+    "url": "https://github.com/ollama/ollama",
+    "description": "Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, Mistral Small 3.1 and other large language models."
+  },
+  {
+    "url": "https://github.com/langgenius/dify",
+    "description": "Production-ready platform for agentic workflow development."
+  },
+  {
+    "url": "https://github.com/ArchiveBox/ArchiveBox",
+    "description": "\ud83d\uddc3 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more..."
+  },
+  {
+    "url": "https://github.com/magicuidesign/magicui",
+    "description": "UI Library for Design Engineers. Animated components and effects you can copy and paste into your apps. Free. Open Source."
+  },
+  {
+    "url": "https://github.com/LeEnno/alfred-terminalfinder",
+    "description": "Alfred workflow to open current Finder window in Terminal/iTerm and vice versa."
+  },
+  {
+    "url": "https://github.com/remarkjs/remark-breaks",
+    "description": "plugin to add break support, without needing spaces"
+  },
+  {
+    "url": "https://github.com/contentlayerdev/contentlayer",
+    "description": "Contentlayer turns your content into data - making it super easy to import MD(X) and CMS content in your app"
+  },
+  {
+    "url": "https://github.com/amannn/next-intl",
+    "description": "\ud83c\udf10 Internationalization (i18n) for Next.js "
+  },
+  {
+    "url": "https://github.com/docker/build-push-action",
+    "description": "GitHub Action to build and push Docker images with Buildx"
+  },
+  {
+    "url": "https://github.com/TahaSh/swapy",
+    "description": "\u2728 A framework-agnostic tool that converts any layout into a drag-to-swap one with just a few lines of code https://swapy.tahazsh.com/"
+  },
+  {
+    "url": "https://github.com/depcheck/depcheck",
+    "description": "Check your npm module for unused dependencies"
+  },
+  {
+    "url": "https://github.com/bvaughn/react-error-boundary",
+    "description": "Simple reusable React error boundary component"
+  },
+  {
+    "url": "https://github.com/hashicorp/next-mdx-remote",
+    "description": "Load MDX content from anywhere"
+  },
+  {
+    "url": "https://github.com/awslabs/aws-lambda-web-adapter",
+    "description": "Run web applications on AWS Lambda"
+  },
+  {
+    "url": "https://github.com/aidenybai/react-scan",
+    "description": "Scan for React performance issues and eliminate slow renders in your app"
+  },
+  {
+    "url": "https://github.com/shikijs/shiki",
+    "description": "A beautiful yet powerful syntax highlighter"
+  },
+  {
+    "url": "https://github.com/winstonjs/winston",
+    "description": "A logger for just about everything."
+  },
+  {
+    "url": "https://github.com/mdx-js/mdx",
+    "description": "Markdown for the component era"
+  },
+  {
+    "url": "https://github.com/cloudflare/next-on-pages",
+    "description": "CLI to build and develop Next.js apps for Cloudflare Pages"
+  },
+  {
+    "url": "https://github.com/microsoft/markitdown",
+    "description": "Python tool for converting files and office documents to Markdown."
+  },
+  {
+    "url": "https://github.com/omar-dulaimi/prisma-zod-generator",
+    "description": "Prisma 2+ generator to emit Zod schemas from your Prisma schema"
+  },
+  {
+    "url": "https://github.com/hraban/tomono",
+    "description": "Multi- To Mono-repository merge"
+  },
+  {
+    "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "description": "Stable Diffusion web UI"
+  },
+  {
+    "url": "https://github.com/ai-dock/comfyui",
+    "description": "ComfyUI docker images for use in GPU cloud and local environments. Includes AI-Dock base for authentication and improved user experience. "
+  },
+  {
+    "url": "https://github.com/hashicorp/nomad",
+    "description": "Nomad is an easy-to-use, flexible, and performant workload orchestrator that can deploy a mix of microservice, batch, containerized, and non-containerized applications. Nomad is easy to operate and scale and has native Consul and Vault integrations."
+  },
+  {
+    "url": "https://github.com/sachinchoolur/lightGallery",
+    "description": "A customizable, modular, responsive, lightbox gallery plugin. "
+  },
+  {
+    "url": "https://github.com/ajrosen/Bitwarden-Accelerator",
+    "description": "Alfred Workflow to make using Bitwarden faster and smoother with all applications"
+  },
+  {
+    "url": "https://github.com/franciscop/legally",
+    "description": ":books: Check the licenses for the NPM packages that you use"
+  },
+  {
+    "url": "https://github.com/lsd-rs/lsd",
+    "description": "The next gen ls command"
+  },
+  {
+    "url": "https://github.com/zenorocha/alfred-workflows",
+    "description": ":metal: A collection of Alfred 3 and 4 workflows that will rock your world"
+  },
+  {
+    "url": "https://github.com/tj/n",
+    "description": "Node version management"
+  },
+  {
+    "url": "https://github.com/minio/minio",
+    "description": "MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license."
+  },
+  {
+    "url": "https://github.com/vercel/ai",
+    "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents "
+  },
+  {
+    "url": "https://github.com/nexe/nexe",
+    "description": "\ud83c\udf89 create a single executable out of your node.js apps"
+  },
+  {
+    "url": "https://github.com/googleapis/release-please-action",
+    "description": "automated releases based on conventional commits"
+  },
+  {
+    "url": "https://github.com/actions/setup-node",
+    "description": "Set up your GitHub Actions workflow with a specific version of node.js"
+  },
+  {
+    "url": "https://github.com/rhysd/actionlint",
+    "description": ":octocat: Static checker for GitHub Actions workflow files"
+  },
+  {
+    "url": "https://github.com/pinojs/pino",
+    "description": "\ud83c\udf32 super fast, all natural json logger"
+  },
+  {
+    "url": "https://github.com/t3-oss/t3-env",
+    "description": null
+  },
+  {
+    "url": "https://github.com/bcomnes/npm-run-all2",
+    "description": "A CLI tool to run multiple npm-scripts in parallel or sequential. (Maintenance fork)"
+  },
+  {
+    "url": "https://github.com/google/latexify_py",
+    "description": "A library to generate LaTeX expression from Python code."
+  },
+  {
+    "url": "https://github.com/suzuki-shunsuke/ghalint",
+    "description": "GitHub Actions linter"
+  },
+  {
+    "url": "https://github.com/polemius/recoil-persist",
+    "description": "Package for recoil state manager to persist and rehydrate store"
+  },
+  {
+    "url": "https://github.com/facebookexperimental/Recoil",
+    "description": "Recoil is an experimental state management library for React apps. It provides several capabilities that are difficult to achieve with React alone, while being compatible with the newest features of React."
+  },
+  {
+    "url": "https://github.com/reactjs/react-codemod",
+    "description": "React codemod scripts"
+  },
+  {
+    "url": "https://github.com/ymrl/a11y-visualizer",
+    "description": "A Browser Extension for Enhanced Web Accessibility Checking"
+  },
+  {
+    "url": "https://github.com/nicolargo/glances",
+    "description": "Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems."
+  },
+  {
+    "url": "https://github.com/cure53/DOMPurify",
+    "description": "DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:"
+  },
+  {
+    "url": "https://github.com/kkomelin/isomorphic-dompurify",
+    "description": "Use DOMPurify on server and client in the same way"
+  },
+  {
+    "url": "https://github.com/remarkablemark/html-react-parser",
+    "description": "\ud83d\udcdd HTML to React parser."
+  },
+  {
+    "url": "https://github.com/shadcn-ui/ui",
+    "description": "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code."
+  },
+  {
+    "url": "https://github.com/googleapis/release-please",
+    "description": "generate release PRs based on the conventionalcommits.org spec"
+  },
+  {
+    "url": "https://github.com/cli/cli",
+    "description": "GitHub\u2019s official command line tool"
+  },
+  {
+    "url": "https://github.com/new-data-services/tailwindcss-animated",
+    "description": "Extended animation utilities for Tailwind CSS"
+  },
+  {
+    "url": "https://github.com/eclipse-theia/theia",
+    "description": "Eclipse Theia is a cloud & desktop IDE framework implemented in TypeScript."
+  },
+  {
+    "url": "https://github.com/codse/animata",
+    "description": "Bring your site to life with easy to use animation & interaction code. Copy. Paste. Animate. "
+  },
+  {
+    "url": "https://github.com/privatenumber/tsx",
+    "description": "\u26a1\ufe0f TypeScript Execute | The easiest way to run TypeScript in Node.js"
+  },
+  {
+    "url": "https://github.com/emilkowalski/vaul",
+    "description": "A drawer component for React."
+  },
+  {
+    "url": "https://github.com/diodon-dev/diodon",
+    "description": "Aiming to be the best integrated clipboard manager for the Unity desktop"
+  },
+  {
+    "url": "https://github.com/jdx/mise",
+    "description": "dev tools, env vars, task runner"
+  },
+  {
+    "url": "https://github.com/shuding/next-view-transitions",
+    "description": "Use CSS View Transitions API in Next.js App Router."
+  },
+  {
+    "url": "https://github.com/nektos/act",
+    "description": "Run your GitHub Actions locally \ud83d\ude80"
+  },
+  {
+    "url": "https://github.com/react-dropzone/react-dropzone",
+    "description": "Simple HTML5 drag-drop zone with React.js."
+  },
+  {
+    "url": "https://github.com/biomejs/biome",
+    "description": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP."
+  },
+  {
+    "url": "https://github.com/coreybutler/nvm-windows",
+    "description": "A node.js version management utility for Windows. Ironically written in Go."
+  },
+  {
+    "url": "https://github.com/commitizen/cz-cli",
+    "description": "The commitizen command line utility. #BlackLivesMatter"
+  },
+  {
+    "url": "https://github.com/iacobucci/mermarpidsome",
+    "description": "Mermaid integration with Marp, with Fontawesome icons!"
+  },
+  {
+    "url": "https://github.com/Songmu/ecschedule",
+    "description": "ecschedule is a tool to manage ECS Scheduled Tasks."
+  },
+  {
+    "url": "https://github.com/auth0/auth0-deploy-cli",
+    "description": "The Auth0 Deploy CLI is a tool that helps you manage your Auth0 tenant configuration. It integrates into your development workflows as a standalone CLI or as a node module."
+  },
+  {
+    "url": "https://github.com/mui/material-ui",
+    "description": "Material UI: Comprehensive React component library that implements Google's Material Design. Free forever."
+  },
+  {
+    "url": "https://github.com/withastro/language-tools",
+    "description": "Language tools for Astro"
+  },
+  {
+    "url": "https://github.com/rehypejs/rehype",
+    "description": "HTML processor powered by plugins part of the @unifiedjs collective"
+  },
+  {
+    "url": "https://github.com/facebook/react",
+    "description": "The library for web and native user interfaces."
+  },
+  {
+    "url": "https://github.com/apollographql/apollo-client",
+    "description": "The industry-leading GraphQL client for TypeScript, JavaScript, React, Vue, Angular, and more. Apollo Client delivers powerful caching, intuitive APIs, and comprehensive developer tools to accelerate your app development."
+  },
+  {
+    "url": "https://github.com/prometheus/alertmanager",
+    "description": "Prometheus Alertmanager"
+  },
+  {
+    "url": "https://github.com/pacocoursey/next-themes",
+    "description": "Perfect Next.js dark mode in 2 lines of code. Support System preference and any other theme with no flashing"
+  },
+  {
+    "url": "https://github.com/DavidAnson/markdownlint-cli2",
+    "description": "A fast, flexible, configuration-based command-line interface for linting Markdown/CommonMark files with the markdownlint library"
+  },
+  {
+    "url": "https://github.com/mermaid-js/mermaid",
+    "description": "Generation of diagrams like flowcharts or sequence diagrams from text in a similar manner as markdown"
+  },
+  {
+    "url": "https://github.com/Pagefind/pagefind",
+    "description": "Static low-bandwidth search at scale"
+  },
+  {
+    "url": "https://github.com/import-js/eslint-plugin-import",
+    "description": "ESLint plugin with rules that help validate proper imports."
+  },
+  {
+    "url": "https://github.com/makenowjust-labs/recheck",
+    "description": "The trustworthy ReDoS checker"
+  },
+  {
+    "url": "https://github.com/secretlint/secretlint",
+    "description": "Pluggable linting tool to prevent committing credential."
+  },
+  {
+    "url": "https://github.com/prettier/prettier",
+    "description": "Prettier is an opinionated code formatter."
+  },
+  {
+    "url": "https://github.com/uhyo/better-typescript-lib",
+    "description": "Better TypeScript standard library"
+  },
+  {
+    "url": "https://github.com/isaacs/rimraf",
+    "description": "A `rm -rf` util for nodejs"
+  },
+  {
+    "url": "https://github.com/progfay/shields-with-icon",
+    "description": "Enjoy https://shields.io"
+  },
+  {
+    "url": "https://github.com/conventional-changelog/standard-version",
+    "description": ":trophy: Automate versioning and CHANGELOG generation, with semver.org and conventionalcommits.org"
+  },
+  {
+    "url": "https://github.com/streamich/git-cz",
+    "description": "Semantic Git commits"
+  },
+  {
+    "url": "https://github.com/visjs/vis-network",
+    "description": ":dizzy: Display dynamic, automatically organised, customizable network views."
+  },
+  {
+    "url": "https://github.com/OpenAPITools/openapi-generator",
+    "description": "OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3)"
+  },
+  {
+    "url": "https://github.com/cdimascio/express-openapi-validator",
+    "description": "\ud83e\udd8b Auto-validates api requests, responses, and securities using ExpressJS and an OpenAPI 3.1.x or 3.0.x specification"
+  },
+  {
+    "url": "https://github.com/aspida/openapi2aspida",
+    "description": "Convert OpenAPI 3.0 or Swagger 2.0 definitions into aspida"
+  },
+  {
+    "url": "https://github.com/rehypejs/rehype-autolink-headings",
+    "description": "plugin to add links to headings in HTML"
+  },
+  {
+    "url": "https://github.com/gladevise/remark-link-card",
+    "description": null
+  },
+  {
+    "url": "https://github.com/versoly/taos",
+    "description": "Tailwind CSS Animation on Scroll - A simple and small (600 bytes) library to help animate elements while scrolling using responsive Tailwind CSS JIT utility classes."
+  },
+  {
+    "url": "https://github.com/saadeghi/theme-change",
+    "description": "Change CSS theme with toggle, buttons or select using CSS custom properties and localStorage"
+  },
+  {
+    "url": "https://github.com/anuraghazra/github-readme-stats",
+    "description": ":zap: Dynamically generated stats for your github readmes"
+  },
+  {
+    "url": "https://github.com/saadeghi/daisyui",
+    "description": "\ud83c\udf3c \ud83c\udf3c \ud83c\udf3c \ud83c\udf3c \ud83c\udf3c \u2003The most popular, free and open-source Tailwind CSS component library"
+  },
+  {
+    "url": "https://github.com/open-cli-tools/concurrently",
+    "description": "Run commands concurrently. Like `npm run watch-js & npm run watch-less` but better."
+  },
+  {
+    "url": "https://github.com/adaltas/node-csv",
+    "description": "Full featured CSV parser with simple api and tested against large datasets."
+  },
+  {
+    "url": "https://github.com/DavidAnson/markdownlint",
+    "description": "A Node.js style checker and lint tool for Markdown/CommonMark files."
+  },
+  {
+    "url": "https://github.com/pyenv/pyenv",
+    "description": "Simple Python version management"
+  },
+  {
+    "url": "https://github.com/apollographql/apollo-client-integrations",
+    "description": "Apollo Client support for the Next.js App Router"
+  },
+  {
+    "url": "https://github.com/apollographql/apollo-server",
+    "description": "\ud83c\udf0d \u00a0Spec-compliant and production ready JavaScript GraphQL server that lets you develop in a schema-first way. Built for Express, Connect, Hapi, Koa, and more."
+  },
+  {
+    "url": "https://github.com/openapi-ts/openapi-typescript",
+    "description": "Generate TypeScript types from OpenAPI 3 specs"
+  },
+  {
+    "url": "https://github.com/TypeStrong/ts-node",
+    "description": "TypeScript execution and REPL for node.js"
+  },
+  {
+    "url": "https://github.com/github-tools/github",
+    "description": "A higher-level wrapper around the Github API. Intended for the browser."
+  },
+  {
+    "url": "https://github.com/withastro/astro",
+    "description": "The web framework for content-driven websites. \u2b50\ufe0f Star to support our work!"
+  },
+  {
+    "url": "https://github.com/ardatan/feTS",
+    "description": "\ud83d\uddf9 TypeScript HTTP Framework focusing on e2e type-safety, easy setup, performance & great developer experience"
+  },
+  {
+    "url": "https://github.com/PyGithub/PyGithub",
+    "description": "Typed interactions with the GitHub API v3"
+  },
+  {
+    "url": "https://github.com/JeffCarpenter/export-stars",
+    "description": "Export (your) GitHub stars to a CSV file"
+  },
+  {
+    "url": "https://github.com/weseek/growi",
+    "description": ":anchor: GROWI - Team collaboration software using markdown"
+  },
+  {
+    "url": "https://github.com/darkroomengineering/lenis",
+    "description": "How smooth scroll should be"
+  },
+  {
+    "url": "https://github.com/GoogleChrome/lighthouse-ci",
+    "description": "Automate running Lighthouse for every commit, viewing the changes, and preventing regressions"
+  },
+  {
+    "url": "https://github.com/treosh/lighthouse-ci-action",
+    "description": "Audit URLs using Lighthouse and test performance with Lighthouse CI."
+  },
+  {
+    "url": "https://github.com/n05-frontend/shuwa-frontend-book-app",
+    "description": "\u79c0\u548c\u30b7\u30b9\u30c6\u30e0\u300c\u30d5\u30ed\u30f3\u30c8\u30a8\u30f3\u30c9\u958b\u767a\u5165\u9580 \u30d7\u30ed\u30d5\u30a7\u30c3\u30b7\u30e7\u30ca\u30eb\u306a\u958b\u767a\u30c4\u30fc\u30eb\u3068\u8a2d\u8a08\u30fb\u5b9f\u88c5 \u300d\u66f8\u7c4d\u5185\u3067\u5229\u7528\u3059\u308b\u30b5\u30f3\u30d7\u30eb\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\u3067\u3059\u3002"
+  },
+  {
+    "url": "https://github.com/nishanths/license",
+    "description": "Command line license text generator."
+  },
+  {
+    "url": "https://github.com/simonwhitaker/gibo",
+    "description": "Easy access to gitignore boilerplates"
+  },
+  {
+    "url": "https://github.com/ota-meshi/astro-eslint-parser",
+    "description": "Astro component parser for ESLint"
+  },
+  {
+    "url": "https://github.com/dimsemenov/PhotoSwipe",
+    "description": "JavaScript image gallery for mobile and desktop, modular, framework independent"
+  },
+  {
+    "url": "https://github.com/MichalLytek/type-graphql",
+    "description": "Create GraphQL schema and resolvers with TypeScript, using classes and decorators!"
+  },
+  {
+    "url": "https://github.com/graphql-hive/graphql-yoga",
+    "description": "\ud83e\uddd8 Rewrite of a fully-featured GraphQL Server with focus on easy setup, performance & great developer experience.  The core of Yoga implements WHATWG Fetch API and can run/deploy on any JS environment."
+  },
+  {
+    "url": "https://github.com/apollo-server-integrations/apollo-server-integration-next",
+    "description": "An Apollo Server integration for use with Next.js"
+  },
+  {
+    "url": "https://github.com/trpc/examples-next-prisma-starter",
+    "description": "\ud83d\ude80 tRPC starter repo with E2E-testing"
+  },
+  {
+    "url": "https://github.com/github/innovationgraph",
+    "description": "GitHub Innovation Graph"
+  },
+  {
+    "url": "https://github.com/pnpm/action-setup",
+    "description": "Install pnpm package manager"
+  },
+  {
+    "url": "https://github.com/t3-oss/create-t3-app",
+    "description": "The best way to start a full-stack, typesafe Next.js app "
+  },
+  {
+    "url": "https://github.com/ts-rest/ts-rest",
+    "description": "RPC-like client, contract, and server implementation for a pure REST API"
+  },
+  {
+    "url": "https://github.com/trpc/trpc-openapi",
+    "description": "OpenAPI support for tRPC \ud83e\udde9"
+  },
+  {
+    "url": "https://github.com/aspida/aspida",
+    "description": "TypeScript friendly HTTP client wrapper for the browser and node.js."
+  },
+  {
+    "url": "https://github.com/lukeautry/tsoa",
+    "description": "Build OpenAPI-compliant REST APIs using TypeScript and Node"
+  },
+  {
+    "url": "https://github.com/google/budoux",
+    "description": null
+  },
+  {
+    "url": "https://github.com/nextauthjs/next-auth",
+    "description": "Authentication for the Web."
+  },
+  {
+    "url": "https://github.com/krisk/Fuse",
+    "description": "Lightweight fuzzy-search, in JavaScript"
+  },
+  {
+    "url": "https://github.com/apostrophecms/sanitize-html",
+    "description": "Clean up user-submitted HTML, preserving whitelisted elements and whitelisted attributes on a per-element basis. Built on htmlparser2 for speed and tolerance"
+  },
+  {
+    "url": "https://github.com/SoftwareBrothers/adminjs",
+    "description": "AdminJS is an admin panel for apps written in node.js"
+  },
+  {
+    "url": "https://github.com/express-validator/express-validator",
+    "description": "An express.js middleware for validator.js."
+  },
+  {
+    "url": "https://github.com/nuta/operating-system-in-1000-lines",
+    "description": "Writing an OS in 1,000 lines."
+  },
+  {
+    "url": "https://github.com/jsdom/jsdom",
+    "description": "A JavaScript implementation of various web standards, for use with Node.js"
+  },
+  {
+    "url": "https://github.com/ardatan/graphql-mesh",
+    "description": "\ud83d\udd78\ufe0f GraphQL Federation Framework for any API services such as REST, OpenAPI, Swagger, SOAP, gRPC and more..."
+  },
+  {
+    "url": "https://github.com/hagopj13/node-express-boilerplate",
+    "description": "A boilerplate for building production-ready RESTful APIs using Node.js, Express, and Mongoose"
+  },
+  {
+    "url": "https://github.com/danielfsousa/express-rest-boilerplate",
+    "description": "\u231b\ufe0f Express starter for building RESTful APIs"
+  },
+  {
+    "url": "https://github.com/prisma/prisma-examples",
+    "description": " \ud83d\ude80 Ready-to-run Prisma example projects"
+  },
+  {
+    "url": "https://github.com/linuxserver/docker-dokuwiki",
+    "description": null
+  },
+  {
+    "url": "https://github.com/lovell/sharp",
+    "description": "High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library."
+  },
+  {
+    "url": "https://github.com/thx/resvg-js",
+    "description": "A high-performance SVG renderer and toolkit, powered by Rust based resvg and napi-rs."
+  },
+  {
+    "url": "https://github.com/polygonplanet/encoding.js",
+    "description": "Convert and detect character encoding in JavaScript"
+  },
+  {
+    "url": "https://github.com/axios/axios",
+    "description": "Promise based HTTP client for the browser and node.js"
+  },
+  {
+    "url": "https://github.com/pyrustic/jesth",
+    "description": "Human-readable versatile data format "
+  },
+  {
+    "url": "https://github.com/vlucas/phpdotenv",
+    "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically."
+  },
+  {
+    "url": "https://github.com/prettier/plugin-php",
+    "description": "Prettier PHP Plugin"
+  },
+  {
+    "url": "https://github.com/chakra-ui/panda",
+    "description": "\ud83d\udc3c Universal, Type-Safe, CSS-in-JS Framework for Product Teams \u26a1\ufe0f"
+  },
+  {
+    "url": "https://github.com/being24/latex-docker",
+    "description": "Docker image for build tex source"
+  },
+  {
+    "url": "https://github.com/uhyo/nitrogql",
+    "description": "GraphQL + TypeScript toolchain"
+  },
+  {
+    "url": "https://github.com/validator/validator",
+    "description": "Nu Html Checker \u2013 Helps you catch problems in your HTML/CSS/SVG"
+  },
+  {
+    "url": "https://github.com/mui/mui-x",
+    "description": "MUI X: Build complex and data-rich applications using a growing list of advanced React components, like the Data Grid, Date and Time Pickers, Charts, and more!"
+  },
+  {
+    "url": "https://github.com/neoki07/prettier-plugin-astro-organize-imports",
+    "description": "A Prettier plugin for formatting imports in Astro files"
+  },
+  {
+    "url": "https://github.com/mug-jp/maplibregljs-turf-starter",
+    "description": "Start Turf.js easily.[Turf.js, MapLibre GL JS, Vite]"
+  },
+  {
+    "url": "https://github.com/donnemartin/system-design-primer",
+    "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards."
+  },
+  {
+    "url": "https://github.com/satnaing/astro-paper",
+    "description": "A minimal, accessible and SEO-friendly Astro blog theme"
+  },
+  {
+    "url": "https://github.com/jmtornetta/extract-bookmarks",
+    "description": "Exports and extracts bookmarks from Windows browsers into a folder that can be easily archived by launchers like Windows Search, Cortana, Launchy, Wox, Everything and PowerToys Run."
+  },
+  {
+    "url": "https://github.com/microsoft/PowerToys",
+    "description": "Windows system utilities to maximize productivity"
+  },
+  {
+    "url": "https://github.com/honojs/hono",
+    "description": "Web framework built on Web Standards"
+  },
+  {
+    "url": "https://github.com/vanjs-org/van",
+    "description": "\ud83c\udf66 VanJS: World's smallest reactive UI framework. Incredibly Powerful, Insanely Small - Everyone can build a useful UI app in an hour."
+  },
+  {
+    "url": "https://github.com/talengu/Wox.Plugin.WindowSwitcher",
+    "description": "switch window in windows and a wox python plugin"
+  },
+  {
+    "url": "https://github.com/hadolint/hadolint",
+    "description": "Dockerfile linter, validate inline bash, written in Haskell"
+  },
+  {
+    "url": "https://github.com/Wox-launcher/Wox",
+    "description": "A cross-platform launcher that simply works"
+  },
+  {
+    "url": "https://github.com/mdreizin/chrome-bookmarks-alfred-workflow",
+    "description": "Chrome/Canary/Chromium/Microsoft Edge bookmarks search workflow for Alfred"
+  },
+  {
+    "url": "https://github.com/watalabo/WiPiCap",
+    "description": "WiPiCap: Dig into Wi-Fi Beamforming Report"
+  },
+  {
+    "url": "https://github.com/sub-t/blog-template",
+    "description": "Next.js + markdown Blog Template"
+  },
+  {
+    "url": "https://github.com/realm/SwiftLint",
+    "description": "A tool to enforce Swift style and conventions."
+  },
+  {
+    "url": "https://github.com/docker-mailserver/docker-mailserver",
+    "description": "Production-ready fullstack but simple mail server (SMTP, IMAP, LDAP, Antispam, Antivirus, etc.) running inside a container."
+  },
+  {
+    "url": "https://github.com/beeftornado/homebrew-rmtree",
+    "description": "Remove a formula and its unused dependencies"
+  }
+]
