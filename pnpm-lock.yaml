@@ -33,8 +33,8 @@ importers:
         specifier: 26.1.0
         version: 26.1.0
       lenis:
-        specifier: 1.3.4
-        version: 1.3.4(react@19.1.0)
+        specifier: 1.3.8
+        version: 1.3.8(react@19.1.0)
       photoswipe:
         specifier: 5.4.4
         version: 5.4.4
@@ -112,8 +112,8 @@ importers:
         specifier: 9.26.0
         version: 9.26.0(jiti@1.21.7)
       eslint-config-prettier:
-        specifier: 10.1.5
-        version: 10.1.5(eslint@9.26.0(jiti@1.21.7))
+        specifier: 10.1.8
+        version: 10.1.8(eslint@9.26.0(jiti@1.21.7))
       eslint-import-resolver-typescript:
         specifier: 4.3.5
         version: 4.3.5(eslint-plugin-import-x@4.11.1(eslint@9.26.0(jiti@1.21.7))(typescript@5.5.4))(eslint-plugin-import@2.31.0)(eslint@9.26.0(jiti@1.21.7))
@@ -128,13 +128,13 @@ importers:
         version: 4.11.1(eslint@9.26.0(jiti@1.21.7))(typescript@5.5.4)
       eslint-plugin-prettier:
         specifier: 5.4.1
-        version: 5.4.1(eslint-config-prettier@10.1.5(eslint@9.26.0(jiti@1.21.7)))(eslint@9.26.0(jiti@1.21.7))(prettier@3.5.3)
+        version: 5.4.1(eslint-config-prettier@10.1.8(eslint@9.26.0(jiti@1.21.7)))(eslint@9.26.0(jiti@1.21.7))(prettier@3.5.3)
       eslint-plugin-redos:
         specifier: 4.5.0
         version: 4.5.0(eslint@9.26.0(jiti@1.21.7))
       eslint-plugin-tailwindcss:
-        specifier: 3.18.0
-        version: 3.18.0(tailwindcss@3.4.17)
+        specifier: 3.18.2
+        version: 3.18.2(tailwindcss@3.4.17)
       git-cz:
         specifier: 4.9.0
         version: 4.9.0
@@ -2226,8 +2226,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-prettier@10.1.5:
-    resolution: {integrity: sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==}
+  eslint-config-prettier@10.1.8:
+    resolution: {integrity: sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -2311,8 +2311,8 @@ packages:
     peerDependencies:
       eslint: '>= 3'
 
-  eslint-plugin-tailwindcss@3.18.0:
-    resolution: {integrity: sha512-PQDU4ZMzFH0eb2DrfHPpbgo87Zgg2EXSMOj1NSfzdZm+aJzpuwGerfowMIaVehSREEa0idbf/eoNYAOHSJoDAQ==}
+  eslint-plugin-tailwindcss@3.18.2:
+    resolution: {integrity: sha512-QbkMLDC/OkkjFQ1iz/5jkMdHfiMu/uwujUHLAJK5iwNHD8RTxVTlsUezE0toTZ6VhybNBsk+gYGPDq2agfeRNA==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       tailwindcss: ^3.4.0
@@ -3091,8 +3091,8 @@ packages:
   known-css-properties@0.36.0:
     resolution: {integrity: sha512-A+9jP+IUmuQsNdsLdcg6Yt7voiMF/D4K83ew0OpJtpu+l34ef7LaohWV0Rc6KNvzw6ZDizkqfyB5JznZnzuKQA==}
 
-  lenis@1.3.4:
-    resolution: {integrity: sha512-WIGk8wiV2ABm/T7M+NC+tAV8fjzNJD1J4z11aZ3mTtx7WAZX/4QdCNhBO0g/TqXISA+/3hTbzrPC4FW1nhoNMQ==}
+  lenis@1.3.8:
+    resolution: {integrity: sha512-LVeoMs6jZE1eu3gPsexndm+vk01pLFeq7P00vjIpI17saD52IYu8nPA4gX43elz8tp/TTCXcX6Em1MEjDl9NTw==}
     peerDependencies:
       '@nuxt/kit': '>=3.0.0'
       react: '>=17.0.0'
@@ -7369,7 +7369,7 @@ snapshots:
       eslint: 9.26.0(jiti@1.21.7)
       semver: 7.7.2
 
-  eslint-config-prettier@10.1.5(eslint@9.26.0(jiti@1.21.7)):
+  eslint-config-prettier@10.1.8(eslint@9.26.0(jiti@1.21.7)):
     dependencies:
       eslint: 9.26.0(jiti@1.21.7)
 
@@ -7468,21 +7468,21 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-prettier@5.4.1(eslint-config-prettier@10.1.5(eslint@9.26.0(jiti@1.21.7)))(eslint@9.26.0(jiti@1.21.7))(prettier@3.5.3):
+  eslint-plugin-prettier@5.4.1(eslint-config-prettier@10.1.8(eslint@9.26.0(jiti@1.21.7)))(eslint@9.26.0(jiti@1.21.7))(prettier@3.5.3):
     dependencies:
       eslint: 9.26.0(jiti@1.21.7)
       prettier: 3.5.3
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.11
     optionalDependencies:
-      eslint-config-prettier: 10.1.5(eslint@9.26.0(jiti@1.21.7))
+      eslint-config-prettier: 10.1.8(eslint@9.26.0(jiti@1.21.7))
 
   eslint-plugin-redos@4.5.0(eslint@9.26.0(jiti@1.21.7)):
     dependencies:
       eslint: 9.26.0(jiti@1.21.7)
       recheck: 4.5.0
 
-  eslint-plugin-tailwindcss@3.18.0(tailwindcss@3.4.17):
+  eslint-plugin-tailwindcss@3.18.2(tailwindcss@3.4.17):
     dependencies:
       fast-glob: 3.3.3
       postcss: 8.5.6
@@ -8405,7 +8405,7 @@ snapshots:
 
   known-css-properties@0.36.0: {}
 
-  lenis@1.3.4(react@19.1.0):
+  lenis@1.3.8(react@19.1.0):
     optionalDependencies:
       react: 19.1.0
 
