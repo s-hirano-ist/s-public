@@ -1,14 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const DIR_PATH = "@content/assets/photo";
+const DIR_PATH = "@data/assets/photo";
 
 function generateRow(fileName: string, fileNameNoExt: string): string {
   return `import ${fileNameNoExt} from "${DIR_PATH}/${fileName}";\n`;
 }
 
 function main(): void {
-  const fileNameList = fs.readdirSync("./assets/photo").sort();
+  const fileNameList = fs.readdirSync("src/data/assets/photo").sort();
   const fileNameListNoExt = fileNameList.map(
     fileName => path.parse(fileName).name,
   );
@@ -26,7 +26,7 @@ function main(): void {
   dataList.push(`\t${fileNameListNoExt.join(",\n\t")}`);
   dataList.push(",\n];\n");
 
-  fs.writeFileSync("./_photo/data.ts", dataList.join(""), {
+  fs.writeFileSync("src/data/_photo/data.ts", dataList.join(""), {
     encoding: "utf8",
   });
 }
