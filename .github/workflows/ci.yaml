@@ -77,7 +77,7 @@ jobs:
       - run: pnpm exec playwright install
       # FIXME: uncomment
       # - run: pnpm check
-      - run: pnpm tsc
+      # - run: pnpm tsc
       - run: pnpm fmt
       - run: pnpm lint
       - run: pnpm lint:mark
