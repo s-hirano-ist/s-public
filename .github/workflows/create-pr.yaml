@@ -42,10 +42,11 @@ jobs:
       - run: pnpm license:summary
       - run: bash checkLicense.sh
 
-      - run: pnpm fmt:fix
-
       - name: run generate:photo
         run: pnpm generate:photo
+
+      - name: run format fix
+        run: pnpm fmt:fix
 
       - name: run generate:book
         run: pnpm generate:book
