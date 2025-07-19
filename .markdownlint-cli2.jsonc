@@ -1,10 +1,7 @@
 {
   "config": {
     "line-length": false, // MD013  行の長さ
-    // "no-bare-urls": false, // MD034 URLのリンク化条件 // ONLY DISABLE ON BLOG
-    "no-duplicate-heading": false,
-    "no-inline-html": false,
-    "first-line-heading": false
+    "no-inline-html": false
   },
   "ignores": [".git", "node_modules"] // 無視するディレクトリ
 }

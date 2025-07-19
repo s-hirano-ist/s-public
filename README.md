@@ -51,12 +51,6 @@ git clone https://github.com/s-hirano-ist/s-public.git
 pnpm install
 ```
 
-### Update GitHub stars file
-
-```bash
-pnpm generate:gh-stars
-```
-
 ### Adding photos
 
 Run task.json to add photos to `./src/assets/photo`.

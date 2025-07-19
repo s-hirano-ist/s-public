@@ -17,8 +17,8 @@
     "fmt:fix": "prettier --cache --write **/*.astro .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:mark": "markdownlint-cli2 src/content/summary/*",
-    "lint:mark:fix": "markdownlint-cli2-fix src/content/summary/*",
+    "lint:mark": "markdownlint-cli2 **/*.md",
+    "lint:mark:fix": "markdownlint-cli2-fix **/*.md",
     "lint:css": "stylelint .",
     "lint:css:fix": "stylelint . --fix",
     "lint:secret": "secretlint --maskSecrets **/*",
@@ -27,7 +27,9 @@
     "license:summary": "license-checker --summary> license.summary.txt",
     "commit": "git cz",
     "prepare": "husky",
-    "security": "pnpm audit"
+    "security": "pnpm audit",
+    "generate:photo": "bun script/generate-photo-path.ts",
+    "generate:book": "bun script/generate-book-data.ts"
   },
   "lint-staged": {
     "*": [
@@ -67,6 +69,7 @@
   },
   "devDependencies": {
     "@eslint/js": "9.26.0",
+    "@googleapis/books": "6.0.1",
     "@playwright/test": "1.52.0",
     "@secretlint/secretlint-rule-preset-recommend": "10.1.1",
     "@tailwindcss/typography": "0.5.16",
