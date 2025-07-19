@@ -1,5 +1,5 @@
 import SearchCard from "@components/react/SearchCard";
-import type { NewsFrontmatter, SummaryFrontmatter } from "@content/_schemas";
+import type { SummaryFrontmatter } from "@content/_schemas";
 import slugify from "@utils/slugify";
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
@@ -8,36 +8,22 @@ export type SummarySearchItem = {
   body: string;
   data: SummaryFrontmatter;
 };
-export type NewsSearchItem = {
-  data: NewsFrontmatter;
-};
 
 type Props = {
   summarySearchList: SummarySearchItem[];
-  newsSearchList: NewsSearchItem[];
 };
 
 type SummarySearchResult = {
   item: SummarySearchItem;
   refIndex: number;
 };
-type NewsSearchResult = {
-  item: NewsSearchItem;
-  refIndex: number;
-};
 
-export default function SearchBar({
-  summarySearchList,
-  newsSearchList,
-}: Props) {
+export default function SearchBar({ summarySearchList }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputVal, setInputVal] = useState("");
 
   const [summarySearchResult, setSummarySearchResults] = useState<
     SummarySearchResult[] | null
-  >(null);
-  const [newsSearchResult, setNewsSearchResults] = useState<
-    NewsSearchResult[] | null
   >(null);
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -53,22 +39,6 @@ export default function SearchBar({
         threshold: 0.5,
       }),
     [summarySearchList],
-  );
-  const newsFuse = useMemo(
-    () =>
-      new Fuse(newsSearchList, {
-        keys: [
-          "data.heading",
-          "data.description",
-          "data.body.title",
-          "data.body.quote",
-          "data.body.url",
-        ],
-        includeMatches: true,
-        minMatchCharLength: 2,
-        threshold: 0.5,
-      }),
-    [newsSearchList],
   );
 
   useEffect(() => {
@@ -89,10 +59,6 @@ export default function SearchBar({
     const summaryInputResult =
       inputVal.length > 1 ? summaryFuse.search(inputVal) : [];
     setSummarySearchResults(summaryInputResult);
-
-    const newsInputResult =
-      inputVal.length > 1 ? newsFuse.search(inputVal) : [];
-    setNewsSearchResults(newsInputResult);
 
     // Update search string in URL
     if (inputVal.length > 0) {
@@ -126,14 +92,6 @@ export default function SearchBar({
         {summarySearchResult?.map(({ item, refIndex }) => (
           <SearchCard
             href={`/summary/${slugify(item.data)}`}
-            title={item.data.heading}
-            description={item.data.description}
-            key={`${refIndex}-${slugify(item.data)}`}
-          />
-        ))}
-        {newsSearchResult?.map(({ item, refIndex }) => (
-          <SearchCard
-            href={`/news/${slugify(item.data)}`}
             title={item.data.heading}
             description={item.data.description}
             key={`${refIndex}-${slugify(item.data)}`}

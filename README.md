@@ -6,7 +6,7 @@
 
 > [!IMPORTANT]
 > This is the source code of [s-hirano.com](https://s-hirano.com/).
-> It consists of a portfolio and a blog which summarizes the knowledge I gained and the recent news.
+> It consists of a portfolio and a blog which summarizes the knowledge I gained over the years.
 
 ## ✅ Lighthouse Score
 
