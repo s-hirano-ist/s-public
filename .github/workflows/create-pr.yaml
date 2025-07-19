@@ -45,11 +45,11 @@ jobs:
       - name: run generate:photo
         run: pnpm generate:photo
 
-      - name: run format fix
-        run: pnpm fmt:fix
-
       - name: run generate:book
         run: pnpm generate:book
+
+      - name: run format fix
+        run: pnpm fmt:fix
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7
