@@ -7,16 +7,6 @@ const pagePath = [
     fullPage: true,
   },
   {
-    name: "news",
-    path: "/news",
-    fullPage: true,
-  },
-  {
-    name: "news/[slug]",
-    path: "/news/artificial-intelligence",
-    fullPage: false,
-  },
-  {
     name: "summary",
     path: "/summary",
     fullPage: true,

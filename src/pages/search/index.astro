@@ -2,16 +2,12 @@
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
-import SearchBar, {
-  type SummarySearchItem,
-  type NewsSearchItem,
-} from "@components/react/SearchBar";
+import SearchBar, { type SummarySearchItem } from "@components/react/SearchBar";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const summaryList = await getCollection("summary", ({ data }) => !data.draft);
-const newsList = await getCollection("news");
 
 const summarySearchList = summaryList.map(
   (summary): SummarySearchItem => ({
@@ -19,21 +15,12 @@ const summarySearchList = summaryList.map(
     data: summary.data,
   }),
 );
-const newsSearchList = newsList.map(
-  (news): NewsSearchItem => ({
-    data: news.data,
-  }),
-);
 ---
 
 <Layout title={`Search | ${SITE.title}`}>
   <Header />
   <Main pageTitle="Search">
-    <SearchBar
-      client:load
-      summarySearchList={summarySearchList}
-      newsSearchList={newsSearchList}
-    />
+    <SearchBar client:load summarySearchList={summarySearchList} />
   </Main>
   <Footer />
 </Layout>
