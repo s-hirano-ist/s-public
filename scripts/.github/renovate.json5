@@ -1,0 +1,48 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  timezone: "Asia/Tokyo",
+  baseBranches: ["main"],
+  extends: [
+    "config:recommended",
+    "config:best-practices",
+    ":semanticCommitTypeAll(chore)",
+  ],
+  reviewers: ["s-hirano-ist"],
+  enabledManagers: ["bun", "github-actions"],
+  dependencyDashboard: true,
+  schedule: ["before 11am on monday"],
+  labels: ["dependencies"],
+  rangeStrategy: "bump",
+  lockFileMaintenance: {
+    enabled: true,
+  },
+  vulnerabilityAlerts: {
+    labels: ["security"],
+  },
+  packageRules: [
+    {
+      matchPackageNames: ["node"],
+      matchManagers: ["dockerfile"],
+      allowedVersions: "/^[0-9]*[02468]([.-].*)?$/",
+    },
+    {
+      matchManagers: ["bun"],
+      matchUpdateTypes: ["patch"],
+      matchPackageNames: ["*"],
+      matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
+      groupName: "patch",
+    },
+    {
+      matchManagers: ["bun"],
+      matchUpdateTypes: ["minor"],
+      matchPackageNames: ["*"],
+      matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
+      groupName: "minor",
+    },
+    {
+      matchManagers: ["github-actions"],
+      groupName: "GitHub Actions Updates",
+      groupSlug: "github-actions-updates",
+    },
+  ],
+}
