@@ -29,8 +29,7 @@
     "prepare": "husky",
     "security": "pnpm audit",
     "generate:photo": "bun script/generate-photo-path.ts",
-    "generate:book": "bun script/generate-book-data.ts",
-    "generate:gh-stars": "python gh-export-stars/src/main.py --user s-hirano-ist --output ./portfolio/gh-stars.json"
+    "generate:book": "bun script/generate-book-data.ts"
   },
   "lint-staged": {
     "*": [
