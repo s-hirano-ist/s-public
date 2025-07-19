@@ -19,7 +19,6 @@
 **Component Framework** - [ReactJS](https://reactjs.org/)  
 **Package Manager** - [pnpm](https://pnpm.io/)  
 **Styling** - [TailwindCSS](https://tailwindcss.com/) | [DaisyUI](https://daisyui.com/)  
-**Fuzzy Search** - [FuseJS](https://fusejs.io/)  
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
 **Fonts** - [Google Fonts](https://fonts.google.com/)  
 **Code Formatting** - [Prettier](https://prettier.io/)  
