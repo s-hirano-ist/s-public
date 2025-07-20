@@ -1,26 +1,25 @@
+import tailwindcssMotion from "tailwindcss-motion";
+import daisyui from "daisyui";
+import tailwindTypography from "@tailwindcss/typography";
+import tailwindcssAnimated from "tailwindcss-animated";
+
 /** @type {import('tailwindcss').Config} */
 
 export default {
   content: {
     relative: true,
-    transform: content => content.replace(/taos:/g, ""),
     files: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   },
-  safelist: [
-    "!duration-[0ms]",
-    "!delay-[0ms]",
-    'html.js :where([class*="taos:"]:not(.taos-init))',
-  ],
   theme: {
     fontFamily: {
       custom: ["Noto Sans JP Variable", "sans-serif"],
     },
   },
   plugins: [
-    require("@tailwindcss/typography"),
-    require("daisyui"),
-    require("taos/plugin"),
-    require("tailwindcss-animated"),
+    tailwindTypography,
+    daisyui,
+    tailwindcssAnimated,
+    tailwindcssMotion,
   ],
   daisyui: {
     themes: [

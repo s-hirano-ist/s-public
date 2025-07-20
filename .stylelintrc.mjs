@@ -1,5 +1,11 @@
 export default {
-  extends: ["stylelint-config-standard", "stylelint-config-html"],
+  extends: ["stylelint-config-standard"],
+  overrides: [
+    {
+      files: ["**/*.astro"],
+      customSyntax: "postcss-html",
+    },
+  ],
   plugins: [
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-no-unsupported-browser-features",

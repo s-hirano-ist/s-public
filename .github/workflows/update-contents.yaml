@@ -1,4 +1,4 @@
-name: create-pr
+name: update-contents
 on:
   schedule:
     - cron: "0 23 * * 1"
@@ -39,8 +39,9 @@ jobs:
 
       - run: pnpm i --frozen-lockfile
 
-      - run: pnpm license:summary
       - run: bash checkLicense.sh
+      - run: pnpm license:summary
+      - run: pnpm license:json
 
       - name: run generate:photo
         run: pnpm generate:photo

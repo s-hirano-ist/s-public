@@ -95,12 +95,35 @@ const socialImageURL = new URL(
           localStorage.getItem("theme"),
         );
       }
-      // "theme" LocalStorage value is set by the package to remember user preference.
-      // The value is checked and applied before rendering anything.
     </script>
     <script>
-      import { themeChange } from "theme-change";
-      themeChange();
+      // Custom theme switching implementation
+      function initTheme() {
+        const themeController = document.querySelector(
+          ".theme-controller",
+        ) as HTMLInputElement;
+        if (themeController) {
+          themeController.addEventListener("change", function (e) {
+            const target = e.target as HTMLInputElement;
+            const isChecked = target.checked;
+            const currentTheme = isChecked ? "myLight" : "myDark";
+
+            document.documentElement.setAttribute("data-theme", currentTheme);
+            localStorage.setItem("theme", currentTheme);
+          });
+
+          // Set initial state based on current theme
+          const currentTheme = localStorage.getItem("theme") || "myDark";
+          themeController.checked = currentTheme === "myLight";
+        }
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initTheme);
+      } else {
+        initTheme();
+      }
     </script>
 
     <!-- Rehype autolink headings font -->
@@ -124,15 +147,8 @@ const socialImageURL = new URL(
 
       gtag("config", "G-E84VM45L0L");
     </script>
-
-    <!-- Scroll animation (taos) -->
-    <script is:inline>
-      document.documentElement.classList.add("js");
-    </script>
   </head>
   <body>
     <slot />
-    <!-- Scroll animation (taos) -->
-    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
   </body>
 </html>

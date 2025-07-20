@@ -42,11 +42,10 @@ import { Image } from "astro:assets";
       }
     </script>
     <Header title="Portfolio" darkModeDisabled />
-    <section class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
+    <section>
       <Image src={sIcon} alt="" class="mx-auto w-full max-w-md rounded-full" />
     </section>
-    <section
-      class="taos:scale-[0.6] taos:opacity-0 delay-[600ms] duration-[600ms]">
+    <section>
       <a id="scroll-button" class="flex justify-center">
         <div class="chevron"></div>
         <div class="chevron"></div>
@@ -54,35 +53,31 @@ import { Image } from "astro:assets";
         <span class="text">Scroll down</span>
       </a>
     </section>
-    <section
-      id="about-me"
-      class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
+    <section>
       <h2>About me</h2>
       <AboutMe />
     </section>
-    <section
-      class="taos:scale-[0.6] taos:opacity-0 pb-4 delay-[600ms] duration-[600ms]">
+    <section>
       <h2>Links</h2>
       <PortfolioLinks />
     </section>
-    <section class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
+    <section>
       <h2>Education</h2>
       <Timeline data={educationData} />
     </section>
-    <section class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
+    <section>
       <h2>Work Experience</h2>
       <Timeline data={workExperienceData} />
     </section>
-    <!-- <section class="taos:scale-[0.6] taos:opacity-0 delay-[300ms] duration-[600ms]">
+    <!-- <section>
       <h2>Achievements</h2>
       <Achievements />
     </section> -->
-    <section class="taos:scale-[0.6] taos:opacity-0 delay-300 duration-[600ms]">
+    <section>
       <h2>Qualification</h2>
       <Timeline data={qualificationData} />
     </section>
-    <section
-      class="taos:scale-[0.6] taos:opacity-0 pb-8 delay-300 duration-[600ms]">
+    <section>
       <h2>Tech stack</h2>
       <TechStack />
     </section>
