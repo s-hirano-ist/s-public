@@ -4,6 +4,7 @@ import AboutMe from "@components/AboutMe.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import PortfolioLinks from "@components/PortfolioLinks.astro";
+import BentoTile from "@components/BentoTile.astro";
 import TechStack from "@components/TechStack.astro";
 import Timeline from "@components/Timeline.astro";
 import { SITE } from "@config";
@@ -43,47 +44,116 @@ import { Image } from "astro:assets";
     </script>
     <Header title="Portfolio" darkModeDisabled />
     <section>
-      <Image src={sIcon} alt="" class="mx-auto w-full max-w-md rounded-full" />
-    </section>
-    <section>
-      <a id="scroll-button" class="flex justify-center">
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <span class="text">Scroll down</span>
-      </a>
-    </section>
-    <section>
-      <h2>About me</h2>
-      <AboutMe />
-    </section>
-    <section>
-      <h2>Links</h2>
-      <PortfolioLinks />
-    </section>
-    <section>
-      <h2>Education</h2>
-      <Timeline data={educationData} />
-    </section>
-    <section>
-      <h2>Work Experience</h2>
-      <Timeline data={workExperienceData} />
-    </section>
-    <!-- <section>
-      <h2>Achievements</h2>
-      <Achievements />
-    </section> -->
-    <section>
-      <h2>Qualification</h2>
-      <Timeline data={qualificationData} />
-    </section>
-    <section>
-      <h2>Tech stack</h2>
-      <TechStack />
+      <div class="bento-grid">
+        <AboutMe />
+
+        <BentoTile
+          size="large"
+          bgColor="bg-gradient-to-br from-cyan-50 to-blue-100 dark:from-cyan-900/20 dark:to-blue-900/20"
+          clickable={false}>
+          <div slot="content" class="timeline-container">
+            <Image
+              src={sIcon}
+              alt=""
+              class="mx-auto w-full max-w-md rounded-full p-4"
+            />
+            <br />
+            <div class="about-me">
+              <p>Hello. This is a portfolio of {SITE.author}.</p>
+              <p>I work as a software engineer at GMO Internet.</p>
+              <p>
+                I am interested in frontend development, serverless
+                architectures and DevOps.
+              </p>
+            </div>
+            <style>
+              .about-me p {
+                @apply mb-2;
+              }
+            </style>
+          </div>
+        </BentoTile>
+
+        <PortfolioLinks />
+
+        <TechStack />
+
+        <BentoTile
+          title="Education"
+          description="学歴"
+          size="large"
+          bgColor="bg-gradient-to-br from-cyan-50 to-blue-100 dark:from-cyan-900/20 dark:to-blue-900/20"
+          clickable={false}>
+          <svg
+            slot="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-8"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+          <div slot="content" class="timeline-container">
+            <Timeline data={educationData} />
+          </div>
+        </BentoTile>
+
+        <BentoTile
+          title="Work Experience"
+          description="職歴"
+          size="large"
+          bgColor="bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-emerald-900/20 dark:to-teal-900/20"
+          clickable={false}>
+          <svg
+            slot="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-8"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none">
+            <path d="M12 12h.01"></path>
+            <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+            <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
+            <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+          </svg>
+          <div slot="content" class="timeline-container">
+            <Timeline data={workExperienceData} />
+          </div>
+        </BentoTile>
+
+        <BentoTile
+          title="Qualifications"
+          description="資格・認定"
+          size="large"
+          bgColor="bg-gradient-to-br from-yellow-50 to-orange-100 dark:from-yellow-900/20 dark:to-orange-900/20"
+          clickable={false}>
+          <svg
+            slot="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-8"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none">
+            <path
+              d="M6 16.326A7 7 0 1 1 15.71 8l1.79-1.79-3.5-3.5L2 14.71V20h5.29Z"
+            ></path>
+            <path d="m15 5 4 4"></path>
+            <path d="m13 7 4 4"></path>
+          </svg>
+          <div slot="content" class="timeline-container">
+            <Timeline data={qualificationData} />
+          </div>
+        </BentoTile>
+      </div>
     </section>
     <Footer darkModeDisabled />
   </main>
 </Layout>
+
 <style>
   h2 {
     @apply animate-wiggle animate-infinite;
@@ -98,7 +168,7 @@ import { Image } from "astro:assets";
   }
 
   .main-contents section {
-    @apply mx-auto max-w-5xl px-4 pt-8;
+    @apply mx-auto px-4 pt-8;
   }
 
   /* scroll button */
@@ -174,6 +244,58 @@ import { Image } from "astro:assets";
   @keyframes pulse {
     to {
       opacity: 1;
+    }
+  }
+
+  /* Timeline inside BentoTile */
+  .timeline-container {
+    @apply mt-2 text-xs;
+  }
+
+  /* Bento Grid Layout */
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Responsive Bento Grid */
+  @media (max-width: 1200px) {
+    .bento-grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(150px, auto);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .bento-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(140px, auto);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bento-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(130px, auto);
+      gap: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .bento-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 1rem;
+    }
+
+    /* Reset all tiles to single column on mobile */
+    .bento-grid > * {
+      grid-column: 1 !important;
+      grid-row: auto !important;
     }
   }
 </style>
