@@ -36,30 +36,43 @@ const articleJsonLd = {
   dateModified: date.toISOString(),
   author: {
     "@type": "Person",
-    "@id": "https://s-hirano.com",
+    "@id": "https://s-hirano.com/#person",
     name: "s-hirano-ist",
+    url: "https://s-hirano.com",
   },
   publisher: {
-    "@type": "Person",
-    "@id": "https://s-hirano.com",
-    name: "s-hirano-ist",
+    "@type": "Organization",
+    "@id": "https://s-hirano.com/#organization",
+    name: "s-hirano-ist Portfolio",
+    url: "https://s-hirano.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://s-hirano.com/favicon-192x192.png",
+      width: 192,
+      height: 192,
+    },
   },
   url: `https://s-hirano.com/blog/${slugify(post.data)}`,
-  image: ogUrl,
+  image: {
+    "@type": "ImageObject",
+    url: ogUrl,
+    width: 1200,
+    height: 630,
+  },
   inLanguage: "ja",
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": `https://s-hirano.com/blog/${slugify(post.data)}`,
   },
+  wordCount: post.body?.length || 0,
 };
 ---
 
-<Layout title={heading} description={description} ogImage={ogUrl}>
-  <script
-    type="application/ld+json"
-    is:inline
-    set:html={JSON.stringify(articleJsonLd)}
-  />
+<Layout
+  title={heading}
+  description={description}
+  ogImage={ogUrl}
+  jsonLd={articleJsonLd}>
   <Header />
   <Main publishedDate={date.toLocaleDateString("ja")}>
     <article

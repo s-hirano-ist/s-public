@@ -9,6 +9,7 @@ export type Props = {
   author?: string;
   description?: string;
   ogImage?: string;
+  jsonLd?: object | object[];
 };
 
 const {
@@ -16,6 +17,7 @@ const {
   author = SITE.author,
   description = SITE.description,
   ogImage = SITE.ogImage,
+  jsonLd,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -149,6 +151,13 @@ const socialImageURL = new URL(
 
       gtag("config", "G-E84VM45L0L");
     </script>
+
+    <!-- JSON-LD -->
+    {
+      jsonLd && (
+        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+      )
+    }
   </head>
   <body>
     <slot />
