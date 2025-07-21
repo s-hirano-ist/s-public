@@ -25,9 +25,41 @@ const { heading, description, date } = post.data;
 const { Content } = await post.render();
 
 const ogUrl = new URL(`${heading}.png`, Astro.url.origin).href;
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": `https://s-hirano.com/blog/${slugify(post.data)}`,
+  headline: heading,
+  description: description,
+  datePublished: date.toISOString(),
+  dateModified: date.toISOString(),
+  author: {
+    "@type": "Person",
+    "@id": "https://s-hirano.com",
+    name: "s-hirano-ist",
+  },
+  publisher: {
+    "@type": "Person",
+    "@id": "https://s-hirano.com",
+    name: "s-hirano-ist",
+  },
+  url: `https://s-hirano.com/blog/${slugify(post.data)}`,
+  image: ogUrl,
+  inLanguage: "ja",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `https://s-hirano.com/blog/${slugify(post.data)}`,
+  },
+};
 ---
 
 <Layout title={heading} description={description} ogImage={ogUrl}>
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(articleJsonLd)}
+  />
   <Header />
   <Main publishedDate={date.toLocaleDateString("ja")}>
     <article

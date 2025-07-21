@@ -3,5 +3,5 @@
     "line-length": false, // MD013  行の長さ
     "no-inline-html": false
   },
-  "ignores": [".git", "node_modules"] // 無視するディレクトリ
+  "ignores": [".git", "node_modules", "CLAUDE.md"] // 無視するディレクトリ
 }
