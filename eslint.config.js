@@ -6,7 +6,6 @@ import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import tailwind from "eslint-plugin-tailwindcss";
 import { configs as eslintTypeScript } from "typescript-eslint";
-// import createTypeScriptImportResolver from "eslint-import-resolver-typescript";
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
@@ -61,9 +60,6 @@ export default [
     rules: {
       // "astro/no-set-html-directive": "error", // do not use `<Fragment set:html={html} />` due to XSS
       "import-x/no-unresolved": "off",
-      "import-x/namespace": "off",
-      "import-x/default": "off",
-      "no-unused-vars": "off",
       "@typescript-eslint/consistent-type-imports": [
         2,
         { prefer: "type-imports" },
