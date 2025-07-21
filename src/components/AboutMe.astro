@@ -1,5 +1,6 @@
 ---
 import BentoTile from "@components/BentoTile.astro";
+import PageLinkCard from "./PageLinkCard.astro";
 ---
 
 <BentoTile
@@ -7,14 +8,30 @@ import BentoTile from "@components/BentoTile.astro";
   size="large"
   bgColor="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20"
   clickable={false}>
-  <div slot="content" class="mt-4">
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-2">
-      <BentoTile
+  <svg
+    slot="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    class="size-8"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    aria-label="About Me"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-info-circle"
+    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+      d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path><path d="M12 9h.01"
+    ></path><path d="M11 12h1v4h1"></path></svg
+  >
+  <div slot="content">
+    <div class="grid grid-cols-1 gap-4">
+      <PageLinkCard
         href="https://github.com/s-hirano-ist"
         title="GitHub"
-        size="xs"
         bgColor="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20"
-        clickable={true}
         targetBlank>
         <svg
           slot="icon"
@@ -34,13 +51,11 @@ import BentoTile from "@components/BentoTile.astro";
             d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
           ></path>
         </svg>
-      </BentoTile>
-      <BentoTile
+      </PageLinkCard>
+      <PageLinkCard
         href="https://twitter.com/s_hirano_ist"
         title="X"
-        size="xs"
         bgColor="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20"
-        clickable={true}
         targetBlank>
         <svg
           slot="icon"
@@ -59,13 +74,11 @@ import BentoTile from "@components/BentoTile.astro";
           <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
           <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
         </svg>
-      </BentoTile>
-      <BentoTile
+      </PageLinkCard>
+      <PageLinkCard
         href="mailto:s-hirano-ist@outlook.com"
         title="Mail"
-        size="xs"
         bgColor="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20"
-        clickable={true}
         targetBlank>
         <svg
           slot="icon"
@@ -86,13 +99,11 @@ import BentoTile from "@components/BentoTile.astro";
           </path>
           <path d="M3 7l9 6l9 -6"></path>
         </svg>
-      </BentoTile>
-      <BentoTile
+      </PageLinkCard>
+      <PageLinkCard
         href="https://linkedin.com/in/空暉-平野-2a7183337"
         title="LinkedIn"
-        size="xs"
         bgColor="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20"
-        clickable={true}
         targetBlank>
         <svg
           slot="icon"
@@ -115,7 +126,7 @@ import BentoTile from "@components/BentoTile.astro";
             d="M12 7l0 4"></path><path d="M6.7 17.8l2.8 -2"></path><path
             d="M17.3 17.8l-2.8 -2"></path>
         </svg>
-      </BentoTile>
+      </PageLinkCard>
     </div>
   </div>
 </BentoTile>

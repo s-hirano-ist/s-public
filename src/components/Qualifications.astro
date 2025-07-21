@@ -1,0 +1,28 @@
+---
+import BentoTile from "@components/BentoTile.astro";
+import Timeline from "./Timeline.astro";
+import qualificationData from "@data/portfolio/Qualification.json";
+---
+
+<BentoTile
+  title="Qualifications"
+  size="large"
+  bgColor="bg-gradient-to-br from-yellow-50 to-orange-100 dark:from-yellow-900/20 dark:to-orange-900/20"
+  clickable={false}>
+  <svg
+    slot="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    class="size-8"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    fill="none">
+    <path d="M6 16.326A7 7 0 1 1 15.71 8l1.79-1.79-3.5-3.5L2 14.71V20h5.29Z"
+    ></path>
+    <path d="m15 5 4 4"></path>
+    <path d="m13 7 4 4"></path>
+  </svg>
+  <div slot="content" class="timeline-container">
+    <Timeline data={qualificationData} />
+  </div>
+</BentoTile>

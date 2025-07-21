@@ -1,0 +1,26 @@
+---
+import BentoTile from "@components/BentoTile.astro";
+import Timeline from "./Timeline.astro";
+import educationData from "@data/portfolio/Education.json";
+---
+
+<BentoTile
+  title="Education"
+  size="large"
+  bgColor="bg-gradient-to-br from-cyan-50 to-blue-100 dark:from-cyan-900/20 dark:to-blue-900/20"
+  clickable={false}>
+  <svg
+    slot="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    class="size-8"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    fill="none">
+    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+  </svg>
+  <div slot="content" class="timeline-container">
+    <Timeline data={educationData} />
+  </div>
+</BentoTile>

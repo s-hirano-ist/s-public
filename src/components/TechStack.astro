@@ -20,16 +20,16 @@ import BentoTile from "@components/BentoTile.astro";
       d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
     ></path>
   </svg>
-  <div slot="content" class="text-xs">
-    <img
-      src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=s-hirano-ist&theme=blueberry"
-      alt="GitHub Profile Details"
-      loading="lazy"
-      onerror="this.style.display='none'"
-      class="w-full"
-    />
-    <div class="grid grid-cols-2 gap-2">
+  <div slot="content">
+    <div class="flex flex-col justify-center items-center space-y-2">
       <img
+        src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=s-hirano-ist&theme=blueberry"
+        alt="GitHub Profile Details"
+        loading="lazy"
+        onerror="this.style.display='none'"
+        class="w-full"
+      />
+      <!-- <img
         src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=s-hirano-ist&theme=blueberry"
         alt="Top Repos Language"
         loading="lazy"
@@ -42,13 +42,13 @@ import BentoTile from "@components/BentoTile.astro";
         loading="lazy"
         onerror="this.style.display='none'"
         class="w-full"
-      />
+      /> -->
       <img
         alt="Top Languages"
         loading="lazy"
         onerror="this.style.display='none'"
         class="w-full"
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=s-hirano-ist&theme=blueberry&layout=compact"
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=s-hirano-ist&theme=blueberry&layout=compact&hide_progress=true"
       />
       <img
         alt="GitHub Stats"
@@ -108,7 +108,7 @@ import BentoTile from "@components/BentoTile.astro";
     <img
       alt="my skills"
       class="w-full"
-      src="https://skillicons.dev/icons?theme=dark&perline=7&i=next,astro,react,nodejs,ts,js,html,css,python,swift,docker,aws,cloudflare,bash"
+      src="https://skillicons.dev/icons?theme=dark&perline=4&i=next,astro,react,ts,js,html,css,python,swift,docker,aws,cloudflare"
     />
   </div>
 </BentoTile>

@@ -2,29 +2,20 @@
 export type Props = {
   href?: string;
   title?: string;
-  description?: string;
-  size?: "xs" | "small" | "medium" | "large" | "wide" | "tall";
+  size: "large" | "wide";
   bgColor?: string;
   textColor?: string;
   clickable?: boolean;
-  targetBlank?: boolean;
 };
 
 const {
-  href,
   title,
-  description,
-  size = "medium",
+  size,
   bgColor = "bg-white dark:bg-gray-800",
   textColor = "text-gray-900 dark:text-gray-100",
-  clickable = true,
-  targetBlank = false,
 } = Astro.props;
 
 const sizeClasses = {
-  xs: "col-span-1 row-span-1 h-32 text-center",
-  small: "col-span-1 row-span-1",
-  medium: "col-span-1 row-span-1 sm:col-span-2 sm:row-span-1",
   large: "col-span-2 row-span-2",
   wide: "col-span-2 row-span-1 h-32",
   tall: "col-span-1 row-span-2",
@@ -41,56 +32,26 @@ const baseClasses = `
   group
   overflow-visible
 `;
-
-const ContentWrapper = (clickable && href ? "a" : "div") as "a" | "div";
 ---
 
-<ContentWrapper
-  href={href}
-  class={baseClasses}
-  target={targetBlank ? "_blank" : undefined}>
-  <div class="flex h-full flex-col">
-    <div class="flex items-center justify-center text-primary">
-      <slot name="icon" />
+<div class={baseClasses}>
+  <div class="flex h-full flex-col justify-between gap-2">
+    <div class="flex flex-col items-center space-y-2">
+      <div class="flex items-center justify-center text-primary">
+        <slot name="icon" />
+      </div>
+
+      {
+        title && (
+          <h3 class="text-center text-lg font-bold transition-colors duration-300 group-hover:text-primary">
+            {title}
+          </h3>
+        )
+      }
     </div>
-
-    {
-      (title || description) && (
-        <div>
-          {title && (
-            <h3 class="mb-2 text-lg font-bold transition-colors duration-300 group-hover:text-primary">
-              {title}
-            </h3>
-          )}
-          {description && (
-            <p class="mb-4 text-sm leading-relaxed opacity-75">{description}</p>
-          )}
-        </div>
-      )
-    }
-
-    <div class="flex-1">
+    <div class="mt-2">
       <slot name="content" />
     </div>
-
-    {
-      clickable && href && size !== "xs" && (
-        <div class="mt-4 flex items-center text-xs font-medium text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          詳細を見る
-          <svg
-            class="ml-1 size-3 transition-transform group-hover:translate-x-1"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </div>
-      )
-    }
+    <div></div>
   </div>
-</ContentWrapper>
+</div>
