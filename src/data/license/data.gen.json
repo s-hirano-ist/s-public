@@ -3,624 +3,465 @@
     "licenses": "MIT",
     "repository": "https://github.com/withastro/language-tools",
     "publisher": "withastro",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@astrojs/check",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@astrojs/check/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@astrojs/check",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@astrojs/check/LICENSE"
   },
   "@astrojs/react@4.3.0": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@astrojs/react",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@astrojs/react/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@astrojs/react",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@astrojs/react/LICENSE"
   },
   "@astrojs/sitemap@3.4.1": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@astrojs/sitemap",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@astrojs/sitemap/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@astrojs/sitemap",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@astrojs/sitemap/LICENSE"
   },
   "@astrojs/tailwind@6.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@astrojs/tailwind",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@astrojs/tailwind/LICENSE"
-  },
-  "@eslint-community/eslint-utils@4.7.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/eslint-community/eslint-utils",
-    "publisher": "Toru Nagashima",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@eslint-community/eslint-utils",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@eslint-community/eslint-utils/LICENSE"
-  },
-  "@eslint-community/regexpp@4.12.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/eslint-community/regexpp",
-    "publisher": "Toru Nagashima",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@eslint-community/regexpp",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@eslint-community/regexpp/LICENSE"
-  },
-  "@eslint/config-array@0.20.1": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/eslint/rewrite",
-    "publisher": "Nicholas C. Zakas",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/config-array",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/config-array/LICENSE"
-  },
-  "@eslint/config-helpers@0.2.3": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/eslint/rewrite",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/config-helpers",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/config-helpers/LICENSE"
-  },
-  "@eslint/core@0.13.0": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/eslint/rewrite",
-    "publisher": "Nicholas C. Zakas",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/core",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/core/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@astrojs/tailwind",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@astrojs/tailwind/LICENSE"
   },
   "@eslint/eslintrc@3.3.1": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslintrc",
     "publisher": "Nicholas C. Zakas",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/eslintrc",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/eslintrc/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc/LICENSE"
   },
-  "@eslint/js@9.26.0": {
+  "@eslint/js@9.31.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/js",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/js/LICENSE"
-  },
-  "@eslint/object-schema@2.1.6": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/eslint/rewrite",
-    "publisher": "Nicholas C. Zakas",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/object-schema",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/object-schema/LICENSE"
-  },
-  "@eslint/plugin-kit@0.2.8": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/eslint/rewrite",
-    "publisher": "Nicholas C. Zakas",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/plugin-kit",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@eslint/plugin-kit/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/js",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@eslint/js/LICENSE"
   },
   "@fontsource-variable/noto-sans-jp@5.2.6": {
     "licenses": "OFL-1.1",
     "repository": "https://github.com/fontsource/font-files",
     "publisher": "Google Inc.",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@fontsource-variable/noto-sans-jp",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@fontsource-variable/noto-sans-jp/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@fontsource-variable/noto-sans-jp",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@fontsource-variable/noto-sans-jp/LICENSE"
   },
   "@googleapis/books@6.0.1": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/googleapis/google-api-nodejs-client",
     "publisher": "Google LLC",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@googleapis/books",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@googleapis/books/README.md"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@googleapis/books",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@googleapis/books/README.md"
   },
-  "@playwright/test@1.52.0": {
+  "@playwright/test@1.54.1": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/microsoft/playwright",
     "publisher": "Microsoft Corporation",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@playwright/test",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@playwright/test/LICENSE",
-    "noticeFile": "/Users/sola/personal/on-going/s-public/node_modules/@playwright/test/NOTICE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@playwright/test",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/LICENSE",
+    "noticeFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/NOTICE"
   },
-  "@secretlint/secretlint-rule-preset-recommend@10.1.1": {
+  "@secretlint/secretlint-rule-preset-recommend@10.2.1": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@secretlint/secretlint-rule-preset-recommend",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@secretlint/secretlint-rule-preset-recommend/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@secretlint/secretlint-rule-preset-recommend",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@secretlint/secretlint-rule-preset-recommend/LICENSE"
   },
   "@tailwindcss/typography@0.5.16": {
     "licenses": "MIT",
     "repository": "https://github.com/tailwindlabs/tailwindcss-typography",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@tailwindcss/typography",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@tailwindcss/typography/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@tailwindcss/typography",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@tailwindcss/typography/LICENSE"
   },
   "@types/jsdom@21.1.7": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@types/jsdom",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@types/jsdom/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@types/jsdom",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/jsdom/LICENSE"
   },
   "@types/react@19.1.8": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@types/react",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@types/react/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@types/react",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/react/LICENSE"
   },
   "@types/sanitize-html@2.16.0": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@types/sanitize-html",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@types/sanitize-html/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@types/sanitize-html",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/sanitize-html/LICENSE"
   },
   "@types/slug@5.0.9": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@types/slug",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@types/slug/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@types/slug",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/slug/LICENSE"
   },
-  "@typescript-eslint/eslint-plugin@8.32.1": {
+  "@typescript-eslint/parser@8.37.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/eslint-plugin",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/eslint-plugin/LICENSE"
-  },
-  "@typescript-eslint/parser@8.32.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/parser",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/parser/LICENSE"
-  },
-  "@typescript-eslint/project-service@8.37.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/project-service",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/project-service/LICENSE"
-  },
-  "@typescript-eslint/scope-manager@8.32.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/scope-manager",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/scope-manager/LICENSE"
-  },
-  "@typescript-eslint/tsconfig-utils@8.37.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/tsconfig-utils",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/tsconfig-utils/LICENSE"
-  },
-  "@typescript-eslint/type-utils@8.32.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/type-utils",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/type-utils/LICENSE"
-  },
-  "@typescript-eslint/types@8.32.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/types",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/types/LICENSE"
-  },
-  "@typescript-eslint/typescript-estree@8.32.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/typescript-estree",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/typescript-estree/LICENSE"
-  },
-  "@typescript-eslint/utils@8.37.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/utils",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/utils/LICENSE"
-  },
-  "@typescript-eslint/visitor-keys@8.32.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/visitor-keys",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/@typescript-eslint/visitor-keys/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/@typescript-eslint/parser",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@typescript-eslint/parser/LICENSE"
   },
   "astro-eslint-parser@1.2.2": {
     "licenses": "MIT",
     "repository": "https://github.com/ota-meshi/astro-eslint-parser",
     "publisher": "Yosuke Ota",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/astro-eslint-parser",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/astro-eslint-parser/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser/LICENSE"
   },
-  "astro@5.11.0": {
+  "astro@5.12.0": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/astro",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/astro/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/astro",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/astro/LICENSE"
   },
   "commitizen@4.3.1": {
     "licenses": "MIT",
     "repository": "https://github.com/commitizen/cz-cli",
     "publisher": "Jim Cummins",
     "email": "jimthedev@gmail.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/commitizen",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/commitizen/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/commitizen",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/commitizen/LICENSE"
   },
   "cz-conventional-changelog@3.3.0": {
     "licenses": "MIT",
     "repository": "https://github.com/commitizen/cz-conventional-changelog",
     "publisher": "Jim Cummins",
     "email": "jimthedev@gmail.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/cz-conventional-changelog",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/cz-conventional-changelog/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/cz-conventional-changelog",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/cz-conventional-changelog/LICENSE"
   },
   "daisyui@4.12.24": {
     "licenses": "MIT",
     "repository": "https://github.com/saadeghi/daisyui",
     "publisher": "Pouya Saadeghi",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/daisyui",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/daisyui/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/daisyui",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/daisyui/LICENSE"
   },
-  "dotenv@17.0.0": {
+  "dotenv@17.2.0": {
     "licenses": "BSD-2-Clause",
     "repository": "https://github.com/motdotla/dotenv",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/dotenv",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/dotenv/LICENSE"
-  },
-  "eslint-compat-utils@0.6.5": {
-    "licenses": "MIT",
-    "repository": "https://github.com/ota-meshi/eslint-compat-utils",
-    "publisher": "Yosuke Ota",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-compat-utils",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-compat-utils/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/dotenv",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/dotenv/LICENSE"
   },
   "eslint-config-prettier@10.1.8": {
     "licenses": "MIT",
     "repository": "https://github.com/prettier/eslint-config-prettier",
     "publisher": "Simon Lydell",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-config-prettier",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-config-prettier/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint-config-prettier",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-config-prettier/LICENSE"
   },
-  "eslint-import-context@0.1.9": {
-    "licenses": "MIT",
-    "repository": "https://github.com/un-ts/eslint-import-context",
-    "publisher": "JounQin",
-    "email": "admin@1stg.me",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-import-context",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-import-context/LICENSE"
-  },
-  "eslint-import-resolver-node@0.3.9": {
-    "licenses": "MIT",
-    "repository": "https://github.com/import-js/eslint-plugin-import",
-    "publisher": "Ben Mosher",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-import-resolver-node",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-import-resolver-node/LICENSE"
-  },
-  "eslint-import-resolver-typescript@4.3.5": {
+  "eslint-import-resolver-typescript@4.4.4": {
     "licenses": "ISC",
     "repository": "https://github.com/import-js/eslint-import-resolver-typescript",
     "publisher": "Alex Gorbatchev",
     "email": "alex.gorbatchev@gmail.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-import-resolver-typescript",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-import-resolver-typescript/LICENSE"
-  },
-  "eslint-module-utils@2.12.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/import-js/eslint-plugin-import",
-    "publisher": "Ben Mosher",
-    "email": "me@benmosher.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-module-utils",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-module-utils/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint-import-resolver-typescript",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-import-resolver-typescript/LICENSE"
   },
   "eslint-plugin-astro@1.3.1": {
     "licenses": "MIT",
     "repository": "https://github.com/ota-meshi/eslint-plugin-astro",
     "publisher": "Yosuke Ota",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-astro",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-astro/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-astro",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-astro/LICENSE"
   },
-  "eslint-plugin-import-x@4.11.1": {
+  "eslint-plugin-import-x@4.16.1": {
     "licenses": "MIT",
     "repository": "https://github.com/un-ts/eslint-plugin-import-x",
     "publisher": "JounQin",
     "email": "admin@1stg.me",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-import-x",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-import-x/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-import-x",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-import-x/LICENSE"
   },
-  "eslint-plugin-import@2.31.0": {
+  "eslint-plugin-import@2.32.0": {
     "licenses": "MIT",
     "repository": "https://github.com/import-js/eslint-plugin-import",
     "publisher": "Ben Mosher",
     "email": "me@benmosher.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-import",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-import/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-import",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-import/LICENSE"
   },
-  "eslint-plugin-prettier@5.4.1": {
+  "eslint-plugin-prettier@5.5.3": {
     "licenses": "MIT",
     "repository": "https://github.com/prettier/eslint-plugin-prettier",
     "publisher": "Teddy Katz",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-prettier",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-prettier/LICENSE.md"
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-prettier",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-prettier/LICENSE.md"
   },
   "eslint-plugin-redos@4.5.0": {
     "licenses": "MIT",
     "repository": "https://github.com/makenowjust-labs/recheck",
     "publisher": "TSUYUSATO Kitsune",
     "email": "make.just.on@gmail.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-redos",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-redos/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-redos",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-redos/LICENSE"
   },
   "eslint-plugin-tailwindcss@3.18.2": {
     "licenses": "MIT",
     "repository": "https://github.com/francoismassart/eslint-plugin-tailwindcss",
     "publisher": "François Massart",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-tailwindcss",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-plugin-tailwindcss/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-tailwindcss",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-tailwindcss/LICENSE"
   },
-  "eslint-scope@8.4.0": {
-    "licenses": "BSD-2-Clause",
-    "repository": "https://github.com/eslint/js",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-scope",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-scope/LICENSE"
-  },
-  "eslint-visitor-keys@4.2.1": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/eslint/js",
-    "publisher": "Toru Nagashima",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint-visitor-keys",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint-visitor-keys/LICENSE"
-  },
-  "eslint@9.26.0": {
+  "eslint@9.31.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "publisher": "Nicholas C. Zakas",
     "email": "nicholas+npm@nczconsulting.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/eslint",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/eslint/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint/LICENSE"
   },
   "husky@9.1.7": {
     "licenses": "MIT",
     "repository": "https://github.com/typicode/husky",
     "publisher": "typicode",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/husky",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/husky/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/husky",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/husky/LICENSE"
   },
   "jsdom@26.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/jsdom/jsdom",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/jsdom",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/jsdom/LICENSE.txt"
+    "path": "/home/runner/work/s-public/s-public/node_modules/jsdom",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/jsdom/LICENSE.txt"
   },
   "lenis@1.3.8": {
     "licenses": "MIT",
     "repository": "https://github.com/darkroomengineering/lenis",
     "publisher": "darkroom.engineering",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/lenis",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/lenis/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/lenis",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/lenis/LICENSE"
   },
   "license-checker-rseidelsohn@4.4.2": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/RSeidelsohn/license-checker-rseidelsohn",
     "publisher": "Roman Seidelsohn",
     "email": "rseidelsohn@gmail.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/license-checker-rseidelsohn",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/license-checker-rseidelsohn/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/license-checker-rseidelsohn",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/license-checker-rseidelsohn/LICENSE"
   },
-  "lint-staged@16.0.0": {
+  "lint-staged@16.1.2": {
     "licenses": "MIT",
     "repository": "https://github.com/lint-staged/lint-staged",
     "publisher": "Andrey Okonetchnikov",
     "email": "andrey@okonet.ru",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/lint-staged",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/lint-staged/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/lint-staged",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/lint-staged/LICENSE"
   },
   "markdownlint-cli2@0.18.1": {
     "licenses": "MIT",
     "repository": "https://github.com/DavidAnson/markdownlint-cli2",
     "publisher": "David Anson",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/markdownlint-cli2",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/markdownlint-cli2/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/markdownlint-cli2",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/markdownlint-cli2/LICENSE"
   },
   "photoswipe@5.4.4": {
     "licenses": "MIT",
     "repository": "https://github.com/dimsemenov/Photoswipe",
     "publisher": "Dmytro Semenov",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/photoswipe",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/photoswipe/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/photoswipe",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/photoswipe/LICENSE"
   },
   "postcss-html@1.8.0": {
     "licenses": "MIT",
     "repository": "https://github.com/ota-meshi/postcss-html",
     "publisher": "gucong",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/postcss-html",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/postcss-html/LICENSE"
-  },
-  "prettier-linter-helpers@1.0.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/prettier/prettier-linter-helpers",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/prettier-linter-helpers",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/prettier-linter-helpers/LICENSE.md"
+    "path": "/home/runner/work/s-public/s-public/node_modules/postcss-html",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/postcss-html/LICENSE"
   },
   "prettier-plugin-astro@0.14.1": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/prettier-plugin-astro",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/prettier-plugin-astro",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/prettier-plugin-astro/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/prettier-plugin-astro",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/prettier-plugin-astro/LICENSE"
   },
   "prettier-plugin-tailwindcss@0.6.14": {
     "licenses": "MIT",
     "repository": "https://github.com/tailwindlabs/prettier-plugin-tailwindcss",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/prettier-plugin-tailwindcss",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/prettier-plugin-tailwindcss/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/prettier-plugin-tailwindcss",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/prettier-plugin-tailwindcss/LICENSE"
   },
-  "prettier@3.5.3": {
+  "prettier@3.6.2": {
     "licenses": "MIT",
     "repository": "https://github.com/prettier/prettier",
     "publisher": "James Long",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/prettier",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/prettier/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/prettier",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/prettier/LICENSE"
   },
   "react-dom@19.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/react-dom",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/react-dom/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/react-dom",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/react-dom/LICENSE"
   },
   "react@19.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/react",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/react/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/react",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/react/LICENSE"
   },
   "rehype-autolink-headings@7.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/rehypejs/rehype-autolink-headings",
     "publisher": "Titus Wormer",
     "email": "tituswormer@gmail.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/rehype-autolink-headings",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/rehype-autolink-headings/license"
+    "path": "/home/runner/work/s-public/s-public/node_modules/rehype-autolink-headings",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/rehype-autolink-headings/license"
   },
   "rehype-slug@6.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/rehypejs/rehype-slug",
     "publisher": "Titus Wormer",
     "email": "tituswormer@gmail.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/rehype-slug",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/rehype-slug/license"
+    "path": "/home/runner/work/s-public/s-public/node_modules/rehype-slug",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/rehype-slug/license"
   },
   "remark-toc@9.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/remarkjs/remark-toc",
     "publisher": "Titus Wormer",
     "email": "tituswormer@gmail.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/remark-toc",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/remark-toc/license"
+    "path": "/home/runner/work/s-public/s-public/node_modules/remark-toc",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/remark-toc/license"
   },
   "s-public@2.3.1": {
     "licenses": "MIT*",
     "publisher": "s-hirano-ist",
-    "path": "/Users/sola/personal/on-going/s-public",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/LICENSE"
+    "path": "/home/runner/work/s-public/s-public",
+    "licenseFile": "/home/runner/work/s-public/s-public/LICENSE"
   },
-  "sanitize-html@2.16.0": {
+  "sanitize-html@2.17.0": {
     "licenses": "MIT",
     "repository": "https://github.com/apostrophecms/sanitize-html",
     "publisher": "Apostrophe Technologies, Inc.",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/sanitize-html",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/sanitize-html/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/sanitize-html",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/sanitize-html/LICENSE"
   },
-  "satori@0.13.1": {
+  "satori@0.15.2": {
     "licenses": "MPL-2.0",
     "repository": "https://github.com/vercel/satori",
     "publisher": "Shu Ding",
     "email": "g@shud.in",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/satori",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/satori/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/satori",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/satori/LICENSE"
   },
-  "secretlint@10.1.1": {
+  "secretlint@10.2.1": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/secretlint",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/secretlint/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/secretlint",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/secretlint/LICENSE"
   },
   "sharp@0.34.3": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/lovell/sharp",
     "publisher": "Lovell Fuller",
     "email": "npm@lovell.info",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/sharp",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/sharp/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/sharp",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/sharp/LICENSE"
   },
   "slug@11.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/Trott/slug",
     "publisher": "dodo",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/slug",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/slug/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/slug",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/slug/LICENSE"
   },
-  "stylelint-config-standard@36.0.1": {
+  "stylelint-config-standard@38.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/stylelint/stylelint-config-standard",
     "publisher": "Stylelint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/stylelint-config-standard",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/stylelint-config-standard/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/stylelint-config-standard",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/stylelint-config-standard/LICENSE"
   },
   "stylelint-declaration-block-no-ignored-properties@2.8.0": {
     "licenses": "MIT",
     "repository": "https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties",
     "publisher": "Krister Kari",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/stylelint-declaration-block-no-ignored-properties",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/stylelint-declaration-block-no-ignored-properties/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/stylelint-declaration-block-no-ignored-properties",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/stylelint-declaration-block-no-ignored-properties/LICENSE"
   },
   "stylelint-no-unsupported-browser-features@8.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/RJWadley/stylelint-no-unsupported-browser-features",
     "publisher": "RJWadley",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/stylelint-no-unsupported-browser-features",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/stylelint-no-unsupported-browser-features/README.md"
+    "path": "/home/runner/work/s-public/s-public/node_modules/stylelint-no-unsupported-browser-features",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/stylelint-no-unsupported-browser-features/README.md"
   },
   "stylelint-order@7.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/hudochenkov/stylelint-order",
     "publisher": "Aleks Hudochenkov",
     "email": "aleks@hudochenkov.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/stylelint-order",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/stylelint-order/LICENSE.md"
+    "path": "/home/runner/work/s-public/s-public/node_modules/stylelint-order",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/stylelint-order/LICENSE.md"
   },
-  "stylelint@16.19.1": {
+  "stylelint@16.22.0": {
     "licenses": "MIT",
     "repository": "https://github.com/stylelint/stylelint",
     "publisher": "stylelint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/stylelint",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/stylelint/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/stylelint",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/stylelint/LICENSE"
   },
   "svgo@4.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/svg/svgo",
     "publisher": "Kir Belevich",
     "email": "kir@belevi.ch",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/svgo",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/svgo/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/svgo",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/svgo/LICENSE"
   },
   "tailwindcss-animated@2.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/new-data-services/tailwindcss-animated",
     "publisher": "new-data-services",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/tailwindcss-animated",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/tailwindcss-animated/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/tailwindcss-animated",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tailwindcss-animated/LICENSE"
   },
   "tailwindcss-motion@1.1.1": {
     "licenses": "MIT",
     "repository": "https://github.com/romboHQ/tailwindcss-motion",
     "publisher": "Rombo",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/tailwindcss-motion",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/tailwindcss-motion/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/tailwindcss-motion",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tailwindcss-motion/LICENSE"
   },
   "tailwindcss@3.4.17": {
     "licenses": "MIT",
     "repository": "https://github.com/tailwindlabs/tailwindcss",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/tailwindcss",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/tailwindcss/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/tailwindcss",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tailwindcss/LICENSE"
   },
   "tsx@4.20.3": {
     "licenses": "MIT",
     "repository": "https://github.com/privatenumber/tsx",
     "publisher": "Hiroki Osame",
     "email": "hiroki.osame@gmail.com",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/tsx",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/tsx/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/tsx",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tsx/LICENSE"
   },
-  "typescript-eslint@8.32.1": {
+  "typescript-eslint@8.37.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/typescript-eslint",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/typescript-eslint/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/typescript-eslint",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/typescript-eslint/LICENSE"
   },
-  "typescript@5.5.4": {
+  "typescript@5.8.3": {
     "licenses": "Apache-2.0",
-    "repository": "https://github.com/Microsoft/TypeScript",
+    "repository": "https://github.com/microsoft/TypeScript",
     "publisher": "Microsoft Corp.",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/typescript",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/typescript/LICENSE.txt"
+    "path": "/home/runner/work/s-public/s-public/node_modules/typescript",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/typescript/LICENSE.txt"
   },
   "vnu-jar@24.10.17": {
     "licenses": "MIT",
     "repository": "https://github.com/validator/validator",
     "publisher": "Michael[tm] Smith",
     "email": "mike@w3.org",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/vnu-jar",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/vnu-jar/LICENSE"
-  },
-  "volar-service-prettier@0.0.62": {
-    "licenses": "MIT",
-    "repository": "https://github.com/volarjs/services",
-    "publisher": "Pacharapol Withayasakpunt",
-    "email": "polv@polv.cc",
-    "path": "/Users/sola/personal/on-going/s-public/node_modules/volar-service-prettier",
-    "licenseFile": "/Users/sola/personal/on-going/s-public/node_modules/volar-service-prettier/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/vnu-jar",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/vnu-jar/LICENSE"
   }
 }
