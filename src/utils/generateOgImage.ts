@@ -43,7 +43,7 @@ const generateOgImage = async (
 
     // console.info("Output PNG Image  :", `${ogTitle}.png`);
 
-    await writeFile(`./dist/${ogTitle}.png`, pngBuffer);
+    await writeFile(`./dist/${ogTitle}.png`, new Uint8Array(pngBuffer));
   }
 
   return svg;
