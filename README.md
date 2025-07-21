@@ -78,8 +78,8 @@ pnpm generate:book
 ### Update licenses
 
 ```bash
-pnpm generate:license
-pnpm generate:license:summary
+pnpm license:json
+pnpm license:summary
 ```
 
 ### Check for inappropriate licenses
@@ -119,8 +119,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm dev`              | Starts local dev server at `localhost:4321`    |
 | `pnpm build`            | Build production site to `./dist`              |
 | `pnpm preview`          | Preview build locally                          |
-| `pnpm sync`             | Generates TypeScript types                     |
-| `pnpm tsc`              | Check types                                    |
+| `pnpm tsc`              | Check types with TypeScript                    |
 | `pnpm fmt`              | Check code format with Prettier                |
 | `pnpm fmt:fix`          | Format codes with Prettier                     |
 | `pnpm lint`             | Lint with ESLint                               |
@@ -130,6 +129,11 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm lint:css`         | Lint css files with StyleLint                  |
 | `pnpm lint:css:fix`     | Fix lint css files with StyleLint              |
 | `pnpm lint:secret`      | Lint secrets files with secretLint             |
+| `pnpm generate:book`    | Generate book data using Google Books API      |
+| `pnpm generate:photo`   | Generate photo paths                           |
+| `pnpm license:summary`  | Generate license summary                       |
+| `pnpm license:json`     | Generate license JSON                          |
+| `pnpm security`         | Security check with pnpm audit                 |
 | `pnpm snapshots`        | Visual regression with existing screenshots    |
 | `pnpm snapshots:update` | Visual regression but update snapshots         |
 
