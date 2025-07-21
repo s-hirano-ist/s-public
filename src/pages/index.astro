@@ -71,43 +71,6 @@ import Layout from "@layouts/Layout.astro";
     @apply mx-auto p-2 sm:p-4;
   }
 
-  @keyframes move {
-    25% {
-      opacity: 1;
-    }
-
-    33% {
-      opacity: 1;
-      transform: translateY(30px);
-    }
-
-    67% {
-      opacity: 1;
-      transform: translateY(40px);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-    }
-  }
-
-  .text {
-    display: block;
-    font-size: 12px;
-    color: #fff;
-    text-transform: uppercase;
-    white-space: nowrap;
-    opacity: 0.25;
-    animation: pulse 2s linear alternate infinite;
-  }
-
-  @keyframes pulse {
-    to {
-      opacity: 1;
-    }
-  }
-
   /* Timeline inside BentoTile */
   .timeline-container {
     @apply mt-2 text-xs;
