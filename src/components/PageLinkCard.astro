@@ -10,8 +10,8 @@ export type Props = {
 const {
   href,
   title,
-  bgColor = "bg-white dark:bg-gray-800",
-  textColor = "text-gray-900 dark:text-gray-100",
+  bgColor = "bg-gray-800",
+  textColor = "text-gray-100",
   targetBlank = false,
 } = Astro.props;
 
@@ -22,7 +22,7 @@ col-span-1 row-span-1 h-24 text-center
   rounded-xl p-6
   transition-all duration-300 ease-out
   hover:scale-105 hover:shadow-lg hover:shadow-primary/20
-  border border-gray-200 dark:border-gray-700
+  border border-gray-700
   group
   overflow-visible
 `;
