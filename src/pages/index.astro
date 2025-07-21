@@ -14,28 +14,73 @@ import Layout from "@layouts/Layout.astro";
 <Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
   <main class="background main-contents" data-theme="noTheme">
     <script type="application/ld+json" is:inline>
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Portfolio of s-hirano-ist",
-        "url": "https://s-hirano.com",
-        "description": "Portfolio of s-hirano-ist.",
-        "author": {
-          "@type": "Person",
-          "name": "s-hirano-ist",
-          "url": "https://s-hirano.com"
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://s-hirano.com",
+          "name": "Portfolio",
+          "alternateName": "Portfolio of s-hirano-ist",
+          "url": "https://s-hirano.com",
+          "description": "Portfolio and blog pages of s-hirano-ist.",
+          "inLanguage": "ja",
+          "author": {
+            "@id": "https://s-hirano.com"
+          },
+          "publisher": {
+            "@id": "https://s-hirano.com"
+          }
         },
-        // FIXME: add more json-ld settings
-        // "potentialAction": {
-        //   "@type": "SearchAction",
-        //   "target": "https://yourportfolio.com/search?q={search_term_string}",
-        //   "query-input": "required name=search_term_string"
-        // },
-        "sameAs": [
-          "https://github.com/s-hirano-ist",
-          "https://x.com/s_hirano_ist"
-        ]
-      }
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "@id": "https://s-hirano.com",
+          "name": "s-hirano-ist",
+          "givenName": "空暉",
+          "familyName": "平野",
+          "alternateName": "s-hirano-ist",
+          "url": "https://s-hirano.com",
+          "email": "s-hirano-ist@outlook.com",
+          "jobTitle": "Software Engineer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "GMOインターネット株式会社",
+            "url": "https://www.internet.gmo"
+          },
+          "alumniOf": [
+            {
+              "@type": "EducationalOrganization",
+              "name": "大阪大学大学院 情報科学研究科 バイオ情報工学専攻",
+              "alternateName": "Graduate School of Information Science and Technology at Osaka University",
+              "url": "https://www.osaka-u.ac.jp"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "大阪大学 基礎工学部 情報科学科",
+              "alternateName": "School of Engineering Science at Osaka University",
+              "url": "https://www.osaka-u.ac.jp"
+            }
+          ],
+          // "hasCredential": [],
+          "knowsAbout": [
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Astro",
+            "AWS",
+            "Infrastructure as Code",
+            "Frontend Development",
+            "Web Development",
+            "Software Engineering"
+          ],
+          "sameAs": [
+            "https://github.com/s-hirano-ist",
+            "https://x.com/s_hirano_ist",
+            "https://twitter.com/s_hirano_ist",
+            "https://linkedin.com/in/空暉-平野-2a7183337"
+          ]
+        }
+      ]
     </script>
     <section>
       <div
