@@ -4,14 +4,14 @@ import PortfolioLinks from "@components/PortfolioLinks.astro";
 import TechStack from "@components/TechStack.astro";
 import { SITE } from "@config";
 // import achievementsData from "@layouts/Achievements.json";
-import Layout from "@layouts/Layout.astro";
+import DarkModeLayout from "@layouts/DarkModeLayout.astro";
 import Top from "@components/Top.astro";
 import Education from "@components/Education.astro";
 import WorkExperience from "@components/WorkExperience.astro";
 import Qualifications from "@components/Qualifications.astro";
 ---
 
-<Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
+<DarkModeLayout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
   <main class="background main-contents" data-theme="noTheme">
     <script type="application/ld+json" is:inline>
       {
@@ -56,15 +56,11 @@ import Qualifications from "@components/Qualifications.astro";
       </div>
     </section>
   </main>
-</Layout>
+</DarkModeLayout>
 
 <style>
   h2 {
     @apply animate-wiggle animate-infinite;
-  }
-
-  .background {
-    background: linear-gradient(#4f697b, #2a353d);
   }
 
   .main-contents h2 {
