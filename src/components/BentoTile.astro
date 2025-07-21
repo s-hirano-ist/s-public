@@ -12,8 +12,8 @@ export type Props = {
 const {
   title,
   size,
-  bgColor = "bg-white dark:bg-gray-800",
-  textColor = "text-gray-900 dark:text-gray-100",
+  bgColor = "bg-gray-800",
+  textColor = "text-gray-100",
   class: className,
 } = Astro.props;
 
@@ -27,12 +27,12 @@ const baseClasses = `
   ${bgColor}
   ${textColor}
   rounded-xl p-2 sm:p-4
-  transition-all duration-300 ease-out
-  lg:hover:scale-105 hover:shadow-lg hover:shadow-primary/20
-  border border-gray-200 dark:border-gray-700
+ :hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+  border border-gray-700
   group
   overflow-visible
-  ${className || ""}
+  ${className || ""} transition-all duration-300 ease-out
+  lg
 `;
 ---
 
