@@ -3,12 +3,15 @@ import sIcon from "@data/assets/s-icon-transparent.svg";
 import BentoTile from "@components/BentoTile.astro";
 import { SITE } from "@config";
 import { Image } from "astro:assets";
+
+const { class: className } = Astro.props;
 ---
 
 <BentoTile
   size="large"
   bgColor="bg-gradient-to-br from-cyan-50 to-blue-100 dark:from-cyan-900/20 dark:to-blue-900/20"
-  clickable={false}>
+  clickable={false}
+  class={className}>
   <div slot="content" class="timeline-container">
     <Image
       src={sIcon}

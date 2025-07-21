@@ -1,7 +1,5 @@
 ---
 import AboutMe from "@components/AboutMe.astro";
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import PortfolioLinks from "@components/PortfolioLinks.astro";
 import TechStack from "@components/TechStack.astro";
 import { SITE } from "@config";
@@ -39,25 +37,24 @@ import Qualifications from "@components/Qualifications.astro";
         ]
       }
     </script>
-    <Header title="Portfolio" darkModeDisabled />
     <section class="mb-8">
-      <div class="bento-grid">
-        <AboutMe />
+      <div
+        class="mx-auto grid grid-cols-1 gap-2 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <AboutMe class="order-2 lg:order-none" />
 
-        <Top />
+        <Top class="order-1 lg:order-none" />
 
-        <PortfolioLinks />
+        <PortfolioLinks class="order-3 lg:order-none" />
 
-        <TechStack />
+        <TechStack class="order-4 lg:order-none" />
 
-        <Education />
+        <Education class="order-5 lg:order-none" />
 
-        <WorkExperience />
+        <WorkExperience class="order-6 lg:order-none" />
 
-        <Qualifications />
+        <Qualifications class="order-7 lg:order-none" />
       </div>
     </section>
-    <Footer darkModeDisabled />
   </main>
 </Layout>
 
@@ -75,46 +72,7 @@ import Qualifications from "@components/Qualifications.astro";
   }
 
   .main-contents section {
-    @apply mx-auto px-4 pt-8;
-  }
-
-  /* scroll button */
-  .chevron {
-    position: absolute;
-    width: 28px;
-    height: 8px;
-    opacity: 0;
-    transform: scale3d(0.5, 0.5, 0.5);
-    animation: move 3s ease-out infinite;
-  }
-
-  .chevron:first-child {
-    animation: move 3s ease-out 1s infinite;
-  }
-
-  .chevron:nth-child(2) {
-    animation: move 3s ease-out 2s infinite;
-  }
-
-  .chevron::before,
-  .chevron::after {
-    width: 51%;
-    height: 100%;
-    content: " ";
-    position: absolute;
-    top: 0;
-    background: #fff;
-  }
-
-  .chevron::before {
-    left: 0;
-    transform: skew(0deg, 30deg);
-  }
-
-  .chevron::after {
-    right: 0;
-    width: 50%;
-    transform: skew(0deg, -30deg);
+    @apply mx-auto px-2 pt-8 sm:px-4;
   }
 
   @keyframes move {
@@ -157,52 +115,5 @@ import Qualifications from "@components/Qualifications.astro";
   /* Timeline inside BentoTile */
   .timeline-container {
     @apply mt-2 text-xs;
-  }
-
-  /* Bento Grid Layout */
-  .bento-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(150px, auto);
-    gap: 1rem;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  /* Responsive Bento Grid */
-  @media (width <= 1200px) {
-    .bento-grid {
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: minmax(150px, auto);
-    }
-  }
-
-  @media (width <= 1024px) {
-    .bento-grid {
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: minmax(140px, auto);
-    }
-  }
-
-  @media (width <= 768px) {
-    .bento-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: minmax(130px, auto);
-      gap: 0.75rem;
-    }
-  }
-
-  @media (width <= 480px) {
-    .bento-grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      gap: 1rem;
-    }
-
-    /* Reset all tiles to single column on mobile */
-    .bento-grid > * {
-      grid-column: 1 !important;
-      grid-row: auto !important;
-    }
   }
 </style>

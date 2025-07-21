@@ -1,12 +1,15 @@
 ---
 import BentoTile from "@components/BentoTile.astro";
+
+const { class: className } = Astro.props;
 ---
 
 <BentoTile
   title="GitHub Profile"
   bgColor="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20"
   size="large"
-  clickable={false}>
+  clickable={false}
+  class={className}>
   <svg
     slot="icon"
     xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +24,7 @@ import BentoTile from "@components/BentoTile.astro";
     ></path>
   </svg>
   <div slot="content">
-    <div class="flex flex-col justify-center items-center space-y-2">
+    <div class="flex flex-col items-center justify-center space-y-2">
       <img
         src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=s-hirano-ist&theme=blueberry"
         alt="GitHub Profile Details"
@@ -65,7 +68,8 @@ import BentoTile from "@components/BentoTile.astro";
   title="Experience"
   bgColor="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20"
   size="large"
-  clickable={false}>
+  clickable={false}
+  class={className}>
   <svg
     slot="icon"
     xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +121,8 @@ import BentoTile from "@components/BentoTile.astro";
   title="GitHub Trophies"
   bgColor="bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-indigo-900/20 dark:to-purple-900/20"
   size="large"
-  clickable={false}>
+  clickable={false}
+  class={className}>
   <svg
     slot="icon"
     xmlns="http://www.w3.org/2000/svg"

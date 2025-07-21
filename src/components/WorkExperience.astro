@@ -2,13 +2,16 @@
 import BentoTile from "@components/BentoTile.astro";
 import Timeline from "./Timeline.astro";
 import WorkExperienceData from "@data/portfolio/WorkExperience.json";
+
+const { class: className } = Astro.props;
 ---
 
 <BentoTile
   title="Work Experience"
   size="large"
   bgColor="bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-emerald-900/20 dark:to-teal-900/20"
-  clickable={false}>
+  clickable={false}
+  class={className}>
   <svg
     slot="icon"
     xmlns="http://www.w3.org/2000/svg"

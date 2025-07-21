@@ -2,13 +2,16 @@
 import BentoTile from "@components/BentoTile.astro";
 import Timeline from "./Timeline.astro";
 import qualificationData from "@data/portfolio/Qualification.json";
+
+const { class: className } = Astro.props;
 ---
 
 <BentoTile
   title="Qualifications"
   size="large"
   bgColor="bg-gradient-to-br from-yellow-50 to-orange-100 dark:from-yellow-900/20 dark:to-orange-900/20"
-  clickable={false}>
+  clickable={false}
+  class={className}>
   <svg
     slot="icon"
     xmlns="http://www.w3.org/2000/svg"

@@ -6,6 +6,7 @@ export type Props = {
   bgColor?: string;
   textColor?: string;
   clickable?: boolean;
+  class?: string;
 };
 
 const {
@@ -13,24 +14,26 @@ const {
   size,
   bgColor = "bg-white dark:bg-gray-800",
   textColor = "text-gray-900 dark:text-gray-100",
+  class: className,
 } = Astro.props;
 
 const sizeClasses = {
-  large: "col-span-2 row-span-2",
-  wide: "col-span-2 row-span-1 h-32",
-  tall: "col-span-1 row-span-2",
+  large: "col-span-1 row-auto",
+  wide: "col-span-1 row-auto h-32",
+  tall: "col-span-1 row-auto",
 };
 
 const baseClasses = `
   ${sizeClasses[size]}
   ${bgColor}
   ${textColor}
-  rounded-xl p-6
+  rounded-xl p-2 sm:p-4
   transition-all duration-300 ease-out
-  hover:scale-105 hover:shadow-lg hover:shadow-primary/20
+  sm:hover:scale-105 hover:shadow-lg hover:shadow-primary/20
   border border-gray-200 dark:border-gray-700
   group
   overflow-visible
+  ${className || ""}
 `;
 ---
 
