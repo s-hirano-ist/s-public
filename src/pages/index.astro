@@ -4,14 +4,14 @@ import PortfolioLinks from "@components/PortfolioLinks.astro";
 import TechStack from "@components/TechStack.astro";
 import { SITE } from "@config";
 // import achievementsData from "@layouts/Achievements.json";
-import DarkModeLayout from "@layouts/DarkModeLayout.astro";
 import Top from "@components/Top.astro";
 import Education from "@components/Education.astro";
 import WorkExperience from "@components/WorkExperience.astro";
 import Qualifications from "@components/Qualifications.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
-<DarkModeLayout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
+<Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
   <main class="background main-contents" data-theme="noTheme">
     <script type="application/ld+json" is:inline>
       {
@@ -56,7 +56,7 @@ import Qualifications from "@components/Qualifications.astro";
       </div>
     </section>
   </main>
-</DarkModeLayout>
+</Layout>
 
 <style>
   h2 {
