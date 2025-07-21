@@ -1,5 +1,5 @@
-import { MAX_RATING } from "@config";
 import type { ChangeEvent, MouseEvent } from "react";
+import { MAX_RATING } from "@config";
 
 export default function BookStatCard({
   totalBooks,

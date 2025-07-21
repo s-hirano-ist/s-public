@@ -1,6 +1,3 @@
-import BookStatCard from "@components/react/BookStatCard.tsx";
-import Rating from "@components/react/Rating.tsx";
-import books from "data/book/data.gen.json";
 import {
   useMemo,
   useState,
@@ -8,6 +5,9 @@ import {
   type ChangeEvent,
   type MouseEvent,
 } from "react";
+import BookStatCard from "@components/react/BookStatCard.tsx";
+import Rating from "@components/react/Rating.tsx";
+import books from "data/book/data.gen.json";
 
 export default function BookList() {
   const tags = [...new Set(books.map(book => book.tags).flat())];

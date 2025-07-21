@@ -1,10 +1,10 @@
 ---
+import { type CollectionEntry, getCollection } from "astro:content";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
 import Layout from "@layouts/Layout.astro";
 import slugify from "@utils/slugify";
-import { type CollectionEntry, getCollection } from "astro:content";
 
 export type Props = {
   post: CollectionEntry<"blog">;
