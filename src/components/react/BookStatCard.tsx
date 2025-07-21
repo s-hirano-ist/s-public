@@ -13,8 +13,8 @@ export default function BookStatCard({
   tags: string[];
   rating: number;
   selectedTag: string | undefined;
-  handleFilterRating: (e: ChangeEvent<HTMLInputElement>) => void;
-  handleTagClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  handleFilterRating: (_: ChangeEvent<HTMLInputElement>) => void;
+  handleTagClick: (_: MouseEvent<HTMLButtonElement>) => void;
 }) {
   return (
     <div className="stat mt-4 flex flex-col shadow">

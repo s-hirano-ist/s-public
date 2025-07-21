@@ -42,7 +42,7 @@ const baseClasses = `
   overflow-visible
 `;
 
-const ContentWrapper = clickable && href ? "a" : "div";
+const ContentWrapper = (clickable && href ? "a" : "div") as "a" | "div";
 ---
 
 <ContentWrapper
