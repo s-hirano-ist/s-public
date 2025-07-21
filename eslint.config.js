@@ -1,16 +1,16 @@
-import { configs as eslintPluginAstro } from "eslint-plugin-astro";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import eslint from "@eslint/js";
-import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
 import tsParser from "@typescript-eslint/parser";
+import { configs as eslintPluginAstro } from "eslint-plugin-astro";
+import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import tailwind from "eslint-plugin-tailwindcss";
-// import tseslint from "typescript-eslint";
+import { configs as eslintTypeScript } from "typescript-eslint";
 // import createTypeScriptImportResolver from "eslint-import-resolver-typescript";
 
 export default [
-  { ignores: [".astro/", "dist/", "script/"] },
+  { ignores: [".astro/", "dist/", "script/", "src/env.d.ts"] },
   eslint.configs.recommended,
-  // tseslint.configs.recommended,
+  ...eslintTypeScript.recommended,
   eslintPluginImportX.recommended,
   eslintPluginImportX.typescript,
   {
@@ -39,30 +39,30 @@ export default [
       "import-x/namespace": "off",
       "import-x/default": "off",
       "no-unused-vars": "off",
-      // "@typescript-eslint/consistent-type-imports": [
-      //   2,
-      //   { prefer: "type-imports" },
-      // ],
-      // "import/order": [
-      //   "error",
-      //   {
-      //     groups: ["builtin", "external", "parent", "sibling", "index"],
-      //     pathGroupsExcludedImportTypes: [],
-      //     alphabetize: { order: "asc" },
-      //     "newlines-between": "never",
-      //   },
-      // ],
+      "@typescript-eslint/consistent-type-imports": [
+        2,
+        { prefer: "type-imports" },
+      ],
+      "import-x/order": [
+        "error",
+        {
+          groups: ["builtin", "external", "parent", "sibling", "index"],
+          pathGroupsExcludedImportTypes: [],
+          alphabetize: { order: "asc" },
+          "newlines-between": "never",
+        },
+      ],
       "no-console": ["warn", { allow: ["error"] }],
-      // "@typescript-eslint/no-unused-vars": [
-      //   "warn",
-      //   {
-      //     argsIgnorePattern: "^_",
-      //     varsIgnorePattern: "^_",
-      //     caughtErrorsIgnorePattern: "^_",
-      //   },
-      // ],
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+        },
+      ],
       "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug on <Fragment />
-      // "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "tailwindcss/no-custom-classname": "off",
     },
   },

@@ -1,3 +1,4 @@
+import type { ImageMetadata } from "astro";
 import bottle_1_1 from "@data/assets/diy/bottle_1_1.jpg";
 import bottle_1_2 from "@data/assets/diy/bottle_1_2.jpg";
 import bottle_1_3 from "@data/assets/diy/bottle_1_3.jpg";
@@ -33,7 +34,6 @@ import wallet_4_1 from "@data/assets/diy/wallet_4_1.jpg";
 import wallet_4_2 from "@data/assets/diy/wallet_4_2.jpg";
 import watch_1_1 from "@data/assets/diy/watch_1_1.jpg";
 import watch_1_2 from "@data/assets/diy/watch_1_2.jpg";
-import type { ImageMetadata } from "astro";
 
 export type Content = {
   name: string;

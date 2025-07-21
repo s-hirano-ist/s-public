@@ -1,6 +1,6 @@
+import { getCollection } from "astro:content";
 import generateOgImage from "@utils/generateOgImage";
 import slugify from "@utils/slugify";
-import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);

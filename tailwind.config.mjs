@@ -1,7 +1,7 @@
-import tailwindcssMotion from "tailwindcss-motion";
-import daisyui from "daisyui";
 import tailwindTypography from "@tailwindcss/typography";
+import daisyui from "daisyui";
 import tailwindcssAnimated from "tailwindcss-animated";
+import tailwindcssMotion from "tailwindcss-motion";
 
 /** @type {import('tailwindcss').Config} */
 
