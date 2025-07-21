@@ -2,21 +2,26 @@
   {
     "date": "June 2018 - June 2020",
     "title": "MSK安心ステーション（アルバイト）",
-    "description": "自動車保険会社の事故受付のコールセンターで電話応対を担当。"
+    "description": "自動車保険会社の事故受付のコールセンターで電話応対を担当"
   },
   {
     "date": "October 2020 - January 2023",
     "title": "プログラボ豊中校（アルバイト）",
-    "description": "小中学生向けプログラミング教室で講師やサポートを担当。"
+    "description": "小中学生向けプログラミング教室で講師やサポートを担当"
   },
   {
     "date": "June 2022 - March 2024",
     "title": "株式会社Next Finance Tech",
-    "description": "フロントエンド・インフラ開発の業務委託。Next.js・Astro・TypeScriptを用いたWebサービスの開発、CI・CDの整備、AWS CDKと各種AWSサービスを用いたインフラ構築と運用に従事。"
+    "description": "フロントエンド・インフラ開発の業務委託。Next.js・Astro・TypeScriptを用いたWebサービスの開発、CI・CDの整備、AWS CDKと各種AWSサービスを用いたインフラ構築と運用に従事"
   },
   {
-    "date": "April 2024 - ",
-    "title": "GMOインターネットグループ株式会社 → GMOインターネット株式会社",
-    "description": ""
+    "date": "April 2024 - December 2024",
+    "title": "GMOインターネットグループ株式会社",
+    "description": "新卒年収710万プログラムにより新卒入社"
+  },
+  {
+    "date": "January 2025 - ",
+    "title": "GMOインターネット株式会社",
+    "description": "GMOインターネットグループが完全持株会社化し、子会社に事業を譲渡したため異動"
   }
 ]
