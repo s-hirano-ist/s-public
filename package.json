@@ -37,6 +37,7 @@
       "pnpm check",
       "pnpm fmt",
       "pnpm lint:secret",
+      "pnpm lint:css",
       "bash checkLicense.sh"
     ],
     "src/**/*.{js, jsx, ts, tsx, astro}": [

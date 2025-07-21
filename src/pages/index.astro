@@ -1,18 +1,14 @@
 ---
-import sIcon from "@data/assets/s-icon-transparent.svg";
 import AboutMe from "@components/AboutMe.astro";
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import PortfolioLinks from "@components/PortfolioLinks.astro";
 import TechStack from "@components/TechStack.astro";
-import Timeline from "@components/Timeline.astro";
 import { SITE } from "@config";
 // import achievementsData from "@layouts/Achievements.json";
-import educationData from "@data/portfolio/Education.json";
-import qualificationData from "@data/portfolio/Qualification.json";
-import workExperienceData from "@data/portfolio/WorkExperience.json";
 import Layout from "@layouts/Layout.astro";
-import { Image } from "astro:assets";
+import Top from "@components/Top.astro";
+import Education from "@components/Education.astro";
+import WorkExperience from "@components/WorkExperience.astro";
+import Qualifications from "@components/Qualifications.astro";
 ---
 
 <Layout title="Portfolio" description={`Portfolio of ${SITE.author}.`}>
@@ -41,49 +37,27 @@ import { Image } from "astro:assets";
         ]
       }
     </script>
-    <Header title="Portfolio" darkModeDisabled />
-    <section>
-      <Image src={sIcon} alt="" class="mx-auto w-full max-w-md rounded-full" />
+    <section class="mb-8">
+      <div
+        class="mx-auto grid grid-cols-1 gap-2 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <AboutMe class="order-2 lg:order-none" />
+
+        <Top class="order-1 lg:order-none" />
+
+        <PortfolioLinks class="order-3 lg:order-none" />
+
+        <TechStack class="order-4 lg:order-none" />
+
+        <Education class="order-5 lg:order-none" />
+
+        <WorkExperience class="order-6 lg:order-none" />
+
+        <Qualifications class="order-7 lg:order-none" />
+      </div>
     </section>
-    <section>
-      <a id="scroll-button" class="flex justify-center">
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <span class="text">Scroll down</span>
-      </a>
-    </section>
-    <section>
-      <h2>About me</h2>
-      <AboutMe />
-    </section>
-    <section>
-      <h2>Links</h2>
-      <PortfolioLinks />
-    </section>
-    <section>
-      <h2>Education</h2>
-      <Timeline data={educationData} />
-    </section>
-    <section>
-      <h2>Work Experience</h2>
-      <Timeline data={workExperienceData} />
-    </section>
-    <!-- <section>
-      <h2>Achievements</h2>
-      <Achievements />
-    </section> -->
-    <section>
-      <h2>Qualification</h2>
-      <Timeline data={qualificationData} />
-    </section>
-    <section>
-      <h2>Tech stack</h2>
-      <TechStack />
-    </section>
-    <Footer darkModeDisabled />
   </main>
 </Layout>
+
 <style>
   h2 {
     @apply animate-wiggle animate-infinite;
@@ -98,46 +72,7 @@ import { Image } from "astro:assets";
   }
 
   .main-contents section {
-    @apply mx-auto max-w-5xl px-4 pt-8;
-  }
-
-  /* scroll button */
-  .chevron {
-    position: absolute;
-    width: 28px;
-    height: 8px;
-    opacity: 0;
-    transform: scale3d(0.5, 0.5, 0.5);
-    animation: move 3s ease-out infinite;
-  }
-
-  .chevron:first-child {
-    animation: move 3s ease-out 1s infinite;
-  }
-
-  .chevron:nth-child(2) {
-    animation: move 3s ease-out 2s infinite;
-  }
-
-  .chevron::before,
-  .chevron::after {
-    width: 51%;
-    height: 100%;
-    content: " ";
-    position: absolute;
-    top: 0;
-    background: #fff;
-  }
-
-  .chevron::before {
-    left: 0;
-    transform: skew(0deg, 30deg);
-  }
-
-  .chevron::after {
-    right: 0;
-    width: 50%;
-    transform: skew(0deg, -30deg);
+    @apply mx-auto px-2 pt-8 sm:px-4;
   }
 
   @keyframes move {
@@ -175,5 +110,10 @@ import { Image } from "astro:assets";
     to {
       opacity: 1;
     }
+  }
+
+  /* Timeline inside BentoTile */
+  .timeline-container {
+    @apply mt-2 text-xs;
   }
 </style>

@@ -1,90 +1,118 @@
 ---
-import PageLinkCard from "@components/PageLinkCard.astro";
+import BentoTile from "@components/BentoTile.astro";
+import PageLinkCard from "./PageLinkCard.astro";
+
+const { class: className } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
-  <PageLinkCard href="/book" title="book" description="読書記録">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-book"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="currentColor"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-        d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path><path
-        d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path><path d="M3 6l0 13"
-      ></path><path d="M12 6l0 13"></path><path d="M21 6l0 13"></path></svg
-    >
-  </PageLinkCard>
-  <PageLinkCard href="/blog" title="blog" description="ブログ記事">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-map-route"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="currentColor"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M3 7l6 -3l6 3l6 -3v13l-6 3l-6 -3l-6 3v-13"></path>
-      <path d="M9 12v.01"></path>
-      <path d="M6 13v.01"></path>
-      <path d="M17 15l-4 -4"></path>
-      <path d="M13 15l4 -4"></path>
-    </svg>
-  </PageLinkCard>
-  <PageLinkCard
-    href="/photo"
-    title="sola-apochromat-lens"
-    description="撮影の議事録 from 2020年">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-camera"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="currentColor"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path
-        d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2"
-      ></path>
-      <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-    </svg>
-  </PageLinkCard>
-  <PageLinkCard
-    href="/diy"
-    title="sola-tannnin-diy"
-    description="DIYの議事録 from 2020年">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-axe"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="currentColor"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path
-        d="M13 9l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385"
-      ></path>
-      <path
-        d="M6.66 15.66l-3.32 -3.32a1.25 1.25 0 0 1 .42 -2.044l3.24 -1.296l6 -6l3 3l-6 6l-1.296 3.24a1.25 1.25 0 0 1 -2.044 .42z"
-      ></path>
-    </svg>
-  </PageLinkCard>
-</div>
+<BentoTile
+  title="Portfolio Links"
+  size="large"
+  bgColor="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20"
+  clickable={false}
+  class={className}>
+  <svg
+    slot="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    class="size-8"
+    aria-label="Portfolio Links"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-link"
+    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+      d="M9 15l6 -6"></path><path
+      d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path><path
+      d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+    ></path></svg
+  >
+  <div slot="content" class="text-xs">
+    <div class="grid grid-cols-1 gap-4">
+      <PageLinkCard
+        href="/book"
+        title="Book"
+        bgColor="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20">
+        <svg
+          slot="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          class="size-8"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          aria-label="book"
+          fill="none">
+          <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
+          <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
+          <path d="M3 6l0 13"></path>
+          <path d="M12 6l0 13"></path>
+          <path d="M21 6l0 13"></path>
+        </svg>
+      </PageLinkCard>
+      <PageLinkCard
+        href="/blog"
+        title="Blog"
+        bgColor="bg-gradient-to-br from-orange-50 to-red-100 dark:from-orange-900/20 dark:to-red-900/20">
+        <svg
+          slot="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          class="size-8"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          aria-label="blog"
+          fill="none">
+          <path d="M3 7l6 -3l6 3l6 -3v13l-6 3l-6 -3l-6 3v-13"></path>
+          <path d="M9 12v.01"></path>
+          <path d="M6 13v.01"></path>
+          <path d="M17 15l-4 -4"></path>
+          <path d="M13 15l4 -4"></path>
+        </svg>
+      </PageLinkCard>
+      <PageLinkCard
+        href="/photo"
+        title="Photography"
+        bgColor="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20">
+        <svg
+          slot="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          class="size-8"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-label="photo"
+          fill="none">
+          <path
+            d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2"
+          ></path>
+          <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+        </svg>
+      </PageLinkCard>
+      <PageLinkCard
+        href="/diy"
+        title="DIY"
+        bgColor="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20">
+        <svg
+          slot="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          class="size-8"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          aria-label="diy"
+          stroke="currentColor"
+          fill="none">
+          <path
+            d="M13 9l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385"
+          ></path>
+          <path
+            d="M6.66 15.66l-3.32 -3.32a1.25 1.25 0 0 1 .42 -2.044l3.24 -1.296l6 -6l3 3l-6 6l-1.296 3.24a1.25 1.25 0 0 1 -2.044 .42z"
+          ></path>
+        </svg>
+      </PageLinkCard>
+    </div>
+  </div>
+</BentoTile>

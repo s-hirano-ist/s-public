@@ -1,17 +1,148 @@
-<div>
-  <div>
-    <h3 class="py-2">新卒入社（2024年4月）までの主な実務経験</h3>
-    <ul class="list-[square] px-4">
-      <li><a href="https://nextjs.org/">Next.js</a>: 1年半以上</li>
-      <li><a href="https://astro.build/">Astro</a>: 1年半以上</li>
-      <li>
-        <a href="https://aws.amazon.com/">AWS</a>
-        を用いたインフラ構築と運用:1年半以上
-      </li>
-      <li>
-        <a href="https://www.docker.com/">Docker</a>を用いたコンテナ構築:
-        1年以上
-      </li>
-    </ul>
+---
+import BentoTile from "@components/BentoTile.astro";
+
+const { class: className } = Astro.props;
+---
+
+<BentoTile
+  title="GitHub Profile"
+  bgColor="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20"
+  size="large"
+  clickable={false}
+  class={className}>
+  <svg
+    slot="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    class="size-8"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    fill="none">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path
+      d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+    ></path>
+  </svg>
+  <div slot="content">
+    <div class="flex flex-col items-center justify-center space-y-2">
+      <img
+        src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=s-hirano-ist&theme=blueberry"
+        alt="GitHub Profile Details"
+        loading="lazy"
+        onerror="this.style.display='none'"
+        class="w-full"
+      />
+      <!-- <img
+        src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=s-hirano-ist&theme=blueberry"
+        alt="Top Repos Language"
+        loading="lazy"
+        onerror="this.style.display='none'"
+        class="w-full"
+      />
+      <img
+        src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=s-hirano-ist&theme=blueberry"
+        alt="Most Commit Language"
+        loading="lazy"
+        onerror="this.style.display='none'"
+        class="w-full"
+      /> -->
+      <img
+        alt="Top Languages"
+        loading="lazy"
+        onerror="this.style.display='none'"
+        class="w-full"
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=s-hirano-ist&theme=blueberry&layout=compact&hide_progress=true"
+      />
+      <img
+        alt="GitHub Stats"
+        class="w-full"
+        loading="lazy"
+        onerror="this.style.display='none'"
+        src="https://github-readme-stats.vercel.app/api?username=s-hirano-ist&theme=blueberry&layout=compact"
+      />
+    </div>
   </div>
-</div>
+</BentoTile>
+
+<BentoTile
+  title="Experience"
+  bgColor="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20"
+  size="large"
+  clickable={false}
+  class={className}>
+  <svg
+    slot="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    class="size-8"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    fill="none">
+    <path
+      d="M4 7v10c0 2.21 0 3.31.659 4.041.659.73 1.69.73 3.75.73h6.182c2.06 0 3.09 0 3.75-.73.659-.73.659-1.831.659-4.041V7"
+    ></path>
+    <path d="M20 7H4"></path>
+    <path d="M17 4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path>
+  </svg>
+  <div slot="content" class="text-xs">
+    <div>
+      <h3 class="mb-2 font-semibold">
+        新卒入社（2024年4月）までの主な実務経験
+      </h3>
+      <ul class="list-[square] space-y-1 px-4">
+        <li>
+          <a href="https://nextjs.org/" class="hover:text-primary">Next.js</a>:
+          1年半以上
+        </li>
+        <li>
+          <a href="https://astro.build/" class="hover:text-primary">Astro</a>:
+          1年半以上
+        </li>
+        <li>
+          <a href="https://aws.amazon.com/" class="hover:text-primary">AWS</a>
+          を用いたインフラ構築と運用: 1年半以上
+        </li>
+        <li>
+          <a href="https://www.docker.com/" class="hover:text-primary">Docker</a
+          >を用いたコンテナ構築: 1年以上
+        </li>
+      </ul>
+    </div>
+    <br />
+    <img
+      alt="my skills"
+      class="w-full"
+      src="https://skillicons.dev/icons?theme=dark&perline=4&i=next,astro,react,ts,js,html,css,python,swift,docker,aws,cloudflare"
+    />
+  </div>
+</BentoTile>
+
+<BentoTile
+  title="GitHub Trophies"
+  bgColor="bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-indigo-900/20 dark:to-purple-900/20"
+  size="large"
+  clickable={false}
+  class={className}>
+  <svg
+    slot="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    class="size-8"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    fill="none">
+    <path d="M6 9h6l3-3v2l-3 3h6"></path>
+    <path d="M18 8v4"></path>
+    <path d="M12 7v3a3 3 0 0 1-3 3H6"></path>
+    <path d="M9 14v4"></path>
+  </svg>
+  <div slot="content" class="text-xs">
+    <div class="space-y-2">
+      <img
+        src="https://github-profile-trophy.vercel.app/?username=s-hirano-ist&theme=darkhub&column=3"
+        alt="GitHub Trophies"
+        class="w-full"
+      />
+    </div>
+  </div>
+</BentoTile>

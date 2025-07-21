@@ -1,0 +1,31 @@
+---
+import BentoTile from "@components/BentoTile.astro";
+import Timeline from "./Timeline.astro";
+import WorkExperienceData from "@data/portfolio/WorkExperience.json";
+
+const { class: className } = Astro.props;
+---
+
+<BentoTile
+  title="Work Experience"
+  size="large"
+  bgColor="bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-emerald-900/20 dark:to-teal-900/20"
+  clickable={false}
+  class={className}>
+  <svg
+    slot="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    class="size-8"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    fill="none">
+    <path d="M12 12h.01"></path>
+    <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+    <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
+    <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+  </svg>
+  <div slot="content" class="timeline-container">
+    <Timeline data={WorkExperienceData} />
+  </div>
+</BentoTile>

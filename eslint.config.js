@@ -1,7 +1,7 @@
-import eslintPluginAstro from "eslint-plugin-astro";
+import { configs as eslintPluginAstro } from "eslint-plugin-astro";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import eslint from "@eslint/js";
-import eslintPluginImportX from "eslint-plugin-import-x";
+import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
 import tsParser from "@typescript-eslint/parser";
 import tailwind from "eslint-plugin-tailwindcss";
 // import tseslint from "typescript-eslint";
@@ -11,8 +11,8 @@ export default [
   { ignores: [".astro/", "dist/", "script/"] },
   eslint.configs.recommended,
   // tseslint.configs.recommended,
-  eslintPluginImportX.flatConfigs.recommended,
-  eslintPluginImportX.flatConfigs.typescript,
+  eslintPluginImportX.recommended,
+  eslintPluginImportX.typescript,
   {
     files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
     ignores: ["eslint.config.js"],
@@ -24,7 +24,7 @@ export default [
   },
 
   eslintPluginPrettierRecommended,
-  ...eslintPluginAstro.configs.recommended,
+  ...eslintPluginAstro.recommended,
   ...tailwind.configs["flat/recommended"],
   // "plugin:@typescript-eslint/recommended-type-checked",
   // "plugin:@typescript-eslint/stylistic-type-checked",
@@ -38,7 +38,7 @@ export default [
       "import-x/no-unresolved": "off",
       "import-x/namespace": "off",
       "import-x/default": "off",
-      "no-unused-vars": "warn",
+      "no-unused-vars": "off",
       // "@typescript-eslint/consistent-type-imports": [
       //   2,
       //   { prefer: "type-imports" },
