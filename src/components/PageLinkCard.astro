@@ -28,7 +28,11 @@ col-span-1 row-span-1 h-24 text-center
 `;
 ---
 
-<a href={href} class={baseClasses} target={targetBlank ? "_blank" : undefined}>
+<a
+  href={href}
+  class={baseClasses}
+  target={targetBlank ? "_blank" : undefined}
+  rel={targetBlank ? "noopener noreferrer" : undefined}>
   <div class="grid h-full grid-cols-4 items-center text-left text-primary">
     <slot name="icon" />
 
