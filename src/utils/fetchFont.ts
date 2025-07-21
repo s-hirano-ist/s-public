@@ -7,10 +7,8 @@ export const fetchFont = async (api: string) => {
       },
     })
   ).text();
-  const resource = css.match(
-    // Okay because only run on build
-    /src: url\((.+)\) format\('(opentype|truetype)'\)/,
-  );
+  // eslint-disable-next-line redos/no-vulnerable -- Font URL regex is necessary for parsing CSS
+  const resource = /src: url\((.+)\) format\('(opentype|truetype)'\)/.exec(css);
   if (!resource?.[1]) return;
   return await fetch(resource[1]).then(res => res.arrayBuffer());
 };

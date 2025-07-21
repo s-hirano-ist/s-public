@@ -1,3 +1,4 @@
+import { FlatCompat } from "@eslint/eslintrc";
 import eslint from "@eslint/js";
 import tsParser from "@typescript-eslint/parser";
 import { configs as eslintPluginAstro } from "eslint-plugin-astro";
@@ -7,8 +8,20 @@ import tailwind from "eslint-plugin-tailwindcss";
 import { configs as eslintTypeScript } from "typescript-eslint";
 // import createTypeScriptImportResolver from "eslint-import-resolver-typescript";
 
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+});
+
 export default [
-  { ignores: [".astro/", "dist/", "script/", "src/env.d.ts"] },
+  {
+    ignores: [
+      ".astro/",
+      "dist/",
+      "script/",
+      "src/env.d.ts",
+      ".stylelintrc.mjs",
+    ],
+  },
   eslint.configs.recommended,
   ...eslintTypeScript.recommended,
   eslintPluginImportX.recommended,
@@ -26,11 +39,24 @@ export default [
   eslintPluginPrettierRecommended,
   ...eslintPluginAstro.recommended,
   ...tailwind.configs["flat/recommended"],
-  // "plugin:@typescript-eslint/recommended-type-checked",
-  // "plugin:@typescript-eslint/stylistic-type-checked",
-  // "plugin:import/typescript",
-  // "plugin:astro/recommended",
-  // "plugin:redos/recommended",
+  ...compat.extends("plugin:redos/recommended"),
+  ...eslintTypeScript.recommendedTypeChecked.map(config => ({
+    ...config,
+    files: ["**/*.ts", "**/*.tsx"],
+  })),
+  ...eslintTypeScript.stylisticTypeChecked.map(config => ({
+    ...config,
+    files: ["**/*.ts", "**/*.tsx"],
+  })),
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
   {
     rules: {
       // "astro/no-set-html-directive": "error", // do not use `<Fragment set:html={html} />` due to XSS
