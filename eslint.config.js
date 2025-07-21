@@ -60,7 +60,6 @@ export default [
   {
     rules: {
       // "astro/no-set-html-directive": "error", // do not use `<Fragment set:html={html} />` due to XSS
-      "no-undef": "off", // FIXME: eslint.config.recommended
       "import-x/no-unresolved": "off",
       "import-x/namespace": "off",
       "import-x/default": "off",
