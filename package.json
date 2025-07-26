@@ -84,7 +84,6 @@
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
     "daisyui": "4.12.24",
-    "dotenv": "17.2.0",
     "eslint": "9.31.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
