@@ -34,7 +34,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc/LICENSE"
   },
-  "@eslint/js@9.31.0": {
+  "@eslint/js@9.32.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/js",
@@ -99,7 +99,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@types/slug",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/slug/LICENSE"
   },
-  "@typescript-eslint/parser@8.37.0": {
+  "@typescript-eslint/parser@8.38.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/@typescript-eslint/parser",
@@ -112,7 +112,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser/LICENSE"
   },
-  "astro@5.12.0": {
+  "astro@5.12.3": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
@@ -141,12 +141,6 @@
     "publisher": "Pouya Saadeghi",
     "path": "/home/runner/work/s-public/s-public/node_modules/daisyui",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/daisyui/LICENSE"
-  },
-  "dotenv@17.2.0": {
-    "licenses": "BSD-2-Clause",
-    "repository": "https://github.com/motdotla/dotenv",
-    "path": "/home/runner/work/s-public/s-public/node_modules/dotenv",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/dotenv/LICENSE"
   },
   "eslint-config-prettier@10.1.8": {
     "licenses": "MIT",
@@ -208,7 +202,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-tailwindcss",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-tailwindcss/LICENSE"
   },
-  "eslint@9.31.0": {
+  "eslint@9.32.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "publisher": "Nicholas C. Zakas",
@@ -341,7 +335,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/sanitize-html",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/sanitize-html/LICENSE"
   },
-  "satori@0.15.2": {
+  "satori@0.16.1": {
     "licenses": "MPL-2.0",
     "repository": "https://github.com/vercel/satori",
     "publisher": "Shu Ding",
@@ -443,7 +437,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/tsx",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tsx/LICENSE"
   },
-  "typescript-eslint@8.37.0": {
+  "typescript-eslint@8.38.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/typescript-eslint",
