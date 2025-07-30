@@ -1,8 +1,8 @@
 import { MAX_RATING } from "@config";
 
 type Props = {
-  rating: number;
   index: string;
+  rating: number;
 };
 
 export default function Rating({ rating, index }: Props) {

@@ -18,18 +18,18 @@ const api = googleBooksApis({
 });
 
 type BookType = {
-  ISBN: string;
-  title: string;
-
-  googleTitle: string;
-  googleSubtitle: string;
   googleAuthors: string[];
   googleDescription: string;
-  googleImgSrc: string;
-  googleHref: string;
 
+  googleHref: string;
+  googleImgSrc: string;
+  googleSubtitle: string;
+  googleTitle: string;
+  ISBN: string;
   rating: number;
+
   tags: string[];
+  title: string;
 }[];
 
 console.log("Started fetching book data from Google Books APIs...");

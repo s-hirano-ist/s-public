@@ -18,12 +18,14 @@ const options: SatoriOptions = {
   fonts: [
     {
       name: "Noto Sans JP",
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       data: regularFontData!,
       weight: 400,
       style: "normal",
     },
     {
       name: "Noto Sans JP",
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       data: boldFontData!,
       weight: 700,
       style: "normal",

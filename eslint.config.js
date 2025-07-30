@@ -1,28 +1,31 @@
+import eslintCss from "@eslint/css";
 import { FlatCompat } from "@eslint/eslintrc";
-import eslint from "@eslint/js";
+import eslintJs from "@eslint/js";
+import eslintMarkdown from "@eslint/markdown";
 import tsParser from "@typescript-eslint/parser";
 import { configs as eslintPluginAstro } from "eslint-plugin-astro";
 import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
+import perfectionistPlugin from "eslint-plugin-perfectionist";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import spellcheckPlugin from "eslint-plugin-spellcheck";
 import tailwind from "eslint-plugin-tailwindcss";
+// import ymlPlugin from "eslint-plugin-yml";
+import unicornPlugin from "eslint-plugin-unicorn";
+import unusedImportsPlugin from "eslint-plugin-unused-imports";
 import { configs as eslintTypeScript } from "typescript-eslint";
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
+  recommendedConfig: eslintJs.configs.recommended,
+  allConfig: eslintJs.configs.all,
 });
 
 export default [
   {
-    ignores: [
-      ".astro/",
-      "dist/",
-      "script/",
-      "src/env.d.ts",
-      ".stylelintrc.mjs",
-    ],
+    ignores: [".astro/", "dist/", "src/env.d.ts", ".stylelintrc.mjs"],
   },
-  eslint.configs.recommended,
-  ...eslintTypeScript.recommended,
+  eslintJs.configs.recommended,
+  ...eslintTypeScript.strict,
   eslintPluginImportX.recommended,
   eslintPluginImportX.typescript,
   {
@@ -87,4 +90,199 @@ export default [
       "tailwindcss/no-custom-classname": "off",
     },
   },
+
+  {
+    // eslint-plugin-unused-imports
+    plugins: { "unused-imports": unusedImportsPlugin },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off", // 重複エラーを防ぐため typescript-eslint の方を無効化
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "error",
+        {
+          vars: "all",
+          varsIgnorePattern: "^_",
+          args: "after-used",
+          argsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
+
+  // yaml FIXME: not working
+  // ...ymlPlugin.configs["flat/recommended"],
+  // {
+  //   files: ["**/*.yml", "**/*.yaml"],
+  //   rules: {
+  //     "yml/sort-keys": "error", // YAMLのキーをソート
+  //     "yml/no-empty-mapping-value": "error", // 空のマッピング値を禁止
+  //   },
+  // },
+
+  // jsonc FIXME: not working
+  // ...jsoncPlugin.configs["flat/recommended-with-jsonc"],
+  // {
+  //   files: ["**/*.json", "**/*.jsonc"],
+  //   rules: {
+  //     "jsonc/sort-keys": "off", // JSONのキーをソート
+  //     "jsonc/no-comments": "off", // .jsonc ファイルではコメントを許可
+  //   },
+  // },
+
+  // markdown FIXME: not working
+  ...eslintMarkdown.configs.recommended,
+  {
+    files: ["**/*.md", "**/*.mdx"],
+    processor: "markdown/markdown",
+    rules: {
+      "markdown/no-bare-urls": "error",
+    },
+  },
+
+  // css (not in use)
+  {
+    files: ["**/*.css"],
+    ignores: ["**/base.css"], // Tailwind CSS 4の新しい構文のため除外
+    plugins: {
+      css: eslintCss,
+    },
+    language: "css/css",
+    rules: {
+      "css/use-baseline": ["error", { available: "widely" }],
+    },
+  },
+
+  // spellcheck
+  {
+    plugins: { spellcheck: spellcheckPlugin },
+    rules: {
+      "spellcheck/spell-checker": [
+        "error",
+        {
+          minLength: 5, // 5 文字以上の単語をチェック
+          skipWords: [
+            "astro",
+            "tailwindcss",
+            "daisyui",
+            "frontmatter",
+            "uint",
+            "hirano",
+            "slugify",
+            "redos",
+            "apochromat",
+            "frontend",
+            "swiper",
+            "pathname",
+            "favicon",
+            "webmanifest",
+            "jsonc",
+            "sitemap",
+            "toker",
+            "bento",
+            "semibold",
+            "tabler",
+            "noopener",
+            "noreferrer",
+            "dropdown",
+            "rehype",
+            "autolink",
+            "integrations",
+            "shiki",
+            "checkbox",
+            "undef",
+            "nowrap",
+            "whitespace",
+            "mailto",
+            "readdir",
+            "pragma",
+            "webkit",
+            "firefox",
+            "compat",
+            "stylelintrc",
+            "tsconfig",
+            "lerna",
+            "filepath",
+            "parens",
+            "sidenav",
+          ], // チェックをスキップする単語の配列
+        },
+      ],
+    },
+  },
+
+  // unicorn
+  unicornPlugin.configs["recommended"],
+  {
+    rules: {
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/no-await-expression-member": "off",
+      "unicorn/no-null": "off",
+      "unicorn/prefer-code-point": "off",
+      "unicorn/no-abusive-eslint-disable": "off",
+      "unicorn/prefer-global-this": "off",
+      "unicorn/consistent-function-scoping": "off",
+      "unicorn/no-new-array": "off",
+      "unicorn/no-useless-spread": "off",
+      "unicorn/filename-case": "off",
+      "unicorn/numeric-separators-style": "off",
+      "unicorn/no-console-spaces": "off",
+      "unicorn/prefer-single-call": "off",
+      "unicorn/no-useless-undefined": "off",
+      "unicorn/prefer-logical-operator-over-ternary": "off",
+      "unicorn/no-array-reduce": "off",
+      "unicorn/text-encoding-identifier-case": "off",
+      "unicorn/new-for-builtins": "off",
+      "unicorn/new-for-builtins": "off",
+      "unicorn/prefer-array-some": "off",
+      "unicorn/prefer-array-flat-map": "off",
+      "unicorn/no-for-loop": "off",
+      "unicorn/no-process-exit": "off",
+      "no-dupe-keys": "off",
+    },
+  },
+
+  {
+    // eslint-plugin-perfectionist
+    plugins: { perfectionist: perfectionistPlugin },
+    rules: {
+      "perfectionist/sort-interfaces": "warn", // interface のプロパティの並び順をアルファベット順に統一
+      "perfectionist/sort-object-types": "warn", // Object 型のプロパティの並び順をアルファベット順に統一
+    },
+  },
+
+  // script/**
+  { files: ["script/**.ts"], rules: { "no-console": "off" } },
 ];
+
+// import importPlugin from "eslint-plugin-import";
+// {
+// 	// eslint-plugin-import の設定
+// 	plugins: { import: importPlugin },
+// 	rules: {
+// 		"import/order": [
+// 			// import の並び順を設定
+// 			"warn",
+// 			{
+// 				groups: [
+// 					"builtin",
+// 					"external",
+// 					"internal",
+// 					["parent", "sibling"],
+// 					"object",
+// 					"type",
+// 					"index",
+// 				],
+// 				"newlines-between": "always",
+// 				pathGroupsExcludedImportTypes: ["builtin"],
+// 				alphabetize: { order: "asc", caseInsensitive: true },
+// 				pathGroups: [
+// 					{
+// 						pattern: "react",
+// 						group: "external",
+// 						position: "before",
+// 					},
+// 				],
+// 			},
+// 		],
+// 	},
+// },

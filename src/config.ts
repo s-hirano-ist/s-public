@@ -1,10 +1,10 @@
 type Site = {
-  website: string;
   author: string;
   description: string;
-  title: string;
-  ogImage: string;
   email: string;
+  ogImage: string;
+  title: string;
+  website: string;
 };
 
 export const SITE: Site = {
