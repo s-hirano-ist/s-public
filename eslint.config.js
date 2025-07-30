@@ -5,6 +5,7 @@ import eslintMarkdown from "@eslint/markdown";
 import tsParser from "@typescript-eslint/parser";
 import { configs as eslintPluginAstro } from "eslint-plugin-astro";
 import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
+import perfectionistPlugin from "eslint-plugin-perfectionist";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import spellcheckPlugin from "eslint-plugin-spellcheck";
 import tailwind from "eslint-plugin-tailwindcss";
@@ -226,6 +227,15 @@ export default [
       "unicorn/no-for-loop": "off",
       "unicorn/no-process-exit": "off",
       "no-dupe-keys": "off",
+    },
+  },
+
+  {
+    // eslint-plugin-perfectionist
+    plugins: { perfectionist: perfectionistPlugin },
+    rules: {
+      "perfectionist/sort-interfaces": "warn", // interface のプロパティの並び順をアルファベット順に統一
+      "perfectionist/sort-object-types": "warn", // Object 型のプロパティの並び順をアルファベット順に統一
     },
   },
 

@@ -5,8 +5,8 @@ import ToggleThemeButton from "@components/ToggleThemeButton.astro";
 import { SITE } from "@config";
 
 export type Props = {
-  title?: string;
   darkModeDisabled?: boolean;
+  title?: string;
 };
 
 const { title = SITE.title, darkModeDisabled = false } = Astro.props;
