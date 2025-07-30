@@ -1,3 +1,4 @@
+import css from "@eslint/css";
 import { FlatCompat } from "@eslint/eslintrc";
 import eslint from "@eslint/js";
 import tsParser from "@typescript-eslint/parser";
@@ -80,6 +81,19 @@ export default [
       "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug on <Fragment />
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "tailwindcss/no-custom-classname": "off",
+    },
+  },
+
+  // css (not in use)
+  {
+    files: ["**/*.css"],
+    ignores: ["**/base.css"], // Tailwind CSS 4の新しい構文のため除外
+    plugins: {
+      css,
+    },
+    language: "css/css",
+    rules: {
+      "css/use-baseline": ["error", { available: "widely" }],
     },
   },
 
