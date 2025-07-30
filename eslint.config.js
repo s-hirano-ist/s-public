@@ -1,6 +1,7 @@
 import css from "@eslint/css";
 import { FlatCompat } from "@eslint/eslintrc";
 import eslint from "@eslint/js";
+import markdown from "@eslint/markdown";
 import tsParser from "@typescript-eslint/parser";
 import { configs as eslintPluginAstro } from "eslint-plugin-astro";
 import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
@@ -81,6 +82,16 @@ export default [
       "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug on <Fragment />
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "tailwindcss/no-custom-classname": "off",
+    },
+  },
+
+  // markdown FIXME: not working
+  ...markdown.configs.recommended,
+  {
+    files: ["**/*.md", "**/*.mdx"],
+    processor: "markdown/markdown",
+    rules: {
+      "markdown/no-bare-urls": "error",
     },
   },
 
