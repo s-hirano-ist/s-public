@@ -9,13 +9,5 @@ on:
 
 jobs:
   renovate-config-validator:
-    runs-on: ubuntu-24.04
-    permissions: {}
-    timeout-minutes: 10
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-
-      - name: validate renovate.json
-        run: npx --package=renovate -c renovate-config-validator
+    uses: s-hirano-ist/s-templates/.github/workflows/renovate-config-validator.yaml@main
+    secrets: inherit
