@@ -96,6 +96,8 @@
     "eslint-plugin-redos": "4.5.0",
     "eslint-plugin-spellcheck": "0.0.20",
     "eslint-plugin-tailwindcss": "3.18.2",
+    "eslint-plugin-unicorn": "60.0.0",
+    "eslint-plugin-unused-imports": "4.1.4",
     "eslint-plugin-yml": "1.18.0",
     "husky": "9.1.7",
     "license-checker-rseidelsohn": "4.4.2",

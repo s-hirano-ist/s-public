@@ -1,7 +1,7 @@
-import css from "@eslint/css";
+import eslintCss from "@eslint/css";
 import { FlatCompat } from "@eslint/eslintrc";
-import eslint from "@eslint/js";
-import markdown from "@eslint/markdown";
+import eslintJs from "@eslint/js";
+import eslintMarkdown from "@eslint/markdown";
 import tsParser from "@typescript-eslint/parser";
 import { configs as eslintPluginAstro } from "eslint-plugin-astro";
 import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
@@ -9,18 +9,22 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 import spellcheckPlugin from "eslint-plugin-spellcheck";
 import tailwind from "eslint-plugin-tailwindcss";
 // import ymlPlugin from "eslint-plugin-yml";
+import unicornPlugin from "eslint-plugin-unicorn";
+import unusedImportsPlugin from "eslint-plugin-unused-imports";
 import { configs as eslintTypeScript } from "typescript-eslint";
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
+  recommendedConfig: eslintJs.configs.recommended,
+  allConfig: eslintJs.configs.all,
 });
 
 export default [
   {
     ignores: [".astro/", "dist/", "src/env.d.ts", ".stylelintrc.mjs"],
   },
-  eslint.configs.recommended,
-  ...eslintTypeScript.recommended,
+  eslintJs.configs.recommended,
+  ...eslintTypeScript.strict,
   eslintPluginImportX.recommended,
   eslintPluginImportX.typescript,
   {
@@ -86,6 +90,24 @@ export default [
     },
   },
 
+  {
+    // eslint-plugin-unused-imports
+    plugins: { "unused-imports": unusedImportsPlugin },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off", // 重複エラーを防ぐため typescript-eslint の方を無効化
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "error",
+        {
+          vars: "all",
+          varsIgnorePattern: "^_",
+          args: "after-used",
+          argsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
+
   // yaml FIXME: not working
   // ...ymlPlugin.configs["flat/recommended"],
   // {
@@ -97,7 +119,7 @@ export default [
   // },
 
   // markdown FIXME: not working
-  ...markdown.configs.recommended,
+  ...eslintMarkdown.configs.recommended,
   {
     files: ["**/*.md", "**/*.mdx"],
     processor: "markdown/markdown",
@@ -111,7 +133,7 @@ export default [
     files: ["**/*.css"],
     ignores: ["**/base.css"], // Tailwind CSS 4の新しい構文のため除外
     plugins: {
-      css,
+      css: eslintCss,
     },
     language: "css/css",
     rules: {
@@ -173,6 +195,37 @@ export default [
           ], // チェックをスキップする単語の配列
         },
       ],
+    },
+  },
+
+  // unicorn
+  unicornPlugin.configs["recommended"],
+  {
+    rules: {
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/no-await-expression-member": "off",
+      "unicorn/no-null": "off",
+      "unicorn/prefer-code-point": "off",
+      "unicorn/no-abusive-eslint-disable": "off",
+      "unicorn/prefer-global-this": "off",
+      "unicorn/consistent-function-scoping": "off",
+      "unicorn/no-new-array": "off",
+      "unicorn/no-useless-spread": "off",
+      "unicorn/filename-case": "off",
+      "unicorn/numeric-separators-style": "off",
+      "unicorn/no-console-spaces": "off",
+      "unicorn/prefer-single-call": "off",
+      "unicorn/no-useless-undefined": "off",
+      "unicorn/prefer-logical-operator-over-ternary": "off",
+      "unicorn/no-array-reduce": "off",
+      "unicorn/text-encoding-identifier-case": "off",
+      "unicorn/new-for-builtins": "off",
+      "unicorn/new-for-builtins": "off",
+      "unicorn/prefer-array-some": "off",
+      "unicorn/prefer-array-flat-map": "off",
+      "unicorn/no-for-loop": "off",
+      "unicorn/no-process-exit": "off",
+      "no-dupe-keys": "off",
     },
   },
 
