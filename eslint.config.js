@@ -119,6 +119,16 @@ export default [
   //   },
   // },
 
+  // jsonc FIXME: not working
+  // ...jsoncPlugin.configs["flat/recommended-with-jsonc"],
+  // {
+  //   files: ["**/*.json", "**/*.jsonc"],
+  //   rules: {
+  //     "jsonc/sort-keys": "off", // JSONのキーをソート
+  //     "jsonc/no-comments": "off", // .jsonc ファイルではコメントを許可
+  //   },
+  // },
+
   // markdown FIXME: not working
   ...eslintMarkdown.configs.recommended,
   {
@@ -165,6 +175,7 @@ export default [
             "pathname",
             "favicon",
             "webmanifest",
+            "jsonc",
             "sitemap",
             "toker",
             "bento",
