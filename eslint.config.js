@@ -8,6 +8,7 @@ import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import spellcheckPlugin from "eslint-plugin-spellcheck";
 import tailwind from "eslint-plugin-tailwindcss";
+// import ymlPlugin from "eslint-plugin-yml";
 import { configs as eslintTypeScript } from "typescript-eslint";
 
 const compat = new FlatCompat({
@@ -84,6 +85,16 @@ export default [
       "tailwindcss/no-custom-classname": "off",
     },
   },
+
+  // yaml FIXME: not working
+  // ...ymlPlugin.configs["flat/recommended"],
+  // {
+  //   files: ["**/*.yml", "**/*.yaml"],
+  //   rules: {
+  //     "yml/sort-keys": "error", // YAMLのキーをソート
+  //     "yml/no-empty-mapping-value": "error", // 空のマッピング値を禁止
+  //   },
+  // },
 
   // markdown FIXME: not working
   ...markdown.configs.recommended,
@@ -168,3 +179,36 @@ export default [
   // script/**
   { files: ["script/**.ts"], rules: { "no-console": "off" } },
 ];
+
+// import importPlugin from "eslint-plugin-import";
+// {
+// 	// eslint-plugin-import の設定
+// 	plugins: { import: importPlugin },
+// 	rules: {
+// 		"import/order": [
+// 			// import の並び順を設定
+// 			"warn",
+// 			{
+// 				groups: [
+// 					"builtin",
+// 					"external",
+// 					"internal",
+// 					["parent", "sibling"],
+// 					"object",
+// 					"type",
+// 					"index",
+// 				],
+// 				"newlines-between": "always",
+// 				pathGroupsExcludedImportTypes: ["builtin"],
+// 				alphabetize: { order: "asc", caseInsensitive: true },
+// 				pathGroups: [
+// 					{
+// 						pattern: "react",
+// 						group: "external",
+// 						position: "before",
+// 					},
+// 				],
+// 			},
+// 		],
+// 	},
+// },
