@@ -13,13 +13,7 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: [
-      ".astro/",
-      "dist/",
-      "script/",
-      "src/env.d.ts",
-      ".stylelintrc.mjs",
-    ],
+    ignores: [".astro/", "dist/", "src/env.d.ts", ".stylelintrc.mjs"],
   },
   eslint.configs.recommended,
   ...eslintTypeScript.recommended,
@@ -87,4 +81,5 @@ export default [
       "tailwindcss/no-custom-classname": "off",
     },
   },
+  { files: ["script/**.ts"], rules: { "no-console": "off" } },
 ];
