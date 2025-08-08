@@ -26,13 +26,14 @@
 **Markdown Linting** - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)  
 **CSS Linting** - [Stylelint](https://stylelint.io/)  
 **Secret linting** - [secretlint](https://github.com/secretlint/secretlint)  
-**Auto Commit Rejection** - [Husky](https://typicode.github.io/husky/)  
+**Auto Commit Rejection** - [Husky](https://typicode.github.io/husky/) | [lint-staged](https://github.com/lint-staged/lint-staged)  
+**Commit Convention** - [Commitizen](https://commitizen-tools.github.io/commitizen/)  
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
 **HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
 **Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
 **Visual regression** - [Playwright test](https://playwright.dev/docs/test-intro/)  
 **SVG optimization** - [svgo](https://github.com/svg/svgo)  
-**Vulnerabilities Check** - [npm-audit](https://docs.npmjs.com/cli/v10/commands/npm-audit) [Dependabot alert](https://docs.github.com/ja/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
+**Vulnerabilities Check** - [pnpm audit](https://pnpm.io/cli/audit) | [Dependabot alert](https://docs.github.com/ja/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
 
 ### My infrastructure stack
 
@@ -53,23 +54,13 @@ pnpm install
 
 ### Adding photos
 
-Run task.json to add photos to `./src/assets/photo`.
-
-Instead, run the following command if you added photos to `./src/assets/photo`.
-
-- if python installed
+Add photos to `./src/data/assets/photo/` and run:
 
 ```bash
-python script/generate_photo_path.py
+pnpm generate:photo
 ```
 
-- if docker installed
-
-```bash
-docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app python:3.11 python3 script/generate_photo_path.py
-```
-
-### Update books at `src/content/book/original.json`
+### Update books
 
 ```bash
 pnpm generate:book
@@ -115,7 +106,7 @@ All commands are run from the root of the project, from a terminal:
 | Command                 | Action                                         |
 | :---------------------- | :--------------------------------------------- |
 | `pnpm install`          | Installs dependencies                          |
-| `pnpm check`            | Check types                                    |
+| `pnpm check`            | Check Astro types                              |
 | `pnpm dev`              | Starts local dev server at `localhost:4321`    |
 | `pnpm build`            | Build production site to `./dist`              |
 | `pnpm preview`          | Preview build locally                          |
@@ -126,16 +117,17 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm lint:fix`         | Fix lint with ESLint                           |
 | `pnpm lint:mark`        | Lint markdown files with markdownlint-cli2     |
 | `pnpm lint:mark:fix`    | Fix lint markdown files with markdownlint-cli2 |
-| `pnpm lint:css`         | Lint css files with StyleLint                  |
-| `pnpm lint:css:fix`     | Fix lint css files with StyleLint              |
-| `pnpm lint:secret`      | Lint secrets files with secretLint             |
+| `pnpm lint:css`         | Lint CSS files with Stylelint                  |
+| `pnpm lint:css:fix`     | Fix lint CSS files with Stylelint              |
+| `pnpm lint:secret`      | Lint secrets with secretlint                   |
 | `pnpm generate:book`    | Generate book data using Google Books API      |
 | `pnpm generate:photo`   | Generate photo paths                           |
 | `pnpm license:summary`  | Generate license summary                       |
 | `pnpm license:json`     | Generate license JSON                          |
 | `pnpm security`         | Security check with pnpm audit                 |
-| `pnpm snapshots`        | Visual regression with existing screenshots    |
-| `pnpm snapshots:update` | Visual regression but update snapshots         |
+| `pnpm snapshots`        | Run visual regression tests with Playwright    |
+| `pnpm snapshots:update` | Update visual regression snapshots             |
+| `pnpm commit`           | Create commit with Commitizen                  |
 
 ## 🪝 Tags & Realease
 
@@ -154,7 +146,3 @@ Licensed under the MIT License, Copyright © 2024
 ### Licenses of used libraries
 
 See `license.summary.txt` for summary of used licenses.
-
-## 🔒 Security
-
-[s-hirano.com/summary/coding-security](https://s-hirano.com/summary/coding-security)を参照。
