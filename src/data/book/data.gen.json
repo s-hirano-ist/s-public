@@ -840,6 +840,20 @@
     "rating": 3
   },
   {
+    "ISBN": "9784296206704",
+    "title": "AWSクラウド設計完全ガイド",
+    "googleTitle": "AWSクラウド設計完全ガイド",
+    "googleSubtitle": "",
+    "googleAuthors": [
+      "アクセンチュア株式会社戸賀慶福垣内孝造竹内誠一浪谷浩一澤田拓也/ 崎原晴香浅輪和哉村田亜弥"
+    ],
+    "googleDescription": "これから構築するシステムに対して、多種多様なAWSのサービスから最適なサービスを選定し、組み合わせるノウハウが身につく。",
+    "googleImgSrc": "https://books.google.com/books/content?id=Akgd0QEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=Akgd0QEACAAJ&dq=isbn:9784296206704&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 3
+  },
+  {
     "ISBN": "9784297113674",
     "title": "要件定義のセオリーと実践方法がしっかりわかる教科書",
     "googleTitle": "図解即戦力要件定義のセオリーと実践方法がこれ1冊でしっかりわかる教科書",
@@ -850,6 +864,18 @@
     "googleHref": "https://books.google.com/books?id=N8CXzQEACAAJ&dq=isbn:9784297113674&hl=&source=gbs_api",
     "tags": [],
     "rating": 3
+  },
+  {
+    "ISBN": "9784297125578",
+    "title": "WordPressオリジナルテーマ制作入門",
+    "googleTitle": "WordPressオリジナルテーマ制作入門",
+    "googleSubtitle": "",
+    "googleAuthors": ["清水由規", "清水久美子", "鈴木力哉", "西岡由美"],
+    "googleDescription": "はじめての自作テーマは これ1冊で大丈夫! 作りながら学べる入門書です。 WordPressを使った案件で、オリジナルテーマを作りたい、作らなければならなくなった。そんな時、HTMLやCSSはわかるけど、PHPは...。そもそもテーマってどうやって作ればいいの?そんな皆さんのために、本書はサンプルファイルとステップ解説で、テーマの自作方法を丁寧に解説。あらかじめ用意されたHTMLファイルをPHPファイルへと落とし込み、CSSを適用。ブロックエディターに対応したテーマを作成します。これ1冊で、オリジナルテーマの作り方がしっかり学べます!",
+    "googleImgSrc": "https://books.google.com/books/content?id=alW6zgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=alW6zgEACAAJ&dq=isbn:9784297125578&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 2
   },
   {
     "ISBN": "9784297133344",
@@ -876,6 +902,18 @@
     "rating": 2
   },
   {
+    "ISBN": "9784297139438",
+    "title": "Tailwind CSS実践入門",
+    "googleTitle": "Tailwind CSS実践入門",
+    "googleSubtitle": "",
+    "googleAuthors": ["工藤智祥"],
+    "googleDescription": "本書はTailwind CSSの実践的な入門書です。フロントエンドエンジニア、マークアップエンジニア、そしてデザインシステムの構築に興味があるデザイナーを対象に、Tailwind CSSの中核的な思想である「ユーティリティファースト」の理解へといざないます。Tailwind CSSの基本的な使い方や、デフォルトテーマによって提供されるクラスの紹介はもちろん、テーマのカスタマイズやプラグインの作成によってデザインシステムを作るための実践的なノウハウも詳説します。",
+    "googleImgSrc": "https://books.google.com/books/content?id=Jj9Z0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=Jj9Z0AEACAAJ&dq=isbn:9784297139438&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 3
+  },
+  {
     "ISBN": "9784297139513",
     "title": "人生が整うマウンティング大全",
     "googleTitle": "人生が整うマウンティング大全",
@@ -888,6 +926,25 @@
     "rating": 4
   },
   {
+    "ISBN": "9784297143176",
+    "title": "[入門]ドメイン駆動設計",
+    "googleTitle": "[入門]ドメイン駆動設計――基礎と実践・クリーンアーキテクチャ",
+    "googleSubtitle": "",
+    "googleAuthors": [
+      "増田亨",
+      "田中ひさてる",
+      "奥澤俊樹",
+      "中村充志",
+      "成瀬允宣",
+      "大西政徳"
+    ],
+    "googleDescription": "ソフトウェア開発でドメイン駆動設計が注目されています。ソフトウェアデザイン誌で大変好評だった、ドメイン駆動設計特集の過去記事(2024年3月号、2023年2月号など)を再編集し、1冊にまとめました。ソフトウェアの設計は現在さまざまな視点で検討されており、開発の成功をいかに実現し達成するか重要になっています。本書は、ドメイン駆動設計の第一人者である増田亨氏を中心に、現場でドメイン駆動設計を実践し得られた知見をもとに、最前線の情報を得ることができます。 第1章においてはマイクロサービスなどの分散アーキテクチャやアジャイル開発における設計のアプローチとして,近年注目を集めている「ドメイン駆動設計」。その元となる書籍『エリック・エヴァンスのドメイン駆動設計』(いわゆる“エヴァンス本”)は,本書では、“エヴァンス本”の要点をかみ砕き,オブジェクト指向,アジャイル開発,分散アーキテクチャとの関係性から,設計の考え方とやり方を解説します。根本の考え方を理解し,現場での実践例を見ることで,設計力アップにつながるでしょう。引き続き第2章では、ドメイン駆動設計(DDD)の実装は,ドメイン(業務領域)を深く理解することから始まります。DDDの概要を再確認しつつ,実例を交えたDDDの手法を解説します。DDDの根幹を担う「ユビキタス言語の策定」,ドメインの発見に役立つ「イベントストーミング」,そしてイベントストーミングで得られた知識からコードを導く「イベントソーシング」という,効果的な3つの手法を実際に体験しましょう。そして第3章では、DDDからクリーンアーキテクチャの解説を行います。",
+    "googleImgSrc": "https://books.google.com/books/content?id=kW630AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=kW630AEACAAJ&dq=isbn:9784297143176&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 3
+  },
+  {
     "ISBN": "9784297144920",
     "title": "失敗しないシステム企画",
     "googleTitle": "失敗しないシステム企画~「経営コンサルタントの視点」でビジネスを捉える~",
@@ -897,6 +954,30 @@
     "googleImgSrc": "https://books.google.com/books/content?id=oPHb0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "googleHref": "https://books.google.com/books?id=oPHb0AEACAAJ&dq=isbn:9784297144920&hl=&source=gbs_api",
     "tags": ["システム"],
+    "rating": 2
+  },
+  {
+    "ISBN": "9784297147488",
+    "title": "セキュリティエンジニアの知識地図",
+    "googleTitle": "セキュリティエンジニアの知識地図",
+    "googleSubtitle": "",
+    "googleAuthors": [
+      "井上圭",
+      "大塚淳平",
+      "幸田将司",
+      "国分裕",
+      "下川善久",
+      "洲崎俊",
+      "関根鉄平",
+      "坪井祐一",
+      "山本和也",
+      "山本健太",
+      "吉田聡"
+    ],
+    "googleDescription": "No description",
+    "googleImgSrc": "https://books.google.com/books/content?id=jFsI0QEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=jFsI0QEACAAJ&dq=isbn:9784297147488&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
     "rating": 2
   },
   {
@@ -1552,6 +1633,18 @@
     "rating": 3
   },
   {
+    "ISBN": "9784756923417",
+    "title": "うまく「雑談できる人」と「できない人」の習慣",
+    "googleTitle": "うまく「雑談できる人」と「できない人」の習慣",
+    "googleSubtitle": "",
+    "googleAuthors": ["松橋良紀"],
+    "googleDescription": "NLP心理学に基づいた、人見知りでも実践できる、 雑談を通して成果を出す方法が身につきます。",
+    "googleImgSrc": "https://books.google.com/books/content?id=Qc6q0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=Qc6q0AEACAAJ&dq=isbn:9784756923417&hl=&source=gbs_api",
+    "tags": ["マネジメント"],
+    "rating": 3
+  },
+  {
     "ISBN": "9784761261436",
     "title": "一冊の手帳で夢は必ずかなう",
     "googleTitle": "一冊の手帳で夢は必ずかなう",
@@ -1732,6 +1825,18 @@
     "rating": 3
   },
   {
+    "ISBN": "9784798069012",
+    "title": "C#フレームワーク ASP.NET Core入門",
+    "googleTitle": "C#ﾌﾚｰﾑﾜｰｸASP.NET Core入門.NET7対応",
+    "googleSubtitle": "",
+    "googleAuthors": ["掌田津耶乃"],
+    "googleDescription": "C#フレームワーク ASP.NET Core 3入門の改訂版。ASP.NET Coreの.NET7、使用ツール類の新バージョン、Blazorなどの新規ツールへ対応。解説はサンプルを作りながら進むハンズオン形式。",
+    "googleImgSrc": "https://books.google.com/books/content?id=7nWxEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=7nWxEAAAQBAJ&dq=isbn:9784798069012&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 3
+  },
+  {
     "ISBN": "9784798141770",
     "title": "おうちで学べるセキュリティのきほん",
     "googleTitle": "おうちで学べるセキュリティのきほん",
@@ -1742,6 +1847,18 @@
     "googleHref": "https://books.google.com/books?id=XVgICgAAQBAJ&dq=isbn:9784798141770&hl=&source=gbs_api",
     "tags": ["プログラミング"],
     "rating": 2
+  },
+  {
+    "ISBN": "9784798150727",
+    "title": "ドメイン駆動設計入門",
+    "googleTitle": "ドメイン駆動設計入門 ボトムアップでわかる！ドメイン駆動設計の基本",
+    "googleSubtitle": "",
+    "googleAuthors": ["成瀬允宣"],
+    "googleDescription": "学習しやすいパターンが満載！ ドメイン駆動設計をやさしく学べる入門書！ 【本書の概要】 本書は、 『エリック・エヴァンスのドメイン駆動設計』（ISBN978-4-7981-2196-3、翔泳社）、 『実践ドメイン駆動設計』（ISBN978-4-7981-3161-0、翔泳社） に感銘を受けた著者が贈る、ドメイン駆動設計の入門書です。 【対象読者】 『エリック・エヴァンスのドメイン駆動設計』や 『実践ドメイン駆動設計』をこれから読もうとしている方、 もしくはすでに読んだものの、「もう少しやさしい入門書も読みたい」 と感じているエンジニアの方を対象としています。 【本書の特徴】 ドメイン駆動設計において、実践が難しいものは後回しにして、 理解しやすい実装パターンからドメイン駆動設計の世界に 飛び込んでもらうことを目的としています。 そこで初心者にとって、理解しやすい、そして実践しやすいパターンからスタートできるよう、 解説を工夫しています。 またドメイン駆動設計で頻出するパターンの記述方法やその目的も併せて解説しています。 本書で解説するパターンは以下のとおりです。 【知識を表現するパターン】 ・値オブジェクト ・エンティティ ・ドメインサービス 【アプリケーションを実現するためのパターン】 ・リポジトリ ・アプリケーションサービス ・ファクトリ 【知識を表現する、より発展的なパターン】 ・集約 ・仕様",
+    "googleImgSrc": "https://books.google.com/books/content?id=b0vODwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=b0vODwAAQBAJ&dq=isbn:9784798150727&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 5
   },
   {
     "ISBN": "9784798155807",
@@ -1790,6 +1907,18 @@
     "googleHref": "https://books.google.com/books?id=G9YPEAAAQBAJ&dq=isbn:9784798169941&hl=&source=gbs_api",
     "tags": ["ブロックチェーン"],
     "rating": 2
+  },
+  {
+    "ISBN": "9784798170602",
+    "title": "フロントエンド開発のためのセキュリティ入門知らなかったでは済まされない脆弱性対策の必須知識",
+    "googleTitle": "フロントエンド開発のためのセキュリティ入門 知らなかったでは済まされない脆弱性対策の必須知識",
+    "googleSubtitle": "",
+    "googleAuthors": ["平野 昌士"],
+    "googleDescription": "Webアプリケーションの堅牢化に欠かせない知識を凝縮! セキュリティ学習のスタートに最適の一冊! 本書は、安全なWebアプリケーションを開発するための基本知識を、フロントエンドエンジニア向けに解説したセキュリティの入門書です。 これまでWebアプリケーションの開発で、セキュリティは「バックエンドの仕事」というイメージの強い領域でした。しかし、アプリケーションの安全性を高めるためには、フロントエンドエンジニアにも、セキュリティの基礎知識や具体的な対策の実践が求められます。 本書では、Webセキュリティの必須知識である「HTTP」「オリジン」などの基礎トピックや、「XSS」「CSRF」といったフロントエンドを狙ったサイバー攻撃の仕組みを、サンプルアプリケーションを舞台にしたハンズオンで学びます。 もちろん、攻撃からユーザーを守る防御の手法もしっかりおさえます。個々の攻撃手法に応じた対策のほか、「認証機能の実装」「JavaScriptライブラリの安全な使い方」など、開発現場で役立つ実践的な脆弱性対策もカバーしているので、自分の開発で取り入れられるセキュリティ向上のヒントが多く見つかるはずです。 ■目次 第1章 Webセキュリティ概要 第2章 本書のハンズオンの準備 第3章 HTTP 第4章 オリジンによるWebアプリケーション間のアクセス制限 第5章 XSS 第6章 その他の受動的攻撃(CSRF、クリックジャッキング、オープンリダイレクト) 第7章 認証・認可 第8章 ライブラリを狙ったセキュリティリスク 付録 HTTPS化 【著者】 ●平野 昌士 サイボウズ株式会社 フロントエンドエンジニア JSConf JPスタッフや関西Node学園といったコミュニティの運営を行う傍ら、OSS活動にも取り組んでおり、Node.js Core Collaborator(コミッター)に選出されている。WebとJavaScriptが好きでブログや雑誌の記事執筆、イベントでの講演など多数。 【監修】 ●はせがわ ようすけ 株式会社セキュアスカイ・テクノロジー 取締役CTO Internet Explorer、Mozilla FirefoxをはじめWebアプリケーションに関する多数の脆弱性を発見。 Black Hat Japan 2008、韓国POC 2008、2010、OWASP AppSec APAC 2014、CODE BLUE 2016他講演多数。 ●後藤つぐみ 株式会社セキュアスカイ・テクノロジー セキュリティエンジニア 脆弱性診断業務に従事する傍らで、同社内の脆弱性診断員に向けた業務マニュアルの作成およびレビューをリードする。 ※本電子書籍は同名出版物を底本として作成しました。記載内容は印刷出版当時のものです。 ※印刷出版再現のため電子書籍としては不要な情報を含んでいる場合があります。 ※印刷出版とは異なる表記・表現の場合があります。予めご了承ください。 ※プレビューにてお手持ちの電子端末での表示状態をご確認の上、商品をお買い求めください。 (翔泳社)",
+    "googleImgSrc": "https://books.google.com/books/content?id=6TCwEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=6TCwEAAAQBAJ&dq=isbn:9784798170602&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 4
   },
   {
     "ISBN": "9784798179421",
@@ -1900,6 +2029,18 @@
     "rating": 5
   },
   {
+    "ISBN": "9784802614214",
+    "title": "HTMLサイトをWordPressにする本",
+    "googleTitle": "HTMLサイトをWordPressにする本",
+    "googleSubtitle": "",
+    "googleAuthors": ["久保田涼子", "西原礼奈", "阿諏訪聡美"],
+    "googleDescription": "No description",
+    "googleImgSrc": "https://books.google.com/books/content?id=K_j4zwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=K_j4zwEACAAJ&dq=isbn:9784802614214&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 3
+  },
+  {
     "ISBN": "9784804706191",
     "title": "その恋ただの執着です",
     "googleTitle": "いい女は、“去る者”を追わないその恋、ただの執着です",
@@ -1912,6 +2053,18 @@
     "rating": 4
   },
   {
+    "ISBN": "9784814400911",
+    "title": "Tidy First?",
+    "googleTitle": "Tidy First?",
+    "googleSubtitle": "個人で実践する経験主義的ソフトウェア設計",
+    "googleAuthors": ["Kent Beck"],
+    "googleDescription": "XPの考案者ケント・ベックが、コードを整理し読みやすくするための理論とテクニックを提案。ソフトウェアデザインの理論を学ぶ。",
+    "googleImgSrc": "https://books.google.com/books/content?id=2I380AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=2I380AEACAAJ&dq=isbn:9784814400911&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 3
+  },
+  {
     "ISBN": "9784815602734",
     "title": "言語化力",
     "googleTitle": "言語化力",
@@ -1921,6 +2074,18 @@
     "googleImgSrc": "https://books.google.com/books/content?id=CTPLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "googleHref": "https://books.google.com/books?id=CTPLDwAAQBAJ&dq=isbn:9784815602734&hl=&source=gbs_api",
     "tags": ["自己啓発"],
+    "rating": 3
+  },
+  {
+    "ISBN": "9784815607388",
+    "title": "AWS認定資格試験テキスト AWS認定ソリューションアーキテクト - アソシエイト改訂第2版",
+    "googleTitle": "AWS認定資格試験テキスト　AWS認定ソリューションアーキテクト - アソシエイト　改訂第2版",
+    "googleSubtitle": "",
+    "googleAuthors": ["佐々木拓郎", "林晋一郎", "金澤圭"],
+    "googleDescription": "最短ルートで合格へ！ ※この電子書籍は固定レイアウト型で配信されております。固定レイアウト型は文字だけを拡大することや、文字列のハイライト、検索、辞書の参照、引用などの機能が使用できません。 AWSを使って安全で堅牢なアプリケーションの設計およびデプロイできる知識をもっているかを証明するのが、「AWS認定 ソリューションアーキテクト - アソシエイト」試験です。 本書は、2020年に改訂された新しい「SAA-C02」試験に対応した改訂を行った試験対策教科書です。合格に必要な「レジリエントアーキテクチャの設計」「高パフォーマンスアーキテクチャの設計」「セキュアなアプリケーションとアーキテクチャの設計」「コスト最適化アーキテクチャの設計」といったカテゴリの知識を、しっかり丁寧に解説しています。 実際のAWSを使ったシステムの豊富な構築経験と深い知識を持った著者が、合格のポイントになる知識と解答の考え方を理解できるように構成しています。 さらに、練習問題と模擬問題で知識を解答につなげる力がしっかりと身につきます。",
+    "googleImgSrc": "https://books.google.com/books/content?id=-g4VEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=-g4VEAAAQBAJ&dq=isbn:9784815607388&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
     "rating": 3
   },
   {
@@ -2005,6 +2170,30 @@
     "googleImgSrc": "https://books.google.com/books/content?id=in4ADQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
     "googleHref": "https://books.google.com/books?id=in4ADQAAQBAJ&dq=isbn:9784839955557&hl=&source=gbs_api",
     "tags": ["デザイン"],
+    "rating": 2
+  },
+  {
+    "ISBN": "9784839981877",
+    "title": "作って学ぶ WordPress ブロックテーマ",
+    "googleTitle": "作って学ぶ WordPress ブロックテーマ",
+    "googleSubtitle": "",
+    "googleAuthors": ["エビスコム"],
+    "googleDescription": "これからのWordPressテーマ作成の標準、ブロックテーマをきちんとマスターする!",
+    "googleImgSrc": "https://books.google.com/books/content?id=owqTzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=owqTzwEACAAJ&dq=isbn:9784839981877&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
+    "rating": 2
+  },
+  {
+    "ISBN": "9784839985028",
+    "title": "つくりながら学ぶ!生成AIアプリ&エージェント開発入門",
+    "googleTitle": "つくりながら学ぶ!生成AIアプリ&エージェント開発入門",
+    "googleSubtitle": "",
+    "googleAuthors": ["ML_Bear"],
+    "googleDescription": "大規模言語モデルを活用して実戦的なAIアプリ・エージェントを開発しよう!",
+    "googleImgSrc": "https://books.google.com/books/content?id=m6TJ0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=m6TJ0AEACAAJ&dq=isbn:9784839985028&hl=&source=gbs_api",
+    "tags": ["プログラミング"],
     "rating": 2
   },
   {

@@ -41,7 +41,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc/LICENSE"
   },
-  "@eslint/js@9.32.0": {
+  "@eslint/js@9.33.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/js",
@@ -76,7 +76,7 @@
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/LICENSE",
     "noticeFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/NOTICE"
   },
-  "@secretlint/secretlint-rule-preset-recommend@10.2.1": {
+  "@secretlint/secretlint-rule-preset-recommend@11.0.1": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
@@ -113,7 +113,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@types/slug",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/slug/LICENSE"
   },
-  "@typescript-eslint/parser@8.38.0": {
+  "@typescript-eslint/parser@8.39.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/@typescript-eslint/parser",
@@ -126,7 +126,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser/LICENSE"
   },
-  "astro@5.12.8": {
+  "astro@5.12.9": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
@@ -209,7 +209,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-perfectionist",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-perfectionist/license.md"
   },
-  "eslint-plugin-prettier@5.5.3": {
+  "eslint-plugin-prettier@5.5.4": {
     "licenses": "MIT",
     "repository": "https://github.com/prettier/eslint-plugin-prettier",
     "publisher": "Teddy Katz",
@@ -260,7 +260,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-yml",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-yml/LICENSE"
   },
-  "eslint@9.32.0": {
+  "eslint@9.33.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "publisher": "Nicholas C. Zakas",
@@ -296,7 +296,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/license-checker-rseidelsohn",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/license-checker-rseidelsohn/LICENSE"
   },
-  "lint-staged@16.1.4": {
+  "lint-staged@16.1.5": {
     "licenses": "MIT",
     "repository": "https://github.com/lint-staged/lint-staged",
     "publisher": "Andrey Okonetchnikov",
@@ -401,7 +401,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/satori",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/satori/LICENSE"
   },
-  "secretlint@10.2.1": {
+  "secretlint@11.0.1": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
@@ -452,7 +452,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/stylelint-order",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/stylelint-order/LICENSE.md"
   },
-  "stylelint@16.23.0": {
+  "stylelint@16.23.1": {
     "licenses": "MIT",
     "repository": "https://github.com/stylelint/stylelint",
     "publisher": "stylelint",
@@ -495,7 +495,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/tsx",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tsx/LICENSE"
   },
-  "typescript-eslint@8.38.0": {
+  "typescript-eslint@8.39.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/typescript-eslint",
