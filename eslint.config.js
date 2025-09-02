@@ -139,6 +139,36 @@ export default [
     },
   },
 
+  {
+    rules: {
+      "no-console": ["warn", { allow: ["error"] }],
+    },
+  },
+
+  {
+    rules: {
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    },
+  },
+
+  {
+    rules: {
+      // Prevent relative imports that go up directories to enforce proper architecture
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: ["../../../*", "../../../../*", "../../../../../**/*"],
+              message:
+                "Use absolute imports instead of relative imports that go up directories. This enforces proper architecture boundaries.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
   // css (not in use)
   {
     files: ["**/*.css"],
@@ -254,6 +284,8 @@ export default [
   { files: ["script/**.ts"], rules: { "no-console": "off" } },
 ];
 
+// TODO: plugin import or plugin boundaries
+
 // import importPlugin from "eslint-plugin-import";
 // {
 // 	// eslint-plugin-import の設定
@@ -282,6 +314,52 @@ export default [
 // 						position: "before",
 // 					},
 // 				],
+// 			},
+// 		],
+// 	},
+// },
+
+// 	// Boundaries plugin configuration for strict dependencies
+// {
+// 	plugins: { boundaries: boundariesPlugin },
+
+// 	// チェック対象は features 配下のみ（テストは除外）
+// 	files: ["src/features/**/*"],
+// 	ignores: ["src/features/**/*.test.ts?(x)"],
+
+// 	settings: {
+// 		"boundaries/elements": [
+// 			{
+// 				type: "feature",
+// 				pattern: "src/features/*/**", // features/<feature>/以下（深さは任意）
+// 				mode: "full",
+// 				capture: ["feature"], // <feature> 部分を保存
+// 			},
+// 			// もし features/<feature> 直下のファイルもあり得るなら追加
+// 			{
+// 				type: "feature",
+// 				pattern: "src/features/*/*",
+// 				mode: "full",
+// 				capture: ["feature"],
+// 			},
+// 		],
+// 	},
+
+// 	rules: {
+// 		// デフォルトは「別 feature への import は禁止」
+// 		"boundaries/element-types": [
+// 			"error",
+// 			{
+// 				default: "disallow",
+// 				rules: [
+// 					{
+// 						// 自分と同じ feature への import だけ許可
+// 						from: "feature",
+// 						allow: [["feature", { feature: "${from.feature}" }]],
+// 					},
+// 				],
+// 				message:
+// 					"features間のimportは禁止。同一feature内のみimport可能です。",
 // 			},
 // 		],
 // 	},
