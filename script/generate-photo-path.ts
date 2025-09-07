@@ -8,7 +8,7 @@ function generateRow(fileName: string, fileNameNoExt: string): string {
 }
 
 function main(): void {
-  const fileNameList = fs.readdirSync("src/data/assets/photo").sort();
+  const fileNameList = fs.readdirSync("src/data/assets/photo").toSorted();
   const fileNameListNoExt = fileNameList.map(
     fileName => path.parse(fileName).name,
   );
