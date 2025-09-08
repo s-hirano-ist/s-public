@@ -21,14 +21,14 @@ export default function BookStatCard({
       <div className="my-4 flex">
         <div>
           <div className="stat-title">該当冊数</div>
-          <div className="stat-value pt-2 text-primary">{totalBooks}冊</div>
+          <div className="stat-value text-primary pt-2">{totalBooks}冊</div>
         </div>
         <div className="stat h-48 overflow-y-scroll">
           <div>
             {tags.map(tag => (
               <button
                 className={`btn btn-xs m-1 ${
-                  selectedTag === tag && "btn-primary"
+                  selectedTag === tag ? "btn-primary" : "btn-outline"
                 }`}
                 onClick={handleTagClick}
                 key={tag}>

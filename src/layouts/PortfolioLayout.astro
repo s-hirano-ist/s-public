@@ -16,10 +16,16 @@ const { headerTitle, title, subTitle, subSubTitle } = Astro.props;
 <Layout>
   <Header title={headerTitle} />
   <Main>
-    <section id="hero">
-      {title && <h1>{title}</h1>}
-      {subTitle && <p>{subTitle}</p>}
-      {subSubTitle && <p>{subSubTitle}</p>}
+    <section id="hero" class="pb-8">
+      {
+        title && (
+          <h1 class="my-4 inline-block text-2xl font-bold sm:my-8 sm:text-5xl">
+            {title}
+          </h1>
+        )
+      }
+      {subTitle && <p class="my-2">{subTitle}</p>}
+      {subSubTitle && <p class="my-2">{subSubTitle}</p>}
     </section>
     <section class="pb-4">
       <slot />
@@ -27,17 +33,3 @@ const { headerTitle, title, subTitle, subSubTitle } = Astro.props;
   </Main>
   <Footer />
 </Layout>
-
-<style>
-  #hero {
-    @apply pb-8;
-  }
-
-  #hero h1 {
-    @apply my-4 inline-block text-2xl font-bold sm:my-8 sm:text-5xl;
-  }
-
-  #hero p {
-    @apply my-2;
-  }
-</style>

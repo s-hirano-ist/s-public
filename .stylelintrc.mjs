@@ -12,7 +12,7 @@ export default {
     "stylelint-order",
   ],
   rules: {
-    "order/order": ["custom-properties", "declarations"],
+    // "order/order": ["custom-properties", "declarations"],
     "order/properties-order": ["width", "height"],
     "plugin/declaration-block-no-ignored-properties": true,
     "plugin/no-unsupported-browser-features": [
@@ -28,7 +28,16 @@ export default {
     ],
     "at-rule-no-unknown": [
       true,
-      { ignoreAtRules: ["tailwind", "layer", "apply"] },
+      {
+        ignoreAtRules: [
+          "tailwind",
+          "layer",
+          "apply",
+          "plugin",
+          "source",
+          "theme",
+        ],
+      },
     ],
     "function-no-unknown": [true, { ignoreFunctions: ["theme", "screen"] }],
   },

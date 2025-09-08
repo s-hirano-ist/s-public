@@ -1,10 +1,101 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+@plugin "tailwindcss-motion";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "myDark";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #141314;
+  --color-base-content: #e5e5e5;
+  --color-primary: #77a2c0;
+  --color-secondary: #885d3f;
+  --color-accent: #fff;
+  --color-neutral: #3f9900;
+  --color-info: #789;
+  --color-success: #426f8f;
+  --color-warning: #b0c24a;
+  --color-error: #ff6347;
+}
+
+@plugin "daisyui/theme" {
+  name: "myLight";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #fff;
+  --color-primary: #426f8f;
+  --color-secondary: #885d3f;
+  --color-accent: #000;
+  --color-neutral: #3f9900;
+  --color-info: #789;
+  --color-success: #77a2c0;
+  --color-warning: #b0c24a;
+  --color-error: #ff6347;
+}
+
+@plugin "daisyui/theme" {
+  name: "noTheme";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #141314;
+  --color-primary: #77a2c0;
+  --color-secondary: #885d3f;
+  --color-accent: #fff;
+  --color-neutral: #3f9900;
+  --color-info: #789;
+  --color-success: #426f8f;
+  --color-warning: #b0c24a;
+  --color-error: #ff6347;
+}
+
+@layer components {
+  h2 {
+    @apply animate-wiggle animate-infinite;
+  }
+
+  .main-contents h2 {
+    @apply text-primary my-4 inline-block text-xl font-bold sm:text-2xl;
+  }
+
+  .main-contents section {
+    @apply mx-auto p-2 sm:p-4;
+  }
+
+  .timeline-container {
+    @apply mt-2 text-xs;
+  }
+
+  swiper-container::part(bullet) {
+    @apply bg-primary;
+  }
+
+  swiper-container::part(bullet-active) {
+    @apply bg-primary;
+  }
+}
+
+@source "../src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}";
+
+@theme {
+  --font-sans: "Noto Sans JP Variable", sans-serif;
+}
 
 @layer base {
-  body {
-    @apply min-h-screen font-custom selection:bg-primary selection:bg-opacity-70 selection:text-accent;
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
   }
 
   .prose a {

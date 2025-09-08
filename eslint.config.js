@@ -8,7 +8,7 @@ import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
 import perfectionistPlugin from "eslint-plugin-perfectionist";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import spellcheckPlugin from "eslint-plugin-spellcheck";
-import tailwind from "eslint-plugin-tailwindcss";
+// import tailwind from "eslint-plugin-tailwindcss";
 // import ymlPlugin from "eslint-plugin-yml";
 import unicornPlugin from "eslint-plugin-unicorn";
 import unusedImportsPlugin from "eslint-plugin-unused-imports";
@@ -40,7 +40,7 @@ export default [
 
   eslintPluginPrettierRecommended,
   ...eslintPluginAstro.recommended,
-  ...tailwind.configs["flat/recommended"],
+  // ...tailwind.configs["flat/recommended"],
   ...compat.extends("plugin:redos/recommended"),
   ...eslintTypeScript.recommendedTypeChecked.map(config => ({
     ...config,

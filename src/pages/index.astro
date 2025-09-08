@@ -90,39 +90,20 @@ const jsonLd = [
     <section>
       <div
         class="mx-auto grid grid-cols-1 gap-2 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <AboutMe class="order-2 lg:order-none" />
+        <AboutMe class="order-2 lg:order-0" />
 
-        <Top class="order-1 lg:order-none" />
+        <Top class="order-1 lg:order-0" />
 
-        <PortfolioLinks class="order-3 lg:order-none" />
+        <PortfolioLinks class="order-3 lg:order-0" />
 
-        <TechStack class="order-4 lg:order-none" />
+        <TechStack class="order-4 lg:order-0" />
 
-        <Education class="order-5 lg:order-none" />
+        <Education class="order-5 lg:order-0" />
 
-        <WorkExperience class="order-6 lg:order-none" />
+        <WorkExperience class="order-6 lg:order-0" />
 
-        <Qualifications class="order-7 lg:order-none" />
+        <Qualifications class="order-7 lg:order-0" />
       </div>
     </section>
   </main>
 </Layout>
-
-<style>
-  h2 {
-    @apply animate-wiggle animate-infinite;
-  }
-
-  .main-contents h2 {
-    @apply my-4 inline-block text-xl font-bold text-primary sm:text-2xl;
-  }
-
-  .main-contents section {
-    @apply mx-auto p-2 sm:p-4;
-  }
-
-  /* Timeline inside BentoTile */
-  .timeline-container {
-    @apply mt-2 text-xs;
-  }
-</style>
