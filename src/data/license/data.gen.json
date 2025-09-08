@@ -20,13 +20,6 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@astrojs/sitemap",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@astrojs/sitemap/LICENSE"
   },
-  "@astrojs/tailwind@6.0.2": {
-    "licenses": "MIT",
-    "repository": "https://github.com/withastro/astro",
-    "publisher": "withastro",
-    "path": "/home/runner/work/s-public/s-public/node_modules/@astrojs/tailwind",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@astrojs/tailwind/LICENSE"
-  },
   "@eslint/css@0.11.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/eslint/css",
@@ -41,7 +34,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc/LICENSE"
   },
-  "@eslint/js@9.34.0": {
+  "@eslint/js@9.35.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/js",
@@ -54,7 +47,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/markdown",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@eslint/markdown/LICENSE"
   },
-  "@fontsource-variable/noto-sans-jp@5.2.6": {
+  "@fontsource-variable/noto-sans-jp@5.2.7": {
     "licenses": "OFL-1.1",
     "repository": "https://github.com/fontsource/font-files",
     "publisher": "Google Inc.",
@@ -76,7 +69,7 @@
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/LICENSE",
     "noticeFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/NOTICE"
   },
-  "@secretlint/secretlint-rule-preset-recommend@11.2.0": {
+  "@secretlint/secretlint-rule-preset-recommend@11.2.3": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
@@ -88,6 +81,12 @@
     "repository": "https://github.com/tailwindlabs/tailwindcss-typography",
     "path": "/home/runner/work/s-public/s-public/node_modules/@tailwindcss/typography",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@tailwindcss/typography/LICENSE"
+  },
+  "@tailwindcss/vite@4.1.13": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tailwindlabs/tailwindcss",
+    "path": "/home/runner/work/s-public/s-public/node_modules/@tailwindcss/vite",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@tailwindcss/vite/LICENSE"
   },
   "@types/jsdom@21.1.7": {
     "licenses": "MIT",
@@ -113,7 +112,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@types/slug",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/slug/LICENSE"
   },
-  "@typescript-eslint/parser@8.41.0": {
+  "@typescript-eslint/parser@8.42.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/@typescript-eslint/parser",
@@ -149,7 +148,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/cz-conventional-changelog",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/cz-conventional-changelog/LICENSE"
   },
-  "daisyui@4.12.24": {
+  "daisyui@5.1.8": {
     "licenses": "MIT",
     "repository": "https://github.com/saadeghi/daisyui",
     "publisher": "Pouya Saadeghi",
@@ -177,6 +176,13 @@
     "publisher": "Yosuke Ota",
     "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-astro",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-astro/LICENSE"
+  },
+  "eslint-plugin-boundaries@5.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/javierbrea/eslint-plugin-boundaries",
+    "publisher": "Javier Brea",
+    "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-boundaries",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-boundaries/LICENSE"
   },
   "eslint-plugin-import-x@4.16.1": {
     "licenses": "MIT",
@@ -238,7 +244,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-tailwindcss",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-tailwindcss/LICENSE"
   },
-  "eslint-plugin-unicorn@60.0.0": {
+  "eslint-plugin-unicorn@61.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/sindresorhus/eslint-plugin-unicorn",
     "publisher": "Sindre Sorhus",
@@ -260,7 +266,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-yml",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-yml/LICENSE"
   },
-  "eslint@9.34.0": {
+  "eslint@9.35.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "publisher": "Nicholas C. Zakas",
@@ -281,7 +287,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/jsdom",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/jsdom/LICENSE.txt"
   },
-  "lenis@1.3.10": {
+  "lenis@1.3.11": {
     "licenses": "MIT",
     "repository": "https://github.com/darkroomengineering/lenis",
     "publisher": "darkroom.engineering",
@@ -296,7 +302,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/license-checker-rseidelsohn",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/license-checker-rseidelsohn/LICENSE"
   },
-  "lint-staged@16.1.5": {
+  "lint-staged@16.1.6": {
     "licenses": "MIT",
     "repository": "https://github.com/lint-staged/lint-staged",
     "publisher": "Andrey Okonetchnikov",
@@ -393,7 +399,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/sanitize-html",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/sanitize-html/LICENSE"
   },
-  "satori@0.18.1": {
+  "satori@0.18.2": {
     "licenses": "MPL-2.0",
     "repository": "https://github.com/vercel/satori",
     "publisher": "Shu Ding",
@@ -401,7 +407,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/satori",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/satori/LICENSE"
   },
-  "secretlint@11.2.0": {
+  "secretlint@11.2.3": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
@@ -452,7 +458,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/stylelint-order",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/stylelint-order/LICENSE.md"
   },
-  "stylelint@16.23.1": {
+  "stylelint@16.24.0": {
     "licenses": "MIT",
     "repository": "https://github.com/stylelint/stylelint",
     "publisher": "stylelint",
@@ -481,7 +487,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/tailwindcss-motion",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tailwindcss-motion/LICENSE"
   },
-  "tailwindcss@3.4.17": {
+  "tailwindcss@4.1.13": {
     "licenses": "MIT",
     "repository": "https://github.com/tailwindlabs/tailwindcss",
     "path": "/home/runner/work/s-public/s-public/node_modules/tailwindcss",
@@ -495,7 +501,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/tsx",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tsx/LICENSE"
   },
-  "typescript-eslint@8.41.0": {
+  "typescript-eslint@8.42.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/typescript-eslint",
