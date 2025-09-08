@@ -1,6 +1,6 @@
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
@@ -10,11 +10,10 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [
-    tailwind({ config: { applyBaseStyles: false } }),
-    react({ include: ["**/react/*"] }),
-    sitemap(),
-  ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  integrations: [react({ include: ["**/react/*"] }), sitemap()],
   markdown: {
     shikiConfig: {
       theme: "one-dark-pro",

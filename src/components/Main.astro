@@ -14,7 +14,7 @@ const {
 } = Astro.props;
 ---
 
-<main id="main-content" class="pb-4">
+<main class="pb-4 mx-auto mt-8 w-full max-w-5xl px-4">
   <div class="flex items-center">
     {
       dropdownItem && (
@@ -36,7 +36,7 @@ const {
           </div>
           <ul
             tabindex="0"
-            class="menu dropdown-content z-[1] mt-3 w-80 rounded-box bg-success p-2 shadow">
+            class="menu dropdown-content z-1 mt-3 w-80 rounded-box bg-success p-2 shadow">
             <Fragment set:html={sanitizeHtml(dropdownItem)} />
           </ul>
         </div>
@@ -59,9 +59,3 @@ const {
   </div>
   <slot />
 </main>
-
-<style>
-  #main-content {
-    @apply mx-auto mt-8 w-full max-w-5xl px-4;
-  }
-</style>

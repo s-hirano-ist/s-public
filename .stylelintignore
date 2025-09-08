@@ -5,3 +5,5 @@ dist
 !*.css
 !*.astro
 LICENSE
+
+src/styles/base.css
