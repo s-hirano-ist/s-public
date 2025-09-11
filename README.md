@@ -27,7 +27,6 @@
 **CSS Linting** - [Stylelint](https://stylelint.io/)  
 **Secret linting** - [secretlint](https://github.com/secretlint/secretlint)  
 **Auto Commit Rejection** - [Husky](https://typicode.github.io/husky/) | [lint-staged](https://github.com/lint-staged/lint-staged)  
-**Commit Convention** - [Commitizen](https://commitizen-tools.github.io/commitizen/)  
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
 **HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
 **Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
@@ -127,9 +126,8 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm security`         | Security check with pnpm audit                 |
 | `pnpm snapshots`        | Run visual regression tests with Playwright    |
 | `pnpm snapshots:update` | Update visual regression snapshots             |
-| `pnpm commit`           | Create commit with Commitizen                  |
 
-## 🪝 Tags & Realease
+## 🪝 Tags & Release
 
 1. Update version in `package.json`
 
