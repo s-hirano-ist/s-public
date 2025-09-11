@@ -26,7 +26,6 @@
     "snapshots:update": "playwright test --update-snapshots",
     "license:summary": "license-checker-rseidelsohn --summary > license.summary.txt",
     "license:json": "license-checker-rseidelsohn --json > src/data/license/data.gen.json",
-    "commit": "cz",
     "prepare": "husky",
     "security": "pnpm audit",
     "generate:photo": "tsx script/generate-photo-path.ts",
@@ -83,8 +82,6 @@
     "@types/slug": "5.0.9",
     "@typescript-eslint/parser": "8.43.0",
     "astro-eslint-parser": "1.2.2",
-    "commitizen": "4.3.1",
-    "cz-conventional-changelog": "3.3.0",
     "daisyui": "5.1.10",
     "eslint": "9.35.0",
     "eslint-config-prettier": "10.1.8",
@@ -123,10 +120,5 @@
     "tsx": "4.20.5",
     "typescript-eslint": "8.43.0",
     "vnu-jar": "24.10.17"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
