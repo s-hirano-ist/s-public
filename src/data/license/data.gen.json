@@ -6,7 +6,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@astrojs/check",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@astrojs/check/LICENSE"
   },
-  "@astrojs/react@4.3.0": {
+  "@astrojs/react@4.3.1": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
@@ -69,7 +69,7 @@
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/LICENSE",
     "noticeFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/NOTICE"
   },
-  "@secretlint/secretlint-rule-preset-recommend@11.2.3": {
+  "@secretlint/secretlint-rule-preset-recommend@11.2.4": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
@@ -94,7 +94,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@types/jsdom",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/jsdom/LICENSE"
   },
-  "@types/react@19.1.12": {
+  "@types/react@19.1.13": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
     "path": "/home/runner/work/s-public/s-public/node_modules/@types/react",
@@ -112,7 +112,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@types/slug",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/slug/LICENSE"
   },
-  "@typescript-eslint/parser@8.42.0": {
+  "@typescript-eslint/parser@8.43.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/@typescript-eslint/parser",
@@ -125,30 +125,14 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser/LICENSE"
   },
-  "astro@5.13.5": {
+  "astro@5.13.7": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
     "path": "/home/runner/work/s-public/s-public/node_modules/astro",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/astro/LICENSE"
   },
-  "commitizen@4.3.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/commitizen/cz-cli",
-    "publisher": "Jim Cummins",
-    "email": "jimthedev@gmail.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/commitizen",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/commitizen/LICENSE"
-  },
-  "cz-conventional-changelog@3.3.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/commitizen/cz-conventional-changelog",
-    "publisher": "Jim Cummins",
-    "email": "jimthedev@gmail.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/cz-conventional-changelog",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/cz-conventional-changelog/LICENSE"
-  },
-  "daisyui@5.1.8": {
+  "daisyui@5.1.12": {
     "licenses": "MIT",
     "repository": "https://github.com/saadeghi/daisyui",
     "publisher": "Pouya Saadeghi",
@@ -281,7 +265,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/husky",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/husky/LICENSE"
   },
-  "jsdom@26.1.0": {
+  "jsdom@27.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/jsdom/jsdom",
     "path": "/home/runner/work/s-public/s-public/node_modules/jsdom",
@@ -407,7 +391,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/satori",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/satori/LICENSE"
   },
-  "secretlint@11.2.3": {
+  "secretlint@11.2.4": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
@@ -501,7 +485,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/tsx",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tsx/LICENSE"
   },
-  "typescript-eslint@8.42.0": {
+  "typescript-eslint@8.43.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/typescript-eslint",
