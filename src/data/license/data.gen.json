@@ -13,7 +13,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@astrojs/react",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@astrojs/react/LICENSE"
   },
-  "@astrojs/sitemap@3.5.1": {
+  "@astrojs/sitemap@3.6.0": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
@@ -34,7 +34,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@eslint/eslintrc/LICENSE"
   },
-  "@eslint/js@9.35.0": {
+  "@eslint/js@9.36.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/js",
@@ -54,7 +54,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@fontsource-variable/noto-sans-jp",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@fontsource-variable/noto-sans-jp/LICENSE"
   },
-  "@googleapis/books@6.0.1": {
+  "@googleapis/books@7.0.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/googleapis/google-api-nodejs-client",
     "publisher": "Google LLC",
@@ -112,7 +112,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@types/slug",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@types/slug/LICENSE"
   },
-  "@typescript-eslint/parser@8.43.0": {
+  "@typescript-eslint/parser@8.44.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/@typescript-eslint/parser",
@@ -250,7 +250,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-yml",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-yml/LICENSE"
   },
-  "eslint@9.35.0": {
+  "eslint@9.36.0": {
     "licenses": "MIT",
     "repository": "https://github.com/eslint/eslint",
     "publisher": "Nicholas C. Zakas",
@@ -485,7 +485,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/tsx",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/tsx/LICENSE"
   },
-  "typescript-eslint@8.43.0": {
+  "typescript-eslint@8.44.0": {
     "licenses": "MIT",
     "repository": "https://github.com/typescript-eslint/typescript-eslint",
     "path": "/home/runner/work/s-public/s-public/node_modules/typescript-eslint",
