@@ -220,8 +220,8 @@ importers:
         specifier: 8.46.1
         version: 8.46.1(eslint@9.37.0(jiti@2.6.1))(typescript@5.9.3)
       vnu-jar:
-        specifier: 24.10.17
-        version: 24.10.17
+        specifier: 25.11.17
+        version: 25.11.17
 
 packages:
 
@@ -4862,8 +4862,8 @@ packages:
       vite:
         optional: true
 
-  vnu-jar@24.10.17:
-    resolution: {integrity: sha512-YT7gNrRY5PiJrI1GavlWRHWIwqq2o52COc6J9QeXPfoldKRiZ9BeGP4shNLLaVfi0naA+/LMksdYWkKCr4pnVg==}
+  vnu-jar@25.11.17:
+    resolution: {integrity: sha512-KiExM4zvpDN6wIahDu+qlGY6ZLYpPt1UyIZN1Htzv10LpAJdf7rKb+VWPPieRp0WF/y4T4Q/Wt/hxJ2PwAMnbg==}
     engines: {node: '>=0.10'}
 
   volar-service-css@0.0.62:
@@ -10456,7 +10456,7 @@ snapshots:
     optionalDependencies:
       vite: 6.4.1(@types/node@24.7.1)(jiti@2.6.1)(lightningcss@1.30.1)(tsx@4.20.6)(yaml@2.8.1)
 
-  vnu-jar@24.10.17: {}
+  vnu-jar@25.11.17: {}
 
   volar-service-css@0.0.62(@volar/language-service@2.4.23):
     dependencies:
