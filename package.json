@@ -98,7 +98,7 @@
     "eslint-plugin-tailwindcss": "3.18.2",
     "eslint-plugin-unicorn": "62.0.0",
     "eslint-plugin-unused-imports": "4.2.0",
-    "eslint-plugin-yml": "1.19.0",
+    "eslint-plugin-yml": "1.19.1",
     "husky": "9.1.7",
     "license-checker-rseidelsohn": "4.4.2",
     "lint-staged": "16.2.7",
