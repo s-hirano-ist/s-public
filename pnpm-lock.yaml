@@ -79,8 +79,8 @@ importers:
         specifier: 7.4.0
         version: 7.4.0
       '@googleapis/books':
-        specifier: 7.0.0
-        version: 7.0.0
+        specifier: 8.0.1
+        version: 8.0.1
       '@playwright/test':
         specifier: 1.56.1
         version: 1.56.1
@@ -674,8 +674,8 @@ packages:
   '@fontsource-variable/noto-sans-jp@5.2.9':
     resolution: {integrity: sha512-osPL5f7dvGDjuMuFwDTGPLG37030D8X5zk+3BWea6txAVDFeE/ZIrKW0DY0uSDfRn9+NiKbiFn/2QvZveKXTog==}
 
-  '@googleapis/books@7.0.0':
-    resolution: {integrity: sha512-8KQ12roZ+Tj8pCWhfTQMlVJHOr6F6EIXkDpAjgswSkJJWzyZIZPV2hweK0axAXCtFjkuQB9eDhnwMwVqpRq2bA==}
+  '@googleapis/books@8.0.1':
+    resolution: {integrity: sha512-Vd/qFRRa9wY42YagTXKplWzxIvmGU9+gvIcqGTL7QMawa+5Ypia3A+QmphzKfQMNa0lrxFjY60qSNOLFG6JMPQ==}
     engines: {node: '>=12.0.0'}
 
   '@humanfs/core@0.19.1':
@@ -5555,7 +5555,7 @@ snapshots:
 
   '@fontsource-variable/noto-sans-jp@5.2.9': {}
 
-  '@googleapis/books@7.0.0':
+  '@googleapis/books@8.0.1':
     dependencies:
       googleapis-common: 8.0.1
     transitivePeerDependencies:
