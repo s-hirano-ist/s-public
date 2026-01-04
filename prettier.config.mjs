@@ -25,7 +25,6 @@ const config = {
   embeddedLanguageFormatting: "auto",
   singleAttributePerLine: false,
   plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
-  tailwindConfig: "./tailwind.config.mjs",
   tailwindFunctions: ["clsx"],
   overrides: [
     {
