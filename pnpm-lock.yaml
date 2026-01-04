@@ -30,8 +30,8 @@ importers:
         specifier: 27.4.0
         version: 27.4.0
       lenis:
-        specifier: 1.3.16
-        version: 1.3.16(react@19.2.3)
+        specifier: 1.3.17
+        version: 1.3.17(react@19.2.3)
       photoswipe:
         specifier: 5.4.4
         version: 5.4.4
@@ -205,8 +205,8 @@ importers:
         specifier: 8.0.5
         version: 8.0.5(stylelint@16.26.1(typescript@5.9.3))
       stylelint-order:
-        specifier: 7.0.0
-        version: 7.0.0(stylelint@16.26.1(typescript@5.9.3))
+        specifier: 7.0.1
+        version: 7.0.1(stylelint@16.26.1(typescript@5.9.3))
       svgo:
         specifier: 4.0.0
         version: 4.0.0
@@ -3264,8 +3264,8 @@ packages:
   known-css-properties@0.37.0:
     resolution: {integrity: sha512-JCDrsP4Z1Sb9JwG0aJ8Eo2r7k4Ou5MwmThS/6lcIe1ICyb7UBJKGRIUUdqc2ASdE/42lgz6zFUnzAIhtXnBVrQ==}
 
-  lenis@1.3.16:
-    resolution: {integrity: sha512-KULpna+5TgRCDMSPx4SzJwtsjlz7EeoFCp4IDCXrlM73rLBAj34Egcl7GCLz/6+hXFOYt3DTBeTtJvTu45dJNA==}
+  lenis@1.3.17:
+    resolution: {integrity: sha512-k9T9rgcxne49ggJOvXCraWn5dt7u2mO+BNkhyu6yxuEnm9c092kAW5Bus5SO211zUvx7aCCEtzy9UWr0RB+oJw==}
     peerDependencies:
       '@nuxt/kit': '>=3.0.0'
       react: '>=17.0.0'
@@ -4528,11 +4528,11 @@ packages:
     peerDependencies:
       stylelint: ^16.0.2
 
-  stylelint-order@7.0.0:
-    resolution: {integrity: sha512-rSWxx0KscYfxU02wEskKXES9lkRzuuONMMNkZ7SUc6uiF3tDKm7e+sE0Ax/SBlG4TUf1sp1R6f3/SlsPGmzthg==}
+  stylelint-order@7.0.1:
+    resolution: {integrity: sha512-GWPei1zBVDDjxM+/BmcSCiOcHNd8rSqW6FUZtqQGlTRpD0Z5nSzspzWD8rtKif5KPdzUG68DApKEV/y/I9VbTw==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
-      stylelint: ^16.18.0
+      stylelint: ^16.18.0 || ^17.0.0
 
   stylelint@16.26.1:
     resolution: {integrity: sha512-v20V59/crfc8sVTAtge0mdafI3AdnzQ2KsWe6v523L4OA1bJO02S7MO2oyXDCS6iWb9ckIPnqAFVItqSBQr7jw==}
@@ -8536,7 +8536,7 @@ snapshots:
 
   known-css-properties@0.37.0: {}
 
-  lenis@1.3.16(react@19.2.3):
+  lenis@1.3.17(react@19.2.3):
     optionalDependencies:
       react: 19.2.3
 
@@ -10123,7 +10123,7 @@ snapshots:
       postcss: 8.5.6
       stylelint: 16.26.1(typescript@5.9.3)
 
-  stylelint-order@7.0.0(stylelint@16.26.1(typescript@5.9.3)):
+  stylelint-order@7.0.1(stylelint@16.26.1(typescript@5.9.3)):
     dependencies:
       postcss: 8.5.6
       postcss-sorting: 9.1.0(postcss@8.5.6)
