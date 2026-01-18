@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection, render } from "astro:content";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
+import TableOfContents from "@components/TableOfContents.astro";
 import Layout from "@layouts/Layout.astro";
 import slugify from "@utils/slugify";
 
@@ -22,7 +23,7 @@ const { post } = Astro.props;
 
 const { heading, description, date } = post.data;
 
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 const ogUrl = new URL(`${heading}.png`, Astro.url.origin).href;
 
@@ -80,6 +81,7 @@ const articleJsonLd = {
       role="article"
       class="prose prose-sm mx-auto max-w-5xl sm:prose-base">
       <div class="sm:px-4">
+        <TableOfContents headings={headings} />
         <Content />
       </div>
     </article>

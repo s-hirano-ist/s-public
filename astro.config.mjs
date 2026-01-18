@@ -1,10 +1,9 @@
+import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeSlug from "rehype-slug";
-import remarkToc from "remark-toc";
 import { SITE } from "./src/config";
 
 // https://astro.build/config
@@ -23,7 +22,7 @@ export default defineConfig({
       wrap: true,
     },
     rehypePlugins: [
-      rehypeSlug,
+      rehypeHeadingIds,
       [
         rehypeAutolinkHeadings,
         {
@@ -37,6 +36,5 @@ export default defineConfig({
         },
       ],
     ],
-    remarkPlugins: [[remarkToc, { heading: "目次" }]],
   },
 });
