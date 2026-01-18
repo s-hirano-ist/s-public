@@ -152,7 +152,7 @@ const socialImageURL = new URL(
 
     <!-- Google tag (gtag.js) -->
     {
-      GA_MEASUREMENT_ID && (
+      GA_MEASUREMENT_ID ? (
         <>
           <script
             is:inline
@@ -167,6 +167,13 @@ const socialImageURL = new URL(
               gtag('js', new Date());
               gtag('config', '${GA_MEASUREMENT_ID}');
             `}
+          />
+        </>
+      ) : (
+        <>
+          <script
+            is:inline
+            set:html={`console.log("GA_MEASUREMENT_ID is not set.");`}
           />
         </>
       )
