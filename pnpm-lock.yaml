@@ -20,6 +20,9 @@ importers:
       '@fontsource-variable/noto-sans-jp':
         specifier: 5.2.9
         version: 5.2.9
+      '@fortawesome/fontawesome-free':
+        specifier: 7.1.0
+        version: 7.1.0
       '@tailwindcss/vite':
         specifier: 4.1.18
         version: 4.1.18(vite@6.4.1(@types/node@25.0.9)(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0)(yaml@2.8.2))
@@ -838,6 +841,10 @@ packages:
 
   '@fontsource-variable/noto-sans-jp@5.2.9':
     resolution: {integrity: sha512-osPL5f7dvGDjuMuFwDTGPLG37030D8X5zk+3BWea6txAVDFeE/ZIrKW0DY0uSDfRn9+NiKbiFn/2QvZveKXTog==}
+
+  '@fortawesome/fontawesome-free@7.1.0':
+    resolution: {integrity: sha512-+WxNld5ZCJHvPQCr/GnzCTVREyStrAJjisUPtUxG5ngDA8TMlPnKp6dddlTpai4+1GNmltAeuk1hJEkBohwZYA==}
+    engines: {node: '>=6'}
 
   '@googleapis/books@8.0.1':
     resolution: {integrity: sha512-Vd/qFRRa9wY42YagTXKplWzxIvmGU9+gvIcqGTL7QMawa+5Ypia3A+QmphzKfQMNa0lrxFjY60qSNOLFG6JMPQ==}
@@ -5750,6 +5757,8 @@ snapshots:
   '@exodus/bytes@1.8.0': {}
 
   '@fontsource-variable/noto-sans-jp@5.2.9': {}
+
+  '@fortawesome/fontawesome-free@7.1.0': {}
 
   '@googleapis/books@8.0.1':
     dependencies:

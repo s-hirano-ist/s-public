@@ -3,6 +3,8 @@ import { ClientRouter } from "astro:transitions";
 import { SITE } from "@config";
 import "@styles/base.css";
 import "@fontsource-variable/noto-sans-jp";
+import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import "@fortawesome/fontawesome-free/css/solid.min.css";
 
 export type Props = {
   author?: string;
@@ -146,12 +148,6 @@ const socialImageURL = new URL(
       // Re-initialize after View Transitions navigation
       document.addEventListener("astro:after-swap", initTheme);
     </script>
-
-    <!-- Rehype autolink headings font -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    />
 
     <!-- Google tag (gtag.js) -->
     <script
