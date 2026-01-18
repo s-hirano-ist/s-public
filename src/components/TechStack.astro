@@ -46,7 +46,7 @@ const { class: className } = Astro.props;
         onerror="this.style.display='none'"
         class="w-full"
       /> -->
-      <img
+      <!-- <img
         alt="Top Languages"
         loading="lazy"
         onerror="this.style.display='none'"
@@ -59,8 +59,22 @@ const { class: className } = Astro.props;
         loading="lazy"
         onerror="this.style.display='none'"
         src="https://github-readme-stats.vercel.app/api?username=s-hirano-ist&theme=blueberry&layout=compact"
-      />
+      /> -->
     </div>
+  </div>
+</BentoTile>
+
+<BentoTile
+  bgColor="bg-linear-to-br from-red-900/20 to-pink-900/20"
+  size="large"
+  clickable={false}
+  class={className}>
+  <div slot="content" class="text-xs">
+    <img
+      alt="my skills"
+      class="w-full"
+      src="https://skillicons.dev/icons?theme=dark&perline=4&i=next,astro,react,ts,js,html,css,python,swift,docker,aws,cloudflare"
+    />
   </div>
 </BentoTile>
 
@@ -108,16 +122,10 @@ const { class: className } = Astro.props;
         </li>
       </ul>
     </div>
-    <br />
-    <img
-      alt="my skills"
-      class="w-full"
-      src="https://skillicons.dev/icons?theme=dark&perline=4&i=next,astro,react,ts,js,html,css,python,swift,docker,aws,cloudflare"
-    />
   </div>
 </BentoTile>
 
-<BentoTile
+<!-- <BentoTile
   title="GitHub Trophies"
   bgColor="bg-linear-to-br from-indigo-900/20 to-purple-900/20"
   size="large"
@@ -145,4 +153,4 @@ const { class: className } = Astro.props;
       />
     </div>
   </div>
-</BentoTile>
+</BentoTile> -->
