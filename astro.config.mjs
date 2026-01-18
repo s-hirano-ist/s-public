@@ -35,7 +35,6 @@ export default defineConfig({
       ],
     ],
     remarkPlugins: [[remarkToc, { heading: "目次" }]],
-    extendDefaultPlugins: true,
   },
   // not necessary for static sites. Only for SSR.
   output: "static",
