@@ -1,91 +1,52 @@
 # Responsive Images 機能の活用検討
 
-## 概要
+## ステータス: 完了
 
-Astro v5 で安定版となった Responsive Images 機能の導入を検討します。この機能により、画像の自動最適化とレスポンシブ対応が簡単になります。
+Astro v5.10 で安定版となった Responsive Images 機能を導入しました。
 
-## 機能概要
+## 実施内容
 
-Astro の Responsive Images 機能は、`<Image />` コンポーネントを使用する際に自動的に：
-
-1. 複数サイズの画像を生成
-2. `srcset` と `sizes` 属性を自動設定
-3. WebP/AVIF などのモダンフォーマットに変換
-4. 遅延読み込み（lazy loading）を適用
-
-## 導入方法
-
-### 1. astro.config.mjs で有効化
+### astro.config.mjs での設定
 
 ```javascript
 // astro.config.mjs
 export default defineConfig({
   image: {
-    experimentalLayout: "responsive", // または "fixed", "full-width"
+    layout: "constrained", // Astro 5.10+ の安定版 API
   },
   // ... other config
 });
 ```
 
-### 2. Image コンポーネントの使用
+### 適用された画像コンポーネント
 
-```astro
----
-import { Image } from "astro:assets";
-import myImage from "../assets/my-image.jpg";
----
+- `src/components/Top.astro` - トップページのアイコン
+- `src/components/SwiperContainer.astro` - DIY プロジェクトの画像スライダー
+- `src/pages/photo/index.astro` - フォトギャラリー
+- `src/components/LinkCard.astro` - OGP 画像
 
-<Image src={myImage} alt="Description" />
-```
+### 生成結果
 
-### 3. レイアウトオプション
+- 画像に `srcset` と `sizes` 属性が自動追加
+- 複数サイズ（640w, 750w, 828w, 1080w, 1280w, 1440w, 1668w, 2048w）を自動生成
+- WebP フォーマットで最適化
 
-| レイアウト   | 説明                                           |
-| ------------ | ---------------------------------------------- |
-| `responsive` | コンテナに合わせてリサイズ（アスペクト比維持） |
-| `fixed`      | 固定サイズ                                     |
-| `full-width` | 常に親要素の幅いっぱい                         |
+## レイアウトオプション
 
-## 現状の画像使用箇所
+| レイアウト    | 説明                                           |
+| ------------- | ---------------------------------------------- |
+| `constrained` | コンテナに合わせてリサイズ（最大サイズを制限） |
+| `fixed`       | 固定サイズ                                     |
+| `full-width`  | 常に親要素の幅いっぱい                         |
 
-このプロジェクトで画像が使用されている可能性のある箇所：
+## 備考
 
-- `src/data/assets/photo/` - 写真データ
-- OG画像 - Satori で動的生成
-- アイコン・ロゴ
-
-## 検討事項
-
-### メリット
-
-- パフォーマンス向上（Core Web Vitals 改善）
-- 手動での画像最適化が不要
-- モダンフォーマット（WebP/AVIF）の自動サポート
-
-### デメリット・注意点
-
-- ビルド時間の増加（画像処理）
-- 既存の画像パイプラインとの互換性確認が必要
-- `pnpm generate:photo` との統合検討
-
-## 優先度
-
-低：パフォーマンス改善のためのオプション機能
-
-## 影響範囲
-
-- `astro.config.mjs`
-- 画像を表示している全コンポーネント
-
-## 検証方法
-
-1. 開発サーバーで画像が正常に表示されること
-2. ビルド後の画像サイズが最適化されていること
-3. Lighthouse でのパフォーマンススコアの確認
-4. `pnpm generate:photo` との互換性確認
+- ビルド時間は約 2.5 秒から約 27 秒に増加（初回ビルド時）
+- キャッシュが効いている場合は通常のビルド時間に近い
+- `pnpm generate:photo` との互換性は維持
 
 ## 参考
 
 - [Astro Images](https://docs.astro.build/en/guides/images/)
 - [Astro v5 - Responsive Images](https://docs.astro.build/en/guides/images/#responsive-images)
-- [Astro Image Configuration](https://docs.astro.build/en/reference/configuration-reference/#image-options)
+- [Astro 5.10 Release Blog](https://astro.build/blog/astro-5100/)
