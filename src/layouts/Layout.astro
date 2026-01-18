@@ -3,6 +3,8 @@ import { ClientRouter } from "astro:transitions";
 import { SITE } from "@config";
 import "@styles/base.css";
 import "@fontsource-variable/noto-sans-jp";
+import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import "@fortawesome/fontawesome-free/css/solid.min.css";
 
 export type Props = {
   author?: string;
@@ -71,6 +73,7 @@ const socialImageURL = new URL(
 
     <!-- Smooth Scroll -->
     <script>
+      // Better than `scroll-behavior: smooth` on smooth scrolling so it is necessary.
       import Lenis from "lenis";
 
       function initLenis() {
@@ -108,19 +111,34 @@ const socialImageURL = new URL(
         const themeController = document.querySelector(
           ".theme-controller",
         ) as HTMLInputElement;
+
+        // Get theme from localStorage
+        const currentTheme = localStorage.getItem("theme") || "myDark";
+
+        // Important: explicitly set data-theme attribute for View Transitions
+        document.documentElement.setAttribute("data-theme", currentTheme);
+
         if (themeController) {
-          themeController.addEventListener("change", function (e) {
+          // Prevent duplicate listeners by replacing with cloned element
+          const newController = themeController.cloneNode(
+            true,
+          ) as HTMLInputElement;
+          themeController.parentNode?.replaceChild(
+            newController,
+            themeController,
+          );
+
+          newController.addEventListener("change", function (e) {
             const target = e.target as HTMLInputElement;
             const isChecked = target.checked;
-            const currentTheme = isChecked ? "myLight" : "myDark";
+            const newTheme = isChecked ? "myLight" : "myDark";
 
-            document.documentElement.setAttribute("data-theme", currentTheme);
-            localStorage.setItem("theme", currentTheme);
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
           });
 
-          // Set initial state based on current theme
-          const currentTheme = localStorage.getItem("theme") || "myDark";
-          themeController.checked = currentTheme === "myLight";
+          // Set checkbox initial state
+          newController.checked = currentTheme === "myLight";
         }
       }
 
@@ -130,12 +148,6 @@ const socialImageURL = new URL(
       // Re-initialize after View Transitions navigation
       document.addEventListener("astro:after-swap", initTheme);
     </script>
-
-    <!-- Rehype autolink headings font -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    />
 
     <!-- Google tag (gtag.js) -->
     <script

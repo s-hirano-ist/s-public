@@ -1,0 +1,30 @@
+---
+export type Props = {
+  headings: Array<{ depth: number; slug: string; text: string }>;
+};
+
+const { headings } = Astro.props;
+
+const filteredHeadings = headings.filter(
+  heading => heading.depth === 2 || heading.depth === 3,
+);
+---
+
+{
+  filteredHeadings.length > 0 && (
+    <nav class="mb-8 bg-base-100 p-4">
+      <h2 class="mb-3 text-lg font-bold text-primary">目次</h2>
+      <ul class="space-y-1 text-sm">
+        {filteredHeadings.map(heading => (
+          <li class={heading.depth === 3 ? "ml-4" : ""}>
+            <a
+              href={`#${heading.slug}`}
+              class="text-base-content/80 hover:text-primary transition-colors">
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
