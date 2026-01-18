@@ -1,3 +1,9 @@
+# Environment variables
+# NOTE: .env.production は秘匿情報を含まないため、意図的に Git で追跡しています
+# 秘匿情報を含む場合は .env.local または .env.production.local を使用してください
+.env.local
+.env.*.local
+
 # build output
 dist/
 

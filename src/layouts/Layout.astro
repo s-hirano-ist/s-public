@@ -1,4 +1,5 @@
 ---
+import { GA_MEASUREMENT_ID } from "astro:env/client";
 import { ClientRouter } from "astro:transitions";
 import { SITE } from "@config";
 import "@styles/base.css";
@@ -150,21 +151,33 @@ const socialImageURL = new URL(
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script
-      is:inline
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-E84VM45L0L"></script>
-
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        // eslint-disable-next-line prefer-rest-params
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-E84VM45L0L");
-    </script>
+    {
+      GA_MEASUREMENT_ID ? (
+        <>
+          <script
+            is:inline
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          />
+          <script
+            is:inline
+            set:html={`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `}
+          />
+        </>
+      ) : (
+        <>
+          <script
+            is:inline
+            set:html={`console.log("GA_MEASUREMENT_ID is not set.");`}
+          />
+        </>
+      )
+    }
 
     <!-- JSON-LD -->
     {
