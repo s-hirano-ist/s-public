@@ -10,6 +10,9 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
+  image: {
+    layout: "constrained",
+  },
   vite: {
     plugins: [tailwindcss()],
   },
@@ -35,8 +38,5 @@ export default defineConfig({
       ],
     ],
     remarkPlugins: [[remarkToc, { heading: "目次" }]],
-    extendDefaultPlugins: true,
   },
-  // not necessary for static sites. Only for SSR.
-  output: "static",
 });

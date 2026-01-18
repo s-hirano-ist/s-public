@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
@@ -22,7 +22,7 @@ const { post } = Astro.props;
 
 const { heading, description, date } = post.data;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const ogUrl = new URL(`${heading}.png`, Astro.url.origin).href;
 

@@ -1,6 +1,6 @@
+import type { CollectionEntry } from "astro:content";
 import slug from "slug";
-import type { BlogFrontmatter } from "schemas";
 
-const slugify = (post: BlogFrontmatter) => slug(post.heading);
+const slugify = (post: CollectionEntry<"blog">["data"]) => slug(post.heading);
 
 export default slugify;

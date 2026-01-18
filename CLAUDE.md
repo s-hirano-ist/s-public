@@ -46,7 +46,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### フレームワーク構成
 
 - **メインフレームワーク**: Astro（SSG）
-- **UI コンポーネント**: React（`/react/`フォルダ内のみ）
+- **UI コンポーネント**: React（`src/components/react/` 内のみ有効、Astro設定で制限）
 - **スタイリング**: TailwindCSS + DaisyUI
 - **型システム**: TypeScript
 - **パッケージマネージャー**: pnpm
@@ -73,17 +73,19 @@ src/
 
 ### 重要なファイル
 
-- `src/config.ts` - サイト設定（URL、作者情報等）
-- `src/content.config.ts` - Content Collections定義
-- `astro.config.mjs` - Astro設定
-- `src/schemas.ts` - データ型定義
+- `src/config.ts` - サイト設定（URL、作者情報、MAX_RATING等）
+- `src/content.config.ts` - Content Collections定義（Zod スキーマ）
+- `astro.config.mjs` - Astro設定（React は `**/react/*` パターンのみ有効）
+- `src/schemas.ts` - ブログ frontmatter 型定義
+- `src/data/book/_original.ts` - 書籍の ISBN・評価・タグ元データ
 
 ### データ管理
 
 - **ブログ**: Astro Content Collections（`src/content/blog/`）
-- **書籍データ**: Google Books API経由で自動生成（`pnpm generate:book`）
-- **写真**: 自動パス生成スクリプト（`pnpm generate:photo`）
+- **書籍データ**: `src/data/book/_original.ts` に ISBN とメタ情報を記載し、`pnpm generate:book` で Google Books API 経由で `data.gen.json` を生成
+- **写真**: `src/data/assets/photo/` に画像を追加後、`pnpm generate:photo` で `src/data/_photo/data.ts` を自動生成
 - **ポートフォリオ**: JSON ファイルで管理（`src/data/portfolio/`）
+- **ライセンス**: `pnpm license:json` で `src/data/license/data.gen.json` を自動生成
 
 ### 品質管理
 
@@ -119,3 +121,8 @@ lint-staged により以下が自動実行されます：
 - 型チェック（pnpm check, pnpm tsc）
 - フォーマット・リント（各種linter）
 - ライセンスチェック（bash checkLicense.sh）
+
+### リリース手順
+
+1. `package.json` の version を更新
+2. `gh release create --generate-notes` を実行
