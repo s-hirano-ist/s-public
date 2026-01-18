@@ -54,3 +54,4 @@ jobs:
           title: "contents: s-public updates"
           body: |
             This is an update PR of s-public.
+          reviewers: "s-hirano-ist"
