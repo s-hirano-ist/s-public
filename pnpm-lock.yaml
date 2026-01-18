@@ -210,9 +210,6 @@ importers:
       svgo:
         specifier: 4.0.0
         version: 4.0.0
-      tailwindcss-motion:
-        specifier: 1.1.1
-        version: 1.1.1(tailwindcss@4.1.18)
       tsx:
         specifier: 4.21.0
         version: 4.21.0
@@ -4550,11 +4547,6 @@ packages:
     resolution: {integrity: sha512-anNNGpxNgjydD8p1lcJjxxH+XbjW6KR8Xs29owTrbcf3tOJ6IRblpyFob43HBkfxFJJTAfFQqugoEG2b1EsR0A==}
     peerDependencies:
       tailwindcss: '>=3.1.0 || >=4.0.0'
-
-  tailwindcss-motion@1.1.1:
-    resolution: {integrity: sha512-CeeQAc5o31BuEPMyWdq/786X7QWNeifa+8khfu74Fs8lGkgEwjNYv6dGv+lRFS8FWXV5dp7F3AU9JjBXjiaQfw==}
-    peerDependencies:
-      tailwindcss: '>=3.0.0 || insiders'
 
   tailwindcss@4.1.18:
     resolution: {integrity: sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw==}
@@ -10135,10 +10127,6 @@ snapshots:
       strip-ansi: 6.0.1
 
   tailwindcss-animated@2.0.0(tailwindcss@4.1.18):
-    dependencies:
-      tailwindcss: 4.1.18
-
-  tailwindcss-motion@1.1.1(tailwindcss@4.1.18):
     dependencies:
       tailwindcss: 4.1.18
 
