@@ -18,7 +18,10 @@ export default defineConfig({
   integrations: [react({ include: ["**/react/*"] }), sitemap()],
   markdown: {
     shikiConfig: {
-      theme: "one-dark-pro",
+      themes: {
+        light: "github-light",
+        dark: "one-dark-pro",
+      },
       wrap: true,
     },
     rehypePlugins: [

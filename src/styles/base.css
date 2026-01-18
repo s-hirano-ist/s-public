@@ -118,3 +118,34 @@ h2:hover .icon-header-link {
 h3:hover .icon-header-link {
   visibility: visible;
 }
+
+/* Shiki dual theme support */
+.astro-code {
+  background-color: #f6f8fa !important;
+}
+
+.astro-code,
+.astro-code span {
+  color: var(--shiki-light) !important;
+}
+
+.astro-code span {
+  background-color: transparent !important;
+}
+
+[data-theme="myDark"] .astro-code,
+[data-theme="noTheme"] .astro-code {
+  background-color: var(--shiki-dark-bg) !important;
+}
+
+[data-theme="myDark"] .astro-code,
+[data-theme="myDark"] .astro-code span,
+[data-theme="noTheme"] .astro-code,
+[data-theme="noTheme"] .astro-code span {
+  color: var(--shiki-dark) !important;
+}
+
+[data-theme="myDark"] .astro-code span,
+[data-theme="noTheme"] .astro-code span {
+  background-color: transparent !important;
+}
