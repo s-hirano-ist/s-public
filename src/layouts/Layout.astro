@@ -109,19 +109,34 @@ const socialImageURL = new URL(
         const themeController = document.querySelector(
           ".theme-controller",
         ) as HTMLInputElement;
+
+        // Get theme from localStorage
+        const currentTheme = localStorage.getItem("theme") || "myDark";
+
+        // Important: explicitly set data-theme attribute for View Transitions
+        document.documentElement.setAttribute("data-theme", currentTheme);
+
         if (themeController) {
-          themeController.addEventListener("change", function (e) {
+          // Prevent duplicate listeners by replacing with cloned element
+          const newController = themeController.cloneNode(
+            true,
+          ) as HTMLInputElement;
+          themeController.parentNode?.replaceChild(
+            newController,
+            themeController,
+          );
+
+          newController.addEventListener("change", function (e) {
             const target = e.target as HTMLInputElement;
             const isChecked = target.checked;
-            const currentTheme = isChecked ? "myLight" : "myDark";
+            const newTheme = isChecked ? "myLight" : "myDark";
 
-            document.documentElement.setAttribute("data-theme", currentTheme);
-            localStorage.setItem("theme", currentTheme);
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
           });
 
-          // Set initial state based on current theme
-          const currentTheme = localStorage.getItem("theme") || "myDark";
-          themeController.checked = currentTheme === "myLight";
+          // Set checkbox initial state
+          newController.checked = currentTheme === "myLight";
         }
       }
 
