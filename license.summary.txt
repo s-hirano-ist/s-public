@@ -1,6 +1,7 @@
-├─ MIT: 62
+├─ MIT: 58
 ├─ Apache-2.0: 5
 ├─ OFL-1.1: 1
+├─ (CC-BY-4.0 AND OFL-1.1 AND MIT): 1
 ├─ ISC: 1
 ├─ BSD-3-Clause: 1
 ├─ MIT*: 1
