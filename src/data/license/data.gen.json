@@ -399,7 +399,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/slug",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/slug/LICENSE"
   },
-  "stylelint-config-standard@39.0.1": {
+  "stylelint-config-standard@40.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/stylelint/stylelint-config-standard",
     "publisher": "Stylelint",
