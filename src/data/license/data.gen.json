@@ -54,7 +54,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@eslint/markdown",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@eslint/markdown/LICENSE"
   },
-  "@fontsource-variable/noto-sans-jp@5.2.9": {
+  "@fontsource-variable/noto-sans-jp@5.2.10": {
     "licenses": "OFL-1.1",
     "repository": "https://github.com/fontsource/font-files",
     "publisher": "Google Inc.",
@@ -133,7 +133,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/astro-eslint-parser/LICENSE"
   },
-  "astro@5.16.9": {
+  "astro@5.16.11": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
@@ -428,7 +428,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/stylelint-order",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/stylelint-order/LICENSE.md"
   },
-  "stylelint@16.26.1": {
+  "stylelint@17.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/stylelint/stylelint",
     "publisher": "stylelint",
