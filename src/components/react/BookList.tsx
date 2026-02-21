@@ -1,3 +1,4 @@
+import { Card, CardContent, CardFooter, Badge } from "@s-hirano-ist/s-ui";
 import {
   useMemo,
   useState,
@@ -65,36 +66,38 @@ export default function BookList() {
       <div className="grid gap-8 pt-8 sm:grid-cols-2 lg:grid-cols-3">
         {filteredBooks.map(book => (
           <a
-            className="card shadow-xl"
             href={book.googleHref}
             target="_blank"
-            key={book.title}>
-            <figure className="h-48">
-              <img
-                src={book.googleImgSrc}
-                alt={book.title}
-                decoding="async"
-                loading="lazy"
-              />
-            </figure>
-            <div className="card-body h-96">
-              <h2 className="card-title">{book.title}</h2>
-              <p className="card-subtitle h-12 grow-0">{book.googleSubtitle}</p>
-              <div className="badge badge-primary">
-                {book.googleAuthors.toString()}
-              </div>
-              <p className="card-subtitle overflow-y-hidden text-xs">
-                {book.googleDescription}
-              </p>
-              <Rating rating={book.rating} index={book.title} />
-              <div className="card-actions justify-end">
-                {book.tags.map(tag => (
-                  <div className="badge badge-outline" key={tag}>
-                    #{tag}
-                  </div>
-                ))}
-              </div>
-            </div>
+            key={book.title}
+            className="block">
+            <Card className="overflow-hidden shadow-xl">
+              <figure className="flex h-48 items-center justify-center overflow-hidden">
+                <img
+                  src={book.googleImgSrc}
+                  alt={book.title}
+                  decoding="async"
+                  loading="lazy"
+                />
+              </figure>
+              <CardContent className="max-w-96 p-4">
+                <h2 className="text-lg font-semibold">{book.title}</h2>
+                <p className="text-muted-foreground h-12 grow-0 text-sm">
+                  {book.googleSubtitle}
+                </p>
+                <Badge>{book.googleAuthors.toString()}</Badge>
+                <p className="text-muted-foreground overflow-y-hidden text-xs">
+                  {book.googleDescription}
+                </p>
+                <Rating rating={book.rating} />
+                <CardFooter className="justify-end gap-1 p-0 pt-2">
+                  {book.tags.map(tag => (
+                    <Badge variant="outline" key={tag}>
+                      #{tag}
+                    </Badge>
+                  ))}
+                </CardFooter>
+              </CardContent>
+            </Card>
           </a>
         ))}
       </div>

@@ -4,7 +4,7 @@ export type Props = {
   class?: string;
   clickable?: boolean;
   href?: string;
-  size: "large" | "wide";
+  size: "hero" | "large" | "wide";
   textColor?: string;
   title?: string;
 };
@@ -12,12 +12,13 @@ export type Props = {
 const {
   title,
   size,
-  bgColor = "bg-gray-800",
-  textColor = "text-gray-100",
+  bgColor = "bg-card/80",
+  textColor = "text-card-foreground",
   class: className,
 } = Astro.props;
 
 const sizeClasses = {
+  hero: "col-span-1 md:col-span-2 row-auto",
   large: "col-span-1 row-auto",
   wide: "col-span-1 row-auto h-32",
 };
@@ -26,32 +27,36 @@ const baseClasses = `
   ${sizeClasses[size]}
   ${bgColor}
   ${textColor}
-  rounded-xl p-2 sm:p-4
- :hover:scale-105 hover:shadow-lg hover:shadow-primary/20
-  border border-gray-700
+  rounded-2xl p-4 sm:p-6 backdrop-blur-md
+  hover:-translate-y-0.5
+  border border-border/30
+  shadow-sm shadow-black/5
+  dark:shadow-black/20
+  bento-tile
   group
-  overflow-visible
-  ${className || ""} transition-all duration-300 ease-out
-  lg
+  overflow-hidden
+  bento-enter
+  ${className || ""} transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
 `;
 ---
 
 <div class={baseClasses}>
-  <div class="flex h-full flex-col justify-between gap-2">
+  <div class="flex h-full flex-col justify-between gap-3">
     <div class="flex flex-col items-center space-y-2">
-      <div class="flex items-center justify-center text-primary">
+      <div
+        class="flex items-center justify-center text-primary opacity-80 transition-opacity duration-300 group-hover:opacity-100">
         <slot name="icon" />
       </div>
 
       {
         title && (
-          <h3 class="animate-pulse animate-duration-[2000ms] animate-infinite text-center text-lg font-bold transition-colors duration-300 group-hover:text-primary">
+          <h3 class="text-center text-sm font-semibold uppercase tracking-widest text-muted-foreground transition-colors duration-300 group-hover:text-primary">
             {title}
           </h3>
         )
       }
     </div>
-    <div class="mt-2">
+    <div class="mt-1">
       <slot name="content" />
     </div>
     <div></div>

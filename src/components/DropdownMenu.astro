@@ -1,8 +1,6 @@
-<div class="dropdown dropdown-end">
-  <div
-    tabindex="0"
-    role="button"
-    class="size-8 p-1 hover:link-primary"
+<details class="relative">
+  <summary
+    class="size-8 cursor-pointer list-none p-1 hover:text-primary"
     aria-label="open link sidenav">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,17 +17,44 @@
         d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path d="M4 18l16 0"
       ></path></svg
     >
-  </div>
+  </summary>
   <ul
-    tabindex="0"
-    class="menu dropdown-content menu-sm z-1 mt-3 w-36 rounded-box bg-success p-2 shadow">
-    <li><a href="/book">Book</a></li>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/photo">Photo</a></li>
-    <li><a href="/diy">DIY</a></li>
+    class="absolute right-0 z-50 mt-3 w-36 rounded-lg border border-muted bg-background p-2 shadow-md">
     <li>
-      <a href="https://private.s-hirano.com" target="_blank">Private page</a>
+      <a
+        class="block rounded-sm px-2 py-1.5 text-sm hover:bg-muted"
+        href="/book">Book</a
+      >
     </li>
-    <li><a href="/license">LICENSE</a></li>
+    <li>
+      <a
+        class="block rounded-sm px-2 py-1.5 text-sm hover:bg-muted"
+        href="/blog">Blog</a
+      >
+    </li>
+    <li>
+      <a
+        class="block rounded-sm px-2 py-1.5 text-sm hover:bg-muted"
+        href="/photo">Photo</a
+      >
+    </li>
+    <li>
+      <a class="block rounded-sm px-2 py-1.5 text-sm hover:bg-muted" href="/diy"
+        >DIY</a
+      >
+    </li>
+    <li>
+      <a
+        class="block rounded-sm px-2 py-1.5 text-sm hover:bg-muted"
+        href="https://private.s-hirano.com"
+        target="_blank">Private page</a
+      >
+    </li>
+    <li>
+      <a
+        class="block rounded-sm px-2 py-1.5 text-sm hover:bg-muted"
+        href="/license">LICENSE</a
+      >
+    </li>
   </ul>
-</div>
+</details>

@@ -13,7 +13,7 @@ const pageTitle = "読書記録";
 <Layout title={`${SITE.title}${pathname}`}>
   <Header />
   <Main pageTitle={pageTitle}>
-    <p class="prose prose-sm max-w-none pt-4 sm:prose-base">
+    <p class="prose prose-sm dark:prose-invert max-w-none pt-4 sm:prose-base">
       {SITE.author}
       が印象に残っている本を記録したオンライン本棚です。
       <a href="https://developers.google.com/books" target="_blank">
@@ -22,7 +22,8 @@ const pageTitle = "読書記録";
       から情報を取得しています。
       <br />
       また、自分の影響度合いに応じてレーティングしています。なお、技術系の本については多岐にわたるため除外しております。
-      <ul class="prose prose-sm max-w-none pt-2 sm:prose-base">
+      <ul
+        class="prose prose-sm dark:prose-invert max-w-none pt-2 sm:prose-base">
         <li>☆1: いまいちな本</li>
         <li>☆2: 自分の知識を再整理できた本</li>
         <li>☆3: 良書</li>

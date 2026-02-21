@@ -18,8 +18,8 @@ const {
   <div class="flex items-center">
     {
       dropdownItem && (
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost px-1 sm:px-4">
+        <details class="relative">
+          <summary class="inline-flex cursor-pointer list-none items-center justify-center px-1 hover:text-primary sm:px-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="size-5"
@@ -33,13 +33,11 @@ const {
                 d="M4 6h16M4 12h16M4 18h7"
               />
             </svg>
-          </div>
-          <ul
-            tabindex="0"
-            class="menu dropdown-content z-1 mt-3 w-80 rounded-box bg-success p-2 shadow">
+          </summary>
+          <ul class="absolute z-50 mt-3 w-80 rounded-lg border border-muted bg-background p-2 shadow-md">
             <Fragment set:html={sanitizeHtml(dropdownItem)} />
           </ul>
-        </div>
+        </details>
       )
     }
     {
