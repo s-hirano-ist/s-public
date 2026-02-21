@@ -1,7 +1,6 @@
 ---
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import LinkButton from "@components/LinkButton.astro";
 import Main from "@components/Main.astro";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
@@ -15,8 +14,14 @@ import Layout from "@layouts/Layout.astro";
       <h1 aria-label="404 Not Found" class="text-9xl font-bold text-primary">
         404
       </h1>
-      <p class="mt-4 text-2xl sm:text-3xl">Page Not Found</p>
-      <LinkButton href="/" className="my-6 text-lg ">Go back home</LinkButton>
+      <p class="mt-4 text-2xl text-muted-foreground sm:text-3xl">
+        Page Not Found
+      </p>
+      <a
+        href="/"
+        class="my-6 inline-flex items-center rounded-md bg-primary px-6 py-2.5 font-medium text-primary-foreground transition-all hover:shadow-lg hover:brightness-110">
+        Go back home
+      </a>
     </div>
   </Main>
 

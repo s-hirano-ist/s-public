@@ -13,24 +13,26 @@ const pageTitle = "読書記録";
 <Layout title={`${SITE.title}${pathname}`}>
   <Header />
   <Main pageTitle={pageTitle}>
-    <p class="prose prose-sm dark:prose-invert max-w-none pt-4 sm:prose-base">
+    <p class="pt-4 text-sm text-muted-foreground">
       {SITE.author}
       が印象に残っている本を記録したオンライン本棚です。
-      <a href="https://developers.google.com/books" target="_blank">
+      <a
+        href="https://developers.google.com/books"
+        target="_blank"
+        class="text-primary hover:underline">
         Google Books APIs
       </a>
-      から情報を取得しています。
-      <br />
-      また、自分の影響度合いに応じてレーティングしています。なお、技術系の本については多岐にわたるため除外しております。
-      <ul
-        class="prose prose-sm dark:prose-invert max-w-none pt-2 sm:prose-base">
+      から情報を取得しています。 また、自分の影響度合いに応じてレーティングしています。なお、技術系の本については多岐にわたるため除外しております。
+    </p>
+    <div class="mt-4 rounded-lg bg-muted/50 p-4">
+      <ul class="space-y-1 text-sm text-muted-foreground">
         <li>☆1: いまいちな本</li>
         <li>☆2: 自分の知識を再整理できた本</li>
         <li>☆3: 良書</li>
         <li>☆4: 自分の価値観が広がったおすすめ本</li>
         <li>☆5: 自分の考え方が大きく変わったおすすめ本</li>
       </ul>
-    </p>
+    </div>
     <BookList client:only="react" />
   </Main>
   <Footer />

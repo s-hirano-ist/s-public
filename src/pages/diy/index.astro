@@ -13,9 +13,11 @@ import { CONTENTS } from "data/_diy/data";
     {
       CONTENTS.map(content => {
         return (
-          <div class="aspect-square">
-            <p>{content.name}</p>
-            <SwiperContainer content={content} />
+          <div class="overflow-hidden rounded-xl border border-muted">
+            <div class="aspect-square">
+              <SwiperContainer content={content} />
+            </div>
+            <p class="p-3 text-sm font-medium">{content.name}</p>
           </div>
         );
       })

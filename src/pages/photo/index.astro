@@ -17,9 +17,14 @@ import { CONTENTS } from "data/_photo/data";
             data-pswp-src={src.src}
             data-pswp-width={src.width}
             data-pswp-height={src.height}
-            target="_blank">
-            <div class="aspect-square">
-              <Image class="aspect-square object-contain" src={src} alt="" />
+            target="_blank"
+            class="group overflow-hidden rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-md">
+            <div class="aspect-square overflow-hidden">
+              <Image
+                class="aspect-square object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                src={src}
+                alt=""
+              />
             </div>
           </a>
         );
