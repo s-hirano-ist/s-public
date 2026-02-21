@@ -7,14 +7,14 @@ export type Props = {
 const { href, title, description } = Astro.props;
 ---
 
-<li class="my-6">
+<li class="my-4">
   <a
     href={href}
-    class="inline-block decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0">
+    class="group block rounded-xl border border-muted p-5 transition-all duration-200 hover:border-primary/30 hover:shadow-md">
     <h2
-      class="text-lg font-medium text-primary decoration-dashed hover:underline">
+      class="text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
       {title}
     </h2>
+    <p class="mt-2 text-sm text-muted-foreground">{description}</p>
   </a>
-  <p>{description}</p>
 </li>

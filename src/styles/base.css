@@ -7,34 +7,40 @@
 
 @layer base {
   :root {
-    --background: 248 248 252;
-    --foreground: 24 26 32;
-    --primary: 56 110 170;
+    /* s-ui core tokens */
+    --background: 255 255 255;
+    --foreground: 27 27 27;
+    --primary: 64 118 162;
     --primary-foreground: 255 255 255;
-    --muted: 238 238 244;
-    --muted-foreground: 90 94 110;
+    --muted: 233 233 233;
+    --muted-foreground: 43 43 43;
     --destructive: 178 45 53;
-    --card: 255 255 255;
-    --card-foreground: 24 26 32;
-    --border: 210 212 225;
+
+    /* Portfolio extensions (index page) */
     --accent: 128 85 190;
     --accent-foreground: 255 255 255;
+    --card: 255 255 255;
+    --card-foreground: 27 27 27;
+    --border: 233 233 233;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 14 15 20;
-    --foreground: 237 238 244;
-    --primary: 100 160 220;
-    --primary-foreground: 14 15 20;
-    --muted: 28 30 38;
-    --muted-foreground: 160 163 180;
+    /* s-ui core tokens */
+    --background: 27 27 27;
+    --foreground: 255 255 255;
+    --primary: 114 165 211;
+    --primary-foreground: 27 27 27;
+    --muted: 43 43 43;
+    --muted-foreground: 233 233 233;
     --destructive: 234 96 95;
-    --card: 22 24 32;
-    --card-foreground: 237 238 244;
-    --border: 45 48 62;
+
+    /* Portfolio extensions (index page) */
     --accent: 158 120 210;
-    --accent-foreground: 14 15 20;
+    --accent-foreground: 27 27 27;
+    --card: 43 43 43;
+    --card-foreground: 255 255 255;
+    --border: 43 43 43;
   }
 }
 
@@ -44,7 +50,7 @@
     position: relative;
   }
 
-  body::before {
+  body:has(.background-grain)::before {
     content: "";
     position: fixed;
     top: -20%;
@@ -60,7 +66,7 @@
     z-index: 0;
   }
 
-  body::after {
+  body:has(.background-grain)::after {
     content: "";
     position: fixed;
     bottom: -10%;
@@ -290,7 +296,7 @@ h3:hover .icon-header-link {
 
 /* Shiki dual theme support */
 .astro-code {
-  background-color: rgb(var(--card)) !important;
+  background-color: rgb(var(--muted)) !important;
 }
 
 .astro-code,
