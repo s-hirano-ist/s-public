@@ -79,7 +79,7 @@ export default function BookList() {
                   loading="lazy"
                 />
               </figure>
-              <CardContent className="h-96 p-4">
+              <CardContent className="max-w-96 p-4">
                 <h2 className="text-lg font-semibold">{book.title}</h2>
                 <p className="text-muted-foreground h-12 grow-0 text-sm">
                   {book.googleSubtitle}
