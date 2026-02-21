@@ -4,7 +4,7 @@ export type Props = {
   class?: string;
   clickable?: boolean;
   href?: string;
-  size: "large" | "wide";
+  size: "hero" | "large" | "wide";
   textColor?: string;
   title?: string;
 };
@@ -12,12 +12,13 @@ export type Props = {
 const {
   title,
   size,
-  bgColor = "bg-gray-800",
-  textColor = "text-gray-100",
+  bgColor = "bg-card/80",
+  textColor = "text-card-foreground",
   class: className,
 } = Astro.props;
 
 const sizeClasses = {
+  hero: "col-span-1 md:col-span-2 row-auto",
   large: "col-span-1 row-auto",
   wide: "col-span-1 row-auto h-32",
 };
@@ -26,13 +27,14 @@ const baseClasses = `
   ${sizeClasses[size]}
   ${bgColor}
   ${textColor}
-  rounded-xl p-2 sm:p-4
- :hover:scale-105 hover:shadow-lg hover:shadow-primary/20
-  border border-gray-700
+  rounded-2xl p-3 sm:p-5 backdrop-blur-sm
+  hover:scale-[1.02] hover:-translate-y-0.5
+  border border-border/40
+  glow-hover
   group
   overflow-visible
+  bento-enter
   ${className || ""} transition-all duration-300 ease-out
-  lg
 `;
 ---
 
@@ -45,7 +47,7 @@ const baseClasses = `
 
       {
         title && (
-          <h3 class="animate-pulse animate-duration-[2000ms] animate-infinite text-center text-lg font-bold transition-colors duration-300 group-hover:text-primary">
+          <h3 class="text-center text-lg font-bold tracking-tight transition-colors duration-300 group-hover:text-primary">
             {title}
           </h3>
         )

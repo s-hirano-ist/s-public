@@ -6,14 +6,22 @@ const { data } = Astro.props;
 ---
 
 <div class="timeline">
-  <ol class="relative border-s">
+  <ol class="relative">
     {
-      data.map(d => (
-        <li class="mb-8 ms-4">
-          <div class="absolute -start-1.5 mt-1.5 size-3 rounded-full border" />
-          <span class="mb-1 text-sm leading-none">{d.date}</span>
-          <h3 class=" text-lg font-semibold text-primary">{d.title}</h3>
-          <p class="mb-4">{d.description}</p>
+      data.map((d, i) => (
+        <li class={`ms-5 ${i === data.length - 1 ? "mb-0" : "mb-6"}`}>
+          <div class="absolute -start-2.25 mt-1 size-4 rounded-full border-2 border-primary bg-primary/20 shadow-sm shadow-primary/20" />
+          <span class="mb-0.5 block text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            {d.date}
+          </span>
+          <h3 class="text-base font-semibold leading-snug text-primary">
+            {d.title}
+          </h3>
+          {d.description && (
+            <p class="mt-0.5 text-sm leading-relaxed text-muted-foreground">
+              {d.description}
+            </p>
+          )}
         </li>
       ))
     }

@@ -1,3 +1,4 @@
+import { Button, Stat, StatTitle, StatValue, Slider } from "@s-hirano-ist/s-ui";
 import type { ChangeEvent, MouseEvent } from "react";
 import { MAX_RATING } from "@config";
 
@@ -17,41 +18,39 @@ export default function BookStatCard({
   totalBooks: number;
 }) {
   return (
-    <div className="stat mt-4 flex flex-col shadow">
+    <Stat className="mt-4 flex flex-col">
       <div className="my-4 flex">
         <div>
-          <div className="stat-title">該当冊数</div>
-          <div className="stat-value text-primary pt-2">{totalBooks}冊</div>
+          <StatTitle>該当冊数</StatTitle>
+          <StatValue className="block pt-2">{totalBooks}冊</StatValue>
         </div>
-        <div className="stat h-48 overflow-y-scroll">
+        <div className="h-48 overflow-y-scroll p-4">
           <div>
             {tags.map(tag => (
-              <button
-                className={`btn btn-xs m-1 ${
-                  selectedTag === tag ? "btn-primary" : "btn-outline"
-                }`}
+              <Button
+                variant={selectedTag === tag ? "default" : "outline"}
+                size="sm"
+                className="m-1 h-6 px-2 text-xs"
                 onClick={handleTagClick}
                 key={tag}>
                 #{tag}
-              </button>
+              </Button>
             ))}
           </div>
         </div>
       </div>
-      <input
-        type="range"
+      <Slider
         min={1}
         max={5}
         value={rating}
         onChange={handleFilterRating}
-        className="range range-xs"
         step={1}
       />
-      <div className="stat flex w-full justify-between px-2 text-xs">
+      <div className="flex w-full justify-between px-2 text-xs">
         {[...Array(MAX_RATING).keys()].map(int => (
           <span key={int}>{int + 1}</span>
         ))}
       </div>
-    </div>
+    </Stat>
   );
 }

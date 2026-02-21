@@ -2,71 +2,59 @@
 @import "tailwindcss-animated";
 
 @plugin "@tailwindcss/typography";
-@plugin "daisyui";
 
-@plugin "daisyui/theme" {
-  name: "myDark";
-  default: false;
-  prefersdark: true;
-  color-scheme: dark;
+@custom-variant dark (&:where(.dark, .dark *));
 
-  --color-base-100: #141314;
-  --color-base-content: #e5e5e5;
-  --color-primary: #77a2c0;
-  --color-secondary: #885d3f;
-  --color-accent: #fff;
-  --color-neutral: #3f9900;
-  --color-info: #789;
-  --color-success: #426f8f;
-  --color-warning: #b0c24a;
-  --color-error: #ff6347;
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 27 27 27;
+    --primary: 64 118 162;
+    --primary-foreground: 255 255 255;
+    --muted: 233 233 233;
+    --muted-foreground: 43 43 43;
+    --destructive: 178 45 53;
+    --card: 248 248 250;
+    --card-foreground: 27 27 27;
+    --border: 218 218 228;
+    --accent: 147 97 204;
+    --accent-foreground: 255 255 255;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 27 27 27;
+    --foreground: 255 255 255;
+    --primary: 114 165 211;
+    --primary-foreground: 27 27 27;
+    --muted: 43 43 43;
+    --muted-foreground: 233 233 233;
+    --destructive: 234 96 95;
+    --card: 35 35 40;
+    --card-foreground: 255 255 255;
+    --border: 55 55 65;
+    --accent: 167 130 215;
+    --accent-foreground: 27 27 27;
+  }
 }
 
-@plugin "daisyui/theme" {
-  name: "myLight";
-  default: true;
-  prefersdark: false;
-  color-scheme: light;
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
 
-  --color-base-100: #fff;
-  --color-primary: #426f8f;
-  --color-secondary: #885d3f;
-  --color-accent: #000;
-  --color-neutral: #3f9900;
-  --color-info: #789;
-  --color-success: #77a2c0;
-  --color-warning: #b0c24a;
-  --color-error: #ff6347;
-}
-
-@plugin "daisyui/theme" {
-  name: "noTheme";
-  default: false;
-  prefersdark: true;
-  color-scheme: dark;
-
-  --color-base-100: #141314;
-  --color-primary: #77a2c0;
-  --color-secondary: #885d3f;
-  --color-accent: #fff;
-  --color-neutral: #3f9900;
-  --color-info: #789;
-  --color-success: #426f8f;
-  --color-warning: #b0c24a;
-  --color-error: #ff6347;
+  .prose a {
+    @apply hover:!text-primary;
+  }
 }
 
 @layer components {
-  h2 {
-    @apply animate-wiggle animate-infinite;
-  }
-
   .main-contents h2 {
-    @apply text-primary my-4 inline-block text-xl font-bold sm:text-2xl;
+    @apply text-primary my-4 inline-block text-xl font-bold tracking-tight sm:text-2xl;
   }
 
   .main-contents section {
-    @apply mx-auto p-2 sm:p-4;
+    @apply mx-auto p-3 sm:p-6;
   }
 
   .timeline-container {
@@ -82,24 +70,118 @@
   }
 }
 
+/* === Entrance Animations === */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bento-enter {
+  animation: fade-in-up 0.6s ease-out both;
+}
+
+.bento-grid > :nth-child(1) {
+  animation-delay: 0ms;
+}
+.bento-grid > :nth-child(2) {
+  animation-delay: 80ms;
+}
+.bento-grid > :nth-child(3) {
+  animation-delay: 160ms;
+}
+.bento-grid > :nth-child(4) {
+  animation-delay: 240ms;
+}
+.bento-grid > :nth-child(5) {
+  animation-delay: 320ms;
+}
+.bento-grid > :nth-child(6) {
+  animation-delay: 400ms;
+}
+.bento-grid > :nth-child(7) {
+  animation-delay: 480ms;
+}
+.bento-grid > :nth-child(8) {
+  animation-delay: 560ms;
+}
+.bento-grid > :nth-child(9) {
+  animation-delay: 640ms;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--primary)) 0%,
+    rgb(var(--accent)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Border glow on hover */
+.glow-hover {
+  transition:
+    box-shadow 0.3s ease-out,
+    border-color 0.3s ease-out;
+}
+
+.glow-hover:hover {
+  box-shadow:
+    0 0 20px rgb(var(--primary) / 0.15),
+    0 8px 32px rgb(var(--primary) / 0.1);
+  border-color: rgb(var(--primary) / 0.5);
+}
+
+/* Gradient timeline connector */
+.timeline ol {
+  border-left: none;
+  position: relative;
+}
+
+.timeline ol::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--primary) / 0.5),
+    rgb(var(--accent) / 0.3)
+  );
+}
+
 @source "../src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}";
+@source "../../node_modules/@s-hirano-ist/s-ui/dist/**/*.js";
 
 @theme {
   --font-sans: "Noto Sans JP Variable", sans-serif;
-}
-
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
-
-  .prose a {
-    @apply hover:!text-primary;
-  }
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-primary-grad: rgb(var(--primary) / 0.8);
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-destructive: rgb(var(--destructive));
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+  --color-border: rgb(var(--border));
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 }
 
 /* for rehype autolink headings */
@@ -120,7 +202,7 @@ h3:hover .icon-header-link {
 
 /* Shiki dual theme support */
 .astro-code {
-  background-color: #f6f8fa !important;
+  background-color: rgb(var(--card)) !important;
 }
 
 .astro-code,
@@ -132,19 +214,15 @@ h3:hover .icon-header-link {
   background-color: transparent !important;
 }
 
-[data-theme="myDark"] .astro-code,
-[data-theme="noTheme"] .astro-code {
+.dark .astro-code {
   background-color: var(--shiki-dark-bg) !important;
 }
 
-[data-theme="myDark"] .astro-code,
-[data-theme="myDark"] .astro-code span,
-[data-theme="noTheme"] .astro-code,
-[data-theme="noTheme"] .astro-code span {
+.dark .astro-code,
+.dark .astro-code span {
   color: var(--shiki-dark) !important;
 }
 
-[data-theme="myDark"] .astro-code span,
-[data-theme="noTheme"] .astro-code span {
+.dark .astro-code span {
   background-color: transparent !important;
 }

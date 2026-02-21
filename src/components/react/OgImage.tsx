@@ -3,6 +3,15 @@ import { SITE } from "@config";
 type Props = {
   description: string;
 };
+// s-ui design tokens (Satori does not support CSS vars)
+// primary: rgb(64, 118, 162) = #4076a2
+// accent: rgb(147, 97, 204) = #9361cc
+const OG_PRIMARY = "#4076a2";
+const OG_PRIMARY_DARK = "#2d4a6b";
+const OG_ACCENT = "#9361cc";
+const OG_BG = `linear-gradient(135deg, ${OG_PRIMARY_DARK} 0%, ${OG_PRIMARY} 40%, ${OG_ACCENT} 100%)`;
+const OG_TEXT = "#ffffff";
+
 export const OgImage = ({ description }: Props) => {
   return (
     <div
@@ -13,8 +22,8 @@ export const OgImage = ({ description }: Props) => {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        color: "#fff",
-        background: "linear-gradient(#4f697b, #2a353d)",
+        color: OG_TEXT,
+        background: OG_BG,
       }}>
       <div
         style={{

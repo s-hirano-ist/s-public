@@ -233,6 +233,7 @@ export default [
             "filepath",
             "parens",
             "sidenav",
+            "extrabold",
           ], // チェックをスキップする単語の配列
         },
       ],

@@ -16,10 +16,10 @@ const { title = SITE.title, darkModeDisabled = false } = Astro.props;
   <div class="mx-auto flex h-16 w-full max-w-5xl justify-between p-4">
     <a
       href="/"
-      class=`static w-48 text-2xl font-semibold ${darkModeDisabled ? "text-accent":"text-primary"}`>
+      class=`static w-48 text-2xl font-semibold ${darkModeDisabled ? "text-foreground":"text-primary"}`>
       {title}
     </a>
-    <nav class="flex gap-2">
+    <nav class="flex gap-2 items-center">
       <ToggleThemeButton />
       <DropdownMenu />
     </nav>

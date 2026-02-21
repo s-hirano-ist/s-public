@@ -96,31 +96,21 @@ const socialImageURL = new URL(
 
     <!-- Color Scheme -->
     <script is:inline>
-      // ☝️ This script prevent the FART effect.
-      if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "myDark");
-      } else {
-        document.documentElement.setAttribute(
-          "data-theme",
-          localStorage.getItem("theme"),
-        );
+      // Prevent FART (Flash of inAccurate coloR Theme)
+      if (localStorage.getItem("theme") !== "light") {
+        document.documentElement.classList.add("dark");
       }
     </script>
     <script>
-      // Custom theme switching implementation
       function initTheme() {
         const themeController = document.querySelector(
           ".theme-controller",
         ) as HTMLInputElement;
 
-        // Get theme from localStorage
-        const currentTheme = localStorage.getItem("theme") || "myDark";
-
-        // Important: explicitly set data-theme attribute for View Transitions
-        document.documentElement.setAttribute("data-theme", currentTheme);
+        const isDark = localStorage.getItem("theme") !== "light";
+        document.documentElement.classList.toggle("dark", isDark);
 
         if (themeController) {
-          // Prevent duplicate listeners by replacing with cloned element
           const newController = themeController.cloneNode(
             true,
           ) as HTMLInputElement;
@@ -131,22 +121,17 @@ const socialImageURL = new URL(
 
           newController.addEventListener("change", function (e) {
             const target = e.target as HTMLInputElement;
-            const isChecked = target.checked;
-            const newTheme = isChecked ? "myLight" : "myDark";
+            const isLight = target.checked;
 
-            document.documentElement.setAttribute("data-theme", newTheme);
-            localStorage.setItem("theme", newTheme);
+            document.documentElement.classList.toggle("dark", !isLight);
+            localStorage.setItem("theme", isLight ? "light" : "dark");
           });
 
-          // Set checkbox initial state
-          newController.checked = currentTheme === "myLight";
+          newController.checked = !isDark;
         }
       }
 
-      // Initialize on first load
       initTheme();
-
-      // Re-initialize after View Transitions navigation
       document.addEventListener("astro:after-swap", initTheme);
     </script>
 
