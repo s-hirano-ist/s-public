@@ -55,24 +55,26 @@ const portfolioLinks = [
   </svg>
 
   <div slot="content">
-    <div class="grid grid-cols-2 gap-3">
+    <div class="grid grid-cols-2 gap-2.5">
       {
         portfolioLinks.map(link => (
           <a
             href={link.href}
-            class="group/link flex flex-col items-center gap-2 rounded-xl border border-border/30 bg-card/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-card/80 hover:shadow-md hover:shadow-primary/10">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-7 text-primary transition-transform duration-200 group-hover/link:scale-110"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              set:html={link.icon}
-            />
-            <span class="text-sm font-semibold transition-colors duration-200 group-hover/link:text-primary">
+            class="group/link flex flex-col items-center gap-2.5 rounded-xl border border-border/20 bg-background/40 p-4 transition-all duration-400 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-px hover:border-primary/30 hover:bg-primary/5">
+            <div class="flex size-10 items-center justify-center rounded-lg bg-primary/8 transition-colors duration-300 group-hover/link:bg-primary/15">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-5 text-primary"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                set:html={link.icon}
+              />
+            </div>
+            <span class="text-xs font-semibold tracking-wide transition-colors duration-300 group-hover/link:text-primary">
               {link.title}
             </span>
           </a>

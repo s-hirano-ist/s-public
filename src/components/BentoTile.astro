@@ -27,33 +27,36 @@ const baseClasses = `
   ${sizeClasses[size]}
   ${bgColor}
   ${textColor}
-  rounded-2xl p-3 sm:p-5 backdrop-blur-sm
-  hover:scale-[1.02] hover:-translate-y-0.5
-  border border-border/40
-  glow-hover
+  rounded-2xl p-4 sm:p-6 backdrop-blur-md
+  hover:-translate-y-0.5
+  border border-border/30
+  shadow-sm shadow-black/5
+  dark:shadow-black/20
+  bento-tile
   group
-  overflow-visible
+  overflow-hidden
   bento-enter
-  ${className || ""} transition-all duration-300 ease-out
+  ${className || ""} transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
 `;
 ---
 
 <div class={baseClasses}>
-  <div class="flex h-full flex-col justify-between gap-2">
+  <div class="flex h-full flex-col justify-between gap-3">
     <div class="flex flex-col items-center space-y-2">
-      <div class="flex items-center justify-center text-primary">
+      <div
+        class="flex items-center justify-center text-primary opacity-80 transition-opacity duration-300 group-hover:opacity-100">
         <slot name="icon" />
       </div>
 
       {
         title && (
-          <h3 class="text-center text-lg font-bold tracking-tight transition-colors duration-300 group-hover:text-primary">
+          <h3 class="text-center text-sm font-semibold uppercase tracking-widest text-muted-foreground transition-colors duration-300 group-hover:text-primary">
             {title}
           </h3>
         )
       }
     </div>
-    <div class="mt-2">
+    <div class="mt-1">
       <slot name="content" />
     </div>
     <div></div>
