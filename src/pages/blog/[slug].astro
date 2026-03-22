@@ -21,11 +21,11 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 
-const { heading, description, date } = post.data;
+const { heading, slug, description, date } = post.data;
 
 const { Content, headings } = await render(post);
 
-const ogUrl = new URL(`${heading}.png`, Astro.url.origin).href;
+const ogUrl = new URL(`${slug}.png`, Astro.url.origin).href;
 
 const articleJsonLd = {
   "@context": "https://schema.org",

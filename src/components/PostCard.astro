@@ -1,20 +1,24 @@
 ---
 export type Props = {
+  date?: string;
   description: string;
+  external?: boolean;
   href: string;
   title: string;
 };
-const { href, title, description } = Astro.props;
+const { href, title, description, date, external } = Astro.props;
 ---
 
 <li class="my-4">
   <a
     href={href}
-    class="group block rounded-xl border border-muted p-5 transition-all duration-200 hover:border-primary/30 hover:shadow-md">
+    class="group block rounded-xl border border-muted p-5 transition-all duration-200 hover:border-primary/30 hover:shadow-md"
+    {...external && { target: "_blank", rel: "noopener noreferrer" }}>
     <h2
       class="text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
       {title}
     </h2>
+    {date && <p class="mt-1 text-xs text-muted-foreground">{date}</p>}
     <p class="mt-2 text-sm text-muted-foreground">{description}</p>
   </a>
 </li>
