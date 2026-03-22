@@ -5,6 +5,7 @@ import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
 import PostCard from "@components/PostCard.astro";
 import { SITE } from "@config";
+import externalArticles from "@data/external-articles.json";
 import Layout from "@layouts/Layout.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
@@ -24,6 +25,20 @@ const pageTitle = "ブロク記事";
             href={`${pathname}/${slugify(data)}`}
             title={data.heading}
             description={data.description}
+          />
+        ))
+      }
+    </ul>
+    <h2 class="mt-12 text-xl font-bold text-foreground">外部記事</h2>
+    <ul>
+      {
+        externalArticles.map(article => (
+          <PostCard
+            href={article.url}
+            title={article.title}
+            description={article.description}
+            date={article.date}
+            external
           />
         ))
       }
