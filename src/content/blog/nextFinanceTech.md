@@ -1,5 +1,6 @@
 ---
-heading: next-finance-tech
+heading: フィンテックスタートアップでのエンジニア長期インターン体験記
+slug: next-finance-tech
 description: 株式会社Next Finance Techでのインターンシップ体験記
 draft: false
 date: 2024-03-01

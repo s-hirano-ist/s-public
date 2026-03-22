@@ -1,5 +1,6 @@
 ---
-heading: d-plan
+heading: はじめてのアプリ開発 ー 旅行計画iOSアプリ開発記録
+slug: d-plan
 description: 2018年頃にリリースしたiOSアプリの記録
 draft: false
 date: 2023-12-31
