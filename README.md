@@ -51,6 +51,62 @@ git clone https://github.com/s-hirano-ist/s-public.git
 pnpm install
 ```
 
+### Local development environment (mise + Doppler)
+
+[mise](https://mise.jdx.dev/) manages dev tools (`doppler`, `terraform`). Doppler secrets are injected via `script/doppler-env.sh`.
+
+#### Prerequisites (human setup)
+
+`.env.local` must be created by a human before AI agents can use this environment. This file is gitignored.
+
+```bash
+# 1. Login to Doppler (interactive browser auth)
+doppler login
+
+# 2. Install tools
+mise install
+
+# 3. Create .env.local with service token
+cd terraform
+echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
+cd ..
+```
+
+#### For AI agents (read-only access)
+
+Inject Doppler secrets into the shell, then run commands as usual:
+
+```bash
+source script/doppler-env.sh
+
+pnpm dev              # Astro dev server with secrets injected
+pnpm generate:book    # Google Books API (uses GOOGLE_BOOKS_API_KEY)
+pnpm build            # Production build (uses GA_MEASUREMENT_ID)
+```
+
+#### For Terraform changes (full access)
+
+When modifying Terraform configurations (e.g. adding secrets, updating IaC), you need full Doppler access via personal login.
+
+```bash
+# 1. Login to Doppler (one-time, interactive browser auth)
+doppler login
+
+# 2. Export personal token for Terraform provider
+cd terraform
+export DOPPLER_TOKEN=$(doppler configure get token --plain)
+
+# 3. Run Terraform commands
+terraform init
+terraform plan
+terraform apply
+
+# 4. If service tokens were regenerated, update .env.local
+echo "DOPPLER_TOKEN=$(terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
+```
+
+See `todo.md` for the full initial Doppler + Terraform setup checklist.
+
 ### Adding photos
 
 Add photos to `./src/data/assets/photo/` and run:
