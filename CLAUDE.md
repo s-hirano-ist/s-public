@@ -87,6 +87,15 @@ src/
 - **ポートフォリオ**: JSON ファイルで管理（`src/data/portfolio/`）
 - **ライセンス**: `pnpm license:json` で `src/data/license/data.gen.json` を自動生成
 
+### シークレット管理
+
+- **Doppler** がシークレットの一元管理ツール（source of truth）
+- **Terraform**（`terraform/`）で Doppler プロジェクトと GitHub sync を IaC 管理
+- プロジェクト: `s-public`、環境: `dev`（ローカル）/ `ci`（GitHub Actions）
+- `GA_MEASUREMENT_ID`（`visibility=unmasked`）→ GitHub Actions **variable** として同期
+- `GOOGLE_BOOKS_API_KEY`, `LHCI_GITHUB_APP_TOKEN`（`visibility=masked`）→ GitHub Actions **secret** として同期
+- ローカル開発時は `doppler run -- pnpm dev` を使用
+
 ### 品質管理
 
 - Husky + lint-staged によるpre-commitフック

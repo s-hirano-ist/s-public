@@ -1,0 +1,3 @@
+[tools]
+doppler = { version = "latest", exe = "doppler" }
+terraform = "latest"

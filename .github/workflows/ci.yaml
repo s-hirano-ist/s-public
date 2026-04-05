@@ -30,6 +30,8 @@ jobs:
       - run: pnpm i --frozen-lockfile
       - run: pnpm exec playwright install
       - run: pnpm build
+        env:
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
 
   lint:
     runs-on: ubuntu-24.04
@@ -93,6 +95,8 @@ jobs:
       - run: npm install -g @lhci/cli@0.12.x
       - run: pnpm exec playwright install
       - run: pnpm build
+        env:
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
       - run: lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
