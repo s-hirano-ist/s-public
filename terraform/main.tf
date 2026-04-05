@@ -70,16 +70,10 @@ resource "doppler_secret" "lhci_github_app_token_ci" {
   }
 }
 
-# Sync ci config to GitHub Actions
-# - visibility=unmasked secrets -> GitHub Actions variables
-# - visibility=masked secrets   -> GitHub Actions secrets
-resource "doppler_secrets_sync_github_actions" "ci" {
-  count                      = var.doppler_integration_id != "" ? 1 : 0
-  integration                = var.doppler_integration_id
-  project                    = doppler_project.s_public.name
-  config                     = doppler_environment.ci.slug
-  sync_target                = "repo"
-  repo_name                  = "s-public"
-  sync_unmasked_as_variables = true
-  delete_behavior            = "delete_from_target"
+# Service token for GitHub Actions (read-only access to ci config)
+resource "doppler_service_token" "ci" {
+  project = doppler_project.s_public.name
+  config  = doppler_environment.ci.slug
+  name    = "github-actions"
+  access  = "read"
 }

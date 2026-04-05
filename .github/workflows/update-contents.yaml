@@ -40,10 +40,13 @@ jobs:
       - name: run generate:photo
         run: pnpm generate:photo
 
+      - name: Fetch Doppler secrets
+        uses: dopplerhq/secrets-fetch-action@v2
+        with:
+          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
+          inject-env-vars: true
       - name: run generate:book
         run: pnpm generate:book
-        env:
-          GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
 
       - name: run format fix
         run: pnpm fmt:fix
