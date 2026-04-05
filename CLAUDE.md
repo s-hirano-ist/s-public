@@ -94,7 +94,33 @@ src/
 - プロジェクト: `s-public`、環境: `dev`（ローカル）/ `ci`（GitHub Actions）
 - `GA_MEASUREMENT_ID`（`visibility=unmasked`）→ GitHub Actions **variable** として同期
 - `GOOGLE_BOOKS_API_KEY`, `LHCI_GITHUB_APP_TOKEN`（`visibility=masked`）→ GitHub Actions **secret** として同期
-- ローカル開発時は `doppler run -- pnpm dev` を使用
+- ローカル開発時は `.env.local` に `DOPPLER_TOKEN`（dev 用サービストークン）を保存
+- `source script/doppler-env.sh` で Doppler secrets をシェル環境に注入
+- Secrets 注入後は `pnpm dev` や `pnpm generate:book` を直接実行可能
+
+### ローカル開発環境セットアップ
+
+`.env.local` に Doppler サービストークンを設定し、`script/doppler-env.sh` で secrets を注入する。AIエージェント（Claude Code 等）が開発する際の前提条件。
+
+**管理ツール（`mise.toml`）:** `doppler`, `terraform`
+
+**初回セットアップ（人間が実施）:**
+
+```bash
+# 1. mise でツールインストール
+mise install
+
+# 2. .env.local にサービストークンを設定（要: doppler login 済み）
+cd terraform
+echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
+cd ..
+```
+
+**Secrets の注入:**
+
+```bash
+source script/doppler-env.sh
+```
 
 ### 品質管理
 
