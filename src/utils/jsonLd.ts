@@ -91,12 +91,12 @@ export function buildBreadcrumbList(
 export function estimateWordCount(markdownBody: string): number {
   let text = markdownBody;
   // Remove code blocks
-  text = text.replace(/```[\s\S]*?```/g, "");
-  text = text.replace(/`[^`]+`/g, "");
+  text = text.replaceAll(/```[\s\S]*?```/g, "");
+  text = text.replaceAll(/`[^`]+`/g, "");
   // Remove HTML tags
-  text = text.replace(/<[^>]+>/g, "");
+  text = text.replaceAll(/<[^<>]*>/g, "");
   // Remove Markdown syntax
-  text = text.replace(/[#*_~\[\]()>|=-]/g, " ");
+  text = text.replaceAll(/[#*_~()>|=[\]-]/g, " ");
 
   // Count CJK characters individually (each is approximately one word)
   const cjkMatches = text.match(
@@ -106,7 +106,7 @@ export function estimateWordCount(markdownBody: string): number {
 
   // Remove CJK characters and count remaining Latin words by whitespace
   const latinText = text
-    .replace(
+    .replaceAll(
       /[\u3000-\u303F\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\uF900-\uFAFF]/g,
       " ",
     )
@@ -117,11 +117,11 @@ export function estimateWordCount(markdownBody: string): number {
 }
 
 type ArticleJsonLdParams = {
+  body?: string | undefined;
   canonicalUrl: string;
   date: Date;
   description: string;
   headline: string;
-  body?: string | undefined;
   ogImageUrl: string;
 };
 

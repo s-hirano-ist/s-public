@@ -7,8 +7,8 @@ import PostCard from "@components/PostCard.astro";
 import { SITE } from "@config";
 import externalArticles from "@data/external-articles.json";
 import Layout from "@layouts/Layout.astro";
-import { buildBreadcrumbList } from "@utils/jsonLd";
 import getSortedPosts from "@utils/getSortedPosts";
+import { buildBreadcrumbList } from "@utils/jsonLd";
 import slugify from "@utils/slugify";
 
 const pathname = Astro.url.pathname;
