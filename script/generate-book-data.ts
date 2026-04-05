@@ -8,13 +8,25 @@ import {
   sleep,
 } from "./utils.ts";
 
+try {
+  process.loadEnvFile(".env.local");
+} catch {
+  // .env.local が存在しない場合は無視（CI等では環境変数を直接設定）
+}
+
 const MAX_RATING = 5;
 const FILE_PATH = "src/data/book/data.gen.json";
 const NO_IMG_SRC = "https://s-hirano.com/notFound.png";
 const NOT_FOUND_HREF = "https://s-hirano.com/404";
 
+const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
+if (!apiKey) {
+  throw new Error("GOOGLE_BOOKS_API_KEY is not set");
+}
+
 const api = googleBooksApis({
   version: "v1",
+  auth: apiKey,
 });
 
 type BookType = {
