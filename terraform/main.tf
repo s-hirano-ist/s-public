@@ -77,3 +77,11 @@ resource "doppler_service_token" "ci" {
   name    = "github-actions"
   access  = "read"
 }
+
+# Service token for AI agent (read-only access to dev config)
+resource "doppler_service_token" "dev_ai_agent" {
+  project = doppler_project.s_public.name
+  config  = doppler_environment.dev.slug
+  name    = "ai-agent"
+  access  = "read"
+}

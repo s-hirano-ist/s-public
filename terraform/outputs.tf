@@ -8,3 +8,9 @@ output "doppler_ci_service_token" {
   value       = doppler_service_token.ci.key
   sensitive   = true
 }
+
+output "doppler_dev_ai_agent_service_token" {
+  description = "Service token for AI agent (read-only access to dev config)"
+  value       = doppler_service_token.dev_ai_agent.key
+  sensitive   = true
+}
