@@ -8,14 +8,40 @@ import { SITE } from "@config";
 import externalArticles from "@data/external-articles.json";
 import Layout from "@layouts/Layout.astro";
 import getSortedPosts from "@utils/getSortedPosts";
+import { buildBreadcrumbList } from "@utils/jsonLd";
 import slugify from "@utils/slugify";
 
 const pathname = Astro.url.pathname;
 const posts = getSortedPosts(await getCollection("blog"));
 const pageTitle = "ブロク記事";
+
+const baseUrl = SITE.website.replace(/\/$/, "");
+const blogUrl = `${baseUrl}/blog`;
+
+const jsonLd = [
+  buildBreadcrumbList([{ name: "ブログ記事", url: blogUrl }]),
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": blogUrl,
+    name: "ブログ記事",
+    description: `${SITE.author}のブログ記事一覧`,
+    url: blogUrl,
+    isPartOf: { "@id": `${baseUrl}/#website` },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: posts.map((post, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${baseUrl}/blog/${slugify(post.data)}`,
+        name: post.data.heading,
+      })),
+    },
+  },
+];
 ---
 
-<Layout title={`${SITE.title} ${pathname}`}>
+<Layout title={`${SITE.title} ${pathname}`} jsonLd={jsonLd}>
   <Header />
   <Main pageTitle={pageTitle}>
     <ul>

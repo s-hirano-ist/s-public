@@ -6,14 +6,15 @@ import Layout from "@layouts/Layout.astro";
 
 export type Props = {
   headerTitle: string;
+  jsonLd?: object | object[] | undefined;
   subSubTitle?: string;
   subTitle?: string;
   title?: string;
 };
-const { headerTitle, title, subTitle, subSubTitle } = Astro.props;
+const { headerTitle, title, subTitle, subSubTitle, jsonLd } = Astro.props;
 ---
 
-<Layout>
+<Layout jsonLd={jsonLd}>
   <Header title={headerTitle} />
   <Main>
     <section id="hero" class="pb-8">
