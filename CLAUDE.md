@@ -53,7 +53,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### ディレクトリ構造
 
-```
+```text
 src/
 ├── components/        # Astro コンポーネント
 │   └── react/        # React コンポーネント（BookList, Rating等）
