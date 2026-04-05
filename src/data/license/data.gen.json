@@ -83,8 +83,8 @@
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/LICENSE",
     "noticeFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/NOTICE"
   },
-  "@s-hirano-ist/s-ui@1.19.3": {
-    "licenses": "AGPL-3.0",
+  "@s-hirano-ist/s-ui@1.19.4": {
+    "licenses": "MIT",
     "repository": "https://github.com/s-hirano-ist/s-private",
     "path": "/home/runner/work/s-public/s-public/node_modules/@s-hirano-ist/s-ui",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@s-hirano-ist/s-ui/LICENSE"
@@ -469,7 +469,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/typescript",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/typescript/LICENSE.txt"
   },
-  "vnu-jar@26.4.1": {
+  "vnu-jar@26.4.2": {
     "licenses": "MIT",
     "repository": "https://github.com/validator/validator",
     "publisher": "sideshowbarker@gmail.com",
