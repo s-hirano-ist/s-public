@@ -1,7 +1,6 @@
 {
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    "baseUrl": "./src",
     "jsx": "react-jsx",
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
@@ -12,14 +11,14 @@
     "alwaysStrict": true,
     "isolatedModules": true,
     "paths": {
-      "@config": ["config.ts"],
-      "@components/*": ["components/*"],
-      "@content/*": ["content/*"],
-      "@layouts/*": ["layouts/*"],
-      "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"],
-      "@data/*": ["data/*"]
+      "@config": ["./src/config.ts"],
+      "@components/*": ["./src/components/*"],
+      "@content/*": ["./src/content/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@data/*": ["./src/data/*"]
     }
   },
   "include": [
