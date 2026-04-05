@@ -1,13 +1,31 @@
 ---
 import { Image } from "astro:assets";
+import { SITE } from "@config";
 import { CONTENTS } from "@data/_photo/data";
 import PortfolioLayout from "@layouts/PortfolioLayout.astro";
+import { buildBreadcrumbList } from "@utils/jsonLd";
+
+const baseUrl = SITE.website.replace(/\/$/, "");
+
+const jsonLd = [
+  buildBreadcrumbList([{ name: "Photo", url: `${baseUrl}/photo` }]),
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "sola-apochromat-lens",
+    description:
+      "撮影の議事録 from 2020年。風景写真から日常のスナップまで、レンズを通して見た世界を記録しています。",
+    url: `${baseUrl}/photo`,
+    isPartOf: { "@id": `${baseUrl}/#website` },
+  },
+];
 ---
 
 <PortfolioLayout
   headerTitle="PHOTOGRAPH"
   title="sola-apochromat-lens"
-  subTitle="撮影の議事録 from 2020年。風景写真から日常のスナップまで、レンズを通して見た世界を記録しています。">
+  subTitle="撮影の議事録 from 2020年。風景写真から日常のスナップまで、レンズを通して見た世界を記録しています。"
+  jsonLd={jsonLd}>
   <div class="pswp-gallery grid w-full grid-cols-3 gap-4" id="my-gallery">
     {
       CONTENTS.map(src => {

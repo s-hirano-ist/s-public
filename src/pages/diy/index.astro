@@ -1,14 +1,39 @@
 ---
 import SwiperContainer from "@components/SwiperContainer.astro";
+import { SITE } from "@config";
 import { CONTENTS } from "@data/_diy/data";
 import PortfolioLayout from "@layouts/PortfolioLayout.astro";
+import { buildBreadcrumbList } from "@utils/jsonLd";
+
+const baseUrl = SITE.website.replace(/\/$/, "");
+
+const jsonLd = [
+  buildBreadcrumbList([{ name: "DIY", url: `${baseUrl}/diy` }]),
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "sola-tannin-diy",
+    description: "DIYプロジェクト: レザークラフト、木工大工、電子工作",
+    url: `${baseUrl}/diy`,
+    isPartOf: { "@id": `${baseUrl}/#website` },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: CONTENTS.map((content: { name: string }, i: number) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: content.name,
+      })),
+    },
+  },
+];
 ---
 
 <PortfolioLayout
   headerTitle="DIY"
   title="sola-tannin-diy"
   subTitle="お金をだせば「いいもの」が手に入るのが当たり前の時代"
-  subSubTitle="#DIY #レザークラフト #木工大工 #電子工作">
+  subSubTitle="#DIY #レザークラフト #木工大工 #電子工作"
+  jsonLd={jsonLd}>
   <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3">
     {
       CONTENTS.map(content => {

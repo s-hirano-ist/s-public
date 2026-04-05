@@ -4,7 +4,9 @@ import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
 import TableOfContents from "@components/TableOfContents.astro";
+import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
+import { buildArticleJsonLd, buildBreadcrumbList } from "@utils/jsonLd";
 import slugify from "@utils/slugify";
 
 export type Props = {
@@ -27,53 +29,30 @@ const { Content, headings } = await render(post);
 
 const ogUrl = new URL(`${slug}.png`, Astro.url.origin).href;
 
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": `https://s-hirano.com/blog/${slugify(post.data)}`,
-  headline: heading,
-  description: description,
-  datePublished: date.toISOString(),
-  dateModified: date.toISOString(),
-  author: {
-    "@type": "Person",
-    "@id": "https://s-hirano.com/#person",
-    name: "s-hirano-ist",
-    url: "https://s-hirano.com",
-  },
-  publisher: {
-    "@type": "Organization",
-    "@id": "https://s-hirano.com/#organization",
-    name: "s-hirano-ist Portfolio",
-    url: "https://s-hirano.com",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://s-hirano.com/favicon-192x192.png",
-      width: 192,
-      height: 192,
-    },
-  },
-  url: `https://s-hirano.com/blog/${slugify(post.data)}`,
-  image: {
-    "@type": "ImageObject",
-    url: ogUrl,
-    width: 1200,
-    height: 630,
-  },
-  inLanguage: "ja",
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": `https://s-hirano.com/blog/${slugify(post.data)}`,
-  },
-  wordCount: post.body?.length || 0,
-};
+const baseUrl = SITE.website.replace(/\/$/, "");
+const canonicalUrl = `${baseUrl}/blog/${slugify(post.data)}`;
+
+const jsonLd = [
+  buildBreadcrumbList([
+    { name: "ブログ記事", url: `${baseUrl}/blog` },
+    { name: heading, url: canonicalUrl },
+  ]),
+  buildArticleJsonLd({
+    canonicalUrl,
+    date,
+    description,
+    headline: heading,
+    body: post.body,
+    ogImageUrl: ogUrl,
+  }),
+];
 ---
 
 <Layout
   title={heading}
   description={description}
   ogImage={ogUrl}
-  jsonLd={articleJsonLd}>
+  jsonLd={jsonLd}>
   <Header />
   <Main publishedDate={date.toLocaleDateString("ja")}>
     <article
