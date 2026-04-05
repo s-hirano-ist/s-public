@@ -30,7 +30,7 @@ jobs:
       - run: pnpm i --frozen-lockfile
       - run: pnpm exec playwright install
       - name: Fetch Doppler secrets
-        uses: dopplerhq/secrets-fetch-action@v2
+        uses: dopplerhq/secrets-fetch-action@v2.0.0
         with:
           doppler-token: ${{ secrets.DOPPLER_TOKEN }}
           inject-env-vars: true
@@ -98,7 +98,7 @@ jobs:
       - run: npm install -g @lhci/cli@0.12.x
       - run: pnpm exec playwright install
       - name: Fetch Doppler secrets
-        uses: dopplerhq/secrets-fetch-action@v2
+        uses: dopplerhq/secrets-fetch-action@v2.0.0
         with:
           doppler-token: ${{ secrets.DOPPLER_TOKEN }}
           inject-env-vars: true

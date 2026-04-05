@@ -41,7 +41,7 @@ jobs:
         run: pnpm generate:photo
 
       - name: Fetch Doppler secrets
-        uses: dopplerhq/secrets-fetch-action@v2
+        uses: dopplerhq/secrets-fetch-action@v2.0.0
         with:
           doppler-token: ${{ secrets.DOPPLER_TOKEN }}
           inject-env-vars: true
