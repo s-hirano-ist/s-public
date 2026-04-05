@@ -1,6 +1,7 @@
 ---
 import AboutMe from "@components/AboutMe.astro";
 import Education from "@components/Education.astro";
+import Footer from "@components/Footer.astro";
 import PortfolioLinks from "@components/PortfolioLinks.astro";
 import Qualifications from "@components/Qualifications.astro";
 import TechStack from "@components/TechStack.astro";
@@ -39,5 +40,6 @@ const jsonLd = [WEBSITE_ENTITY, PERSON_ENTITY];
         <Qualifications class="order-5 lg:order-5" />
       </div>
     </section>
+    <Footer darkModeDisabled />
   </main>
 </Layout>
