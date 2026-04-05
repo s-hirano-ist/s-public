@@ -93,8 +93,12 @@ export function estimateWordCount(markdownBody: string): number {
   // Remove code blocks
   text = text.replaceAll(/```[\s\S]*?```/g, "");
   text = text.replaceAll(/`[^`]+`/g, "");
-  // Remove HTML tags
-  text = text.replaceAll(/<[^<>]*>/g, "");
+  // Remove HTML tags (loop to handle nested patterns like `<scr<script>ipt>`)
+  let previous;
+  do {
+    previous = text;
+    text = text.replaceAll(/<[^<>]*>/g, "");
+  } while (text !== previous);
   // Remove Markdown syntax
   text = text.replaceAll(/[#*_~()>|=[\]-]/g, " ");
 
