@@ -27,8 +27,8 @@ importers:
         specifier: 7.2.0
         version: 7.2.0
       '@s-hirano-ist/s-ui':
-        specifier: 1.19.3
-        version: 1.19.3(@babel/core@7.29.0)(@playwright/test@1.59.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(tailwindcss@4.2.2)
+        specifier: 1.19.4
+        version: 1.19.4(@babel/core@7.29.0)(@playwright/test@1.59.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(tailwindcss@4.2.2)
       '@tailwindcss/vite':
         specifier: 4.2.2
         version: 4.2.2(vite@7.3.1(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
@@ -211,8 +211,8 @@ importers:
         specifier: 8.58.0
         version: 8.58.0(eslint@10.1.0(jiti@2.6.1))(typescript@6.0.2)
       vnu-jar:
-        specifier: 26.4.1
-        version: 26.4.1
+        specifier: 26.4.2
+        version: 26.4.2
 
 packages:
 
@@ -1506,8 +1506,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@s-hirano-ist/s-ui@1.19.3':
-    resolution: {integrity: sha512-dhJ46v4hadUL8Wke2djv2qRHqFPWY1pbJZFmZ/VKXwU/44XVA6XEo9S5lOzgz4GCZVZ9t4iX5SBcpNG6jRTq9Q==}
+  '@s-hirano-ist/s-ui@1.19.4':
+    resolution: {integrity: sha512-30V9/8KJKSjzSgQhJjSsLArMFf9qjt6CBORkdlOCvyPd6gCH+cqUBMPBBay11wrJJ4veDbDfeAz43wARgdu2tQ==}
 
   '@secretlint/config-creator@11.4.1':
     resolution: {integrity: sha512-gWFJvjIrSd1LW0Su8eaVeo4mKEoxNoTVkVm1a9krJWeIDXG6iJ0/Hwp7d6TqDxCmwjEZQ80d/PH2TzU144bpVA==}
@@ -5349,8 +5349,8 @@ packages:
       vite:
         optional: true
 
-  vnu-jar@26.4.1:
-    resolution: {integrity: sha512-CSmxM4yuKGkkllWmz9jX7p3jdBJHHTEdM4ei212klM3ORv5ff79xNwfeJeiBT8JW0UZCt9HUoEmfYbxcDKP4iA==}
+  vnu-jar@26.4.2:
+    resolution: {integrity: sha512-4Ppe4Aqv+sj9hVXZsX2rbaQKr7MOE4BrAnkLktnZOPZX1EEm+8vnuojMixi7ptMc3dkCw2lZ7UPpvGpHR9anLA==}
     engines: {node: '>=0.10'}
     hasBin: true
 
@@ -6744,7 +6744,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@s-hirano-ist/s-ui@1.19.3(@babel/core@7.29.0)(@playwright/test@1.59.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(tailwindcss@4.2.2)':
+  '@s-hirano-ist/s-ui@1.19.4(@babel/core@7.29.0)(@playwright/test@1.59.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(tailwindcss@4.2.2)':
     dependencies:
       '@base-ui/react': 1.2.0(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -11355,7 +11355,7 @@ snapshots:
     optionalDependencies:
       vite: 7.3.1(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3)
 
-  vnu-jar@26.4.1: {}
+  vnu-jar@26.4.2: {}
 
   volar-service-css@0.0.70(@volar/language-service@2.4.28):
     dependencies:
