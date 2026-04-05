@@ -6,7 +6,6 @@ import { configs as eslintPluginAstro } from "eslint-plugin-astro";
 import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
 import perfectionistPlugin from "eslint-plugin-perfectionist";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import spellcheckPlugin from "eslint-plugin-spellcheck";
 // import tailwind from "eslint-plugin-tailwindcss";
 // import ymlPlugin from "eslint-plugin-yml";
 import unicornPlugin from "eslint-plugin-unicorn";
@@ -178,66 +177,6 @@ export default [
     language: "css/css",
     rules: {
       "css/use-baseline": ["error", { available: "widely" }],
-    },
-  },
-
-  // spellcheck
-  {
-    plugins: { spellcheck: spellcheckPlugin },
-    rules: {
-      "spellcheck/spell-checker": [
-        "error",
-        {
-          minLength: 5, // 5 文字以上の単語をチェック
-          skipWords: [
-            "astro",
-            "tailwindcss",
-            "daisyui",
-            "frontmatter",
-            "uint",
-            "hirano",
-            "slugify",
-            "redos",
-            "apochromat",
-            "frontend",
-            "swiper",
-            "pathname",
-            "favicon",
-            "webmanifest",
-            "jsonc",
-            "sitemap",
-            "toker",
-            "bento",
-            "semibold",
-            "tabler",
-            "noopener",
-            "noreferrer",
-            "dropdown",
-            "rehype",
-            "autolink",
-            "integrations",
-            "shiki",
-            "checkbox",
-            "undef",
-            "nowrap",
-            "whitespace",
-            "mailto",
-            "readdir",
-            "pragma",
-            "webkit",
-            "firefox",
-            "compat",
-            "stylelintrc",
-            "tsconfig",
-            "lerna",
-            "filepath",
-            "parens",
-            "sidenav",
-            "extrabold",
-            "bezier",
-          ], // チェックをスキップする単語の配列
-        },
-      ],
     },
   },
 
