@@ -73,7 +73,7 @@
     "@eslint/js": "9.39.4",
     "@eslint/markdown": "8.0.1",
     "@googleapis/books": "8.0.1",
-    "@playwright/test": "1.58.2",
+    "@playwright/test": "1.59.1",
     "@secretlint/secretlint-rule-preset-recommend": "11.4.1",
     "@tailwindcss/typography": "0.5.19",
     "@types/react": "19.2.14",
@@ -116,6 +116,6 @@
     "svgo": "4.0.1",
     "tsx": "4.21.0",
     "typescript-eslint": "8.58.0",
-    "vnu-jar": "26.3.24"
+    "vnu-jar": "26.4.1"
   }
 }
