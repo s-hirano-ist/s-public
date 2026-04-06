@@ -90,10 +90,11 @@ src/
 ### シークレット管理
 
 - **Doppler** がシークレットの一元管理ツール（source of truth）
-- **Terraform**（`terraform/`）で Doppler プロジェクトと GitHub sync を IaC 管理
-- プロジェクト: `s-public`、環境: `dev`（ローカル）/ `ci`（GitHub Actions）
+- **Terraform**（`terraform/`）で Doppler プロジェクトと Cloudflare Pages を IaC 管理
+- プロジェクト: `s-public`、環境: `dev`（ローカル）/ `ci`（GitHub Actions）/ `infra`（Terraform 用）
 - `GA_MEASUREMENT_ID`（`visibility=unmasked`）→ GitHub Actions **variable** として同期
 - `GOOGLE_BOOKS_API_KEY`, `LHCI_GITHUB_APP_TOKEN`（`visibility=masked`）→ GitHub Actions **secret** として同期
+- `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`（infra 環境のみ）→ Terraform 実行時に使用
 - ローカル開発時は `.env.local` に `DOPPLER_TOKEN`（dev 用サービストークン）を保存
 - `source script/doppler-env.sh` で Doppler secrets をシェル環境に注入
 - Secrets 注入後は `pnpm dev` や `pnpm generate:book` を直接実行可能
@@ -121,6 +122,26 @@ cd ..
 ```bash
 source script/doppler-env.sh
 ```
+
+**Terraform 実行時の設定:**
+
+Terraform は Doppler プロバイダー経由で環境・シークレット・サービストークンを管理するため、**個人トークン（CLI トークン）** が必要。サービストークンでは権限不足でエラーになる。
+
+```bash
+source script/doppler-env.sh --terraform
+cd terraform && terraform plan
+```
+
+`--terraform` フラグにより以下が自動設定される:
+
+- `DOPPLER_TOKEN` — 個人トークン（`doppler configure get token --plain`）
+- `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` — infra config から取得
+- `TF_VAR_cloudflare_account_id` — Terraform 変数へのマッピング
+
+Cloudflare Pages を管理するため、以下の Doppler シークレットが必要（Doppler ダッシュボードの `infra` 環境で値を設定）:
+
+- `CLOUDFLARE_API_TOKEN` — Cloudflare API トークン（Pages Edit 権限）
+- `CLOUDFLARE_ACCOUNT_ID` — Cloudflare アカウント ID
 
 ### 品質管理
 
