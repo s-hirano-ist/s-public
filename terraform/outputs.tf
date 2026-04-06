@@ -17,5 +17,5 @@ output "doppler_dev_ai_agent_service_token" {
 
 output "cloudflare_pages_url" {
   description = "Cloudflare Pages default URL"
-  value       = "https://s-public.pages.dev"
+  value       = "https://${cloudflare_pages_project.s_public.name}.pages.dev"
 }

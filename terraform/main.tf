@@ -131,6 +131,8 @@ resource "cloudflare_pages_project" "s_public" {
   build_config = {
     build_command   = "pnpm build"
     destination_dir = "dist"
+    build_caching   = true
+    root_dir        = ""
   }
 
   source = {
@@ -142,7 +144,26 @@ resource "cloudflare_pages_project" "s_public" {
       pr_comments_enabled            = true
       production_deployments_enabled = true
       preview_deployment_setting     = "all"
+      path_includes                  = ["*"]
+      preview_branch_includes        = ["*"]
     }
+  }
+
+  # Cloudflare プロバイダーがサーバー側で算出する読み取り専用フィールド
+  # (owner_id, repo_id, deployments_enabled, web_analytics_*, env_vars value sensitivity)
+  # ユーザーが制御可能な設定はすべて上記で明示的に定義済み
+  lifecycle {
+    ignore_changes = [
+      source.config.owner_id,
+      source.config.repo_id,
+      source.config.deployments_enabled,
+      source.config.path_excludes,
+      source.config.preview_branch_excludes,
+      build_config.web_analytics_tag,
+      build_config.web_analytics_token,
+      deployment_configs.production.env_vars,
+      deployment_configs.preview.env_vars,
+    ]
   }
 
   deployment_configs = {
@@ -172,9 +193,6 @@ resource "cloudflare_pages_project" "s_public" {
     }
   }
 
-  lifecycle {
-    ignore_changes = [source]
-  }
 }
 
 resource "cloudflare_pages_domain" "s_hirano_com" {
