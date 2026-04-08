@@ -198,7 +198,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-jsonc",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-jsonc/LICENSE"
   },
-  "eslint-plugin-perfectionist@5.7.0": {
+  "eslint-plugin-perfectionist@5.8.0": {
     "licenses": "MIT",
     "repository": "https://github.com/azat-io/eslint-plugin-perfectionist",
     "publisher": "Azat S.",
