@@ -75,14 +75,6 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@googleapis/books",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@googleapis/books/README.md"
   },
-  "@playwright/test@1.59.1": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/microsoft/playwright",
-    "publisher": "Microsoft Corporation",
-    "path": "/home/runner/work/s-public/s-public/node_modules/@playwright/test",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/LICENSE",
-    "noticeFile": "/home/runner/work/s-public/s-public/node_modules/@playwright/test/NOTICE"
-  },
   "@s-hirano-ist/s-ui@1.19.4": {
     "licenses": "MIT",
     "repository": "https://github.com/s-hirano-ist/s-private",

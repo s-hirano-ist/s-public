@@ -21,12 +21,6 @@
       "@data/*": ["./src/data/*"]
     }
   },
-  "include": [
-    ".astro/types.d.ts",
-    "src/**/*",
-    "e2e/**/*",
-    "script/**/*",
-    "playwright.config.ts"
-  ],
+  "include": [".astro/types.d.ts", "src/**/*", "e2e/**/*", "script/**/*"],
   "exclude": ["node_modules", "dist"]
 }

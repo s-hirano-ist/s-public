@@ -84,9 +84,6 @@ importers:
       '@googleapis/books':
         specifier: 8.0.1
         version: 8.0.1
-      '@playwright/test':
-        specifier: 1.59.1
-        version: 1.59.1
       '@secretlint/secretlint-rule-preset-recommend':
         specifier: 11.6.0
         version: 11.6.0
@@ -6376,6 +6373,7 @@ snapshots:
   '@playwright/test@1.59.1':
     dependencies:
       playwright: 1.59.1
+    optional: true
 
   '@radix-ui/primitive@1.1.3': {}
 
@@ -10196,13 +10194,15 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  playwright-core@1.59.1: {}
+  playwright-core@1.59.1:
+    optional: true
 
   playwright@1.59.1:
     dependencies:
       playwright-core: 1.59.1
     optionalDependencies:
       fsevents: 2.3.2
+    optional: true
 
   pluralize@2.0.0: {}
 

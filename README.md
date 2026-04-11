@@ -30,7 +30,6 @@
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
 **HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
 **Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
-**Visual regression** - [Playwright test](https://playwright.dev/docs/test-intro/)  
 **SVG optimization** - [svgo](https://github.com/svg/svgo)  
 **Vulnerabilities Check** - [pnpm audit](https://pnpm.io/cli/audit) | [Dependabot alert](https://docs.github.com/ja/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
 
@@ -174,7 +173,6 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm license:summary`  | Generate license summary                       |
 | `pnpm license:json`     | Generate license JSON                          |
 | `pnpm security`         | Security check with pnpm audit                 |
-| `pnpm snapshots`        | Run visual regression tests with Playwright    |
 | `pnpm snapshots:update` | Update visual regression snapshots             |
 
 ## 🪝 Tags & Release
