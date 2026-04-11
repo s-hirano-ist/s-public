@@ -23,7 +23,7 @@ Login flows, session persistence, OAuth, 2FA, and authenticated browsing.
 
 The fastest way to authenticate is to reuse cookies from a Chrome session you are already logged into.
 
-**Step 1: Start Chrome with remote debugging**
+### Step 1: Start Chrome with remote debugging
 
 ```bash
 # macOS
@@ -40,14 +40,14 @@ Log in to your target site(s) in this Chrome window as you normally would.
 
 > **Security note:** `--remote-debugging-port` exposes full browser control on localhost. Any local process can connect and read cookies, execute JS, etc. Only use on trusted machines and close Chrome when done.
 
-**Step 2: Grab the auth state**
+### Step 2: Grab the auth state
 
 ```bash
 # Auto-discover the running Chrome and save its cookies + localStorage
 agent-browser --auto-connect state save ./my-auth.json
 ```
 
-**Step 3: Reuse in automation**
+### Step 3: Reuse in automation
 
 ```bash
 # Load auth at launch
@@ -298,6 +298,7 @@ fi
    ```
 
 4. **Use short-lived sessions for CI/CD**
+
    ```bash
    # Don't persist state in CI
    agent-browser open https://app.example.com/login

@@ -50,7 +50,7 @@ agent-browser open https://example.com && agent-browser screenshot
 
 When automating a site that requires login, choose the approach that fits:
 
-**Option 1: Import auth from the user's browser (fastest for one-off tasks)**
+### Option 1: Import auth from the user's browser (fastest for one-off tasks)
 
 ```bash
 # Connect to the user's running Chrome (they're already logged in)
@@ -61,7 +61,7 @@ agent-browser --state ./auth.json open https://app.example.com/dashboard
 
 State files contain session tokens in plaintext -- add to `.gitignore` and delete when no longer needed. Set `AGENT_BROWSER_ENCRYPTION_KEY` for encryption at rest.
 
-**Option 2: Chrome profile reuse (zero setup)**
+### Option 2: Chrome profile reuse (zero setup)
 
 ```bash
 # List available Chrome profiles
@@ -71,7 +71,7 @@ agent-browser profiles
 agent-browser --profile Default open https://gmail.com
 ```
 
-**Option 3: Persistent profile (for recurring tasks)**
+### Option 3: Persistent profile (for recurring tasks)
 
 ```bash
 # First run: login manually or via automation
@@ -82,7 +82,7 @@ agent-browser --profile ~/.myapp open https://app.example.com/login
 agent-browser --profile ~/.myapp open https://app.example.com/dashboard
 ```
 
-**Option 4: Session name (auto-save/restore cookies + localStorage)**
+### Option 4: Session name (auto-save/restore cookies + localStorage)
 
 ```bash
 agent-browser --session-name myapp open https://app.example.com/login
@@ -93,7 +93,7 @@ agent-browser close  # State auto-saved
 agent-browser --session-name myapp open https://app.example.com/dashboard
 ```
 
-**Option 5: Auth vault (credentials stored encrypted, login by name)**
+### Option 5: Auth vault (credentials stored encrypted, login by name)
 
 ```bash
 echo "$PASSWORD" | agent-browser auth save myapp --url https://app.example.com/login --username user --password-stdin
@@ -102,7 +102,7 @@ agent-browser auth login myapp
 
 `auth login` navigates with `load` and then waits for login form selectors to appear before filling/clicking, which is more reliable on delayed SPA login screens.
 
-**Option 6: State file (manual save/load)**
+### Option 6: State file (manual save/load)
 
 ```bash
 # After logging in:
@@ -786,7 +786,7 @@ Supported engines:
 - `chrome` (default) -- Chrome/Chromium via CDP
 - `lightpanda` -- Lightpanda headless browser via CDP (10x faster, 10x less memory than Chrome)
 
-Lightpanda does not support `--extension`, `--profile`, `--state`, or `--allow-file-access`. Install Lightpanda from https://lightpanda.io/docs/open-source/installation.
+Lightpanda does not support `--extension`, `--profile`, `--state`, or `--allow-file-access`. Install Lightpanda from <https://lightpanda.io/docs/open-source/installation>.
 
 ## Observability Dashboard
 
