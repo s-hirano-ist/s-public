@@ -23,6 +23,9 @@ node_modules/
 # ignore .astro directory
 .astro
 
+# eslint cache
+.eslintcache
+
 # playwright test
 playwright-report
 test-results
