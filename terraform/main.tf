@@ -136,7 +136,7 @@ resource "cloudflare_pages_project" "s_public" {
   production_branch = "main"
 
   build_config = {
-    build_command   = "pnpm build"
+    build_command   = "pnpm astro build"
     destination_dir = "dist"
     build_caching   = true
     root_dir        = ""

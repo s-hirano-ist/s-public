@@ -48,6 +48,7 @@
 
 ```bash
 git clone https://github.com/s-hirano-ist/s-public.git
+mise install
 pnpm install
 ```
 
