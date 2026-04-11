@@ -37,7 +37,6 @@ jobs:
             ${{ runner.os }}-pnpm-
 
       - run: pnpm i --frozen-lockfile
-      - run: pnpm exec playwright install
       - name: Install Doppler CLI
         uses: dopplerhq/cli-action@5351693ec144fc7f7a2d30025061acfc3c53c47c # v4
       - run: pnpm build
@@ -78,7 +77,6 @@ jobs:
             ${{ runner.os }}-pnpm-
 
       - run: pnpm i --frozen-lockfile
-      - run: pnpm exec playwright install
       - run: pnpm check
       - run: pnpm tsc
       - run: pnpm fmt
@@ -122,7 +120,6 @@ jobs:
 
       - run: pnpm i --frozen-lockfile
       - run: npm install -g @lhci/cli@0.12.x
-      - run: pnpm exec playwright install
       - name: Install Doppler CLI
         uses: dopplerhq/cli-action@5351693ec144fc7f7a2d30025061acfc3c53c47c # v4
       - run: pnpm build

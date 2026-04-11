@@ -22,8 +22,6 @@
 
 ## テスト・品質チェック
 
-- `pnpm snapshots` - Playwrightでビジュアルリグレッションテスト
-- `pnpm snapshots:update` - スナップショットの更新
 - `pnpm security` - pnpm auditでセキュリティチェック
 
 ## データ生成・更新
