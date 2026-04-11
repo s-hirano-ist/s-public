@@ -111,9 +111,7 @@ src/
 mise install
 
 # 2. .env.local にサービストークンを設定（要: doppler login 済み）
-cd terraform
-echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
-cd ..
+echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform -chdir=terraform output -raw doppler_dev_ai_agent_service_token)" > .env.local
 ```
 
 設定後は `pnpm dev` や `pnpm generate:book` を直接実行可能。

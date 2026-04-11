@@ -68,9 +68,7 @@ doppler login
 mise install
 
 # 3. Create .env.local with service token
-cd terraform
-echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
-cd ..
+echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform -chdir=terraform output -raw doppler_dev_ai_agent_service_token)" > .env.local
 ```
 
 #### For AI agents (read-only access)
@@ -100,9 +98,7 @@ terraform -chdir=terraform plan
 terraform -chdir=terraform apply
 
 # 4. If service tokens were regenerated, restore .env.local
-cd terraform
-echo "DOPPLER_TOKEN=$(terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
-cd ..
+echo "DOPPLER_TOKEN=$(terraform -chdir=terraform output -raw doppler_dev_ai_agent_service_token)" > .env.local
 ```
 
 See `todo.md` for the full initial Doppler + Terraform setup checklist.
