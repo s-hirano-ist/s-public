@@ -15,26 +15,34 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install tools via mise
+        uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4
+
       - name: Install pnpm
         uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5
         with:
           run_install: false
 
-      - name: Install Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache pnpm dependencies
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5
         with:
-          node-version: "24.14.1"
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
 
       - run: pnpm i --frozen-lockfile
       - run: pnpm exec playwright install
-      - name: Fetch Doppler secrets
-        uses: dopplerhq/secrets-fetch-action@451892f16195f9ac360e1a5bcbf0b5fd0e957534 # v2.0.0
-        with:
-          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
-          inject-env-vars: true
+      - name: Install Doppler CLI
+        uses: dopplerhq/cli-action@5351693ec144fc7f7a2d30025061acfc3c53c47c # v4
       - run: pnpm build
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
 
   lint:
     runs-on: ubuntu-24.04
@@ -48,17 +56,26 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install tools via mise
+        uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4
+
       - name: Install pnpm
         uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5
         with:
           run_install: false
 
-      - name: Install Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache pnpm dependencies
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5
         with:
-          node-version: "24.14.1"
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
 
       - run: pnpm i --frozen-lockfile
       - run: pnpm exec playwright install
@@ -82,25 +99,33 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install tools via mise
+        uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4
+
       - name: Install pnpm
         uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5
         with:
           run_install: false
 
-      - name: Install Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache pnpm dependencies
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5
         with:
-          node-version: "24.14.1"
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
 
       - run: pnpm i --frozen-lockfile
       - run: npm install -g @lhci/cli@0.12.x
       - run: pnpm exec playwright install
-      - name: Fetch Doppler secrets
-        uses: dopplerhq/secrets-fetch-action@451892f16195f9ac360e1a5bcbf0b5fd0e957534 # v2.0.0
-        with:
-          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
-          inject-env-vars: true
+      - name: Install Doppler CLI
+        uses: dopplerhq/cli-action@5351693ec144fc7f7a2d30025061acfc3c53c47c # v4
       - run: pnpm build
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
       - run: lhci autorun

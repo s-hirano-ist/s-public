@@ -60,13 +60,17 @@ src/
 ├── content/          # Astro Content Collections
 │   └── blog/         # ブログ記事（Markdown）
 ├── data/             # 静的データとアセット
+│   ├── _diy/         # DIY作品データ
+│   ├── _photo/       # 写真パスデータ（自動生成）
 │   ├── assets/       # 画像・アイコン等
 │   ├── book/         # 書籍データ（自動生成）
+│   ├── external-articles.json  # 外部記事データ
 │   ├── license/      # ライセンス情報（自動生成）
 │   └── portfolio/    # ポートフォリオ用JSON データ
 ├── layouts/          # ページレイアウト
 ├── pages/            # ルーティング（Astro）
-├── schemas.ts        # Zod スキーマ定義
+├── content.config.ts  # Content Collections定義（Zod スキーマ）
+├── env.d.ts           # 型参照ファイル
 ├── styles/           # グローバルCSS
 └── utils/            # ユーティリティ関数
 ```
@@ -76,7 +80,6 @@ src/
 - `src/config.ts` - サイト設定（URL、作者情報、MAX_RATING等）
 - `src/content.config.ts` - Content Collections定義（Zod スキーマ）
 - `astro.config.mjs` - Astro設定（React は `**/react/*` パターンのみ有効）
-- `src/schemas.ts` - ブログ frontmatter 型定義
 - `src/data/book/_original.ts` - 書籍の ISBN・評価・タグ元データ
 
 ### データ管理
@@ -90,19 +93,19 @@ src/
 ### シークレット管理
 
 - **Doppler** がシークレットの一元管理ツール（source of truth）
-- **Terraform**（`terraform/`）で Doppler プロジェクトと GitHub sync を IaC 管理
-- プロジェクト: `s-public`、環境: `dev`（ローカル）/ `ci`（GitHub Actions）
+- **Terraform**（`terraform/`）で Doppler プロジェクトと Cloudflare Pages を IaC 管理
+- プロジェクト: `s-public`、環境: `dev`（ローカル）/ `ci`（GitHub Actions）/ `infra`（Terraform 用）
 - `GA_MEASUREMENT_ID`（`visibility=unmasked`）→ GitHub Actions **variable** として同期
 - `GOOGLE_BOOKS_API_KEY`, `LHCI_GITHUB_APP_TOKEN`（`visibility=masked`）→ GitHub Actions **secret** として同期
-- ローカル開発時は `.env.local` に `DOPPLER_TOKEN`（dev 用サービストークン）を保存
-- `source script/doppler-env.sh` で Doppler secrets をシェル環境に注入
-- Secrets 注入後は `pnpm dev` や `pnpm generate:book` を直接実行可能
+- `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`（infra 環境のみ）→ Terraform が Doppler data source で直接取得
+- ローカル開発時は `.env.local` に `DOPPLER_TOKEN` を保存し、mise が自動読み込み
+- `pnpm dev` 等の secrets が必要なコマンドは `doppler run` 経由で自動注入
 
 ### ローカル開発環境セットアップ
 
-`.env.local` に Doppler サービストークンを設定し、`script/doppler-env.sh` で secrets を注入する。AIエージェント（Claude Code 等）が開発する際の前提条件。
+`.env.local` に Doppler トークンを設定するだけで、`pnpm dev` 等が secrets 付きで動作する。mise が `.env.local` を自動読み込みし、package.json の scripts が `doppler run` 経由で secrets を注入する。
 
-**管理ツール（`mise.toml`）:** `doppler`, `terraform`
+**管理ツール（`mise.toml`）:** `node`, `doppler`, `terraform`
 
 **初回セットアップ（人間が実施）:**
 
@@ -111,15 +114,21 @@ src/
 mise install
 
 # 2. .env.local にサービストークンを設定（要: doppler login 済み）
-cd terraform
-echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
-cd ..
+echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform -chdir=terraform output -raw doppler_dev_ai_agent_service_token)" > .env.local
 ```
 
-**Secrets の注入:**
+設定後は `pnpm dev` や `pnpm generate:book` を直接実行可能。
+
+**Terraform 実行時の設定:**
+
+Terraform は Doppler プロバイダー経由で環境・シークレット・サービストークンを管理するため、**個人トークン（CLI トークン）** が必要。サービストークンでは権限不足でエラーになる。Cloudflare 認証情報は Terraform が Doppler data source（`data "doppler_secrets" "infra"`）で直接取得するため、環境変数の手動設定は不要。
 
 ```bash
-source script/doppler-env.sh
+# .env.local を個人トークンに切り替え
+echo "DOPPLER_TOKEN=$(doppler configure get token --plain)" > .env.local
+
+# Terraform 実行
+terraform -chdir=terraform plan
 ```
 
 ### 品質管理
@@ -146,7 +155,7 @@ source script/doppler-env.sh
 ### コンテンツ管理
 
 - ブログ記事は `src/content/blog/` に Markdown で作成
-- 各記事には heading, description, draft, date が必要
+- 各記事には heading, slug, description, draft, date が必要
 - ドラフトは `draft: true` で非公開
 
 ### コミット前の確認

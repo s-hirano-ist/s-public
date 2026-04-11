@@ -40,7 +40,7 @@
 **Deployment** - [Cloudflare Pages](https://www.cloudflare.com/ja-jp/developer-platform/products/pages/)  
 **Analytics** - [Google Analytics](https://analytics.google.com/analytics/web/)  
 **Search Console** - [Google Search Console](https://search.google.com/search-console)  
-**Domain** - [Onamae.com](https://www.onamae.com/)
+**Domain** - [Cloudflare](https://www.cloudflare.com/)
 
 ## 🍾 Setups
 
@@ -48,12 +48,13 @@
 
 ```bash
 git clone https://github.com/s-hirano-ist/s-public.git
+mise install
 pnpm install
 ```
 
 ### Local development environment (mise + Doppler)
 
-[mise](https://mise.jdx.dev/) manages dev tools (`doppler`, `terraform`). Doppler secrets are injected via `script/doppler-env.sh`.
+[mise](https://mise.jdx.dev/) manages dev tools (`doppler`, `terraform`). mise auto-loads `.env.local` and `doppler run` injects secrets into commands.
 
 #### Prerequisites (human setup)
 
@@ -67,18 +68,14 @@ doppler login
 mise install
 
 # 3. Create .env.local with service token
-cd terraform
-echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
-cd ..
+echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terraform -chdir=terraform output -raw doppler_dev_ai_agent_service_token)" > .env.local
 ```
 
 #### For AI agents (read-only access)
 
-Inject Doppler secrets into the shell, then run commands as usual:
+After `.env.local` is set up, commands work directly (secrets are injected via `doppler run` in package.json scripts):
 
 ```bash
-source script/doppler-env.sh
-
 pnpm dev              # Astro dev server with secrets injected
 pnpm generate:book    # Google Books API (uses GOOGLE_BOOKS_API_KEY)
 pnpm build            # Production build (uses GA_MEASUREMENT_ID)
@@ -86,26 +83,23 @@ pnpm build            # Production build (uses GA_MEASUREMENT_ID)
 
 #### For Terraform changes (full access)
 
-When modifying Terraform configurations (e.g. adding secrets, updating IaC), you need full Doppler access via personal login.
+When modifying Terraform configurations (e.g. adding secrets, updating IaC), you need full Doppler access via personal login. Cloudflare credentials are fetched by Terraform directly from Doppler via `data "doppler_secrets"`.
 
 ```bash
 # 1. Login to Doppler (one-time, interactive browser auth)
 doppler login
 
-# 2. Export personal token for Terraform provider
-cd terraform
-export DOPPLER_TOKEN=$(doppler configure get token --plain)
+# 2. Switch .env.local to personal token
+echo "DOPPLER_TOKEN=$(doppler configure get token --plain)" > .env.local
 
 # 3. Run Terraform commands
-terraform init
-terraform plan
-terraform apply
+terraform -chdir=terraform init
+terraform -chdir=terraform plan
+terraform -chdir=terraform apply
 
-# 4. If service tokens were regenerated, update .env.local
-echo "DOPPLER_TOKEN=$(terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
+# 4. If service tokens were regenerated, restore .env.local
+echo "DOPPLER_TOKEN=$(terraform -chdir=terraform output -raw doppler_dev_ai_agent_service_token)" > .env.local
 ```
-
-See `todo.md` for the full initial Doppler + Terraform setup checklist.
 
 ### Adding photos
 
@@ -141,7 +135,7 @@ Add GitHub integration for auto-deployment on Cloudflare.
 ### Google Site Verification (optional)
 
 Access [Google Search Console](https://search.google.com/search-console) and publish "google-site-verification" tag.
-Access [Onamae.com](https://www.onamae.com/) to add DNS TXT record.
+Access [Cloudflare](https://dash.cloudflare.com/) to add DNS TXT record.
 
 ## ☀ Favicon
 
@@ -195,7 +189,7 @@ gh release create --generate-notes
 
 ## 📜 License
 
-Licensed under the MIT License, Copyright © 2024
+Licensed under the MIT License, Copyright © 2024-2026
 
 ### Licenses of used libraries
 
