@@ -29,12 +29,11 @@ jobs:
 
       - run: pnpm i --frozen-lockfile
       - run: pnpm exec playwright install
-      - name: Fetch Doppler secrets
-        uses: dopplerhq/secrets-fetch-action@451892f16195f9ac360e1a5bcbf0b5fd0e957534 # v2.0.0
-        with:
-          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
-          inject-env-vars: true
+      - name: Install Doppler CLI
+        uses: dopplerhq/cli-action@5351693ec144fc7f7a2d30025061acfc3c53c47c # v4
       - run: pnpm build
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
 
   lint:
     runs-on: ubuntu-24.04
@@ -97,10 +96,9 @@ jobs:
       - run: pnpm i --frozen-lockfile
       - run: npm install -g @lhci/cli@0.12.x
       - run: pnpm exec playwright install
-      - name: Fetch Doppler secrets
-        uses: dopplerhq/secrets-fetch-action@451892f16195f9ac360e1a5bcbf0b5fd0e957534 # v2.0.0
-        with:
-          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
-          inject-env-vars: true
+      - name: Install Doppler CLI
+        uses: dopplerhq/cli-action@5351693ec144fc7f7a2d30025061acfc3c53c47c # v4
       - run: pnpm build
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
       - run: lhci autorun

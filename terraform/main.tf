@@ -120,11 +120,18 @@ resource "doppler_secret" "cloudflare_account_id_infra" {
 # Cloudflare Pages
 # =============================================================================
 
-# CLOUDFLARE_API_TOKEN env var is read automatically
-provider "cloudflare" {}
+# infra config から Cloudflare 認証情報���取得（TF_VAR_ マッピング不要）
+data "doppler_secrets" "infra" {
+  project = doppler_project.s_public.name
+  config  = doppler_environment.infra.slug
+}
+
+provider "cloudflare" {
+  api_token = data.doppler_secrets.infra.map.CLOUDFLARE_API_TOKEN
+}
 
 resource "cloudflare_pages_project" "s_public" {
-  account_id        = var.cloudflare_account_id
+  account_id        = data.doppler_secrets.infra.map.CLOUDFLARE_ACCOUNT_ID
   name              = "s-public"
   production_branch = "main"
 
@@ -196,7 +203,7 @@ resource "cloudflare_pages_project" "s_public" {
 }
 
 resource "cloudflare_pages_domain" "s_hirano_com" {
-  account_id   = var.cloudflare_account_id
+  account_id   = data.doppler_secrets.infra.map.CLOUDFLARE_ACCOUNT_ID
   project_name = cloudflare_pages_project.s_public.name
   name         = "s-hirano.com"
 }

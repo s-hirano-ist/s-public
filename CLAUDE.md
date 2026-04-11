@@ -94,14 +94,13 @@ src/
 - プロジェクト: `s-public`、環境: `dev`（ローカル）/ `ci`（GitHub Actions）/ `infra`（Terraform 用）
 - `GA_MEASUREMENT_ID`（`visibility=unmasked`）→ GitHub Actions **variable** として同期
 - `GOOGLE_BOOKS_API_KEY`, `LHCI_GITHUB_APP_TOKEN`（`visibility=masked`）→ GitHub Actions **secret** として同期
-- `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`（infra 環境のみ）→ Terraform 実行時に使用
-- ローカル開発時は `.env.local` に `DOPPLER_TOKEN`（dev 用サービストークン）を保存
-- `source script/doppler-env.sh` で Doppler secrets をシェル環境に注入
-- Secrets 注入後は `pnpm dev` や `pnpm generate:book` を直接実行可能
+- `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`（infra 環境のみ）→ Terraform が Doppler data source で直接取得
+- ローカル開発時は `.env.local` に `DOPPLER_TOKEN` を保存し、mise が自動読み込み
+- `pnpm dev` 等の secrets が必要なコマンドは `doppler run` 経由で自動注入
 
 ### ローカル開発環境セットアップ
 
-`.env.local` に Doppler サービストークンを設定し、`script/doppler-env.sh` で secrets を注入する。AIエージェント（Claude Code 等）が開発する際の前提条件。
+`.env.local` に Doppler トークンを設定するだけで、`pnpm dev` 等が secrets 付きで動作する。mise が `.env.local` を自動読み込みし、package.json の scripts が `doppler run` 経由で secrets を注入する。
 
 **管理ツール（`mise.toml`）:** `doppler`, `terraform`
 
@@ -117,31 +116,19 @@ echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terra
 cd ..
 ```
 
-**Secrets の注入:**
-
-```bash
-source script/doppler-env.sh
-```
+設定後は `pnpm dev` や `pnpm generate:book` を直接実行可能。
 
 **Terraform 実行時の設定:**
 
-Terraform は Doppler プロバイダー経由で環境・シークレット・サービストークンを管理するため、**個人トークン（CLI トークン）** が必要。サービストークンでは権限不足でエラーになる。
+Terraform は Doppler プロバイダー経由で環境・シークレット・サービストークンを管理するため、**個人トークン（CLI トークン）** が必要。サービストークンでは権限不足でエラーになる。Cloudflare 認証情報は Terraform が Doppler data source（`data "doppler_secrets" "infra"`）で直接取得するため、環境変数の手動設定は不要。
 
 ```bash
-source script/doppler-env.sh --terraform
-cd terraform && terraform plan
+# .env.local を個人トークンに切り替え
+echo "DOPPLER_TOKEN=$(doppler configure get token --plain)" > .env.local
+
+# Terraform 実行
+terraform -chdir=terraform plan
 ```
-
-`--terraform` フラグにより以下が自動設定される:
-
-- `DOPPLER_TOKEN` — 個人トークン（`doppler configure get token --plain`）
-- `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` — infra config から取得
-- `TF_VAR_cloudflare_account_id` — Terraform 変数へのマッピング
-
-Cloudflare Pages を管理するため、以下の Doppler シークレットが必要（Doppler ダッシュボードの `infra` 環境で値を設定）:
-
-- `CLOUDFLARE_API_TOKEN` — Cloudflare API トークン（Pages Edit 権限）
-- `CLOUDFLARE_ACCOUNT_ID` — Cloudflare アカウント ID
 
 ### 品質管理
 

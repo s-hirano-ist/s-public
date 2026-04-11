@@ -40,13 +40,12 @@ jobs:
       - name: run generate:photo
         run: pnpm generate:photo
 
-      - name: Fetch Doppler secrets
-        uses: dopplerhq/secrets-fetch-action@451892f16195f9ac360e1a5bcbf0b5fd0e957534 # v2.0.0
-        with:
-          doppler-token: ${{ secrets.DOPPLER_TOKEN }}
-          inject-env-vars: true
+      - name: Install Doppler CLI
+        uses: dopplerhq/cli-action@5351693ec144fc7f7a2d30025061acfc3c53c47c # v4
       - name: run generate:book
         run: pnpm generate:book
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
 
       - name: run format fix
         run: pnpm fmt:fix

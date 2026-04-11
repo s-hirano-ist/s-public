@@ -53,7 +53,7 @@ pnpm install
 
 ### Local development environment (mise + Doppler)
 
-[mise](https://mise.jdx.dev/) manages dev tools (`doppler`, `terraform`). Doppler secrets are injected via `script/doppler-env.sh`.
+[mise](https://mise.jdx.dev/) manages dev tools (`doppler`, `terraform`). mise auto-loads `.env.local` and `doppler run` injects secrets into commands.
 
 #### Prerequisites (human setup)
 
@@ -74,11 +74,9 @@ cd ..
 
 #### For AI agents (read-only access)
 
-Inject Doppler secrets into the shell, then run commands as usual:
+After `.env.local` is set up, commands work directly (secrets are injected via `doppler run` in package.json scripts):
 
 ```bash
-source script/doppler-env.sh
-
 pnpm dev              # Astro dev server with secrets injected
 pnpm generate:book    # Google Books API (uses GOOGLE_BOOKS_API_KEY)
 pnpm build            # Production build (uses GA_MEASUREMENT_ID)
@@ -86,23 +84,24 @@ pnpm build            # Production build (uses GA_MEASUREMENT_ID)
 
 #### For Terraform changes (full access)
 
-When modifying Terraform configurations (e.g. adding secrets, updating IaC), you need full Doppler access via personal login.
+When modifying Terraform configurations (e.g. adding secrets, updating IaC), you need full Doppler access via personal login. Cloudflare credentials are fetched by Terraform directly from Doppler via `data "doppler_secrets"`.
 
 ```bash
 # 1. Login to Doppler (one-time, interactive browser auth)
 doppler login
 
-# 2. Export personal token for Terraform provider
-cd terraform
-export DOPPLER_TOKEN=$(doppler configure get token --plain)
+# 2. Switch .env.local to personal token
+echo "DOPPLER_TOKEN=$(doppler configure get token --plain)" > .env.local
 
 # 3. Run Terraform commands
-terraform init
-terraform plan
-terraform apply
+terraform -chdir=terraform init
+terraform -chdir=terraform plan
+terraform -chdir=terraform apply
 
-# 4. If service tokens were regenerated, update .env.local
+# 4. If service tokens were regenerated, restore .env.local
+cd terraform
 echo "DOPPLER_TOKEN=$(terraform output -raw doppler_dev_ai_agent_service_token)" > ../.env.local
+cd ..
 ```
 
 See `todo.md` for the full initial Doppler + Terraform setup checklist.
