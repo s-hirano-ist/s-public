@@ -101,8 +101,6 @@ terraform -chdir=terraform apply
 echo "DOPPLER_TOKEN=$(terraform -chdir=terraform output -raw doppler_dev_ai_agent_service_token)" > .env.local
 ```
 
-See `todo.md` for the full initial Doppler + Terraform setup checklist.
-
 ### Adding photos
 
 Add photos to `./src/data/assets/photo/` and run:
@@ -191,7 +189,7 @@ gh release create --generate-notes
 
 ## 📜 License
 
-Licensed under the MIT License, Copyright © 2024
+Licensed under the MIT License, Copyright © 2024-2026
 
 ### Licenses of used libraries
 

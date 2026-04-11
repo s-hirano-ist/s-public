@@ -182,7 +182,7 @@ resource "cloudflare_pages_project" "s_public" {
         }
         NODE_VERSION = {
           type  = "plain_text"
-          value = "24.14.1"
+          value = var.node_version
         }
       }
     }
@@ -194,7 +194,7 @@ resource "cloudflare_pages_project" "s_public" {
         }
         NODE_VERSION = {
           type  = "plain_text"
-          value = "24.14.1"
+          value = var.node_version
         }
       }
     }

@@ -2,5 +2,6 @@
 _.file = ".env.local"
 
 [tools]
+node = "24.14.1"
 doppler = { version = "3.75.3", exe = "doppler" }
 terraform = "1.14.8"

@@ -60,13 +60,17 @@ src/
 ├── content/          # Astro Content Collections
 │   └── blog/         # ブログ記事（Markdown）
 ├── data/             # 静的データとアセット
+│   ├── _diy/         # DIY作品データ
+│   ├── _photo/       # 写真パスデータ（自動生成）
 │   ├── assets/       # 画像・アイコン等
 │   ├── book/         # 書籍データ（自動生成）
+│   ├── external-articles.json  # 外部記事データ
 │   ├── license/      # ライセンス情報（自動生成）
 │   └── portfolio/    # ポートフォリオ用JSON データ
 ├── layouts/          # ページレイアウト
 ├── pages/            # ルーティング（Astro）
-├── schemas.ts        # Zod スキーマ定義
+├── content.config.ts  # Content Collections定義（Zod スキーマ）
+├── env.d.ts           # 型参照ファイル
 ├── styles/           # グローバルCSS
 └── utils/            # ユーティリティ関数
 ```
@@ -76,7 +80,6 @@ src/
 - `src/config.ts` - サイト設定（URL、作者情報、MAX_RATING等）
 - `src/content.config.ts` - Content Collections定義（Zod スキーマ）
 - `astro.config.mjs` - Astro設定（React は `**/react/*` パターンのみ有効）
-- `src/schemas.ts` - ブログ frontmatter 型定義
 - `src/data/book/_original.ts` - 書籍の ISBN・評価・タグ元データ
 
 ### データ管理
@@ -102,7 +105,7 @@ src/
 
 `.env.local` に Doppler トークンを設定するだけで、`pnpm dev` 等が secrets 付きで動作する。mise が `.env.local` を自動読み込みし、package.json の scripts が `doppler run` 経由で secrets を注入する。
 
-**管理ツール（`mise.toml`）:** `doppler`, `terraform`
+**管理ツール（`mise.toml`）:** `node`, `doppler`, `terraform`
 
 **初回セットアップ（人間が実施）:**
 
@@ -152,7 +155,7 @@ terraform -chdir=terraform plan
 ### コンテンツ管理
 
 - ブログ記事は `src/content/blog/` に Markdown で作成
-- 各記事には heading, description, draft, date が必要
+- 各記事には heading, slug, description, draft, date が必要
 - ドラフトは `draft: true` で非公開
 
 ### コミット前の確認

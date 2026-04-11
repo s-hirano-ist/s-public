@@ -23,7 +23,7 @@
   packageRules: [
     {
       matchPackageNames: ["node"],
-      matchManagers: ["dockerfile"],
+      matchManagers: ["mise"],
       allowedVersions: "/^[0-9]*[02468]([.-].*)?$/",
     },
     {
