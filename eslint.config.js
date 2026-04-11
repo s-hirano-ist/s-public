@@ -22,7 +22,18 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: [".astro/", "dist/", "src/env.d.ts", ".stylelintrc.mjs"],
+    ignores: [
+      ".astro/",
+      "dist/",
+      "src/env.d.ts",
+      ".stylelintrc.mjs",
+      "terraform/",
+      "public/",
+      "assets/",
+      "src/data/assets/",
+      "pnpm-lock.yaml",
+      "**/*.gen.json",
+    ],
   },
   {
     ...eslintJs.configs.recommended,
