@@ -120,7 +120,7 @@ resource "doppler_secret" "cloudflare_account_id_infra" {
 # Cloudflare Pages
 # =============================================================================
 
-# infra config から Cloudflare 認証情報���取得（TF_VAR_ マッピング不要）
+# infra config から Cloudflare 認証情報取得（TF_VAR_ マッピング不要）
 data "doppler_secrets" "infra" {
   project = doppler_project.s_public.name
   config  = doppler_environment.infra.slug
