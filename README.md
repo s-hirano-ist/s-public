@@ -40,7 +40,7 @@
 **Deployment** - [Cloudflare Pages](https://www.cloudflare.com/ja-jp/developer-platform/products/pages/)  
 **Analytics** - [Google Analytics](https://analytics.google.com/analytics/web/)  
 **Search Console** - [Google Search Console](https://search.google.com/search-console)  
-**Domain** - [Onamae.com](https://www.onamae.com/)
+**Domain** - [Cloudflare](https://www.cloudflare.com/)
 
 ## 🍾 Setups
 
@@ -141,7 +141,7 @@ Add GitHub integration for auto-deployment on Cloudflare.
 ### Google Site Verification (optional)
 
 Access [Google Search Console](https://search.google.com/search-console) and publish "google-site-verification" tag.
-Access [Onamae.com](https://www.onamae.com/) to add DNS TXT record.
+Access [Cloudflare](https://dash.cloudflare.com/) to add DNS TXT record.
 
 ## ☀ Favicon
 
