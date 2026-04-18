@@ -93,6 +93,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: 8.58.2
         version: 8.58.2(eslint@10.2.0(jiti@2.6.1))(typescript@6.0.2)
+      astro-eslint-parser:
+        specifier: 1.4.0
+        version: 1.4.0
       eslint:
         specifier: 10.2.0
         version: 10.2.0(jiti@2.6.1)
@@ -7800,8 +7803,8 @@ snapshots:
   astro-eslint-parser@1.4.0:
     dependencies:
       '@astrojs/compiler': 3.0.1
-      '@typescript-eslint/scope-manager': 8.58.1
-      '@typescript-eslint/types': 8.58.1
+      '@typescript-eslint/scope-manager': 8.58.2
+      '@typescript-eslint/types': 8.58.2
       astrojs-compiler-sync: 1.1.1(@astrojs/compiler@3.0.1)
       debug: 4.4.3
       entities: 7.0.1

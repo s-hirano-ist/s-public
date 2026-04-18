@@ -8,6 +8,7 @@
   "project": ["src/**/*.{ts,tsx,astro}", "script/**/*.ts"],
   "ignoreDependencies": [
     "@secretlint/secretlint-rule-preset-recommend",
+    "astro-eslint-parser",
     "eslint-plugin-redos",
     "vnu-jar"
   ],
