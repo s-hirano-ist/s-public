@@ -50,5 +50,11 @@
       groupName: "mise tools",
       groupSlug: "mise-tools",
     },
+    {
+      matchPackageNames: ["pnpm"],
+      matchManagers: ["mise", "npm"],
+      groupName: "pnpm",
+      groupSlug: "pnpm",
+    },
   ],
 }
