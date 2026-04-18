@@ -1,13 +1,13 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
-  "entry": ["src/pages/**/*.{astro,ts,tsx}", "script/**/*.ts"],
+  "entry": [
+    "src/pages/**/*.{astro,ts,tsx}",
+    "script/**/*.ts",
+    "src/styles/**/*.css"
+  ],
   "project": ["src/**/*.{ts,tsx,astro}", "script/**/*.ts"],
   "ignoreDependencies": [
-    "tailwindcss",
-    "tailwindcss-animated",
-    "@tailwindcss/typography",
     "@secretlint/secretlint-rule-preset-recommend",
-    "astro-eslint-parser",
     "eslint-plugin-redos",
     "vnu-jar"
   ],

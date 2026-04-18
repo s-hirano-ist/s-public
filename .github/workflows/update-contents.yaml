@@ -49,8 +49,6 @@ jobs:
       - name: run generate:photo
         run: pnpm generate:photo
 
-      - name: Install Doppler CLI
-        uses: dopplerhq/cli-action@5351693ec144fc7f7a2d30025061acfc3c53c47c # v4
       - name: run generate:book
         run: pnpm generate:book
         env:
