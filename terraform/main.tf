@@ -76,6 +76,30 @@ resource "doppler_secret" "lhci_github_app_token_ci" {
   }
 }
 
+# s-contents (private repo) 読み取り用 PAT
+# GitHub Actions の update-contents ワークフローで generate:book step が利用
+resource "doppler_secret" "github_action_token_ci" {
+  project = doppler_project.s_public.name
+  config  = doppler_environment.ci.slug
+  name    = "GITHUB_ACTION_TOKEN"
+  value   = ""
+
+  lifecycle {
+    ignore_changes = [value]
+  }
+}
+
+resource "doppler_secret" "github_action_token_dev" {
+  project = doppler_project.s_public.name
+  config  = doppler_environment.dev.slug
+  name    = "GITHUB_ACTION_TOKEN"
+  value   = ""
+
+  lifecycle {
+    ignore_changes = [value]
+  }
+}
+
 # Service token for GitHub Actions (read-only access to ci config)
 resource "doppler_service_token" "ci" {
   project = doppler_project.s_public.name

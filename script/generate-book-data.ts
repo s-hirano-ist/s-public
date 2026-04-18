@@ -22,35 +22,35 @@ const BRANCH = "main";
 const OUTPUT_PATH = "src/data/book/data.gen.json";
 
 type GitHubContentEntry = {
+  download_url: string | null;
   name: string;
   path: string;
   type: "file" | "dir";
-  download_url: string | null;
 };
 
 type BookFrontmatter = {
   description?: string;
-  rating?: number | null;
-  tags?: string[];
-  googleTitle?: string | null;
-  googleSubtitle?: string | null;
   googleAuthors?: string[];
   googleDescription?: string | null;
-  googleImgSrc?: string | null;
   googleHref?: string | null;
+  googleImgSrc?: string | null;
+  googleSubtitle?: string | null;
+  googleTitle?: string | null;
+  rating?: number | null;
+  tags?: string[];
 };
 
 type BookEntry = {
-  ISBN: string;
-  title: string;
-  googleTitle: string;
-  googleSubtitle: string;
   googleAuthors: string[];
   googleDescription: string;
-  googleImgSrc: string;
   googleHref: string;
-  tags: string[];
+  googleImgSrc: string;
+  googleSubtitle: string;
+  googleTitle: string;
+  ISBN: string;
   rating: number;
+  tags: string[];
+  title: string;
 };
 
 const token = process.env.GITHUB_ACTION_TOKEN;
@@ -139,7 +139,9 @@ async function main(): Promise<void> {
   );
 }
 
-main().catch(error => {
+try {
+  await main();
+} catch (error) {
   console.error(error);
   process.exit(1);
-});
+}
