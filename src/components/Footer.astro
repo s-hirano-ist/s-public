@@ -3,7 +3,7 @@ import Hr from "@components/Hr.astro";
 
 const currentYear = new Date().getFullYear();
 
-export type Props = {
+type Props = {
   darkModeDisabled?: boolean;
 };
 const { darkModeDisabled = false } = Astro.props;

@@ -88,7 +88,7 @@ export function buildBreadcrumbList(
   };
 }
 
-export function estimateWordCount(markdownBody: string): number {
+function estimateWordCount(markdownBody: string): number {
   let text = markdownBody;
   // Remove code blocks
   text = text.replaceAll(/```[\s\S]*?```/g, "");
