@@ -15,7 +15,9 @@
 
 `.env.local` に Doppler トークンを設定するだけで、`pnpm dev` 等が secrets 付きで動作する。mise が `.env.local` を自動読み込みし、package.json の scripts が `doppler run` 経由で secrets を注入する。
 
-**管理ツール（`mise.toml`）:** `node`, `doppler`, `terraform`
+**管理ツール（`mise.toml`）:** `node`, `pnpm`, `doppler`, `terraform`
+
+> `pnpm` のバージョンは `mise.toml` と `package.json` の `packageManager` の **両方** で同じ値を維持すること（mise 非対応の Cloudflare Pages 等は `packageManager` フィールド経由で `corepack` が解決するため）。
 
 **初回セットアップ（人間が実施）:**
 
