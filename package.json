@@ -26,8 +26,7 @@
     "license:json": "license-checker-rseidelsohn --json > src/data/license/data.gen.json",
     "prepare": "husky",
     "security": "pnpm audit",
-    "generate:photo": "tsx script/generate-photo-path.ts",
-    "generate:book": "doppler run -- tsx script/generate-book-data.ts"
+    "generate:photo": "tsx script/generate-photo-path.ts"
   },
   "lint-staged": {
     "*": [
@@ -70,7 +69,6 @@
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "10.0.1",
     "@eslint/markdown": "8.0.1",
-    "@googleapis/books": "8.0.1",
     "@secretlint/secretlint-rule-preset-recommend": "11.6.0",
     "@tailwindcss/typography": "0.5.19",
     "@types/react": "19.2.14",
