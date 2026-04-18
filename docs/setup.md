@@ -17,7 +17,7 @@
 
 **管理ツール（`mise.toml`）:** `node`, `pnpm`, `doppler`, `terraform`
 
-> `pnpm` のバージョンは `mise.toml` と `package.json` の `packageManager` の **両方** で同じ値を維持すること（mise 非対応の Cloudflare Pages 等は `packageManager` フィールド経由で `corepack` が解決するため）。
+> `pnpm` は `mise.toml` と `package.json` の `packageManager` の 2 箇所に記載があるが、Renovate が同一 PR で同期して bump するため手動更新は不要（mise 非対応の Cloudflare Pages 等は `packageManager` 経由で `corepack` が解決する）。
 
 **初回セットアップ（人間が実施）:**
 
