@@ -33,7 +33,6 @@ const jsonLd = [
             googleDescription: string;
             googleHref: string;
             googleImgSrc: string;
-            googleTitle: string;
             ISBN: string;
             rating: number;
             title: string;
@@ -44,7 +43,7 @@ const jsonLd = [
           position: i + 1,
           item: {
             "@type": "Book",
-            name: book.googleTitle || book.title,
+            name: book.title,
             author: book.googleAuthors.map((a: string) => ({
               "@type": "Person",
               name: a,

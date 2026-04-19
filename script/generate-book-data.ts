@@ -29,15 +29,14 @@ type GitHubContentEntry = {
 };
 
 type BookFrontmatter = {
-  description?: string;
   googleAuthors?: string[];
   googleDescription?: string | null;
   googleHref?: string | null;
   googleImgSrc?: string | null;
   googleSubtitle?: string | null;
-  googleTitle?: string | null;
   rating?: number | null;
   tags?: string[];
+  title?: string | null;
 };
 
 type BookEntry = {
@@ -46,7 +45,6 @@ type BookEntry = {
   googleHref: string;
   googleImgSrc: string;
   googleSubtitle: string;
-  googleTitle: string;
   ISBN: string;
   rating: number;
   tags: string[];
@@ -109,9 +107,9 @@ async function main(): Promise<void> {
     const parsed = matter(raw);
     const data = parsed.data as BookFrontmatter;
 
-    if (data.rating == null || data.googleTitle == null) {
+    if (data.rating == null || data.title == null) {
       console.warn(
-        `⚠️  ${file.name}: rating または googleTitle 未設定のためスキップ`,
+        `⚠️  ${file.name}: rating または title 未設定のためスキップ`,
       );
       skippedCount++;
       continue;
@@ -119,8 +117,7 @@ async function main(): Promise<void> {
 
     entries.push({
       ISBN: isbn,
-      title: data.description ?? "",
-      googleTitle: data.googleTitle ?? "",
+      title: data.title,
       googleSubtitle: data.googleSubtitle ?? "",
       googleAuthors: data.googleAuthors ?? [],
       googleDescription: data.googleDescription ?? "",
