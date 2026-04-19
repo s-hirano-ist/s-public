@@ -77,6 +77,7 @@ export default function BookList() {
                   alt={book.title}
                   decoding="async"
                   loading="lazy"
+                  className="h-full w-auto max-w-full object-contain"
                 />
               </figure>
               <CardContent className="max-w-96 p-4">
