@@ -1,4 +1,3 @@
-# FIXME: refactor for multiple declaration and cache
 name: ci
 on:
   push:
