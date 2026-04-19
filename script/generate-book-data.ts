@@ -34,7 +34,6 @@ type BookFrontmatter = {
   googleHref?: string | null;
   googleImgSrc?: string | null;
   googleSubtitle?: string | null;
-  googleTitle?: string | null;
   rating?: number | null;
   tags?: string[];
   title?: string | null;
@@ -46,7 +45,6 @@ type BookEntry = {
   googleHref: string;
   googleImgSrc: string;
   googleSubtitle: string;
-  googleTitle: string;
   ISBN: string;
   rating: number;
   tags: string[];
@@ -120,7 +118,6 @@ async function main(): Promise<void> {
     entries.push({
       ISBN: isbn,
       title: data.title,
-      googleTitle: data.googleTitle ?? "",
       googleSubtitle: data.googleSubtitle ?? "",
       googleAuthors: data.googleAuthors ?? [],
       googleDescription: data.googleDescription ?? "",
