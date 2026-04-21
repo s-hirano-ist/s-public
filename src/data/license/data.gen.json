@@ -74,7 +74,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@s-hirano-ist/s-ui",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@s-hirano-ist/s-ui/LICENSE"
   },
-  "@secretlint/secretlint-rule-preset-recommend@11.6.0": {
+  "@secretlint/secretlint-rule-preset-recommend@11.7.1": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
@@ -111,7 +111,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@typescript-eslint/parser",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@typescript-eslint/parser/LICENSE"
   },
-  "astro@6.1.6": {
+  "astro@6.1.7": {
     "licenses": "MIT",
     "repository": "https://github.com/withastro/astro",
     "publisher": "withastro",
@@ -238,7 +238,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/knip",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/knip/LICENSE"
   },
-  "lenis@1.3.21": {
+  "lenis@1.3.23": {
     "licenses": "MIT",
     "repository": "https://github.com/darkroomengineering/lenis",
     "publisher": "darkroom.engineering",
@@ -342,7 +342,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/satori",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/satori/LICENSE"
   },
-  "secretlint@11.6.0": {
+  "secretlint@11.7.1": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
@@ -386,7 +386,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/stylelint-order",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/stylelint-order/LICENSE.md"
   },
-  "stylelint@17.6.0": {
+  "stylelint@17.8.0": {
     "licenses": "MIT",
     "repository": "https://github.com/stylelint/stylelint",
     "publisher": "stylelint",
@@ -420,14 +420,14 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/typescript-eslint",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/typescript-eslint/LICENSE"
   },
-  "typescript@6.0.2": {
+  "typescript@6.0.3": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/microsoft/TypeScript",
     "publisher": "Microsoft Corp.",
     "path": "/home/runner/work/s-public/s-public/node_modules/typescript",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/typescript/LICENSE.txt"
   },
-  "vnu-jar@26.4.11": {
+  "vnu-jar@26.4.16": {
     "licenses": "MIT",
     "repository": "https://github.com/validator/validator",
     "publisher": "sideshowbarker@gmail.com",
