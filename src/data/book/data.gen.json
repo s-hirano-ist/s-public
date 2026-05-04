@@ -1980,6 +1980,17 @@
     "rating": 5
   },
   {
+    "ISBN": "9784814400867",
+    "title": "スタッフエンジニアの道",
+    "googleSubtitle": "優れた技術専門職になるためのガイド",
+    "googleAuthors": ["Tanya Reilly"],
+    "googleDescription": "管理職にならないキャリアアップの道である上級技術専門職、スタッフエンジニアの仕事について、必要な考え方やスキルを詳細に解説。",
+    "googleImgSrc": "https://books.google.com/books/content?id=qjfP0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=qjfP0AEACAAJ&dq=isbn:9784814400867&hl=&source=gbs_api",
+    "tags": ["management"],
+    "rating": 2
+  },
+  {
     "ISBN": "9784814400911",
     "title": "Tidy First?",
     "googleSubtitle": "個人で実践する経験主義的ソフトウェア設計",
@@ -2020,6 +2031,17 @@
     "googleDescription": "合格を徹底サポート！ ※この電子書籍は固定レイアウト型で配信されております。固定レイアウト型は文字だけを拡大することや、文字列のハイライト、検索、辞書の参照、引用などの機能が使用できません。 2023年のAWSクラウドの最新情報で基本からしっかり解説した、「AWS認定 クラウドプラクティショナー」向けの試験対策教科書です。 AWS（Amazon Web Services）を活用・構築する知識を持っていることを証明するのがAWS認定です。「AWS認定 クラウドプラクティショナー」は、エンジニアだけでなくマネージャーや営業職など、さまざまなポジションを対象とした試験で、AWSクラウドの知識とスキルを身に付け、全体的な理解を効果的に説明できるようになることが求められます。 本書はAWSを利用していくのに必要となる「クラウドの概念」「セキュリティ」「テクノロジー」「請求と料金」といったカテゴリを、しっかり丁寧に解説しています。 AWSクラウドの深い知識と認定試験対策への経験を持った著者が、試験の合格のポイントになる知識と解答の考え方が理解できるように構成しています。さらに、練習問題で知識を解答につなげる力がしっかりと身につきます。 ※カバー画像が異なる場合があります。",
     "googleImgSrc": "https://books.google.com/books/content?id=7ovGEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     "googleHref": "https://books.google.com/books?id=7ovGEAAAQBAJ&dq=isbn:9784815622749&hl=&source=gbs_api",
+    "tags": [],
+    "rating": 2
+  },
+  {
+    "ISBN": "9784815633417",
+    "title": "ハーバード、スタンフォード、オックスフォード… 科学的に証明された すごい習慣大百科",
+    "googleSubtitle": "人生が変わるテクニック112個集めました",
+    "googleAuthors": ["堀田秀吾"],
+    "googleDescription": "勉強・ダイエット・貯金・目標達成…は習慣化が10割 仕事、ダイエット、健康管理、勉強、目標達成…すべて成功のカギは「習慣化」にあります。 しかし間違った習慣を身につけてしまったらその代償は大きくなってしまいます。 何をどう習慣化すればいいか、そのために重要になるのが「エビデンス」です。 ・もし「A」をしたら「B」をすると、あらかじめ決めておく ・選択肢は必ず「3つ」用意しておく ・常にポジティブな言葉を使う―つらさに対する耐性が高まる ・52分間作業して、17分休憩する―生産性が高まるetc. 本書は、ハーバード、スタンフォード、オックスフォード…などの研究機関において証明されたテクニックを112個紹介。 見開き図解入りでわかりやすい。気になったテクニックからはじめられ、情報収集のためにも役立ち、また読みものとしても楽しめる一冊です。 ※カバー画像が異なる場合があります。",
+    "googleImgSrc": "https://books.google.com/books/content?id=781oEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=781oEQAAQBAJ&dq=isbn:9784815633417&hl=&source=gbs_api",
     "tags": [],
     "rating": 2
   },
