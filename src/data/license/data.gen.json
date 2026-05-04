@@ -74,7 +74,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/@s-hirano-ist/s-ui",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/@s-hirano-ist/s-ui/LICENSE"
   },
-  "@secretlint/secretlint-rule-preset-recommend@11.7.1": {
+  "@secretlint/secretlint-rule-preset-recommend@12.3.1": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",
@@ -342,7 +342,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/satori",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/satori/LICENSE"
   },
-  "secretlint@11.7.1": {
+  "secretlint@12.3.1": {
     "licenses": "MIT",
     "repository": "https://github.com/secretlint/secretlint",
     "publisher": "azu",

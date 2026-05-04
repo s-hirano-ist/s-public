@@ -1617,6 +1617,17 @@
     "rating": 2
   },
   {
+    "ISBN": "9784774190877",
+    "title": "現場で役立つシステム設計の原則",
+    "googleSubtitle": "変更を楽で安全にするオブジェクト指向の実践技法",
+    "googleAuthors": ["増田亨"],
+    "googleDescription": "日本最大級となる60万件以上の求人情報サイト「イーキャリアJobSearch」の主任設計者ほか数多くの経験を持つ著者が「現場でこんなことに困っていた」「解決策としてこうやった」「その結果こうなった」というリアルな経験と「なぜ、そうするのか」をふまえて解説!",
+    "googleImgSrc": "https://books.google.com/books/content?id=z_nMswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=z_nMswEACAAJ&dq=isbn:9784774190877&hl=&source=gbs_api",
+    "tags": [],
+    "rating": 3
+  },
+  {
     "ISBN": "9784777820542",
     "title": "これからの時代を生き抜くための生物学入門",
     "googleSubtitle": "",
@@ -2033,6 +2044,17 @@
     "googleHref": "https://books.google.com/books?id=7ovGEAAAQBAJ&dq=isbn:9784815622749&hl=&source=gbs_api",
     "tags": [],
     "rating": 2
+  },
+  {
+    "ISBN": "9784815625382",
+    "title": "AWS認定資格試験テキスト　AWS認定 クラウドプラクティショナー　改訂第3版",
+    "googleSubtitle": "（AWS認定資格試験テキスト）",
+    "googleAuthors": ["山下光洋", "海老原寛之"],
+    "googleDescription": "合格を徹底サポート！ ※この電子書籍は固定レイアウト型で配信されております。固定レイアウト型は文字だけを拡大することや、文字列のハイライト、検索、辞書の参照、引用などの機能が使用できません。 AWS（Amazon Web Services）の活用・構築する知識を持っていることを証明するAWS認定の中で、基礎的な知識理解を目的とした試験が「AWS認定 クラウドプラクティショナー」です。エンジニアだけでなく、マネージャーや営業職など、AWSに関わるさまざまなポジションの人を対象としています。 基礎的な理解を目的とした知識ベースの認定といっても、多くのサービスでさまざまな活用ができるAWSクラウドの全体的な理解が求められます。 本書は、2023年に開始された「CLF-C02」試験に対応し、AWSを利用していくのに必要となる「クラウドのコンセプト」「セキュリティとコンプライアンス」「クラウドテクノロジーとサービス」「請求、料金、およびサポート」といったカテゴリを、しっかり丁寧に解説しています。 AWSクラウドの深い知識と認定試験対策への経験を持った著者が、合格のポイントになる知識と解答の考え方が理解できるように構成しています。さらに、練習問題で知識を解答につなげる力がしっかりと身につきます。 ※カバー画像が異なる場合があります。",
+    "googleImgSrc": "https://books.google.com/books/content?id=8HT8EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=8HT8EAAAQBAJ&dq=isbn:9784815625382&hl=&source=gbs_api",
+    "tags": [],
+    "rating": 3
   },
   {
     "ISBN": "9784815633417",
