@@ -1,2 +1,10 @@
+saveExact: true
+
 overrides:
   diff@<8.0.3: ">=9.0.0"
+
+allowBuilds:
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  vnu-jar: true
