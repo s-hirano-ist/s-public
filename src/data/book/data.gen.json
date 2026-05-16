@@ -66,6 +66,17 @@
     "rating": 4
   },
   {
+    "ISBN": "9784023323780",
+    "title": "本当の自由を手に入れるお金の大学",
+    "googleSubtitle": "",
+    "googleAuthors": ["両@リベ大学長"],
+    "googleDescription": "No description",
+    "googleImgSrc": "https://books.google.com/books/content?id=Rgjx0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=Rgjx0AEACAAJ&dq=isbn:9784023323780&hl=&source=gbs_api",
+    "tags": [],
+    "rating": 2
+  },
+  {
     "ISBN": "9784023341449",
     "title": "今さら聞けないお金の超基本",
     "googleSubtitle": "節約・貯蓄・投資の前にビジュアル版",
@@ -779,6 +790,17 @@
     "googleHref": "https://books.google.com/books?id=A3SczwEACAAJ&dq=isbn:9784296117192&hl=&source=gbs_api",
     "tags": ["地政学"],
     "rating": 3
+  },
+  {
+    "ISBN": "9784296125661",
+    "title": "世界を解き明かす地政学",
+    "googleSubtitle": "",
+    "googleAuthors": ["田中孝幸"],
+    "googleDescription": "20万部突破『13歳からの地政学』著者の人気記者による、「日本って、大丈夫なの?」に答える、最高の入門書!",
+    "googleImgSrc": "https://books.google.com/books/content?id=tt7G0QEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=tt7G0QEACAAJ&dq=isbn:9784296125661&hl=&source=gbs_api",
+    "tags": [],
+    "rating": 4
   },
   {
     "ISBN": "9784296206704",
