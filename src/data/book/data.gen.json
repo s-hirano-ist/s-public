@@ -933,6 +933,17 @@
     "rating": 2
   },
   {
+    "ISBN": "9784297145712",
+    "title": "[改訂新版]プロになるためのWeb技術入門",
+    "googleSubtitle": "",
+    "googleAuthors": ["小森裕介"],
+    "googleDescription": "No description",
+    "googleImgSrc": "https://books.google.com/books/content?id=4tPl0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=4tPl0AEACAAJ&dq=isbn:9784297145712&hl=&source=gbs_api",
+    "tags": [],
+    "rating": 4
+  },
+  {
     "ISBN": "9784297147488",
     "title": "セキュリティエンジニアの知識地図",
     "googleSubtitle": "",
