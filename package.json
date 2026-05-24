@@ -61,7 +61,7 @@
     "satori": "0.26.0",
     "sharp": "0.34.5",
     "tailwindcss": "4.3.0",
-    "tailwindcss-animated": "2.0.0",
+    "tailwindcss-animated": "2.1.0",
     "typescript": "6.0.3"
   },
   "devDependencies": {
@@ -101,7 +101,7 @@
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "secretlint": "13.0.2",
-    "stylelint": "17.11.1",
+    "stylelint": "17.12.0",
     "stylelint-config-standard": "40.0.0",
     "stylelint-declaration-block-no-ignored-properties": "3.0.0",
     "stylelint-no-unsupported-browser-features": "8.1.1",
