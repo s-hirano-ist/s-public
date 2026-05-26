@@ -5,5 +5,5 @@ _.file = ".env.local"
 node = "24.14.1"
 pnpm = "11.1.1"
 doppler = { version = "3.76.0", exe = "doppler" }
-terraform = "1.15.3"
+terraform = "1.15.4"
 "npm:agent-browser" = "0.27.0"
