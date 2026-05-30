@@ -36,9 +36,22 @@ export default {
           "plugin",
           "source",
           "theme",
+          "custom-variant",
+          "utility",
+          "variant",
+          "reference",
         ],
       },
     ],
     "function-no-unknown": [true, { ignoreFunctions: ["theme", "screen"] }],
+    // Tailwind v4 の `@import "tailwindcss"` を許容（url 記法を強制しない）
+    "import-notation": "string",
+    // s-ui トークンの `rgb(var(--x) / 0.08)` 記法を尊重し number で統一
+    "alpha-value-notation": "number",
+    // `.text-gradient` の `-webkit-background-clip: text`（Safari 必須）を保護
+    "property-no-vendor-prefix": [
+      true,
+      { ignoreProperties: ["-webkit-background-clip"] },
+    ],
   },
 };

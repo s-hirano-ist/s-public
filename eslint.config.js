@@ -1,4 +1,3 @@
-import eslintCss from "@eslint/css";
 import eslintJs from "@eslint/js";
 import eslintMarkdown from "@eslint/markdown";
 import tsParser from "@typescript-eslint/parser";
@@ -190,19 +189,6 @@ export default [
           ],
         },
       ],
-    },
-  },
-
-  // css (not in use)
-  {
-    files: ["**/*.css"],
-    ignores: ["**/base.css"], // Tailwind CSS 4の新しい構文のため除外
-    plugins: {
-      css: eslintCss,
-    },
-    language: "css/css",
-    rules: {
-      "css/use-baseline": ["error", { available: "widely" }],
     },
   },
 
