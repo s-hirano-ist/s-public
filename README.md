@@ -53,7 +53,7 @@ pnpm install
 
 ### Local development environment (mise + Doppler)
 
-[mise](https://mise.jdx.dev/) manages dev tools (`doppler`, `terraform`). mise auto-loads `.env.local` and `doppler run` injects secrets into commands.
+[mise](https://mise.jdx.dev/) manages dev tools (`node`, `pnpm`, `doppler`, `terraform`). mise auto-loads `.env.local` and `doppler run` injects secrets into commands.
 
 #### Prerequisites (human setup)
 
