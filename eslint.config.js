@@ -1,5 +1,4 @@
 import eslintCss from "@eslint/css";
-import { FlatCompat } from "@eslint/eslintrc";
 import eslintJs from "@eslint/js";
 import eslintMarkdown from "@eslint/markdown";
 import tsParser from "@typescript-eslint/parser";
@@ -8,17 +7,14 @@ import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
 import { configs as jsoncConfigs } from "eslint-plugin-jsonc";
 import perfectionistPlugin from "eslint-plugin-perfectionist";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import * as regexpPlugin from "eslint-plugin-regexp";
 // import tailwind from "eslint-plugin-tailwindcss"; // eslint-plugin-tailwindcss は Tailwind v3 のみ対応。v4 では使用不可
 import unicornPlugin from "eslint-plugin-unicorn";
 import unusedImportsPlugin from "eslint-plugin-unused-imports";
 import { configs as ymlConfigs } from "eslint-plugin-yml";
 import { configs as eslintTypeScript } from "typescript-eslint";
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: eslintJs.configs.recommended,
-  allConfig: eslintJs.configs.all,
-});
+const regexp = regexpPlugin.default ?? regexpPlugin;
 
 export default [
   {
@@ -67,10 +63,14 @@ export default [
   },
   ...eslintPluginAstro.recommended,
   // ...tailwind.configs["flat/recommended"], // eslint-plugin-tailwindcss は Tailwind v3 のみ対応
-  ...compat.extends("plugin:redos/recommended").map(config => ({
-    ...config,
+  {
     files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
-  })),
+    plugins: { regexp },
+    rules: {
+      "regexp/no-super-linear-backtracking": "error",
+      "regexp/no-super-linear-move": "error",
+    },
+  },
   ...eslintTypeScript.recommendedTypeChecked.map(config => ({
     ...config,
     files: ["**/*.ts", "**/*.tsx"],

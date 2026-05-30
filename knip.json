@@ -8,7 +8,6 @@
   "project": ["src/**/*.{ts,tsx,astro}", "script/**/*.ts"],
   "ignoreDependencies": [
     "@secretlint/secretlint-rule-preset-recommend",
-    "eslint-plugin-redos",
     "vnu-jar"
   ],
   "ignoreBinaries": ["doppler", "markdownlint-cli2-fix"]
