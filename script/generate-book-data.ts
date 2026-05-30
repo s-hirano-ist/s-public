@@ -7,7 +7,7 @@
  * 週次 + workflow_dispatch で GitHub Actions から実行し、差分があれば PR を作成する運用。
  */
 import { writeFileSync } from "node:fs";
-import matter from "gray-matter";
+import { parse as parseYaml } from "yaml";
 
 try {
   process.loadEnvFile(".env.local");
@@ -65,6 +65,12 @@ const authHeaders = {
   "User-Agent": "s-public-generate-book",
 };
 
+function parseFrontmatter(raw: string): Record<string, unknown> {
+  const body = /^---\r?\n([\s\S]*?)\r?\n---/.exec(raw)?.[1];
+  if (!body) return {};
+  return (parseYaml(body) as Record<string, unknown> | null) ?? {};
+}
+
 async function listMarkdownFiles(): Promise<GitHubContentEntry[]> {
   const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${DIR_PATH}?ref=${BRANCH}`;
   const res = await fetch(url, { headers: authHeaders });
@@ -104,8 +110,7 @@ async function main(): Promise<void> {
   for (const file of files) {
     const isbn = file.name.replace(/\.md$/, "");
     const raw = await fetchRaw(file);
-    const parsed = matter(raw);
-    const data = parsed.data as BookFrontmatter;
+    const data = parseFrontmatter(raw) as BookFrontmatter;
 
     if (data.rating == null || data.title == null) {
       console.warn(
