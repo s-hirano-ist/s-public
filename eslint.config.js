@@ -24,7 +24,7 @@ export default [
       ".stylelintrc.mjs",
       "terraform/",
       "public/",
-      "assets/",
+      "src/assets/",
       "src/data/assets/",
       "pnpm-lock.yaml",
       "**/*.gen.json",
