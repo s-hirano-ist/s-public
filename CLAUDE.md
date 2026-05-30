@@ -55,11 +55,13 @@ src/
 - **ポートフォリオ**: JSON ファイルで管理（`src/data/portfolio/`）
 - **ライセンス**: `pnpm license:json` で `src/data/license/data.gen.json` を自動生成
 
+これらの生成系は `.github/workflows/update-contents.yaml` が週次でも自動実行し、更新を PR として作成する。
+
 ### 品質管理
 
-- Husky + lint-staged によるpre-commitフック
-- 複数のlinter並行実行（ESLint, Stylelint, markdownlint, secretlint）
-- Renovateによる依存関係自動更新
+- pre-commit フック: `.husky/pre-commit` + `package.json` の `lint-staged`
+- CI: `.github/workflows/`（`ci.yaml` で build / lint / lighthouse、`osv-scanner.yaml`・`dependency-review.yaml` で脆弱性・ライセンス検査）
+- 依存関係更新: Renovate（`.github/renovate.json5`）
 
 ### シークレット管理・インフラ
 
@@ -96,13 +98,8 @@ src/
 
 ### コミット前の確認
 
-lint-staged により以下が自動実行されます：
-
-- 型チェック（pnpm check, pnpm tsc）
-- フォーマット・リント（各種linter）
-- ライセンスチェック（bash checkLicense.sh）
+pre-commit で lint-staged が走る。対象パターンと実行内容は `package.json` の `lint-staged` を参照。
 
 ### リリース手順
 
-1. `package.json` の version を更新
-2. `gh release create --generate-notes` を実行
+README の「Tags & Release」を参照。

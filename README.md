@@ -31,7 +31,7 @@
 **HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
 **Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
 **SVG optimization** - [svgo](https://github.com/svg/svgo)  
-**Vulnerabilities Check** - [pnpm audit](https://pnpm.io/cli/audit) | [Dependabot alert](https://docs.github.com/ja/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
+**Vulnerabilities Check** - [pnpm audit](https://pnpm.io/cli/audit) | [OSV Scanner](https://github.com/google/osv-scanner) | [Dependency Review](https://github.com/actions/dependency-review-action)
 
 ### My infrastructure stack
 
@@ -102,30 +102,18 @@ echo "DOPPLER_TOKEN=$(terraform -chdir=terraform output -raw doppler_dev_ai_agen
 
 ### Adding photos
 
-Add photos to `./src/data/assets/photo/` and run:
+Add photos to `./src/data/assets/photo/`, then run `pnpm generate:photo`.
 
-```bash
-pnpm generate:photo
-```
+### Updating books
 
-### Update books
+Edit ISBN / metadata in `src/data/book/_original.ts`, then run `pnpm generate:book` (Google Books API).
 
-```bash
-pnpm generate:book
-```
+### Updating licenses
 
-### Update licenses
+Run `pnpm license:json` and `pnpm license:summary`. Disallowed licenses (GPL / LGPL / AGPL family) are blocked on PRs by [`dependency-review.yaml`](.github/workflows/dependency-review.yaml).
 
-```bash
-pnpm license:json
-pnpm license:summary
-```
-
-### Check for inappropriate licenses
-
-```bash
-bash checkLicense.sh
-```
+> [!NOTE]
+> Book, photo, and license data are also regenerated weekly by [`update-contents.yaml`](.github/workflows/update-contents.yaml), which opens a PR with the changes.
 
 ### Cloudflare deployment
 
@@ -149,31 +137,7 @@ Access [Cloudflare](https://dash.cloudflare.com/) to add DNS TXT record.
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                 | Action                                         |
-| :---------------------- | :--------------------------------------------- |
-| `pnpm install`          | Installs dependencies                          |
-| `pnpm check`            | Check Astro types                              |
-| `pnpm dev`              | Starts local dev server at `localhost:4321`    |
-| `pnpm build`            | Build production site to `./dist`              |
-| `pnpm preview`          | Preview build locally                          |
-| `pnpm tsc`              | Check types with TypeScript                    |
-| `pnpm fmt`              | Check code format with Prettier                |
-| `pnpm fmt:fix`          | Format codes with Prettier                     |
-| `pnpm lint`             | Lint with ESLint                               |
-| `pnpm lint:fix`         | Fix lint with ESLint                           |
-| `pnpm lint:mark`        | Lint markdown files with markdownlint-cli2     |
-| `pnpm lint:mark:fix`    | Fix lint markdown files with markdownlint-cli2 |
-| `pnpm lint:css`         | Lint CSS files with Stylelint                  |
-| `pnpm lint:css:fix`     | Fix lint CSS files with Stylelint              |
-| `pnpm lint:secret`      | Lint secrets with secretlint                   |
-| `pnpm generate:book`    | Generate book data using Google Books API      |
-| `pnpm generate:photo`   | Generate photo paths                           |
-| `pnpm license:summary`  | Generate license summary                       |
-| `pnpm license:json`     | Generate license JSON                          |
-| `pnpm security`         | Security check with pnpm audit                 |
-| `pnpm snapshots:update` | Update visual regression snapshots             |
+All scripts are defined in [`package.json`](package.json) — run them with `pnpm <script>` from the project root.
 
 ## 🪝 Tags & Release
 

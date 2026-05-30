@@ -38,12 +38,12 @@
       "pnpm lint:secret",
       "pnpm lint:css"
     ],
-    "src/**/*.{js, jsx, ts, tsx, astro}": [
+    "src/**/*.{js,jsx,ts,tsx,astro}": [
       "pnpm tsc",
       "pnpm lint"
     ],
-    "_markdown/**/*.md": "pnpm lint:mark",
-    "src/**/*.{css, astro}": "pnpm lint:css"
+    "**/*.md": "pnpm lint:mark",
+    "src/**/*.{css,astro}": "pnpm lint:css"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "7.2.0",
