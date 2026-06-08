@@ -6,4 +6,4 @@ node = "24.14.1"
 pnpm = "11.5.1"
 doppler = { version = "3.76.0", exe = "doppler" }
 terraform = "1.15.5"
-"npm:agent-browser" = "0.27.0"
+"npm:agent-browser" = "0.27.1"
