@@ -608,13 +608,13 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/keyv@5.6.0/node_modules/@keyv/serialize",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/keyv@5.6.0/node_modules/@keyv/serialize/LICENSE"
   },
-  "@next/env@16.2.7": {
+  "@next/env@16.2.9": {
     "licenses": "MIT",
     "repository": "https://github.com/vercel/next.js",
     "publisher": "Next.js Team",
     "email": "support@vercel.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/@next/env",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/@next/env/README.md"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/@next/env",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/@next/env/README.md"
   },
   "@nodelib/fs.scandir@2.1.5": {
     "licenses": "MIT",
@@ -1188,8 +1188,8 @@
     "repository": "https://github.com/swc-project/swc",
     "publisher": "강동윤",
     "email": "kdy1997.dev@gmail.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/@swc/helpers",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/@swc/helpers/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/@swc/helpers",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/@swc/helpers/LICENSE"
   },
   "@tailwindcss/node@4.3.0": {
     "licenses": "MIT",
@@ -5347,7 +5347,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/@s-hirano-ist+s-ui@1.19.9_@babel+core@7.29.7_@types+react-dom@19.2.3_@types+react@19.2._1112c629bff0eace78875b2c8cc53693/node_modules/next-themes",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/@s-hirano-ist+s-ui@1.19.9_@babel+core@7.29.7_@types+react-dom@19.2.3_@types+react@19.2._1112c629bff0eace78875b2c8cc53693/node_modules/next-themes/license.md"
   },
-  "next@16.2.7": {
+  "next@16.2.9": {
     "licenses": "MIT",
     "repository": "https://github.com/vercel/next.js",
     "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/node_modules/next",
@@ -6033,8 +6033,8 @@
   "react-dom@19.2.5": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/react-dom",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/react-dom/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/react-dom",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/react-dom/LICENSE"
   },
   "react-dom@19.2.7": {
     "licenses": "MIT",
@@ -6089,8 +6089,8 @@
   "react@19.2.5": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/react",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/react/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/react",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/react/LICENSE"
   },
   "react@19.2.7": {
     "licenses": "MIT",
@@ -7004,8 +7004,8 @@
   "styled-jsx@5.1.6": {
     "licenses": "MIT",
     "repository": "https://github.com/vercel/styled-jsx",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/styled-jsx",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.7_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/styled-jsx/license.md"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/styled-jsx",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/next@16.2.9_@babel+core@7.29.7_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/styled-jsx/license.md"
   },
   "stylelint-config-recommended@18.0.0": {
     "licenses": "MIT",
