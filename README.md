@@ -110,9 +110,10 @@ Edit ISBN / metadata in `src/data/book/_original.ts`, then run `pnpm generate:bo
 
 ### Updating licenses
 
-Run `pnpm license:json` and `pnpm license:summary`. Disallowed licenses (GPL / AGPL family) are blocked on PRs by [`dependency-review.yaml`](.github/workflows/dependency-review.yaml).
+Run `pnpm license:json` and `pnpm license:summary`. Disallowed licenses (GPL / LGPL / AGPL family) are blocked on PRs by [`dependency-review.yaml`](.github/workflows/dependency-review.yaml).
 
 > [!NOTE]
+> `@img/sharp-libvips-*` is explicitly allowed in Dependency Review because it is a reviewed runtime artifact of `sharp`; new LGPL dependencies remain blocked by default.
 > Book, photo, and license data are also regenerated weekly by [`update-contents.yaml`](.github/workflows/update-contents.yaml), which opens a PR with the changes.
 
 ### Cloudflare deployment
