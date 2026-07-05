@@ -1,10 +1,13 @@
-import { getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import generateOgImage from "@utils/generateOgImage";
 import slugify from "@utils/slugify";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
-  return posts.map(post => ({
+  const posts = await getCollection(
+    "blog",
+    ({ data }: CollectionEntry<"blog">) => !data.draft,
+  );
+  return posts.map((post: CollectionEntry<"blog">) => ({
     params: { ogTitle: slugify(post.data) },
     props: { description: post.data.description },
   }));
