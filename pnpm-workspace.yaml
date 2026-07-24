@@ -5,7 +5,7 @@ overrides:
   # next/postcss は @s-hirano-ist/s-ui の runtime deps 経由で混入する死荷重。
   # s-ui 側で next/next-themes を peerDependencies(optional) へ移し再 publish すれば、この 2 件は不要になる。
   next@<16.2.6: ">=16.2.10"
-  postcss@<8.5.10: ">=8.5.17"
+  postcss@<8.5.10: ">=8.5.21"
   # @astrojs/check(dev) 経由の yaml。上流 volar-service-yaml が 0.0.71+ を取り込んだら外せる。
   "yaml@>=2.0.0 <2.8.3": ">=2.9.0"
 
