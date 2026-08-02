@@ -14,7 +14,7 @@
   labels: ["dependencies"],
   rangeStrategy: "bump",
   lockFileMaintenance: {
-    enabled: true,
+    enabled: false,
     automerge: true,
   },
   vulnerabilityAlerts: {
