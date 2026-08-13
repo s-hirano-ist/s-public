@@ -3,7 +3,7 @@ _.file = ".env.local"
 
 [tools]
 node = "24.15.0"
-pnpm = "11.18.0"
+pnpm = "11.21.0"
 doppler = { version = "3.76.1", exe = "doppler" }
 terraform = "1.15.8"
 "npm:agent-browser" = "0.33.2"
