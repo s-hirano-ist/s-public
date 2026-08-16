@@ -21,7 +21,6 @@ export default [
       ".astro/",
       "dist/",
       "src/env.d.ts",
-      ".stylelintrc.mjs",
       "terraform/",
       "public/",
       "src/assets/",

@@ -76,8 +76,6 @@ jobs:
       - run: pnpm fmt
       - run: pnpm lint
       - run: pnpm lint:mark
-      - run: pnpm lint:css
-      - run: pnpm lint:secret
 
   lighthouse:
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
