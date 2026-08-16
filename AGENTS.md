@@ -58,7 +58,7 @@ src/
 
 ### 品質管理
 
-- CI: `.github/workflows/`（`ci.yaml`のquality jobでtype check / format / lint / build / Lighthouse品質ゲート、`osv-scanner.yaml`・`dependency-review.yaml`で脆弱性・ライセンス検査）
+- CI: `.github/workflows/`（`ci.yaml`のquality jobでtype check / format / lint / build、`lighthouse.yaml`で非blockingのLighthouse検査とPRコメント、`osv-scanner.yaml`・`dependency-review.yaml`で脆弱性・ライセンス検査）
 - 依存関係更新: Renovate（`.github/renovate.json5`）
 
 ### シークレット管理・インフラ

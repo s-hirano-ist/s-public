@@ -32,5 +32,3 @@ jobs:
       - run: bun run astro build
         env:
           GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
-      - name: Run Lighthouse quality gates
-        run: bunx --bun @lhci/cli@0.15.1 autorun

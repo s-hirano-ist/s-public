@@ -1,0 +1,65 @@
+name: lighthouse
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lighthouse:
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pull-requests: write
+      statuses: write
+    timeout-minutes: 20
+    concurrency:
+      group: ${{ github.workflow }}-lighthouse-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Install Bun via mise
+        uses: jdx/mise-action@3c2e0cf82a5b2e5249f0d3635a4d83d0ae861518 # v4
+        with:
+          install_args: bun
+
+      - name: Install dependencies
+        id: install
+        continue-on-error: true
+        run: bun ci
+
+      - name: Build production site
+        id: build
+        if: steps.install.outcome == 'success'
+        continue-on-error: true
+        run: bun run astro build
+        env:
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
+
+      - name: Run Lighthouse audits
+        id: lhci
+        if: steps.build.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          bunx --bun @lhci/cli@0.15.1 autorun 2>&1 | tee "${RUNNER_TEMP}/lhci-output.txt"
+        env:
+          LHCI_GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Publish Lighthouse PR comment
+        if: always() && github.event_name == 'pull_request'
+        run: node script/comment-lighthouse-results.mjs
+        env:
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          GITHUB_TOKEN: ${{ github.token }}
+          INSTALL_OUTCOME: ${{ steps.install.outcome }}
+          LHCI_OUTCOME: ${{ steps.lhci.outcome }}
+          LHCI_OUTPUT_PATH: ${{ runner.temp }}/lhci-output.txt

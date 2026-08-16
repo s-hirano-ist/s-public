@@ -132,7 +132,7 @@ Access [Cloudflare](https://dash.cloudflare.com/) to add DNS TXT record.
 
 All scripts are defined in [`package.json`](package.json) — run them with `bun run <script>` from the project root.
 
-CI also runs Lighthouse three times against representative production pages and fails when the median result drops below the checked-in baseline for category scores and Core Web Vitals. Thresholds are defined in [`lighthouserc.cjs`](lighthouserc.cjs); tighten them when the corresponding pages improve.
+CI also runs Lighthouse three times against representative production pages and reports every assertion failure and median report URL in an updatable PR comment. Lighthouse is informational and does not block merging. Thresholds are defined in [`lighthouserc.cjs`](lighthouserc.cjs); tighten them when the corresponding pages improve.
 
 ## 🪝 Tags & Release
 
