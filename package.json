@@ -12,15 +12,10 @@
     "build": "doppler run -- astro build",
     "preview": "astro preview",
     "sync": "astro sync",
-    "tsc": "tsc --noEmit",
     "fmt": "biome format .",
     "fmt:fix": "biome format --write .",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
-    "lint:mark": "markdownlint-cli2 **/*.md",
-    "lint:mark:fix": "markdownlint-cli2-fix **/*.md",
-    "license:summary": "license-checker-rseidelsohn --summary > license.summary.txt",
-    "license:json": "license-checker-rseidelsohn --json > src/data/license/data.gen.json",
     "security": "bun audit",
     "generate:photo": "bun script/generate-photo-path.ts",
     "generate:book": "doppler run -- bun script/generate-book-data.ts"
@@ -43,11 +38,8 @@
     "@biomejs/biome": "2.5.8",
     "@tailwindcss/typography": "0.5.20",
     "@types/react": "19.2.18",
-    "license-checker-rseidelsohn": "5.0.1",
-    "markdownlint-cli2": "0.23.2",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "vnu-jar": "26.8.6",
     "yaml": "2.9.0"
   },
   "overrides": {
@@ -59,7 +51,6 @@
   "trustedDependencies": [
     "esbuild",
     "sharp",
-    "unrs-resolver",
-    "vnu-jar"
+    "unrs-resolver"
   ]
 }

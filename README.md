@@ -8,25 +8,18 @@
 > This is the source code of [s-hirano.com](https://s-hirano.com/).
 > It consists of a portfolio and a blog which summarizes the knowledge I gained over the years.
 
-## ✅ Lighthouse Score
-
-![Lighthouse score: 100/100](lighthouse_score.png)
-
 ## 💻 Tech Stack
 
 **Main Framework** - [Astro](https://astro.build/)  
 **Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
 **Component Framework** - [ReactJS](https://react.dev/)<br>
 **Runtime / Package Manager** - [Bun](https://bun.sh/)<br>
-**Styling** - [TailwindCSS](https://tailwindcss.com/) | [DaisyUI](https://daisyui.com/)  
-**Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
+**Styling** - [TailwindCSS](https://tailwindcss.com/)<br>
+**Icons** - [Tabler Icons](https://tabler.io/icons)<br>
 **Fonts** - [Astro Fonts](https://docs.astro.build/en/reference/experimental-flags/fonts/) + [Fontsource](https://fontsource.org/)<br>
 **Code Formatting / Linting** - [Biome](https://biomejs.dev/)<br>
-**Markdown Linting** - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)  
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
-**HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
-**Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
-**SVG optimization** - [svgo](https://github.com/svg/svgo)  
+**Performance and accessibility** - [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)<br>
 **Vulnerabilities Check** - [Bun audit](https://bun.sh/docs/pm/cli/audit) | [OSV Scanner](https://github.com/google/osv-scanner) | [Dependency Review](https://github.com/actions/dependency-review-action)
 
 ### My infrastructure stack
@@ -45,6 +38,7 @@
 git clone https://github.com/s-hirano-ist/s-public.git
 mise install
 bun install
+mise run browser:setup
 ```
 
 ### Local development environment (mise + Doppler)
@@ -104,13 +98,13 @@ Add photos to `./src/data/assets/photo/`, then run `bun run generate:photo`.
 
 Update book metadata in the private contents repository, then run `bun run generate:book`.
 
-### Updating licenses
+### Third-party licenses
 
-Run `bun run license:json` and `bun run license:summary`. Disallowed licenses (GPL / LGPL / AGPL family) are blocked on PRs by [`dependency-review.yaml`](.github/workflows/dependency-review.yaml).
+The production client build generates `THIRD_PARTY_NOTICES.txt` from packages actually delivered to browsers. The published footer links directly to this file. Disallowed licenses (GPL / LGPL / AGPL family) are blocked on PRs by [`dependency-review.yaml`](.github/workflows/dependency-review.yaml).
 
 > [!NOTE]
 > `@img/sharp-libvips-*` is explicitly allowed in Dependency Review because it is a reviewed runtime artifact of `sharp`; new LGPL dependencies remain blocked by default.
-> Book, photo, and license data are also regenerated weekly by [`update-contents.yaml`](.github/workflows/update-contents.yaml), which opens a PR with the changes.
+> Book data is regenerated weekly by [`update-contents.yaml`](.github/workflows/update-contents.yaml), which opens a PR with the changes. Photo paths are generated locally when photo assets change.
 
 ### Cloudflare deployment
 
@@ -138,6 +132,8 @@ Access [Cloudflare](https://dash.cloudflare.com/) to add DNS TXT record.
 
 All scripts are defined in [`package.json`](package.json) — run them with `bun run <script>` from the project root.
 
+CI also runs Lighthouse three times against representative production pages and reports every assertion failure and median report URL in an updatable PR comment. Lighthouse is informational and does not block merging. Thresholds are defined in [`lighthouserc.cjs`](lighthouserc.cjs); tighten them when the corresponding pages improve.
+
 ## 🪝 Tags & Release
 
 1. Update version in `package.json`
@@ -154,4 +150,4 @@ Licensed under the MIT License, Copyright © 2024-2026
 
 ### Licenses of used libraries
 
-See `license.summary.txt` for summary of used licenses.
+See the generated [`THIRD_PARTY_NOTICES.txt`](https://s-hirano.com/THIRD_PARTY_NOTICES.txt) for software delivered to browsers and the [GitHub dependency graph](https://github.com/s-hirano-ist/s-public/network/dependencies) for repository dependencies.

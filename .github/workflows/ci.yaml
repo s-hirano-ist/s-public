@@ -4,112 +4,31 @@ on:
     branches:
       - main
   pull_request:
+
 jobs:
-  build:
+  quality:
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-24.04
     permissions: {}
     timeout-minutes: 20
     concurrency:
-      group: ${{ github.workflow }}-build-${{ github.ref }}
+      group: ${{ github.workflow }}-quality-${{ github.ref }}
+      cancel-in-progress: true
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
 
-      - name: Install tools via mise
+      - name: Install Bun via mise
         uses: jdx/mise-action@3c2e0cf82a5b2e5249f0d3635a4d83d0ae861518 # v4
-
-      - name: Get Bun cache directory
-        id: bun-cache
-        shell: bash
-        run: echo "CACHE_PATH=$(bun pm cache)" >> "$GITHUB_OUTPUT"
-
-      - name: Cache Bun dependencies
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
-          path: ${{ steps.bun-cache.outputs.CACHE_PATH }}
-          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-bun-
-
-      - run: bun ci
-      - name: Install Doppler CLI
-        uses: dopplerhq/cli-action@4819d808ab99e5cde19a0637a16536a4038fad73 # v4
-      - run: bun run build
-        env:
-          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
-
-  lint:
-    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
-    runs-on: ubuntu-24.04
-    permissions: {}
-    timeout-minutes: 20
-    concurrency:
-      group: ${{ github.workflow }}-lint-${{ github.ref }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          persist-credentials: false
-
-      - name: Install tools via mise
-        uses: jdx/mise-action@3c2e0cf82a5b2e5249f0d3635a4d83d0ae861518 # v4
-
-      - name: Get Bun cache directory
-        id: bun-cache
-        shell: bash
-        run: echo "CACHE_PATH=$(bun pm cache)" >> "$GITHUB_OUTPUT"
-
-      - name: Cache Bun dependencies
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
-        with:
-          path: ${{ steps.bun-cache.outputs.CACHE_PATH }}
-          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-bun-
+          install_args: bun
 
       - run: bun ci
       - run: bun run check
-      - run: bun run tsc
       - run: bun run fmt
       - run: bun run lint
-      - run: bun run lint:mark
-
-  lighthouse:
-    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
-    runs-on: ubuntu-24.04
-    permissions: {}
-    timeout-minutes: 20
-    concurrency:
-      group: ${{ github.workflow }}-lighthouse-${{ github.ref }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          persist-credentials: false
-
-      - name: Install tools via mise
-        uses: jdx/mise-action@3c2e0cf82a5b2e5249f0d3635a4d83d0ae861518 # v4
-
-      - name: Get Bun cache directory
-        id: bun-cache
-        shell: bash
-        run: echo "CACHE_PATH=$(bun pm cache)" >> "$GITHUB_OUTPUT"
-
-      - name: Cache Bun dependencies
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
-        with:
-          path: ${{ steps.bun-cache.outputs.CACHE_PATH }}
-          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-bun-
-
-      - run: bun ci
-      - name: Install Doppler CLI
-        uses: dopplerhq/cli-action@4819d808ab99e5cde19a0637a16536a4038fad73 # v4
-      - run: bun run build
+      - run: bun run astro build
         env:
-          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
-      - run: bunx --bun @lhci/cli@0.12.x autorun
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}

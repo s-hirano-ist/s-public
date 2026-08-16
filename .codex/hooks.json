@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "pnpm --silent --dir \"$(git rev-parse --show-toplevel)\" fmt:fix >/dev/null && printf '{\"continue\":true}\\n'",
+            "command": "repo_root=\"$(git rev-parse --show-toplevel)\" || { printf '{\"continue\":false,\"stopReason\":\"Unable to locate the Git repository root\"}\\n'; exit 1; }; if (cd \"$repo_root\" && bun run --silent fmt:fix >/dev/null); then printf '{\"continue\":true}\\n'; else status=$?; printf '{\"continue\":false,\"stopReason\":\"bun run fmt:fix failed\"}\\n'; exit \"$status\"; fi",
             "timeout": 120,
             "statusMessage": "Formatting workspace"
           }
