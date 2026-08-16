@@ -218,7 +218,6 @@ export default [
       "unicorn/no-array-reduce": "off",
       "unicorn/text-encoding-identifier-case": "off",
       "unicorn/new-for-builtins": "off",
-      "unicorn/new-for-builtins": "off",
       "unicorn/prefer-array-some": "off",
       "unicorn/prefer-array-flat-map": "off",
       "unicorn/no-for-loop": "off",

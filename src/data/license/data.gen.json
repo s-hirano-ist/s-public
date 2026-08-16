@@ -2104,8 +2104,8 @@
     "repository": "https://github.com/blakeembrey/change-case",
     "publisher": "Blake Embrey",
     "email": "hello@blakeembrey.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/change-case",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/change-case/README.md"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/change-case",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/change-case/README.md"
   },
   "character-entities-html4@2.1.0": {
     "licenses": "MIT",
@@ -2166,16 +2166,16 @@
     "repository": "https://github.com/watson/ci-info",
     "publisher": "Thomas Watson Steen",
     "email": "w@tson.dk",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/ci-info",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/ci-info/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/ci-info",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/ci-info/LICENSE"
   },
   "clean-regexp@1.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/SamVerschueren/clean-regexp",
     "publisher": "Sam Verschueren",
     "email": "sam.verschueren@gmail.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/clean-regexp",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/clean-regexp/license"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/clean-regexp",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/clean-regexp/license"
   },
   "client-only@0.0.1": {
     "licenses": "MIT",
@@ -2318,8 +2318,8 @@
     "repository": "https://github.com/zloirock/core-js",
     "publisher": "Denis Pushkarev",
     "email": "zloirock@zloirock.ru",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/core-js-compat",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/core-js-compat/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/core-js-compat",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/core-js-compat/LICENSE"
   },
   "core-util-is@1.0.3": {
     "licenses": "MIT",
@@ -3028,7 +3028,7 @@
     "path": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-regexp",
     "licenseFile": "/home/runner/work/s-public/s-public/node_modules/eslint-plugin-regexp/LICENSE"
   },
-  "eslint-plugin-unicorn@64.0.0": {
+  "eslint-plugin-unicorn@73.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/sindresorhus/eslint-plugin-unicorn",
     "publisher": "Sindre Sorhus",
@@ -3295,8 +3295,8 @@
     "repository": "https://github.com/sindresorhus/find-up-simple",
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/find-up-simple",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/find-up-simple/license"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/find-up-simple",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/find-up-simple/license"
   },
   "find-up@5.0.0": {
     "licenses": "MIT",
@@ -3946,8 +3946,8 @@
     "repository": "https://github.com/sindresorhus/indent-string",
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/indent-string",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/indent-string/license"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/indent-string",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/indent-string/license"
   },
   "index-to-position@1.2.0": {
     "licenses": "MIT",
@@ -4068,8 +4068,8 @@
     "repository": "https://github.com/sindresorhus/is-builtin-module",
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/is-builtin-module",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/is-builtin-module/license"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/is-builtin-module",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/is-builtin-module/license"
   },
   "is-bun-module@2.0.0": {
     "licenses": "MIT",
@@ -4393,8 +4393,8 @@
     "licenses": "MIT",
     "repository": "https://github.com/mathiasbynens/jsesc",
     "publisher": "Mathias Bynens",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/jsesc",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/jsesc/LICENSE-MIT.txt"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/jsesc",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/jsesc/LICENSE-MIT.txt"
   },
   "json-buffer@3.0.1": {
     "licenses": "MIT",
@@ -5872,8 +5872,8 @@
     "repository": "https://github.com/blakeembrey/pluralize",
     "publisher": "Blake Embrey",
     "email": "hello@blakeembrey.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/pluralize",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/pluralize/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/pluralize",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/pluralize/LICENSE"
   },
   "possible-typed-array-names@1.1.0": {
     "licenses": "MIT",
@@ -6244,8 +6244,8 @@
     "licenses": "MIT",
     "repository": "https://github.com/DmitrySoshnikov/regexp-tree",
     "publisher": "Dmitry Soshnikov",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/regexp-tree",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/regexp-tree/LICENSE"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/regexp-tree",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/regexp-tree/LICENSE"
   },
   "regexp.prototype.flags@1.5.4": {
     "licenses": "MIT",
@@ -6260,8 +6260,8 @@
     "repository": "https://github.com/jviereck/regjsparser",
     "publisher": "'Julian Viereck'",
     "email": "julian.viereck@gmail.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/regjsparser",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/regjsparser/LICENSE.BSD"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/regjsparser",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/regjsparser/LICENSE.BSD"
   },
   "rehype-autolink-headings@7.1.0": {
     "licenses": "MIT",
@@ -6966,8 +6966,8 @@
     "repository": "https://github.com/sindresorhus/strip-indent",
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/strip-indent",
-    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@64.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/strip-indent/license"
+    "path": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/strip-indent",
+    "licenseFile": "/home/runner/work/s-public/s-public/node_modules/.pnpm/eslint-plugin-unicorn@73.0.0_eslint@10.8.0_jiti@2.7.0_supports-color@10.2.2_/node_modules/strip-indent/license"
   },
   "strip-json-comments@5.0.3": {
     "licenses": "MIT",
