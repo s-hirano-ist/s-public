@@ -1,8 +1,12 @@
 name: ci
 on:
   push:
+    branches:
+      - main
+  pull_request:
 jobs:
   build:
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-24.04
     permissions: {}
     timeout-minutes: 20
@@ -38,6 +42,7 @@ jobs:
           DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
 
   lint:
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-24.04
     permissions: {}
     timeout-minutes: 20
@@ -75,6 +80,7 @@ jobs:
       - run: pnpm lint:secret
 
   lighthouse:
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-24.04
     permissions: {}
     timeout-minutes: 20
