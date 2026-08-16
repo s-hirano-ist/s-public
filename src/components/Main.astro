@@ -1,43 +1,14 @@
 ---
-import sanitizeHtml from "sanitize-html";
-
 type Props = {
-  dropdownItem?: string;
   pageTitle?: string;
   publishedDate?: string;
 };
 
-const {
-  pageTitle = undefined,
-  dropdownItem = undefined,
-  publishedDate = undefined,
-} = Astro.props;
+const { pageTitle = undefined, publishedDate = undefined } = Astro.props;
 ---
 
 <main class="pb-4 mx-auto mt-8 w-full max-w-5xl px-4">
   <div class="flex items-center">
-    {dropdownItem && (
-        <details class="relative">
-          <summary class="inline-flex cursor-pointer list-none items-center justify-center px-1 hover:text-primary sm:px-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h7"
-              />
-            </svg>
-          </summary>
-          <ul class="absolute z-50 mt-3 w-80 rounded-lg border border-muted bg-background p-2 shadow-md">
-            <Fragment set:html={sanitizeHtml(dropdownItem)} />
-          </ul>
-        </details>
-      )}
     {pageTitle && (
         <h1 class="text-2xl font-semibold text-foreground">
           {pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1).toLowerCase()}

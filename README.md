@@ -16,11 +16,11 @@
 
 **Main Framework** - [Astro](https://astro.build/)  
 **Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
-**Component Framework** - [ReactJS](https://reactjs.org/)  
+**Component Framework** - [ReactJS](https://react.dev/)<br>
 **Runtime / Package Manager** - [Bun](https://bun.sh/)<br>
 **Styling** - [TailwindCSS](https://tailwindcss.com/) | [DaisyUI](https://daisyui.com/)  
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
-**Fonts** - [Google Fonts](https://fonts.google.com/)  
+**Fonts** - [Astro Fonts](https://docs.astro.build/en/reference/experimental-flags/fonts/) + [Fontsource](https://fontsource.org/)<br>
 **Code Formatting / Linting** - [Biome](https://biomejs.dev/)<br>
 **Markdown Linting** - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)  
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
