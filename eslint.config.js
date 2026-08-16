@@ -1,11 +1,10 @@
 import eslintJs from "@eslint/js";
-import tsParser from "@typescript-eslint/parser";
+import eslintConfigPrettier from "eslint-config-prettier";
 import { configs as eslintPluginAstro } from "eslint-plugin-astro";
-import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-// import tailwind from "eslint-plugin-tailwindcss"; // eslint-plugin-tailwindcss は Tailwind v3 のみ対応。v4 では使用不可
-import unusedImportsPlugin from "eslint-plugin-unused-imports";
-import { configs as eslintTypeScript } from "typescript-eslint";
+import {
+  configs as eslintTypeScript,
+  parser as tsParser,
+} from "typescript-eslint";
 
 export default [
   {
@@ -30,14 +29,6 @@ export default [
     files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
   })),
   {
-    ...eslintPluginImportX.recommended,
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
-  },
-  {
-    ...eslintPluginImportX.typescript,
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
-  },
-  {
     files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
     ignores: ["eslint.config.js"],
     languageOptions: {
@@ -47,12 +38,7 @@ export default [
     },
   },
 
-  {
-    ...eslintPluginPrettierRecommended,
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
-  },
   ...eslintPluginAstro.recommended,
-  // ...tailwind.configs["flat/recommended"], // eslint-plugin-tailwindcss は Tailwind v3 のみ対応
   ...eslintTypeScript.recommendedTypeChecked.map(config => ({
     ...config,
     files: ["**/*.ts", "**/*.tsx"],
@@ -73,25 +59,15 @@ export default [
   {
     files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
     rules: {
-      // "astro/no-set-html-directive": "error", // do not use `<Fragment set:html={html} />` due to XSS
-      "import-x/no-unresolved": "off",
       "@typescript-eslint/consistent-type-imports": [
         2,
         { prefer: "type-imports" },
       ],
-      "import-x/order": [
-        "error",
-        {
-          groups: ["builtin", "external", "parent", "sibling", "index"],
-          pathGroupsExcludedImportTypes: [],
-          alphabetize: { order: "asc" },
-          "newlines-between": "never",
-        },
-      ],
       "no-console": ["warn", { allow: ["error"] }],
       "@typescript-eslint/no-unused-vars": [
-        "warn",
+        "error",
         {
+          args: "after-used",
           argsIgnorePattern: "^_",
           varsIgnorePattern: "^_",
           caughtErrorsIgnorePattern: "^_",
@@ -99,25 +75,6 @@ export default [
       ],
       "@typescript-eslint/no-unsafe-assignment": "off", // TODO: bug on <Fragment />
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-    },
-  },
-
-  {
-    // eslint-plugin-unused-imports
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
-    plugins: { "unused-imports": unusedImportsPlugin },
-    rules: {
-      "@typescript-eslint/no-unused-vars": "off", // 重複エラーを防ぐため typescript-eslint の方を無効化
-      "unused-imports/no-unused-imports": "error",
-      "unused-imports/no-unused-vars": [
-        "error",
-        {
-          vars: "all",
-          varsIgnorePattern: "^_",
-          args: "after-used",
-          argsIgnorePattern: "^_",
-        },
-      ],
     },
   },
 
@@ -142,85 +99,6 @@ export default [
 
   // script/**
   { files: ["script/**.ts"], rules: { "no-console": "off" } },
+
+  eslintConfigPrettier,
 ];
-
-// TODO: plugin import or plugin boundaries
-
-// import importPlugin from "eslint-plugin-import";
-// {
-// 	// eslint-plugin-import の設定
-// 	plugins: { import: importPlugin },
-// 	rules: {
-// 		"import/order": [
-// 			// import の並び順を設定
-// 			"warn",
-// 			{
-// 				groups: [
-// 					"builtin",
-// 					"external",
-// 					"internal",
-// 					["parent", "sibling"],
-// 					"object",
-// 					"type",
-// 					"index",
-// 				],
-// 				"newlines-between": "always",
-// 				pathGroupsExcludedImportTypes: ["builtin"],
-// 				alphabetize: { order: "asc", caseInsensitive: true },
-// 				pathGroups: [
-// 					{
-// 						pattern: "react",
-// 						group: "external",
-// 						position: "before",
-// 					},
-// 				],
-// 			},
-// 		],
-// 	},
-// },
-
-// 	// Boundaries plugin configuration for strict dependencies
-// {
-// 	plugins: { boundaries: boundariesPlugin },
-
-// 	// チェック対象は features 配下のみ（テストは除外）
-// 	files: ["src/features/**/*"],
-// 	ignores: ["src/features/**/*.test.ts?(x)"],
-
-// 	settings: {
-// 		"boundaries/elements": [
-// 			{
-// 				type: "feature",
-// 				pattern: "src/features/*/**", // features/<feature>/以下（深さは任意）
-// 				mode: "full",
-// 				capture: ["feature"], // <feature> 部分を保存
-// 			},
-// 			// もし features/<feature> 直下のファイルもあり得るなら追加
-// 			{
-// 				type: "feature",
-// 				pattern: "src/features/*/*",
-// 				mode: "full",
-// 				capture: ["feature"],
-// 			},
-// 		],
-// 	},
-
-// 	rules: {
-// 		// デフォルトは「別 feature への import は禁止」
-// 		"boundaries/element-types": [
-// 			"error",
-// 			{
-// 				default: "disallow",
-// 				rules: [
-// 					{
-// 						// 自分と同じ feature への import だけ許可
-// 						from: "feature",
-// 						allow: [["feature", { feature: "${from.feature}" }]],
-// 					},
-// 				],
-// 				message:
-// 					"features間のimportは禁止。同一feature内のみimport可能です。",
-// 			},
-// 		],
-// 	},
-// },
