@@ -10,6 +10,8 @@
   reviewers: ["s-hirano-ist"],
   enabledManagers: ["npm", "github-actions", "mise"],
   dependencyDashboard: true,
+  internalChecksFilter: "strict",
+  prCreation: "not-pending",
   schedule: ["before 11am on monday"],
   labels: ["dependencies"],
   rangeStrategy: "bump",
@@ -21,6 +23,10 @@
     labels: ["security"],
   },
   packageRules: [
+    {
+      matchDatasources: ["npm"],
+      minimumReleaseAge: "1 day",
+    },
     {
       matchPackageNames: ["node"],
       matchManagers: ["mise"],
