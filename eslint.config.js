@@ -16,7 +16,7 @@ export default [
       "public/",
       "src/assets/",
       "src/data/assets/",
-      "pnpm-lock.yaml",
+      "bun.lock",
       "**/*.gen.json",
     ],
   },

@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
     paths:
-      - pnpm-lock.yaml
+      - bun.lock
       - package.json
       - mise.toml
   schedule:
@@ -18,6 +18,6 @@ jobs:
     uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@8deb546fdb875b9996d27d4950be7312dac076a1 # v2.5.0
     with:
       scan-args: |-
-        --lockfile=./pnpm-lock.yaml
+        --lockfile=./bun.lock
         --recursive
         ./

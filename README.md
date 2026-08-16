@@ -17,7 +17,7 @@
 **Main Framework** - [Astro](https://astro.build/)  
 **Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
 **Component Framework** - [ReactJS](https://reactjs.org/)  
-**Package Manager** - [pnpm](https://pnpm.io/)  
+**Runtime / Package Manager** - [Bun](https://bun.sh/)<br>
 **Styling** - [TailwindCSS](https://tailwindcss.com/) | [DaisyUI](https://daisyui.com/)  
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
 **Fonts** - [Google Fonts](https://fonts.google.com/)  
@@ -28,7 +28,7 @@
 **HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
 **Lighthouse** - [LightHouse](https://developers.google.com/web/tools/lighthouse)  
 **SVG optimization** - [svgo](https://github.com/svg/svgo)  
-**Vulnerabilities Check** - [pnpm audit](https://pnpm.io/cli/audit) | [OSV Scanner](https://github.com/google/osv-scanner) | [Dependency Review](https://github.com/actions/dependency-review-action)
+**Vulnerabilities Check** - [Bun audit](https://bun.sh/docs/pm/cli/audit) | [OSV Scanner](https://github.com/google/osv-scanner) | [Dependency Review](https://github.com/actions/dependency-review-action)
 
 ### My infrastructure stack
 
@@ -45,12 +45,12 @@
 ```bash
 git clone https://github.com/s-hirano-ist/s-public.git
 mise install
-pnpm install
+bun install
 ```
 
 ### Local development environment (mise + Doppler)
 
-[mise](https://mise.jdx.dev/) manages dev tools (`node`, `pnpm`, `doppler`, `terraform`). mise auto-loads `.env.local` and `doppler run` injects secrets into commands.
+[mise](https://mise.jdx.dev/) manages dev tools (`bun`, `node`, `doppler`, `terraform`). Bun is the application runtime and package manager; Node.js remains available only for mise's `npm:agent-browser` tool. mise auto-loads `.env.local` and `doppler run` injects secrets into commands.
 
 #### Prerequisites (human setup)
 
@@ -72,9 +72,9 @@ echo "DOPPLER_TOKEN=$(DOPPLER_TOKEN=$(doppler configure get token --plain) terra
 After `.env.local` is set up, commands work directly (secrets are injected via `doppler run` in package.json scripts):
 
 ```bash
-pnpm dev              # Astro dev server with secrets injected
-pnpm generate:book    # Google Books API (uses GOOGLE_BOOKS_API_KEY)
-pnpm build            # Production build (uses GA_MEASUREMENT_ID)
+bun run dev              # Astro dev server with secrets injected
+bun run generate:book    # Book data generation (uses GITHUB_ACTION_TOKEN)
+bun run build            # Production build (uses GA_MEASUREMENT_ID)
 ```
 
 #### For Terraform changes (full access)
@@ -99,15 +99,15 @@ echo "DOPPLER_TOKEN=$(terraform -chdir=terraform output -raw doppler_dev_ai_agen
 
 ### Adding photos
 
-Add photos to `./src/data/assets/photo/`, then run `pnpm generate:photo`.
+Add photos to `./src/data/assets/photo/`, then run `bun run generate:photo`.
 
 ### Updating books
 
-Edit ISBN / metadata in `src/data/book/_original.ts`, then run `pnpm generate:book` (Google Books API).
+Update book metadata in the private contents repository, then run `bun run generate:book`.
 
 ### Updating licenses
 
-Run `pnpm license:json` and `pnpm license:summary`. Disallowed licenses (GPL / LGPL / AGPL family) are blocked on PRs by [`dependency-review.yaml`](.github/workflows/dependency-review.yaml).
+Run `bun run license:json` and `bun run license:summary`. Disallowed licenses (GPL / LGPL / AGPL family) are blocked on PRs by [`dependency-review.yaml`](.github/workflows/dependency-review.yaml).
 
 > [!NOTE]
 > `@img/sharp-libvips-*` is explicitly allowed in Dependency Review because it is a reviewed runtime artifact of `sharp`; new LGPL dependencies remain blocked by default.
@@ -116,6 +116,8 @@ Run `pnpm license:json` and `pnpm license:summary`. Disallowed licenses (GPL / L
 ### Cloudflare deployment
 
 Add GitHub integration for auto-deployment on Cloudflare.
+
+Cloudflare Pages builds with `bun ci && bun run astro build`. Because Terraform ignores remote changes to the environment-variable maps, keep the production and preview settings synchronized manually: set `BUN_VERSION` to the version in `package.json`, set `SKIP_DEPENDENCY_INSTALL=1`, and remove `NODE_VERSION`.
 
 ### Google Site Verification (optional)
 
@@ -135,7 +137,7 @@ Access [Cloudflare](https://dash.cloudflare.com/) to add DNS TXT record.
 
 ## 🧞 Commands
 
-All scripts are defined in [`package.json`](package.json) — run them with `pnpm <script>` from the project root.
+All scripts are defined in [`package.json`](package.json) — run them with `bun run <script>` from the project root.
 
 ## 🪝 Tags & Release
 

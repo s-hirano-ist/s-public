@@ -9,12 +9,6 @@
 import { writeFileSync } from "node:fs";
 import { parse as parseYaml } from "yaml";
 
-try {
-  process.loadEnvFile(".env.local");
-} catch {
-  // CI では環境変数を直接設定
-}
-
 const OWNER = "s-hirano-ist";
 const REPO = "s-contents";
 const DIR_PATH = "markdown/book";
