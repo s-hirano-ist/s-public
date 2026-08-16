@@ -2,7 +2,7 @@
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
-import BookList from "@components/BookList.astro";
+import BookList from "@components/react/BookList.tsx";
 import { MAX_RATING, SITE } from "@config";
 import books from "@data/book/data.gen.json";
 import Layout from "@layouts/Layout.astro";
@@ -98,7 +98,7 @@ const jsonLd = [
         <li>☆5: 自分の考え方が大きく変わったおすすめ本</li>
       </ul>
     </div>
-    <BookList />
+    <BookList client:only="react" />
   </Main>
   <Footer />
 </Layout>

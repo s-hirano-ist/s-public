@@ -16,8 +16,7 @@
 
 **Main Framework** - [Astro](https://astro.build/)  
 **Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
-**UI Components** - [Astro Components](https://docs.astro.build/en/basics/astro-components/)<br>
-**OG Image Rendering** - [Satori](https://github.com/vercel/satori) + [ReactJS](https://react.dev/) (build time only)<br>
+**Component Framework** - [ReactJS](https://react.dev/)<br>
 **Runtime / Package Manager** - [Bun](https://bun.sh/)<br>
 **Styling** - [TailwindCSS](https://tailwindcss.com/) | [DaisyUI](https://daisyui.com/)  
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  

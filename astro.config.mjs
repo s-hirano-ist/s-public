@@ -1,4 +1,5 @@
 import { satteri, satteriHeadingIdsPlugin } from "@astrojs/markdown-satteri";
+import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, envField, fontProviders } from "astro/config";
@@ -82,7 +83,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [sitemap()],
+  integrations: [react({ include: ["**/react/*"] }), sitemap()],
   markdown: {
     processor: satteri({
       hastPlugins: [satteriHeadingIdsPlugin(), headingLinksPlugin],

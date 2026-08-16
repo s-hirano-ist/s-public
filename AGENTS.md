@@ -11,7 +11,7 @@ s-hirano-ist のポートフォリオサイト（https://s-hirano.com/）のソ�
 ### フレームワーク構成
 
 - **メインフレームワーク**: Astro（SSG）
-- **UI コンポーネント**: Astro（React は Satori による OG 画像生成時のみ使用）
+- **UI コンポーネント**: React（`src/components/react/` 内のみ有効、Astro設定で制限）
 - **スタイリング**: TailwindCSS + DaisyUI
 - **型システム**: TypeScript
 - **ランタイム / パッケージマネージャー**: Bun（バージョンは `mise.toml` と `package.json` で固定。`mise install` でセットアップ）
@@ -21,7 +21,7 @@ s-hirano-ist のポートフォリオサイト（https://s-hirano.com/）のソ�
 ```text
 src/
 ├── components/        # Astro コンポーネント
-│   └── react/        # OG画像生成用のReactコンポーネント
+│   └── react/        # Reactコンポーネント（BookList, Rating等）
 ├── content/          # Astro Content Collections
 │   └── blog/         # ブログ記事（Markdown）
 ├── data/             # 静的データとアセット
@@ -44,7 +44,7 @@ src/
 
 - `src/config.ts` - サイト設定（URL、作者情報、MAX_RATING等）
 - `src/content.config.ts` - Content Collections定義（Zod スキーマ）
-- `astro.config.mjs` - Astro設定（Sätteri、Astro Fonts、サイトマップ等）
+- `astro.config.mjs` - Astro設定（React は `**/react/*` のみ有効、Sätteri、Astro Fonts等）
 - `src/data/book/_original.ts` - 書籍の ISBN・評価・タグ元データ
 
 ### データ管理
