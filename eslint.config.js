@@ -1,19 +1,11 @@
 import eslintJs from "@eslint/js";
-import eslintMarkdown from "@eslint/markdown";
 import tsParser from "@typescript-eslint/parser";
 import { configs as eslintPluginAstro } from "eslint-plugin-astro";
 import { flatConfigs as eslintPluginImportX } from "eslint-plugin-import-x";
-import { configs as jsoncConfigs } from "eslint-plugin-jsonc";
-import perfectionistPlugin from "eslint-plugin-perfectionist";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
-import * as regexpPlugin from "eslint-plugin-regexp";
 // import tailwind from "eslint-plugin-tailwindcss"; // eslint-plugin-tailwindcss は Tailwind v3 のみ対応。v4 では使用不可
-import unicornPlugin from "eslint-plugin-unicorn";
 import unusedImportsPlugin from "eslint-plugin-unused-imports";
-import { configs as ymlConfigs } from "eslint-plugin-yml";
 import { configs as eslintTypeScript } from "typescript-eslint";
-
-const regexp = regexpPlugin.default ?? regexpPlugin;
 
 export default [
   {
@@ -61,14 +53,6 @@ export default [
   },
   ...eslintPluginAstro.recommended,
   // ...tailwind.configs["flat/recommended"], // eslint-plugin-tailwindcss は Tailwind v3 のみ対応
-  {
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
-    plugins: { regexp },
-    rules: {
-      "regexp/no-super-linear-backtracking": "error",
-      "regexp/no-super-linear-move": "error",
-    },
-  },
   ...eslintTypeScript.recommendedTypeChecked.map(config => ({
     ...config,
     files: ["**/*.ts", "**/*.tsx"],
@@ -137,41 +121,6 @@ export default [
     },
   },
 
-  // yaml
-  ...ymlConfigs["flat/recommended"].map(config =>
-    config.rules && !config.files
-      ? { ...config, files: ["**/*.yml", "**/*.yaml"] }
-      : config,
-  ),
-  {
-    files: ["**/*.yml", "**/*.yaml"],
-    rules: {
-      "yml/no-empty-mapping-value": "off", // GitHub Actions の `on: push:` 等で一般的なパターン
-    },
-  },
-
-  // jsonc
-  ...jsoncConfigs["flat/recommended-with-jsonc"].map(config =>
-    config.rules && !config.files
-      ? { ...config, files: ["**/*.json", "**/*.jsonc", "**/*.json5"] }
-      : config,
-  ),
-  {
-    files: ["**/*.json5"],
-    rules: {
-      "jsonc/quote-props": "off", // JSON5 ではプロパティのクォートは不要
-    },
-  },
-
-  // markdown
-  ...eslintMarkdown.configs.recommended,
-  {
-    files: ["**/*.md"],
-    rules: {
-      "markdown/no-missing-label-refs": "off", // GitHub admonition ([!IMPORTANT]) や脚注参照で誤検知
-    },
-  },
-
   {
     files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
     rules: {
@@ -188,51 +137,6 @@ export default [
           ],
         },
       ],
-    },
-  },
-
-  // unicorn
-  {
-    ...unicornPlugin.configs["recommended"],
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
-  },
-  {
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
-    rules: {
-      "unicorn/prevent-abbreviations": "off",
-      "unicorn/no-await-expression-member": "off",
-      "unicorn/no-null": "off",
-      "unicorn/prefer-code-point": "off",
-      "unicorn/no-abusive-eslint-disable": "off",
-      "unicorn/prefer-global-this": "off",
-      "unicorn/consistent-function-scoping": "off",
-      "unicorn/no-new-array": "off",
-      "unicorn/no-useless-spread": "off",
-      "unicorn/filename-case": "off",
-      "unicorn/numeric-separators-style": "off",
-      "unicorn/no-console-spaces": "off",
-      "unicorn/prefer-single-call": "off",
-      "unicorn/no-useless-undefined": "off",
-      "unicorn/prefer-logical-operator-over-ternary": "off",
-      "unicorn/no-array-reduce": "off",
-      "unicorn/text-encoding-identifier-case": "off",
-      "unicorn/new-for-builtins": "off",
-      "unicorn/new-for-builtins": "off",
-      "unicorn/prefer-array-some": "off",
-      "unicorn/prefer-array-flat-map": "off",
-      "unicorn/no-for-loop": "off",
-      "unicorn/no-process-exit": "off",
-      "no-dupe-keys": "off",
-    },
-  },
-
-  {
-    // eslint-plugin-perfectionist
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx,astro}"],
-    plugins: { perfectionist: perfectionistPlugin },
-    rules: {
-      "perfectionist/sort-interfaces": "warn", // interface のプロパティの並び順をアルファベット順に統一
-      "perfectionist/sort-object-types": "warn", // Object 型のプロパティの並び順をアルファベット順に統一
     },
   },
 

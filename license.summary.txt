@@ -1,7 +1,7 @@
-├─ MIT: 771
+├─ MIT: 733
 ├─ ISC: 83
 ├─ Apache-2.0: 31
-├─ BSD-2-Clause: 22
+├─ BSD-2-Clause: 21
 ├─ BlueOak-1.0.0: 12
 ├─ BSD-3-Clause: 7
 ├─ CC0-1.0: 4
