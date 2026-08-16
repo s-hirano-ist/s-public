@@ -21,23 +21,23 @@ jobs:
       - name: Install tools via mise
         uses: jdx/mise-action@7e36c90d9ab29c415a2384db3006f3ec8a8cc654 # v4
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
+      - name: Get Bun cache directory
+        id: bun-cache
         shell: bash
-        run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+        run: echo "CACHE_PATH=$(bun pm cache)" >> "$GITHUB_OUTPUT"
 
-      - name: Cache pnpm dependencies
+      - name: Cache Bun dependencies
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          path: ${{ steps.bun-cache.outputs.CACHE_PATH }}
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-
+            ${{ runner.os }}-bun-
 
-      - run: pnpm i --frozen-lockfile
+      - run: bun ci
       - name: Install Doppler CLI
         uses: dopplerhq/cli-action@4819d808ab99e5cde19a0637a16536a4038fad73 # v4
-      - run: pnpm build
+      - run: bun run build
         env:
           DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
 
@@ -57,25 +57,25 @@ jobs:
       - name: Install tools via mise
         uses: jdx/mise-action@7e36c90d9ab29c415a2384db3006f3ec8a8cc654 # v4
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
+      - name: Get Bun cache directory
+        id: bun-cache
         shell: bash
-        run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+        run: echo "CACHE_PATH=$(bun pm cache)" >> "$GITHUB_OUTPUT"
 
-      - name: Cache pnpm dependencies
+      - name: Cache Bun dependencies
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          path: ${{ steps.bun-cache.outputs.CACHE_PATH }}
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-
+            ${{ runner.os }}-bun-
 
-      - run: pnpm i --frozen-lockfile
-      - run: pnpm check
-      - run: pnpm tsc
-      - run: pnpm fmt
-      - run: pnpm lint
-      - run: pnpm lint:mark
+      - run: bun ci
+      - run: bun run check
+      - run: bun run tsc
+      - run: bun run fmt
+      - run: bun run lint
+      - run: bun run lint:mark
 
   lighthouse:
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
@@ -93,24 +93,23 @@ jobs:
       - name: Install tools via mise
         uses: jdx/mise-action@7e36c90d9ab29c415a2384db3006f3ec8a8cc654 # v4
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
+      - name: Get Bun cache directory
+        id: bun-cache
         shell: bash
-        run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+        run: echo "CACHE_PATH=$(bun pm cache)" >> "$GITHUB_OUTPUT"
 
-      - name: Cache pnpm dependencies
+      - name: Cache Bun dependencies
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          path: ${{ steps.bun-cache.outputs.CACHE_PATH }}
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-
+            ${{ runner.os }}-bun-
 
-      - run: pnpm i --frozen-lockfile
-      - run: npm install -g @lhci/cli@0.12.x
+      - run: bun ci
       - name: Install Doppler CLI
         uses: dopplerhq/cli-action@4819d808ab99e5cde19a0637a16536a4038fad73 # v4
-      - run: pnpm build
+      - run: bun run build
         env:
           DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
-      - run: lhci autorun
+      - run: bunx --bun @lhci/cli@0.12.x autorun

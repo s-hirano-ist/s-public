@@ -2,6 +2,11 @@
 # Use: export DOPPLER_TOKEN=$(doppler configure get token --plain)
 provider "doppler" {}
 
+locals {
+  package_manager = jsondecode(file("${path.module}/../package.json")).packageManager
+  bun_version     = trimprefix(local.package_manager, "bun@")
+}
+
 resource "doppler_project" "s_public" {
   name        = "s-public"
   description = "s-hirano.com portfolio site"
@@ -160,7 +165,7 @@ resource "cloudflare_pages_project" "s_public" {
   production_branch = "main"
 
   build_config = {
-    build_command   = "pnpm astro build"
+    build_command   = "bun ci && bun run astro build"
     destination_dir = "dist"
     build_caching   = true
     root_dir        = ""
@@ -204,9 +209,13 @@ resource "cloudflare_pages_project" "s_public" {
           type  = "plain_text"
           value = var.ga_measurement_id
         }
-        NODE_VERSION = {
+        BUN_VERSION = {
           type  = "plain_text"
-          value = var.node_version
+          value = local.bun_version
+        }
+        SKIP_DEPENDENCY_INSTALL = {
+          type  = "plain_text"
+          value = "1"
         }
       }
     }
@@ -216,9 +225,13 @@ resource "cloudflare_pages_project" "s_public" {
           type  = "plain_text"
           value = var.ga_measurement_id
         }
-        NODE_VERSION = {
+        BUN_VERSION = {
           type  = "plain_text"
-          value = var.node_version
+          value = local.bun_version
+        }
+        SKIP_DEPENDENCY_INSTALL = {
+          type  = "plain_text"
+          value = "1"
         }
       }
     }

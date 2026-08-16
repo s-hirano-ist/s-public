@@ -22,39 +22,34 @@ jobs:
       - name: Install tools via mise
         uses: jdx/mise-action@7e36c90d9ab29c415a2384db3006f3ec8a8cc654 # v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6
-        with:
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
+      - name: Get Bun cache directory
+        id: bun-cache
         shell: bash
-        run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+        run: echo "CACHE_PATH=$(bun pm cache)" >> "$GITHUB_OUTPUT"
 
-      - name: Cache pnpm dependencies
+      - name: Cache Bun dependencies
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          path: ${{ steps.bun-cache.outputs.CACHE_PATH }}
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-
+            ${{ runner.os }}-bun-
 
-      - run: pnpm i --frozen-lockfile
+      - run: bun ci
 
-      - run: pnpm license:summary
-      - run: pnpm license:json
+      - run: bun run license:summary
+      - run: bun run license:json
 
       - name: run generate:photo
-        run: pnpm generate:photo
+        run: bun run generate:photo
 
       - name: run generate:book
-        run: pnpm generate:book
+        run: bun run generate:book
         env:
           DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
 
       - name: run format fix
-        run: pnpm fmt:fix
+        run: bun run fmt:fix
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8

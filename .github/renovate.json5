@@ -8,7 +8,7 @@
     ":semanticCommitTypeAll(chore)",
   ],
   reviewers: ["s-hirano-ist"],
-  enabledManagers: ["npm", "github-actions", "mise"],
+  enabledManagers: ["bun", "npm", "github-actions", "mise"],
   dependencyDashboard: true,
   internalChecksFilter: "strict",
   prCreation: "not-pending",
@@ -33,17 +33,15 @@
       allowedVersions: "/^[0-9]*[02468]([.-].*)?$/",
     },
     {
-      matchManagers: ["npm"],
+      matchManagers: ["bun"],
       matchUpdateTypes: ["patch"],
       matchPackageNames: ["*"],
-      matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
       groupName: "patch",
     },
     {
-      matchManagers: ["npm"],
+      matchManagers: ["bun"],
       matchUpdateTypes: ["minor"],
       matchPackageNames: ["*"],
-      matchDepTypes: ["dependencies", "devDependencies", "peerDependencies"],
       groupName: "minor",
     },
     {
@@ -57,10 +55,10 @@
       groupSlug: "mise-tools",
     },
     {
-      matchPackageNames: ["pnpm"],
-      matchManagers: ["mise", "npm"],
-      groupName: "pnpm",
-      groupSlug: "pnpm",
+      matchPackageNames: ["bun"],
+      matchManagers: ["bun", "mise"],
+      groupName: "bun",
+      groupSlug: "bun",
     },
   ],
 }
