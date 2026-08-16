@@ -768,6 +768,7 @@ packages:
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@eslint/css-tree@4.0.4':
+    resolution: {tarball: https://registry.npmjs.org/@eslint/css-tree/-/css-tree-4.0.4.tgz}
     engines: {node: '>=20.19.0 || >=22.13.0'}
 
   '@eslint/js@10.0.1':
@@ -3063,6 +3064,7 @@ packages:
     resolution: {integrity: sha512-ugFTXCtDZunbzasqBxrK93Ik/DRYsO6S/fedkWEMKqt04xZ4csmnmwGDBAb07QWNaGMAmnTIemsYZCksjATwsA==}
 
   detect-indent@7.0.2:
+    resolution: {tarball: https://registry.npmjs.org/detect-indent/-/detect-indent-7.0.2.tgz}
     engines: {node: '>=18'}
 
   detect-libc@2.1.2:
@@ -3952,6 +3954,7 @@ packages:
     resolution: {integrity: sha512-DgZQp241c8oO6cA1SbTEWiXeoxV42vlcJxgH+B3hi1AiqqKruZR3ZGF8In3fj4+/y/7rHvlOZLZtgJ/4ttYGZg==}
 
   is-identifier@1.1.0:
+    resolution: {tarball: https://registry.npmjs.org/is-identifier/-/is-identifier-1.1.0.tgz}
     engines: {node: '>=18'}
 
   is-map@2.0.3:
@@ -5012,6 +5015,7 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
   quote-js-string@0.1.0:
+    resolution: {tarball: https://registry.npmjs.org/quote-js-string/-/quote-js-string-0.1.0.tgz}
     engines: {node: '>=20'}
 
   radix3@1.1.2:
@@ -5186,6 +5190,7 @@ packages:
     resolution: {integrity: sha512-AgZ3UOZm3YndfrJ4OYjgrT7bmCm/1iqkjvEfH/oYjzh6PD2qw4QuT3jjnXIrpdt4MTpMXclMT3lXbmRY+XRakw==}
 
   reserved-identifiers@1.2.0:
+    resolution: {tarball: https://registry.npmjs.org/reserved-identifiers/-/reserved-identifiers-1.2.0.tgz}
     engines: {node: '>=18'}
 
   resolve-from@4.0.0:
