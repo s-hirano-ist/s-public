@@ -23,12 +23,8 @@ node_modules/
 # ignore .astro directory
 .astro
 
-# eslint cache
-.eslintcache
-
 # mise-managed tool binaries
 bin/
 
 # editor / IDE（VSCode はローカル管理）
 .vscode/
-

@@ -27,8 +27,7 @@ const jsonLd = [
   subTitle="撮影の議事録 from 2020年。風景写真から日常のスナップまで、レンズを通して見た世界を記録しています。"
   jsonLd={jsonLd}>
   <div class="pswp-gallery grid w-full grid-cols-3 gap-4" id="my-gallery">
-    {
-      CONTENTS.map(src => {
+    {CONTENTS.map(src => {
         return (
           <a
             href={src.src}
@@ -36,6 +35,7 @@ const jsonLd = [
             data-pswp-width={src.width}
             data-pswp-height={src.height}
             target="_blank"
+            rel="noopener"
             class="group overflow-hidden rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-md">
             <div class="aspect-square overflow-hidden">
               <Image
@@ -46,18 +46,17 @@ const jsonLd = [
             </div>
           </a>
         );
-      })
-    }
+      })}
   </div>
 </PortfolioLayout>
 <script>
-  import PhotoSwipeLightbox from "photoswipe/lightbox";
-  import "photoswipe/style.css";
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: "#my-gallery",
-    children: "a",
-    pswpModule: () => import("photoswipe"),
-    bgOpacity: 1.0,
-  });
-  lightbox.init();
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
+const lightbox = new PhotoSwipeLightbox({
+  gallery: "#my-gallery",
+  children: "a",
+  pswpModule: () => import("photoswipe"),
+  bgOpacity: 1.0,
+});
+lightbox.init();
 </script>

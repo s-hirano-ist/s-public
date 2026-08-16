@@ -107,9 +107,7 @@ async function main(): Promise<void> {
     const data = parseFrontmatter(raw) as BookFrontmatter;
 
     if (data.rating == null || data.title == null) {
-      console.warn(
-        `⚠️  ${file.name}: rating または title 未設定のためスキップ`,
-      );
+      console.warn(`⚠️  ${file.name}: rating または title 未設定のためスキップ`);
       skippedCount++;
       continue;
     }

@@ -11,7 +11,7 @@ import Rating from "@components/react/Rating.tsx";
 import books from "@data/book/data.gen.json";
 
 export default function BookList() {
-  const tags = [...new Set(books.map(book => book.tags).flat())];
+  const tags = [...new Set(books.flatMap(book => book.tags))];
 
   const [rating, setFilterRating] = useState<number>(0);
   const [selectedTag, setSelectedTag] = useState<string | undefined>();
@@ -24,7 +24,7 @@ export default function BookList() {
     );
 
     return tagRatingFilteredBooks;
-  }, [books, rating, selectedTag]);
+  }, [rating, selectedTag]);
 
   const totalBooks = filteredBooks.length;
 
@@ -41,8 +41,7 @@ export default function BookList() {
     } else {
       setSelectedTag(tag);
       searchParams.set("tag", tag);
-      const newRelativePathQuery =
-        window.location.pathname + "?" + searchParams.toString();
+      const newRelativePathQuery = `${window.location.pathname}?${searchParams.toString()}`;
       history.replaceState(null, "", newRelativePathQuery);
     }
   };
@@ -69,7 +68,8 @@ export default function BookList() {
             href={book.googleHref}
             target="_blank"
             key={book.title}
-            className="block">
+            className="block"
+            rel="noopener">
             <Card className="overflow-hidden shadow-xl">
               <figure className="flex h-48 items-center justify-center overflow-hidden">
                 <img

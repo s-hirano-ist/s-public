@@ -21,8 +21,7 @@
 **Styling** - [TailwindCSS](https://tailwindcss.com/) | [DaisyUI](https://daisyui.com/)  
 **Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
 **Fonts** - [Google Fonts](https://fonts.google.com/)  
-**Code Formatting** - [Prettier](https://prettier.io/)  
-**Linting** - [ESLint](https://eslint.org)  
+**Code Formatting / Linting** - [Biome](https://biomejs.dev/)<br>
 **Markdown Linting** - [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)  
 **Package updates** - [Renovate](https://www.mend.io/renovate/)  
 **HTML checker** - [Nu Html Checker](https://github.com/validator/validator)  
