@@ -1,11 +1,9 @@
 ---
 import { GA_MEASUREMENT_ID } from "astro:env/client";
+import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 import { SITE } from "@config";
 import "@styles/base.css";
-import "@fontsource-variable/noto-sans-jp";
-import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
-import "@fortawesome/fontawesome-free/css/solid.min.css";
 
 type Props = {
   author?: string;
@@ -45,6 +43,13 @@ const socialImageURL = new URL(
       sizes="180x180">
     <link rel="canonical" href={canonicalURL}>
     <meta name="generator" content={Astro.generator}>
+
+    <Font
+      cssVariable="--font-noto-sans-jp"
+      preload={[
+        { weight: 400, subset: "japanese" },
+        { weight: 400, subset: "latin" },
+      ]} />
 
     <ClientRouter />
 

@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tailwindcss-animated";
 
 @plugin "@tailwindcss/typography";
 
@@ -267,10 +266,8 @@
 }
 
 @source "../src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}";
-@source "../../node_modules/@s-hirano-ist/s-ui/dist/**/*.js";
-
 @theme {
-  --font-sans: "Noto Sans JP Variable", sans-serif;
+  --font-sans: var(--font-noto-sans-jp), sans-serif;
   --color-background: rgb(var(--background));
   --color-foreground: rgb(var(--foreground));
   --color-primary: rgb(var(--primary));
@@ -292,8 +289,10 @@
 /* for rehype autolink headings */
 
 .icon-header-link {
+  display: inline-flex;
   visibility: hidden;
-  font-size: 1rem;
+  align-items: center;
+  vertical-align: middle;
   margin-left: 0.3rem;
 }
 
