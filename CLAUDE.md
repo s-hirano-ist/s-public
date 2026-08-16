@@ -59,7 +59,6 @@ src/
 
 ### 品質管理
 
-- pre-commit フック: `.husky/pre-commit` + `package.json` の `lint-staged`
 - CI: `.github/workflows/`（`ci.yaml` で build / lint / lighthouse、`osv-scanner.yaml`・`dependency-review.yaml` で脆弱性・ライセンス検査）
 - 依存関係更新: Renovate（`.github/renovate.json5`）
 
@@ -95,10 +94,6 @@ src/
 - ブログ記事は `src/content/blog/` に Markdown で作成
 - 各記事には heading, slug, description, draft, date が必要
 - ドラフトは `draft: true` で非公開
-
-### コミット前の確認
-
-pre-commit で lint-staged が走る。対象パターンと実行内容は `package.json` の `lint-staged` を参照。
 
 ### リリース手順
 
