@@ -70,17 +70,6 @@ resource "doppler_secret" "google_books_api_key_ci" {
   }
 }
 
-resource "doppler_secret" "lhci_github_app_token_ci" {
-  project = doppler_project.s_public.name
-  config  = doppler_environment.ci.slug
-  name    = "LHCI_GITHUB_APP_TOKEN"
-  value   = ""
-
-  lifecycle {
-    ignore_changes = [value]
-  }
-}
-
 # s-contents (private repo) 読み取り用 PAT
 # GitHub Actions の update-contents ワークフローで generate:book step が利用
 resource "doppler_secret" "github_action_token_ci" {

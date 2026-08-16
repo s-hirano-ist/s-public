@@ -1,8 +1,0 @@
-{
-  "config": {
-    "line-length": false, // MD013  行の長さ
-    "no-inline-html": false
-  },
-  "gitignore": true, // gitignore 済み（dist/.terraform 等の vendored）を除外
-  "ignores": [".git", "node_modules", "AGENTS.md"] // 無視するディレクトリ
-}

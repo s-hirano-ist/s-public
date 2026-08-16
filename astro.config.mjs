@@ -3,6 +3,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, envField, fontProviders } from "astro/config";
+import { thirdPartyNotices } from "./script/third-party-notices.mjs";
 import { SITE } from "./src/config";
 
 const headingLinksPlugin = {
@@ -81,7 +82,7 @@ export default defineConfig({
     layout: "constrained",
   },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(), thirdPartyNotices()],
   },
   integrations: [react({ include: ["**/react/*"] }), sitemap()],
   markdown: {

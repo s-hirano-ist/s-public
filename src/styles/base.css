@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @plugin "@tailwindcss/typography";
 
 @source "../../node_modules/@s-hirano-ist/s-ui/dist/**/*.js";

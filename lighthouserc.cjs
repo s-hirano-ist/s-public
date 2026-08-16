@@ -1,6 +1,59 @@
 module.exports = {
   ci: {
-    collect: { staticDistDir: "./dist/" },
-    upload: { target: "temporary-public-storage" },
+    collect: {
+      staticDistDir: "./dist",
+      url: [
+        "http://localhost/",
+        "http://localhost/blog/",
+        "http://localhost/book/",
+        "http://localhost/diy/",
+        "http://localhost/photo/",
+      ],
+      numberOfRuns: 3,
+      settings: {
+        chromeFlags: "--headless --no-sandbox --disable-dev-shm-usage",
+      },
+    },
+    assert: {
+      assertions: {
+        "categories:performance": [
+          "error",
+          { minScore: 0.6, aggregationMethod: "median" },
+        ],
+        "categories:accessibility": [
+          "error",
+          { minScore: 0.9, aggregationMethod: "median" },
+        ],
+        "categories:best-practices": [
+          "error",
+          { minScore: 1, aggregationMethod: "median" },
+        ],
+        "categories:seo": [
+          "error",
+          { minScore: 1, aggregationMethod: "median" },
+        ],
+        "first-contentful-paint": [
+          "error",
+          { maxNumericValue: 6000, aggregationMethod: "median" },
+        ],
+        "largest-contentful-paint": [
+          "error",
+          { maxNumericValue: 9000, aggregationMethod: "median" },
+        ],
+        "cumulative-layout-shift": [
+          "error",
+          { maxNumericValue: 0.25, aggregationMethod: "median" },
+        ],
+        "total-blocking-time": [
+          "error",
+          { maxNumericValue: 300, aggregationMethod: "median" },
+        ],
+        "errors-in-console": ["error", { maxLength: 0 }],
+      },
+    },
+    upload: {
+      target: "temporary-public-storage",
+      failOnUploadFailure: false,
+    },
   },
 };

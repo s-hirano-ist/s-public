@@ -19,29 +19,12 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install tools via mise
+      - name: Install Bun and Doppler via mise
         uses: jdx/mise-action@3c2e0cf82a5b2e5249f0d3635a4d83d0ae861518 # v4
-
-      - name: Get Bun cache directory
-        id: bun-cache
-        shell: bash
-        run: echo "CACHE_PATH=$(bun pm cache)" >> "$GITHUB_OUTPUT"
-
-      - name: Cache Bun dependencies
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
-          path: ${{ steps.bun-cache.outputs.CACHE_PATH }}
-          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-bun-
+          install_args: "bun doppler"
 
       - run: bun ci
-
-      - run: bun run license:summary
-      - run: bun run license:json
-
-      - name: run generate:photo
-        run: bun run generate:photo
 
       - name: run generate:book
         run: bun run generate:book

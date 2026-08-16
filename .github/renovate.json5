@@ -22,6 +22,15 @@
   vulnerabilityAlerts: {
     labels: ["security"],
   },
+  customManagers: [
+    {
+      customType: "regex",
+      managerFilePatterns: ["/\\.github/workflows/ci\\.yaml$/"],
+      matchStrings: ["@lhci/cli@(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      depNameTemplate: "@lhci/cli",
+      datasourceTemplate: "npm",
+    },
+  ],
   packageRules: [
     {
       matchDatasources: ["npm"],
