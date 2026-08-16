@@ -18,13 +18,11 @@ const { headerTitle, title, subTitle, subSubTitle, jsonLd } = Astro.props;
   <Header title={headerTitle} />
   <Main>
     <section id="hero" class="pb-8">
-      {
-        title && (
+      {title && (
           <h1 class="my-6 inline-block text-2xl font-bold tracking-tight sm:my-10 sm:text-5xl">
             {title}
           </h1>
-        )
-      }
+        )}
       {subTitle && <p class="my-2">{subTitle}</p>}
       {subSubTitle && <p class="my-2">{subSubTitle}</p>}
     </section>

@@ -34,110 +34,107 @@ const socialImageURL = new URL(
 <!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico">
     <link
       rel="apple-touch-icon"
       href="/touch-icon.png"
       type="image/png"
-      sizes="180x180"
-    />
-    <link rel="canonical" href={canonicalURL} />
-    <meta name="generator" content={Astro.generator} />
+      sizes="180x180">
+    <link rel="canonical" href={canonicalURL}>
+    <meta name="generator" content={Astro.generator}>
 
     <ClientRouter />
 
     <!-- Manifest -->
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="manifest" href="/manifest.webmanifest">
 
     <!-- General Meta Tags -->
     <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta name="description" content={description} />
-    <meta name="author" content={author} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="title" content={title}>
+    <meta name="description" content={description}>
+    <meta name="author" content={author}>
+    <link rel="sitemap" href="/sitemap-index.xml">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:url" content={canonicalURL}>
+    <meta property="og:image" content={socialImageURL}>
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content={canonicalURL}>
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+    <meta property="twitter:image" content={socialImageURL}>
 
     <!-- Smooth Scroll -->
     <script>
-      // Better than `scroll-behavior: smooth` on smooth scrolling so it is necessary.
-      import Lenis from "lenis";
+    // Better than `scroll-behavior: smooth` on smooth scrolling so it is necessary.
+    import Lenis from "lenis";
 
-      function initLenis() {
-        const lenis = new Lenis();
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        function raf(time: any) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
+    function initLenis() {
+      const lenis = new Lenis();
+      function raf(time: number) {
+        lenis.raf(time);
         requestAnimationFrame(raf);
       }
+      requestAnimationFrame(raf);
+    }
 
-      // Initialize on first load
-      initLenis();
+    // Initialize on first load
+    initLenis();
 
-      // Re-initialize after View Transitions navigation
-      document.addEventListener("astro:after-swap", initLenis);
+    // Re-initialize after View Transitions navigation
+    document.addEventListener("astro:after-swap", initLenis);
     </script>
 
     <!-- Color Scheme -->
     <script is:inline>
-      // Prevent FART (Flash of inAccurate coloR Theme)
-      if (localStorage.getItem("theme") !== "light") {
-        document.documentElement.classList.add("dark");
-      }
+    // Prevent FART (Flash of inAccurate coloR Theme)
+    if (localStorage.getItem("theme") !== "light") {
+      document.documentElement.classList.add("dark");
+    }
     </script>
     <script>
-      function initTheme() {
-        const themeController = document.querySelector(
-          ".theme-controller",
+    function initTheme() {
+      const themeController = document.querySelector(
+        ".theme-controller",
+      ) as HTMLInputElement;
+
+      const isDark = localStorage.getItem("theme") !== "light";
+      document.documentElement.classList.toggle("dark", isDark);
+
+      if (themeController) {
+        const newController = themeController.cloneNode(
+          true,
         ) as HTMLInputElement;
+        themeController.parentNode?.replaceChild(
+          newController,
+          themeController,
+        );
 
-        const isDark = localStorage.getItem("theme") !== "light";
-        document.documentElement.classList.toggle("dark", isDark);
+        newController.addEventListener("change", e => {
+          const target = e.target as HTMLInputElement;
+          const isLight = target.checked;
 
-        if (themeController) {
-          const newController = themeController.cloneNode(
-            true,
-          ) as HTMLInputElement;
-          themeController.parentNode?.replaceChild(
-            newController,
-            themeController,
-          );
+          document.documentElement.classList.toggle("dark", !isLight);
+          localStorage.setItem("theme", isLight ? "light" : "dark");
+        });
 
-          newController.addEventListener("change", function (e) {
-            const target = e.target as HTMLInputElement;
-            const isLight = target.checked;
-
-            document.documentElement.classList.toggle("dark", !isLight);
-            localStorage.setItem("theme", isLight ? "light" : "dark");
-          });
-
-          newController.checked = !isDark;
-        }
+        newController.checked = !isDark;
       }
+    }
 
-      initTheme();
-      document.addEventListener("astro:after-swap", initTheme);
+    initTheme();
+    document.addEventListener("astro:after-swap", initTheme);
     </script>
 
     <!-- Google tag (gtag.js) -->
-    {
-      GA_MEASUREMENT_ID ? (
+    {GA_MEASUREMENT_ID ? (
         <>
           <script
             is:inline
@@ -155,25 +152,20 @@ const socialImageURL = new URL(
           />
         </>
       ) : (
-        <>
-          <script
-            is:inline
-            set:html={`console.log("GA_MEASUREMENT_ID is not set.");`}
-          />
-        </>
-      )
-    }
+        <script
+          is:inline
+          set:html={`console.log("GA_MEASUREMENT_ID is not set.");`}
+        />
+      )}
 
     <!-- JSON-LD -->
-    {
-      jsonLd && (
+    {jsonLd && (
         <script
           is:inline
           type="application/ld+json"
           set:html={JSON.stringify(jsonLd)}
         />
-      )
-    }
+      )}
   </head>
   <body>
     <slot />

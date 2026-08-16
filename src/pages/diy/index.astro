@@ -35,8 +35,7 @@ const jsonLd = [
   subSubTitle="#DIY #レザークラフト #木工大工 #電子工作"
   jsonLd={jsonLd}>
   <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3">
-    {
-      CONTENTS.map(content => {
+    {CONTENTS.map(content => {
         return (
           <div class="overflow-hidden rounded-xl border border-muted">
             <div class="aspect-square">
@@ -45,22 +44,20 @@ const jsonLd = [
             <p class="p-3 text-sm font-medium">{content.name}</p>
           </div>
         );
-      })
-    }
+      })}
   </div>
 </PortfolioLayout>
 
 <script
-  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
-></script>
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <script>
-  import PhotoSwipeLightbox from "photoswipe/lightbox";
-  import "photoswipe/style.css";
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: "#my-gallery",
-    children: "a",
-    pswpModule: () => import("photoswipe"),
-    bgOpacity: 1.0,
-  });
-  lightbox.init();
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
+const lightbox = new PhotoSwipeLightbox({
+  gallery: "#my-gallery",
+  children: "a",
+  pswpModule: () => import("photoswipe"),
+  bgOpacity: 1.0,
+});
+lightbox.init();
 </script>

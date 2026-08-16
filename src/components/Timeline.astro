@@ -7,8 +7,7 @@ const { data } = Astro.props;
 
 <div class="timeline">
   <ol class="relative">
-    {
-      data.map((d, i) => (
+    {data.map((d, i) => (
         <li class={`ms-6 ${i === data.length - 1 ? "mb-0" : "mb-5"}`}>
           <div class="absolute -start-1.75 mt-1.5 size-3.5 rounded-full border-2 border-primary/60 bg-background shadow-[0_0_0_3px] shadow-primary/10" />
           <div class="flex flex-col gap-0.5">
@@ -25,7 +24,6 @@ const { data } = Astro.props;
             )}
           </div>
         </li>
-      ))
-    }
+      ))}
   </ol>
 </div>

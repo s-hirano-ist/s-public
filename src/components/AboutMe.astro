@@ -59,8 +59,7 @@ const socialLinks = [
     </p>
 
     <div class="flex items-center justify-center gap-2">
-      {
-        socialLinks.map(link => (
+      {socialLinks.map(link => (
           <a
             href={link.href}
             target="_blank"
@@ -83,8 +82,7 @@ const socialLinks = [
               set:html={link.icon}
             />
           </a>
-        ))
-      }
+        ))}
     </div>
   </div>
 </BentoTile>

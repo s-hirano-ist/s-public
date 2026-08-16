@@ -5,8 +5,7 @@ import PortfolioLayout from "@layouts/PortfolioLayout.astro";
 
 <PortfolioLayout headerTitle="LICENSE" title="license">
   <div class="space-y-0">
-    {
-      Object.entries(licenseData).map(([key, value], i) => {
+    {Object.entries(licenseData).map(([key, value], i) => {
         return (
           <div
             class={`flex items-baseline justify-between px-3 py-2 ${i % 2 === 1 ? "rounded-md bg-muted/30" : ""}`}>
@@ -14,7 +13,6 @@ import PortfolioLayout from "@layouts/PortfolioLayout.astro";
             <p class="text-xs text-muted-foreground">{value.licenses}</p>
           </div>
         );
-      })
-    }
+      })}
   </div>
 </PortfolioLayout>

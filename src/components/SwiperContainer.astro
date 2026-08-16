@@ -9,15 +9,15 @@ const { content } = Astro.props;
 ---
 
 <swiper-container id="my-gallery" space-between="0" pagination={true}>
-  {
-    content.src.map(src => (
+  {content.src.map(src => (
       <swiper-slide>
         <a
           href={src.src}
           data-pswp-src={src.src}
           data-pswp-width={src.width}
           data-pswp-height={src.height}
-          target="_blank">
+          target="_blank"
+          rel="noopener">
           <Image
             class="aspect-square object-contain"
             src={src}
@@ -25,6 +25,5 @@ const { content } = Astro.props;
           />
         </a>
       </swiper-slide>
-    ))
-  }
+    ))}
 </swiper-container>

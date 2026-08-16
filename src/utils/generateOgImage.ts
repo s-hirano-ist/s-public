@@ -18,14 +18,14 @@ const options: SatoriOptions = {
   fonts: [
     {
       name: "Noto Sans JP",
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      // biome-ignore lint/style/noNonNullAssertion: Font loading failures abort OG image generation before rendering.
       data: regularFontData!,
       weight: 400,
       style: "normal",
     },
     {
       name: "Noto Sans JP",
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      // biome-ignore lint/style/noNonNullAssertion: Font loading failures abort OG image generation before rendering.
       data: boldFontData!,
       weight: 700,
       style: "normal",
