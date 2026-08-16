@@ -1,7 +1,6 @@
 ---
 name: agent-browser
 description: Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to "open a website", "fill out a form", "click a button", "take a screenshot", "scrape data from a page", "test this web app", "login to a site", "automate browser actions", or any task requiring programmatic web interaction.
-allowed-tools: Bash(npx agent-browser:*), Bash(agent-browser:*)
 ---
 
 # Browser Automation with agent-browser
@@ -811,7 +810,6 @@ The dashboard has an optional AI chat tab powered by the Vercel AI Gateway. Enab
 
 ```bash
 export AI_GATEWAY_API_KEY=gw_your_key_here
-export AI_GATEWAY_MODEL=anthropic/claude-sonnet-4.6           # optional default
 export AI_GATEWAY_URL=https://ai-gateway.vercel.sh           # optional default
 ```
 
