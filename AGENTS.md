@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENTS.md
 
 s-hirano-ist のポートフォリオサイト（https://s-hirano.com/）のソースコード。AstroベースのSSGとして構築されており、ReactコンポーネントとTailwindCSSを使用。
 

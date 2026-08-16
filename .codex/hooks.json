@@ -1,0 +1,17 @@
+{
+  "description": "Format the repository when a Codex turn stops.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpm --silent --dir \"$(git rev-parse --show-toplevel)\" fmt:fix >/dev/null && printf '{\"continue\":true}\\n'",
+            "timeout": 120,
+            "statusMessage": "Formatting workspace"
+          }
+        ]
+      }
+    ]
+  }
+}
