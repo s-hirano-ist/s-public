@@ -44,12 +44,7 @@ const socialImageURL = new URL(
     <link rel="canonical" href={canonicalURL}>
     <meta name="generator" content={Astro.generator}>
 
-    <Font
-      cssVariable="--font-noto-sans-jp"
-      preload={[
-        { weight: 400, subset: "japanese" },
-        { weight: 400, subset: "latin" },
-      ]} />
+    <Font cssVariable="--font-noto-sans-jp" preload={[{ subset: "latin" }]} />
 
     <ClientRouter />
 

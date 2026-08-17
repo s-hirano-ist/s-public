@@ -69,10 +69,10 @@ export default defineConfig({
   site: SITE.website,
   fonts: [
     {
-      provider: fontProviders.fontsource(),
+      provider: fontProviders.google(),
       name: "Noto Sans JP",
       cssVariable: "--font-noto-sans-jp",
-      weights: [400, 500, 600, 700],
+      weights: ["100 900"],
       styles: ["normal"],
       subsets: ["japanese", "latin"],
       fallbacks: ["sans-serif"],
