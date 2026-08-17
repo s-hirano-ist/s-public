@@ -23,7 +23,7 @@
   "dependencies": {
     "@astrojs/react": "6.0.2",
     "@astrojs/sitemap": "3.7.3",
-    "@s-hirano-ist/s-ui": "1.19.13",
+    "@s-hirano-ist/s-ui": "1.19.14",
     "@tailwindcss/vite": "4.3.3",
     "astro": "7.2.2",
     "lenis": "1.3.26",
@@ -42,9 +42,7 @@
     "react-dom": "19.2.8",
     "yaml": "2.9.0"
   },
-  "overrides": {
-    "next": ">=16.3.1"
-  },
+  "overrides": {},
   "trustedDependencies": [
     "esbuild",
     "sharp",
