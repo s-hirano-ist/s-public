@@ -4,12 +4,13 @@ import type { Content } from "@data/_diy/data";
 
 type Props = {
   content: Content;
+  priority?: boolean;
 };
-const { content } = Astro.props;
+const { content, priority = false } = Astro.props;
 ---
 
 <swiper-container id="my-gallery" space-between="0" pagination={true}>
-  {content.src.map(src => (
+  {content.src.map((src, index) => (
       <swiper-slide>
         <a
           href={src.src}
@@ -22,6 +23,9 @@ const { content } = Astro.props;
             class="aspect-square object-contain"
             src={src}
             alt={content.name}
+            priority={priority && index === 0}
+            widths={[180, 240, 360, 480]}
+            sizes="(min-width: 768px) 240px, (min-width: 640px) calc(33vw - 1rem), calc(50vw - 1.5rem)"
           />
         </a>
       </swiper-slide>

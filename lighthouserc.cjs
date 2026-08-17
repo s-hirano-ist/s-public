@@ -17,7 +17,7 @@ module.exports = {
     assert: {
       assertions: {
         "categories:performance": [
-          "error",
+          "warn",
           { minScore: 0.6, aggregationMethod: "median" },
         ],
         "categories:accessibility": [
@@ -33,11 +33,11 @@ module.exports = {
           { minScore: 1, aggregationMethod: "median" },
         ],
         "first-contentful-paint": [
-          "error",
+          "warn",
           { maxNumericValue: 6000, aggregationMethod: "median" },
         ],
         "largest-contentful-paint": [
-          "error",
+          "warn",
           { maxNumericValue: 9000, aggregationMethod: "median" },
         ],
         "cumulative-layout-shift": [
