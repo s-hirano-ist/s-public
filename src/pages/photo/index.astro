@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Lightbox from "@components/Lightbox.astro";
 import { SITE } from "@config";
 import { CONTENTS } from "@data/_photo/data";
 import PortfolioLayout from "@layouts/PortfolioLayout.astro";
@@ -26,14 +27,11 @@ const jsonLd = [
   title="sola-apochromat-lens"
   subTitle="撮影の議事録 from 2020年。風景写真から日常のスナップまで、レンズを通して見た世界を記録しています。"
   jsonLd={jsonLd}>
-  <div class="pswp-gallery grid w-full grid-cols-3 gap-4" id="my-gallery">
+  <div class="grid w-full grid-cols-3 gap-4" data-lightbox-gallery>
     {CONTENTS.map(src => {
         return (
           <a
             href={src.src}
-            data-pswp-src={src.src}
-            data-pswp-width={src.width}
-            data-pswp-height={src.height}
             target="_blank"
             rel="noopener"
             class="group overflow-hidden rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-md">
@@ -48,15 +46,5 @@ const jsonLd = [
         );
       })}
   </div>
+  <Lightbox />
 </PortfolioLayout>
-<script>
-import PhotoSwipeLightbox from "photoswipe/lightbox";
-import "photoswipe/style.css";
-const lightbox = new PhotoSwipeLightbox({
-  gallery: "#my-gallery",
-  children: "a",
-  pswpModule: () => import("photoswipe"),
-  bgOpacity: 1.0,
-});
-lightbox.init();
-</script>

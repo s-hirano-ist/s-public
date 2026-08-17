@@ -9,14 +9,11 @@ type Props = {
 const { content, priority = false } = Astro.props;
 ---
 
-<swiper-container id="my-gallery" space-between="0" pagination={true}>
+<swiper-container data-lightbox-gallery space-between="0" pagination={true}>
   {content.src.map((src, index) => (
       <swiper-slide>
         <a
           href={src.src}
-          data-pswp-src={src.src}
-          data-pswp-width={src.width}
-          data-pswp-height={src.height}
           target="_blank"
           rel="noopener">
           <Image

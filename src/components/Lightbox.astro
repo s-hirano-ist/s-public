@@ -1,0 +1,682 @@
+<dialog data-lightbox-dialog aria-label="画像ビューア">
+  <div class="lightbox-shell" data-lightbox-surface>
+    <div class="lightbox-toolbar">
+      <p aria-live="polite" data-lightbox-counter></p>
+      <button
+        type="button"
+        data-lightbox-close
+        aria-label="画像ビューアを閉じる">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18"></path>
+        </svg>
+      </button>
+    </div>
+
+    <button
+      type="button"
+      class="lightbox-navigation lightbox-previous"
+      data-lightbox-previous
+      aria-label="前の画像">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m15 18-6-6 6-6"></path>
+      </svg>
+    </button>
+
+    <div class="lightbox-media" data-lightbox-media>
+      <img data-lightbox-image alt="" draggable="false">
+      <div class="lightbox-error" data-lightbox-error hidden>
+        <p>画像を読み込めませんでした。</p>
+        <a
+          href="/"
+          data-lightbox-original
+          target="_blank"
+          rel="noopener noreferrer">
+          元の画像を開く
+        </a>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="lightbox-navigation lightbox-next"
+      data-lightbox-next
+      aria-label="次の画像">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m9 18 6-6-6-6"></path>
+      </svg>
+    </button>
+  </div>
+</dialog>
+
+<script>
+type LightboxElements = {
+  dialog: HTMLDialogElement;
+  surface: HTMLElement;
+  media: HTMLElement;
+  image: HTMLImageElement;
+  counter: HTMLElement;
+  error: HTMLElement;
+  original: HTMLAnchorElement;
+  previous: HTMLButtonElement;
+  next: HTMLButtonElement;
+  close: HTMLButtonElement;
+};
+
+type ViewTransitionDocument = Document & {
+  startViewTransition?: (update: () => void) => {
+    finished: Promise<void>;
+  };
+};
+
+let teardownLightbox: (() => void) | undefined;
+
+function getElements(): LightboxElements | undefined {
+  const dialog = document.querySelector<HTMLDialogElement>(
+    "[data-lightbox-dialog]",
+  );
+  const surface = dialog?.querySelector<HTMLElement>("[data-lightbox-surface]");
+  const media = dialog?.querySelector<HTMLElement>("[data-lightbox-media]");
+  const image = dialog?.querySelector<HTMLImageElement>(
+    "[data-lightbox-image]",
+  );
+  const counter = dialog?.querySelector<HTMLElement>("[data-lightbox-counter]");
+  const error = dialog?.querySelector<HTMLElement>("[data-lightbox-error]");
+  const original = dialog?.querySelector<HTMLAnchorElement>(
+    "[data-lightbox-original]",
+  );
+  const previous = dialog?.querySelector<HTMLButtonElement>(
+    "[data-lightbox-previous]",
+  );
+  const next = dialog?.querySelector<HTMLButtonElement>("[data-lightbox-next]");
+  const close = dialog?.querySelector<HTMLButtonElement>(
+    "[data-lightbox-close]",
+  );
+
+  if (
+    !dialog ||
+    !surface ||
+    !media ||
+    !image ||
+    !counter ||
+    !error ||
+    !original ||
+    !previous ||
+    !next ||
+    !close
+  ) {
+    return undefined;
+  }
+
+  return {
+    dialog,
+    surface,
+    media,
+    image,
+    counter,
+    error,
+    original,
+    previous,
+    next,
+    close,
+  };
+}
+
+function getGalleryItems(gallery: Element): HTMLAnchorElement[] {
+  return Array.from(
+    gallery.querySelectorAll<HTMLAnchorElement>("a[href]"),
+  ).filter(item => item.querySelector("img"));
+}
+
+function getThumbnail(item: HTMLAnchorElement): HTMLImageElement | null {
+  return item.querySelector<HTMLImageElement>("img");
+}
+
+function getAlt(item: HTMLAnchorElement): string {
+  return getThumbnail(item)?.alt ?? "";
+}
+
+function loadImage(url: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve();
+    image.onerror = () => reject(new Error(`Failed to load image: ${url}`));
+    image.src = url;
+  });
+}
+
+function preloadAdjacent(items: HTMLAnchorElement[], index: number): void {
+  for (const adjacentIndex of [index - 1, index + 1]) {
+    const item = items[adjacentIndex];
+    if (item) {
+      const image = new Image();
+      image.src = item.href;
+    }
+  }
+}
+
+function canAnimate(): boolean {
+  const viewTransitionDocument = document as ViewTransitionDocument;
+  return (
+    typeof viewTransitionDocument.startViewTransition === "function" &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
+}
+
+async function transition(update: () => void): Promise<void> {
+  const viewTransitionDocument = document as ViewTransitionDocument;
+  if (!canAnimate() || !viewTransitionDocument.startViewTransition) {
+    update();
+    return;
+  }
+
+  const viewTransition = viewTransitionDocument.startViewTransition(update);
+  await viewTransition.finished.catch(() => undefined);
+}
+
+function isVisible(element: Element | null): element is Element {
+  if (!element) {
+    return false;
+  }
+
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.width > 0 &&
+    rect.height > 0 &&
+    rect.bottom > 0 &&
+    rect.right > 0 &&
+    rect.top < window.innerHeight &&
+    rect.left < window.innerWidth
+  );
+}
+
+function initializeLightbox(): void {
+  teardownLightbox?.();
+
+  const elements = getElements();
+  if (!elements) {
+    teardownLightbox = undefined;
+    return;
+  }
+
+  const controller = new AbortController();
+  const { signal } = controller;
+  let items: HTMLAnchorElement[] = [];
+  let currentIndex = -1;
+  let opener: HTMLAnchorElement | null = null;
+  let busy = false;
+  let requestId = 0;
+  let pointerStart: { x: number; y: number } | null = null;
+
+  const updateControls = () => {
+    elements.counter.textContent = `${currentIndex + 1} / ${items.length}`;
+    elements.previous.disabled = currentIndex <= 0;
+    elements.next.disabled = currentIndex >= items.length - 1;
+  };
+
+  const loadFullImage = async (
+    item: HTMLAnchorElement,
+    index: number,
+    activeRequest: number,
+  ) => {
+    let failed = false;
+    try {
+      await loadImage(item.href);
+    } catch {
+      failed = true;
+    }
+
+    if (
+      activeRequest !== requestId ||
+      !elements.dialog.open ||
+      items[index] !== item ||
+      currentIndex !== index
+    ) {
+      return;
+    }
+
+    if (failed) {
+      elements.image.hidden = true;
+      elements.error.hidden = false;
+      return;
+    }
+
+    elements.image.src = item.href;
+    elements.image.hidden = false;
+    elements.error.hidden = true;
+  };
+
+  const showItem = async (index: number, animate = true) => {
+    const item = items[index];
+    if (!item || busy) {
+      return;
+    }
+
+    busy = true;
+    const activeRequest = ++requestId;
+    const thumbnail = getThumbnail(item);
+
+    if (animate) {
+      elements.media.style.viewTransitionName = "lightbox-content";
+    }
+
+    await transition(() => {
+      currentIndex = index;
+      elements.image.src = thumbnail?.currentSrc || item.href;
+      elements.image.alt = getAlt(item);
+      elements.image.hidden = false;
+      elements.error.hidden = true;
+      elements.original.href = item.href;
+      updateControls();
+    });
+
+    elements.media.style.removeProperty("view-transition-name");
+    preloadAdjacent(items, currentIndex);
+    busy = false;
+    void loadFullImage(item, index, activeRequest);
+  };
+
+  const open = async (item: HTMLAnchorElement) => {
+    const gallery = item.closest("[data-lightbox-gallery]");
+    if (!gallery || elements.dialog.open || busy) {
+      return;
+    }
+
+    items = getGalleryItems(gallery);
+    const index = items.indexOf(item);
+    if (index < 0) {
+      return;
+    }
+
+    opener = item;
+    currentIndex = index;
+    busy = true;
+    const activeRequest = ++requestId;
+    const thumbnail = getThumbnail(item);
+
+    elements.image.src = thumbnail?.currentSrc || item.href;
+    elements.image.alt = getAlt(item);
+    elements.image.hidden = false;
+    elements.error.hidden = true;
+    elements.original.href = item.href;
+    updateControls();
+
+    if (isVisible(thumbnail)) {
+      thumbnail.style.viewTransitionName = "lightbox-image";
+      elements.image.style.viewTransitionName = "lightbox-image";
+    }
+
+    await transition(() => {
+      thumbnail?.style.removeProperty("view-transition-name");
+      elements.dialog.showModal();
+      document.documentElement.classList.add("lightbox-open");
+    });
+
+    thumbnail?.style.removeProperty("view-transition-name");
+    elements.image.style.removeProperty("view-transition-name");
+    preloadAdjacent(items, currentIndex);
+    elements.close.focus();
+    busy = false;
+    void loadFullImage(item, index, activeRequest);
+  };
+
+  const close = async () => {
+    if (!elements.dialog.open || busy) {
+      return;
+    }
+
+    busy = true;
+    requestId += 1;
+    const currentItem = items[currentIndex];
+    const thumbnail = currentItem ? getThumbnail(currentItem) : null;
+    if (isVisible(thumbnail)) {
+      elements.image.style.viewTransitionName = "lightbox-image";
+    }
+
+    await transition(() => {
+      elements.image.style.removeProperty("view-transition-name");
+      if (isVisible(thumbnail)) {
+        thumbnail.style.viewTransitionName = "lightbox-image";
+      }
+      elements.dialog.close();
+      document.documentElement.classList.remove("lightbox-open");
+    });
+
+    thumbnail?.style.removeProperty("view-transition-name");
+    opener?.focus();
+    opener = null;
+    items = [];
+    currentIndex = -1;
+    busy = false;
+  };
+
+  for (const gallery of document.querySelectorAll("[data-lightbox-gallery]")) {
+    gallery.addEventListener(
+      "click",
+      event => {
+        if (
+          !(event instanceof MouseEvent) ||
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey
+        ) {
+          return;
+        }
+
+        const target = event.target;
+        const item =
+          target instanceof Element
+            ? target.closest<HTMLAnchorElement>("a[href]")
+            : null;
+        if (!item || !gallery.contains(item) || !item.querySelector("img")) {
+          return;
+        }
+
+        event.preventDefault();
+        void open(item);
+      },
+      { signal },
+    );
+  }
+
+  elements.close.addEventListener("click", () => void close(), { signal });
+  elements.previous.addEventListener(
+    "click",
+    () => void showItem(currentIndex - 1),
+    { signal },
+  );
+  elements.next.addEventListener(
+    "click",
+    () => void showItem(currentIndex + 1),
+    { signal },
+  );
+  elements.dialog.addEventListener(
+    "cancel",
+    event => {
+      event.preventDefault();
+      void close();
+    },
+    { signal },
+  );
+  elements.dialog.addEventListener(
+    "click",
+    event => {
+      if (
+        event.target === elements.dialog ||
+        event.target === elements.surface ||
+        event.target === elements.media
+      ) {
+        void close();
+      }
+    },
+    { signal },
+  );
+  elements.dialog.addEventListener(
+    "keydown",
+    event => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        void showItem(currentIndex - 1);
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        void showItem(currentIndex + 1);
+      }
+    },
+    { signal },
+  );
+  elements.media.addEventListener(
+    "pointerdown",
+    event => {
+      if (event.isPrimary) {
+        pointerStart = { x: event.clientX, y: event.clientY };
+      }
+    },
+    { signal },
+  );
+  elements.media.addEventListener(
+    "pointerup",
+    event => {
+      if (!event.isPrimary || !pointerStart) {
+        return;
+      }
+
+      const deltaX = event.clientX - pointerStart.x;
+      const deltaY = event.clientY - pointerStart.y;
+      pointerStart = null;
+
+      if (Math.abs(deltaX) < 50 || Math.abs(deltaX) <= Math.abs(deltaY)) {
+        return;
+      }
+
+      void showItem(currentIndex + (deltaX < 0 ? 1 : -1));
+    },
+    { signal },
+  );
+  elements.media.addEventListener(
+    "pointercancel",
+    () => {
+      pointerStart = null;
+    },
+    { signal },
+  );
+
+  teardownLightbox = () => {
+    requestId += 1;
+    controller.abort();
+    if (elements.dialog.open) {
+      elements.dialog.close();
+    }
+    document.documentElement.classList.remove("lightbox-open");
+    teardownLightbox = undefined;
+  };
+}
+
+document.addEventListener("astro:page-load", initializeLightbox);
+document.addEventListener("astro:before-swap", () => teardownLightbox?.());
+initializeLightbox();
+</script>
+
+<style is:global>
+html.lightbox-open {
+  overflow: hidden;
+}
+
+[data-lightbox-dialog] {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  color: white;
+  background: transparent;
+}
+
+[data-lightbox-dialog]::backdrop {
+  background: rgb(0 0 0 / 0.96);
+}
+
+.lightbox-shell {
+  display: grid;
+  grid-template-columns: minmax(3rem, 5rem) minmax(0, 1fr) minmax(3rem, 5rem);
+  grid-template-rows: 4rem minmax(0, 1fr);
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 0.96);
+}
+
+.lightbox-toolbar {
+  z-index: 1;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.lightbox-toolbar p {
+  grid-column: 2;
+  margin: 0;
+  color: rgb(255 255 255 / 0.78);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.lightbox-toolbar button {
+  grid-column: 3;
+  justify-self: end;
+}
+
+.lightbox-toolbar button,
+.lightbox-navigation {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  border-radius: 9999px;
+  place-items: center;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+}
+
+.lightbox-toolbar button:hover,
+.lightbox-navigation:hover:not(:disabled) {
+  background: rgb(255 255 255 / 0.12);
+}
+
+.lightbox-toolbar button:focus-visible,
+.lightbox-navigation:focus-visible,
+.lightbox-error a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.lightbox-toolbar svg,
+.lightbox-navigation svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lightbox-navigation {
+  align-self: center;
+  justify-self: center;
+}
+
+.lightbox-navigation:disabled {
+  opacity: 0.24;
+  cursor: default;
+}
+
+.lightbox-previous {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.lightbox-next {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.lightbox-media {
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+  min-height: 0;
+  padding: 0 0 1rem;
+  place-items: center;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.lightbox-media img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.lightbox-media img[hidden] {
+  display: none;
+}
+
+.lightbox-error {
+  text-align: center;
+}
+
+.lightbox-error[hidden] {
+  display: none;
+}
+
+.lightbox-error p {
+  margin: 0 0 0.75rem;
+}
+
+.lightbox-error a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+::view-transition-group(lightbox-image) {
+  z-index: 100;
+  animation-duration: 280ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(lightbox-content) {
+  animation: 140ms ease-out both lightbox-fade-out;
+}
+
+::view-transition-new(lightbox-content) {
+  animation: 180ms ease-in both lightbox-fade-in;
+}
+
+@keyframes lightbox-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes lightbox-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .lightbox-shell {
+    grid-template-columns: 3.5rem minmax(0, 1fr) 3.5rem;
+  }
+
+  .lightbox-media {
+    grid-column: 1 / -1;
+    padding: 0 0.75rem 4.5rem;
+  }
+
+  .lightbox-navigation {
+    z-index: 1;
+    align-self: end;
+    margin-bottom: 0.75rem;
+    background: rgb(255 255 255 / 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(lightbox-image),
+  ::view-transition-old(lightbox-content),
+  ::view-transition-new(lightbox-content) {
+    animation-duration: 0s;
+  }
+}
+</style>

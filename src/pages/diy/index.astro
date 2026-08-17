@@ -1,4 +1,5 @@
 ---
+import Lightbox from "@components/Lightbox.astro";
 import SwiperContainer from "@components/SwiperContainer.astro";
 import { SITE } from "@config";
 import { CONTENTS } from "@data/_diy/data";
@@ -46,18 +47,8 @@ const jsonLd = [
         );
       })}
   </div>
+  <Lightbox />
 </PortfolioLayout>
 
 <script
   src="https://cdn.jsdelivr.net/npm/swiper@12.2.0/swiper-element-bundle.min.js"></script>
-<script>
-import PhotoSwipeLightbox from "photoswipe/lightbox";
-import "photoswipe/style.css";
-const lightbox = new PhotoSwipeLightbox({
-  gallery: "#my-gallery",
-  children: "a",
-  pswpModule: () => import("photoswipe"),
-  bgOpacity: 1.0,
-});
-lightbox.init();
-</script>
