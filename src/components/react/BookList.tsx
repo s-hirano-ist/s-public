@@ -1,4 +1,5 @@
-import { Card, CardContent, CardFooter, Badge } from "@s-hirano-ist/s-ui";
+import { Badge } from "@s-hirano-ist/s-ui/badge";
+import { Card, CardContent, CardFooter } from "@s-hirano-ist/s-ui/card";
 import {
   useMemo,
   useState,
