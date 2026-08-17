@@ -1672,6 +1672,17 @@
     "rating": 2
   },
   {
+    "ISBN": "9784774189673",
+    "title": "Webフロントエンドハイパフォーマンスチューニング",
+    "googleSubtitle": "Webサイト・アプリケーションを徹底的に高速化",
+    "googleAuthors": ["久保田光則"],
+    "googleDescription": "ブラウザのレンダリングのしくみから計測と最適なチューニングまで、速さのための基礎知識と実践技術をあますことなく解説。",
+    "googleImgSrc": "https://books.google.com/books/content?id=0WbkswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=0WbkswEACAAJ&dq=isbn:9784774189673&hl=&source=gbs_api",
+    "tags": ["frontend"],
+    "rating": 3
+  },
+  {
     "ISBN": "9784774190877",
     "title": "現場で役立つシステム設計の原則",
     "googleSubtitle": "変更を楽で安全にするオブジェクト指向の実践技法",
@@ -2000,6 +2011,17 @@
     "googleHref": "https://books.google.com/books?id=cwrSrQEACAAJ&dq=isbn:9784800720160&hl=&source=gbs_api",
     "tags": ["株"],
     "rating": 3
+  },
+  {
+    "ISBN": "9784801307339",
+    "title": "教養としてのハイブランド",
+    "googleSubtitle": "フツーの白シャツが10万円もする理由",
+    "googleAuthors": [],
+    "googleDescription": "No description",
+    "googleImgSrc": "https://books.google.com/books/content?id=upPi0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "googleHref": "https://books.google.com/books?id=upPi0AEACAAJ&dq=isbn:9784801307339&hl=&source=gbs_api",
+    "tags": ["fashion"],
+    "rating": 5
   },
   {
     "ISBN": "9784802511193",

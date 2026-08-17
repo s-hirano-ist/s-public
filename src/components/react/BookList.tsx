@@ -1,12 +1,13 @@
 import { Badge } from "@s-hirano-ist/s-ui/badge";
-import { Card, CardContent, CardFooter } from "@s-hirano-ist/s-ui/card";
 import {
-  useMemo,
-  useState,
-  useEffect,
-  type ChangeEvent,
-  type MouseEvent,
-} from "react";
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@s-hirano-ist/s-ui/card";
+import { useMemo, useState, useEffect, type ChangeEvent } from "react";
 import BookStatCard from "@components/react/BookStatCard.tsx";
 import Rating from "@components/react/Rating.tsx";
 import books from "@data/book/data.gen.json";
@@ -33,9 +34,8 @@ export default function BookList() {
     setFilterRating(Number(e.target.value));
   };
 
-  const handleTagClick = (e: MouseEvent<HTMLButtonElement>) => {
+  const handleTagClick = (tag: string) => {
     const searchParams = new URLSearchParams(window.location.search);
-    const tag = e.currentTarget.innerHTML.slice(1); // delete "#" from tag button name
     if (tag === selectedTag) {
       setSelectedTag(undefined);
       history.replaceState(null, "", window.location.pathname);
@@ -63,42 +63,57 @@ export default function BookList() {
         handleFilterRating={handleFilterRating}
         handleTagClick={handleTagClick}
       />
-      <div className="grid gap-8 pt-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 pt-6 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
         {filteredBooks.map(book => (
           <a
             href={book.googleHref}
             target="_blank"
             key={book.title}
-            className="block"
+            className="group block h-full rounded-lg focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none"
             rel="noopener">
-            <Card className="overflow-hidden shadow-xl">
-              <figure className="flex h-48 items-center justify-center overflow-hidden">
+            <Card className="flex h-full flex-col overflow-hidden border border-border shadow-sm transition duration-200 group-hover:-translate-y-0.5 group-hover:border-primary/30 group-hover:shadow-md">
+              <figure className="flex h-56 items-center justify-center overflow-hidden border-b border-border bg-muted/30 p-5 sm:h-60">
                 <img
                   src={book.googleImgSrc}
                   alt={book.title}
                   decoding="async"
                   loading="lazy"
-                  className="h-full w-auto max-w-full object-contain"
+                  className="h-full w-auto max-w-full object-contain shadow-sm transition-transform duration-200 group-hover:scale-[1.02]"
                 />
               </figure>
-              <CardContent className="max-w-96 p-4">
-                <h2 className="text-lg font-semibold">{book.title}</h2>
-                <p className="text-muted-foreground h-12 grow-0 text-sm">
-                  {book.googleSubtitle}
-                </p>
-                <Badge>{book.googleAuthors.toString()}</Badge>
-                <p className="text-muted-foreground overflow-y-hidden text-xs">
+              <CardHeader className="space-y-2 p-4 pb-3 sm:p-5 sm:pb-3">
+                <CardTitle className="line-clamp-2 text-base leading-6">
+                  {book.title}
+                </CardTitle>
+                {book.googleSubtitle && (
+                  <CardDescription className="line-clamp-2 min-h-10 text-sm leading-5">
+                    {book.googleSubtitle}
+                  </CardDescription>
+                )}
+                <div className="flex flex-wrap gap-1.5">
+                  {book.googleAuthors.map(author => (
+                    <Badge key={author}>{author}</Badge>
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent className="flex flex-1 flex-col gap-4 px-4 pb-3 sm:px-5">
+                <p className="line-clamp-4 text-xs leading-5 text-muted-foreground">
                   {book.googleDescription}
                 </p>
-                <Rating rating={book.rating} />
-                <CardFooter className="justify-end gap-1 p-0 pt-2">
-                  {book.tags.map(tag => (
-                    <Badge variant="outline" key={tag}>
-                      #{tag}
-                    </Badge>
-                  ))}
-                </CardFooter>
+                <div
+                  className="mt-auto"
+                  role="img"
+                  aria-label={`評価 ${book.rating}`}>
+                  <Rating rating={book.rating} />
+                </div>
               </CardContent>
+              <CardFooter className="flex-wrap justify-start gap-1.5 px-4 pt-0 pb-4 sm:px-5 sm:pb-5">
+                {book.tags.map(tag => (
+                  <Badge variant="outline" key={tag}>
+                    #{tag}
+                  </Badge>
+                ))}
+              </CardFooter>
             </Card>
           </a>
         ))}
