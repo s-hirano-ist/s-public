@@ -1,12 +1,12 @@
+import { Badge } from "@s-hirano-ist/s-ui/badge";
 import {
-  Badge,
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@s-hirano-ist/s-ui";
+} from "@s-hirano-ist/s-ui/card";
 import { useMemo, useState, useEffect, type ChangeEvent } from "react";
 import BookStatCard from "@components/react/BookStatCard.tsx";
 import Rating from "@components/react/Rating.tsx";

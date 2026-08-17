@@ -1,4 +1,6 @@
-import { Button, Stat, StatTitle, StatValue, Slider } from "@s-hirano-ist/s-ui";
+import { Button } from "@s-hirano-ist/s-ui/button";
+import { Slider } from "@s-hirano-ist/s-ui/slider";
+import { Stat, StatTitle, StatValue } from "@s-hirano-ist/s-ui/stat";
 import type { ChangeEvent } from "react";
 import { MAX_RATING } from "@config";
 

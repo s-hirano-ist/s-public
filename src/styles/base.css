@@ -1,7 +1,6 @@
 @import "tailwindcss";
+@import "@s-hirano-ist/s-ui/styles.css";
 @plugin "@tailwindcss/typography";
-
-@source "../../node_modules/@s-hirano-ist/s-ui/dist/**/*.js";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -23,6 +22,16 @@
     --card-foreground: 27 27 27;
     --border: 233 233 233;
     --radius: 0.5rem;
+
+    /* Keep s-ui components aligned with the portfolio theme */
+    --sui-background: var(--background);
+    --sui-foreground: var(--foreground);
+    --sui-primary: var(--primary);
+    --sui-primary-foreground: var(--primary-foreground);
+    --sui-muted: var(--muted);
+    --sui-muted-foreground: var(--muted-foreground);
+    --sui-destructive: var(--destructive);
+    --sui-radius: var(--radius);
   }
 
   .dark {
