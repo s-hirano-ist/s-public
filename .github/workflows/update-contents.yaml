@@ -39,6 +39,6 @@ jobs:
         with:
           branch: "create-pull-request/s-public"
           commit-message: "s-public updates"
-          title: "contents: s-public updates"
+          title: "chore(contents): update contents"
           body: |
             This is an update PR of s-public.

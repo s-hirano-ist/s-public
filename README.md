@@ -134,6 +134,12 @@ All scripts are defined in [`package.json`](package.json) — run them with `bun
 
 CI also runs Lighthouse three times against representative production pages and reports every assertion failure and median report URL in an updatable PR comment. Lighthouse is informational and does not block merging. Thresholds are defined in [`lighthouserc.cjs`](lighthouserc.cjs); tighten them when the corresponding pages improve.
 
+### Pull request titles
+
+Pull request titles must use the Conventional Commits format `<type>(<optional scope>)!: <subject>`. Allowed types are `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, and `revert`.
+
+To enforce this check before merging, add the `conventional-pr-title` job from the `conventional-pr-title` workflow as a required status check for `main` in the repository ruleset or branch protection settings.
+
 ## 🪝 Tags & Release
 
 1. Update version in `package.json`
