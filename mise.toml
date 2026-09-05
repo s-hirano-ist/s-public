@@ -3,10 +3,10 @@ _.file = ".env.local"
 
 [tools]
 node = "24.15.0"
-bun = "1.4.0"
+bun = "1.4.2"
 doppler = { version = "3.76.5", exe = "doppler" }
-terraform = "1.15.9"
-"npm:agent-browser" = "0.34.0"
+terraform = "1.16.1"
+"npm:agent-browser" = "0.36.0"
 
 [tasks."browser:setup"]
 description = "Repair and verify the agent-browser installation"
