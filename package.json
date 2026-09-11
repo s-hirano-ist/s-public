@@ -36,9 +36,9 @@
     "@astrojs/check": "0.9.10",
     "@biomejs/biome": "2.5.12",
     "@tailwindcss/typography": "0.5.20",
-    "@types/react": "19.2.18",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
+    "@types/react": "19.3.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
     "yaml": "2.9.0"
   },
   "overrides": {},
