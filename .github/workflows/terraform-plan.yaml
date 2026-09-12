@@ -1,0 +1,96 @@
+name: terraform-plan
+
+on:
+  pull_request:
+    paths:
+      - "terraform/**"
+      - "package.json"
+
+jobs:
+  plan:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      id-token: write
+    timeout-minutes: 15
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    env:
+      TF_CLOUD_ORGANIZATION: ${{ vars.TF_CLOUD_ORGANIZATION }}
+      TF_IN_AUTOMATION: "true"
+      TF_INPUT: "false"
+      TF_WORKSPACE: ${{ vars.TF_WORKSPACE }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+
+      - name: Install tools via mise
+        uses: jdx/mise-action@3c2e0cf82a5b2e5249f0d3635a4d83d0ae861518 # v4
+        with:
+          install_args: doppler terraform
+
+      - name: Check Terraform formatting
+        run: terraform -chdir=terraform fmt -check
+
+      - name: Authenticate to Doppler with GitHub OIDC
+        shell: bash
+        env:
+          DOPPLER_SERVICE_IDENTITY_ID: ${{ vars.DOPPLER_SERVICE_IDENTITY_ID }}
+        run: |
+          set -euo pipefail
+
+          : "${DOPPLER_SERVICE_IDENTITY_ID:?Set the DOPPLER_SERVICE_IDENTITY_ID repository variable}"
+          : "${TF_CLOUD_ORGANIZATION:?Set the TF_CLOUD_ORGANIZATION repository variable}"
+          : "${TF_WORKSPACE:?Set the TF_WORKSPACE repository variable}"
+
+          oidc_response="$(curl --fail-with-body --silent --show-error \
+            --header "Authorization: Bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=https://github.com/${GITHUB_REPOSITORY_OWNER}")"
+          oidc_token="$(jq --exit-status --raw-output '.value' <<<"${oidc_response}")"
+
+          doppler oidc login \
+            --scope=. \
+            --identity="${DOPPLER_SERVICE_IDENTITY_ID}" \
+            --token="${oidc_token}"
+
+          doppler_token="$(doppler configure get token --plain)"
+          echo "::add-mask::${doppler_token}"
+          printf 'DOPPLER_TOKEN=%s\n' "${doppler_token}" >>"${GITHUB_ENV}"
+
+      - name: Initialize Terraform
+        run: doppler run --project s-public --config infra -- terraform -chdir=terraform init -input=false
+
+      - name: Validate Terraform
+        run: terraform -chdir=terraform validate
+
+      - name: Plan Terraform changes
+        id: plan
+        shell: bash
+        run: |
+          set +e
+          doppler run --project s-public --config infra -- \
+            terraform -chdir=terraform plan -detailed-exitcode -input=false -no-color
+          exit_code=$?
+          set -e
+
+          case "${exit_code}" in
+            0)
+              echo "No Terraform changes." >>"${GITHUB_STEP_SUMMARY}"
+              ;;
+            2)
+              echo "Terraform changes detected. Review the plan in this job's log." >>"${GITHUB_STEP_SUMMARY}"
+              ;;
+            *)
+              echo "Terraform plan failed." >>"${GITHUB_STEP_SUMMARY}"
+              exit "${exit_code}"
+              ;;
+          esac
+
+      - name: Revoke Doppler OIDC session
+        if: always()
+        continue-on-error: true
+        run: doppler oidc logout --scope=.
