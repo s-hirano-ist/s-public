@@ -11,4 +11,4 @@ jobs:
   renovate-config-validator:
     permissions:
       contents: read
-    uses: s-hirano-ist/s-templates/.github/workflows/renovate-config-validator.yaml@e4881973a43b658d150508dd3eee6a4f253179f2 # main
+    uses: s-hirano-ist/s-templates/.github/workflows/renovate-config-validator.yaml@aad54d0bfd573cda93c12f676eba2878c7fcce7e # main
