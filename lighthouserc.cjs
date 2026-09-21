@@ -58,8 +58,7 @@ module.exports = {
           assertions: assertionsWithTbtLimit(2100),
         },
         {
-          matchingUrlPattern:
-            "^http://localhost:\\d+/(?:|blog/|diy/|photo/)$",
+          matchingUrlPattern: "^http://localhost:\\d+/(?:|blog/|diy/|photo/)$",
           assertions: assertionsWithTbtLimit(300),
         },
       ],
