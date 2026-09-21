@@ -17,7 +17,6 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
     env:
-      DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
       TF_CLOUD_ORGANIZATION: ${{ vars.TF_CLOUD_ORGANIZATION }}
       TF_IN_AUTOMATION: "true"
       TF_INPUT: "false"
@@ -31,13 +30,15 @@ jobs:
       - name: Install tools via mise
         uses: jdx/mise-action@3c2e0cf82a5b2e5249f0d3635a4d83d0ae861518 # v4
         with:
-          install_args: terraform
+          install_args: doppler terraform
 
       - name: Check Terraform formatting
         run: terraform -chdir=terraform fmt -check
 
       - name: Check required configuration
         shell: bash
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
         run: |
           set -euo pipefail
 
@@ -46,7 +47,9 @@ jobs:
           : "${TF_WORKSPACE:?Set the TF_WORKSPACE repository variable}"
 
       - name: Initialize Terraform
-        run: terraform -chdir=terraform init -input=false
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
+        run: doppler run --project s-public --config infra -- terraform -chdir=terraform init -input=false
 
       - name: Validate Terraform
         run: terraform -chdir=terraform validate
@@ -54,9 +57,12 @@ jobs:
       - name: Plan Terraform changes
         id: plan
         shell: bash
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
         run: |
           set +e
-          terraform -chdir=terraform plan -detailed-exitcode -input=false -no-color
+          doppler run --project s-public --config infra -- \
+            terraform -chdir=terraform plan -detailed-exitcode -input=false -no-color
           exit_code=$?
           set -e
 
