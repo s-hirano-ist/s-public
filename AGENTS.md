@@ -96,12 +96,16 @@ src/
 
 ### UI変更のブラウザ検証
 
-- UIに影響する変更はproduction build後に`bun run preview -- --host 127.0.0.1`を起動し、agent-browserで確認する
+- 複数工程のUI変更は、必要に応じて `/goal <変更内容>。品質検査とproduction buildを通し、影響ページをagent-browserでdesktop/mobile検証し、不備を修正・再検証して全条件を満たすまで継続する。` の形式でGoal modeを使う
+- UIに影響する変更はproduction build後に`bun run preview -- --host 127.0.0.1`を起動し、変更の影響を受ける全ルートをagent-browserで確認する
 - 初回またはagent-browserが起動しない場合は`mise run browser:setup`でCLI・Chromeを自己診断する
 - 他のエージェントと競合しない一意なnamed sessionを使い、複数操作は`batch`で実行する
-- デスクトップ幅とモバイル幅で変更箇所を操作し、accessibility snapshot、スクリーンショット、console error、主要リンクを確認する
+- 1440×900と390×844の両viewportで変更箇所を操作し、accessibility snapshot、スクリーンショット、主要リンク、`console`、`errors`を確認する
+- スクリーンショットは保存するだけでなく、実際に目視してレイアウト崩れ、重なり、見切れ、予期しない横スクロールがないことを確認する
+- 不備またはconsole/page errorが1件でもあれば修正し、production buildとpreviewをやり直し、影響ルートの両viewportを再検証する。すべて合格するまで完了扱いにしない
 - 認証状態や成果物はリポジトリに保存せず一時ディレクトリを使う
-- 確認後はagent-browser sessionとpreview processを必ず終了する
+- 検証の成否にかかわらずagent-browser sessionとpreview processを必ず終了する
+- 最終報告に検証したルート、viewport、操作、console/page errorの結果を記載する
 
 ### リリース手順
 

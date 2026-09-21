@@ -1,14 +1,14 @@
 {
-  "description": "Format the repository when a Codex turn stops.",
+  "description": "Require a clean formatting check before a Codex turn stops.",
   "hooks": {
     "Stop": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "repo_root=\"$(git rev-parse --show-toplevel)\" || { printf '{\"continue\":false,\"stopReason\":\"Unable to locate the Git repository root\"}\\n'; exit 1; }; if (cd \"$repo_root\" && bun run --silent fmt:fix >/dev/null); then printf '{\"continue\":true}\\n'; else status=$?; printf '{\"continue\":false,\"stopReason\":\"bun run fmt:fix failed\"}\\n'; exit \"$status\"; fi",
+            "command": "repo_root=\"$(git rev-parse --show-toplevel)\" || { printf '{\"decision\":\"block\",\"reason\":\"Unable to locate the Git repository root. Diagnose the workspace before finishing.\"}\\n'; exit 0; }; if cd \"$repo_root\" && bun run --silent fmt >/dev/null 2>&1; then printf '{\"continue\":true}\\n'; else printf '{\"decision\":\"block\",\"reason\":\"Formatting check failed. Run bun run fmt:fix, then rerun the affected quality checks and any required agent-browser verification before finishing.\"}\\n'; fi",
             "timeout": 120,
-            "statusMessage": "Formatting workspace"
+            "statusMessage": "Checking workspace formatting"
           }
         ]
       }

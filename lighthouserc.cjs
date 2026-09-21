@@ -1,3 +1,40 @@
+const commonAssertions = {
+  "categories:performance": [
+    "warn",
+    { minScore: 0.6, aggregationMethod: "median" },
+  ],
+  "categories:accessibility": [
+    "error",
+    { minScore: 0.9, aggregationMethod: "median" },
+  ],
+  "categories:best-practices": [
+    "error",
+    { minScore: 1, aggregationMethod: "median" },
+  ],
+  "categories:seo": ["error", { minScore: 1, aggregationMethod: "median" }],
+  "first-contentful-paint": [
+    "warn",
+    { maxNumericValue: 6000, aggregationMethod: "median" },
+  ],
+  "largest-contentful-paint": [
+    "warn",
+    { maxNumericValue: 9000, aggregationMethod: "median" },
+  ],
+  "cumulative-layout-shift": [
+    "error",
+    { maxNumericValue: 0.25, aggregationMethod: "median" },
+  ],
+  "errors-in-console": ["error", { maxLength: 0 }],
+};
+
+const assertionsWithTbtLimit = maxNumericValue => ({
+  ...commonAssertions,
+  "total-blocking-time": [
+    "error",
+    { maxNumericValue, aggregationMethod: "median" },
+  ],
+});
+
 module.exports = {
   ci: {
     collect: {
@@ -15,41 +52,16 @@ module.exports = {
       },
     },
     assert: {
-      assertions: {
-        "categories:performance": [
-          "warn",
-          { minScore: 0.6, aggregationMethod: "median" },
-        ],
-        "categories:accessibility": [
-          "error",
-          { minScore: 0.9, aggregationMethod: "median" },
-        ],
-        "categories:best-practices": [
-          "error",
-          { minScore: 1, aggregationMethod: "median" },
-        ],
-        "categories:seo": [
-          "error",
-          { minScore: 1, aggregationMethod: "median" },
-        ],
-        "first-contentful-paint": [
-          "warn",
-          { maxNumericValue: 6000, aggregationMethod: "median" },
-        ],
-        "largest-contentful-paint": [
-          "warn",
-          { maxNumericValue: 9000, aggregationMethod: "median" },
-        ],
-        "cumulative-layout-shift": [
-          "error",
-          { maxNumericValue: 0.25, aggregationMethod: "median" },
-        ],
-        "total-blocking-time": [
-          "error",
-          { maxNumericValue: 300, aggregationMethod: "median" },
-        ],
-        "errors-in-console": ["error", { maxLength: 0 }],
-      },
+      assertMatrix: [
+        {
+          matchingUrlPattern: "^http://localhost:\\d+/book/$",
+          assertions: assertionsWithTbtLimit(2100),
+        },
+        {
+          matchingUrlPattern: "^http://localhost:\\d+/(?:|blog/|diy/|photo/)$",
+          assertions: assertionsWithTbtLimit(300),
+        },
+      ],
     },
     upload: {
       target: "temporary-public-storage",

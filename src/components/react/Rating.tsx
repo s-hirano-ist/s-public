@@ -1,4 +1,4 @@
-import { Rating as SuiRating } from "@s-hirano-ist/s-ui";
+import { Rating as SuiRating } from "@s-hirano-ist/s-ui/rating";
 import { MAX_RATING } from "@config";
 
 type Props = {

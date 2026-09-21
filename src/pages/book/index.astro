@@ -77,7 +77,7 @@ const jsonLd = [
 <Layout title={`${SITE.title}${pathname}`} jsonLd={jsonLd}>
   <Header />
   <Main pageTitle={pageTitle}>
-    <p class="pt-4 text-sm text-muted-foreground">
+    <p class="mt-4 max-w-3xl text-sm leading-7 text-muted-foreground">
       {SITE.author}
       が印象に残っている本を記録したオンライン本棚です。
       <a
@@ -89,8 +89,10 @@ const jsonLd = [
       から情報を取得しています。
       また、自分の影響度合いに応じてレーティングしています。なお、技術系の本については多岐にわたるため除外しております。
     </p>
-    <div class="mt-4 rounded-lg bg-muted/50 p-4">
-      <ul class="space-y-1 text-sm text-muted-foreground">
+    <div
+      class="mt-6 max-w-3xl rounded-lg border border-border bg-muted/40 p-4 sm:p-5">
+      <p class="mb-3 text-sm font-medium text-foreground">レーティングの目安</p>
+      <ul class="space-y-2 text-sm leading-6 text-muted-foreground">
         <li>☆1: いまいちな本</li>
         <li>☆2: 自分の知識を再整理できた本</li>
         <li>☆3: 良書</li>

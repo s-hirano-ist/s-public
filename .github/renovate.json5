@@ -5,8 +5,10 @@
   extends: [
     "config:recommended",
     "config:best-practices",
-    ":semanticCommitTypeAll(chore)",
   ],
+  semanticCommits: "enabled",
+  semanticCommitType: "chore",
+  semanticCommitScope: "deps",
   reviewers: ["s-hirano-ist"],
   enabledManagers: ["bun", "npm", "github-actions", "mise"],
   dependencyDashboard: true,
