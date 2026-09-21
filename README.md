@@ -74,7 +74,7 @@ bun run build            # Production build (uses GA_MEASUREMENT_ID)
 
 When modifying Terraform configurations (e.g. adding secrets, updating IaC), you need full Doppler access via personal login. Cloudflare credentials are fetched by Terraform directly from Doppler via `data "doppler_secrets"`.
 
-Terraform is configured to store its state in the HCP Terraform `s-public` workspace. HCP Terraform uses local execution: pull requests run `terraform plan` in GitHub Actions, while `terraform apply` remains a local operation. Set the workspace for local commands before running Terraform:
+Terraform is configured to store its state in the HCP Terraform `s-public` workspace. HCP Terraform uses local execution: pull requests run `terraform plan` in GitHub Actions, and pushes to `main` that change `terraform/**` or `package.json` run `terraform apply` in GitHub Actions. Set the workspace for local commands before running Terraform:
 
 ```bash
 export TF_CLOUD_ORGANIZATION="<HCP Terraform organization>"
@@ -113,18 +113,14 @@ The initial migration must be run once from the local clone that contains the ex
    ```
 
 4. Add an HCP Terraform team token (or a dedicated automation-user token) to the Doppler `s-public/infra` config as `TF_TOKEN_app_terraform_io`.
-5. Create a Doppler Service Account Identity for GitHub Actions. Restrict its GitHub OIDC claims to:
-   - audience: `https://github.com/s-hirano-ist`
-   - subject: `repo:s-hirano-ist/s-public:pull_request`
-   - workflow: `terraform-plan`
+5. Add a Doppler CLI or personal token with access to every `s-public` config as the `DOPPLER_TOKEN` GitHub Actions repository secret.
 6. Add these non-secret GitHub Actions repository variables:
-   - `DOPPLER_SERVICE_IDENTITY_ID`: the Doppler identity ID
    - `TF_CLOUD_ORGANIZATION`: the HCP Terraform organization
    - `TF_WORKSPACE`: `s-public`
 
-The `terraform-plan` workflow runs only for same-repository pull requests that change `terraform/**` or `package.json`. It uses GitHub OIDC to obtain a short-lived Doppler token, runs formatting and validation checks, and treats Terraform's exit code `2` as a successful plan with changes. Plan files are not uploaded or posted to pull requests because Terraform state and plans can contain secrets.
+The `terraform-plan` workflow runs only for same-repository pull requests that change `terraform/**` or `package.json`. It uses the `DOPPLER_TOKEN` repository secret, runs formatting and validation checks, and treats Terraform's exit code `2` as a successful plan with changes. Plan files are not uploaded or posted to pull requests because Terraform state and plans can contain secrets. The `terraform-apply` workflow runs after a matching change is merged to `main`; it applies the same configuration automatically. The apply workflow is serialized, so an in-progress apply is never canceled by a later merge.
 
-Keep Terraform changes separate from user-facing site changes. After a Terraform-only pull request is merged, update local `main` and run `terraform apply`. A failed Cloudflare Pages deployment for that Terraform-only merge is acceptable because the previous production deployment remains active. A subsequent site-only merge must deploy normally; if it does not, repair the Cloudflare GitHub App integration rather than treating the failure as expected.
+Keep Terraform changes separate from user-facing site changes. A failed Cloudflare Pages deployment for a Terraform-only merge is acceptable because the previous production deployment remains active. A subsequent site-only merge must deploy normally; if it does not, repair the Cloudflare GitHub App integration rather than treating the failure as expected.
 
 ### Adding photos
 
