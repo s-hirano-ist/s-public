@@ -4,8 +4,8 @@ _.file = ".env.local"
 [tools]
 node = "24.15.0"
 bun = "1.4.2"
-doppler = { version = "3.76.5", exe = "doppler" }
-terraform = "1.16.3"
+doppler = { version = "3.76.6", exe = "doppler" }
+terraform = "1.16.4"
 "npm:agent-browser" = "0.38.1"
 
 [tasks."browser:setup"]
