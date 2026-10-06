@@ -135,37 +135,37 @@ const socialImageURL = new URL(
 
     <!-- Google tag (gtag.js) -->
     {GA_MEASUREMENT_ID ? (
-        <>
-          <script
-            is:inline
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          />
-          <script
-            is:inline
-            set:html={`
+      <>
+        <script
+          is:inline
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <script
+          is:inline
+          set:html={`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${GA_MEASUREMENT_ID}');
             `}
-          />
-        </>
-      ) : (
-        <script
-          is:inline
-          set:html={`console.log("GA_MEASUREMENT_ID is not set.");`}
         />
-      )}
+      </>
+    ) : (
+      <script
+        is:inline
+        set:html={`console.log("GA_MEASUREMENT_ID is not set.");`}
+      />
+    )}
 
     <!-- JSON-LD -->
     {jsonLd && (
-        <script
-          is:inline
-          type="application/ld+json"
-          set:html={JSON.stringify(jsonLd)}
-        />
-      )}
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(jsonLd)}
+      />
+    )}
   </head>
   <body>
     <slot />

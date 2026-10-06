@@ -46,24 +46,24 @@ const jsonLd = [
   <Main pageTitle={pageTitle}>
     <ul>
       {posts.map(({ data }) => (
-          <PostCard
-            href={`${pathname}/${slugify(data)}`}
-            title={data.heading}
-            description={data.description}
-          />
-        ))}
+        <PostCard
+          href={`${pathname}/${slugify(data)}`}
+          title={data.heading}
+          description={data.description}
+        />
+      ))}
     </ul>
     <h2 class="mt-12 text-xl font-bold text-foreground">外部記事</h2>
     <ul>
       {externalArticles.map(article => (
-          <PostCard
-            href={article.url}
-            title={article.title}
-            description={article.description}
-            date={article.date}
-            external
-          />
-        ))}
+        <PostCard
+          href={article.url}
+          title={article.title}
+          description={article.description}
+          date={article.date}
+          external
+        />
+      ))}
     </ul>
   </Main>
   <Footer />
