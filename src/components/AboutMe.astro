@@ -60,29 +60,29 @@ const socialLinks = [
 
     <div class="flex items-center justify-center gap-2">
       {socialLinks.map(link => (
-          <a
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={link.label}
-            class="group/social relative inline-flex size-10 items-center justify-center rounded-full border border-border/30 text-muted-foreground transition-all duration-300 hover:border-primary/40 hover:text-primary"
-            title={link.label}>
-            <span class="absolute inset-0 rounded-full bg-primary/0 transition-all duration-300 group-hover/social:bg-primary/8" />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              stroke-width="1.8"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="relative z-10 transition-transform duration-300 group-hover/social:scale-105"
-              set:html={link.icon}
-            />
-          </a>
-        ))}
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={link.label}
+          class="group/social relative inline-flex size-10 items-center justify-center rounded-full border border-border/30 text-muted-foreground transition-all duration-300 hover:border-primary/40 hover:text-primary"
+          title={link.label}>
+          <span class="absolute inset-0 rounded-full bg-primary/0 transition-all duration-300 group-hover/social:bg-primary/8" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            stroke-width="1.8"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="relative z-10 transition-transform duration-300 group-hover/social:scale-105"
+            set:html={link.icon}
+          />
+        </a>
+      ))}
     </div>
   </div>
 </BentoTile>

@@ -37,15 +37,15 @@ const jsonLd = [
   jsonLd={jsonLd}>
   <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3">
     {CONTENTS.map((content, index) => {
-        return (
-          <div class="overflow-hidden rounded-xl border border-muted">
-            <div class="aspect-square">
-              <SwiperContainer content={content} priority={index < 4} />
-            </div>
-            <p class="p-3 text-sm font-medium">{content.name}</p>
+      return (
+        <div class="overflow-hidden rounded-xl border border-muted">
+          <div class="aspect-square">
+            <SwiperContainer content={content} priority={index < 4} />
           </div>
-        );
-      })}
+          <p class="p-3 text-sm font-medium">{content.name}</p>
+        </div>
+      );
+    })}
   </div>
   <Lightbox />
 </PortfolioLayout>
