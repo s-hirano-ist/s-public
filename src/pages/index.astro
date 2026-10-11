@@ -67,9 +67,6 @@ const navigation = [
           </a>
         ))}
       </nav>
-      <a class="p-contact-link" href={`mailto:${SITE.email}`}
-        >Let's talk <span aria-hidden="true">↗</span></a
-      >
       <details class="p-mobile-nav">
         <summary>Menu <span aria-hidden="true">＋</span></summary>
         <nav aria-label="モバイルナビゲーション">
@@ -78,7 +75,6 @@ const navigation = [
               {item.number} / {item.label}
             </a>
           ))}
-          <a href={`mailto:${SITE.email}`}>Contact ↗</a>
         </nav>
       </details>
     </header>
@@ -86,25 +82,22 @@ const navigation = [
     <main id="main">
       <section class="p-hero p-shell" aria-labelledby="hero-heading">
         <div class="p-hero-top p-mono">
-          <span><i class="p-status-dot" /> SOFTWARE ENGINEER</span
-          ><span>CODE / CLOUD / CURIOSITY</span>
+          <span><i class="p-status-dot" /> SOFTWARE ENGINEER</span>
         </div>
         <div class="p-hero-content">
           <div class="p-hero-copy">
-            <p class="p-eyebrow">IDEAS INTO EXPERIENCES.</p>
             <h1 id="hero-heading">
               s-hirano<span class="p-name-tail"
                 >-ist<span class="p-name-dot">.</span></span
               >
             </h1>
-            <p class="p-hero-subtitle">つくる。つなぐ。<br>その先を、探る。</p>
             <p class="p-intro">
               Interested in frontend development,<br class="p-desktop-break">
               serverless architectures, and DevOps.<br>Building at GMO Internet.
             </p>
             <div class="p-hero-actions">
               <a class="p-button" href="#explore"
-                >Explore my world <span aria-hidden="true">↗</span></a
+                >Explore <span aria-hidden="true">↗</span></a
               >
               <a
                 class="p-text-link"
@@ -120,28 +113,9 @@ const navigation = [
             <div class="p-orb-fallback"><span /><span /><span /></div>
             <canvas class="p-orb-canvas" />
             <div class="p-orb-center">s<span>.</span></div>
-            <span class="p-orb-label p-mono">FIG. 01 / CONNECTED IDEAS</span>
-            <span class="p-orb-coordinate p-mono"
-              >FRONTEND<br>INFRASTRUCTURE<br>EXPLORATION</span
-            >
-            <span class="p-orb-cross p-cross-one">＋</span
-            ><span class="p-orb-cross p-cross-two">＋</span>
           </div>
         </div>
-        <div class="p-hero-bottom p-mono">
-          <a href="#about"
-            >SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a
-          ><button type="button" data-motion-toggle aria-pressed="false" hidden>
-            ANIMATION / ON
-          </button><span>PORTFOLIO / {new Date().getFullYear()}</span>
-        </div>
       </section>
-
-      <div class="p-signal-strip" aria-hidden="true">
-        <span>FRONTEND DEVELOPMENT</span><i>＋</i
-        ><span>SERVERLESS ARCHITECTURE</span><i>＋</i><span>DEVOPS</span
-        ><i>＋</i><span>ALWAYS CURIOUS</span>
-      </div>
 
       <section
         id="about"
@@ -149,8 +123,7 @@ const navigation = [
         aria-labelledby="about-heading">
         <div class="p-section-heading" data-reveal>
           <p class="p-eyebrow">01 / ABOUT & CAPABILITIES</p>
-          <h2 id="about-heading">Built on curiosity<span>.</span></h2>
-          <p>技術を組み合わせて、アイデアをかたちに。</p>
+          <h2 id="about-heading">About</h2>
         </div>
         <div class="p-about-grid">
           <article class="p-about-card" data-reveal>
@@ -158,13 +131,10 @@ const navigation = [
               <span class="p-mono">HELLO, WORLD.</span>
               <Image src={portrait} width={64} height={64} alt="" />
             </div>
-            <h3>Software engineer.<br><span>And always a learner.</span></h3>
+            <h3>Software engineer</h3>
             <p>
               Software engineer at GMO Internet. Specializing in TypeScript,
               React, and AWS infrastructure.
-            </p>
-            <p class="p-about-note">
-              フロントエンドからインフラまで。<br>コードを書くことも、日常の発見を残すことも。
             </p>
             <div class="p-socials">
               {socials.map(link => (
@@ -197,7 +167,7 @@ const navigation = [
               href="https://github.com/s-hirano-ist"
               target="_blank"
               rel="noopener noreferrer"
-              >See what I'm building <span aria-hidden="true">↗</span></a
+              >GitHub <span aria-hidden="true">↗</span></a
             >
           </div>
         </div>
@@ -209,8 +179,7 @@ const navigation = [
         aria-labelledby="explore-heading">
         <div class="p-section-heading" data-reveal>
           <p class="p-eyebrow">02 / BEYOND THE CODE</p>
-          <h2 id="explore-heading">A world of interests<span>.</span></h2>
-          <p>書く、読む、撮る、つくる。日々の好奇心の記録。</p>
+          <h2 id="explore-heading">Explore</h2>
         </div>
         <div class="p-explore-grid">
           <a class="p-explore-card p-blog-card" href="/blog" data-reveal>
@@ -285,10 +254,7 @@ const navigation = [
         aria-labelledby="journey-heading">
         <div class="p-section-heading" data-reveal>
           <p class="p-eyebrow">03 / THE JOURNEY SO FAR</p>
-          <h2 id="journey-heading">
-            Learning. Building. Evolving<span>.</span>
-          </h2>
-          <p>これまでの経験と、学びの足跡。</p>
+          <h2 id="journey-heading">Experience</h2>
         </div>
         <div class="p-journey-grid">
           <div class="p-experience" data-reveal>
@@ -342,21 +308,6 @@ const navigation = [
             </article>
           </div>
         </div>
-      </section>
-
-      <section
-        class="p-connect p-shell"
-        aria-labelledby="connect-heading"
-        data-reveal>
-        <p class="p-eyebrow">LET'S CONNECT</p>
-        <h2 id="connect-heading">
-          Good things start<br>with a <span>conversation.</span>
-        </h2>
-        <a class="p-button" href={`mailto:${SITE.email}`}
-          >Get in touch <span aria-hidden="true">↗</span></a
-        >
-        <a class="p-email" href={`mailto:${SITE.email}`}>{SITE.email}</a>
-        <span class="p-connect-art" aria-hidden="true">↗</span>
       </section>
     </main>
     <footer class="p-footer p-shell">

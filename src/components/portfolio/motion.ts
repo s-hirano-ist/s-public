@@ -1,5 +1,3 @@
-const MOTION_KEY = "portfolio-motion-paused";
-
 export function initPortfolio(): (() => void) | undefined {
   const root = document.querySelector<HTMLElement>("[data-portfolio]");
   if (!root) return;
@@ -7,16 +5,9 @@ export function initPortfolio(): (() => void) | undefined {
   const controller = new AbortController();
   const { signal } = controller;
   const preference = matchMedia("(prefers-reduced-motion: reduce)");
-  const toggle = root.querySelector<HTMLButtonElement>("[data-motion-toggle]");
   const orb = root.querySelector<HTMLElement>("[data-orb]");
   const canvas = orb?.querySelector("canvas");
   const context = canvas?.getContext("2d");
-  let paused = false;
-  try {
-    paused = localStorage.getItem(MOTION_KEY) === "true";
-  } catch {
-    // Motion controls also work when browser storage is unavailable.
-  }
   let frame = 0;
   let inView = false;
   let width = 0;
@@ -29,7 +20,7 @@ export function initPortfolio(): (() => void) | undefined {
   let angleY = 0;
   let particles: { x: number; y: number; z: number; purple: boolean }[] = [];
 
-  const stopped = () => paused || preference.matches;
+  const stopped = () => preference.matches;
 
   function draw() {
     if (!context || !canvas || !width || !height) return;
@@ -116,20 +107,6 @@ export function initPortfolio(): (() => void) | undefined {
   function updateMotion() {
     root?.classList.toggle("motion-enabled", !stopped());
     root?.classList.toggle("motion-paused", stopped());
-    if (toggle) {
-      toggle.hidden = false;
-      toggle.disabled = preference.matches;
-      toggle.setAttribute("aria-pressed", String(stopped()));
-      toggle.setAttribute(
-        "aria-label",
-        stopped() ? "アニメーションを再開" : "アニメーションを停止",
-      );
-      toggle.textContent = preference.matches
-        ? "ANIMATION / REDUCED"
-        : stopped()
-          ? "ANIMATION / OFF"
-          : "ANIMATION / ON";
-    }
     document.dispatchEvent(
       new CustomEvent("portfolio:motion", { detail: { paused: stopped() } }),
     );
@@ -204,19 +181,6 @@ export function initPortfolio(): (() => void) | undefined {
     );
   }
 
-  toggle?.addEventListener(
-    "click",
-    () => {
-      paused = !paused;
-      try {
-        localStorage.setItem(MOTION_KEY, String(paused));
-      } catch {
-        /* Optional persistence. */
-      }
-      updateMotion();
-    },
-    { signal },
-  );
   preference.addEventListener("change", updateMotion, { signal });
   document.addEventListener("visibilitychange", syncLoop, { signal });
 

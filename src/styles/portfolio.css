@@ -125,15 +125,6 @@
 .p-text-link:hover {
   color: var(--p-blue);
 }
-.p-contact-link {
-  font-size: 12px;
-  border: 1px solid var(--p-line);
-  padding: 12px 17px;
-}
-.p-contact-link span {
-  margin-left: 23px;
-  color: var(--p-blue);
-}
 .p-mobile-nav {
   display: none;
 }
@@ -171,24 +162,18 @@
   padding-block: 55px;
 }
 .p-hero h1 {
-  font-size: clamp(60px, 7.7vw, 106px);
+  font-size: clamp(40px, 5.8vw, 80px);
+  white-space: nowrap;
   line-height: 0.98;
   letter-spacing: -0.075em;
   font-weight: 750;
   margin: 22px 0 27px;
 }
 .p-name-tail {
-  display: block;
   color: var(--p-blue);
 }
 .p-name-dot {
   color: var(--p-purple);
-}
-.p-hero-subtitle {
-  font-size: clamp(20px, 2.1vw, 28px);
-  line-height: 1.7;
-  font-weight: 600;
-  letter-spacing: 0.08em;
 }
 .p-intro {
   font-size: 13px;
@@ -283,35 +268,6 @@
 .p-orb-center span {
   color: var(--p-purple);
 }
-.p-orb-label {
-  position: absolute;
-  left: 15%;
-  bottom: 8%;
-  color: var(--p-blue);
-  font-size: 9px;
-}
-.p-orb-coordinate {
-  position: absolute;
-  top: 13%;
-  right: 5%;
-  font-size: 8px;
-  line-height: 1.8;
-  color: var(--p-muted);
-}
-.p-orb-cross {
-  position: absolute;
-  color: var(--p-blue);
-  font-size: 22px;
-  font-weight: 200;
-}
-.p-cross-one {
-  top: 17%;
-  left: 12%;
-}
-.p-cross-two {
-  right: 11%;
-  bottom: 14%;
-}
 .p-orb-fallback {
   position: absolute;
   inset: 17%;
@@ -336,46 +292,6 @@
 }
 .p-orb.has-canvas .p-orb-fallback {
   opacity: 0.2;
-}
-.p-hero-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid var(--p-line);
-  padding-block: 22px;
-  color: var(--p-muted);
-  font-size: 9px;
-}
-.p-hero-bottom :where(a) span {
-  margin-left: 20px;
-  color: var(--p-blue);
-}
-.p-hero-bottom button {
-  background: none;
-  border: 0;
-  color: var(--p-muted);
-  font: inherit;
-  letter-spacing: inherit;
-  padding: 5px;
-}
-.p-signal-strip {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 34px;
-  border-block: 1px solid var(--p-line);
-  background: #202023;
-  padding: 24px;
-  color: var(--p-muted);
-  font:
-    10px ui-monospace,
-    monospace;
-  letter-spacing: 0.12em;
-}
-.p-signal-strip i {
-  font-style: normal;
-  color: var(--p-purple);
 }
 .p-section {
   padding-block: 100px 0;
@@ -443,9 +359,6 @@
   color: var(--p-muted);
   line-height: 1.9;
   max-width: 380px;
-}
-.p-about-note {
-  margin-top: 18px;
 }
 .p-socials {
   display: flex;
@@ -764,48 +677,14 @@
   border-top: 1px solid var(--p-line);
   margin-top: 18px;
 }
-.p-connect {
-  position: relative;
-  padding-block: 90px;
-  margin-block: 100px 0;
-  border-block: 1px solid var(--p-line);
-  background: radial-gradient(ellipse at 90% 60%, #9e78d210, transparent 70%);
-}
-.p-connect h2 {
-  font-size: clamp(32px, 4.3vw, 59px);
-  line-height: 1.25;
-  font-weight: 500;
-  letter-spacing: -0.05em;
-  margin-block: 20px 30px;
-  position: relative;
-  z-index: 1;
-}
-.p-connect :where(h2) span {
-  color: var(--p-blue);
-}
-.p-email {
-  display: block;
-  font-size: 11px;
-  color: var(--p-muted);
-  margin-top: 18px;
-  width: fit-content;
-}
-.p-connect-art {
-  position: absolute;
-  right: 6%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 220px;
-  line-height: 1;
-  font-weight: 200;
-  color: #9e78d21c;
-}
 .p-footer {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 24px;
   padding-block: 40px;
+  margin-top: 100px;
+  border-top: 1px solid var(--p-line);
 }
 .p-footer-brand {
   font-size: 18px;
@@ -884,19 +763,13 @@
     min-height: 590px;
   }
   .p-hero h1 {
-    font-size: 75px;
+    font-size: clamp(36px, 5.8vw, 58px);
   }
   .p-hero-top > span:last-child {
     font-size: 8px;
   }
   .p-orb-center {
     font-size: 88px;
-  }
-  .p-orb-label {
-    font-size: 7px;
-  }
-  .p-orb-coordinate {
-    font-size: 6px;
   }
   .p-about-card,
   .p-skills {
@@ -905,15 +778,11 @@
   .p-journey-grid {
     gap: 30px;
   }
-  .p-signal-strip {
-    gap: 20px;
-    font-size: 8px;
-  }
-  .p-connect-art {
-    right: 0;
-  }
 }
 @media (max-width: 640px) {
+  .p-desktop-nav {
+    display: none;
+  }
   .p-shell {
     width: calc(100% - 40px);
   }
@@ -937,10 +806,6 @@
   .p-brand-mark span {
     left: 20px;
     bottom: 4px;
-  }
-  .p-desktop-nav,
-  .p-contact-link {
-    display: none;
   }
   .p-mobile-nav {
     display: block;
@@ -1000,12 +865,8 @@
     font-size: 9px;
   }
   .p-hero h1 {
-    font-size: clamp(65px, 18vw, 100px);
+    font-size: clamp(32px, 10.8vw, 65px);
     margin-block: 20px 24px;
-  }
-  .p-hero-subtitle {
-    font-size: 22px;
-    line-height: 1.65;
   }
   .p-intro {
     font-size: 12px;
@@ -1029,33 +890,6 @@
   }
   .p-orb-center {
     font-size: 90px;
-  }
-  .p-orb-coordinate {
-    font-size: 6px;
-  }
-  .p-orb-label {
-    font-size: 7px;
-    bottom: 7%;
-  }
-  .p-hero-bottom {
-    font-size: 7px;
-    gap: 10px;
-    padding-block: 16px;
-  }
-  .p-hero-bottom > span:last-child {
-    display: none;
-  }
-  .p-hero-bottom :where(a) span {
-    margin-left: 8px;
-  }
-  .p-signal-strip {
-    gap: 12px;
-    padding: 19px 20px;
-    font-size: 7px;
-    line-height: 1.7;
-  }
-  .p-signal-strip > :nth-child(n + 4) {
-    display: none;
   }
   .p-section {
     padding-top: 65px;
@@ -1142,18 +976,6 @@
   }
   .p-date {
     font-size: 8px;
-  }
-  .p-connect {
-    padding-block: 55px;
-    margin-top: 65px;
-  }
-  .p-connect h2 {
-    font-size: 33px;
-  }
-  .p-connect-art {
-    font-size: 130px;
-    right: 0;
-    top: 65%;
   }
   .p-footer {
     gap: 24px 15px;
