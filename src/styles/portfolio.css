@@ -131,24 +131,6 @@
 .p-hero {
   position: relative;
 }
-.p-hero-top {
-  display: flex;
-  justify-content: space-between;
-  padding-block: 34px 0;
-  color: var(--p-muted);
-}
-.p-hero-top > span:first-child {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.p-status-dot {
-  width: 5px;
-  height: 5px;
-  background: var(--p-blue);
-  border-radius: 50%;
-  box-shadow: 0 0 10px #72a5d366;
-}
 .p-hero-content {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
@@ -628,7 +610,7 @@
 }
 .p-date {
   color: var(--p-muted);
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.9;
   display: flex;
   flex-wrap: wrap;
@@ -860,9 +842,6 @@
     padding: 14px 0;
     color: var(--p-text);
   }
-  .p-hero-top {
-    display: none;
-  }
   .p-hero-content {
     display: flex;
     flex-direction: column;
@@ -947,7 +926,7 @@
     margin-bottom: 23px;
   }
   .p-skill-group li {
-    font-size: 11px;
+    font-size: 12px;
     padding: 7px 10px;
   }
   .p-explore-grid {
@@ -964,10 +943,10 @@
     gap: 6px 14px;
   }
   .p-explore-copy :where(h3) span {
-    font-size: 10px;
+    font-size: 12px;
   }
   .p-explore-copy p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .p-explore-top {
     font-size: 8px;
@@ -988,17 +967,14 @@
   }
   .p-timeline h4,
   .p-credential-card h4 {
-    font-size: 12px;
+    font-size: 13px;
   }
   .p-timeline li > p:last-child,
   .p-credential-card li > p:not(.p-date) {
-    font-size: 11px;
+    font-size: 13px;
   }
   .p-credential-card {
     padding: 24px;
-  }
-  .p-date {
-    font-size: 8px;
   }
   .p-footer {
     gap: 12px 16px;
