@@ -1,45 +1,389 @@
 ---
-import AboutMe from "@components/AboutMe.astro";
-import Education from "@components/Education.astro";
-import Footer from "@components/Footer.astro";
-import PortfolioLinks from "@components/PortfolioLinks.astro";
-import Qualifications from "@components/Qualifications.astro";
-import TechStack from "@components/TechStack.astro";
-// import achievementsData from "@layouts/Achievements.json";
-import Top from "@components/Top.astro";
-import WorkExperience from "@components/WorkExperience.astro";
+import { Image } from "astro:assets";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import { PERSON_ENTITY, WEBSITE_ENTITY } from "@utils/jsonLd";
+import experience from "@data/portfolio/WorkExperience.json";
+import education from "@data/portfolio/Education.json";
+import qualifications from "@data/portfolio/Qualification.json";
+import portrait from "@data/assets/s-icon-transparent.svg";
+import photo from "@data/assets/photo/photo_247.jpg";
+import leather from "@data/assets/diy/wallet_3_1.jpg";
+import "@styles/portfolio.css";
 
-const jsonLd = [WEBSITE_ENTITY, PERSON_ENTITY];
+const skills = [
+  {
+    label: "01 / FRONTEND",
+    items: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Astro",
+      "JavaScript",
+      "HTML / CSS",
+    ],
+  },
+  {
+    label: "02 / INFRASTRUCTURE",
+    items: ["AWS", "Cloudflare", "Docker", "CI / CD"],
+  },
+  { label: "03 / ALSO EXPLORING", items: ["Python", "Swift"] },
+];
+const socials = [
+  { label: "GitHub", href: "https://github.com/s-hirano-ist" },
+  { label: "X", href: "https://twitter.com/s_hirano_ist" },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/%E7%A9%BA%E6%9A%89-%E5%B9%B3%E9%87%8E-2a7183337",
+  },
+];
+const navigation = [
+  { href: "#about", label: "About", number: "01" },
+  { href: "#explore", label: "Explore", number: "02" },
+  { href: "#experience", label: "Journey", number: "03" },
+];
 ---
 
 <Layout
   title="Portfolio"
   description={`Portfolio of ${SITE.author}.`}
-  jsonLd={jsonLd}>
-  <main class="dark background main-contents background-grain relative z-10">
-    <section>
-      <div
-        class="bento-grid mx-auto grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
-        <Top class="order-1 md:col-span-2 lg:col-span-3 lg:order-1" />
+  jsonLd={[WEBSITE_ENTITY, PERSON_ENTITY]}>
+  <div class="portfolio dark" data-portfolio>
+    <a class="p-skip" href="#main">本文へスキップ</a>
+    <header class="p-header">
+      <a href="/" class="p-brand" aria-label="s-hirano-ist トップへ">
+        <span class="p-brand-mark" aria-hidden="true">s<span>.</span></span>
+        <span
+          >s-hirano-ist<span class="p-brand-caption"
+            >PERSONAL PORTFOLIO</span
+          ></span
+        >
+      </a>
+      <nav class="p-desktop-nav" aria-label="ページ内ナビゲーション">
+        {navigation.map(item => (
+          <a href={item.href}>
+            <span>{item.number}</span>
+            {item.label}
+          </a>
+        ))}
+      </nav>
+      <a class="p-contact-link" href={`mailto:${SITE.email}`}
+        >Let's talk <span aria-hidden="true">↗</span></a
+      >
+      <details class="p-mobile-nav">
+        <summary>Menu <span aria-hidden="true">＋</span></summary>
+        <nav aria-label="モバイルナビゲーション">
+          {navigation.map(item => (
+            <a href={item.href}>
+              {item.number} / {item.label}
+            </a>
+          ))}
+          <a href={`mailto:${SITE.email}`}>Contact ↗</a>
+        </nav>
+      </details>
+    </header>
 
-        <div class="order-2 col-span-1 md:col-span-2 lg:order-2 lg:col-span-3">
-          <div class="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2">
-            <AboutMe />
-            <PortfolioLinks />
-            <TechStack />
+    <main id="main">
+      <section class="p-hero p-shell" aria-labelledby="hero-heading">
+        <div class="p-hero-top p-mono">
+          <span><i class="p-status-dot" /> SOFTWARE ENGINEER</span
+          ><span>CODE / CLOUD / CURIOSITY</span>
+        </div>
+        <div class="p-hero-content">
+          <div class="p-hero-copy">
+            <p class="p-eyebrow">IDEAS INTO EXPERIENCES.</p>
+            <h1 id="hero-heading">
+              s-hirano<span class="p-name-tail"
+                >-ist<span class="p-name-dot">.</span></span
+              >
+            </h1>
+            <p class="p-hero-subtitle">つくる。つなぐ。<br>その先を、探る。</p>
+            <p class="p-intro">
+              Interested in frontend development,<br class="p-desktop-break">
+              serverless architectures, and DevOps.<br>Building at GMO Internet.
+            </p>
+            <div class="p-hero-actions">
+              <a class="p-button" href="#explore"
+                >Explore my world <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="p-text-link"
+                href="https://github.com/s-hirano-ist"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+          <div class="p-orb" data-orb aria-hidden="true">
+            <div class="p-orb-grid" />
+            <div class="p-orb-fallback"><span /><span /><span /></div>
+            <canvas class="p-orb-canvas" />
+            <div class="p-orb-center">s<span>.</span></div>
+            <span class="p-orb-label p-mono">FIG. 01 / CONNECTED IDEAS</span>
+            <span class="p-orb-coordinate p-mono"
+              >FRONTEND<br>INFRASTRUCTURE<br>EXPLORATION</span
+            >
+            <span class="p-orb-cross p-cross-one">＋</span
+            ><span class="p-orb-cross p-cross-two">＋</span>
           </div>
         </div>
+        <div class="p-hero-bottom p-mono">
+          <a href="#about"
+            >SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a
+          ><button type="button" data-motion-toggle aria-pressed="false" hidden>
+            ANIMATION / ON
+          </button><span>PORTFOLIO / {new Date().getFullYear()}</span>
+        </div>
+      </section>
 
-        <WorkExperience class="order-3 lg:order-3" />
-
-        <Education class="order-4 lg:order-4" />
-
-        <Qualifications class="order-5 lg:order-5" />
+      <div class="p-signal-strip" aria-hidden="true">
+        <span>FRONTEND DEVELOPMENT</span><i>＋</i
+        ><span>SERVERLESS ARCHITECTURE</span><i>＋</i><span>DEVOPS</span
+        ><i>＋</i><span>ALWAYS CURIOUS</span>
       </div>
-    </section>
-    <Footer darkModeDisabled />
-  </main>
+
+      <section
+        id="about"
+        class="p-section p-shell"
+        aria-labelledby="about-heading">
+        <div class="p-section-heading" data-reveal>
+          <p class="p-eyebrow">01 / ABOUT & CAPABILITIES</p>
+          <h2 id="about-heading">Built on curiosity<span>.</span></h2>
+          <p>技術を組み合わせて、アイデアをかたちに。</p>
+        </div>
+        <div class="p-about-grid">
+          <article class="p-about-card" data-reveal>
+            <div class="p-card-top">
+              <span class="p-mono">HELLO, WORLD.</span>
+              <Image src={portrait} width={64} height={64} alt="" />
+            </div>
+            <h3>Software engineer.<br><span>And always a learner.</span></h3>
+            <p>
+              Software engineer at GMO Internet. Specializing in TypeScript,
+              React, and AWS infrastructure.
+            </p>
+            <p class="p-about-note">
+              フロントエンドからインフラまで。<br>コードを書くことも、日常の発見を残すことも。
+            </p>
+            <div class="p-socials">
+              {socials.map(link => (
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  {link.label}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              ))}<a href={`mailto:${SITE.email}`}
+                >Mail <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+          <div class="p-skills" data-reveal>
+            <div class="p-card-top">
+              <h3>Tools I work with</h3>
+              <span class="p-mono">TECH STACK</span>
+            </div>
+            {skills.map(group => (
+              <div class="p-skill-group">
+                <p class="p-mono">{group.label}</p>
+                <ul>
+                  {group.items.map(skill => (
+                    <li>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            <a
+              class="p-text-link"
+              href="https://github.com/s-hirano-ist"
+              target="_blank"
+              rel="noopener noreferrer"
+              >See what I'm building <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="explore"
+        class="p-section p-shell"
+        aria-labelledby="explore-heading">
+        <div class="p-section-heading" data-reveal>
+          <p class="p-eyebrow">02 / BEYOND THE CODE</p>
+          <h2 id="explore-heading">A world of interests<span>.</span></h2>
+          <p>書く、読む、撮る、つくる。日々の好奇心の記録。</p>
+        </div>
+        <div class="p-explore-grid">
+          <a class="p-explore-card p-blog-card" href="/blog" data-reveal>
+            <div class="p-explore-top p-mono">
+              <span>01 / THOUGHTS</span
+              ><span class="p-card-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="p-code-art" aria-hidden="true">
+              <span>const <b>curiosity</b> = &#123;</span
+              ><span>&nbsp; learn: <em>true</em>,</span
+              ><span>&nbsp; build: <em>true</em>,</span
+              ><span>&nbsp; share: <em>true</em></span
+              ><span>&#125;;<i>_</i></span>
+            </div>
+            <div class="p-explore-copy">
+              <h3>Blog<span>思考の備忘録</span></h3>
+              <p>技術と日々の学びを、言葉に残す。</p>
+            </div>
+          </a>
+          <a class="p-explore-card p-book-card" href="/book" data-reveal>
+            <div class="p-explore-top p-mono">
+              <span>02 / INPUT</span
+              ><span class="p-card-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="p-book-art" aria-hidden="true">
+              <span>READ.<br>THINK.<br><b>REPEAT.</b></span><i /><i /><i />
+              <i />
+            </div>
+            <div class="p-explore-copy">
+              <h3>Book<span>本棚をのぞく</span></h3>
+              <p>新しい視点に出会う、読書の記録。</p>
+            </div>
+          </a>
+          <a class="p-explore-card p-image-card" href="/photo" data-reveal>
+            <Image
+              src={photo}
+              alt="水上マーケットを行き交う船"
+              width={720}
+              height={520}
+              loading="lazy" />
+            <div class="p-explore-top p-mono">
+              <span>03 / PERSPECTIVE</span
+              ><span class="p-card-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="p-explore-copy">
+              <h3>Photo<span>日常の、その一瞬</span></h3>
+              <p>レンズを通して見つけた景色。</p>
+            </div>
+          </a>
+          <a class="p-explore-card p-image-card" href="/diy" data-reveal>
+            <Image
+              src={leather}
+              alt="手づくりの革財布"
+              width={720}
+              height={520}
+              loading="lazy" />
+            <div class="p-explore-top p-mono">
+              <span>04 / CRAFT</span
+              ><span class="p-card-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="p-explore-copy">
+              <h3>DIY<span>手を動かして、つくる</span></h3>
+              <p>画面の外にも、ものづくりを。</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="experience"
+        class="p-section p-shell"
+        aria-labelledby="journey-heading">
+        <div class="p-section-heading" data-reveal>
+          <p class="p-eyebrow">03 / THE JOURNEY SO FAR</p>
+          <h2 id="journey-heading">
+            Learning. Building. Evolving<span>.</span>
+          </h2>
+          <p>これまでの経験と、学びの足跡。</p>
+        </div>
+        <div class="p-journey-grid">
+          <div class="p-experience" data-reveal>
+            <h3 class="p-group-title">
+              Work experience <span class="p-mono">CAREER LOG</span>
+            </h3>
+            <ol class="p-timeline">
+              {[...experience].reverse().map((item, i) => (
+                <li>
+                  <span
+                    class:list={["p-timeline-dot", { "is-current": i === 0 }]}
+                  />
+                  <p class="p-mono p-date">
+                    {item.date}
+                    {i === 0 && <span class="p-current">CURRENT</span>}
+                  </p>
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div class="p-credentials">
+            <article class="p-credential-card" data-reveal>
+              <h3 class="p-group-title">
+                Education <span aria-hidden="true">↗</span>
+              </h3>
+              <ol>
+                {[...education].reverse().map(item => (
+                  <li>
+                    <p class="p-mono p-date">{item.date}</p>
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                  </li>
+                ))}
+              </ol>
+            </article>
+            <article class="p-credential-card" data-reveal>
+              <h3 class="p-group-title">
+                Qualifications <span aria-hidden="true">◇</span>
+              </h3>
+              <ol>
+                {[...qualifications].reverse().map(item => (
+                  <li>
+                    <p class="p-mono p-date">{item.date}</p>
+                    <h4>{item.title}</h4>
+                    {item.description && <p>{item.description}</p>}
+                  </li>
+                ))}
+              </ol>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="p-connect p-shell"
+        aria-labelledby="connect-heading"
+        data-reveal>
+        <p class="p-eyebrow">LET'S CONNECT</p>
+        <h2 id="connect-heading">
+          Good things start<br>with a <span>conversation.</span>
+        </h2>
+        <a class="p-button" href={`mailto:${SITE.email}`}
+          >Get in touch <span aria-hidden="true">↗</span></a
+        >
+        <a class="p-email" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        <span class="p-connect-art" aria-hidden="true">↗</span>
+      </section>
+    </main>
+    <footer class="p-footer p-shell">
+      <a href="#main" class="p-footer-brand">s-hirano-ist<span>.</span></a>
+      <div>
+        {socials.map(link => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            {link.label} ↗
+          </a>
+        ))}<a href="/THIRD_PARTY_NOTICES.txt">Licenses</a>
+      </div>
+      <p class="p-mono">
+        © {new Date().getFullYear()} s-hirano-ist. All rights reserved.
+      </p>
+      <a href="#main" class="p-back-top" aria-label="トップへ戻る">↑</a>
+    </footer>
+  </div>
 </Layout>
+
+<script>
+import { initPortfolio } from "../components/portfolio/motion";
+let cleanup: (() => void) | undefined;
+function mountPortfolio() {
+  cleanup?.();
+  cleanup = initPortfolio();
+}
+mountPortfolio();
+document.addEventListener("astro:page-load", mountPortfolio);
+document.addEventListener("astro:before-swap", () => cleanup?.());
+</script>
