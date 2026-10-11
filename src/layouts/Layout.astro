@@ -73,23 +73,40 @@ const socialImageURL = new URL(
 
     <!-- Smooth Scroll -->
     <script>
-    // Better than `scroll-behavior: smooth` on smooth scrolling so it is necessary.
     import Lenis from "lenis";
 
-    function initLenis() {
-      const lenis = new Lenis();
-      function raf(time: number) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
+    const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+    let lenis: Lenis | undefined;
+    let scrollFrame = 0;
+    let portfolioPaused = false;
+
+    function destroyLenis() {
+      cancelAnimationFrame(scrollFrame);
+      lenis?.destroy();
+      lenis = undefined;
     }
 
-    // Initialize on first load
-    initLenis();
+    function initLenis() {
+      destroyLenis();
+      const portfolio = document.querySelector("[data-portfolio]");
+      if (reducedMotion.matches || (portfolio && portfolioPaused)) return;
+      lenis = new Lenis();
+      function raf(time: number) {
+        lenis?.raf(time);
+        scrollFrame = requestAnimationFrame(raf);
+      }
+      scrollFrame = requestAnimationFrame(raf);
+    }
 
-    // Re-initialize after View Transitions navigation
-    document.addEventListener("astro:after-swap", initLenis);
+    document.addEventListener("portfolio:motion", event => {
+      portfolioPaused = (event as CustomEvent<{ paused: boolean }>).detail
+        .paused;
+      initLenis();
+    });
+    reducedMotion.addEventListener("change", initLenis);
+    document.addEventListener("astro:before-swap", destroyLenis);
+    document.addEventListener("astro:page-load", initLenis);
+    initLenis();
     </script>
 
     <!-- Color Scheme -->
