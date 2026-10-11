@@ -201,78 +201,107 @@
 .p-text-link span {
   color: var(--p-blue);
 }
-.p-orb {
+/* The portrait remains complete without JavaScript or with reduced motion. */
+.p-portrait {
   position: relative;
   width: 100%;
   aspect-ratio: 1;
+  perspective: 1000px;
 }
-.p-orb::before {
-  content: "";
+.p-portrait-glow {
   position: absolute;
-  inset: 13%;
+  inset: 7%;
   border-radius: 50%;
   background: radial-gradient(
-    circle,
-    #9e78d214,
-    #72a5d308 55%,
+    ellipse at 40% 35%,
+    #23c0ed1c,
+    #9e78d214 48%,
     transparent 72%
   );
-  box-shadow: 0 0 100px #9e78d20a;
 }
-.p-orb-grid {
+.p-portrait-tilt {
   position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--p-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--p-line) 1px, transparent 1px);
-  background-size: 58px 58px;
-  opacity: 0.28;
-  mask-image: radial-gradient(circle, #000, transparent 68%);
+  inset: 6%;
+  transform: rotateX(var(--portrait-pitch, 0deg))
+    rotateY(var(--portrait-yaw, 0deg));
 }
-.p-orb-canvas {
-  position: absolute;
-  inset: 0;
+.p-portrait-art {
+  display: block;
   width: 100%;
   height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 20px 30px #00000026);
 }
-.p-orb-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -55%);
-  font-size: 115px;
-  font-weight: 700;
-  letter-spacing: -0.1em;
-  color: #e5e6ee;
-  text-shadow: 0 0 40px #72a5d333;
+.portfolio.motion-enabled .p-portrait-person,
+.portfolio.motion-enabled .p-portrait-whale-body {
+  animation: p-portrait-arrive 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-.p-orb-center span {
-  color: var(--p-purple);
+.portfolio.motion-enabled .p-portrait-container {
+  animation: p-container-dock 0.85s cubic-bezier(0.22, 1, 0.36, 1)
+    var(--container-delay) both;
 }
-.p-orb-fallback {
-  position: absolute;
-  inset: 17%;
-  border: 1px solid #72a5d345;
-  border-radius: 50%;
-  transform: rotate(-25deg);
+.portfolio.motion-enabled .p-portrait-whale {
+  animation: p-whale-float 6s ease-in-out 2.5s infinite;
 }
-.p-orb-fallback span {
-  position: absolute;
-  inset: 0;
-  border: 1px dotted #9e78d275;
-  border-radius: 50%;
+.portfolio.motion-enabled
+  .p-portrait
+  :is(
+    .p-portrait-person,
+    .p-portrait-whale-body,
+    .p-portrait-container,
+    .p-portrait-whale
+  ) {
+  animation-play-state: paused;
 }
-.p-orb-fallback span:nth-child(1) {
-  transform: scaleX(0.5);
+.portfolio.motion-enabled
+  .p-portrait.is-active
+  :is(
+    .p-portrait-person,
+    .p-portrait-whale-body,
+    .p-portrait-container,
+    .p-portrait-whale
+  ) {
+  animation-play-state: running;
 }
-.p-orb-fallback span:nth-child(2) {
-  transform: scaleY(0.5);
+@keyframes p-portrait-arrive {
+  from {
+    opacity: 0;
+    translate: 0 60px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
 }
-.p-orb-fallback span:nth-child(3) {
-  inset: -8%;
+@keyframes p-container-dock {
+  from {
+    opacity: 0;
+    translate: -150px -180px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
 }
-.p-orb.has-canvas .p-orb-fallback {
-  opacity: 0.2;
+@keyframes p-whale-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .p-portrait *,
+  .p-portrait *::before,
+  .p-portrait *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .p-portrait-tilt {
+    transform: none;
+  }
 }
 .p-section {
   padding-block: 88px 0;
@@ -719,9 +748,6 @@
   .portfolio.motion-enabled .p-hero-copy {
     animation: p-entrance 0.85s both;
   }
-  .portfolio.motion-enabled .p-orb {
-    animation: p-entrance 1.2s both;
-  }
 }
 @keyframes p-entrance {
   from {
@@ -745,9 +771,6 @@
   }
   .p-hero h1 {
     font-size: clamp(36px, 5.8vw, 58px);
-  }
-  .p-orb-center {
-    font-size: 88px;
   }
   .p-about-card,
   .p-skills {
@@ -875,13 +898,10 @@
     font-size: 12px;
     min-height: 44px;
   }
-  .p-orb {
+  .p-portrait {
     width: min(100%, 360px);
     align-self: center;
     margin: 8px 0 0;
-  }
-  .p-orb-center {
-    font-size: 90px;
   }
   .p-section {
     padding-top: 56px;
