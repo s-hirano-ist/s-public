@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import IconPortrait from "../components/portfolio/IconPortrait.astro";
 import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import { PERSON_ENTITY, WEBSITE_ENTITY } from "@utils/jsonLd";
@@ -105,12 +106,7 @@ const navigation = [
               >
             </div>
           </div>
-          <div class="p-orb" data-orb aria-hidden="true">
-            <div class="p-orb-grid" />
-            <div class="p-orb-fallback"><span /><span /><span /></div>
-            <canvas class="p-orb-canvas" />
-            <div class="p-orb-center">s<span>.</span></div>
-          </div>
+          <IconPortrait />
         </div>
       </section>
 
