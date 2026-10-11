@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "repo_root=\"$(git rev-parse --show-toplevel)\" || { printf '{\"decision\":\"block\",\"reason\":\"Unable to locate the Git repository root. Diagnose the workspace before finishing.\"}\\n'; exit 0; }; if cd \"$repo_root\" && bun run --silent fmt >/dev/null 2>&1; then printf '{\"continue\":true}\\n'; else printf '{\"decision\":\"block\",\"reason\":\"Formatting check failed. Run bun run fmt:fix, then rerun the affected quality checks and any required agent-browser verification before finishing.\"}\\n'; fi",
+            "command": "repo_root=\"$(git rev-parse --show-toplevel)\" && bun \"$repo_root/script/stop-format-hook.mjs\"",
             "timeout": 120,
             "statusMessage": "Checking workspace formatting"
           }
