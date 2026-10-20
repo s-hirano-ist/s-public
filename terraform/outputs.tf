@@ -4,7 +4,7 @@ output "doppler_project" {
 }
 
 output "doppler_ci_service_token" {
-  description = "Service token for GitHub Actions (set as DOPPLER_TOKEN secret)"
+  description = "Read-only service token for the ci config; the shared DOPPLER_TOKEN GitHub Actions secret requires a CLI or personal token with access to every s-public config"
   value       = doppler_service_token.ci.key
   sensitive   = true
 }
