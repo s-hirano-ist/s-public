@@ -5,8 +5,8 @@ _.file = ".env.local"
 node = "24.15.0"
 bun = "1.4.3"
 doppler = "3.77.0"
-terraform = "1.16.5"
-"npm:agent-browser" = "0.39.0"
+terraform = "1.16.6"
+"npm:agent-browser" = "0.39.1"
 
 [tasks."browser:setup"]
 description = "Repair and verify the agent-browser installation"
