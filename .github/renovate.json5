@@ -61,6 +61,11 @@
       groupSlug: "github-actions",
     },
     {
+      matchManagers: ["github-actions"],
+      matchPackageNames: ["s-hirano-ist/s-templates"],
+      schedule: ["at any time"],
+    },
+    {
       matchManagers: ["mise"],
       groupName: "mise tools",
       groupSlug: "mise-tools",
