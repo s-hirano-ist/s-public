@@ -27,7 +27,7 @@ jobs:
       - run: bun ci
 
       - name: run generate:book
-        run: bun run generate:book
+        run: doppler run --project s-public --config ci -- bun script/generate-book-data.ts
         env:
           DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
 
