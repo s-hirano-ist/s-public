@@ -5,7 +5,7 @@ _.file = ".env.local"
 node = "24.15.0"
 bun = "1.4.3"
 doppler = "3.77.0"
-terraform = "1.16.6"
+terraform = "1.17.0"
 "npm:agent-browser" = "0.39.1"
 
 [tasks."browser:setup"]
