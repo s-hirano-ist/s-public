@@ -1,80 +1,134 @@
 {
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  timezone: "Asia/Tokyo",
-  baseBranchPatterns: ["main"],
-  extends: [
-    "config:recommended",
-    "config:best-practices",
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  timezone: 'Asia/Tokyo',
+  baseBranchPatterns: [
+    'main',
   ],
-  semanticCommits: "enabled",
-  semanticCommitType: "chore",
-  semanticCommitScope: "deps",
-  reviewers: ["s-hirano-ist"],
-  enabledManagers: ["bun", "npm", "github-actions", "mise"],
-  dependencyDashboard: true,
-  internalChecksFilter: "strict",
-  prCreation: "not-pending",
-  schedule: ["before 11am on monday"],
-  labels: ["dependencies"],
-  rangeStrategy: "bump",
+  extends: [
+    'config:recommended',
+    'config:best-practices',
+  ],
+  semanticCommits: 'enabled',
+  semanticCommitType: 'chore',
+  semanticCommitScope: 'deps',
+  reviewers: [
+    's-hirano-ist',
+  ],
+  enabledManagers: [
+    'bun',
+    'npm',
+    'github-actions',
+    'mise',
+  ],
+  dependencyDashboard: {
+    enabled: true,
+  },
+  internalChecksFilter: 'strict',
+  prCreation: 'not-pending',
+  schedule: [
+    'before 11am on monday',
+  ],
+  labels: [
+    'dependencies',
+  ],
+  rangeStrategy: 'bump',
   lockFileMaintenance: {
     enabled: false,
     automerge: true,
   },
   vulnerabilityAlerts: {
-    labels: ["security"],
+    labels: [
+      'security',
+    ],
   },
   customManagers: [
     {
-      customType: "regex",
-      managerFilePatterns: ["/\\.github/workflows/lighthouse\\.yaml$/"],
-      matchStrings: ["@lhci/cli@(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
-      depNameTemplate: "@lhci/cli",
-      datasourceTemplate: "npm",
+      customType: 'regex',
+      managerFilePatterns: [
+        '/\\.github/workflows/lighthouse\\.yaml$/',
+      ],
+      matchStrings: [
+        '@lhci/cli@(?<currentValue>\\d+\\.\\d+\\.\\d+)',
+      ],
+      depNameTemplate: '@lhci/cli',
+      datasourceTemplate: 'npm',
     },
   ],
   packageRules: [
     {
-      matchDatasources: ["npm"],
-      minimumReleaseAge: "1 day",
+      matchDatasources: [
+        'npm',
+      ],
+      minimumReleaseAge: '1 day',
     },
     {
-      matchPackageNames: ["node"],
-      matchManagers: ["mise"],
-      allowedVersions: "/^[0-9]*[02468]([.-].*)?$/",
+      matchPackageNames: [
+        'node',
+      ],
+      matchManagers: [
+        'mise',
+      ],
+      allowedVersions: '/^[0-9]*[02468]([.-].*)?$/',
     },
     {
-      matchManagers: ["bun"],
-      matchUpdateTypes: ["patch"],
-      matchPackageNames: ["*"],
-      groupName: "patch",
+      matchManagers: [
+        'bun',
+      ],
+      matchUpdateTypes: [
+        'patch',
+      ],
+      matchPackageNames: [
+        '*',
+      ],
+      groupName: 'patch',
     },
     {
-      matchManagers: ["bun"],
-      matchUpdateTypes: ["minor"],
-      matchPackageNames: ["*"],
-      groupName: "minor",
+      matchManagers: [
+        'bun',
+      ],
+      matchUpdateTypes: [
+        'minor',
+      ],
+      matchPackageNames: [
+        '*',
+      ],
+      groupName: 'minor',
     },
     {
-      matchManagers: ["github-actions"],
-      groupName: "GitHub Actions",
-      groupSlug: "github-actions",
+      matchManagers: [
+        'github-actions',
+      ],
+      groupName: 'GitHub Actions',
+      groupSlug: 'github-actions',
     },
     {
-      matchManagers: ["github-actions"],
-      matchPackageNames: ["s-hirano-ist/s-templates"],
-      schedule: ["at any time"],
+      matchManagers: [
+        'github-actions',
+      ],
+      matchPackageNames: [
+        's-hirano-ist/s-templates',
+      ],
+      schedule: [
+        'at any time',
+      ],
     },
     {
-      matchManagers: ["mise"],
-      groupName: "mise tools",
-      groupSlug: "mise-tools",
+      matchManagers: [
+        'mise',
+      ],
+      groupName: 'mise tools',
+      groupSlug: 'mise-tools',
     },
     {
-      matchPackageNames: ["bun"],
-      matchManagers: ["bun", "mise"],
-      groupName: "bun",
-      groupSlug: "bun",
+      matchPackageNames: [
+        'bun',
+      ],
+      matchManagers: [
+        'bun',
+        'mise',
+      ],
+      groupName: 'bun',
+      groupSlug: 'bun',
     },
   ],
 }
